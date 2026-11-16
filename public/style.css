@@ -342,3 +342,48 @@ a.yan-satir:hover { background: var(--acik); color: var(--metin); }
 .haber-yazi .haber-spot { font-size: 21px; font-weight: 700; line-height: 1.5; }
 .haber-kaynak { display: flex; gap: 12px; background: #F1F5FF; border-radius: 16px; padding: 16px 18px; margin-top: 8px; }
 .haber-kaynak p { font-size: 16px !important; line-height: 1.55 !important; margin: 0 !important; color: var(--ikincil); }
+
+/* ---------- Piyasa şeridi ---------- */
+.piyasa-serit { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; margin-top: 16px; }
+.piyasa { display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border-radius: 18px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); color: #fff; text-decoration: none; min-width: 0; transition: background .2s; }
+.piyasa:hover { background: rgba(255,255,255,.13); color: #fff; }
+.p-ad { font-size: 13px; color: var(--acik-yazi); font-weight: 600; white-space: nowrap; }
+.p-deger { font-size: 18px; font-weight: 800; letter-spacing: -.01em; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.p-yon { font-size: 13px; font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.p-yon.yukari { color: #4ade80; }
+.p-yon.asagi { color: #fb7185; }
+.p-yon.sabit { color: var(--soluk); }
+.piyasa.parla { animation: parla 1.2s ease; }
+@keyframes parla { 0% { background: rgba(255,255,255,.25); } 100% { background: rgba(255,255,255,.07); } }
+.tablo .p-yon.yukari { color: #15803d; }
+.tablo .p-yon.asagi { color: #b42318; }
+.tablo .p-yon.sabit { color: var(--ikincil); }
+@media (max-width: 1100px) {
+  .piyasa-serit { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin-right: -20px; padding-right: 20px; }
+  .piyasa-serit::-webkit-scrollbar { display: none; }
+  .piyasa { flex: 0 0 142px; scroll-snap-align: start; }
+}
+@media (prefers-reduced-motion: reduce) { .piyasa.parla { animation: none; } }
+
+/* ---------- Namaz vakitleri ve akaryakıt kutuları ---------- */
+.namaz-sonraki { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 16px; background: linear-gradient(135deg, #0a1530, #1e3a8a); color: #fff; }
+.namaz-sonraki svg { color: #fcd34d; flex: none; }
+.namaz-sonraki small { display: block; color: var(--acik-yazi); font-size: 13px; }
+.namaz-sonraki b { font-size: 17px; }
+.namaz-izgara { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.namaz-izgara div { background: #f6f8fc; border-radius: 14px; padding: 9px 10px; text-align: center; }
+.namaz-izgara small { display: block; font-size: 13px; color: var(--ikincil); font-weight: 600; }
+.namaz-izgara b { font-size: 18px; font-variant-numeric: tabular-nums; }
+.namaz-izgara div.siradaki { background: #e3efff; box-shadow: inset 0 0 0 2px var(--mavi); }
+.namaz-izgara div.siradaki small { color: var(--derin-mavi); }
+.yakit-izgara { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.yakit-izgara > div { display: flex; align-items: center; gap: 10px; background: #f6f8fc; border-radius: 16px; padding: 10px 12px; }
+.yakit-izgara small { display: block; font-size: 13px; color: var(--ikincil); font-weight: 600; }
+.yakit-izgara b { font-size: 18px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.yan-rozet.yakit { background: #fff1e3; color: var(--turuncu-yazi); width: 36px; height: 36px; flex: none; }
+.kutu-not { margin: 0; font-size: 14px; color: var(--ikincil); }
+.tablo-vakit td, .tablo-vakit th { text-align: center; font-variant-numeric: tabular-nums; }
+.tablo-vakit th[scope="row"] { text-align: left; }
+.tablo tr.bugun { background: #eef3ff; font-weight: 700; }
+.cip.trend { background: #fff1e3; color: var(--turuncu-yazi); }
+.cip.trend::before { content: ''; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--turuncu); margin-right: 6px; vertical-align: 1px; }

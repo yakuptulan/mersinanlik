@@ -103,6 +103,7 @@ export function ilceCipleri(hikaye) {
     ...ilceler.slice(0, 2).map((s) => `<a class="cip" href="/ilce/${s}/">${h(ilceAdi(s))}</a>`),
     !ilceler.length && !hikaye.genel ? '<span class="cip">Mersin</span>' : '',
     `<span class="cip kat">${h(katBilgi(hikaye).ad)}</span>`,
+    hikaye.trend ? '<span class="cip trend" title="Google\'da bugün çok aranan konu">Çok aranan</span>' : '',
   ].join('');
 }
 

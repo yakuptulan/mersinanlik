@@ -6,6 +6,8 @@ import { haberListesi, mansetKarti, reklamAlani, haberYolu, katBilgi, ilceCipler
 import { telefonGoster } from '../lib/eczane.js';
 import { havaIkonu, havaTuru } from './havaIkon.js';
 import { FOTOLAR } from '../fotolar.js';
+import { piyasaSeridi, namazKutusu, akaryakitKutusu, fmt, yon, ONDALIK, bugunVakit } from './servisParcalari.js';
+import { DIYANET_ILCE, VAKITLER } from '../lib/namaz.js';
 
 // Resmî servis bağlantıları (veri entegrasyonu tamamlanana kadar doğrudan kaynağa yönlendirir)
 export const RESMI = {
@@ -153,6 +155,8 @@ ${su.slice(0, 4).map((k) => `<a class="yan-satir" href="/kesintiler/">
 </div>
 <a class="yan-dugme" href="${RESMI.edas}" rel="noopener" target="_blank">${ikon.simsek(18)} Elektrik kesintisi sorgula <span>→</span></a>
 </section>
+${namazKutusu(servis, ilce)}
+${akaryakitKutusu(servis, ilce)}
 <section class="kutu">
 <div class="kutu-bas"><h2>Son depremler</h2><a href="/deprem/">Tümü</a></div>
 <div class="yan-liste">
@@ -182,7 +186,8 @@ export function anaSayfa({ hikayeler, servis, simdi }) {
 <div class="ilce-acilir" id="ilce-liste" hidden>${ILCELER.map((i) => `<button type="button" data-ilce-deger="${i.slug}" aria-pressed="false">${h(i.ad)}</button>`).join('')}</div>
 </div>
 </div>
-${suAnKartlari(servis)}`;
+${suAnKartlari(servis)}
+${piyasaSeridi(servis?.piyasa)}`;
   const icerik = `<main class="kap govde">
 <div class="ana">
 <div class="bolum-bas"><h2>Manşet</h2><span>Son güncelleme: ${saat(new Date(simdi).toISOString())} (<span data-once="${new Date(simdi).toISOString()}"></span>)</span></div>
@@ -295,6 +300,93 @@ ${yanKutular(servis, ilce)}
     jsonLd,
     gorsel: gorselUrl,
     tur: 'article',
+  });
+}
+
+// ---------- Piyasalar ----------
+const tabloSatir = (x, kod = null) => `<tr${kod ? ` id="${kod}"` : ''}><th scope="row">${h(x.ad)}</th><td data-tg="${x.k}" data-alan="alis">${x.alis ? fmt(x.alis) : '–'}</td><td data-tg="${x.k}" data-alan="satis"><strong>${fmt(x.satis)}</strong></td><td data-tg="${x.k}" data-alan="degisim">${yon(x.degisim)}</td></tr>`;
+
+export function piyasaSayfasi({ servis }) {
+  const p = servis?.piyasa;
+  const k = p?.kalemler || {};
+  const not = `<p style="color:var(--ikincil);font-size:15px">Fiyatlar sayfa açıkken dakikada bir yenilenir. Kaynak: Truncgil Finans (altın, döviz, borsa), CoinGecko (Bitcoin). Kuyumcu ve bankalarda fiyatlar farklı olabilir; yatırım tavsiyesi değildir.</p>`;
+  const icerik = `<main class="kap govde"><div class="ana">
+<div class="bolum-bas"><h2>Altın fiyatları</h2><span>₺ · günlük değişim</span></div>
+<div class="tablo-kap"><table class="tablo"><thead><tr><th>Tür</th><th>Alış</th><th>Satış</th><th>Değişim</th></tr></thead><tbody>${(p?.altinlar || []).map((x) => tabloSatir(x, { GRA: 'gram', CEYREKALTIN: 'ceyrek', GUMUS: 'gumus' }[x.k])).join('')}</tbody></table></div>
+<div class="bolum-bas"><h2>Döviz kurları</h2><span>₺</span></div>
+<div class="tablo-kap"><table class="tablo"><thead><tr><th>Para birimi</th><th>Alış</th><th>Satış</th><th>Değişim</th></tr></thead><tbody>${(p?.dovizler || []).map((x) => tabloSatir(x, { USD: 'usd', EUR: 'eur' }[x.k])).join('')}</tbody></table></div>
+<div class="bolum-bas"><h2>Bitcoin ve borsa</h2></div>
+<div class="tablo-kap"><table class="tablo"><thead><tr><th></th><th>Değer</th><th>Değişim</th></tr></thead><tbody>
+${k.btc ? `<tr id="btc"><th scope="row">Bitcoin (BTC)</th><td data-piyasa="btc"><strong data-p-deger>${fmt(k.btc.satis, 0)} ₺</strong><br><small>${fmt(k.btc.usd, 0)} $</small></td><td data-piyasa="btc">${yon(k.btc.degisim)}</td></tr>` : ''}
+${k.bist ? `<tr id="bist"><th scope="row">BIST 100</th><td data-tg="XU100" data-alan="satis"><strong>${fmt(k.bist.satis, 0)}</strong></td><td data-tg="XU100" data-alan="degisim">${yon(k.bist.degisim)}</td></tr>` : ''}
+</tbody></table></div>
+${not}
+<p style="color:var(--ikincil);font-size:15px">Son güncelleme: <span data-p-saat>${p?.guncelleme ? saat(p.guncelleme) : '–'}</span></p>
+</div>${yanKutular(servis)}</main>`;
+  return sayfa({
+    baslik: 'Altın fiyatları, döviz ve Bitcoin – bugün canlı',
+    aciklama: `Gram altın ${k.gram ? fmt(k.gram.satis) + ' ₺' : ''}, çeyrek altın, gümüş, dolar, euro ve Bitcoin fiyatları. Mersin için canlı piyasa verileri.`,
+    yol: '/piyasalar/',
+    ust: `<div class="su-an-bas"><div><h1>Piyasalar</h1><p style="margin-top:8px">Altın, gümüş, döviz ve Bitcoin · canlı</p></div></div>${piyasaSeridi(p)}`,
+    icerik,
+  });
+}
+
+// ---------- Namaz vakitleri ----------
+const vakitBaslik = `<tr><th>İlçe</th>${VAKITLER.map(([, ad]) => `<th>${ad}</th>`).join('')}</tr>`;
+
+export function namazSayfasi({ servis, simdi }) {
+  const satirlar = ILCELER.map((i) => {
+    const v = bugunVakit(servis, i.slug, simdi);
+    return `<tr><th scope="row"><a href="/namaz-vakitleri/${i.slug}/">${h(i.ad)}</a></th>${VAKITLER.map(([k]) => `<td>${v ? h(v[k]) : '–'}</td>`).join('')}</tr>`;
+  }).join('');
+  const v0 = bugunVakit(servis, 'yenisehir', simdi);
+  return sayfa({
+    baslik: 'Mersin namaz vakitleri – 13 ilçe ezan saatleri',
+    aciklama: `Mersin ve 13 ilçesi için bugünkü namaz vakitleri: imsak, öğle, ikindi, akşam ve yatsı (Diyanet).`,
+    yol: '/namaz-vakitleri/',
+    ust: `<div class="su-an-bas"><div><h1>Namaz vakitleri</h1><p style="margin-top:8px">${tarihUzun(new Date(simdi).toISOString())}${v0?.hicri ? ` · ${h(v0.hicri)}` : ''}</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">
+<div class="tablo-kap"><table class="tablo tablo-vakit"><thead>${vakitBaslik}</thead><tbody>${satirlar}</tbody></table></div>
+<p style="color:var(--ikincil);font-size:15px">Kaynak: Diyanet İşleri Başkanlığı. Akdeniz, Mezitli, Toroslar ve Yenişehir için Diyanet tek (Mersin merkez) vakit yayınlar. Haftalık vakitler için ilçenin adına dokunun.</p>
+</div>${yanKutular(servis)}</main>`,
+  });
+}
+
+export function namazIlceSayfasi({ ilce, servis, simdi }) {
+  const bolge = servis?.namaz?.bolgeler?.[DIYANET_ILCE[ilce.slug]] || [];
+  const bugun = new Date(simdi).toLocaleDateString('sv-SE', { timeZone: SITE.timezone });
+  const satirlar = bolge.filter((v) => v.tarih >= bugun).slice(0, 7).map((v) => `<tr${v.tarih === bugun ? ' class="bugun"' : ''}><th scope="row">${new Date(`${v.tarih}T12:00:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'short' })}</th>${VAKITLER.map(([k]) => `<td>${h(v[k])}</td>`).join('')}</tr>`).join('');
+  return sayfa({
+    baslik: `${ilce.ad} namaz vakitleri – bugün ezan saatleri`,
+    aciklama: `${ilce.ad} (Mersin) için bugünkü ve haftalık namaz vakitleri: imsak, güneş, öğle, ikindi, akşam, yatsı.`,
+    yol: `/namaz-vakitleri/${ilce.slug}/`,
+    aktif: '/namaz-vakitleri/',
+    ust: `<div class="su-an-bas"><div><h1>${h(ilce.ad)} namaz vakitleri</h1><p style="margin-top:8px">Bugün ve önümüzdeki 6 gün</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">
+<div class="tablo-kap"><table class="tablo tablo-vakit"><thead><tr><th>Gün</th>${VAKITLER.map(([, ad]) => `<th>${ad}</th>`).join('')}</tr></thead><tbody>${satirlar || '<tr><td colspan="7">Vakitler yükleniyor.</td></tr>'}</tbody></table></div>
+<p style="color:var(--ikincil);font-size:15px">Kaynak: Diyanet İşleri Başkanlığı. <a href="/namaz-vakitleri/">Diğer ilçeler →</a></p>
+</div>${yanKutular(servis, ilce)}</main>`,
+  });
+}
+
+// ---------- Akaryakıt ----------
+export function akaryakitSayfasi({ servis }) {
+  const a = servis?.akaryakit;
+  const satirlar = ILCELER.map((i) => {
+    const f = a?.ilceler?.[i.slug];
+    return `<tr><th scope="row">${h(i.ad)}</th><td>${f ? fmt(f.benzin) + ' ₺' : '–'}</td><td>${f ? fmt(f.motorin) + ' ₺' : '–'}</td></tr>`;
+  }).join('');
+  const m = a?.ilceler?.akdeniz;
+  return sayfa({
+    baslik: 'Mersin akaryakıt fiyatları – benzin, motorin bugün',
+    aciklama: `Mersin'de bugün benzin ${m ? fmt(m.benzin) + ' ₺' : ''}, motorin ${m ? fmt(m.motorin) + ' ₺' : ''}. 13 ilçe için güncel pompa fiyatları.`,
+    yol: '/akaryakit-fiyatlari/',
+    ust: `<div class="su-an-bas"><div><h1>Akaryakıt fiyatları</h1><p style="margin-top:8px">Mersin · ilçe ilçe pompa fiyatları</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">
+<div class="tablo-kap"><table class="tablo"><thead><tr><th>İlçe</th><th>Benzin (95)</th><th>Motorin</th></tr></thead><tbody>${satirlar}</tbody></table></div>
+<p style="color:var(--ikincil);font-size:15px">Kaynak: Opet ilçe pompa fiyatları (litre). Diğer istasyonlarda fiyatlar birkaç kuruş farklı olabilir. Son güncelleme: ${a?.guncelleme ? saat(a.guncelleme) : '–'}</p>
+</div>${yanKutular(servis)}</main>`,
   });
 }
 
@@ -415,7 +507,8 @@ ${servis?.suKesintisi ? guncellemeNotu(servis.suKesintisi, 'MESKİ', RESMI.meski
 export function menuSayfasi() {
   const linkler = [
     ['/', 'Ana sayfa'], ['/ilceler/', 'İlçeler'], ['/nobetci-eczane/', 'Nöbetçi eczane'], ['/kesintiler/', 'Kesintiler'],
-    ['/hava-durumu/', 'Hava durumu'], ['/deprem/', 'Son depremler'], ['/ara/', 'Haber ara'], ['/kunye/', 'Künye'],
+    ['/hava-durumu/', 'Hava durumu'], ['/deprem/', 'Son depremler'], ['/piyasalar/', 'Altın ve döviz'], ['/namaz-vakitleri/', 'Namaz vakitleri'],
+    ['/akaryakit-fiyatlari/', 'Akaryakıt fiyatları'], ['/ara/', 'Haber ara'], ['/kunye/', 'Künye'],
     ['/iletisim/', 'İletişim'], ['/kaynaklarimiz/', 'Kaynaklarımız'], ['/gizlilik/', 'Gizlilik'],
   ];
   return sayfa({

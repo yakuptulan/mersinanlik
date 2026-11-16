@@ -105,6 +105,91 @@
     });
   });
 
+  // ---------- Canlı piyasa (sayfa açıkken dakikada bir) ----------
+  var ONDALIK = { gram: 2, ceyrek: 0, gumus: 2, usd: 2, eur: 2, btc: 0, bist: 0 };
+  var TG = { gram: 'GRA', ceyrek: 'CEYREKALTIN', gumus: 'GUMUS', usd: 'USD', eur: 'EUR', bist: 'XU100' };
+  function sayi(n, d) { return Number(n).toLocaleString('tr-TR', { minimumFractionDigits: d, maximumFractionDigits: d }); }
+  function yonHtml(d) {
+    d = Number(d) || 0;
+    var s = d > 0 ? 'yukari' : d < 0 ? 'asagi' : 'sabit';
+    return '<span class="p-yon ' + s + '" data-p-yon>' + (d > 0 ? '▲' : d < 0 ? '▼' : '■') + ' %' + sayi(Math.abs(d), 2) + '</span>';
+  }
+  function kalemYaz(kod, fiyat, degisim) {
+    document.querySelectorAll('[data-piyasa="' + kod + '"]').forEach(function (el) {
+      var dg = el.querySelector('[data-p-deger]');
+      var yeni = sayi(fiyat, ONDALIK[kod]) + (kod === 'bist' ? '' : ' ₺');
+      if (dg && dg.textContent !== yeni) {
+        dg.textContent = yeni;
+        if (el.classList.contains('piyasa')) { el.classList.remove('parla'); void el.offsetWidth; el.classList.add('parla'); }
+      }
+      var y = el.querySelector('[data-p-yon]');
+      if (y) y.outerHTML = yonHtml(degisim);
+    });
+  }
+  function piyasaTazele() {
+    if (!document.querySelector('[data-piyasa], [data-tg]')) return;
+    fetch('https://finans.truncgil.com/v4/today.json').then(function (r) { return r.json(); }).then(function (j) {
+      Object.keys(TG).forEach(function (kod) {
+        var v = j[TG[kod]];
+        if (v && (v.Selling || v.Buying)) kalemYaz(kod, v.Selling || v.Buying, v.Change);
+      });
+      document.querySelectorAll('[data-tg]').forEach(function (td) {
+        var v = j[td.getAttribute('data-tg')];
+        if (!v) return;
+        var alan = td.getAttribute('data-alan');
+        var d = td.getAttribute('data-tg') === 'XU100' ? 0 : 2;
+        if (alan === 'satis' && v.Selling) td.innerHTML = '<strong>' + sayi(v.Selling, d) + '</strong>';
+        if (alan === 'alis' && v.Buying) td.textContent = sayi(v.Buying, d);
+        if (alan === 'degisim') td.innerHTML = yonHtml(v.Change);
+      });
+      var t = new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Istanbul' });
+      document.querySelectorAll('[data-p-saat]').forEach(function (el) { el.textContent = t; });
+    }).catch(function () {});
+    fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=try&include_24hr_change=true').then(function (r) { return r.json(); }).then(function (j) {
+      if (j.bitcoin && j.bitcoin.try) kalemYaz('btc', j.bitcoin.try, j.bitcoin.try_24h_change);
+    }).catch(function () {});
+  }
+  piyasaTazele();
+  setInterval(function () { if (!document.hidden) piyasaTazele(); }, 60000);
+
+  // ---------- Namaz vakti: sıradaki vakit ve geri sayım ----------
+  var VAKIT_ADI = { imsak: 'İmsak', gunes: 'Güneş', ogle: 'Öğle', ikindi: 'İkindi', aksam: 'Akşam', yatsi: 'Yatsı' };
+  var MERKEZ = { akdeniz: 1, mezitli: 1, toroslar: 1, yenisehir: 1 };
+  function namazGuncelle() {
+    var kutu = document.querySelector('[data-namaz]');
+    var veriEl = kutu && kutu.querySelector('[data-namaz-veri]');
+    if (!veriEl) return;
+    var veri; try { veri = JSON.parse(veriEl.textContent); } catch (e) { return; }
+    var slug = kutu.getAttribute('data-namaz-sabit') || ilcem || 'yenisehir';
+    var gunler = veri.bolgeler[veri.ilce[slug] || veri.ilce.yenisehir] || [];
+    var simdi = new Date();
+    var bugun = simdi.toLocaleDateString('sv-SE', { timeZone: 'Europe/Istanbul' });
+    var dk = Number(simdi.toLocaleString('en-GB', { hour: '2-digit', hour12: false, timeZone: 'Europe/Istanbul' })) * 60 + Number(simdi.toLocaleString('en-GB', { minute: '2-digit', timeZone: 'Europe/Istanbul' }));
+    var g = gunler.filter(function (x) { return x.tarih === bugun; })[0];
+    if (!g) return;
+    var yer = kutu.querySelector('[data-namaz-yer]');
+    if (yer && !kutu.getAttribute('data-namaz-sabit')) yer.textContent = MERKEZ[slug] ? 'Mersin merkez' : (adlar[slug] || 'Mersin merkez');
+    var sonraki = null, kalan = 0;
+    Object.keys(VAKIT_ADI).forEach(function (k) {
+      var h = g[k].split(':'), v = Number(h[0]) * 60 + Number(h[1]);
+      var hucre = kutu.querySelector('[data-vakit="' + k + '"]');
+      if (hucre) { hucre.querySelector('b').textContent = g[k]; hucre.classList.remove('siradaki'); }
+      if (!sonraki && v > dk) { sonraki = k; kalan = v - dk; }
+    });
+    var yazi = kutu.querySelector('[data-namaz-sonraki]');
+    if (sonraki) {
+      kutu.querySelector('[data-vakit="' + sonraki + '"]').classList.add('siradaki');
+      var s = Math.floor(kalan / 60), d = kalan % 60;
+      yazi.textContent = VAKIT_ADI[sonraki] + ' vaktine ' + (s ? s + ' sa ' : '') + d + ' dk';
+    } else {
+      var yarin = gunler.filter(function (x) { return x.tarih > bugun; })[0];
+      yazi.textContent = yarin ? 'Yarın imsak ' + yarin.imsak : 'Bugünün vakitleri';
+    }
+  }
+  namazGuncelle();
+  setInterval(namazGuncelle, 30000);
+  document.addEventListener('click', function (e) { if (e.target.closest('[data-ilce-deger]')) setTimeout(namazGuncelle, 0); });
+
   // Arama sayfası
   var kutu = document.getElementById('ara-kutu');
   if (kutu) {

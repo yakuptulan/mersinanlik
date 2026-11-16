@@ -13,6 +13,7 @@ import { riskBul } from './lib/text.js';
 import { AYAR } from './config.js';
 import { gorselUretimHazirMi, gorselUret, gorselAdaylari, sahipsizleriSil, kurumFotosuIndir } from './lib/gorsel-uret.js';
 import { kurumOku, kurumMetniGetir } from './lib/kurum.js';
+import { trendGetir, trendEslesir } from './lib/trend.js';
 
 // Hikâyenin bir kurum kaynağı varsa (belediye vb.) o kaynağı ve kaydını döndürür
 function kurumKaynagi(h) {
@@ -86,6 +87,24 @@ async function main() {
       console.warn(`! ${kaynak.ad}: ${e.message}`);
     }
   }
+
+  // Google'da çok arananlar: eşleşen Türkiye/dünya haberleri öne çıkar
+  try {
+    durum.trendler = { guncelleme: new Date().toISOString(), liste: (await trendGetir('MersinAnlikBot/1.0 (+https://mersinanlik.com)')).slice(0, 25) };
+  } catch (e) {
+    console.warn(`! Trendler: ${e.message}`);
+  }
+  const trendler = durum.trendler?.liste || [];
+  let trendSayi = 0;
+  for (const h of veri.hikayeler) {
+    if (!h.genel || h.trend) continue;
+    const t = trendler.find((x) => trendEslesir(x.baslik, h.baslik));
+    if (t) {
+      h.trend = t.baslik;
+      trendSayi++;
+    }
+  }
+  if (trendSayi) console.log(`🔥 Çok aranan konuyla eşleşen haber: ${trendSayi}`);
 
   // Risk kuralları değişmiş olabilir: bekleyenleri güncel kurallarla yeniden değerlendir
   for (const h of veri.hikayeler) {

@@ -131,6 +131,7 @@ export function hikayeyeEkle(veri, haber, kaynak) {
 // Mersin haberi her zaman; Türkiye/dünya haberi ancak yeterince site yazdıysa
 export function onemliMi(h) {
   if (!h.genel) return true;
+  if (h.trend) return true; // Google'da çok aranan konu
   return new Set(h.kaynaklar.map((k) => k.ad)).size >= AYAR.genelKaynakEsigi;
 }
 
