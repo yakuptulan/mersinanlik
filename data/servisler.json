@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-16T16:32:13.768Z",
+ "guncelleme": "2026-11-16T16:35:38.441Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 17,
@@ -505,7 +505,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-16T16:32:17.156Z",
+  "guncelleme": "2026-11-16T16:35:42.394Z",
   "liste": [
    {
     "ad": "Abay Eczanesi",
@@ -774,7 +774,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-16T16:32:18.234Z",
+  "guncelleme": "2026-11-16T16:35:43.637Z",
   "liste": [
    {
     "tur": "su",
@@ -858,5 +858,239 @@
     ]
    }
   ]
+ },
+ "piyasa": {
+  "guncelleme": "2026-11-16T16:35:46.068Z",
+  "kalemler": {
+   "gram": {
+    "alis": 6250.9,
+    "satis": 6251.79,
+    "degisim": -0.46
+   },
+   "ceyrek": {
+    "alis": 10235,
+    "satis": 10323,
+    "degisim": 0.05
+   },
+   "gumus": {
+    "alis": 75.98,
+    "satis": 76.08,
+    "degisim": -3.92
+   },
+   "usd": {
+    "alis": 50.3851,
+    "satis": 50.3916,
+    "degisim": 0.05
+   },
+   "eur": {
+    "alis": 55.5005,
+    "satis": 55.5092,
+    "degisim": -0.1
+   },
+   "bist": {
+    "alis": null,
+    "satis": 11841.81,
+    "degisim": -0.01
+   },
+   "btc": {
+    "satis": 3258603,
+    "usd": 64669,
+    "degisim": 0.26
+   }
+  },
+  "altinlar": [
+   {
+    "k": "GRA",
+    "ad": "Gram altın",
+    "alis": 6250.9,
+    "satis": 6251.79,
+    "degisim": -0.46
+   },
+   {
+    "k": "CEYREKALTIN",
+    "ad": "Çeyrek altın",
+    "alis": 10235,
+    "satis": 10323,
+    "degisim": 0.05
+   },
+   {
+    "k": "YARIMALTIN",
+    "ad": "Yarım altın",
+    "alis": 20495,
+    "satis": 20640,
+    "degisim": 0.04
+   },
+   {
+    "k": "TAMALTIN",
+    "ad": "Tam altın",
+    "alis": 40864,
+    "satis": 41129,
+    "degisim": 0.05
+   },
+   {
+    "k": "CUMHURIYETALTINI",
+    "ad": "Cumhuriyet altını",
+    "alis": 41964,
+    "satis": 42227,
+    "degisim": 0.05
+   },
+   {
+    "k": "ATAALTIN",
+    "ad": "Ata altın",
+    "alis": 41964,
+    "satis": 42227,
+    "degisim": 0.05
+   },
+   {
+    "k": "RESATALTIN",
+    "ad": "Reşat altın",
+    "alis": 41964,
+    "satis": 42227,
+    "degisim": 0.05
+   },
+   {
+    "k": "YIA",
+    "ad": "22 ayar bilezik (gr)",
+    "alis": 5718.95,
+    "satis": 5915.8,
+    "degisim": 0.04
+   },
+   {
+    "k": "18AYARALTIN",
+    "ad": "18 ayar altın (gr)",
+    "alis": 4331,
+    "satis": 5065,
+    "degisim": 0
+   },
+   {
+    "k": "14AYARALTIN",
+    "ad": "14 ayar altın (gr)",
+    "alis": 3430.59,
+    "satis": 4604.54,
+    "degisim": 0.04
+   },
+   {
+    "k": "HAS",
+    "ad": "Has altın (gr)",
+    "alis": 6219.64,
+    "satis": 6220.53,
+    "degisim": -0.46
+   },
+   {
+    "k": "GUMUS",
+    "ad": "Gümüş (gr)",
+    "alis": 75.98,
+    "satis": 76.08,
+    "degisim": -3.92
+   }
+  ],
+  "dovizler": [
+   {
+    "k": "USD",
+    "ad": "ABD doları",
+    "alis": 50.3851,
+    "satis": 50.3916,
+    "degisim": 0.05
+   },
+   {
+    "k": "EUR",
+    "ad": "Euro",
+    "alis": 55.5005,
+    "satis": 55.5092,
+    "degisim": -0.1
+   },
+   {
+    "k": "GBP",
+    "ad": "İngiliz sterlini",
+    "alis": 66.4939,
+    "satis": 66.5076,
+    "degisim": -0.16
+   },
+   {
+    "k": "CHF",
+    "ad": "İsviçre frangı",
+    "alis": 60.0037,
+    "satis": 60.0329,
+    "degisim": 0.02
+   },
+   {
+    "k": "SAR",
+    "ad": "Suudi riyali",
+    "alis": 13.4269,
+    "satis": 13.4301,
+    "degisim": 0.06
+   },
+   {
+    "k": "RUB",
+    "ad": "Rus rublesi",
+    "alis": 0.6101,
+    "satis": 0.6104,
+    "degisim": 0.17
+   }
+  ],
+  "kaynakSaati": "2026-11-16 19:35:01"
+ },
+ "akaryakit": {
+  "guncelleme": "2026-11-16T16:35:47.628Z",
+  "ilceler": {
+   "akdeniz": {
+    "benzin": 72.99,
+    "motorin": 97.1
+   },
+   "anamur": {
+    "benzin": 73.02,
+    "motorin": 97.13
+   },
+   "aydincik": {
+    "benzin": 73.01,
+    "motorin": 97.12
+   },
+   "bozyazi": {
+    "benzin": 73.02,
+    "motorin": 97.11
+   },
+   "camliyayla": {
+    "benzin": 73.01,
+    "motorin": 97.13
+   },
+   "erdemli": {
+    "benzin": 72.99,
+    "motorin": 97.1
+   },
+   "gulnar": {
+    "benzin": 73.01,
+    "motorin": 97.11
+   },
+   "merkez": {
+    "benzin": 72.99,
+    "motorin": 97.1
+   },
+   "mezitli": {
+    "benzin": 72.99,
+    "motorin": 97.1
+   },
+   "mut": {
+    "benzin": 73,
+    "motorin": 97.12
+   },
+   "silifke": {
+    "benzin": 73,
+    "motorin": 97.11
+   },
+   "tarsus": {
+    "benzin": 72.99,
+    "motorin": 97.1
+   },
+   "toroslar": {
+    "benzin": 72.99,
+    "motorin": 97.1
+   },
+   "yenisehir": {
+    "benzin": 72.99,
+    "motorin": 97.1
+   }
+  },
+  "onceki": null,
+  "degisim": null
  }
 }
