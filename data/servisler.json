@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-16T19:58:07.825Z",
+ "guncelleme": "2026-11-16T20:01:24.205Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -505,7 +505,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-16T19:58:11.497Z",
+  "guncelleme": "2026-11-16T20:01:27.254Z",
   "liste": [
    {
     "ad": "Abay Eczanesi",
@@ -774,41 +774,8 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-16T19:58:12.661Z",
+  "guncelleme": "2026-11-16T20:01:28.218Z",
   "liste": [
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Yeni MH liman içi arızadan dolayı bir kısım sular kesik 23.00 sular verilecektir",
-    "baslangic": "2026-11-16T14:59:00.000Z",
-    "bitis": "2026-11-16T20:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "akdeniz",
-      "ad": "Akdeniz",
-      "mahalleler": [
-       "Yeni"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Menteş MH 20.cad üzerindeki arızadan dolayı Menteş ve Güvenevler Mahallesinde Saat 23.00 e kadar su kesintisi yaşanacaktır",
-    "baslangic": "2026-11-16T17:10:00.000Z",
-    "bitis": "2026-11-16T20:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "yenisehir",
-      "ad": "Yenişehir",
-      "mahalleler": [
-       "Güvenevler",
-       "Menteş"
-      ]
-     }
-    ]
-   },
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
@@ -905,32 +872,32 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-16T19:31:30.045Z",
+  "guncelleme": "2026-11-16T20:01:30.849Z",
   "kalemler": {
    "gram": {
-    "alis": 6263.05,
-    "satis": 6263.96,
-    "degisim": -0.26
+    "alis": 6258.81,
+    "satis": 6259.85,
+    "degisim": -0.33
    },
    "ceyrek": {
-    "alis": 10254,
-    "satis": 10343,
-    "degisim": 0.24
+    "alis": 10248,
+    "satis": 10337,
+    "degisim": 0.18
    },
    "gumus": {
-    "alis": 76.43,
-    "satis": 76.51,
-    "degisim": -3.38
+    "alis": 76.27,
+    "satis": 76.36,
+    "degisim": -3.56
    },
    "usd": {
-    "alis": 50.3788,
-    "satis": 50.3936,
+    "alis": 50.3808,
+    "satis": 50.3924,
     "degisim": 0.04
    },
    "eur": {
-    "alis": 55.4925,
-    "satis": 55.505,
-    "degisim": -0.11
+    "alis": 55.4731,
+    "satis": 55.4928,
+    "degisim": -0.14
    },
    "bist": {
     "alis": null,
@@ -938,145 +905,145 @@
     "degisim": -0.01
    },
    "btc": {
-    "satis": 3268646,
-    "usd": 64866,
-    "degisim": -0.01
+    "satis": 3275644,
+    "usd": 65010,
+    "degisim": 0.29
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 6263.05,
-    "satis": 6263.96,
-    "degisim": -0.26
+    "alis": 6258.81,
+    "satis": 6259.85,
+    "degisim": -0.33
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 10254,
-    "satis": 10343,
-    "degisim": 0.24
+    "alis": 10248,
+    "satis": 10337,
+    "degisim": 0.18
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 20532,
-    "satis": 20680,
-    "degisim": 0.24
+    "alis": 20521,
+    "satis": 20668,
+    "degisim": 0.18
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 40939,
-    "satis": 41208,
-    "degisim": 0.24
+    "alis": 40916,
+    "satis": 41185,
+    "degisim": 0.18
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 42041,
-    "satis": 42308,
-    "degisim": 0.24
+    "alis": 42018,
+    "satis": 42285,
+    "degisim": 0.18
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 42041,
-    "satis": 42308,
-    "degisim": 0.24
+    "alis": 42018,
+    "satis": 42285,
+    "degisim": 0.18
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 42041,
-    "satis": 42308,
-    "degisim": 0.24
+    "alis": 42018,
+    "satis": 42285,
+    "degisim": 0.18
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5729.57,
-    "satis": 5927.33,
-    "degisim": 0.24
+    "alis": 5726.23,
+    "satis": 5923.89,
+    "degisim": 0.18
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4339,
-    "satis": 5075,
-    "degisim": 0.2
+    "alis": 4338,
+    "satis": 5070,
+    "degisim": 0.1
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3437.12,
-    "satis": 4612.52,
-    "degisim": 0.21
+    "alis": 3435.06,
+    "satis": 4610.13,
+    "degisim": 0.16
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 6231.74,
-    "satis": 6232.64,
-    "degisim": -0.26
+    "alis": 6227.52,
+    "satis": 6228.55,
+    "degisim": -0.33
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 76.43,
-    "satis": 76.51,
-    "degisim": -3.38
+    "alis": 76.27,
+    "satis": 76.36,
+    "degisim": -3.56
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.3788,
-    "satis": 50.3936,
+    "alis": 50.3808,
+    "satis": 50.3924,
     "degisim": 0.04
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.4925,
-    "satis": 55.505,
-    "degisim": -0.11
+    "alis": 55.4731,
+    "satis": 55.4928,
+    "degisim": -0.14
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.5143,
-    "satis": 66.5224,
-    "degisim": -0.13
+    "alis": 66.487,
+    "satis": 66.4974,
+    "degisim": -0.17
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.0032,
-    "satis": 60.0425,
-    "degisim": 0.03
+    "alis": 59.9706,
+    "satis": 60.0048,
+    "degisim": -0.03
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.4208,
-    "satis": 13.4343,
+    "alis": 13.4246,
+    "satis": 13.4315,
     "degisim": 0.06
    },
    {
     "k": "RUB",
     "ad": "Rus rublesi",
-    "alis": 0.61,
-    "satis": 0.6104,
+    "alis": 0.6101,
+    "satis": 0.6103,
     "degisim": 0.16
    }
   ],
-  "kaynakSaati": "2026-11-16 22:31:01"
+  "kaynakSaati": "2026-11-16 23:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-16T19:58:18.586Z",
+  "guncelleme": "2026-11-16T20:01:31.845Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 72.99,
@@ -2815,7 +2782,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-16T19:58:19.042Z",
+  "guncelleme": "2026-11-16T20:01:32.500Z",
   "liste": [
    {
     "yol": "/",
