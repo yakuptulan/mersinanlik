@@ -281,6 +281,52 @@
     });
   }
 
+  // ---------- Mersin sayaçları ----------
+  (function () {
+    var fmt0 = function (n) { return Math.floor(n).toLocaleString('tr-TR'); };
+    var nufus = [].slice.call(document.querySelectorAll('[data-nufus]'));
+    var geri = [].slice.call(document.querySelectorAll('[data-geri-sayim]'));
+    var gunGeri = [].slice.call(document.querySelectorAll('[data-geri-gun]'));
+    var gunes = [].slice.call(document.querySelectorAll('[data-gunbatimi]'));
+    if (!nufus.length && !geri.length && !gunGeri.length && !gunes.length) return;
+    function trDakika() { var d = new Date(); return Number(d.toLocaleString('en-GB', { hour: '2-digit', hour12: false, timeZone: 'Europe/Istanbul' })) * 60 + Number(d.toLocaleString('en-GB', { minute: '2-digit', timeZone: 'Europe/Istanbul' })); }
+    function dk(s) { var p = s.split(':'); return Number(p[0]) * 60 + Number(p[1]); }
+    function sure(m) { var s = Math.floor(m / 60), d = m % 60; return (s ? s + ' sa ' : '') + d + ' dk'; }
+    function tikla() {
+      var simdi = Date.now();
+      nufus.forEach(function (el) {
+        var taban = Number(el.getAttribute('data-taban')), artis = Number(el.getAttribute('data-artis')), t0 = Date.parse(el.getAttribute('data-tarih'));
+        el.textContent = fmt0(taban + artis * (simdi - t0) / 31557600000);
+      });
+      geri.forEach(function (el) {
+        var kalan = Math.max(0, Date.parse(el.getAttribute('data-geri-sayim')) - simdi) / 1000;
+        var g = Math.floor(kalan / 86400), s = Math.floor(kalan % 86400 / 3600), d = Math.floor(kalan % 3600 / 60), sn = Math.floor(kalan % 60);
+        el.textContent = g + ' : ' + String(s).padStart(2, '0') + ' : ' + String(d).padStart(2, '0') + ' : ' + String(sn).padStart(2, '0');
+      });
+      gunGeri.forEach(function (el) {
+        var hedef = Date.parse(el.getAttribute('data-geri-gun') + 'T00:00:00+03:00');
+        el.textContent = Math.max(0, Math.ceil((hedef - simdi) / 864e5));
+      });
+      gunes.forEach(function (el) {
+        var n = trDakika(), bat = dk(el.getAttribute('data-gunbatimi')), dog = dk(el.getAttribute('data-gundogumu'));
+        el.textContent = n < dog ? 'doğuşa ' + sure(dog - n) : n < bat ? 'batışa ' + sure(bat - n) : 'yarın doğuş ' + el.getAttribute('data-gundogumu');
+      });
+    }
+    tikla();
+    setInterval(tikla, 1000);
+  })();
+
+  // ---------- Trafik haritası: bölge seçimi ----------
+  document.querySelectorAll('[data-trafik]').forEach(function (k) {
+    var cerceve = document.querySelector('.trafik-harita iframe');
+    k.querySelectorAll('[data-harita]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        k.querySelectorAll('[data-harita]').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+        if (cerceve) cerceve.src = b.getAttribute('data-harita');
+      });
+    });
+  });
+
   // ---------- Paylaş ----------
   document.querySelectorAll('[data-paylas]').forEach(function (p) {
     var url = p.getAttribute('data-url'), baslik = p.getAttribute('data-baslik');

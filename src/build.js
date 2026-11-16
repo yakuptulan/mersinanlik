@@ -7,6 +7,7 @@ import { ilceAdi } from './templates/layout.js';
 import * as S from './templates/sayfalar.js';
 import * as R from './templates/rehber.js';
 import * as B from './templates/bilgi.js';
+import { LIGLER } from './lib/spor.js';
 import { baslikTemizle, kategoriBul, htmlKacis } from './lib/text.js';
 import { kendiSayfasiVar, sayfasiVar, haberYolu, kapakAdresi } from './templates/parcalar.js';
 import { okunanlarEsle } from './lib/okunanlar.js';
@@ -57,12 +58,20 @@ export function insaEt({ simdi = Date.now() } = {}) {
     .filter((x) => !x.genel && simdi - new Date(x.ilkGorulme).getTime() < 48 * 36e5 && /elektrik(ler)? kesinti|elektrik(ler)?\s.{0,20}kesil|elektriksiz kal/i.test(x.baslik))
     .slice(0, 3)
     .map((x) => ({ baslik: x.baslik, yol: sayfasiVar(x) ? haberYolu(x) : x.kaynaklar[0].link, ilkGorulme: x.ilkGorulme }));
-  servis.enCokOkunan = okunanlarEsle(servis.okunanlar, hikayeler, haberYolu, ILCELER).map((o) => {
-    const x = hikayeler.find((y) => haberYolu(y) === o.yol);
-    if (x) return { ...o, gorsel: kapakAdresi(x).src };
-    const ikonu = [[/eczane/, 'eczane'], [/kesinti/, 'damla'], [/deprem/, 'deprem'], [/namaz/, 'hilal'], [/akaryakit/, 'yakit'], [/hava/, 'konum'], [/spor/, 'top'], [/piyasa/, 'ok']].find(([d]) => d.test(o.yol));
-    return { ...o, ikon: ikonu ? ikonu[1] : 'ok' };
-  });
+  // En çok okunanlar: sadece haberler; okunma verisi azsa son günlerin öne çıkan haberleriyle tamamlanır
+  {
+    const okunan = okunanlarEsle(servis.okunanlar, hikayeler, haberYolu, ILCELER, 50).filter((o) => o.yol.startsWith('/haber/'));
+    const liste = okunan.map((o) => ({ ...o, x: hikayeler.find((y) => haberYolu(y) === o.yol) })).filter((o) => o.x).slice(0, 5);
+    const aday = hikayeler
+      .filter((x) => !x.genel && sayfasiVar(x) && !liste.some((o) => o.x === x) && simdi - new Date(x.ilkGorulme).getTime() < 48 * 36e5)
+      .sort((a, b) => b.kaynaklar.length - a.kaynaklar.length || Boolean(b.gorsel) - Boolean(a.gorsel))
+      .slice(0, 15);
+    // Gün içinde değişsin diye adaylar saate göre karıştırılır
+    const tohum = Math.floor(simdi / 36e5);
+    aday.sort((a, b) => ((parseInt(a.id, 36) + tohum) % 97) - ((parseInt(b.id, 36) + tohum) % 97));
+    while (liste.length < 5 && aday.length) liste.push({ x: aday.shift() });
+    servis.enCokOkunan = liste.map(({ x }) => ({ yol: haberYolu(x), baslik: x.baslik, gorsel: kapakAdresi(x).src }));
+  }
 
   const sayfalar = [];
   const ekle = (yol, html, haritaya = true) => {
@@ -83,6 +92,8 @@ export function insaEt({ simdi = Date.now() } = {}) {
   ekle('/deprem/', S.depremSayfasi({ servis }));
   ekle('/nobetci-eczane/', S.eczaneSayfasi({ servis }));
   ekle('/kesintiler/', S.kesintiSayfasi({ servis }));
+  ekle('/trafik/', S.trafikSayfasi({ servis }));
+  for (const lig of LIGLER) if (servis.spor?.ligler?.[lig.kod]) ekle(`/spor/${lig.kod}/`, S.ligSayfasi({ servis, kod: lig.kod }));
   ekle('/piyasalar/', S.piyasaSayfasi({ servis }));
   ekle('/spor/', S.sporSayfasi({ servis, hikayeler }));
   ekle('/etkinlikler/', S.etkinlikSayfasi({ servis, simdi }));

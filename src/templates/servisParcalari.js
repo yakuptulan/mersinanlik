@@ -183,3 +183,47 @@ ${kutuBasligi({ ikon: '✦', baslik: 'Günlük burçlar', link: '/burclar/' })}
 <div class="burc-izgara">${BURCLAR.map(([slug, ad, , isaret]) => `<a href="/burclar/#${slug}"><span>${isaret}</span>${h(ad)}</a>`).join('')}</div>
 </section>`;
 }
+
+// ---------- Mersin sayaçları ----------
+// Nüfus: TÜİK ADNKS 2025 (31.12.2025) Mersin 1.956.428 (2024: 1.954.279), Türkiye 86.092.168 (yıllık +427.224)
+export const NUFUS = { mersin: 1956428, mersinArtis: 1956428 - 1954279, turkiye: 86092168, turkiyeArtis: 427224, tarih: '2025-12-31T21:00:00Z' };
+
+function dakikaFarki(a, b) {
+  const [ah, am] = a.split(':').map(Number);
+  const [bh, bm] = b.split(':').map(Number);
+  return bh * 60 + bm - (ah * 60 + am);
+}
+
+export function sayaclarBlogu(servis, { tatiller = [], simdi = Date.now() } = {}) {
+  const sy = servis?.sayac || {};
+  const v = bugunVakit(servis, 'yenisehir', simdi);
+  const bugun = new Date(simdi).toLocaleDateString('sv-SE', { timeZone: SITE.timezone });
+  const tatil = tatiller.filter(([t]) => t > bugun).sort((a, b) => (a[0] < b[0] ? -1 : 1))[0];
+  const yil = Number(bugun.slice(0, 4)) + 1;
+  const deniz = sy.deniz?.sicaklik;
+  const aqi = sy.hava?.aqi;
+  const aqiAd = aqi == null ? null : aqi <= 20 ? ['Çok iyi', '#10b981'] : aqi <= 40 ? ['İyi', '#84cc16'] : aqi <= 60 ? ['Orta', '#eab308'] : aqi <= 80 ? ['Kötü', '#f97316'] : aqi <= 100 ? ['Çok kötü', '#ef4444'] : ['Aşırı kötü', '#a21caf'];
+  const gun = v ? dakikaFarki(v.gunes, v.aksam) : null;
+  const kart = (renk, ikonu, etiket, deger, alt, ek = '') => `<div class="sayac" style="--s:${renk}"${ek}><span class="sayac-ikon">${ikonu}</span><span class="sayac-etiket">${etiket}</span><b class="sayac-deger">${deger}</b><span class="sayac-alt">${alt}</span></div>`;
+  return `<section class="sayaclar-blok"><div class="bolum-bas"><h2>Mersin sayaçları</h2><span>Canlı · tahminler dahil</span></div>
+<div class="sayaclar">
+${kart('#1e66f5', '👥', 'Mersin nüfusu (tahmini)', `<span data-nufus data-taban="${NUFUS.mersin}" data-artis="${NUFUS.mersinArtis}" data-tarih="${NUFUS.tarih}">${fmt(NUFUS.mersin, 0)}</span>`, `Türkiye: <span data-nufus data-taban="${NUFUS.turkiye}" data-artis="${NUFUS.turkiyeArtis}" data-tarih="${NUFUS.tarih}">${fmt(NUFUS.turkiye, 0)}</span> · TÜİK 2025 verisinden`)}
+${deniz != null ? kart('#0ea5e9', '🌊', 'Deniz suyu sıcaklığı', `<span data-sayi-hedef="${deniz}" data-ondalik="1">${fmt(deniz, 1)}</span>°C`, `${deniz >= 24 ? 'Yüzmeye çok uygun' : deniz >= 21 ? 'Serin ama yüzülür' : 'Soğuk, kısa yüzme'}${sy.deniz?.dalga != null ? ` · dalga ${fmt(sy.deniz.dalga, 1)} m` : ''} · Mersin açıkları`) : ''}
+${aqiAd ? kart(aqiAd[1], '🍃', 'Hava kalitesi', `${aqiAd[0]}`, `Endeks ${Math.round(aqi)}${sy.hava?.pm25 != null ? ` · PM2,5: ${fmt(sy.hava.pm25, 0)} µg/m³` : ''}${sy.hava?.uvMax != null ? ` · UV en fazla ${fmt(sy.hava.uvMax, 0)}` : ''}`) : ''}
+${v ? kart('#f59e0b', '☀️', 'Gün ışığı', `${Math.floor(gun / 60)} sa ${gun % 60} dk`, `Doğuş ${h(v.gunes)} · batış ${h(v.aksam)} · <span data-gunbatimi="${h(v.aksam)}" data-gundogumu="${h(v.gunes)}"></span>`) : ''}
+${tatil ? kart('#e5484d', '🗓️', 'Sıradaki tatil', `<span data-geri-gun="${tatil[0]}">–</span> gün`, `${h(tatil[2])} · ${new Date(`${tatil[0]}T12:00:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long' })}`) : ''}
+<a class="sayac sayac-link" href="/trafik/" style="--s:#22c55e"><span class="sayac-ikon">🚦</span><span class="sayac-etiket">Canlı trafik</span><b class="sayac-deger">Haritayı aç →</b><span class="sayac-alt">Mersin'de yollar şu an ne durumda?</span></a>
+${kart('#8e4ec6', '🎉', `${yil} yılbaşına`, `<span data-geri-sayim="${yil}-01-01T00:00:00+03:00">–</span>`, 'gün · saat · dakika · saniye')}
+</div></section>`;
+}
+
+// ---------- Lig tablosu (rozet, form) ----------
+export function ligSerit(kayit) {
+  return `<div class="lig-serit">${kayit.puan.map((t) => `<span class="ls-takim${t.mersin ? ' mersin' : ''}" title="${h(t.takim)}">${takimRozeti(t.takim, t.mersin)}<b>${t.p}</b></span>`).join('')}</div>`;
+}
+export function ligTablosu(kayit) {
+  const formVar = kayit.form && Object.values(kayit.form).some((f) => f.length);
+  return `<div class="tablo-kap"><table class="tablo lig-tablo"><thead><tr><th>#</th><th>Takım</th><th>O</th><th>G</th><th>B</th><th>M</th><th>Av</th><th>P</th>${formVar ? '<th class="form-bas">Form</th>' : ''}</tr></thead><tbody>${kayit.puan
+    .map((t) => `<tr${t.mersin ? ' class="mersin"' : ''}><td>${t.sira}</td><th scope="row"><span class="lt-takim">${takimRozeti(t.takim, t.mersin)}${h(t.takim)}</span></th><td>${t.o}</td><td>${t.g}</td><td>${t.b}</td><td>${t.m}</td><td>${t.av > 0 ? '+' : ''}${t.av}</td><td><strong>${t.p}</strong></td>${formVar ? `<td class="form">${(kayit.form[t.takim] || []).map((f) => `<i class="f-${f}">${f}</i>`).join('')}</td>` : ''}</tr>`)
+    .join('')}</tbody></table></div>${formVar ? '<p class="form-not"><i class="f-G">G</i> galibiyet <i class="f-B">B</i> beraberlik <i class="f-M">M</i> mağlubiyet · son 5 maç, soldan sağa eskiden yeniye</p>' : ''}`;
+}

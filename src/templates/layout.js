@@ -18,14 +18,14 @@ const JS_SURUM = surum('app.js');
 
 const MENU = [
   ['/', 'Gündem'],
-  ['/ilceler/', 'İlçeler'],
-  ['/nobetci-eczane/', 'Nöbetçi Eczane'],
-  ['/kesintiler/', 'Kesintiler'],
-  ['/hava-durumu/', 'Hava'],
-  ['/deprem/', 'Deprem'],
+  ['/kategori/asayis/', 'Asayiş'],
+  ['/kategori/belediye/', 'Belediye'],
+  ['/kategori/ekonomi/', 'Ekonomi'],
+  ['/kategori/yasam/', 'Yaşam'],
   ['/spor/', 'Spor'],
+  ['/kategori/turkiye-dunya/', 'Dünya'],
+  ['/bilgi/', 'Merak edilenler'],
   ['/piyasalar/', 'Piyasalar'],
-  ['/bilgi/', 'Bilgi'],
 ];
 
 export function saat(iso) {
@@ -102,7 +102,7 @@ ${jsonLd ? `<script type="application/ld+json">${guvenliJson(jsonLd)}</script>` 
 </head>
 <body>
 <header class="ust${ust ? '' : ' kisa'}${t.sinif}"${t.stil}>
-${t.sahne}
+${t.sahne}${yol === '/' ? '<div class="kure-sahne" aria-hidden="true"><img src="/kure.svg" alt="" width="640" height="640" fetchpriority="low"></div>' : ''}
 <div class="kap">
 ${ustSatir(aktif)}
 ${ust}
@@ -117,7 +117,7 @@ ${icerik}
 <p><small>Haberler kaynak gösterilerek derlenir; haberin tamamı her zaman kaynağında okunabilir. Kaynağı yazılmayan görseller temsilidir ve bir kısmı yapay zekâ ile üretilmiştir (<a href="/gorsel-kaynaklari/" style="color:inherit">ayrıntılar</a>).</small></p>
 </div>
 <nav class="alt-menu" aria-label="Alt menü">
-<a href="/bilgi/">Merak edilenler</a><a href="/rehber/">Mersin rehberi</a><a href="/etkinlikler/">Etkinlikler</a><a href="/spor/">Spor</a><a href="/burclar/">Burçlar</a><a href="/tatil-takvimi/">Tatil takvimi</a><a href="/piyasalar/">Altın ve döviz</a><a href="/namaz-vakitleri/">Namaz vakitleri</a><a href="/akaryakit-fiyatlari/">Akaryakıt</a>
+<a href="/nobetci-eczane/">Nöbetçi eczane</a><a href="/kesintiler/">Kesintiler</a><a href="/hava-durumu/">Hava durumu</a><a href="/deprem/">Deprem</a><a href="/trafik/">Trafik haritası</a><a href="/ilceler/">İlçeler</a><a href="/bilgi/">Merak edilenler</a><a href="/rehber/">Mersin rehberi</a><a href="/etkinlikler/">Etkinlikler</a><a href="/spor/">Spor</a><a href="/burclar/">Burçlar</a><a href="/tatil-takvimi/">Tatil takvimi</a><a href="/piyasalar/">Altın ve döviz</a><a href="/namaz-vakitleri/">Namaz vakitleri</a><a href="/akaryakit-fiyatlari/">Akaryakıt</a>
 <a href="/kunye/">Künye</a><a href="/iletisim/">İletişim</a><a href="/kaynaklarimiz/">Kaynaklarımız</a>
 <a href="/yayin-ilkeleri/">Yayın ilkeleri</a><a href="/gizlilik/">Gizlilik</a><a href="/cerez-politikasi/">Çerez politikası</a><a href="/gorsel-kaynaklari/">Görsel kaynakları</a>
 </nav>

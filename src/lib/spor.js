@@ -106,3 +106,77 @@ export async function sporGetir(ua) {
   }
   return sonuc;
 }
+
+// ---------- Ligler (puan durumu + son 5 maç formu) ----------
+export const LIGLER = [
+  { kod: 'super-lig', ad: 'Trendyol Süper Lig', kisa: 'Süper Lig', url: `${TFF}198`, form: true },
+  { kod: '1-lig', ad: 'Trendyol 1. Lig', kisa: '1. Lig', url: `${TFF}142`, form: true },
+  { kod: '2-lig-beyaz', ad: 'Nesine 2. Lig Beyaz Grup', kisa: '2. Lig Beyaz', url: `${TFF}976&grupID=3541`, form: false },
+  { kod: '2-lig-kirmizi', ad: 'Nesine 2. Lig Kırmızı Grup', kisa: '2. Lig Kırmızı', url: `${TFF}976&grupID=3542`, form: false },
+  { kod: '3-lig-1', ad: 'Nesine 3. Lig 1. Grup', kisa: '3. Lig 1. Grup', url: `${TFF}971&grupID=3543`, form: false },
+  { kod: '3-lig-2', ad: 'Nesine 3. Lig 2. Grup', kisa: '3. Lig 2. Grup', url: `${TFF}971&grupID=3544`, form: false },
+  { kod: '3-lig-3', ad: 'Nesine 3. Lig 3. Grup', kisa: '3. Lig 3. Grup', url: `${TFF}971&grupID=3545`, form: true, mersin: true },
+];
+
+// Takım adlarını eşleştirmek için sadeleştir ("Amed Sportif Faaliyetler" ~ "Amed")
+const sade = (ad) => String(ad).toLocaleLowerCase('tr-TR').replace(/[^a-zçğıöşü0-9 ]/g, ' ').replace(/\b(spor|sk|fk|kulübü|futbol|a ş|as|belediyespor|belediye)\b/g, ' ').replace(/\s+/g, ' ').trim();
+export function ayniTakim(a, b) {
+  const x = sade(a), y = sade(b);
+  if (!x || !y) return false;
+  if (x === y || x.startsWith(y) || y.startsWith(x)) return true;
+  const xs = x.split(' '), ys = y.split(' ');
+  return xs[0] === ys[0] && (xs[0].length > 4 || xs[1] === ys[1]);
+}
+
+// Hafta sonuçlarından her takımın son 5 maçı (eskiden yeniye): G / B / M
+export function formHesapla(puan, haftalar) {
+  const form = {};
+  const sirali = Object.keys(haftalar).map(Number).sort((a, b) => a - b);
+  for (const t of puan) {
+    const f = [];
+    for (const n of sirali) {
+      const mac = (haftalar[n] || []).find((m) => m.skor && (ayniTakim(m.ev, t.takim) || ayniTakim(m.dep, t.takim)));
+      if (!mac) continue;
+      const [e, d] = mac.skor.split('-').map(Number);
+      const evde = ayniTakim(mac.ev, t.takim);
+      const fark = evde ? e - d : d - e;
+      f.push(fark > 0 ? 'G' : fark === 0 ? 'B' : 'M');
+    }
+    form[t.takim] = f.slice(-5);
+  }
+  return form;
+}
+
+export async function liglerGetir(ua, eski = {}) {
+  const sonuc = {};
+  for (const lig of LIGLER) {
+    try {
+      const html = await sayfa(lig.url, ua);
+      const puan = puanCoz(html);
+      if (!puan.length) throw new Error('puan tablosu okunamadı');
+      const kayit = { ad: lig.ad, kisa: lig.kisa, kaynak: lig.url, puan, maclar: haftaCoz(html), haftalar: eski[lig.kod]?.haftalar || {} };
+      if (lig.form) {
+        const oynanan = Math.max(...puan.map((x) => x.o));
+        // Son 5 haftanın sonuçları; eski haftalar önbellekten, son 2 hafta her seferinde yenilenir
+        for (let n = Math.max(1, oynanan - 4); n <= oynanan + 1; n++) {
+          if (kayit.haftalar[n] && n < oynanan - 1) continue;
+          try {
+            await new Promise((x) => setTimeout(x, 1200));
+            const mac = haftaCoz(await sayfa(`${lig.url}&hafta=${n}`, ua));
+            if (mac.length) kayit.haftalar[n] = mac.map(({ ev, dep, skor }) => ({ ev, dep, skor }));
+          } catch (e) {
+            console.warn(`! ${lig.kisa} ${n}. hafta: ${e.message}`);
+          }
+        }
+        for (const n of Object.keys(kayit.haftalar)) if (Number(n) < oynanan - 6) delete kayit.haftalar[n];
+        kayit.form = formHesapla(puan, kayit.haftalar);
+      }
+      sonuc[lig.kod] = kayit;
+    } catch (e) {
+      console.warn(`! Lig (${lig.kisa}): ${e.message}`);
+      if (eski[lig.kod]) sonuc[lig.kod] = eski[lig.kod];
+    }
+    await new Promise((x) => setTimeout(x, 1200));
+  }
+  return sonuc;
+}

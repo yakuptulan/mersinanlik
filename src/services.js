@@ -16,12 +16,13 @@ import { suKesintileriniGetir } from './lib/kesinti.js';
 import { piyasaGetir } from './lib/piyasa.js';
 import { namazGetir } from './lib/namaz.js';
 import { akaryakitGetir } from './lib/akaryakit.js';
-import { sporGetir } from './lib/spor.js';
+import { sporGetir, liglerGetir } from './lib/spor.js';
 import { etkinlikGetir } from './lib/etkinlik.js';
 import { meteoGetir } from './lib/meteo.js';
 import { burcYaz } from './lib/burc.js';
 import { okunanlarGetir } from './lib/okunanlar.js';
 import { ulkeKodu } from './lib/bayrak.js';
+import { sayacGetir } from './lib/sayac.js';
 
 const DOSYA = path.resolve('data/servisler.json');
 const UA = 'mersinanlik.com iletisim@mersinanlik.com';
@@ -187,14 +188,22 @@ async function main() {
     }
   }
   // Spor (TFF): saatte bir yeter
-  if (!eski.spor || (eski.spor.superLig?.puan?.length || 0) < 10 || Date.now() - new Date(eski.spor.guncelleme).getTime() > 55 * 60e3) {
+  if (!eski.spor || !eski.spor.ligler || (eski.spor.superLig?.puan?.length || 0) < 10 || Date.now() - new Date(eski.spor.guncelleme).getTime() > 55 * 60e3) {
     try {
       const spor = await sporGetir(UA);
       yeni.spor = { ...eski.spor, ...spor };
-      console.log(`Spor: Süper Lig ${spor.superLig?.puan?.length || 0} takım, 3. Lig ${spor.ucuncuLig?.puan?.length || 0}, milli ${spor.milli?.maclar?.length || 0} maç`);
+      yeni.spor.ligler = await liglerGetir(UA, eski.spor?.ligler || {});
+      console.log(`Spor: Süper Lig ${spor.superLig?.puan?.length || 0} takım, 3. Lig ${spor.ucuncuLig?.puan?.length || 0}, milli ${spor.milli?.maclar?.length || 0} maç, ${Object.keys(yeni.spor.ligler).length} lig`);
     } catch (e) {
       console.warn('! Spor:', e.message);
     }
+  }
+  // Sayaçlar: deniz suyu ve hava kalitesi (her çalışmada, eskisi korunur)
+  try {
+    const sy = await sayacGetir(UA);
+    yeni.sayac = { ...eski.sayac, ...Object.fromEntries(Object.entries(sy).filter(([, v]) => v != null)) };
+  } catch (e) {
+    console.warn('! Sayaçlar:', e.message);
   }
   // Milli maçlardaki ülkelerin bayrakları (bir kez indirilir)
   const kodlar = new Set((yeni.spor?.milli?.maclar || eski.spor?.milli?.maclar || []).flatMap((m) => [ulkeKodu(m.ev), ulkeKodu(m.dep)]).filter(Boolean));

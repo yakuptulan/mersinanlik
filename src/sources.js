@@ -45,10 +45,11 @@ export const KAYNAKLAR = [
     id: 'haberturk-mersin',
     ad: 'Habertürk',
     tur: 'html',
-    liste: 'https://www.haberturk.com/mersin-haberleri',
+    // Habertürk'ün Mersin sayfası AA, DHA ve İHA'nın geçtiği tüm Mersin haberlerini yayınlıyor (İHA'ya doğrudan erişilemiyor)
+    liste: ['https://www.haberturk.com/mersin-haberleri', 'https://www.haberturk.com/mersin-haberleri?page=2'],
     baslikH1: true,
     linkDesen: 'yerel-haberler\\.haberturk\\.com/mersin-haberleri/[a-z0-9-]+-\\d{8,}$',
-    enFazla: 10,
+    enFazla: 24,
     kapsam: 'yerel',
     yapayZekaOzeti: false,
     fotoKullan: false,

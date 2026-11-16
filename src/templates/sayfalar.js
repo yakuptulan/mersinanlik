@@ -2,15 +2,17 @@ import { SITE, ILCELER, AYAR } from '../config.js';
 import { htmlKacis as h, ayrilmaEki } from '../lib/text.js';
 import { sayfa, saat, tarihUzun, ilceAdi } from './layout.js';
 import { ikon } from './ikonlar.js';
-import { sayfasiVar, haberListesi, mansetKarti, mansetKaydirici, bolumKartlari, reklamAlani, haberYolu, katBilgi, ilceCipleri, kutuKarti, gundemListesi, paylasCubugu } from './parcalar.js';
+import { kareKart, kisaKart, sayfasiVar, haberListesi, mansetKarti, mansetKaydirici, bolumKartlari, reklamAlani, haberYolu, katBilgi, ilceCipleri, kutuKarti, gundemListesi, paylasCubugu } from './parcalar.js';
 import { KATEGORILER, GENEL, GUNDEM } from '../config.js';
 import { telefonGoster } from '../lib/eczane.js';
 import { havaIkonu, havaTuru } from './havaIkon.js';
 import { FOTOLAR } from '../fotolar.js';
-import { kutuBasligi, piyasaSeridi, namazKutusu, akaryakitKutusu, fmt, yon, ONDALIK, bugunVakit, namazVerisi, sporKutusu, puanTablosu, macListesi, etkinlikKarti, meteoBandi, burcKutusu } from './servisParcalari.js';
+import { ligSerit, ligTablosu, sayaclarBlogu, kutuBasligi, piyasaSeridi, namazKutusu, akaryakitKutusu, fmt, yon, ONDALIK, bugunVakit, namazVerisi, sporKutusu, puanTablosu, macListesi, etkinlikKarti, meteoBandi, burcKutusu } from './servisParcalari.js';
 import { BURCLAR } from '../lib/burc.js';
 import { guncelEtkinlikler } from '../lib/etkinlik.js';
 import { bilgiKarti } from './bilgi.js';
+import { LIGLER } from '../lib/spor.js';
+import { RESMI_TATILLER, OKUL_TAKVIMI } from './rehber.js';
 import { DIYANET_ILCE, VAKITLER } from '../lib/namaz.js';
 
 // Resmî servis bağlantıları (veri entegrasyonu tamamlanana kadar doğrudan kaynağa yönlendirir)
@@ -257,12 +259,14 @@ function kategoriBloklari(mersin, haric) {
     .join('\n');
 }
 
+// Çok konuşulanlar: en çok sitenin yazdığı haberler (en az 6; yetmezse son 48 saatin öne çıkanlarıyla tamamlanır)
 function gundemdekilerSec(hikayeler, simdi, haric) {
-  return hikayeler
-    .filter((x) => !haric.has(x) && simdi - new Date(x.ilkGorulme).getTime() < 24 * 36e5 && new Set(x.kaynaklar.map((k) => k.ad)).size >= 2)
-    .sort((a, b) => new Set(b.kaynaklar.map((k) => k.ad)).size - new Set(a.kaynaklar.map((k) => k.ad)).size || new Date(b.ilkGorulme) - new Date(a.ilkGorulme))
-    .slice(0, 6)
-    .filter((_, i, a) => i < a.length - (a.length % 2)); // çift sayı: iki sütun dengeli dursun
+  const sayi = (x) => new Set(x.kaynaklar.map((k) => k.ad)).size;
+  const yeni = (x, saat) => simdi - new Date(x.ilkGorulme).getTime() < saat * 36e5;
+  const sirala = (l) => l.sort((a, b) => sayi(b) - sayi(a) || new Date(b.ilkGorulme) - new Date(a.ilkGorulme));
+  const secilen = sirala(hikayeler.filter((x) => !haric.has(x) && yeni(x, 24) && sayi(x) >= 2)).slice(0, 6);
+  if (secilen.length < 6) secilen.push(...sirala(hikayeler.filter((x) => !haric.has(x) && !secilen.includes(x) && yeni(x, 48) && !x.genel)).slice(0, 6 - secilen.length));
+  return secilen;
 }
 
 export function anaSayfa({ hikayeler, servis, simdi }) {
@@ -271,9 +275,12 @@ export function anaSayfa({ hikayeler, servis, simdi }) {
   const mansetler = mansetleriSec(mersin, simdi);
   const manset = mansetler[0];
   const mansetSet = new Set(mansetler);
-  const liste = mersin.filter((x) => !mansetSet.has(x)).slice(0, 8);
+  const serit = mersin.filter((x) => !mansetSet.has(x)).slice(0, 4);
+  const kacirma = mersin.filter((x) => !mansetSet.has(x) && !serit.includes(x) && (x.gorsel || x.metin)).sort((a, b) => b.kaynaklar.length - a.kaynaklar.length).slice(0, 5);
+  const ustteOlan = new Set([...mansetler, ...serit, ...kacirma]);
+  const liste = mersin.filter((x) => !ustteOlan.has(x)).slice(0, 8);
   const gundem = gundemdekilerSec(hikayeler, simdi, mansetSet);
-  const gosterilen = new Set([...mansetler, ...liste]);
+  const gosterilen = new Set([...ustteOlan, ...liste]);
   const bolumler = bolumleriSec(hikayeler, simdi);
   const ust = `${meteoBandi(servis)}${sonDakikaBandi(sonDakikaSec(hikayeler.filter((x) => x !== manset), simdi))}
 <div class="su-an-bas su-an-kompakt">
@@ -287,9 +294,12 @@ ${suAnKartlari(servis, SITE.defaultIlce, simdi)}
 ${piyasaSeridi(servis?.piyasa)}`;
   const icerik = `<main class="kap govde">
 <div class="ana">
+${serit.length === 4 ? `<div class="kisa-serit">${serit.map(kisaKart).join('')}</div>` : ''}
 ${mansetKaydirici(mansetler)}
 ${gundem.length >= 2 ? `<section class="kutu gundem-kutu"><div class="kutu-bas"><h2>Çok konuşulanlar</h2><span class="kutu-alt">En çok sitenin yazdığı haberler</span></div>${gundemListesi(gundem)}</section>` : ''}
 ${bolumler.length >= 3 ? `<section class="bolumler-blok"><div class="bolum-bas"><h2>Gündemdekiler</h2><span>Son 24 saat · bölümler</span></div>${bolumKartlari(bolumler)}</section>` : ''}
+${kacirma.length === 5 ? `<section class="kacirma-blok"><div class="bolum-bas"><h2><span class="kat-cizgi" style="--kat:var(--turuncu)"></span>Kaçırmayın</h2></div><div class="kare-izgara">${kacirma.map((x, i) => kareKart(x, i === 0)).join('')}</div></section>` : ''}
+${sayaclarBlogu(servis, { tatiller: [...RESMI_TATILLER, ...OKUL_TAKVIMI.filter((t) => /tatil/i.test(t[2]))], simdi })}
 <div class="bolum-bas" style="margin-top:14px"><h2>Mersin'den son haberler</h2><a class="bolum-link" href="/kategori/tum-haberler/">Tüm haberler →</a></div>
 ${haberListesi(liste)}
 ${(() => {
@@ -422,6 +432,7 @@ ${yanKutular(servis, ilce)}
 export const KATEGORI_SAYFALARI = [
   ...KATEGORILER.map((k) => ({ slug: k.slug, ad: k.ad, renk: k.renk, filtre: (x) => !x.genel && x.kategori === k.slug })),
   { slug: 'gundem', ad: 'Gündem', renk: GUNDEM.renk, filtre: (x) => !x.genel && x.kategori === 'gundem' },
+  { slug: 'yasam', ad: 'Yaşam', renk: '#D6409F', filtre: (x) => !x.genel && ['kultur', 'saglik', 'egitim', 'tarim', 'hava'].includes(x.kategori) },
   { slug: 'turkiye-dunya', ad: 'Türkiye ve dünya', renk: GENEL.renk, filtre: (x) => x.genel },
   { slug: 'tum-haberler', ad: 'Tüm Mersin haberleri', renk: GUNDEM.renk, filtre: (x) => !x.genel },
 ];
@@ -472,22 +483,50 @@ ${liste.length ? `<div class="izgara izgara-3">${liste.map(etkinlikKarti).join('
 }
 
 // ---------- Spor ----------
+// Lig seçici (sol/üst menü)
+function ligMenusu(ligler, aktif) {
+  return `<nav class="lig-menu" aria-label="Ligler"><a href="/spor/"${aktif ? '' : ' aria-current="page"'}>Mersin ve özet</a>${LIGLER.filter((l) => ligler[l.kod]).map((l) => `<a href="/spor/${l.kod}/"${aktif === l.kod ? ' aria-current="page"' : ''}>${h(l.kisa)}${l.mersin ? ' <small>Mersin</small>' : ''}</a>`).join('')}</nav>`;
+}
+
 export function sporSayfasi({ servis, hikayeler }) {
   const sp = servis?.spor || {};
+  const ligler = sp.ligler || {};
+  const sl = ligler['super-lig'] || (sp.superLig?.puan?.length ? { ...sp.superLig, kisa: 'Süper Lig' } : null);
+  const m3 = ligler['3-lig-3'] || (sp.ucuncuLig?.puan?.length ? sp.ucuncuLig : null);
   const haberler = hikayeler.filter((x) => !x.genel && x.kategori === 'spor').slice(0, 8);
   const bolum = (id, baslik, alt, ic) => `<section class="spor-bolum" id="${id}"><div class="bolum-bas"><h2>${baslik}</h2>${alt ? `<span>${alt}</span>` : ''}</div>${ic}</section>`;
   const icerik = `<main class="kap govde"><div class="ana">
-${sp.ucuncuLig?.puan?.length ? bolum('mersin', 'Mersin takımları', h(sp.ucuncuLig.ad), `${sp.ucuncuLig.maclar?.length ? `<h3 class="ara-baslik">Bu haftanın maçları</h3>${macListesi(sp.ucuncuLig.maclar)}` : ''}<h3 class="ara-baslik">Puan durumu</h3>${puanTablosu(sp.ucuncuLig.puan)}`) : ''}
+${ligMenusu(ligler, null)}
+${m3 ? bolum('mersin', 'Mersin takımları', h(m3.ad), `${m3.maclar?.length ? `<h3 class="ara-baslik">Bu haftanın maçları</h3>${macListesi(m3.maclar)}` : ''}<h3 class="ara-baslik">Puan durumu</h3>${ligTablosu(m3)}`) : ''}
 ${sp.milli?.maclar?.length ? bolum('milli', 'A Milli Takım', 'Son maçlar', macListesi(sp.milli.maclar.map((m) => ({ ...m, mersin: false, saat: null })))) : ''}
-${sp.superLig?.puan?.length ? bolum('super-lig', 'Trendyol Süper Lig', '', `${sp.superLig.maclar?.length ? `<h3 class="ara-baslik">Haftanın maçları</h3>${macListesi(sp.superLig.maclar)}` : ''}<h3 class="ara-baslik">Puan durumu</h3>${puanTablosu(sp.superLig.puan)}`) : ''}
+${sl ? bolum('super-lig', 'Trendyol Süper Lig', `<a href="/spor/super-lig/">Lig sayfası →</a>`, `${ligSerit(sl)}${sl.maclar?.length ? `<h3 class="ara-baslik">Haftanın maçları</h3>${macListesi(sl.maclar)}` : ''}<h3 class="ara-baslik">Puan durumu</h3>${ligTablosu(sl)}`) : ''}
 ${haberler.length ? `<div class="bolum-bas"><h2>Mersin spor haberleri</h2><a class="bolum-link" href="/kategori/spor/">Tümü →</a></div>${haberListesi(haberler)}` : ''}
 <p style="color:var(--ikincil);font-size:15px">Kaynak: Türkiye Futbol Federasyonu (tff.org). Son güncelleme: ${sp.guncelleme ? saat(sp.guncelleme) : '–'}</p>
 </div>${yanKutular(servis)}</main>`;
   return sayfa({
     baslik: 'Spor – Mersin takımları, Süper Lig puan durumu, Milli Takım',
-    aciklama: 'Yeni Mersin İdmanyurdu ve Mersin takımlarının puan durumu, haftanın maçları, Süper Lig puan tablosu ve A Milli Takım sonuçları.',
+    aciklama: 'Yeni Mersin İdmanyurdu ve Mersin takımlarının puan durumu, haftanın maçları, Süper Lig, 1. Lig, 2. Lig ve 3. Lig puan tabloları, A Milli Takım sonuçları.',
     yol: '/spor/',
-    ust: `<div class="su-an-bas"><div><h1>Spor</h1><p style="margin-top:8px">Mersin takımları · Süper Lig · A Milli Takım</p></div></div>`,
+    ust: `<div class="su-an-bas"><div><h1>Spor</h1><p style="margin-top:8px">Mersin takımları · Süper Lig · 1., 2. ve 3. Lig · A Milli Takım</p></div></div>`,
+    icerik,
+  });
+}
+
+export function ligSayfasi({ servis, kod }) {
+  const sp = servis?.spor || {};
+  const k = sp.ligler?.[kod];
+  const lig = LIGLER.find((l) => l.kod === kod);
+  const icerik = `<main class="kap govde"><div class="ana">
+${ligMenusu(sp.ligler || {}, kod)}
+${k ? `${ligSerit(k)}${k.maclar?.length ? `<h3 class="ara-baslik">Haftanın maçları</h3>${macListesi(k.maclar)}` : ''}<h3 class="ara-baslik">Puan durumu</h3>${ligTablosu(k)}` : '<div class="bos">Puan durumu şu an alınamadı.</div>'}
+<p style="color:var(--ikincil);font-size:15px">Kaynak: Türkiye Futbol Federasyonu (tff.org). Son güncelleme: ${sp.guncelleme ? saat(sp.guncelleme) : '–'}</p>
+</div>${yanKutular(servis)}</main>`;
+  return sayfa({
+    baslik: `${lig.ad} puan durumu ve fikstür`,
+    aciklama: `${lig.ad} güncel puan durumu, son 5 maç formu ve haftanın maçları.`,
+    yol: `/spor/${kod}/`,
+    tema: 'spor',
+    ust: `<div class="su-an-bas"><div><h1>${h(lig.ad)}</h1><p style="margin-top:8px">Puan durumu ve fikstür</p></div></div>`,
     icerik,
   });
 }
@@ -799,5 +838,27 @@ export function bulunamadiSayfasi() {
     noindex: true,
     ust: `<div class="su-an-bas"><div><h1>Aradığınız sayfa bulunamadı</h1></div></div>`,
     icerik: `<main class="kap govde"><div class="ana"><p><a class="hap" href="/">Ana sayfaya dön<span class="daire">${ikon.ok(18)}</span></a></p></div></main>`,
+  });
+}
+
+// ---------- Trafik yoğunluk haritası (Yandex harita aracı, canlı trafik katmanı) ----------
+const TRAFIK_NOKTALARI = [
+  ['Mersin merkez', 34.615, 36.795, 13], ['Tarsus', 34.895, 36.918, 14], ['Mezitli', 34.53, 36.755, 14], ['Erdemli', 34.31, 36.605, 14],
+  ['Silifke', 33.93, 36.377, 14], ['Anamur', 32.84, 36.075, 14], ['Mut', 33.435, 36.645, 14], ['D-400 Mersin–Adana', 34.85, 36.85, 11],
+];
+const trafikAdresi = ([, lon, lat, z]) => `https://yandex.com.tr/map-widget/v1/?ll=${lon}%2C${lat}&z=${z}&l=map%2Ctrf`;
+export function trafikSayfasi({ servis }) {
+  return sayfa({
+    baslik: 'Mersin canlı trafik yoğunluk haritası',
+    aciklama: 'Mersin ve ilçelerinde anlık trafik yoğunluğu: yeşil akıcı, sarı yoğun, kırmızı sıkışık. Canlı harita.',
+    yol: '/trafik/',
+    tema: 'ulasim',
+    ust: `<div class="su-an-bas"><div><h1>Canlı trafik haritası</h1><p style="margin-top:8px">Mersin ve ilçelerinde anlık yol yoğunluğu</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">
+<div class="trafik-secici" data-trafik>${TRAFIK_NOKTALARI.map((n, i) => `<button type="button" data-harita="${trafikAdresi(n)}"${i ? '' : ' aria-pressed="true"'}>${h(n[0])}</button>`).join('')}</div>
+<div class="trafik-harita"><iframe src="${trafikAdresi(TRAFIK_NOKTALARI[0])}" title="Mersin canlı trafik haritası" loading="lazy" allowfullscreen></iframe></div>
+<div class="trafik-renkler"><span><i style="background:#22c55e"></i>Akıcı</span><span><i style="background:#facc15"></i>Yoğun</span><span><i style="background:#ef4444"></i>Sıkışık</span><span><i style="background:#7f1d1d"></i>Durma noktasında</span></div>
+<p style="color:var(--ikincil);font-size:15px">Harita ve trafik verisi: Yandex Haritalar. Veriler birkaç dakikada bir yenilenir; yola çıkmadan önce yol ve hava durumunu da kontrol edin.</p>
+</div>${yanKutular(servis)}</main>`,
   });
 }

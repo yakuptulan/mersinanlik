@@ -55,7 +55,7 @@ const SABIT = {
 };
 
 // Yolları sitede gösterilecek başlıklara çevirir (ana sayfa ve teknik sayfalar hariç)
-export function okunanlarEsle(okunanlar, hikayeler, haberYolu, ilceler) {
+export function okunanlarEsle(okunanlar, hikayeler, haberYolu, ilceler, enFazla = 5) {
   const haberler = new Map(hikayeler.filter((x) => x.metin || x.ozet).map((x) => [haberYolu(x), x.baslik]));
   const sonuc = [];
   for (const { yol, sayi } of okunanlar?.liste || []) {
@@ -65,7 +65,7 @@ export function okunanlarEsle(okunanlar, hikayeler, haberYolu, ilceler) {
     const nIlce = yol.match(/^\/namaz-vakitleri\/([a-z]+)\/$/)?.[1];
     if (!baslik && nIlce) baslik = `${ilceler.find((i) => i.slug === nIlce)?.ad || nIlce} namaz vakitleri`;
     if (baslik) sonuc.push({ yol, baslik, sayi });
-    if (sonuc.length === 5) break;
+    if (sonuc.length === enFazla) break;
   }
   return sonuc;
 }

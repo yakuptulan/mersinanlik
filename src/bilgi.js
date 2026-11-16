@@ -1,8 +1,8 @@
 // Günde en fazla 2 "Merak edilenler" yazısı üretir (aralarında en az 5 saat). Workflow her çalıştığında çağrılır.
 import fs from 'node:fs';
 import path from 'node:path';
-import { KONULAR } from './bilgi-konulari.js';
-import { bilgiYaz, trendMaddesi } from './lib/bilgi.js';
+import { KONULAR, LISTELER } from './bilgi-konulari.js';
+import { bilgiYaz, trendMaddesi, listeYaz } from './lib/bilgi.js';
 
 const DOSYA = path.resolve('data/bilgi.json');
 const GUNLUK = 4; // 2 genel konu + 2 gündem konusu
@@ -51,6 +51,23 @@ async function main() {
   // 2) Yoksa sıradaki konu (bu aya uygun mevsimlik konular önce)
   const ay = Number(new Date(simdi).toLocaleString('en-GB', { month: 'numeric', timeZone: 'Europe/Istanbul' }));
   const uygun = (k) => !yapilan.has(k.vikipedi) && (veri.denenen[k.vikipedi] || 0) < 2;
+  // Günde bir öneri listesi ("Bu akşam ne izlesem?" gibi)
+  const bugunkuListe = veri.yazilar.filter((y) => y.tur === 'oneri' && new Date(y.tarih).toLocaleDateString('sv-SE', { timeZone: 'Europe/Istanbul' }) === bugun).length;
+  if (!konu && bugunku - bugunkuGundem < 2 && !bugunkuListe) {
+    const liste = LISTELER.find((l) => !yapilan.has(`liste:${l.kimlik}`) && (veri.denenen[`liste:${l.kimlik}`] || 0) < 2);
+    if (liste) {
+      try {
+        const yazi = await listeYaz(liste, new Set(veri.yazilar.map((y) => y.slug)));
+        veri.yazilar.unshift(yazi);
+        console.log(`📚 Öneri listesi: ${yazi.baslik} (${yazi.bolumler.length} madde${yazi.gorsel ? ', fotoğraflı' : ''})`);
+        fs.writeFileSync(DOSYA, JSON.stringify(veri, null, 1));
+        return;
+      } catch (e) {
+        veri.denenen[`liste:${liste.kimlik}`] = (veri.denenen[`liste:${liste.kimlik}`] || 0) + 1;
+        console.warn(`! Öneri listesi (${liste.kimlik}): ${e.message.slice(0, 200)}`);
+      }
+    }
+  }
   if (!konu && bugunku - bugunkuGundem < 2) konu = KONULAR.find((k) => uygun(k) && k.aylar?.includes(ay)) || KONULAR.find((k) => uygun(k) && !k.aylar);
   if (!konu) {
     console.log('Bilgi: uygun konu yok.');

@@ -113,3 +113,73 @@ export async function trendMaddesi(terim) {
   }
   return baslik;
 }
+
+// Arama terimiyle Vikipedi maddesi bul (liste yazıları için)
+async function maddeAra(terim) {
+  const j = await json(`https://tr.wikipedia.org/w/api.php?action=query&format=json&list=search&srlimit=1&srsearch=${encodeURIComponent(terim)}`);
+  return j.query?.search?.[0]?.title || null;
+}
+
+const LISTE_TALIMAT = `Sen bir yerel haber sitesinin "Merak edilenler" köşesinde öneri listeleri hazırlayan editörsün.
+Sana bir liste başlığı ve her madde için Vikipedi metni vereceğim. Sade, samimi ve merak uyandıran bir öneri yazısı hazırla.
+Kurallar:
+- SADECE verilen metinlerdeki bilgileri kullan; olmayan yıl, oyuncu, ödül, sayı ekleme. Film ve kitaplarda sonu/sürprizi verme.
+- Kopyalama yapma, tamamen kendi cümlelerinle yaz. Tık tuzağı ifadeler kullanma. Sağlık iddiası yazma.
+- baslik: verilen başlığı koru ya da çok az iyileştir (en fazla 90 karakter).
+- spot: 1-2 cümlelik giriş.
+- bolumler: her madde için bir bölüm; "baslik" maddenin adı (ör. film adı ve yılı metinde varsa), "metin" 2-4 cümle: ne olduğu ve neden sevilebileceği.
+- sss: 2 kısa soru-cevap (metinlerden cevaplanabilen).
+- aciklama: arama motoru için 140-155 karakter.
+- Yalnızca JSON döndür: {"baslik":"","spot":"","aciklama":"","bolumler":[{"baslik":"","metin":""}],"sss":[{"soru":"","cevap":""}]}`;
+
+export async function listeYaz(liste, mevcutSluglar = new Set()) {
+  const bulunan = [];
+  for (const terim of liste.maddeler) {
+    if (bulunan.length >= 6) break;
+    try {
+      const baslik = await maddeAra(terim);
+      if (!baslik || bulunan.some((b) => b.baslik === baslik)) continue;
+      const v = await vikipediGetir(baslik);
+      if (v.metin.length < 300) continue;
+      bulunan.push(v);
+    } catch (e) {
+      console.warn(`! Liste maddesi (${terim}): ${e.message}`);
+    }
+  }
+  const hedef = Number(liste.baslik.match(/\b(\d+)\b/)?.[1]) || 5;
+  const secilen = bulunan.slice(0, hedef);
+  if (secilen.length < hedef) throw new Error(`Yeterli madde bulunamadı (${secilen.length}/${hedef})`);
+  const icerik = `Liste başlığı: ${liste.baslik}\n\n${secilen.map((v, i) => `[${i + 1}] ${v.baslik}\n${v.metin.slice(0, 1400)}`).join('\n\n')}`;
+  const j = await jsonYaz(LISTE_TALIMAT, icerik, { sicaklik: 0.6 });
+  const bolumler = (j?.bolumler || []).filter((b) => b?.baslik && b?.metin && b.metin.length > 50);
+  if (!j?.baslik || bolumler.length < hedef) throw new Error(`Liste yazısı yetersiz (${bolumler.length})`);
+  let slug = slugify(j.baslik).slice(0, 70).replace(/-+$/, '');
+  if (mevcutSluglar.has(slug)) slug = `${slug}-${Date.now().toString(36).slice(-4)}`;
+  let gorsel = null;
+  for (const v of secilen) {
+    try {
+      const g = await commonsGorsel(v.gorselAdi);
+      if (!g) continue;
+      const r = await fetch(g.url, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(30000) });
+      if (!r.ok) continue;
+      fs.mkdirSync(KLASOR, { recursive: true });
+      await sharp(Buffer.from(await r.arrayBuffer())).resize({ width: 1200, height: 675, fit: 'cover' }).webp({ quality: 76 }).toFile(path.join(KLASOR, `${slug}.webp`));
+      gorsel = { dosya: `${slug}.webp`, yazar: g.yazar, lisans: g.lisans, sayfa: g.sayfa };
+      break;
+    } catch {}
+  }
+  return {
+    slug,
+    konu: `liste:${liste.kimlik}`,
+    tur: 'oneri',
+    baslik: String(j.baslik).trim().slice(0, 110),
+    spot: String(j.spot || '').trim(),
+    aciklama: String(j.aciklama || j.spot || '').trim().slice(0, 160),
+    bolumler: bolumler.map((b) => ({ baslik: String(b.baslik).trim(), metin: String(b.metin).trim() })),
+    sss: (j.sss || []).filter((x) => x?.soru && x?.cevap).slice(0, 3),
+    kaynak: { ad: 'Vikipedi', link: secilen[0].link },
+    kaynaklar: secilen.map((v) => ({ ad: v.baslik, link: v.link })),
+    gorsel,
+    tarih: new Date().toISOString(),
+  };
+}

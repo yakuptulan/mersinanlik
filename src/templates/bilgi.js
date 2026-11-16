@@ -6,7 +6,7 @@ import { paylasCubugu } from './parcalar.js';
 import { SITE } from '../config.js';
 import { TUR_AD } from '../bilgi-konulari.js';
 
-const TUR_RENK = { gundem: '#E5484D', yasam: '#D6409F', lezzet: '#EF5F00', tarih: '#8E4EC6', doga: '#2B9A66', bilim: '#3E8EDE', sehir: '#0588F0' };
+const TUR_RENK = { oneri: '#0D9488', gundem: '#E5484D', yasam: '#D6409F', lezzet: '#EF5F00', tarih: '#8E4EC6', doga: '#2B9A66', bilim: '#3E8EDE', sehir: '#0588F0' };
 export const bilgiYolu = (y) => `/bilgi/${y.slug}/`;
 
 export function bilgiKarti(y) {
@@ -66,7 +66,7 @@ ${y.gorsel ? `<figure class="haber-gorsel"><img src="/bilgi/${h(y.gorsel.dosya)}
 ${y.spot ? `<p class="haber-spot">${h(y.spot)}</p>` : ''}
 <ol class="bilgi-maddeler">${y.bolumler.map((b) => `<li><h2>${h(b.baslik)}</h2><p>${h(b.metin)}</p></li>`).join('')}</ol>
 ${y.sss?.length ? `<section class="bilgi-sss"><h2>Sık sorulanlar</h2>${y.sss.map((s) => `<details><summary>${h(s.soru)}</summary><p>${h(s.cevap)}</p></details>`).join('')}</section>` : ''}
-<div class="haber-kaynak"><p>Bu yazı <a href="${h(y.kaynak.link)}" rel="noopener" target="_blank">${h(y.kaynak.ad)}</a> maddesindeki bilgilerden yararlanılarak, yapay zekâ desteğiyle ${SITE.name} tarafından hazırlanmıştır. Metin <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.tr" rel="noopener license" target="_blank">CC BY-SA 4.0</a> lisansıyla paylaşılır. Bir hata görürseniz <a href="/iletisim/">bize yazın</a>.</p></div>
+<div class="haber-kaynak"><p>Bu yazı ${y.kaynaklar?.length ? `Vikipedi'deki ${y.kaynaklar.map((k) => `<a href="${h(k.link)}" rel="noopener" target="_blank">${h(k.ad)}</a>`).join(', ')} maddelerindeki` : `<a href="${h(y.kaynak.link)}" rel="noopener" target="_blank">${h(y.kaynak.ad)}</a> maddesindeki`} bilgilerden yararlanılarak, yapay zekâ desteğiyle ${SITE.name} tarafından hazırlanmıştır. Metin <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.tr" rel="noopener license" target="_blank">CC BY-SA 4.0</a> lisansıyla paylaşılır. Bir hata görürseniz <a href="/iletisim/">bize yazın</a>.</p></div>
 ${paylasCubugu(SITE.url + yol, y.baslik)}
 </article>
 ${diger.length ? `<div class="bolum-bas"><h2>Diğer merak edilenler</h2><a class="bolum-link" href="/bilgi/">Tümü →</a></div><div class="izgara">${diger.map(bilgiKarti).join('')}</div>` : ''}

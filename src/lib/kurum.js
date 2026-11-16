@@ -86,9 +86,17 @@ export async function kurumMetniGetir(link, kaynak) {
 // gorulen: bu kaynakta daha önce görülen linkler (durum.json'da saklanır). İlk çalışmada
 // liste sadece kaydedilir; tarihi belli olmayan eski haberler "yeni" diye yayınlanmasın.
 export async function kurumOku(kaynak, { bilinen = () => false, gorulen = null } = {}) {
-  const liste = await sayfaGetir(kaynak.liste);
   const desen = new RegExp(kaynak.linkDesen, 'i');
-  const linkler = [...new Set([...liste.matchAll(/href=["']([^"'#]+)["']/gi)].map((m) => mutlak(m[1], kaynak.liste)).filter((u) => u && desen.test(u)))].slice(0, kaynak.enFazla || 8);
+  const tumu = [];
+  for (const adres of [].concat(kaynak.liste)) {
+    try {
+      const liste = await sayfaGetir(adres);
+      tumu.push(...[...liste.matchAll(/href=["']([^"'#]+)["']/gi)].map((m) => mutlak(m[1], adres)).filter((u) => u && desen.test(u)));
+    } catch (e) {
+      if (adres === [].concat(kaynak.liste)[0]) throw e;
+    }
+  }
+  const linkler = [...new Set(tumu)].slice(0, kaynak.enFazla || 8);
   const ilkKez = gorulen && gorulen.length === 0;
   const onceki = new Set(gorulen || []);
   if (gorulen) for (const l of linkler) if (!onceki.has(l)) gorulen.push(l);

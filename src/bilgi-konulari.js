@@ -84,4 +84,18 @@ export const KONULAR = [
   { vikipedi: 'Olba', tur: 'tarih' },
   { vikipedi: 'Çukurova', tur: 'sehir' },
 ];
-export const TUR_AD = { gundem: 'Gündemden', lezzet: 'Lezzetler', tarih: 'Tarih', doga: 'Doğa', bilim: 'Bilim', yasam: 'Yaşam', sehir: 'Şehir' };
+export const TUR_AD = { oneri: 'Öneriler', gundem: 'Gündemden', lezzet: 'Lezzetler', tarih: 'Tarih', doga: 'Doğa', bilim: 'Bilim', yasam: 'Yaşam', sehir: 'Şehir' };
+
+// Liste / öneri yazıları ("Bu akşam ne izlesem?" gibi). Her madde Vikipedi'de aranır, bulunanlarla yazılır.
+export const LISTELER = [
+  { kimlik: 'romantik-komedi', baslik: 'Bu akşam ne izlesem? 5 romantik komedi filmi', maddeler: ['Notting Hill 1999 film', "Harry Sally'ye Rastlayınca film", 'Aşk Her Yerde 2003 film', 'Özel Bayan 1990 film', 'Gurur ve Önyargı 2005 film', 'Sevgililer Günü 2010 film'] },
+  { kimlik: 'mersin-lezzet', baslik: "Mersin'e gelen herkesin tatması gereken 5 lezzet", maddeler: ['Tantuni', 'Cezerye', 'Kerebiç', 'Batırık', 'Bici bici', 'Karsambaç'] },
+  { kimlik: 'aile-animasyon', baslik: 'Aileyle izlenecek 5 animasyon film', maddeler: ['Oyuncak Hikâyesi 1995', 'Kayıp Balık Nemo', 'Ratatuy film', 'Yukarı Bak 2009 film', 'Karlar Ülkesi 2013 film', 'Ters Yüz 2015 film'] },
+  { kimlik: 'mersin-gezi', baslik: "Hafta sonu Mersin'de gezilecek 6 tarihi yer", maddeler: ['Kızkalesi', 'Uzuncaburç', 'Alahan Manastırı', 'Kleopatra Kapısı', 'Mamure Kalesi', 'Anemurium', 'Silifke Kalesi'] },
+  { kimlik: 'turk-roman', baslik: 'Kitap sevenlere 5 Türk klasik roman', maddeler: ['Kürk Mantolu Madonna', 'Saatleri Ayarlama Enstitüsü', 'Tutunamayanlar', 'İnce Memed', 'Çalıkuşu roman', 'Aylak Adam'] },
+  { kimlik: 'yesilcam', baslik: 'Tekrar tekrar izlenen 5 Türk filmi', maddeler: ['Hababam Sınıfı 1975 film', 'Selvi Boylum Al Yazmalım', 'Babam ve Oğlum film', 'Eşkıya 1996 film', 'Tosun Paşa film', 'Vizontele'] },
+  { kimlik: 'bilim-kurgu', baslik: 'Bilim kurgu sevenlere 5 film önerisi', maddeler: ['Yıldızlararası film', 'Başlangıç 2010 film', 'Matrix film', 'Geleceğe Dönüş', 'Marslı film', 'Wall-E'] },
+  { kimlik: 'kis-oyun', baslik: 'Kış akşamları için 5 klasik masa oyunu', maddeler: ['Tavla', 'Satranç', 'Okey', 'Monopoly', 'Scrabble', 'Dama'] },
+  { kimlik: 'doga-harika', baslik: 'Görmeden geçmeyin: Dünyanın 5 doğal harikası', maddeler: ['Büyük Set Resifi', 'Büyük Kanyon', 'Pamukkale', 'Victoria Şelalesi', 'Kapadokya', 'Halong Körfezi'] },
+  { kimlik: 'polisiye', baslik: 'Polisiye sevenler için 5 klasik roman', maddeler: ['Doğu Ekspresinde Cinayet', 'Baskervillelerin Köpeği', 'On Küçük Zenci', 'Gülün Adı', 'Kuzuların Sessizliği roman'] },
+];

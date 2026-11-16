@@ -54,7 +54,7 @@ const RENKLER = {
 
 export function temaBul(yol) {
   const k = yol.match(/^\/kategori\/([a-z-]+)\//)?.[1];
-  if (k) return k === 'turkiye-dunya' ? 'dunya' : k === 'tum-haberler' ? 'gundem' : k;
+  if (k) return k === 'turkiye-dunya' ? 'dunya' : k === 'tum-haberler' ? 'gundem' : k === 'yasam' ? 'kultur' : k;
   const tablo = [[/^\/spor\//, 'spor'], [/^\/piyasalar\//, 'ekonomi'], [/^\/hava-durumu\//, 'hava'], [/^\/deprem\//, 'deprem'], [/^\/nobetci-eczane\//, 'saglik'], [/^\/kesintiler\//, 'kesinti'], [/^\/namaz-vakitleri\//, 'namaz'], [/^\/akaryakit-fiyatlari\//, 'yakit'], [/^\/bilgi\//, 'bilgi'], [/^\/etkinlikler\//, 'kultur'], [/^\/burclar\//, 'burc'], [/^\/(rehber|tatil-takvimi)\//, 'sehir'], [/^\/ilce\//, 'sehir'], [/^\/ilceler\//, 'sehir']];
   return tablo.find(([d]) => d.test(yol))?.[1] || null;
 }
