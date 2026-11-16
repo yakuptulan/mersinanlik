@@ -52,7 +52,7 @@ async function cfCalistir(model, girdi) {
 const SAHNE_TALIMATI = `You write prompts for an image generator for a Turkish local news website in Mersin, Turkey.
 Given a Turkish news headline, describe ONE calm, realistic photo scene (max 45 words, English) that illustrates the TOPIC.
 Rules: no real or identifiable people (people only small, from behind or far away); no text, signs, logos or flags; no blood, weapons, violence, injured people or bodies — for accidents/crime use symbolic scenes (emergency lights at a distance, an empty street with police tape, an ambulance parked); no children in negative contexts; nothing political (no party symbols, rallies).
-Mention Mediterranean Mersin details when fitting (palm trees, sea promenade, Taurus mountains, citrus orchards).
+The main subject must clearly show the news topic (e.g. the service, the building type, the vehicles, the activity). Local Mersin details (palm trees, sea, Taurus mountains, citrus orchards) only as background and only when natural — do not default to sea promenades or sunsets. Prefer ordinary daytime light.
 Reply with the scene description only.`;
 
 async function cfUret(hikaye) {
