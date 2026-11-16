@@ -116,6 +116,7 @@ async function main() {
   }
 
   // 4) Yapay zekâ görselleri (günlük limitle)
+  for (const h of veri.hikayeler) if (/HTTP (401|403|429)/.test(h.gorselHatasi || '')) delete h.gorselHatasi;
   if (gorselUretimHazirMi()) {
     const bugun = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Istanbul' });
     if (durum.gorsel?.gun !== bugun) durum.gorsel = { gun: bugun, adet: 0 };
@@ -126,9 +127,9 @@ async function main() {
         durum.gorsel.adet++;
         console.log(`🖼  Görsel üretildi: ${h.baslik}`);
       } catch (e) {
-        h.gorselHatasi = String(e.message).slice(0, 120);
         console.warn(`! Görsel: ${e.message}`);
-        if (/HTTP (401|403|429)/.test(e.message)) break; // anahtar/kota sorunu: bu çalışmada bırak
+        if (/HTTP (401|403|429|5\d\d)/.test(e.message)) break; // anahtar/kota/sunucu sorunu: sonra tekrar denenir
+        h.gorselHatasi = String(e.message).slice(0, 120); // görsel bu haber için üretilemiyor (ör. güvenlik filtresi)
       }
     }
   }
