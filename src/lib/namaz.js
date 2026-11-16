@@ -22,14 +22,29 @@ export function vakitCoz(satir) {
   };
 }
 
-// Her Diyanet bölgesi için bugünden itibaren 8 gün
-export async function namazGetir(ua, bugun) {
-  const sonuc = {};
+// Her Diyanet bölgesi için bugünden itibaren 8 gün. Kaynak sık isteğe 403 verebiliyor:
+// istekler arasında bekler, olmazsa bir kez daha dener; alınamayan bölgelerde eski veri kalır.
+export async function namazGetir(ua, bugun, eski = {}) {
+  const sonuc = { ...(eski || {}) };
+  let hata = 0;
   for (const id of [...new Set(Object.values(DIYANET_ILCE))]) {
-    const r = await fetch(`https://ezanvakti.emushaf.net/vakitler/${id}`, { headers: { 'User-Agent': ua }, signal: AbortSignal.timeout(20000) });
-    if (!r.ok) throw new Error(`HTTP ${r.status} vakitler/${id}`);
-    sonuc[id] = (await r.json()).map(vakitCoz).filter((v) => v && v.tarih >= bugun).slice(0, 8);
-    await new Promise((x) => setTimeout(x, 400));
+    if ((sonuc[id] || []).some((v) => v.tarih === bugun) && (sonuc[id] || []).filter((v) => v.tarih >= bugun).length >= 5) {
+      sonuc[id] = sonuc[id].filter((v) => v.tarih >= bugun);
+      continue; // bu bölgenin önümüzdeki günleri zaten var
+    }
+    let tamam = false;
+    for (let deneme = 0; deneme < 3 && !tamam; deneme++) {
+      await new Promise((x) => setTimeout(x, deneme ? 8000 * deneme : 2500));
+      try {
+        const r = await fetch(`https://ezanvakti.emushaf.net/vakitler/${id}`, { headers: { 'User-Agent': ua, Accept: 'application/json' }, signal: AbortSignal.timeout(20000) });
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        sonuc[id] = (await r.json()).map(vakitCoz).filter((v) => v && v.tarih >= bugun).slice(0, 8);
+        tamam = true;
+      } catch (e) {
+        if (deneme === 2) console.warn(`! Namaz ${id}: ${e.message}`);
+      }
+    }
+    if (!tamam) hata++;
   }
-  return { guncelleme: new Date().toISOString(), bolgeler: sonuc };
+  return { guncelleme: new Date().toISOString(), bolgeler: sonuc, eksik: hata };
 }

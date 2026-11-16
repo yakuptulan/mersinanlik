@@ -133,10 +133,10 @@ async function main() {
   }
   // Namaz vakitleri ayda bir ay ileriye kadar yayınlanıyor: günde bir kez yeter
   const bugun = istanbulTarih(Date.now());
-  if (!eski.namaz || istanbulTarih(eski.namaz.guncelleme) !== bugun) {
+  if (!eski.namaz || istanbulTarih(eski.namaz.guncelleme) !== bugun || eski.namaz.eksik) {
     try {
-      yeni.namaz = await namazGetir(UA, bugun);
-      console.log('Namaz vakitleri güncellendi');
+      yeni.namaz = await namazGetir(UA, bugun, eski.namaz?.bolgeler);
+      console.log(`Namaz vakitleri güncellendi (eksik bölge: ${yeni.namaz.eksik})`);
     } catch (e) {
       console.warn('! Namaz:', e.message);
     }
