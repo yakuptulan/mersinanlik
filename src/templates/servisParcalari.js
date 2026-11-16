@@ -127,7 +127,15 @@ export function etkinlikKarti(e) {
 const RENK_AD = { yellow: 'Sarı kod', orange: 'Turuncu kod', red: 'Kırmızı kod' };
 export function meteoBandi(servis, ilceSlug = null) {
   const liste = (servis?.meteo?.uyarilar || []).filter((u) => !ilceSlug || u.ilceler.includes(ilceSlug));
-  if (!liste.length) return '';
+  if (!liste.length) {
+    // MGM verisi yoksa: uyarı haberini göster
+    const x = servis?.meteoHaber;
+    if (!x || (ilceSlug && x.ilceler.length && !x.ilceler.includes(ilceSlug))) return '';
+    return `<a class="meteo-bandi yellow" href="${h(x.kaynaklar[0].link)}" rel="noopener nofollow" target="_blank">
+<span class="meteo-rozet">⚠ Hava uyarısı</span>
+<span class="meteo-metin"><b>${h(x.baslik)}</b> <span>Kaynak: ${h(x.kaynaklar[0].ad)}</span></span>
+<span class="meteo-kaynak">Haberi oku →</span></a>`;
+  }
   const sira = { red: 0, orange: 1, yellow: 2 };
   const u = [...liste].sort((a, b) => sira[a.renk] - sira[b.renk] || (a.gun === 'bugun' ? -1 : 1))[0];
   const adlar = u.ilceler.map((s) => ILCELER.find((i) => i.slug === s)?.ad).filter(Boolean);

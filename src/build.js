@@ -39,6 +39,13 @@ export function insaEt({ simdi = Date.now() } = {}) {
     return { ...x, baslik: baslikTemizle(x.baslik), kategori: k !== 'gundem' ? k : x.kategori };
   });
   const servis = servisYukle();
+  // Meteoroloji uyarısı haberi (MGM verisi alınamazsa yedek): son 18 saatte Mersin'i ilgilendiren uyarı haberi
+  servis.meteoHaber = hikayeler.find(
+    (x) =>
+      simdi - new Date(x.ilkGorulme).getTime() < 18 * 36e5 &&
+      /(sarı|turuncu|kırmızı) kod|meteoroloji.{0,40}uyar|uyarı.{0,20}(yağış|sağanak|fırtına|sel)|(kuvvetli|şiddetli) (yağış|sağanak|rüzgar|fırtına)/i.test(x.baslik) &&
+      (!x.genel || /mersin|akdeniz|doğu akdeniz|çukurova/i.test(x.baslik))
+  ) || null;
   servis.enCokOkunan = okunanlarEsle(servis.okunanlar, hikayeler, haberYolu, ILCELER);
 
   const sayfalar = [];

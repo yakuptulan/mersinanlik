@@ -43,14 +43,13 @@ export async function meteoGetir(ua) {
   const uyarilar = [];
   let basari = 0;
   for (const [gun, ad] of [['today', 'bugun'], ['tomorrow', 'yarin']]) {
-    for (let deneme = 0; deneme < 2; deneme++) {
+    for (let deneme = 0; deneme < 1; deneme++) {
       try {
         uyarilar.push(...uyariCoz(await al(gun), ad));
         basari++;
         break;
       } catch (e) {
-        if (deneme) console.warn(`! Meteoroloji (${gun}): ${e.message}`);
-        else await new Promise((x) => setTimeout(x, 3000));
+        console.warn(`! Meteoroloji (${gun}): ${e.message}`);
       }
     }
   }
