@@ -77,7 +77,7 @@ export async function kaynakOku(kaynak, { zamanAsimi = 15000 } = {}) {
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const xml = await res.text();
-    return akisiCoz(xml, kaynak.ad).filter((h) => h.baslik && h.link);
+    return akisiCoz(xml, kaynak.ad).filter((h) => h.baslik && h.link && !(kaynak.haricDesen && new RegExp(kaynak.haricDesen).test(h.link)));
   } finally {
     clearTimeout(t);
   }

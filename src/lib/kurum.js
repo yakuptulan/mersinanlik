@@ -46,10 +46,12 @@ export function govdeCoz(html) {
 }
 
 export function detayCoz(html, link, kaynak) {
-  const baslikHam = meta(html, 'og:title') || html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || html.match(/<title>([\s\S]*?)<\/title>/i)?.[1] || '';
+  const h1 = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1];
+  const baslikHam = (kaynak.baslikH1 && h1 && duzMetin(h1).length > 15 ? h1 : null) || meta(html, 'og:title') || html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || html.match(/<title>([\s\S]*?)<\/title>/i)?.[1] || '';
   let baslik = duzMetin(baslikHam);
   // Sondaki site/bölüm adlarını at: " | Mersin Yenişehir Belediyesi", " - Haberler", " | ... Resmi Web Sitesi"
   for (let i = 0; i < 3; i++) baslik = baslik.replace(/\s*[|–-]\s*[^|–]*(Belediye|Valili|Resmi Web|Haberler|Duyurular)[^|–]*$/i, '');
+  baslik = baslik.replace(/\s*\|\s*Mersin\s+g\S{0,3}ndem\s*$/i, '');
   baslik = baslikTemizle(baslik, kaynak.ad);
   const aciklama = duzMetin(meta(html, 'og:description') || meta(html, 'description') || '').slice(0, 1200);
 

@@ -55,6 +55,14 @@ async function main() {
   if (i > -1) return dene(process.argv[i + 1]);
 
   const veri = temizle(yukle());
+  // Hariç tutulan bağlantılar (ör. video galerileri) sonradan eklendiyse eski kayıtlardan da çıkar
+  for (const h of veri.hikayeler) {
+    h.kaynaklar = h.kaynaklar.filter((k) => {
+      const kk = KAYNAKLAR.find((x) => x.id === k.kaynakId);
+      return !(kk?.haricDesen && new RegExp(kk.haricDesen).test(k.link));
+    });
+  }
+  veri.hikayeler = veri.hikayeler.filter((h) => h.kaynaklar.length);
   const durum = durumYukle();
   const yeniRiskliler = [];
   let yeniSayi = 0;

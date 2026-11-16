@@ -1,7 +1,40 @@
 // "Merak edilenler" yazılarının konu sırası. Her konu Türkçe Vikipedi maddesine dayanır;
 // yazı maddedeki bilgilerden, kendi cümlelerimizle hazırlanır. Sıra: Mersin ağırlıklı, araya genel konular.
-// tur: lezzet | tarih | doga | bilim | sehir
+// tur: lezzet | tarih | doga | bilim | sehir | yasam  (aylar: o aylarda öne alınır)
 export const KONULAR = [
+  // Mevsimlik / hayattan konular (ayına gelince öne alınır)
+  { vikipedi: 'Mandalina', tur: 'lezzet', aylar: [11, 12, 1] },
+  { vikipedi: 'Kara Cuma', tur: 'yasam', aylar: [11] },
+  { vikipedi: 'Nar', tur: 'lezzet', aylar: [10, 11] },
+  { vikipedi: 'Portakal', tur: 'lezzet', aylar: [12, 1, 2] },
+  { vikipedi: 'Kış gündönümü', tur: 'bilim', aylar: [12] },
+  { vikipedi: 'Yılbaşı', tur: 'yasam', aylar: [12] },
+  { vikipedi: 'Kar', tur: 'bilim', aylar: [12, 1, 2] },
+  { vikipedi: 'Lodos', tur: 'bilim', aylar: [11, 12, 1, 2] },
+  { vikipedi: 'Dolu (meteoroloji)', tur: 'bilim', aylar: [11, 12, 3, 4] },
+  { vikipedi: 'Greyfurt', tur: 'lezzet', aylar: [1, 2] },
+  { vikipedi: 'Sevgililer Günü', tur: 'yasam', aylar: [2] },
+  { vikipedi: 'Ekinoks', tur: 'bilim', aylar: [3, 9] },
+  { vikipedi: 'Çilek', tur: 'lezzet', aylar: [4, 5] },
+  { vikipedi: 'Kiraz', tur: 'lezzet', aylar: [5, 6] },
+  { vikipedi: 'Yaz gündönümü', tur: 'bilim', aylar: [6] },
+  { vikipedi: 'Karpuz', tur: 'lezzet', aylar: [6, 7, 8] },
+  { vikipedi: 'Denizanası', tur: 'doga', aylar: [6, 7, 8] },
+  { vikipedi: 'İncir', tur: 'lezzet', aylar: [8, 9] },
+  { vikipedi: 'Avokado', tur: 'lezzet' },
+  { vikipedi: 'Gökkuşağı', tur: 'bilim' },
+  { vikipedi: 'Kutup ışıkları', tur: 'bilim' },
+  { vikipedi: 'Süper Ay', tur: 'bilim' },
+  { vikipedi: 'Halley Kuyruklu Yıldızı', tur: 'bilim' },
+  { vikipedi: 'Şimşek', tur: 'bilim' },
+  { vikipedi: 'Çay', tur: 'lezzet' },
+  { vikipedi: 'Türk kahvesi', tur: 'lezzet' },
+  { vikipedi: 'Simit', tur: 'lezzet' },
+  { vikipedi: 'Baklava', tur: 'lezzet' },
+  { vikipedi: 'Lokum', tur: 'lezzet' },
+  { vikipedi: 'Nazar boncuğu', tur: 'yasam' },
+  { vikipedi: 'Tavla', tur: 'yasam' },
+  { vikipedi: 'Okey', tur: 'yasam' },
   { vikipedi: 'Tantuni', tur: 'lezzet' },
   { vikipedi: 'Kızkalesi, Erdemli', tur: 'tarih' },
   { vikipedi: 'Akdeniz foku', tur: 'doga' },
@@ -51,4 +84,4 @@ export const KONULAR = [
   { vikipedi: 'Olba', tur: 'tarih' },
   { vikipedi: 'Çukurova', tur: 'sehir' },
 ];
-export const TUR_AD = { lezzet: 'Lezzetler', tarih: 'Tarih', doga: 'Doğa', bilim: 'Bilim', sehir: 'Şehir' };
+export const TUR_AD = { gundem: 'Gündemden', lezzet: 'Lezzetler', tarih: 'Tarih', doga: 'Doğa', bilim: 'Bilim', yasam: 'Yaşam', sehir: 'Şehir' };

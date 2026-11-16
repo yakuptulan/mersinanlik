@@ -43,7 +43,8 @@ Sana bir Vikipedi maddesinin metnini vereceğim. Bu bilgilere dayanarak sade, ak
 Kurallar:
 - SADECE verilen metindeki bilgileri kullan. Metinde olmayan tarih, sayı, isim, iddia EKLEME. Emin olmadığın şeyi yazma.
 - Metni kopyalama; tamamen kendi cümlelerinle yaz. Abartılı, yanıltıcı, "şok", "inanamayacaksınız" gibi tık tuzağı ifadeler kullanma.
-- Sağlık, tedavi, ilaç, diyet konusunda tavsiye ya da iddia yazma.
+- Sağlık, tedavi, ilaç, diyet konusunda tavsiye ya da iddia yazma (ör. "faydaları", "iyi gelir" gibi).
+- Konu bir kişi, hastalık/tıp, suç, ölüm, felaket ya da siyasi tartışma ise yazı yazma, sadece {"uygun": false} döndür.
 - Başlık: Google'da aranacak şekilde net olsun (ör. "Tantuni nedir? Mersin'in meşhur lezzeti hakkında 7 bilgi"). En fazla 90 karakter.
 - spot: 1-2 cümle, yazının özeti.
 - bolumler: 5-8 madde. Her maddenin kısa bir başlığı ve 2-4 cümlelik metni olsun. Maddeler birbirini tekrar etmesin.
@@ -55,6 +56,7 @@ export async function bilgiYaz(konu, mevcutSluglar = new Set()) {
   const v = await vikipediGetir(konu.vikipedi);
   if (v.metin.length < 900) throw new Error(`Kaynak metin kısa (${v.metin.length})`);
   const j = await jsonYaz(TALIMAT, `Madde: ${v.baslik}\n\n${v.metin.slice(0, 7000)}`, { sicaklik: 0.5 });
+  if (j?.uygun === false) throw new Error('Konu bilgi köşesine uygun değil');
   const bolumler = (j?.bolumler || []).filter((b) => b?.baslik && b?.metin && b.metin.length > 60);
   const kelime = bolumler.map((b) => b.metin).join(' ').split(/\s+/).length;
   if (!j?.baslik || bolumler.length < 4 || kelime < 220) throw new Error(`Yazı yetersiz (${bolumler.length} bölüm, ${kelime} kelime)`);
@@ -77,6 +79,7 @@ export async function bilgiYaz(konu, mevcutSluglar = new Set()) {
   return {
     slug,
     konu: konu.vikipedi,
+    ...(konu.trend ? { trend: konu.trend } : {}),
     tur: konu.tur,
     baslik: String(j.baslik).trim().slice(0, 110),
     spot: String(j.spot || '').trim(),
@@ -87,4 +90,26 @@ export async function bilgiYaz(konu, mevcutSluglar = new Set()) {
     gorsel,
     tarih: new Date().toISOString(),
   };
+}
+
+// Google'da çok aranan bir konunun Vikipedi maddesini bul (kişiler hariç)
+export async function trendMaddesi(terim) {
+  const j = await json(`https://tr.wikipedia.org/w/api.php?action=query&format=json&list=search&srlimit=1&srsearch=${encodeURIComponent(terim)}`);
+  const baslik = j.query?.search?.[0]?.title;
+  if (!baslik) return null;
+  const sade = (t) => slugify(t).split('-').filter((k) => k.length > 2);
+  const t = sade(terim);
+  const b = sade(baslik);
+  // Terimin anlamlı kelimelerinin çoğu madde başlığında geçmeli (alakasız eşleşme olmasın)
+  if (!t.length || t.filter((k) => b.includes(k)).length < Math.ceil(t.length * 0.6)) return null;
+  const p = await json(`https://tr.wikipedia.org/w/api.php?action=query&format=json&prop=pageprops&ppprop=wikibase_item|disambiguation&titles=${encodeURIComponent(baslik)}`);
+  const sayfa = Object.values(p.query?.pages || {})[0];
+  if (!sayfa || sayfa.pageprops?.disambiguation !== undefined) return null;
+  const q = sayfa.pageprops?.wikibase_item;
+  if (q) {
+    const w = await json(`https://www.wikidata.org/w/api.php?action=wbgetclaims&format=json&property=P31&entity=${q}`);
+    const turler = (w.claims?.P31 || []).map((c) => c.mainsnak?.datavalue?.value?.id);
+    if (turler.includes('Q5')) return null; // insan
+  }
+  return baslik;
 }

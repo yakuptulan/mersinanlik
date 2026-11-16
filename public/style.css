@@ -238,16 +238,6 @@ a.satir:hover { color: var(--derin-mavi); }
   .menu { display: none; }
   .widgetlar { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   .widget { padding: 18px; border-radius: 26px; min-height: 0; }
-  .widget-hava, .widget-kesinti { grid-column: 1 / -1; }
-  .widget-kesinti { order: 4; }
-  .widget-hava .hava-ana { flex-direction: row !important; align-items: center !important; }
-  .widget-hava .hava-ana .hava-ikon { width: 58px; height: 58px; }
-  .widget-hava { display: grid; grid-template-columns: 1fr 1fr; align-items: center; column-gap: 10px; }
-  .widget-hava .widget-bas { grid-column: 1 / -1; }
-  .widget-hava .hava-ana { flex-direction: column; align-items: flex-start; gap: 4px; }
-  .widget-hava .hava-gunler { margin: 0; padding: 0 0 0 12px; border-top: none; border-left: 1px solid rgba(255,255,255,.14); grid-template-columns: 1fr; gap: 8px; }
-  .widget-hava .hava-gunler div { flex-direction: row; justify-content: space-between; }
-  .widget-hava .hava-gunler svg { width: 28px; height: 28px; }
   .hava-derece { font-size: 47px; }
   .widget-deger { font-size: 40px; }
   .widget-rozet { width: 38px; height: 38px; border-radius: 12px; }
@@ -633,3 +623,21 @@ a.cip.kat:hover { filter: brightness(.95); }
   .su-an-kompakt h1 { font-size: 21px; }
   .logo img { height: 44px; }
 }
+@media (max-width: 900px) {
+  .widget { padding: 14px 16px; border-radius: 20px; }
+  .widget-hava, .widget-kesinti { grid-column: auto; order: 0; }
+  .widget-hava { display: flex; }
+  .widget-hava .hava-ana { flex-direction: row !important; align-items: center !important; }
+  .widget-hava .hava-gunler { margin-top: auto; padding: 8px 0 0; border-left: 0; border-top: 1px solid rgba(255,255,255,.14); grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  .widget-hava .hava-gunler div { flex-direction: column; justify-content: flex-start; }
+  .widget-hava .hava-gunler svg { width: 24px; height: 24px; }
+  .hava-derece { font-size: 36px; }
+  .widget-deger { font-size: 30px; }
+  .widget-rozet { width: 30px; height: 30px; border-radius: 10px; }
+  .widget-etiket { font-size: 14px; }
+  .widget-liste { font-size: 13.5px; }
+  .su-an-kompakt h1 { font-size: 21px; }
+  .su-an-kompakt .ilce-sec { padding: 4px 4px 4px 12px; }
+}
+.widgetlar.widgetlar-gun { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-right: 0; padding-right: 0; }
+@media (max-width: 700px) { .widgetlar.widgetlar-gun { grid-template-columns: repeat(2, minmax(0, 1fr)); } .widgetlar.widgetlar-gun > .widget { min-height: 0; } }

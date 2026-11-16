@@ -46,6 +46,7 @@ export const KAYNAKLAR = [
     ad: 'Habertürk',
     tur: 'html',
     liste: 'https://www.haberturk.com/mersin-haberleri',
+    baslikH1: true,
     linkDesen: 'yerel-haberler\\.haberturk\\.com/mersin-haberleri/[a-z0-9-]+-\\d{8,}$',
     enFazla: 10,
     kapsam: 'yerel',
@@ -63,13 +64,14 @@ export const KAYNAKLAR = [
     kapsam: 'yerel',
     yapayZekaOzeti: false,
     fotoKullan: false,
-    aktif: true,
+    aktif: false, // haber listesi sunucudan okunduğunda linkler gelmiyor (Kasım 2026)
   },
   {
     id: 'mersingundem',
     ad: 'Mersin Gündem',
     tur: 'html',
     liste: 'https://mersingundem.com/',
+    baslikH1: true,
     linkDesen: 'mersingundem\\.com/haber/\\d+/[a-z0-9-]+\\.html$',
     enFazla: 8,
     kapsam: 'karma',
@@ -170,7 +172,7 @@ export const KAYNAKLAR = [
   // telif güvenliği için özet yazdırmıyoruz (yapayZekaOzeti: false).
   // İmece: GitHub sunucularından gelen isteğe 403 veriyor (bot engeli) → kapalı
   { id: 'imece', ad: 'İmece Gazetesi', url: 'https://www.imecegazetesi.com/rss', tur: 'rss', kapsam: 'karma', yapayZekaOzeti: false, aktif: false },
-  { id: 'mersinportal', ad: 'Mersin Portal', url: 'https://www.mersinportal.com/rss', tur: 'rss', kapsam: 'karma', yapayZekaOzeti: false, aktif: true },
+  { id: 'mersinportal', ad: 'Mersin Portal', url: 'https://www.mersinportal.com/rss', haricDesen: '/(video|foto-galeri)/', tur: 'rss', kapsam: 'karma', yapayZekaOzeti: false, aktif: true },
   { id: 'mersintime', ad: 'Mersin Time', url: 'https://www.mersintime.com/rss', tur: 'rss', kapsam: 'karma', yapayZekaOzeti: false, aktif: true },
   { id: 'mersinobjektif', ad: 'Mersin Objektif', url: 'https://www.mersinobjektif.com.tr/rss', tur: 'rss', kapsam: 'karma', yapayZekaOzeti: false, aktif: true },
   // İş'te Mersin: GitHub sunucularından gelen isteğe 403 veriyor (bot engeli) → kapalı

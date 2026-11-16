@@ -97,7 +97,7 @@ function suAnKartlari(servis, ilceSlug = SITE.defaultIlce, simdi = Date.now()) {
   return `<div class="widgetlar">
 ${havaWidget(hava, ilceSlug)}
 <a class="widget widget-yesil" href="/nobetci-eczane/" data-eczane-kart>
-<div class="widget-bas"><span class="widget-rozet">${ikon.eczane(18)}</span><span class="widget-etiket">Nöbetçi eczane</span></div>
+<div class="widget-bas"><span class="widget-rozet">${ikon.eczane(18)}</span><span class="widget-etiket">Eczane</span></div>
 <span class="widget-deger">${eczaneler.length || '–'}<small>${eczaneler.length ? ' açık' : ''}</small></span>
 <div class="widget-liste" data-eczane-liste>${ilceEcz.map((e) => `<span>${h(e.ad)}</span>`).join('') || '<span>İlçene göre listeyi gör</span>'}</div>
 <span class="widget-alt" data-eczane-ilce>${ilceEcz.length ? h(ilceAdi(ilceSlug)) + ' · adres →' : 'Adres ve telefon →'}</span>

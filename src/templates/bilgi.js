@@ -6,7 +6,7 @@ import { paylasCubugu } from './parcalar.js';
 import { SITE } from '../config.js';
 import { TUR_AD } from '../bilgi-konulari.js';
 
-const TUR_RENK = { lezzet: '#EF5F00', tarih: '#8E4EC6', doga: '#2B9A66', bilim: '#3E8EDE', sehir: '#0588F0' };
+const TUR_RENK = { gundem: '#E5484D', yasam: '#D6409F', lezzet: '#EF5F00', tarih: '#8E4EC6', doga: '#2B9A66', bilim: '#3E8EDE', sehir: '#0588F0' };
 export const bilgiYolu = (y) => `/bilgi/${y.slug}/`;
 
 export function bilgiKarti(y) {
