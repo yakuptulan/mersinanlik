@@ -1,0 +1,65 @@
+name: Haberleri güncelle ve yayınla
+
+on:
+  schedule:
+    # Her 30 dakikada bir (GitHub saatleri UTC'dir; zamanlama birkaç dakika gecikebilir)
+    - cron: '7,37 * * * *'
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+
+concurrency:
+  group: guncelle
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  guncelle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Testler
+        run: npm test
+
+      - name: Haberleri topla
+        run: node src/collect.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - name: Hava durumu ve depremler
+        run: node src/services.js
+
+      - name: Siteyi üret
+        run: node src/build.js
+
+      - name: Verileri kaydet
+        run: |
+          git config user.name "mersinanlik-bot"
+          git config user.email "bot@mersinanlik.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "Değişiklik yok"
+          else
+            git commit -m "Veri güncellemesi $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi
+
+      - name: Cloudflare'e yayınla
+        if: ${{ env.CLOUDFLARE_API_TOKEN != '' }}
+        run: npx --yes wrangler@4 pages deploy dist --project-name=mersinanlik --branch=main --commit-dirty=true

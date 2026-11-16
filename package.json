@@ -1,0 +1,19 @@
+{
+  "name": "mersinanlik",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mersin Anlık – Mersin yerel haber derleyicisi (mersinanlik.com)",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "collect": "node src/collect.js",
+    "services": "node src/services.js",
+    "build": "node src/build.js",
+    "update": "node src/collect.js && node src/services.js && node src/build.js",
+    "sample": "node scripts/sample-data.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.5.0"
+  }
+}
