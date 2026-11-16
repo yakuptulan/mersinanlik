@@ -60,8 +60,8 @@ function kapak(hikaye, kat, link, sinif = '') {
     const kurum = hikaye.gorselKaynak && hikaye.gorselKaynak !== 'yz' ? hikaye.gorselKaynak : null;
     const etiket = kurum ? `Foto: ${h(kurum)}` : 'Temsili · YZ';
     return `<a class="kapak kapak-foto ${sinif}" href="${h(link)}" rel="noopener nofollow" target="_blank" tabindex="-1" aria-hidden="true" title="${kurum ? `Fotoğraf: ${h(kurum)}` : 'Temsili görsel, yapay zekâ ile üretilmiştir'}">
-<img src="/uretilen/${h(hikaye.gorsel)}" alt="" loading="${buyukMu ? 'eager' : 'lazy'}" decoding="async" width="800" height="450">
-<span class="kapak-rozet">${(katIkon[kat.slug] || katIkon.gundem)(buyukMu ? 26 : 20)}</span><span class="temsili${kurum ? ' kurum' : ''}">${etiket}</span></a>`;
+<img src="/uretilen/${h(hikaye.gorsel)}" alt="${kurum ? '' : 'Temsili görsel (yapay zekâ ile üretildi)'}" loading="${buyukMu ? 'eager' : 'lazy'}" decoding="async" width="800" height="450">
+<span class="kapak-rozet">${(katIkon[kat.slug] || katIkon.gundem)(buyukMu ? 26 : 20)}</span>${kurum ? `<span class="temsili kurum">${etiket}</span>` : ''}</a>`;
   }
   // 2) Kütüphaneden temsili fotoğraf
   const foto = fotoSec(hikaye);
@@ -69,7 +69,7 @@ function kapak(hikaye, kat, link, sinif = '') {
     const buyuk = sinif.includes('genis');
     return `<a class="kapak kapak-foto ${sinif}" href="${h(link)}" rel="noopener nofollow" target="_blank" tabindex="-1" aria-hidden="true" title="${h(fotoKunye(foto))}">
 <img src="/foto/${foto.id}-${buyuk ? 800 : 400}.webp"${buyuk ? '' : ` srcset="/foto/${foto.id}-400.webp 400w, /foto/${foto.id}-800.webp 800w" sizes="(max-width: 900px) 104px, 176px"`} alt="" loading="${buyuk ? 'eager' : 'lazy'}" decoding="async" width="${buyuk ? 800 : 400}" height="${buyuk ? 500 : 300}">
-<span class="kapak-rozet">${(katIkon[kat.slug] || katIkon.gundem)(buyuk ? 26 : 20)}</span><span class="temsili">Temsili</span>${buyuk ? `<span class="kunye">${h(fotoKunye(foto))}</span>` : ''}</a>`;
+<span class="kapak-rozet">${(katIkon[kat.slug] || katIkon.gundem)(buyuk ? 26 : 20)}</span>${buyuk ? `<span class="kunye">${h(fotoKunye(foto))}</span>` : ''}</a>`;
   }
   return kapakCizim(hikaye, kat, link, sinif);
 }

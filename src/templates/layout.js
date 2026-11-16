@@ -86,7 +86,7 @@ ${icerik}
 <div style="max-width:460px">
 <a class="logo" href="/">${logoIsaret(40)}<span>mersin<b>anlık</b></span></a>
 <p>${h(SITE.slogan)}</p>
-<p><small>Haberler kaynak gösterilerek derlenir; haberin tamamı her zaman kaynağında okunabilir.</small></p>
+<p><small>Haberler kaynak gösterilerek derlenir; haberin tamamı her zaman kaynağında okunabilir. Kaynağı yazılmayan görseller temsilidir ve bir kısmı yapay zekâ ile üretilmiştir (<a href="/gorsel-kaynaklari/" style="color:inherit">ayrıntılar</a>).</small></p>
 </div>
 <nav class="alt-menu" aria-label="Alt menü">
 <a href="/kunye/">Künye</a><a href="/iletisim/">İletişim</a><a href="/kaynaklarimiz/">Kaynaklarımız</a>

@@ -3,7 +3,7 @@ name: Haberleri güncelle ve yayınla
 on:
   schedule:
     # Her 30 dakikada bir (GitHub saatleri UTC'dir; zamanlama birkaç dakika gecikebilir)
-    - cron: '7,37 * * * *'
+    - cron: '5,35 * * * *'
   workflow_dispatch: {}
   push:
     branches: [main]
