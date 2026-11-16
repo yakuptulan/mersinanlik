@@ -6,6 +6,10 @@ on:
         description: 'Boşlukla ayrılmış adresler (boşsa varsayılan liste)'
         required: false
         default: ''
+      kaynaklar:
+        description: 'Denenecek kaynak kimlikleri (sources.js), boşlukla'
+        required: false
+        default: ''
 permissions:
   contents: read
 jobs:
@@ -17,4 +21,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node scripts/kaynak-dene.js ${{ inputs.adresler }}
+      - run: npm ci
+      - if: ${{ inputs.kaynaklar == '' }}
+        run: node scripts/kaynak-dene.js ${{ inputs.adresler }}
+      - if: ${{ inputs.kaynaklar != '' }}
+        run: for k in ${{ inputs.kaynaklar }}; do echo "=== $k"; node src/collect.js --dene $k || true; done

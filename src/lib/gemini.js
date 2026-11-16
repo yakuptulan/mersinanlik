@@ -9,14 +9,16 @@ const YEDEK_MODELLER = [MODEL, 'gemini-flash-lite-latest', 'gemini-flash-latest'
 const bekle = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const TALIMAT = `Sen Mersin'de yayın yapan yerel bir haber sitesinin editörüsün.
-Sana numaralı haber metinleri vereceğim (çoğu belediye/kurum basın duyurusu). Her biri için iki şey yaz:
+Sana numaralı haberler vereceğim. Her birinde başlık ve kaynak metni var; bazılarında aynı olayı anlatan iki kaynağın metni ([Kaynak 1], [Kaynak 2]) birlikte verilir. Her biri için:
 1) "ozet": Türkçe, tarafsız, 2 cümlelik kısa özet.
-2) "metin": Metin yeterince bilgi içeriyorsa (en az 4-5 cümlelik bilgi), 3 paragraflık, 120-220 kelimelik kısa bir haber yazısı.
+2) "metin": Metin yeterince bilgi içeriyorsa (en az 4-5 cümlelik bilgi), 3-4 paragraflık, 140-260 kelimelik bir haber yazısı.
    Paragrafları "\n\n" ile ayır. İlk paragraf ne, nerede, ne zaman sorularını cevaplasın. Bilgi azsa "metin" boş ("") olsun.
 Kurallar:
-- Metni kopyalama, tamamen kendi cümlelerinle yaz; kurumun övgü ve slogan dilini kullanma, haber diliyle yaz.
-- Metinde olmayan hiçbir bilgiyi ekleme, yorum katma, tahmin yürütme.
-- Kişilerin tam adını yazma; gerekirse görevini yaz (ör. "Büyükşehir Belediye Başkanı").
+- Metni kopyalama; cümle yapısını da taklit etme, tamamen kendi cümlelerinle, sade haber diliyle yaz. Birden fazla kaynak varsa bilgileri birleştir.
+- Metinde olmayan hiçbir bilgiyi ekleme, yorum katma, tahmin yürütme. Kaynaklar çelişiyorsa çelişen ayrıntıyı yazma.
+- Kurum duyurularındaki övgü ve slogan dilini kullanma.
+- "Muhabirimiz", "DHA", "İHA", "AA", "haber merkezi", "sitemize" gibi kaynak sitenin kendisine ait ifadeleri kullanma.
+- Suç, kaza ve adli olaylarda kişilerin tam adını yazma (baş harfleri kullanılabilir); resmî görevlileri görevleriyle an.
 - Yalnızca JSON döndür: [{"no": 1, "ozet": "...", "metin": "..."}, ...]`;
 
 const cfHazir = () => Boolean(process.env.CLOUDFLARE_ACCOUNT_ID && process.env.CLOUDFLARE_API_TOKEN);
@@ -83,7 +85,7 @@ function sonucCoz(metinler, sonuc) {
 
 export async function topluOzetle(metinler) {
   if (!geminiHazirMi() || metinler.length === 0) return [];
-  const icerik = metinler.map((m, i) => `${i + 1}) ${m.slice(0, 4000)}`).join('\n\n');
+  const icerik = metinler.map((m, i) => `${i + 1}) ${m.slice(0, 6500)}`).join('\n\n');
   if (!process.env.GEMINI_API_KEY) return cfToplu(metinler);
   let res;
   let sonHata = '';

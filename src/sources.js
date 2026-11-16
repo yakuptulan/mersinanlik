@@ -41,6 +41,42 @@ export const KAYNAKLAR = [
     fotoKullan: false,
     aktif: false, // GitHub sunucularına 403 veriyor
   },
+  {
+    id: 'haberturk-mersin',
+    ad: 'Habertürk',
+    tur: 'html',
+    liste: 'https://www.haberturk.com/mersin-haberleri',
+    linkDesen: 'yerel-haberler\\.haberturk\\.com/mersin-haberleri/[a-z0-9-]+-\\d{8,}$',
+    enFazla: 10,
+    kapsam: 'yerel',
+    yapayZekaOzeti: false,
+    fotoKullan: false,
+    aktif: true,
+  },
+  {
+    id: 'trt-mersin',
+    ad: 'TRT Haber',
+    tur: 'html',
+    liste: 'https://www.trthaber.com/yerelhaberler/mersin/',
+    linkDesen: 'trthaber\\.com/haber/[a-z-]+/[a-z0-9-]*(mersin|tarsus|erdemli|silifke|anamur|mezitli|toroslar|yenisehir|akdeniz|gulnar|bozyazi|aydincik|camliyayla|mut)[a-z0-9-]*-\\d{6}\\.html$',
+    enFazla: 8,
+    kapsam: 'yerel',
+    yapayZekaOzeti: false,
+    fotoKullan: false,
+    aktif: true,
+  },
+  {
+    id: 'mersingundem',
+    ad: 'Mersin Gündem',
+    tur: 'html',
+    liste: 'https://mersingundem.com/',
+    linkDesen: 'mersingundem\\.com/haber/\\d+/[a-z0-9-]+\\.html$',
+    enFazla: 8,
+    kapsam: 'karma',
+    yapayZekaOzeti: false,
+    fotoKullan: false,
+    aktif: true,
+  },
   // --- Resmî kurumlar (haber sayfası okunur, fotoğrafı "Foto: Kurum" diye kullanılır) ---
   {
     id: 'mersin-buyuksehir',
@@ -109,6 +145,20 @@ export const KAYNAKLAR = [
     fotoKullan: true,
     aktif: true,
   },
+  {
+    id: 'mersin-universitesi',
+    ad: 'Mersin Üniversitesi',
+    tur: 'html',
+    liste: 'https://www.mersin.edu.tr/haberler',
+    linkDesen: 'mersin\\.edu\\.tr/tr/haberler/[a-z0-9-]+-n-\\d+$',
+    enFazla: 6,
+    kapsam: 'kurum',
+    yapayZekaOzeti: true,
+    fotoKullan: true,
+    aktif: true,
+  },
+  // Denendi (Kasım 2026, robots.txt): Valilik, Emniyet, Silifke ve Gülnar belediyeleri, Milliyet, Posta, Google Haberler
+  // tüm botları engelliyor; İl Milli Eğitim ve NTV yapay zekâ botlarını engelliyor → kullanılmıyor.
   // Denendi (Kasım 2026): Valilik haber listesi ayrıştırılamadı; Mezitli ve Anamur siteleri
   // içeriği tarayıcıda sonradan yüklüyor; Akdeniz'de haber fotoğrafı bilgisi yok;
   // Toroslar'ın güvenlik sertifikası hatalı; Silifke'de güncel haber yok.

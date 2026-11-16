@@ -43,7 +43,7 @@ function ustSatir(aktif) {
   return `<div class="ust-satir">
 <a class="logo" href="/" aria-label="${SITE.name} ana sayfa"><img src="/logo.webp" width="96" height="64" alt="${SITE.name}"></a>
 <nav class="menu" aria-label="Ana menü">${MENU.map(([u, ad]) => `<a href="${u}"${u === aktif ? ' aria-current="page"' : ''}>${ad}</a>`).join('')}</nav>
-<span class="ust-dugmeler"><button class="ara-dugme yazi-dugme" type="button" data-yazi-boyu aria-label="Yazıları büyüt" title="Yazıları büyüt">A<sup>+</sup></button><a class="ara-dugme" href="/ara/" aria-label="Sitede ara">${ikon.ara(22)}</a></span>
+<span class="ust-dugmeler"><a class="ara-dugme" href="/ara/" aria-label="Sitede ara">${ikon.ara(22)}</a></span>
 </div>`;
 }
 
@@ -84,10 +84,11 @@ ${gorsel ? `<meta property="og:image" content="${h(gorsel)}">` : `<meta property
 <meta property="og:image:height" content="630">`}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0A1530">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<script>try{var z=localStorage.getItem("yaziBoyu");if(z)document.documentElement.style.zoom=z}catch(e){}</script>
+
 <link rel="alternate" type="application/rss+xml" title="${SITE.name}" href="/rss.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

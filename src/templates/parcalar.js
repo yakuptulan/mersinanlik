@@ -5,12 +5,14 @@ import { KATEGORILER, GUNDEM, GENEL } from '../config.js';
 import { ikon, katIkon } from './ikonlar.js';
 import { saat, ilceAdi } from './layout.js';
 
-// Kendi haber sayfası olan hikâyeler (kurum haberleri, kendi yazımızla)
+// Kendi yazımız olan hikâyeler (aramaya açık, site haritasında)
 export const kendiSayfasiVar = (hikaye) => Boolean(hikaye.metin);
+// Sitede sayfası olan hikâyeler: kendi yazımız ya da kendi özetimiz var. Kaynak sayfanın en altında.
+export const sayfasiVar = (hikaye) => Boolean(hikaye.metin || hikaye.ozet);
 export const haberYolu = (hikaye) => `/haber/${slugify(hikaye.baslik).slice(0, 70).replace(/-+$/, '')}-${hikaye.id}/`;
 // Kart bağlantısı: kendi sayfası varsa oraya, yoksa kaynağa
 function baglanti(hikaye) {
-  return kendiSayfasiVar(hikaye)
+  return sayfasiVar(hikaye)
     ? { href: haberYolu(hikaye), dis: '' }
     : { href: hikaye.kaynaklar[0].link, dis: ' rel="noopener nofollow" target="_blank"' };
 }
@@ -92,11 +94,6 @@ function kapakCizim(hikaye, kat, link, sinif = '', dis = ' rel="noopener nofollo
 
 const katKutusu = (kat, boyut = 26) => `<span class="kat-ikon" aria-hidden="true">${(katIkon[kat.slug] || katIkon.gundem)(boyut)}</span>`;
 
-function kaynakMetni(hikaye) {
-  const adlar = [...new Set(hikaye.kaynaklar.map((k) => k.ad))];
-  return adlar.length > 3 ? `${adlar.slice(0, 3).join(', ')} +${adlar.length - 3}` : adlar.join(', ');
-}
-
 export function ilceCipleri(hikaye) {
   const ilceler = hikaye.ilceler.length ? hikaye.ilceler : [];
   return [
@@ -108,10 +105,6 @@ export function ilceCipleri(hikaye) {
 }
 
 export function haberKarti(hikaye) {
-  const ana = hikaye.kaynaklar[0];
-  // Ek kaynak linkleri: ana kaynakla aynı siteyi tekrar gösterme
-  const goruldu = new Set([ana.ad]);
-  const digerleri = hikaye.kaynaklar.slice(1).filter((k) => !goruldu.has(k.ad) && goruldu.add(k.ad)).slice(0, 3);
   const kat = katBilgi(hikaye);
   const b = baglanti(hikaye);
   return `<article class="haber" style="--kat:${kat.renk}">
@@ -120,15 +113,11 @@ ${kapak(hikaye, kat, b.href, '', b.dis)}
 <div class="cipler">${ilceCipleri(hikaye)}<span class="zaman"><b>${saat(hikaye.ilkGorulme)}</b> · <span data-once="${hikaye.ilkGorulme}"></span></span></div>
 <h3><a href="${h(b.href)}"${b.dis}>${h(hikaye.baslik)}</a></h3>
 ${hikaye.ozet ? `<p>${h(hikaye.ozet)}</p>` : ''}
-<span class="kaynak">Kaynak: <strong>${h(kaynakMetni(hikaye))}</strong> · <a href="${h(ana.link)}" rel="noopener nofollow" target="_blank">Haberin tamamı kaynağında →</a>${
-    digerleri.length ? ` · Diğer kaynaklar: ${digerleri.map((k) => `<a href="${h(k.link)}" rel="noopener nofollow" target="_blank">${h(k.ad)}</a>`).join(', ')}` : ''
-  }</span>
 </div>
 </article>`;
 }
 
 export function mansetKarti(hikaye) {
-  const ana = hikaye.kaynaklar[0];
   const coklu = hikaye.kaynaklar.length > 1;
   const kat = katBilgi(hikaye);
   const b = baglanti(hikaye);
@@ -138,7 +127,7 @@ ${kapak(hikaye, kat, b.href, 'kapak-genis', b.dis)}
 <h3><a href="${h(b.href)}"${b.dis}>${h(hikaye.baslik)}</a></h3>
 ${hikaye.ozet ? `<p>${h(hikaye.ozet)}</p>` : ''}
 <div class="manset-alt">
-<span class="kaynak-sayi"><strong>${hikaye.kaynaklar.length} kaynak</strong> yazdı · ${h(kaynakMetni(hikaye))} · <span data-once="${hikaye.ilkGorulme}">${saat(hikaye.ilkGorulme)}</span></span>
+<span class="kaynak-sayi"><strong>${saat(hikaye.ilkGorulme)}</strong> · <span data-once="${hikaye.ilkGorulme}"></span></span>
 <a class="hap" href="${h(b.href)}"${b.dis}>Haberi oku<span class="daire">${ikon.ok(18)}</span></a>
 </div>
 </article>`;

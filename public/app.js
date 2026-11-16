@@ -69,7 +69,7 @@
       ek.querySelector('[data-eczane-liste]').innerHTML = ecz.length
         ? ecz.map(function (a) { var s = document.createElement('span'); s.textContent = a; return s.outerHTML; }).join('')
         : '<span>' + adlar[slug] + ' için liste yok, tüm Mersin →</span>';
-      ek.querySelector('[data-eczane-ilce]').textContent = ecz.length ? adlar[slug] + ' · telefon ve adres →' : 'Adres ve telefon →';
+      ek.querySelector('[data-eczane-ilce]').textContent = ecz.length ? adlar[slug] + ' · adres →' : 'Adres ve telefon →';
     }
   }
   if (ilcem) ilceUygula(ilcem);
@@ -156,8 +156,10 @@
   var VAKIT_ADI = { imsak: 'İmsak', gunes: 'Güneş', ogle: 'Öğle', ikindi: 'İkindi', aksam: 'Akşam', yatsi: 'Yatsı' };
   var MERKEZ = { akdeniz: 1, mezitli: 1, toroslar: 1, yenisehir: 1 };
   function namazGuncelle() {
-    var kutu = document.querySelector('[data-namaz]');
-    var veriEl = kutu && kutu.querySelector('[data-namaz-veri]');
+    document.querySelectorAll('[data-namaz]').forEach(namazKutuGuncelle);
+  }
+  function namazKutuGuncelle(kutu) {
+    var veriEl = kutu.querySelector('[data-namaz-veri]');
     if (!veriEl) return;
     var veri; try { veri = JSON.parse(veriEl.textContent); } catch (e) { return; }
     var slug = kutu.getAttribute('data-namaz-sabit') || ilcem || 'yenisehir';
@@ -167,8 +169,9 @@
     var dk = Number(simdi.toLocaleString('en-GB', { hour: '2-digit', hour12: false, timeZone: 'Europe/Istanbul' })) * 60 + Number(simdi.toLocaleString('en-GB', { minute: '2-digit', timeZone: 'Europe/Istanbul' }));
     var g = gunler.filter(function (x) { return x.tarih === bugun; })[0];
     if (!g) return;
+    var yerAdi = MERKEZ[slug] ? 'Mersin merkez' : (adlar[slug] || 'Mersin merkez');
     var yer = kutu.querySelector('[data-namaz-yer]');
-    if (yer && !kutu.getAttribute('data-namaz-sabit')) yer.textContent = MERKEZ[slug] ? 'Mersin merkez' : (adlar[slug] || 'Mersin merkez');
+    if (yer && !kutu.getAttribute('data-namaz-sabit')) yer.textContent = yerAdi;
     var sonraki = null, kalan = 0;
     Object.keys(VAKIT_ADI).forEach(function (k) {
       var h = g[k].split(':'), v = Number(h[0]) * 60 + Number(h[1]);
@@ -177,32 +180,22 @@
       if (!sonraki && v > dk) { sonraki = k; kalan = v - dk; }
     });
     var yazi = kutu.querySelector('[data-namaz-sonraki]');
+    var saatEl = kutu.querySelector('[data-namaz-saat]'), adEl = kutu.querySelector('[data-namaz-ad]');
     if (sonraki) {
-      kutu.querySelector('[data-vakit="' + sonraki + '"]').classList.add('siradaki');
+      var hc = kutu.querySelector('[data-vakit="' + sonraki + '"]'); if (hc) hc.classList.add('siradaki');
       var s = Math.floor(kalan / 60), d = kalan % 60;
-      yazi.textContent = VAKIT_ADI[sonraki] + ' vaktine ' + (s ? s + ' sa ' : '') + d + ' dk';
+      var sure = (s ? s + ' sa ' : '') + d + ' dk';
+      if (saatEl) { saatEl.textContent = g[sonraki]; adEl.textContent = VAKIT_ADI[sonraki]; yazi.textContent = sure + ' kaldı · ' + yerAdi; }
+      else yazi.textContent = VAKIT_ADI[sonraki] + ' vaktine ' + sure;
     } else {
       var yarin = gunler.filter(function (x) { return x.tarih > bugun; })[0];
-      yazi.textContent = yarin ? 'Yarın imsak ' + yarin.imsak : 'Bugünün vakitleri';
+      if (saatEl && yarin) { saatEl.textContent = yarin.imsak; adEl.textContent = 'Yarın imsak'; yazi.textContent = yerAdi; }
+      else yazi.textContent = yarin ? 'Yarın imsak ' + yarin.imsak : 'Bugünün vakitleri';
     }
   }
   namazGuncelle();
   setInterval(namazGuncelle, 30000);
   document.addEventListener('click', function (e) { if (e.target.closest('[data-ilce-deger]')) setTimeout(namazGuncelle, 0); });
-
-  // ---------- Yazı boyutu (yaşlılar için büyük yazı) ----------
-  var BOYLAR = ['1', '1.12', '1.25'];
-  document.querySelectorAll('[data-yazi-boyu]').forEach(function (b) {
-    function etiket() { var z = oku('yaziBoyu') || '1'; b.setAttribute('aria-pressed', z !== '1' ? 'true' : 'false'); b.title = z === '1.25' ? 'Normal boyuta dön' : 'Yazıları büyüt'; }
-    etiket();
-    b.addEventListener('click', function () {
-      var z = oku('yaziBoyu') || '1';
-      var yeni = BOYLAR[(BOYLAR.indexOf(z) + 1) % BOYLAR.length];
-      yaz('yaziBoyu', yeni);
-      document.documentElement.style.zoom = yeni === '1' ? '' : yeni;
-      etiket();
-    });
-  });
 
   // ---------- Paylaş ----------
   document.querySelectorAll('[data-paylas]').forEach(function (p) {

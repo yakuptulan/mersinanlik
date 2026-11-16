@@ -39,13 +39,13 @@ function durumYukle() {
 async function dene(id) {
   const kaynak = KAYNAKLAR.find((k) => k.id === id);
   if (!kaynak) throw new Error(`Kaynak bulunamadı: ${id}`);
-  const haberler = await kaynakOku(kaynak);
+  const haberler = kaynak.tur === 'html' ? await kurumOku(kaynak) : await kaynakOku(kaynak);
   let mersin = 0;
   for (const h of haberler) {
     const d = haberiDegerlendir(h, kaynak);
     if (!d) continue;
     if (!d.genel) mersin++;
-    console.log(`${d.genel ? '·' : '✓'} [${d.genel ? 'genel' : d.ilceler.join(',') || 'mersin'}] [${d.kategori}]${d.riskNedenleri.length ? ' [RİSKLİ]' : ''} ${d.baslik}`);
+    console.log(`${d.genel ? '·' : '✓'} [${d.genel ? 'genel' : d.ilceler.join(',') || 'mersin'}] [${d.kategori}]${d.riskNedenleri.length ? ' [RİSKLİ]' : ''} ${d.baslik}${h.govde !== undefined ? ` (metin ${h.govde.length} kr${h.foto ? ', foto' : ''})` : ''}`);
   }
   console.log(`\n${haberler.length} haber okundu, ${mersin} tanesi Mersin ile ilgili.`);
 }
@@ -140,29 +140,44 @@ async function main() {
 
   // 3) Özet: sadece izin verilen kaynaklardan gelen, özeti olmayan yayındaki haberler
   if (geminiHazirMi()) {
-    // Eski kurum haberlerinin tam metnini bir kez al (haber sayfası yazılabilsin diye)
+    // Haberleri kendi cümlelerimizle yaz: kaynakların metnini al (önce kurum, sonra ajans, sonra yerel site),
+    // aynı olayı yazan iki kaynağın metnini birleştirip yapay zekâya yazdır. Kaynak, haber sayfasının en altında yer alır.
+    const ONCELIK = { kurum: 0, yerel: 1, ulusal: 2, karma: 3 };
+    const simdi = Date.now();
     const eksikMetin = veri.hikayeler
-      .filter((h) => h.durum === 'yayinda' && !h.metin && !h.ozetIcinMetin && !h.metinDenendi && kurumKaynagi(h))
-      .slice(0, 6);
+      .filter((h) => h.durum === 'yayinda' && !h.metin && !h.ozetIcinMetin && (h.metinDenemesi || 0) < 2 && !h.metinDenendi && simdi - new Date(h.ilkGorulme).getTime() < 36 * 36e5 && (!h.genel || onemliMi(h)))
+      .sort((x, y) => new Date(y.ilkGorulme) - new Date(x.ilkGorulme))
+      .slice(0, 10);
     for (const h of eksikMetin) {
-      h.metinDenendi = true;
-      const { kaynak, kayit } = kurumKaynagi(h);
-      try {
-        const d = await kurumMetniGetir(kayit.link, kaynak);
-        if (d.govde && d.govde.length > 300) h.ozetIcinMetin = d.govde;
-        h.kurum = kaynak.ad;
-      } catch (e) {
-        console.warn(`! Kurum metni (${kaynak.ad}): ${e.message}`);
+      h.metinDenemesi = (h.metinDenemesi || 0) + 1;
+      const adaylar = h.kaynaklar
+        .map((kayit) => ({ kayit, kaynak: KAYNAKLAR.find((k) => k.id === kayit.kaynakId) }))
+        .filter((x) => x.kaynak)
+        .sort((x, y) => (ONCELIK[x.kaynak.kapsam] ?? 9) - (ONCELIK[y.kaynak.kapsam] ?? 9));
+      const parcalar = [];
+      for (const { kayit, kaynak } of adaylar) {
+        if (parcalar.length >= 2 || parcalar.some((p) => p.ad === kaynak.ad)) continue;
+        try {
+          const d = await kurumMetniGetir(kayit.link, kaynak);
+          if (d.govde && d.govde.length > 250) parcalar.push({ ad: kaynak.ad, kurum: kaynak.kapsam === 'kurum', metin: d.govde.slice(0, 3200) });
+        } catch (e) {
+          console.warn(`! Haber metni (${kaynak.ad}): ${e.message}`);
+        }
       }
+      if (!parcalar.length) continue;
+      h.ozetIcinMetin = parcalar.map((p, i) => (parcalar.length > 1 ? `[Kaynak ${i + 1}]\n${p.metin}` : p.metin)).join('\n\n');
+      h.yaziKaynak = parcalar[0].ad;
+      if (parcalar[0].kurum) h.kurum = parcalar[0].ad;
     }
-    const bekleyen = veri.hikayeler.filter((h) => h.ozetIcinMetin && (!h.ozet || (h.kurum && !h.metin)) && h.durum === 'yayinda').slice(0, 8);
+    const bekleyen = veri.hikayeler.filter((h) => h.ozetIcinMetin && !h.metin && h.durum === 'yayinda' && (h.yazimDenemesi || 0) < 3).slice(0, 10);
+    for (const h of bekleyen) h.yazimDenemesi = (h.yazimDenemesi || 0) + 1;
     try {
       const sonuclar = await topluOzetle(bekleyen.map((h) => `${h.baslik}\n${h.ozetIcinMetin}`));
       bekleyen.forEach((h, i) => {
         const r = sonuclar[i];
         if (!r) return;
         h.ozet = r.ozet;
-        if (r.metin && h.kurum) h.metin = r.metin;
+        if (r.metin) h.metin = r.metin;
         delete h.ozetIcinMetin;
       });
       if (bekleyen.length) console.log(`✍️  Özet: ${sonuclar.filter(Boolean).length}/${bekleyen.length}, haber yazısı: ${bekleyen.filter((h) => h.metin).length}`);

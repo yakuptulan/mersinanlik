@@ -8,7 +8,7 @@ import * as S from './templates/sayfalar.js';
 import * as R from './templates/rehber.js';
 import * as B from './templates/bilgi.js';
 import { baslikTemizle, kategoriBul, htmlKacis } from './lib/text.js';
-import { kendiSayfasiVar, haberYolu } from './templates/parcalar.js';
+import { kendiSayfasiVar, sayfasiVar, haberYolu } from './templates/parcalar.js';
 import { okunanlarEsle } from './lib/okunanlar.js';
 
 const DIST = path.resolve('dist');
@@ -64,7 +64,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
   ekle('/ilceler/', S.ilcelerSayfasi());
   // Kendi haber sayfaları (kurum duyurularından kendi cümlelerimizle yazılanlar)
   const kendiHaberler = hikayeler.filter(kendiSayfasiVar);
-  for (const hikaye of kendiHaberler) {
+  for (const hikaye of hikayeler.filter(sayfasiVar)) {
     const ilgili = hikayeler.filter((x) => x.id !== hikaye.id && (!hikaye.ilceler.length || x.ilceler.some((i) => hikaye.ilceler.includes(i)))).slice(0, 6);
     yaz(haberYolu(hikaye), S.haberSayfasi({ hikaye, ilgili, servis }));
   }
@@ -127,7 +127,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
   );
   // RSS: tüm yayındaki haberler (kendi sayfası olanlar kendi adresiyle, diğerleri kaynağıyla)
   const rssOgeleri = hikayeler.slice(0, 50).map((x) => {
-    const link = kendiSayfasiVar(x) ? SITE.url + haberYolu(x) : x.kaynaklar[0].link;
+    const link = sayfasiVar(x) ? SITE.url + haberYolu(x) : x.kaynaklar[0].link;
     return `<item><title>${htmlKacis(x.baslik)}</title><link>${htmlKacis(link)}</link><guid isPermaLink="false">${x.id}</guid><pubDate>${new Date(x.ilkGorulme).toUTCString()}</pubDate>${x.ozet ? `<description>${htmlKacis(x.ozet)}</description>` : ''}<source url="${htmlKacis(x.kaynaklar[0].link)}">${htmlKacis(x.kaynaklar[0].ad)}</source></item>`;
   });
   yaz(
