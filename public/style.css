@@ -595,7 +595,7 @@ a.cip.kat:hover { filter: brightness(.95); }
 .takvim-metin b { font-size: 13.5px; }
 .takvim-metin small { font-size: 12.5px; color: #ffd9b8; font-weight: 700; }
 .yakit-mini { display: flex; flex-direction: column; gap: 6px; margin-top: 2px; }
-.yakit-mini span { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 6px 10px; border-radius: 10px; background: rgba(255,255,255,.06); }
+.yakit-mini span { white-space: nowrap; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 6px 10px; border-radius: 10px; background: rgba(255,255,255,.06); }
 .yakit-mini small { font-size: 12.5px; color: var(--soluk); font-weight: 600; }
 .yakit-mini b { font-size: 15px; }
 .piyasa-serit { gap: 8px; margin-top: 12px; }
@@ -611,7 +611,7 @@ a.cip.kat:hover { filter: brightness(.95); }
 .logo img { height: 52px; width: auto; }
 .menu a { padding: 8px 12px; font-size: 15px; }
 .ust-dugmeler .ara-dugme { width: 42px; height: 42px; }
-@media (max-width: 1100px) {
+@media (max-width: 1239px) {
   .widgetlar { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 700px) {
