@@ -42,8 +42,8 @@ export function insaEt({ simdi = Date.now() } = {}) {
   for (const ilce of ILCELER) ekle(`/ilce/${ilce.slug}/`, S.ilceSayfasi({ ilce, hikayeler, servis, simdi }));
   ekle('/hava-durumu/', S.havaSayfasi({ servis }));
   ekle('/deprem/', S.depremSayfasi({ servis }));
-  ekle('/nobetci-eczane/', S.eczaneSayfasi());
-  ekle('/kesintiler/', S.kesintiSayfasi());
+  ekle('/nobetci-eczane/', S.eczaneSayfasi({ servis }));
+  ekle('/kesintiler/', S.kesintiSayfasi({ servis }));
   for (const { yol, html } of S.bilgiSayfalari()) ekle(yol, html);
   ekle('/menu/', S.menuSayfasi(), false);
   ekle('/ara/', S.araSayfasi(), false);

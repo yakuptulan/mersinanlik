@@ -2,11 +2,17 @@
 // Kaynaklar:
 //  - Hava: MET Norway (api.met.no) – ticari kullanıma açık, kaynak gösterme şartıyla (CC BY 4.0)
 //  - Deprem: AFAD (servisnet.afad.gov.tr)
+//  - Nöbetçi eczane: Mersin Eczacı Odası (mersineczaciodasi.org.tr)
+//  - Su kesintisi: MESKİ (online.meski.gov.tr)
+//  - Elektrik kesintisi: Toroslar EDAŞ sorgusu robot doğrulaması (reCAPTCHA) istiyor,
+//    bu yüzden otomatik okunmuyor; sitede resmî sayfaya link veriliyor.
 // Hata olursa önceki veri korunur.
 
 import fs from 'node:fs';
 import path from 'node:path';
 import { ILCELER } from './config.js';
+import { eczaneleriGetir } from './lib/eczane.js';
+import { suKesintileriniGetir } from './lib/kesinti.js';
 
 const DOSYA = path.resolve('data/servisler.json');
 const UA = 'mersinanlik.com iletisim@mersinanlik.com';
@@ -100,6 +106,18 @@ async function main() {
     yeni.deprem = await deprem();
   } catch (e) {
     console.warn('! Deprem:', e.message);
+  }
+  try {
+    yeni.eczane = { guncelleme: new Date().toISOString(), liste: await eczaneleriGetir(UA) };
+    console.log(`Eczane: ${yeni.eczane.liste.length}`);
+  } catch (e) {
+    console.warn('! Eczane:', e.message);
+  }
+  try {
+    yeni.suKesintisi = { guncelleme: new Date().toISOString(), liste: await suKesintileriniGetir(UA) };
+    console.log(`Su kesintisi: ${yeni.suKesintisi.liste.length}`);
+  } catch (e) {
+    console.warn('! Su kesintisi:', e.message);
   }
   fs.mkdirSync(path.dirname(DOSYA), { recursive: true });
   fs.writeFileSync(DOSYA, JSON.stringify(yeni, null, 1));

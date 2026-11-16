@@ -3,12 +3,13 @@ import { htmlKacis as h, ayrilmaEki } from '../lib/text.js';
 import { sayfa, saat, tarihUzun, ilceAdi } from './layout.js';
 import { ikon } from './ikonlar.js';
 import { haberListesi, mansetKarti, reklamAlani } from './parcalar.js';
+import { telefonGoster } from '../lib/eczane.js';
 
 // Resmî servis bağlantıları (veri entegrasyonu tamamlanana kadar doğrudan kaynağa yönlendirir)
 export const RESMI = {
-  eczane: 'https://www.mersineczaciodasi.org.tr/',
-  meski: 'https://www.meski.gov.tr/',
-  edas: 'https://www.toroslaredas.com.tr/',
+  eczane: 'https://www.mersineczaciodasi.org.tr/nobetci-eczaneler',
+  meski: 'https://online.meski.gov.tr/meta/subscription/interruptions',
+  edas: 'https://online.toroslaredas.com.tr/elektrik-kesintisi-sorgulama',
   afad: 'https://deprem.afad.gov.tr/last-earthquakes',
   metno: 'https://www.yr.no/',
 };
@@ -30,13 +31,13 @@ function suAnKartlari(servis, ilceSlug = SITE.defaultIlce) {
 </a>
 <a class="kart" href="/nobetci-eczane/">
 <div class="ust-bilgi"><span>Nöbetçi eczane</span><span style="color:#7FB0FF">${ikon.eczane(28)}</span></div>
-<span class="deger yazi">Bu gece açık olanlar</span>
-<span class="ek">İlçene göre listeyi gör →</span>
+<span class="deger yazi">${servis?.eczane?.liste?.length ? `${servis.eczane.liste.length} eczane açık` : 'Bu gece açık olanlar'}</span>
+<span class="ek">İlçene göre adres ve telefon →</span>
 </a>
 <a class="kart uyari" href="/kesintiler/">
 <div class="ust-bilgi"><span>Kesintiler</span><span style="color:#FF8A1F">${ikon.damla(28)}</span></div>
-<span class="deger yazi">Su ve elektrik</span>
-<span class="ek">Bugünkü planlı kesintiler →</span>
+<span class="deger yazi">${(() => { const n = aktifSuKesintileri(servis).length; return servis?.suKesintisi ? (n ? `${n} su kesintisi` : 'Su kesintisi yok') : 'Su ve elektrik'; })()}</span>
+<span class="ek">Mahalle mahalle liste →</span>
 </a>
 <a class="kart" href="/deprem/">
 <div class="ust-bilgi"><span>Son deprem</span><span style="color:#7FB0FF">${ikon.deprem(28)}</span></div>
@@ -68,12 +69,26 @@ function mansetSec(hikayeler, simdi) {
   return [...liste].sort((a, b) => b.kaynaklar.length - a.kaynaklar.length || new Date(b.ilkGorulme) - new Date(a.ilkGorulme))[0];
 }
 
-function yanKutular(servis) {
+function aktifSuKesintileri(servis, simdi = Date.now()) {
+  return (servis?.suKesintisi?.liste || []).filter((k) => !k.bitis || new Date(k.bitis).getTime() > simdi);
+}
+
+function ilceEczaneleri(servis, slug) {
+  return (servis?.eczane?.liste || []).filter((e) => e.ilce === slug);
+}
+
+function yanKutular(servis, ilce = null) {
+  const su = aktifSuKesintileri(servis).filter((k) => !ilce || k.ilceler.some((i) => i.ilce === ilce.slug));
+  const eczaneler = ilce ? ilceEczaneleri(servis, ilce.slug) : [];
   return `<aside class="yan">
 ${reklamAlani('yan-ust')}
+${ilce ? `<section class="kutu">
+<div class="kutu-bas"><h2>${h(ilce.ad)} nöbetçi eczaneler</h2><a href="/nobetci-eczane/#${ilce.slug}">Tümü</a></div>
+${eczaneler.map((e) => `<a class="satir" href="tel:${h(e.telefon)}"><span>${ikon.eczane(20)} ${h(e.ad)}</span><small>${h(telefonGoster(e.telefon))}</small></a>`).join('') || `<a class="satir" href="/nobetci-eczane/"><span>Bugünün listesi</span><small>→</small></a>`}
+</section>` : ''}
 <section class="kutu">
-<div class="kutu-bas"><h2>Bugünkü kesintiler</h2><a href="/kesintiler/">Tümü</a></div>
-<a class="satir" href="${RESMI.meski}" rel="noopener" target="_blank"><span>${ikon.damla(20)} Su kesintileri</span><small>MESKİ →</small></a>
+<div class="kutu-bas"><h2>${ilce ? `${h(ilce.ad)} kesintileri` : 'Bugünkü kesintiler'}</h2><a href="/kesintiler/">Tümü</a></div>
+${su.slice(0, 4).map((k) => `<a class="satir" href="/kesintiler/"><span>${ikon.damla(20)} ${h(k.ilceler.map((i) => `${i.ad} – ${i.mahalleler.slice(0, 2).join(', ')}`).join(' · '))}</span><small>${k.bitis ? `bitiş ${saat(k.bitis)}` : ''}</small></a>`).join('') || `<div class="satir"><span>${ikon.damla(20)} Su kesintisi yok</span><small>MESKİ</small></div>`}
 <a class="satir" href="${RESMI.edas}" rel="noopener" target="_blank"><span>${ikon.simsek(20)} Elektrik kesintileri</span><small>Toroslar EDAŞ →</small></a>
 </section>
 <section class="kutu">
@@ -134,7 +149,7 @@ ${hava ? `<div class="kartlar" style="grid-template-columns:repeat(auto-fit,minm
 <div class="bolum-bas"><h2>${h(ilce.ad)}'${ayrilmaEki(ilce.ad)} son haberler</h2><span>${liste.length} haber</span></div>
 ${haberListesi(liste, `Son ${AYAR.saklamaGun} günde ${ilce.ad} ile ilgili haber bulunamadı.`)}
 </div>
-${yanKutular(servis)}
+${yanKutular(servis, ilce)}
 </main>`;
   return sayfa({
     baslik: `${ilce.ad} haberleri – son dakika ${ilce.ad} Mersin`,
@@ -202,24 +217,61 @@ function bilgiSayfasi({ yol, baslik, aciklama, govde }) {
   });
 }
 
-export function eczaneSayfasi() {
-  return bilgiSayfasi({
+function guncellemeNotu(veri, kaynakAd, kaynakUrl) {
+  const zaman = veri?.guncelleme
+    ? new Date(veri.guncelleme).toLocaleString('tr-TR', { timeZone: SITE.timezone, day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' })
+    : '';
+  return `<p class="not">Kaynak: <a href="${kaynakUrl}" rel="noopener" target="_blank">${kaynakAd}</a>${zaman ? ` · Son kontrol: ${zaman}` : ''}. Gitmeden önce telefonla teyit etmenizi öneririz.</p>`;
+}
+
+export function eczaneSayfasi({ servis } = {}) {
+  const liste = servis?.eczane?.liste || [];
+  const gruplar = ILCELER.map((i) => ({ ilce: i, eczaneler: liste.filter((e) => e.ilce === i.slug) })).filter((g) => g.eczaneler.length);
+  const kart = (e) => `<article class="eczane">
+<h3>${h(e.ad)}</h3>
+${e.saat ? `<p class="eczane-saat">${h(e.saat)}</p>` : ''}
+<p>${h(e.adres)}</p>
+${e.tarif ? `<p class="eczane-tarif">${h(e.tarif)}</p>` : ''}
+<div class="eczane-dugmeler">
+${e.telefon ? `<a class="hap" href="tel:${h(e.telefon)}">Ara: ${h(telefonGoster(e.telefon))}</a>` : ''}
+${e.lat ? `<a class="dugme-cizgi" href="https://www.google.com/maps/search/?api=1&query=${e.lat},${e.lon}" rel="noopener" target="_blank">${ikon.konum(18)} Yol tarifi</a>` : ''}
+</div>
+</article>`;
+  const govde = liste.length
+    ? `<div class="ilce-cipleri">${gruplar.map((g) => `<a class="cip" href="#${g.ilce.slug}">${h(g.ilce.ad)}</a>`).join('')}</div>
+${gruplar.map((g) => `<section class="eczane-grup" id="${g.ilce.slug}"><div class="bolum-bas"><h2>${h(g.ilce.ad)}</h2><span>${g.eczaneler.length} eczane</span></div><div class="eczane-liste">${g.eczaneler.map(kart).join('')}</div></section>`).join('')}
+${guncellemeNotu(servis.eczane, 'Mersin Eczacı Odası', RESMI.eczane)}`
+    : `<div class="bos">Liste şu an alınamadı. <a href="${RESMI.eczane}" rel="noopener" target="_blank">Eczacı Odası'nın sayfasına bakın →</a></div>`;
+  return sayfa({
+    baslik: 'Mersin nöbetçi eczaneler – bugün açık eczaneler',
+    aciklama: "Mersin'in ilçelerinde bugün nöbetçi olan eczaneler: adres, telefon ve yol tarifi.",
     yol: '/nobetci-eczane/',
-    baslik: 'Mersin nöbetçi eczaneler',
-    aciklama: "Mersin'in 13 ilçesinde bugün nöbetçi olan eczaneler.",
-    govde: `<p>Nöbetçi eczane listesi her gün Mersin Eczacı Odası tarafından yayımlanır. İlçe ilçe liste bu sayfaya çok yakında eklenecek.</p>
-<p><a class="hap" href="${RESMI.eczane}" rel="noopener" target="_blank">Bugünün listesini Eczacı Odası'nda gör<span class="daire">${ikon.ok(18)}</span></a></p>`,
+    ust: `<div class="su-an-bas"><div><h1>Nöbetçi eczaneler</h1><p style="margin-top:8px">Bugün Mersin'de açık olan eczaneler</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">${govde}</div></main>`,
   });
 }
 
-export function kesintiSayfasi() {
-  return bilgiSayfasi({
+export function kesintiSayfasi({ servis } = {}) {
+  const su = aktifSuKesintileri(servis);
+  const zaman = (t) => new Date(t).toLocaleString('tr-TR', { timeZone: SITE.timezone, day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' });
+  const kart = (k) => `<article class="kesinti">
+<h3>${ikon.damla(22)} ${h(k.ilceler.map((i) => i.ad).join(', '))}</h3>
+<p class="kesinti-mahalle">${h(k.ilceler.flatMap((i) => i.mahalleler).join(', '))}</p>
+<p class="kesinti-saat">${k.baslangic ? zaman(k.baslangic) : ''}${k.bitis ? ` → ${zaman(k.bitis)}` : ''}</p>
+${k.aciklama ? `<p>${h(k.aciklama.charAt(0) + k.aciklama.slice(1).toLocaleLowerCase('tr-TR'))}</p>` : ''}
+</article>`;
+  const govde = `<div class="bolum-bas"><h2>Su kesintileri</h2><span>${su.length} kesinti</span></div>
+${su.length ? `<div class="eczane-liste">${su.map(kart).join('')}</div>` : servis?.suKesintisi ? '<div class="bos">Şu an duyurulmuş su kesintisi yok.</div>' : `<div class="bos">Liste şu an alınamadı. <a href="${RESMI.meski}" rel="noopener" target="_blank">MESKİ'nin sayfasına bakın →</a></div>`}
+${servis?.suKesintisi ? guncellemeNotu(servis.suKesintisi, 'MESKİ', RESMI.meski) : ''}
+<div class="bolum-bas" style="margin-top:34px"><h2>Elektrik kesintileri</h2></div>
+<p style="color:var(--govde)">Toroslar EDAŞ, kesintileri adres seçerek sorgulatıyor. Kendi adresinizi buradan seçebilirsiniz:</p>
+<p><a class="hap" href="${RESMI.edas}" rel="noopener" target="_blank">Elektrik kesintisi sorgula<span class="daire">${ikon.ok(18)}</span></a></p>`;
+  return sayfa({
+    baslik: 'Mersin su ve elektrik kesintileri – bugün',
+    aciklama: "Mersin'de bugünkü su kesintileri (MESKİ) ve elektrik kesintisi sorgulama.",
     yol: '/kesintiler/',
-    baslik: 'Mersin su ve elektrik kesintileri',
-    aciklama: "Mersin'de bugünkü planlı su ve elektrik kesintileri.",
-    govde: `<p>Planlı kesintiler ilçe ve mahalle bazında bu sayfada listelenecek. O zamana kadar resmî duyurulara buradan ulaşabilirsiniz:</p>
-<p><a class="hap" href="${RESMI.meski}" rel="noopener" target="_blank">Su kesintileri · MESKİ<span class="daire">${ikon.ok(18)}</span></a></p>
-<p><a class="hap" href="${RESMI.edas}" rel="noopener" target="_blank">Elektrik kesintileri · Toroslar EDAŞ<span class="daire">${ikon.ok(18)}</span></a></p>`,
+    ust: `<div class="su-an-bas"><div><h1>Kesintiler</h1><p style="margin-top:8px">Su ve elektrik</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">${govde}</div></main>`,
   });
 }
 

@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { AYAR } from '../config.js';
-import { benzerlik, kelimeler, kisaKimlik, ilceBul, kategoriBul, riskBul, mersinIlgili } from './text.js';
+import { benzerlik, kelimeler, kisaKimlik, ilceBul, kategoriBul, riskBul, mersinIlgili, yerelIsaretVar } from './text.js';
 
 export const VERI_KLASORU = path.resolve(process.env.VERI_KLASORU || 'data');
 export const VERI_DOSYASI = path.join(VERI_KLASORU, 'haberler.json');
@@ -27,10 +27,20 @@ export function temizle(veri, simdi = Date.now()) {
 // Kaynaktan gelen tek bir haberi değerlendirir: Mersin ile ilgili mi, hangi ilçe?
 // İlgisizse null döner.
 export function haberiDegerlendir(ham, kaynak) {
+  // Foto/video galerileri haber değil
+  if (/\/(galeri|foto-?galeri|video-?galeri|videolar?|resimler?)\//i.test(ham.link || '')) return null;
   const metin = `${ham.baslik} ${ham.aciklama || ''}`;
   const yerel = kaynak.kapsam === 'yerel' || kaynak.kapsam === 'kurum';
-  const ilceler = ilceBul(metin, { yerelKaynak: yerel });
-  if (!yerel && !mersinIlgili(metin) && ilceler.length === 0) return null;
+  const karma = kaynak.kapsam === 'karma';
+  let ilceler = ilceBul(metin, { yerelKaynak: yerel || karma });
+  if (karma) {
+    const isaret = yerelIsaretVar(metin);
+    // Yenişehir Bursa/Diyarbakır'da da var: karma kaynakta tek başına yetmez
+    if (!isaret) ilceler = ilceler.filter((s) => s !== 'yenisehir');
+    if (!isaret && ilceler.length === 0) return null;
+  } else if (!yerel && !mersinIlgili(metin) && ilceler.length === 0) {
+    return null;
+  }
   return {
     ...ham,
     ilceler,

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { ilceBul, mersinIlgili, kategoriBul, riskBul, benzerlik, baslikTemizle, slugify, ayrilmaEki } from '../src/lib/text.js';
+import { ilceBul, mersinIlgili, kategoriBul, riskBul, benzerlik, baslikTemizle, slugify, ayrilmaEki, duzMetin } from '../src/lib/text.js';
 import { akisiCoz } from '../src/lib/rss.js';
 
 test('ilçe bulma: ekli isimler ve belirsiz ilçeler', () => {
@@ -22,7 +22,11 @@ test('Mersin ilgisi', () => {
 test('kategori ve risk', () => {
   assert.equal(kategoriBul('Takım deplasmanda kazandı'), 'gundem'); // "kazandı" kaza sayılmamalı
   assert.equal(kategoriBul('Limon hasadı başladı, üreticiler memnun'), 'tarim');
-  assert.deepEqual(riskBul('Kazada 1 kişi hayatını kaybetti'), ['ölüm / şiddet']);
+  assert.deepEqual(riskBul('Trafik kazasında 1 kişi hayatını kaybetti'), []);
+  assert.deepEqual(riskBul('Otomobil şarampole devrildi: 45 yaşındaki sürücü öldü'), []);
+  assert.deepEqual(riskBul('Kazada 7 yaşındaki çocuk hayatını kaybetti'), ['çocuk / mahremiyet']);
+  assert.deepEqual(riskBul('Bıçaklı kavgada 1 kişi hayatını kaybetti'), ['ölüm / şiddet']);
+  assert.deepEqual(riskBul('Kaza sonrası sürücü gözaltına alındı'), ['suç isnadı']);
   assert.deepEqual(riskBul('Kütüphane açılıyor'), []);
 });
 
@@ -54,4 +58,36 @@ test('ayrılma eki', () => {
   assert.equal(ayrilmaEki('Yenişehir'), 'den');
   assert.equal(ayrilmaEki('Anamur'), 'dan');
   assert.equal(ayrilmaEki('Çamlıyayla'), 'dan');
+});
+
+test('karma kaynak filtresi ve sansür', async () => {
+  const { haberiDegerlendir } = await import('../src/lib/store.js');
+  const k = { kapsam: 'karma' };
+  assert.equal(haberiDegerlendir({ baslik: 'Romelu Lukaku milli takımı bıraktı', link: 'https://a.com/1' }, k), null);
+  assert.ok(haberiDegerlendir({ baslik: "Toroslar'da kuaför hizmeti", link: 'https://a.com/2' }, k));
+  assert.ok(haberiDegerlendir({ baslik: 'Vali Toros KKTC resepsiyonuna katıldı', link: 'https://a.com/3' }, k));
+  assert.equal(haberiDegerlendir({ baslik: 'Mersin Sahili', link: 'https://a.com/galeri/5' }, k), null);
+  const s = haberiDegerlendir({ baslik: "Mersin'de s*lahlı s*ldırı", link: 'https://a.com/4' }, k);
+  assert.ok(s.riskNedenleri.includes('sansürlü ifade'));
+  assert.equal(duzMetin('Gülnar&amp;#039;a &#8217;'), 'Gülnar\'a ’');
+});
+
+test('eczane ve su kesintisi ayrıştırma', async () => {
+  const fs = await import('node:fs');
+  const { eczaneCoz, telefonGoster } = await import('../src/lib/eczane.js');
+  const { suKesintiCoz } = await import('../src/lib/kesinti.js');
+  const e = eczaneCoz(fs.readFileSync(new URL('./ornekler/eczane.html', import.meta.url), 'utf8'));
+  assert.equal(e.length, 2);
+  assert.equal(e[0].ad, 'Abay Eczanesi');
+  assert.equal(e[0].ilce, 'mezitli');
+  assert.equal(e[0].telefon, '03243587375');
+  assert.equal(e[0].lat, 36.764217);
+  assert.match(e[0].saat, /18:00/);
+  assert.equal(e[1].ilce, 'gulnar');
+  assert.equal(telefonGoster('03243587375'), '0324 358 73 75');
+  const k = suKesintiCoz(fs.readFileSync(new URL('./ornekler/meski.html', import.meta.url), 'utf8'));
+  assert.equal(k.length, 1);
+  assert.equal(k[0].ilceler[0].ilce, 'mezitli');
+  assert.deepEqual(k[0].ilceler[0].mahalleler, ['Çevlik']);
+  assert.equal(k[0].bitis, '2026-11-16T13:00:00.000Z');
 });

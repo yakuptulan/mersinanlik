@@ -24,9 +24,14 @@ export function duzMetin(s = '') {
     .replace(/&nbsp;/g, ' ')
     .replace(/&amp;/g, '&')
     .replace(/&quot;/g, '"')
-    .replace(/&#39;|&apos;/g, "'")
+    .replace(/&apos;/g, "'")
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+    .replace(/&(rsquo|lsquo);/g, '’')
+    .replace(/&(rdquo|ldquo);/g, '"')
+    .replace(/&hellip;/g, '…')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -86,6 +91,17 @@ export function mersinIlgili(metin = '') {
   return kelimeVar(kucuk(metin), 'mersin');
 }
 
+// Başlıkta "Mersin" geçmese de haberin Mersin'e ait olduğunu gösteren yerel işaretler
+const YEREL_ISARETLER = [
+  'mersin', 'meski', 'mesk ', 'mesk,', 'vali toros', 'vali atilla toros', 'vahap seçer', 'başkan seçer',
+  'akkuyu', 'kızkalesi', 'göksu', 'mezitli', 'çamlıyayla', 'anamur', 'bozyazı', 'gülnar', 'silifke',
+  'tarsus', 'erdemli', 'aratos', 'soli pompeiopolis', 'pozcu', 'çiftlikköy', 'mersinspor', 'tarsus idman',
+];
+export function yerelIsaretVar(metin = '') {
+  const k = kucuk(metin) + ' ';
+  return YEREL_ISARETLER.some((w) => kelimeVar(k, w));
+}
+
 // Metinde geçen ilçeleri bulur.
 // yerelKaynak=false iken belirsiz ilçeler ancak metinde "Mersin" de geçiyorsa sayılır.
 export function ilceBul(metin = '', { yerelKaynak = false } = {}) {
@@ -123,11 +139,24 @@ export function kategoriBul(metin = '') {
 }
 
 // Haber riskli mi? Riskliyse nedenlerini döndürür.
+const TRAFIK_KAZASI = ['trafik kaza', 'kazada', 'kazası', 'kazayla', 'çarpış', 'devrildi', 'şarampole', 'otomobil', 'kamyon', 'tır ', 'motosiklet', 'otobüs', 'minibüs'];
+const COCUK_KELIMELERI = ['çocuk', 'bebek', 'kız öğrenci', 'erkek öğrenci', 'istismar', 'taciz'];
+
+// Haber riskli mi? Riskliyse nedenlerini döndürür.
+// İstisna: trafik kazası haberlerinde ölüm ve yaş bilgisi tek başına onay gerektirmez
+// (isim ve suç isnadı içermediği sürece). Çocuk, suç ve siyaset kuralları yine geçerlidir.
 export function riskBul(metin = '') {
   const k = kucuk(metin);
+  const trafik = TRAFIK_KAZASI.some((w) => kelimeVar(k, w));
+  const cocuk = COCUK_KELIMELERI.some((w) => kelimeVar(k, w));
   const nedenler = [];
+  // "s*lahlı s*ldırı" gibi yıldızla sansürlenmiş kelimeler genelde hassas içeriktir
+  if (/[a-zçğıöşü]\*[a-zçğıöşü]/u.test(k)) nedenler.push('sansürlü ifade');
   for (const [neden, liste] of Object.entries(RISK_KELIMELERI)) {
-    if (liste.some((w) => kelimeVar(k, w))) nedenler.push(neden);
+    let kelimeler = liste;
+    if (trafik && neden === 'ölüm / şiddet') kelimeler = liste.filter((w) => !['öldü', 'ölü', 'hayatını kaybetti', 'yaşamını yitirdi'].includes(w));
+    if (trafik && !cocuk && neden === 'çocuk / mahremiyet') kelimeler = liste.filter((w) => w !== 'yaşındaki');
+    if (kelimeler.some((w) => kelimeVar(k, w))) nedenler.push(neden);
   }
   return nedenler;
 }
@@ -150,4 +179,9 @@ export function ayrilmaEki(ad = '') {
   const kalin = 'aıou'.includes(son);
   const sert = /[fstkçşhp]$/.test(k);
   return `${sert ? 't' : 'd'}${kalin ? 'an' : 'en'}`;
+}
+
+// "ABAY ECZANESİ" → "Abay Eczanesi"
+export function basHarfler(s = '') {
+  return kucuk(s).replace(/(^|[\s(\-/.])([a-zçğıöşü])/g, (_, a, b) => a + b.toLocaleUpperCase('tr-TR'));
 }
