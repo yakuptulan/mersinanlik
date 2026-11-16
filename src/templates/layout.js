@@ -90,7 +90,7 @@ ${icerik}
 </div>
 <nav class="alt-menu" aria-label="Alt menü">
 <a href="/kunye/">Künye</a><a href="/iletisim/">İletişim</a><a href="/kaynaklarimiz/">Kaynaklarımız</a>
-<a href="/yayin-ilkeleri/">Yayın ilkeleri</a><a href="/gizlilik/">Gizlilik</a><a href="/cerez-politikasi/">Çerez politikası</a>
+<a href="/yayin-ilkeleri/">Yayın ilkeleri</a><a href="/gizlilik/">Gizlilik</a><a href="/cerez-politikasi/">Çerez politikası</a><a href="/gorsel-kaynaklari/">Görsel kaynakları</a>
 </nav>
 </div>
 </footer>

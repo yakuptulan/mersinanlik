@@ -170,6 +170,13 @@ button.ilce-sec { border: none; font: inherit; font-weight: 700; cursor: pointer
 .kapak-genis .kapak-cizim { -webkit-mask-size: 100% auto; mask-size: 100% auto; }
 .kapak-genis .kapak-rozet { width: 48px; height: 48px; border-radius: 15px; left: 16px; top: 16px; }
 .kapak-genis .kapak-rozet svg { width: 26px; height: 26px; }
+.kapak-foto { background: #dfe6f2; }
+.kapak-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.kapak-foto::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.18), transparent 35%, transparent 70%, rgba(0,0,0,.35)); }
+.kapak-foto .kapak-rozet, .kapak-foto .temsili, .kapak-foto .kunye { z-index: 1; }
+.temsili { position: absolute; right: 8px; bottom: 7px; font-size: 11px; font-weight: 700; letter-spacing: .02em; color: #fff; background: rgba(10,21,48,.55); padding: 2px 7px; border-radius: 6px; }
+.kunye { position: absolute; left: 14px; bottom: 10px; max-width: 70%; font-size: 12px; color: rgba(255,255,255,.9); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kapak-genis .temsili { right: 14px; bottom: 10px; font-size: 12px; }
 .haber .zaman { margin-left: auto; color: var(--ikincil); font-size: 15px; white-space: nowrap; }
 .haber .zaman b { color: var(--metin); font-size: 16px; }
 .haber .saat { min-width: 64px; display: flex; flex-direction: column; gap: 2px; }
@@ -261,7 +268,14 @@ a.satir:hover { color: var(--derin-mavi); }
   .haber .kapak-rozet svg { width: 16px; height: 16px; }
   .haber .icerik { display: contents; }
   .haber .cipler { grid-column: 2; }
-  .haber .zaman { margin-left: 0; width: 100%; }
+  .kapak-foto { background: #dfe6f2; }
+.kapak-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.kapak-foto::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.18), transparent 35%, transparent 70%, rgba(0,0,0,.35)); }
+.kapak-foto .kapak-rozet, .kapak-foto .temsili, .kapak-foto .kunye { z-index: 1; }
+.temsili { position: absolute; right: 8px; bottom: 7px; font-size: 11px; font-weight: 700; letter-spacing: .02em; color: #fff; background: rgba(10,21,48,.55); padding: 2px 7px; border-radius: 6px; }
+.kunye { position: absolute; left: 14px; bottom: 10px; max-width: 70%; font-size: 12px; color: rgba(255,255,255,.9); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kapak-genis .temsili { right: 14px; bottom: 10px; font-size: 12px; }
+.haber .zaman { margin-left: 0; width: 100%; }
   .haber h3 { grid-column: 1 / -1; }
   .haber .kaynak, .haber p { grid-column: 1 / -1; }
   .haber h3 { font-size: 19px; }

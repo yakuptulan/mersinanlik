@@ -45,6 +45,9 @@ jobs:
       - name: Hava durumu ve depremler
         run: node src/services.js
 
+      - name: Temsili fotoğrafları indir (sadece eksik olanlar)
+        run: node scripts/foto-indir.js
+
       - name: Siteyi üret
         run: node src/build.js
 
@@ -52,11 +55,12 @@ jobs:
         run: |
           git config user.name "mersinanlik-bot"
           git config user.email "bot@mersinanlik.com"
-          git add data/
+          git add data/ public/foto/
           if git diff --cached --quiet; then
             echo "Değişiklik yok"
           else
             git commit -m "Veri güncellemesi $(date -u +%Y-%m-%dT%H:%MZ)"
+            git pull --rebase --autostash || true
             git push
           fi
 

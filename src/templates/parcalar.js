@@ -1,4 +1,6 @@
+import fs from 'node:fs';
 import { htmlKacis as h } from '../lib/text.js';
+import { FOTOLAR } from '../fotolar.js';
 import { KATEGORILER, GUNDEM, GENEL } from '../config.js';
 import { ikon, katIkon } from './ikonlar.js';
 import { saat, ilceAdi } from './layout.js';
@@ -19,7 +21,45 @@ function kapakAdi(hikaye) {
   const n = parseInt(String(hikaye.id).slice(0, 3), 36) % 3;
   return ['mersin', 'mersin2', 'mersin3'][n];
 }
+// İndirilmiş fotoğraflar (public/foto). İnmeyen varsa o fotoğraf yerine çizim kullanılır.
+const MEVCUT = FOTOLAR.filter((f) => fs.existsSync(new URL(`../../public/foto/${f.id}-400.webp`, import.meta.url)));
+const havuz = (etiket) => MEVCUT.filter((f) => f.etiket === etiket);
+// Bu konularda konunun fotoğrafı ilçe fotoğrafından daha anlatıcı
+const KONU_ONCELIKLI = new Set(['spor', 'saglik', 'kaza', 'asayis', 'egitim', 'tarim', 'ekonomi', 'ulasim', 'hava', 'kultur', 'siyaset']);
+
+function sayiOzeti(s) {
+  let n = 0;
+  for (const c of String(s)) n = (n * 31 + c.charCodeAt(0)) >>> 0;
+  return n;
+}
+
+export function fotoSec(hikaye) {
+  const kat = hikaye.genel ? 'genel' : hikaye.kategori;
+  let liste = [];
+  if (hikaye.genel) liste = KONU_ONCELIKLI.has(hikaye.kategori) ? havuz(hikaye.kategori) : [];
+  if (!liste.length && KONU_ONCELIKLI.has(kat)) liste = havuz(kat);
+  if (!liste.length && !hikaye.genel) for (const i of hikaye.ilceler) if ((liste = havuz(i)).length) break;
+  if (!liste.length) liste = havuz(hikaye.genel ? 'genel' : 'mersin');
+  if (!liste.length) return null;
+  return liste[sayiOzeti(hikaye.id) % liste.length];
+}
+
+export function fotoKunye(f) {
+  return `Foto: ${f.yazar} · ${f.lisans} · Wikimedia Commons`;
+}
+
 function kapak(hikaye, kat, link, sinif = '') {
+  const foto = fotoSec(hikaye);
+  if (foto) {
+    const buyuk = sinif.includes('genis');
+    return `<a class="kapak kapak-foto ${sinif}" href="${h(link)}" rel="noopener nofollow" target="_blank" tabindex="-1" aria-hidden="true" title="${h(fotoKunye(foto))}">
+<img src="/foto/${foto.id}-${buyuk ? 800 : 400}.webp"${buyuk ? '' : ` srcset="/foto/${foto.id}-400.webp 400w, /foto/${foto.id}-800.webp 800w" sizes="(max-width: 900px) 104px, 176px"`} alt="" loading="${buyuk ? 'eager' : 'lazy'}" decoding="async" width="${buyuk ? 800 : 400}" height="${buyuk ? 500 : 300}">
+<span class="kapak-rozet">${(katIkon[kat.slug] || katIkon.gundem)(buyuk ? 26 : 20)}</span><span class="temsili">Temsili</span>${buyuk ? `<span class="kunye">${h(fotoKunye(foto))}</span>` : ''}</a>`;
+  }
+  return kapakCizim(hikaye, kat, link, sinif);
+}
+
+function kapakCizim(hikaye, kat, link, sinif = '') {
   // Aynı ilçe tekrar edince sıkıcı olmasın: güneşin yeri habere göre değişir
   const v = parseInt(String(hikaye.id).slice(-2), 36) % 3;
   return `<a class="kapak kapak-v${v} ${sinif}" href="${h(link)}" rel="noopener nofollow" target="_blank" tabindex="-1" aria-hidden="true" style="--gorsel:url(/gorsel/${kapakAdi(hikaye)}.svg)"><span class="kapak-gunes"></span><span class="kapak-cizim"></span><span class="kapak-rozet">${(katIkon[kat.slug] || katIkon.gundem)(20)}</span></a>`;

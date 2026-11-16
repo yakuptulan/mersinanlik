@@ -5,6 +5,7 @@ import { ikon } from './ikonlar.js';
 import { haberListesi, mansetKarti, reklamAlani } from './parcalar.js';
 import { telefonGoster } from '../lib/eczane.js';
 import { havaIkonu, havaTuru } from './havaIkon.js';
+import { FOTOLAR } from '../fotolar.js';
 
 // Resmî servis bağlantıları (veri entegrasyonu tamamlanana kadar doğrudan kaynağa yönlendirir)
 export const RESMI = {
@@ -351,6 +352,14 @@ export function araSayfasi() {
 
 export function bilgiSayfalari() {
   return [
+    ({
+      yol: '/gorsel-kaynaklari/',
+      baslik: 'Görsel kaynakları',
+      aciklama: `${SITE.name} sitesinde kullanılan temsili fotoğrafların kaynakları ve lisansları.`,
+      govde: `<p>Haber kartlarındaki fotoğraflar <strong>temsilidir</strong>; haberdeki olayın fotoğrafı değildir. Mersin'in ilçelerini ve haberin konusunu gösterir. Fotoğrafların tamamı Wikimedia Commons'tan, ticari kullanıma izin veren lisanslarla alınmıştır. Fotoğrafçılara teşekkür ederiz.</p>
+<ul>${FOTOLAR.map((f) => `<li><a href="${h(f.sayfa)}" rel="noopener" target="_blank">${h(f.sayfa.split('File:')[1])}</a> — ${h(f.yazar)} · ${h(f.lisans)}</li>`).join('')}</ul>
+<p>Lisanslar: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.tr" rel="noopener" target="_blank">CC BY-SA</a>, <a href="https://creativecommons.org/licenses/by/4.0/deed.tr" rel="noopener" target="_blank">CC BY</a>, CC0 ve kamu malı. Fotoğraflar sitede küçültülüp kırpılmıştır.</p>`,
+    }),
     ({
       yol: '/kunye/',
       baslik: 'Künye',

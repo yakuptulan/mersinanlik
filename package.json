@@ -4,7 +4,9 @@
   "private": true,
   "description": "Mersin Anlık – Mersin yerel haber derleyicisi (mersinanlik.com)",
   "type": "module",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "collect": "node src/collect.js",
     "services": "node src/services.js",
@@ -14,6 +16,7 @@
     "test": "node --test test/*.test.js"
   },
   "dependencies": {
-    "fast-xml-parser": "^4.5.0"
+    "fast-xml-parser": "^4.5.0",
+    "sharp": "^0.34.5"
   }
 }
