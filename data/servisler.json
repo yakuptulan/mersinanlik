@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-16T16:03:12.920Z",
+ "guncelleme": "2026-11-16T16:06:09.311Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 17,
@@ -505,7 +505,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-16T16:03:16.205Z",
+  "guncelleme": "2026-11-16T16:06:13.360Z",
   "liste": [
    {
     "ad": "Abay Eczanesi",
@@ -774,7 +774,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-16T16:03:17.174Z",
+  "guncelleme": "2026-11-16T16:06:14.479Z",
   "liste": [
    {
     "tur": "su",
@@ -837,6 +837,22 @@
       "ad": "Yenişehir",
       "mahalleler": [
        "Kocavilayet"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Mut ilçesi Deveci mahallesinde meydana gelen içme suyu arızası kaynaklı saat 21:00 e kadar su kesintisi yaşanacaktır",
+    "baslangic": "2026-11-16T16:07:00.000Z",
+    "bitis": "2026-11-16T18:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "mut",
+      "ad": "Mut",
+      "mahalleler": [
+       "Deveci"
       ]
      }
     ]
