@@ -48,7 +48,7 @@ test('trendler: RSS ve başlık eşleşmesi', () => {
 
 import { puanCoz, haftaCoz, milliCoz, takimAdi } from '../src/lib/spor.js';
 test('spor: TFF tabloları', () => {
-  const html = `<table><tr><td>Takım</td><td>O</td></tr>
+  const html = `<table><tr><td>1. Devre</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr><tr><td>Takım</td><td>O</td></tr>
 <tr><td><b><a href="x">1.GALATASARAY A.Ş.</a></b></td><td>11</td><td>9</td><td>1</td><td>1</td><td>27</td><td>15</td><td>12</td><td>28</td></tr>
 <tr><td><a>2.YENİ MERSİN İDMANYURDU FUTBOL A.Ş.</a></td><td>11</td><td>7</td><td>0</td><td>4</td><td>16</td><td>10</td><td>6</td><td>21</td></tr></table>
 <table><tr align="left"><td><b><span>15.11.2026</span>&nbsp;<span>13:00</span></b></td><td><a>ADANASPOR A.Ş.</a></td><td><a>4-0</a></td><td><a>1964 SİLİFKE SPOR KULÜBÜ</a></td><td>Detaylar</td></tr>

@@ -39,7 +39,7 @@ export const KAYNAKLAR = [
     kapsam: 'yerel',
     yapayZekaOzeti: false,
     fotoKullan: false,
-    aktif: true,
+    aktif: false, // GitHub sunucularına 403 veriyor
   },
   // --- Resmî kurumlar (haber sayfası okunur, fotoğrafı "Foto: Kurum" diye kullanılır) ---
   {

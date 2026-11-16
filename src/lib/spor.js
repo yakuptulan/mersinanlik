@@ -51,13 +51,14 @@ export function puanCoz(html) {
     const [o, g, b, mg, a, y, av, p] = sayilar;
     liste.push({ sira: Number(m[1]), takim: takimAdi(m[2]), ham: m[2], o, g, b, m: mg, a, y, av, p, mersin: mersinMi(m[2]) });
   }
-  // Sayfada başka puan tabloları da olabilir: ilk sıralı diziyi al
-  const sonuc = [];
-  for (const s of liste) {
-    if (s.sira === 1 && sonuc.length) break;
-    sonuc.push(s);
+  // Sayfada başka sıralı satırlar da var ("1. Devre 1 2 3 ..." gibi hafta seçicileri): en uzun 1,2,3… dizisini al
+  const diziler = [];
+  for (const sat of liste.filter((x) => /[A-ZÇĞİÖŞÜ]{2}/.test(x.ham) && !/^devre$/i.test(x.ham))) {
+    const son = diziler.at(-1);
+    if (son && sat.sira === son.at(-1).sira + 1) son.push(sat);
+    else diziler.push([sat]);
   }
-  return sonuc;
+  return diziler.sort((a, b) => b.length - a.length)[0] || [];
 }
 
 // Haftanın maçları: [tarih (ve saat), ev, skor, deplasman, ...]

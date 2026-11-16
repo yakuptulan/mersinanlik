@@ -159,7 +159,7 @@ async function main() {
     }
   }
   // Spor (TFF): saatte bir yeter
-  if (!eski.spor || Date.now() - new Date(eski.spor.guncelleme).getTime() > 55 * 60e3) {
+  if (!eski.spor || (eski.spor.superLig?.puan?.length || 0) < 10 || Date.now() - new Date(eski.spor.guncelleme).getTime() > 55 * 60e3) {
     try {
       const spor = await sporGetir(UA);
       yeni.spor = { ...eski.spor, ...spor };
