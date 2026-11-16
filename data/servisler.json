@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-16T15:08:23.460Z",
+ "guncelleme": "2026-11-16T15:12:55.957Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -290,14 +290,14 @@
    ]
   },
   "mut": {
-   "sicaklik": 18,
+   "sicaklik": 16,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-16",
      "min": 13,
-     "max": 18,
-     "durum": "Açık"
+     "max": 16,
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-17",
@@ -326,14 +326,14 @@
    ]
   },
   "silifke": {
-   "sicaklik": 19,
-   "durum": "Az bulutlu",
+   "sicaklik": 17,
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-16",
      "min": 15,
-     "max": 19,
-     "durum": "Açık"
+     "max": 17,
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-17",
@@ -505,7 +505,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-16T15:08:28.283Z",
+  "guncelleme": "2026-11-16T15:12:59.958Z",
   "liste": [
    {
     "ad": "Abay Eczanesi",
@@ -774,7 +774,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-16T15:08:29.545Z",
+  "guncelleme": "2026-11-16T15:13:01.172Z",
   "liste": [
    {
     "tur": "su",
@@ -838,6 +838,23 @@
       "mahalleler": [
        "Bahşiş",
        "Yeşiltepe"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Gülnar ilçesi Büyükeceli mahallesi ve Yanışlı mahallelerini besleyen terfi hattında meydana gelen arıza kaynaklı saat 23.59 a kadar su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-16T15:15:00.000Z",
+    "bitis": "2026-11-16T20:59:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "gulnar",
+      "ad": "Gülnar",
+      "mahalleler": [
+       "Büyükeceli",
+       "Koçaşlı"
       ]
      }
     ]
