@@ -28,6 +28,7 @@ jobs:
           jq -n --arg t "$GH_DISPATCH_TOKEN" '{
             main_module: "index.js",
             compatibility_date: "2026-11-01",
+            observability: {enabled: true},
             bindings: [{type: "secret_text", name: "GH_TOKEN", text: $t}]
           }' > /tmp/meta.json
           echo "1) Kod yükleniyor"
@@ -42,6 +43,16 @@ jobs:
           jq '{success, errors, result}' /tmp/r2.json
           jq -e '.success' /tmp/r2.json > /dev/null
           rm -f /tmp/meta.json
+          echo "3) workers.dev adresi kapatılıyor"
+          curl -sS -X POST "$API/subdomain" -H "Authorization: Bearer $CF_TOKEN" \
+            -H "Content-Type: application/json" --data '{"enabled":false}' | jq '{success, errors}'
+          echo "4) GitHub anahtarı test ediliyor (güncellemeyi bir kez başlatır)"
+          kod=$(curl -sS -o /tmp/r4.txt -w '%{http_code}' -X POST \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/guncelle.yml/dispatches" \
+            -H "Authorization: Bearer $GH_DISPATCH_TOKEN" -H "Accept: application/vnd.github+json" \
+            --data '{"ref":"main"}')
+          echo "GitHub yanıtı: $kod"; cat /tmp/r4.txt
+          [ "$kod" = "204" ]
       - name: Anahtar eksik
         if: ${{ env.GH_DISPATCH_TOKEN == '' }}
         run: echo "GH_DISPATCH_TOKEN sırrı tanımlı değil; zamanlayıcı kurulmadı."
