@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-16T19:01:31.323Z",
+ "guncelleme": "2026-11-16T19:15:47.830Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -362,13 +362,13 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 15,
+   "sicaklik": 14,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-16",
      "min": 14,
-     "max": 15,
+     "max": 14,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -505,7 +505,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-16T19:01:36.417Z",
+  "guncelleme": "2026-11-16T19:15:51.997Z",
   "liste": [
    {
     "ad": "Abay Eczanesi",
@@ -774,7 +774,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-16T19:01:37.821Z",
+  "guncelleme": "2026-11-16T19:15:52.982Z",
   "liste": [
    {
     "tur": "su",
@@ -889,31 +889,31 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-16T19:01:41.182Z",
+  "guncelleme": "2026-11-16T19:15:55.337Z",
   "kalemler": {
    "gram": {
-    "alis": 6245.55,
-    "satis": 6246.54,
-    "degisim": -0.54
+    "alis": 6248.05,
+    "satis": 6249.01,
+    "degisim": -0.5
    },
    "ceyrek": {
-    "alis": 10225,
-    "satis": 10314,
-    "degisim": -0.04
+    "alis": 10229,
+    "satis": 10318,
+    "degisim": 0
    },
    "gumus": {
-    "alis": 76.09,
-    "satis": 76.17,
-    "degisim": -3.8
+    "alis": 76.17,
+    "satis": 76.25,
+    "degisim": -3.7
    },
    "usd": {
-    "alis": 50.3817,
-    "satis": 50.3917,
+    "alis": 50.3838,
+    "satis": 50.3899,
     "degisim": 0.04
    },
    "eur": {
-    "alis": 55.4475,
-    "satis": 55.4692,
+    "alis": 55.4476,
+    "satis": 55.4761,
     "degisim": -0.18
    },
    "bist": {
@@ -922,132 +922,132 @@
     "degisim": -0.01
    },
    "btc": {
-    "satis": 3273754,
-    "usd": 64968,
-    "degisim": 0.49
+    "satis": 3268843,
+    "usd": 64872,
+    "degisim": -0.13
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 6245.55,
-    "satis": 6246.54,
-    "degisim": -0.54
+    "alis": 6248.05,
+    "satis": 6249.01,
+    "degisim": -0.5
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 10225,
-    "satis": 10314,
-    "degisim": -0.04
+    "alis": 10229,
+    "satis": 10318,
+    "degisim": 0
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 20475,
-    "satis": 20622,
-    "degisim": -0.04
+    "alis": 20483,
+    "satis": 20630,
+    "degisim": 0
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 40825,
-    "satis": 41093,
-    "degisim": -0.04
+    "alis": 40840,
+    "satis": 41109,
+    "degisim": 0
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 41924,
-    "satis": 42191,
-    "degisim": -0.04
+    "alis": 41939,
+    "satis": 42207,
+    "degisim": 0
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 41924,
-    "satis": 42191,
-    "degisim": -0.04
+    "alis": 41939,
+    "satis": 42207,
+    "degisim": 0
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 41924,
-    "satis": 42191,
-    "degisim": -0.04
+    "alis": 41939,
+    "satis": 42207,
+    "degisim": 0
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5713.44,
-    "satis": 5910.67,
-    "degisim": -0.04
+    "alis": 5715.59,
+    "satis": 5912.9,
+    "degisim": -0.01
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4327,
-    "satis": 5060,
-    "degisim": -0.1
+    "alis": 4329,
+    "satis": 5065,
+    "degisim": 0
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3427.19,
-    "satis": 4601,
-    "degisim": -0.04
+    "alis": 3428.52,
+    "satis": 4602.54,
+    "degisim": -0.01
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 6214.32,
-    "satis": 6215.31,
-    "degisim": -0.54
+    "alis": 6216.81,
+    "satis": 6217.77,
+    "degisim": -0.5
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 76.09,
-    "satis": 76.17,
-    "degisim": -3.8
+    "alis": 76.17,
+    "satis": 76.25,
+    "degisim": -3.7
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.3817,
-    "satis": 50.3917,
+    "alis": 50.3838,
+    "satis": 50.3899,
     "degisim": 0.04
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.4475,
-    "satis": 55.4692,
+    "alis": 55.4476,
+    "satis": 55.4761,
     "degisim": -0.18
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.4798,
-    "satis": 66.4898,
-    "degisim": -0.18
+    "alis": 66.4868,
+    "satis": 66.4948,
+    "degisim": -0.17
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 59.9794,
-    "satis": 60.0107,
+    "alis": 59.9807,
+    "satis": 60.0094,
     "degisim": -0.02
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.4207,
-    "satis": 13.4332,
-    "degisim": 0.05
+    "alis": 13.4208,
+    "satis": 13.4343,
+    "degisim": 0.06
    },
    {
     "k": "RUB",
@@ -1057,10 +1057,10 @@
     "degisim": 0.16
    }
   ],
-  "kaynakSaati": "2026-11-16 22:01:01"
+  "kaynakSaati": "2026-11-16 22:15:03"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-16T19:01:42.624Z",
+  "guncelleme": "2026-11-16T19:15:56.679Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 72.99,
@@ -2053,7 +2053,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-16T18:08:44.858Z",
+  "guncelleme": "2026-11-16T19:16:00.758Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -2727,35 +2727,35 @@
      "skor": "1-2",
      "dep": "Belçika",
      "tarih": "2026-11-12",
-     "organizasyon": "Uefa Uluslar Ligi"
+     "organizasyon": "UEFA Uluslar Ligi"
     },
     {
      "ev": "İtalya",
      "skor": "3-1",
      "dep": "Türkiye",
      "tarih": "2026-10-05",
-     "organizasyon": "Uefa Uluslar Ligi"
+     "organizasyon": "UEFA Uluslar Ligi"
     },
     {
      "ev": "Belçika",
      "skor": "3-0",
      "dep": "Türkiye",
      "tarih": "2026-10-02",
-     "organizasyon": "Uefa Uluslar Ligi"
+     "organizasyon": "UEFA Uluslar Ligi"
     },
     {
      "ev": "Türkiye",
      "skor": "1-4",
      "dep": "İtalya",
      "tarih": "2026-09-28",
-     "organizasyon": "Uefa Uluslar Ligi"
+     "organizasyon": "UEFA Uluslar Ligi"
     },
     {
      "ev": "Türkiye",
      "skor": "0-1",
      "dep": "Fransa",
      "tarih": "2026-09-25",
-     "organizasyon": "Uefa Uluslar Ligi"
+     "organizasyon": "UEFA Uluslar Ligi"
     },
     {
      "ev": "Türkiye",
@@ -2779,6 +2779,23 @@
      "organizasyon": "2026 Dünya Kupası Finalleri"
     }
    ]
+  }
+ },
+ "burc": {
+  "tarih": "2026-11-16",
+  "yorumlar": {
+   "koc": "Yeni haftaya enerjik bir başlangıç yaparken iş yerindeki projelerinde liderliği ele alabilirsin. Ekip arkadaşlarınla yapacağın kısa bir kahve sohbeti, gününün neşelenmesine ve motivasyonunun artmasına katkı sağlayabilir.",
+   "boga": "Bugün ev düzeninde küçük ama etkili değişiklikler yapmak sana huzur verebilir. Akşam saatlerinde mutfakta yeni ve keyifli bir tarif deneyerek sevdiklerini şaşırtabilir, günün yorgunluğunu lezzetli bir sofra ile atabilirsin.",
+   "ikizler": "Zihninin oldukça aktif olduğu bu Pazartesi günü, uzun süredir ertelediğin bir eğitime başlamak için harika bir adım atabilirsin. Yakın bir arkadaşından alacağın ilham verici bir haber gününü renklendirebilir.",
+   "yengec": "Haftanın ilk günü, sevdiklerinle kurduğun bağları güçlendirmek için harika bir fırsat sunuyor. Ev ortamında yapacağınız sıcak bir sohbet, içindeki tüm huzursuzlukları alıp götürebilir ve sana iyi gelebilir.",
+   "aslan": "Girdiğin ortamlarda enerjinle herkesin dikkatini çekebileceğin ışıltılı bir gün seni bekliyor. Kendine yapacağın küçük bir ödüllendirme, hafta boyunca sürecek harika bir motivasyon dalgası yaratabilir.",
+   "basak": "Günlük rutinine minik dokunuşlar yaparak haftaya daha organize ve hafiflemiş bir giriş yapabilirsin. Kendine ayıracağın yarım saatlik sessiz bir kitap okuma seansı, ruhunu dinlendirebilir.",
+   "terazi": "Sosyal ilişkilerinin ön planda olacağı bu günde, yeni ve keyifli insanlarla tanışma fırsatı yakalayabilirsin. Estetik zevklerini yansıtan küçük bir alışveriş, ruh halini anında yukarı taşıyabilir.",
+   "akrep": "Bugün yaratıcı yönünü ortaya koyabileceğin sanatsal hobilerine zaman ayırmak sana çok iyi gelebilir. İç sesini dinleyerek aldığın küçük kararlar, önümüzdeki günler için ilham verici olabilir.",
+   "yay": "Yeni maceralar ve farklı yerler keşfetme arzusu bugün seni sarabilir, belki de kısa bir hafta sonu kaçamağı planlayabilirsin. Açık havada yapacağın tempolu yürüyüş enerjini tazeleyecektir.",
+   "oglak": "Kariyerinde attığın planlı adımların meyvelerini toplamaya başlayabileceğin verimli bir gün seni bekliyor. Akşam saatlerinde iş ve özel hayat dengesini kurarak sevdiklerine vakit ayırabilirsin.",
+   "kova": "Fütüristik fikirlerin ve yaratıcı projelerin etrafındakilerden tam not alabilir, harika iş birliklerine imza atabilirsin. Akşam teknoloji veya bilim üzerine ilham verici belgeseller izlemek hoşuna gidebilir.",
+   "balik": "Hayal gücünün en üst seviyede olduğu bu günde, ilham verici müzikler eşliğinde yeni bir resim veya yazı çalışması yapabilirsin. İçindeki sanatsal yeteneği serbest bırakmak ruhuna şifa gibi gelebilir."
   }
  }
 }
