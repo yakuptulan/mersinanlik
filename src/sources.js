@@ -52,7 +52,7 @@ export const KAYNAKLAR = [
     kapsam: 'kurum',
     yapayZekaOzeti: true,
     fotoKullan: true,
-    aktif: true,
+    aktif: false, // site haber listesini tarayıcıda sonradan yüklüyor; sunucudan okunamıyor
   },
   {
     id: 'erdemli-belediyesi',
