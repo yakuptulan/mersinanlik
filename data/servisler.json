@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-16T14:56:10.523Z",
+ "guncelleme": "2026-11-16T15:02:14.100Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -505,7 +505,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-16T14:56:14.620Z",
+  "guncelleme": "2026-11-16T15:02:17.809Z",
   "liste": [
    {
     "ad": "Abay Eczanesi",
@@ -774,7 +774,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-16T14:56:15.759Z",
+  "guncelleme": "2026-11-16T15:02:18.829Z",
   "liste": [
    {
     "tur": "su",
@@ -796,15 +796,15 @@
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
-    "aciklama": "MUT İLÇESİ KARŞIYAKA MAHALLESİNDE MEYDANA GELEN İÇMESUYU ARIZASI KAYNAKLI SULAR KESİLMİŞ OLUP ARIZANIN GİDERİLİP SULARIN VERİLMESİ 18:00 OLARAK PLANLANMAKTADIR.",
-    "baslangic": "2026-11-16T13:30:00.000Z",
-    "bitis": "2026-11-16T15:00:00.000Z",
+    "aciklama": "Yeni MH liman içi arızadan dolayı bir kısım sular kesik 23.00 sular verilecektir",
+    "baslangic": "2026-11-16T14:59:00.000Z",
+    "bitis": "2026-11-16T20:00:00.000Z",
     "ilceler": [
      {
-      "ilce": "mut",
-      "ad": "Mut",
+      "ilce": "akdeniz",
+      "ad": "Akdeniz",
       "mahalleler": [
-       "Karşıyaka"
+       "Yeni"
       ]
      }
     ]
@@ -838,22 +838,6 @@
       "mahalleler": [
        "Bahşiş",
        "Yeşiltepe"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Silifke ilçesi Atayurt Mahallesi Ergenekon cadde ve Sanat okulu civarı Türk Telekom altyapı çalışmasından kaynaklı oluşan arızadan saat 18:00 a kadar su kesintisi yaşanacaktır.",
-    "baslangic": "2026-11-16T12:19:00.000Z",
-    "bitis": "2026-11-16T15:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "silifke",
-      "ad": "Silifke",
-      "mahalleler": [
-       "Atayurt"
       ]
      }
     ]
