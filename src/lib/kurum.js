@@ -41,7 +41,7 @@ export function govdeCoz(html) {
   const temiz = html.replace(/<(script|style|nav|header|footer|aside|form|noscript)\b[\s\S]*?<\/\1>/gi, ' ');
   const paragraflar = [...temiz.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)]
     .map((m) => duzMetin(m[1]).replace(/\s+/g, ' ').trim())
-    .filter((t) => t.length >= 60 && !/çerez|cookie|kvkk|kişisel veri|tüm hakları|copyright|©/i.test(t));
+    .filter((t) => t.length >= 60 && !/çerez|cookie|kvkk|kişisel veri|tüm hakları|copyright|©|editörlerinin hiçbir müdahalesi|tarafından geçilen tüm/i.test(t));
   return [...new Set(paragraflar)].join('\n').slice(0, 5000);
 }
 

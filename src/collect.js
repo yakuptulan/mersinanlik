@@ -23,7 +23,7 @@ function kurumKaynagi(h) {
   }
   return null;
 }
-import { geminiHazirMi, topluOzetle } from './lib/gemini.js';
+import { geminiHazirMi, topluOzetle, jsonYaz } from './lib/gemini.js';
 import { telegramHazirMi, onayIste, kararlariOku } from './lib/telegram.js';
 
 const DURUM_DOSYASI = path.resolve('data/durum.json');
@@ -34,6 +34,37 @@ function durumYukle() {
   } catch {
     return { telegramOffset: 0, kaynakHatalari: {} };
   }
+}
+
+async function benzerleriBirlestir(veri, yeniIdler) {
+  const simdi = Date.now();
+  const aday = veri.hikayeler
+    .filter((h) => !h.genel && h.durum !== 'reddedildi' && simdi - new Date(h.ilkGorulme).getTime() < 36 * 36e5)
+    .sort((a, b) => new Date(b.ilkGorulme) - new Date(a.ilkGorulme))
+    .slice(0, 90);
+  if (aday.length < 2 || !aday.some((h) => yeniIdler.has(h.id))) return 0;
+  const talimat = `Aşağıda numaralı yerel haber başlıkları var. AYNI OLAYI (aynı kişi/kurum, aynı yer, aynı gelişme) anlatan başlıkları grupla.
+Sadece kesinlikle aynı olay olanları grupla. Aynı konudaki farklı olaylar (iki ayrı kaza, iki ayrı operasyon, aynı belediyenin iki ayrı hizmeti) ayrı kalsın. Emin değilsen gruplama.
+Yalnızca JSON döndür: {"gruplar": [[1, 4], [2, 7, 9]]}. Aynı olay yoksa {"gruplar": []}.`;
+  const j = await jsonYaz(talimat, aday.map((h, i) => `${i + 1}. ${h.baslik}`).join('\n'), { sicaklik: 0 });
+  let birlesen = 0;
+  for (const grup of j?.gruplar || []) {
+    const uyeler = [...new Set(grup)].map((n) => aday[Number(n) - 1]).filter((h) => h && veri.hikayeler.includes(h));
+    if (uyeler.length < 2 || uyeler.length > 6 || !uyeler.some((h) => yeniIdler.has(h.id))) continue;
+    // Ana haber: kendi yazımız olan, yoksa ilk görülen
+    uyeler.sort((a, b) => Boolean(b.metin) - Boolean(a.metin) || new Date(a.ilkGorulme) - new Date(b.ilkGorulme));
+    const [ana, ...digerleri] = uyeler;
+    for (const d of digerleri) {
+      for (const k of d.kaynaklar) if (!ana.kaynaklar.some((x) => x.link === k.link)) ana.kaynaklar.push(k);
+      ana.ilceler = [...new Set([...ana.ilceler, ...d.ilceler])];
+      if (!ana.gorsel && d.gorsel) Object.assign(ana, { gorsel: d.gorsel, gorselKaynak: d.gorselKaynak });
+      ana.riskNedenleri = [...new Set([...ana.riskNedenleri, ...d.riskNedenleri])];
+      veri.hikayeler.splice(veri.hikayeler.indexOf(d), 1);
+      birlesen++;
+    }
+    ana.sonGuncelleme = new Date().toISOString();
+  }
+  return birlesen;
 }
 
 async function dene(id) {
@@ -63,9 +94,16 @@ async function main() {
     });
   }
   veri.hikayeler = veri.hikayeler.filter((h) => h.kaynaklar.length);
+  // Başlığa haberin spotu da yapışmışsa kes ("... buldu Hakkında ...")
+  for (const h of veri.hikayeler) {
+    if (h.baslik.length <= 110) continue;
+    const m = h.baslik.slice(40).search(/[a-zçğıöşü0-9] [A-ZÇĞİÖŞÜ][a-zçğıöşü]/);
+    if (m > -1) h.baslik = h.baslik.slice(0, 40 + m + 1);
+  }
   const durum = durumYukle();
   const yeniRiskliler = [];
   let yeniSayi = 0;
+  const yeniIdler = new Set();
 
   // 1) Kaynakları oku
   const kayitliLinkler = new Set(veri.hikayeler.flatMap((h) => h.kaynaklar.map((k) => k.link)));
@@ -84,6 +122,7 @@ async function main() {
         if (haber.genel && haber.tarih && Date.now() - new Date(haber.tarih).getTime() > 24 * 36e5) continue;
         const { yeni, hikaye } = hikayeyeEkle(veri, haber, kaynak);
         if (yeni) yeniSayi++;
+        if (yeni && hikaye) yeniIdler.add(hikaye.id);
         // Kurum fotoğrafı: yapay zekâ görselinden ve temsili fotoğraftan önce gelir
         if (kaynak.fotoKullan && ham.foto && hikaye && (!hikaye.gorsel || hikaye.gorselKaynak === 'yz')) {
           fotoKuyrugu.push({ hikaye, url: ham.foto, ad: kaynak.ad });
@@ -93,6 +132,16 @@ async function main() {
     } catch (e) {
       durum.kaynakHatalari[kaynak.id] = { hata: String(e.message || e), zaman: new Date().toISOString() };
       console.warn(`! ${kaynak.ad}: ${e.message}`);
+    }
+  }
+
+  // Aynı olayı farklı başlıklarla yazan haberleri tek haberde birleştir (yapay zekâ ile, sadece yeni haber varsa)
+  if (geminiHazirMi() && yeniIdler.size) {
+    try {
+      const n = await benzerleriBirlestir(veri, yeniIdler);
+      if (n) console.log(`🔗 Aynı olay olduğu için birleştirilen haber: ${n}`);
+    } catch (e) {
+      console.warn(`! Birleştirme: ${e.message.slice(0, 160)}`);
     }
   }
 
