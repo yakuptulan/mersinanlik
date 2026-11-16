@@ -1,0 +1,20 @@
+name: Kaynak dene
+on:
+  workflow_dispatch:
+    inputs:
+      adresler:
+        description: 'Boşlukla ayrılmış adresler (boşsa varsayılan liste)'
+        required: false
+        default: ''
+permissions:
+  contents: read
+jobs:
+  dene:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/kaynak-dene.js ${{ inputs.adresler }}
