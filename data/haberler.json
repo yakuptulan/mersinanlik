@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-16T14:00:23.416Z",
+ "guncelleme": "2026-11-16T14:11:18.933Z",
  "hikayeler": [
   {
    "id": "2r80dh",
@@ -38,7 +38,8 @@
      "baslik": "Toroslar’da özel bireylere özel hizmet",
      "tarih": "2026-11-16T13:01:00.000Z"
     }
-   ]
+   ],
+   "gorselHatasi": "Gemini görsel HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check yo"
   },
   {
    "id": "1codpsk",
@@ -545,7 +546,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2020-11-26T14:53:50.000Z",
-   "sonGuncelleme": "2026-11-16T14:00:18.508Z",
+   "sonGuncelleme": "2026-11-16T14:11:14.147Z",
    "kaynaklar": [
     {
      "kaynakId": "mersinportal",
@@ -568,7 +569,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2020-11-26T14:53:14.000Z",
-   "sonGuncelleme": "2026-11-16T14:00:18.516Z",
+   "sonGuncelleme": "2026-11-16T14:11:14.154Z",
    "kaynaklar": [
     {
      "kaynakId": "mersinportal",
@@ -1104,29 +1105,6 @@
      "link": "https://www.mersinobjektif.com.tr/mersinde-arac-sayisi-1-milyona-yaklasti",
      "baslik": "MERSİN’DE ARAÇ SAYISI 1 MİLYONA YAKLAŞTI!",
      "tarih": "2026-11-16T10:57:00.000Z"
-    }
-   ]
-  },
-  {
-   "id": "6ayrh6",
-   "baslik": "Özel, “Fon soruşturmasında liste bu haftadan itibaren açıklanabilir”",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "gundem",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-15T14:05:00.000Z",
-   "sonGuncelleme": "2026-11-16T12:50:13.121Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "mersinobjektif",
-     "ad": "Mersin Objektif",
-     "link": "https://www.mersinobjektif.com.tr/ozel-fon-sorusturmasinda-liste-bu-haftadan-itibaren-aciklanabilir",
-     "baslik": "Özel, “Fon soruşturmasında liste bu haftadan itibaren açıklanabilir”",
-     "tarih": "2026-11-15T14:05:00.000Z"
     }
    ]
   },
@@ -3706,7 +3684,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-16T12:58:17.000Z",
-   "sonGuncelleme": "2026-11-16T14:00:22.281Z",
+   "sonGuncelleme": "2026-11-16T14:11:17.203Z",
    "kaynaklar": [
     {
      "kaynakId": "aa-guncel",
@@ -3760,6 +3738,52 @@
      "link": "https://www.aa.com.tr/tr/dunya/ingiltere-disisleri-bakani-miliband-brexit-anlasmasinin-ekonomiye-zarar-verdigini-belirtti/4126792",
      "baslik": "İngiltere Dışişleri Bakanı Miliband, Brexit anlaşmasının ekonomiye zarar verdiğini belirtti",
      "tarih": "2026-11-16T13:49:43.000Z"
+    }
+   ]
+  },
+  {
+   "id": "11fqoib",
+   "baslik": "Kerem Kazaz, Türkiye'de üst üste 3 kez şampiyon olan en genç ralli pilotu oldu",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "spor",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-16T14:04:00.000Z",
+   "sonGuncelleme": "2026-11-16T14:11:15.634Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "mersinhabermerkezi",
+     "ad": "Mersin Haber Merkezi",
+     "link": "https://www.mersinhabermerkezi.com/kerem-kazaz-turkiyede-ust-uste-3-kez-sampiyon-olan-en-genc-ralli-pilotu-oldu",
+     "baslik": "Kerem Kazaz, Türkiye'de üst üste 3 kez şampiyon olan en genç ralli pilotu oldu",
+     "tarih": "2026-11-16T14:04:00.000Z"
+    }
+   ]
+  },
+  {
+   "id": "zym2h3",
+   "baslik": "Sanayide düşük karbonlu projeleri destekleyecek ITA Türkiye Proje Hızlandırma Programı başlatıldı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-16T14:03:00.000Z",
+   "sonGuncelleme": "2026-11-16T14:11:17.201Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/dunya/sanayide-dusuk-karbonlu-projeleri-destekleyecek-ita-turkiye-proje-hizlandirma-programi-baslatildi/4126821",
+     "baslik": "Sanayide düşük karbonlu projeleri destekleyecek ITA Türkiye Proje Hızlandırma Programı başlatıldı",
+     "tarih": "2026-11-16T14:03:00.000Z"
     }
    ]
   }
