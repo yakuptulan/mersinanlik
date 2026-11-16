@@ -503,3 +503,29 @@ a.cip.kat:hover { filter: brightness(.95); }
 .paylas a, .paylas button { font: inherit; font-size: 15px; font-weight: 700; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--cizgi); background: #fff; color: var(--metin); text-decoration: none; cursor: pointer; }
 .paylas a:hover, .paylas button:hover { border-color: var(--mavi); }
 .paylas .paylas-wa { background: #25D366; border-color: #25D366; color: #fff; }
+
+/* ---------- Meteorolojik uyarı bandı ---------- */
+.meteo-bandi { display: flex; align-items: center; gap: 14px; margin: 0 0 14px; padding: 12px 16px; border-radius: 18px; text-decoration: none; color: #0a1530; }
+.meteo-bandi.yellow { background: #fde68a; }
+.meteo-bandi.orange { background: #fdba74; }
+.meteo-bandi.red { background: #fca5a5; }
+.meteo-bandi:hover { color: #0a1530; filter: brightness(1.03); }
+.meteo-rozet { flex: none; font-weight: 800; background: rgba(10,21,48,.88); color: #fff; padding: 6px 12px; border-radius: 999px; font-size: 14px; }
+.meteo-metin { flex: 1; min-width: 0; font-size: 15px; line-height: 1.4; }
+.meteo-metin b { font-size: 16px; }
+.meteo-kaynak { flex: none; font-weight: 700; font-size: 14px; }
+@media (max-width: 640px) { .meteo-bandi { flex-wrap: wrap; } .meteo-kaynak { display: none; } }
+
+/* ---------- Burçlar ---------- */
+.burc-izgara { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.burc-izgara a { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 4px; border-radius: 14px; background: #f6f8fc; color: var(--metin); text-decoration: none; font-size: 13px; font-weight: 700; }
+.burc-izgara a span { font-size: 22px; color: #8E4EC6; line-height: 1.1; }
+.burc-izgara a:hover { background: #f1eaff; }
+.burc-liste { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.burc { display: flex; gap: 14px; background: #fff; border: 1px solid var(--cizgi); border-radius: var(--r); padding: 18px; scroll-margin-top: 20px; }
+.burc-isaret { flex: none; width: 56px; height: 56px; border-radius: 16px; background: #f1eaff; color: #8E4EC6; display: flex; align-items: center; justify-content: center; font-size: 30px; }
+.burc h2 { margin: 0; font-size: 21px; }
+.burc small { color: var(--ikincil); font-size: 14px; }
+.burc p { margin: 8px 0 0; font-size: 17px; line-height: 1.6; color: var(--govde); }
+.burc:target { border-color: #8E4EC6; box-shadow: 0 0 0 3px #f1eaff; }
+@media (max-width: 640px) { .burc-liste { grid-template-columns: 1fr; } }

@@ -80,3 +80,15 @@ test('etkinlik: liste ve tarih/yer okuma', () => {
   assert.equal(ayrintiCoz('3 Ocak konseri', simdi).tarih, '2027-01-03');
   assert.equal(ayrintiCoz('Etkinlik detayları', simdi).tarih, null);
 });
+
+import { uyariCoz } from '../src/lib/meteo.js';
+test('meteoroloji: sadece Mersin ilçeleri', () => {
+  const u = uyariCoz([
+    { alertNo: 1, text: { yellow: 'Osmaniye çevrelerinde kuvvetli yağış' }, weather: { yellow: ['thunderstorm'] }, towns: { yellow: [93102, 98001] } },
+    { alertNo: 2, text: { orange: 'Mersin\'in doğusunda çok kuvvetli yağış' }, weather: { orange: ['rain'], yellow: [] }, towns: { orange: [93306, 93313], yellow: [93301] } },
+  ], 'bugun');
+  assert.equal(u.length, 1);
+  assert.equal(u[0].renk, 'orange');
+  assert.deepEqual(u[0].ilceler, ['tarsus', 'yenisehir']);
+  assert.deepEqual(u[0].hadiseler, ['Kuvvetli yağış']);
+});

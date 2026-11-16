@@ -18,6 +18,8 @@ import { namazGetir } from './lib/namaz.js';
 import { akaryakitGetir } from './lib/akaryakit.js';
 import { sporGetir } from './lib/spor.js';
 import { etkinlikGetir } from './lib/etkinlik.js';
+import { meteoGetir } from './lib/meteo.js';
+import { burcYaz } from './lib/burc.js';
 
 const DOSYA = path.resolve('data/servisler.json');
 const UA = 'mersinanlik.com iletisim@mersinanlik.com';
@@ -148,6 +150,23 @@ async function main() {
     console.log(`Akaryakıt: ${Object.keys(yeni.akaryakit.ilceler).length} ilçe`);
   } catch (e) {
     console.warn('! Akaryakıt:', e.message);
+  }
+  // Meteorolojik uyarılar (MGM)
+  try {
+    yeni.meteo = await meteoGetir(UA);
+    if (yeni.meteo.uyarilar.length) console.log(`⚠️  Meteoroloji uyarısı: ${yeni.meteo.uyarilar.length}`);
+  } catch (e) {
+    console.warn('! Meteoroloji:', e.message);
+  }
+  // Günlük burç yorumları (günde bir)
+  if (eski.burc?.tarih !== bugun) {
+    try {
+      const tarihMetni = new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric', weekday: 'long', timeZone: 'Europe/Istanbul' });
+      yeni.burc = { tarih: bugun, yorumlar: await burcYaz(tarihMetni) };
+      console.log('Burç yorumları yazıldı');
+    } catch (e) {
+      console.warn('! Burç:', e.message.slice(0, 200));
+    }
   }
   // Etkinlikler (Mersin Büyükşehir): 3 saatte bir
   if (!eski.etkinlik || Date.now() - new Date(eski.etkinlik.guncelleme).getTime() > 170 * 60e3) {

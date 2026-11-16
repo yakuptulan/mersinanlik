@@ -46,8 +46,10 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
-      - name: Hava durumu ve depremler
+      - name: Servisler (hava, deprem, eczane, piyasa, spor, etkinlik, burç)
         run: node src/services.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Temsili fotoğrafları indir (sadece eksik olanlar)
         run: node scripts/foto-indir.js

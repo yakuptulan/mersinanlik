@@ -7,7 +7,8 @@ import { KATEGORILER, GENEL, GUNDEM } from '../config.js';
 import { telefonGoster } from '../lib/eczane.js';
 import { havaIkonu, havaTuru } from './havaIkon.js';
 import { FOTOLAR } from '../fotolar.js';
-import { piyasaSeridi, namazKutusu, akaryakitKutusu, fmt, yon, ONDALIK, bugunVakit, sporKutusu, puanTablosu, macListesi, etkinlikKarti } from './servisParcalari.js';
+import { piyasaSeridi, namazKutusu, akaryakitKutusu, fmt, yon, ONDALIK, bugunVakit, sporKutusu, puanTablosu, macListesi, etkinlikKarti, meteoBandi, burcKutusu } from './servisParcalari.js';
+import { BURCLAR } from '../lib/burc.js';
 import { guncelEtkinlikler } from '../lib/etkinlik.js';
 import { DIYANET_ILCE, VAKITLER } from '../lib/namaz.js';
 
@@ -160,6 +161,7 @@ ${su.slice(0, 4).map((k) => `<a class="yan-satir" href="/kesintiler/">
 ${namazKutusu(servis, ilce)}
 ${sporKutusu(servis)}
 ${akaryakitKutusu(servis, ilce)}
+${burcKutusu(servis)}
 <section class="kutu">
 <div class="kutu-bas"><h2>Son depremler</h2><a href="/deprem/">Tümü</a></div>
 <div class="yan-liste">
@@ -215,7 +217,7 @@ export function anaSayfa({ hikayeler, servis, simdi }) {
   const liste = mersin.filter((x) => x !== manset).slice(0, 8);
   const gundem = gundemdekilerSec(hikayeler, simdi, new Set([manset]));
   const gosterilen = new Set([manset, ...liste]);
-  const ust = `${sonDakikaBandi(sonDakikaSec(hikayeler.filter((x) => x !== manset), simdi))}
+  const ust = `${meteoBandi(servis)}${sonDakikaBandi(sonDakikaSec(hikayeler.filter((x) => x !== manset), simdi))}
 <div class="su-an-bas">
 <div><p>${tarihUzun(new Date(simdi).toISOString())} · <span class="canli-saat" data-canli-saat>${saat(new Date(simdi).toISOString())}</span></p><h1>Mersin'de şu an</h1></div>
 <div class="ilce-secici" data-ilce-secici>
@@ -269,7 +271,7 @@ ${ilceDugmeleri()}
 export function ilceSayfasi({ ilce, hikayeler, servis, simdi }) {
   const liste = hikayeler.filter((x) => x.ilceler.includes(ilce.slug)).slice(0, AYAR.ilceHaberSayisi);
   const hava = servis?.hava?.[ilce.slug];
-  const ust = `<div class="su-an-bas">
+  const ust = `${meteoBandi(servis, ilce.slug)}<div class="su-an-bas">
 <div><p>${tarihUzun(new Date(simdi).toISOString())} · <span class="canli-saat" data-canli-saat>${saat(new Date(simdi).toISOString())}</span></p><h1>${h(ilce.ad)} haberleri</h1></div>
 <button class="ilce-sec" type="button" data-ilcem-yap="${ilce.slug}" style="border:none;font:inherit;cursor:pointer">${ikon.konum(20)}<span>Benim ilçem yap</span><span class="daire">${ikon.ok(18)}</span></button>
 </div>
@@ -371,6 +373,22 @@ export function kategoriSayfasi({ kategori, hikayeler, servis }) {
     ust: `<div class="su-an-bas"><div><h1>${h(kategori.ad)}</h1><p style="margin-top:8px">Son ${AYAR.saklamaGun} gün · ${liste.length} haber</p></div></div>
 <nav class="kat-menu" aria-label="Kategoriler">${diger.map((k) => `<a href="/kategori/${k.slug}/" style="--kat:${k.renk}">${h(k.ad)}</a>`).join('')}</nav>`,
     icerik: `<main class="kap govde"><div class="ana">${haberListesi(liste, 'Bu kategoride son günlerde haber yok.')}</div>${yanKutular(servis)}</main>`,
+  });
+}
+
+// ---------- Burçlar ----------
+export function burcSayfasi({ servis }) {
+  const b = servis?.burc;
+  const tarih = b?.tarih ? new Date(`${b.tarih}T12:00:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric', weekday: 'long' }) : '';
+  return sayfa({
+    baslik: `Günlük burç yorumları${tarih ? ` – ${tarih}` : ''}`,
+    aciklama: 'Koç, Boğa, İkizler, Yengeç, Aslan, Başak, Terazi, Akrep, Yay, Oğlak, Kova ve Balık burçları için bugünün yorumları.',
+    yol: '/burclar/',
+    ust: `<div class="su-an-bas"><div><h1>Günlük burç yorumları</h1><p style="margin-top:8px">${h(tarih)}</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">
+${b?.yorumlar ? `<div class="burc-liste">${BURCLAR.map(([slug, ad, aralik, isaret]) => b.yorumlar[slug] ? `<article class="burc" id="${slug}"><span class="burc-isaret">${isaret}</span><div><h2>${h(ad)}</h2><small>${h(aralik)}</small><p>${h(b.yorumlar[slug])}</p></div></article>` : '').join('')}</div>` : '<div class="bos">Bugünün yorumları hazırlanıyor.</div>'}
+<p style="color:var(--ikincil);font-size:15px">Burç yorumları eğlence amaçlıdır ve yapay zekâ desteğiyle hazırlanır; bilimsel bir dayanağı yoktur. Önemli kararlarınızı burç yorumlarına göre vermeyin.</p>
+</div>${yanKutular(servis)}</main>`,
   });
 }
 
@@ -520,7 +538,7 @@ export function havaSayfasi({ servis }) {
     baslik: 'Mersin hava durumu – 13 ilçe',
     aciklama: "Mersin'in 13 ilçesi için güncel hava durumu ve 3 günlük tahmin.",
     yol: '/hava-durumu/',
-    ust: `<div class="su-an-bas"><div><h1>Hava durumu</h1></div></div>`,
+    ust: `${meteoBandi(servis)}<div class="su-an-bas"><div><h1>Hava durumu</h1></div></div>`,
     icerik: `<main class="kap govde"><div class="ana"><div class="tablo-kap"><table class="tablo"><thead><tr><th>İlçe</th><th>Şu an</th>${gunAdlari.map((g) => `<th>${g}</th>`).join('')}</tr></thead><tbody>${satirlar}</tbody></table></div>
 <p style="color:var(--ikincil);font-size:15px">Veri: <a href="${RESMI.metno}" rel="noopener" target="_blank">MET Norway (yr.no)</a>, CC BY 4.0. Son güncelleme: ${servis?.guncelleme ? saat(servis.guncelleme) : '–'}</p></div></main>`,
   });
@@ -614,7 +632,7 @@ ${servis?.suKesintisi ? guncellemeNotu(servis.suKesintisi, 'MESKİ', RESMI.meski
 export function menuSayfasi() {
   const linkler = [
     ['/', 'Ana sayfa'], ['/ilceler/', 'İlçeler'], ['/nobetci-eczane/', 'Nöbetçi eczane'], ['/kesintiler/', 'Kesintiler'],
-    ['/hava-durumu/', 'Hava durumu'], ['/deprem/', 'Son depremler'], ['/piyasalar/', 'Altın ve döviz'], ['/spor/', 'Spor'], ['/etkinlikler/', 'Etkinlikler'], ['/rehber/', 'Mersin rehberi'], ['/rehber/acil-telefonlar/', 'Acil telefonlar'], ['/namaz-vakitleri/', 'Namaz vakitleri'],
+    ['/hava-durumu/', 'Hava durumu'], ['/deprem/', 'Son depremler'], ['/piyasalar/', 'Altın ve döviz'], ['/spor/', 'Spor'], ['/etkinlikler/', 'Etkinlikler'], ['/rehber/', 'Mersin rehberi'], ['/burclar/', 'Burçlar'], ['/rehber/acil-telefonlar/', 'Acil telefonlar'], ['/namaz-vakitleri/', 'Namaz vakitleri'],
     ['/akaryakit-fiyatlari/', 'Akaryakıt fiyatları'], ['/ara/', 'Haber ara'], ['/kunye/', 'Künye'],
     ['/iletisim/', 'İletişim'], ['/kaynaklarimiz/', 'Kaynaklarımız'], ['/gizlilik/', 'Gizlilik'],
   ];

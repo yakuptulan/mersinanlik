@@ -3,7 +3,8 @@ import { htmlKacis as h } from '../lib/text.js';
 import { KALEMLER } from '../lib/piyasa.js';
 import { DIYANET_ILCE, VAKITLER } from '../lib/namaz.js';
 import { ikon } from './ikonlar.js';
-import { SITE } from '../config.js';
+import { SITE, ILCELER } from '../config.js';
+import { BURCLAR } from '../lib/burc.js';
 
 // Gösterimde ondalık sayısı
 export const ONDALIK = { gram: 2, ceyrek: 0, gumus: 2, usd: 2, eur: 2, btc: 0, bist: 0 };
@@ -120,4 +121,28 @@ export function etkinlikKarti(e) {
 <span class="etkinlik-gorsel">${e.foto ? `<img src="/etkinlik/${h(e.foto)}" alt="" loading="lazy" width="600" height="600">` : ''}${e.tarih ? `<span class="etkinlik-tarih"><b>${Number(g)}</b>${AY_KISA[Number(a) - 1]}</span>` : ''}</span>
 <span class="etkinlik-ic"><b>${h(e.baslik)}</b><small>${[e.tarih ? new Date(`${e.tarih}T12:00:00`).toLocaleDateString('tr-TR', { weekday: 'long' }) : null, e.saat, e.yer].filter(Boolean).map(h).join(' · ') || 'Ayrıntılar duyuruda'}</small></span>
 </a>`;
+}
+
+// ---------- Meteorolojik uyarı bandı ----------
+const RENK_AD = { yellow: 'Sarı kod', orange: 'Turuncu kod', red: 'Kırmızı kod' };
+export function meteoBandi(servis, ilceSlug = null) {
+  const liste = (servis?.meteo?.uyarilar || []).filter((u) => !ilceSlug || u.ilceler.includes(ilceSlug));
+  if (!liste.length) return '';
+  const sira = { red: 0, orange: 1, yellow: 2 };
+  const u = [...liste].sort((a, b) => sira[a.renk] - sira[b.renk] || (a.gun === 'bugun' ? -1 : 1))[0];
+  const adlar = u.ilceler.map((s) => ILCELER.find((i) => i.slug === s)?.ad).filter(Boolean);
+  const yer = adlar.length >= 10 ? 'Mersin geneli' : adlar.join(', ');
+  return `<a class="meteo-bandi ${u.renk}" href="https://www.mgm.gov.tr/meteouyari/turkiye.aspx${u.gun === 'yarin' ? '?Gun=2' : ''}" rel="noopener" target="_blank">
+<span class="meteo-rozet">⚠ ${RENK_AD[u.renk]}</span>
+<span class="meteo-metin"><b>${u.gun === 'bugun' ? 'Bugün' : 'Yarın'} · ${h(u.hadiseler.join(', ') || 'Meteorolojik uyarı')}</b> <span>${h(yer)}${u.metin ? ` — ${h(u.metin.slice(0, 160))}${u.metin.length > 160 ? '…' : ''}` : ''}</span></span>
+<span class="meteo-kaynak">MGM →</span></a>`;
+}
+
+// ---------- Burçlar ----------
+export function burcKutusu(servis) {
+  if (!servis?.burc?.yorumlar) return '';
+  return `<section class="kutu">
+<div class="kutu-bas"><h2>Günlük burçlar</h2><a href="/burclar/">Tümü</a></div>
+<div class="burc-izgara">${BURCLAR.map(([slug, ad, , isaret]) => `<a href="/burclar/#${slug}"><span>${isaret}</span>${h(ad)}</a>`).join('')}</div>
+</section>`;
 }

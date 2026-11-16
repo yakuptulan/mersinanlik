@@ -61,6 +61,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
   ekle('/piyasalar/', S.piyasaSayfasi({ servis }));
   ekle('/spor/', S.sporSayfasi({ servis, hikayeler }));
   ekle('/etkinlikler/', S.etkinlikSayfasi({ servis, simdi }));
+  ekle('/burclar/', S.burcSayfasi({ servis }));
   ekle('/rehber/', R.rehberSayfasi({ servis }));
   ekle('/rehber/gezilecek-yerler/', R.gezilecekSayfasi({ servis }));
   ekle('/rehber/acil-telefonlar/', R.acilSayfasi({ servis }));
