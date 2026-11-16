@@ -19,13 +19,44 @@ Kurallar:
 - Kişilerin tam adını yazma; gerekirse görevini yaz (ör. "Büyükşehir Belediye Başkanı").
 - Yalnızca JSON döndür: [{"no": 1, "ozet": "...", "metin": "..."}, ...]`;
 
+const cfHazir = () => Boolean(process.env.CLOUDFLARE_ACCOUNT_ID && process.env.CLOUDFLARE_API_TOKEN);
+
 export function geminiHazirMi() {
-  return Boolean(process.env.GEMINI_API_KEY);
+  return Boolean(process.env.GEMINI_API_KEY) || cfHazir();
+}
+
+// Yanıttaki JSON dizisini çıkar (model bazen ```json ... ``` ile sarar)
+function jsonDizisi(yazi) {
+  const t = String(yazi || '').replace(/^```(?:json)?\s*|\s*```$/g, '').trim();
+  const bas = t.indexOf('[');
+  const son = t.lastIndexOf(']');
+  return JSON.parse(bas >= 0 && son > bas ? t.slice(bas, son + 1) : t);
+}
+
+// Yedek: Cloudflare Workers AI (ücretsiz günlük kota)
+async function cfYaz(icerik) {
+  const res = await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/ai/run/@cf/google/gemma-3-12b-it`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${process.env.CLOUDFLARE_API_TOKEN}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ messages: [{ role: 'system', content: TALIMAT }, { role: 'user', content: icerik }], max_tokens: 3500, temperature: 0.2 }),
+    signal: AbortSignal.timeout(120000),
+  });
+  if (!res.ok) throw new Error(`Cloudflare AI HTTP ${res.status}: ${(await res.text()).slice(0, 200)}`);
+  const r = (await res.json()).result?.response;
+  return typeof r === 'string' ? jsonDizisi(r) : r;
+}
+
+function sonucCoz(metinler, sonuc) {
+  return metinler.map((_, i) => {
+    const s = (sonuc || []).find((x) => Number(x.no) === i + 1);
+    return s?.ozet ? { ozet: String(s.ozet).trim(), metin: String(s.metin || '').trim() || null } : null;
+  });
 }
 
 export async function topluOzetle(metinler) {
   if (!geminiHazirMi() || metinler.length === 0) return [];
   const icerik = metinler.map((m, i) => `${i + 1}) ${m.slice(0, 4000)}`).join('\n\n');
+  if (!process.env.GEMINI_API_KEY) return sonucCoz(metinler, await cfYaz(icerik));
   let res;
   let sonHata = '';
   for (const model of [...new Set(YEDEK_MODELLER)]) {
@@ -46,12 +77,11 @@ export async function topluOzetle(metinler) {
     }
     if (res.ok) break;
   }
-  if (!res.ok) throw new Error(`Gemini ${sonHata}`);
+  if (!res.ok) {
+    if (!cfHazir()) throw new Error(`Gemini ${sonHata}`);
+    console.warn(`! Gemini yoğun (${sonHata.slice(0, 60)}…), Cloudflare ile yazılıyor`);
+    return sonucCoz(metinler, await cfYaz(icerik));
+  }
   const json = await res.json();
-  const yazi = json?.candidates?.[0]?.content?.parts?.[0]?.text || '[]';
-  const sonuc = JSON.parse(yazi);
-  return metinler.map((_, i) => {
-    const s = sonuc.find((x) => Number(x.no) === i + 1);
-    return s?.ozet ? { ozet: s.ozet.trim(), metin: (s.metin || '').trim() || null } : null;
-  });
+  return sonucCoz(metinler, jsonDizisi(json?.candidates?.[0]?.content?.parts?.[0]?.text || '[]'));
 }
