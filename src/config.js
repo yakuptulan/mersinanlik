@@ -73,7 +73,7 @@ export const AYAR = {
   ilceHaberSayisi: 40,
   birlestirmeEsigi: 0.5, // iki başlığın kelime benzerliği bu orandan yüksekse aynı haber sayılır
   birlestirmeSaat: 48,
-  // Yapay zekâ görseli: günde en fazla bu kadar (maliyet kontrolü; ~0,04 $/görsel)
-  gunlukGorselLimiti: 15,
-  calismaBasinaGorsel: 3,
+  // Yapay zekâ görseli: Cloudflare'in günlük ücretsiz kotası ~150 görsel; güvenli pay bırakıyoruz
+  gunlukGorselLimiti: 80,
+  calismaBasinaGorsel: 6,
 };

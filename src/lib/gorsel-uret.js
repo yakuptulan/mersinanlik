@@ -1,4 +1,5 @@
-// Habere özel temsili görseli yapay zekâ ile üretir (Gemini görsel modeli).
+// Habere özel temsili görseli yapay zekâ ile üretir.
+// Öncelik: Cloudflare Workers AI (FLUX.1 schnell, günlük ücretsiz kota), yoksa Gemini.
 // Görseller public/uretilen/<haber-id>.webp olarak saklanır ve sitede
 // "Temsili · Yapay zekâ" etiketiyle gösterilir. Haber silinince görseli de silinir.
 //
@@ -28,8 +29,46 @@ Rules (must follow):
 const ANAHTARLAR = [process.env.GEMINI_API_KEY, process.env.GEMINI_API_KEY_2].filter(Boolean);
 let sira = 0;
 
+const CF_HESAP = process.env.CLOUDFLARE_ACCOUNT_ID;
+const CF_ANAHTAR = process.env.CLOUDFLARE_API_TOKEN;
+const CF_HAZIR = Boolean(CF_HESAP && CF_ANAHTAR) && process.env.GORSEL_SAGLAYICI !== 'gemini';
+
 export function gorselUretimHazirMi() {
-  return ANAHTARLAR.length > 0;
+  return CF_HAZIR || ANAHTARLAR.length > 0;
+}
+
+// ---- Cloudflare Workers AI ----
+async function cfCalistir(model, girdi) {
+  const res = await fetch(`https://api.cloudflare.com/client/v4/accounts/${CF_HESAP}/ai/run/${model}`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${CF_ANAHTAR}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify(girdi),
+    signal: AbortSignal.timeout(90000),
+  });
+  if (!res.ok) throw new Error(`Cloudflare AI HTTP ${res.status}: ${(await res.text()).slice(0, 200)}`);
+  return (await res.json()).result;
+}
+
+const SAHNE_TALIMATI = `You write prompts for an image generator for a Turkish local news website in Mersin, Turkey.
+Given a Turkish news headline, describe ONE calm, realistic photo scene (max 45 words, English) that illustrates the TOPIC.
+Rules: no real or identifiable people (people only small, from behind or far away); no text, signs, logos or flags; no blood, weapons, violence, injured people or bodies — for accidents/crime use symbolic scenes (emergency lights at a distance, an empty street with police tape, an ambulance parked); no children in negative contexts; nothing political (no party symbols, rallies).
+Mention Mediterranean Mersin details when fitting (palm trees, sea promenade, Taurus mountains, citrus orchards).
+Reply with the scene description only.`;
+
+async function cfUret(hikaye) {
+  const metin = await cfCalistir('@cf/meta/llama-3.1-8b-instruct-fast', {
+    messages: [
+      { role: 'system', content: SAHNE_TALIMATI },
+      { role: 'user', content: `Headline: "${hikaye.baslik}"\nCategory: ${hikaye.kategori}\nPlace: ${ilceMetni(hikaye)}` },
+    ],
+    max_tokens: 120,
+    temperature: 0.4,
+  });
+  const sahne = String(metin?.response || hikaye.baslik).replace(/^["']|["']$/g, '').trim();
+  const prompt = `${sahne}. Realistic editorial news photograph, natural daylight, wide shot, sharp focus, no text, no letters, no watermark.`;
+  const sonuc = await cfCalistir('@cf/black-forest-labs/flux-1-schnell', { prompt, steps: 6 });
+  if (!sonuc?.image) throw new Error('Görsel dönmedi');
+  return { veri: Buffer.from(sonuc.image, 'base64'), prompt };
 }
 
 function ilceMetni(hikaye) {
@@ -38,6 +77,10 @@ function ilceMetni(hikaye) {
 }
 
 export async function gorselUret(hikaye) {
+  if (CF_HAZIR) {
+    const { veri, prompt } = await cfUret(hikaye);
+    return kaydet(hikaye, veri, prompt);
+  }
   for (;;) {
     try {
       return await tekDeneme(hikaye, ANAHTARLAR[sira]);
@@ -68,12 +111,14 @@ async function tekDeneme(hikaye, anahtar) {
   const json = await res.json();
   const parca = json?.candidates?.[0]?.content?.parts?.find((p) => p.inlineData?.data);
   if (!parca) throw new Error(`Görsel dönmedi (${json?.candidates?.[0]?.finishReason || json?.promptFeedback?.blockReason || 'bilinmiyor'})`);
+  return kaydet(hikaye, Buffer.from(parca.inlineData.data, 'base64'));
+}
+
+async function kaydet(hikaye, veri, prompt = '') {
   fs.mkdirSync(URETILEN_KLASOR, { recursive: true });
   const dosya = `${hikaye.id}.webp`;
-  await sharp(Buffer.from(parca.inlineData.data, 'base64'))
-    .resize({ width: 800, height: 450, fit: 'cover' })
-    .webp({ quality: 74 })
-    .toFile(path.join(URETILEN_KLASOR, dosya));
+  await sharp(veri).resize({ width: 800, height: 450, fit: 'cover' }).webp({ quality: 74 }).toFile(path.join(URETILEN_KLASOR, dosya));
+  if (prompt) hikaye.gorselPrompt = prompt.slice(0, 400);
   return dosya;
 }
 
