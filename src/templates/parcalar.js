@@ -102,7 +102,7 @@ export function ilceCipleri(hikaye) {
   return [
     ...ilceler.slice(0, 2).map((s) => `<a class="cip" href="/ilce/${s}/">${h(ilceAdi(s))}</a>`),
     !ilceler.length && !hikaye.genel ? '<span class="cip">Mersin</span>' : '',
-    `<span class="cip kat">${h(katBilgi(hikaye).ad)}</span>`,
+    `<a class="cip kat" href="/kategori/${katBilgi(hikaye).slug === 'genel' ? 'turkiye-dunya' : katBilgi(hikaye).slug}/">${h(katBilgi(hikaye).ad)}</a>`,
     hikaye.trend ? '<span class="cip trend" title="Google\'da bugün çok aranan konu">Çok aranan</span>' : '',
   ].join('');
 }
@@ -142,6 +142,30 @@ ${hikaye.ozet ? `<p>${h(hikaye.ozet)}</p>` : ''}
 <a class="hap" href="${h(b.href)}"${b.dis}>Haberi oku<span class="daire">${ikon.ok(18)}</span></a>
 </div>
 </article>`;
+}
+
+// Izgara kartı: üstte görsel, altta başlık (ana sayfa kategori blokları)
+export function kutuKarti(hikaye) {
+  const kat = katBilgi(hikaye);
+  const b = baglanti(hikaye);
+  const yer = hikaye.ilceler.length ? ilceAdi(hikaye.ilceler[0]) : hikaye.genel ? '' : 'Mersin';
+  return `<article class="kutu-haber" style="--kat:${kat.renk}">
+${kapak(hikaye, kat, b.href, 'kapak-kutu', b.dis)}
+<div class="kutu-haber-ic">
+<span class="kutu-haber-ust">${yer ? `<b>${h(yer)}</b> · ` : ''}<span data-once="${hikaye.ilkGorulme}">${saat(hikaye.ilkGorulme)}</span></span>
+<h3><a href="${h(b.href)}"${b.dis}>${h(hikaye.baslik)}</a></h3>
+</div>
+</article>`;
+}
+
+// Gündemdekiler: son 24 saatte en çok kaynağın yazdığı haberler, numaralı
+export function gundemListesi(hikayeler) {
+  return `<ol class="gundem-liste">${hikayeler
+    .map((x, i) => {
+      const b = baglanti(x);
+      return `<li><span class="gundem-no">${i + 1}</span><span class="gundem-ic"><a href="${h(b.href)}"${b.dis}>${h(x.baslik)}</a><small>${new Set(x.kaynaklar.map((k) => k.ad)).size} kaynak · <span data-once="${x.ilkGorulme}">${saat(x.ilkGorulme)}</span></small></span></li>`;
+    })
+    .join('')}</ol>`;
 }
 
 export function haberListesi(hikayeler, bosMesaj = 'Şu an gösterilecek haber yok.') {

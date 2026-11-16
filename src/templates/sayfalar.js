@@ -2,7 +2,8 @@ import { SITE, ILCELER, AYAR } from '../config.js';
 import { htmlKacis as h, ayrilmaEki } from '../lib/text.js';
 import { sayfa, saat, tarihUzun, ilceAdi } from './layout.js';
 import { ikon } from './ikonlar.js';
-import { haberListesi, mansetKarti, reklamAlani, haberYolu, katBilgi, ilceCipleri } from './parcalar.js';
+import { haberListesi, mansetKarti, reklamAlani, haberYolu, katBilgi, ilceCipleri, kutuKarti, gundemListesi } from './parcalar.js';
+import { KATEGORILER, GENEL, GUNDEM } from '../config.js';
 import { telefonGoster } from '../lib/eczane.js';
 import { havaIkonu, havaTuru } from './havaIkon.js';
 import { FOTOLAR } from '../fotolar.js';
@@ -173,11 +174,45 @@ function ilceDugmeleri() {
   return `<div class="ilceler">${ILCELER.map((i) => `<a href="/ilce/${i.slug}/">${h(i.ad)}</a>`).join('')}</div>`;
 }
 
+// Ana sayfada blok olarak gösterilecek kategoriler (sıra önemli)
+const BLOK_SIRASI = ['spor', 'asayis', 'belediye', 'ekonomi', 'egitim', 'saglik', 'kultur', 'ulasim', 'tarim', 'siyaset'];
+
+function kategoriBloklari(mersin, haric) {
+  const bloklar = [];
+  for (const slug of BLOK_SIRASI) {
+    const kat = KATEGORILER.find((k) => k.slug === slug);
+    const tum = mersin.filter((x) => x.kategori === slug);
+    if (tum.length < 2) continue;
+    // Üstteki listede görünenleri tekrar gösterme; yetmezse tamamla
+    let secim = tum.filter((x) => !haric.has(x)).slice(0, 4);
+    if (secim.length < 2) secim = tum.slice(0, 4);
+    if (secim.length === 3) secim = secim.slice(0, 2); // ızgarada boşluk kalmasın
+    bloklar.push({ kat, secim, toplam: tum.length });
+    if (bloklar.length === 5) break;
+  }
+  return bloklar
+    .map(({ kat, secim, toplam }) => `<section class="kat-blok" style="--kat:${kat.renk}">
+<div class="bolum-bas kat-bas"><h2><span class="kat-cizgi"></span>${h(kat.ad)}</h2><a href="/kategori/${kat.slug}/">Tümü (${toplam}) →</a></div>
+<div class="izgara">${secim.map(kutuKarti).join('')}</div>
+</section>`)
+    .join('\n');
+}
+
+function gundemdekilerSec(hikayeler, simdi, haric) {
+  return hikayeler
+    .filter((x) => !haric.has(x) && simdi - new Date(x.ilkGorulme).getTime() < 24 * 36e5 && new Set(x.kaynaklar.map((k) => k.ad)).size >= 2)
+    .sort((a, b) => new Set(b.kaynaklar.map((k) => k.ad)).size - new Set(a.kaynaklar.map((k) => k.ad)).size || new Date(b.ilkGorulme) - new Date(a.ilkGorulme))
+    .slice(0, 6)
+    .filter((_, i, a) => i < a.length - (a.length % 2)); // çift sayı: iki sütun dengeli dursun
+}
+
 export function anaSayfa({ hikayeler, servis, simdi }) {
   const mersin = hikayeler.filter((x) => !x.genel);
-  const genel = hikayeler.filter((x) => x.genel).slice(0, AYAR.anaSayfaGenelSayisi);
+  const genel = hikayeler.filter((x) => x.genel).slice(0, 4);
   const manset = mansetSec(mersin, simdi);
-  const liste = mersin.filter((x) => x !== manset).slice(0, AYAR.anaSayfaHaberSayisi);
+  const liste = mersin.filter((x) => x !== manset).slice(0, 8);
+  const gundem = gundemdekilerSec(hikayeler, simdi, new Set([manset]));
+  const gosterilen = new Set([manset, ...liste]);
   const ust = `${sonDakikaBandi(sonDakikaSec(hikayeler.filter((x) => x !== manset), simdi))}
 <div class="su-an-bas">
 <div><p>${tarihUzun(new Date(simdi).toISOString())} · <span class="canli-saat" data-canli-saat>${saat(new Date(simdi).toISOString())}</span></p><h1>Mersin'de şu an</h1></div>
@@ -192,10 +227,14 @@ ${piyasaSeridi(servis?.piyasa)}`;
 <div class="ana">
 <div class="bolum-bas"><h2>Manşet</h2><span>Son güncelleme: ${saat(new Date(simdi).toISOString())} (<span data-once="${new Date(simdi).toISOString()}"></span>)</span></div>
 ${manset ? mansetKarti(manset) : '<div class="bos">Haberler toplanıyor…</div>'}
-${genel.length ? `<div class="bolum-bas" style="margin-top:14px"><h2>Türkiye ve dünyadan</h2><span>Birçok kaynağın yazdığı önemli gelişmeler</span></div>
-${haberListesi(genel)}` : ''}
-<div class="bolum-bas" style="margin-top:14px"><h2>Mersin'den son haberler</h2></div>
+${gundem.length >= 2 ? `<section class="kutu gundem-kutu"><div class="kutu-bas"><h2>Gündemdekiler</h2><span class="kutu-alt">En çok kaynağın yazdığı haberler</span></div>${gundemListesi(gundem)}</section>` : ''}
+<div class="bolum-bas" style="margin-top:14px"><h2>Mersin'den son haberler</h2><a class="bolum-link" href="/kategori/tum-haberler/">Tüm haberler →</a></div>
 ${haberListesi(liste)}
+${kategoriBloklari(mersin.filter((x) => x !== manset), gosterilen)}
+${genel.length ? `<section class="kat-blok" style="--kat:${GENEL.renk}">
+<div class="bolum-bas kat-bas"><h2><span class="kat-cizgi"></span>Türkiye ve dünyadan</h2><a href="/kategori/turkiye-dunya/">Tümü →</a></div>
+<div class="izgara">${genel.map(kutuKarti).join('')}</div>
+</section>` : ''}
 </div>
 ${yanKutular(servis)}
 <section style="flex:1 1 100%;display:flex;flex-direction:column;gap:16px;margin-top:12px">
@@ -300,6 +339,28 @@ ${yanKutular(servis, ilce)}
     jsonLd,
     gorsel: gorselUrl,
     tur: 'article',
+  });
+}
+
+// ---------- Kategori sayfaları ----------
+export const KATEGORI_SAYFALARI = [
+  ...KATEGORILER.map((k) => ({ slug: k.slug, ad: k.ad, renk: k.renk, filtre: (x) => !x.genel && x.kategori === k.slug })),
+  { slug: 'gundem', ad: 'Gündem', renk: GUNDEM.renk, filtre: (x) => !x.genel && x.kategori === 'gundem' },
+  { slug: 'turkiye-dunya', ad: 'Türkiye ve dünya', renk: GENEL.renk, filtre: (x) => x.genel },
+  { slug: 'tum-haberler', ad: 'Tüm Mersin haberleri', renk: GUNDEM.renk, filtre: (x) => !x.genel },
+];
+
+export function kategoriSayfasi({ kategori, hikayeler, servis }) {
+  const liste = hikayeler.filter(kategori.filtre).slice(0, 60);
+  const diger = KATEGORI_SAYFALARI.filter((k) => k.slug !== kategori.slug && hikayeler.some(k.filtre));
+  return sayfa({
+    baslik: kategori.slug === 'turkiye-dunya' ? 'Türkiye ve dünyadan son dakika haberleri' : kategori.slug === 'tum-haberler' ? 'Mersin son dakika haberleri – tümü' : `Mersin ${kategori.ad.toLocaleLowerCase('tr-TR')} haberleri`,
+    aciklama: `Mersin ve ilçelerinden son ${kategori.ad.toLocaleLowerCase('tr-TR')} haberleri. Kaynakları belirtilerek derlenir.`,
+    yol: `/kategori/${kategori.slug}/`,
+    aktif: '/',
+    ust: `<div class="su-an-bas"><div><h1>${h(kategori.ad)}</h1><p style="margin-top:8px">Son ${AYAR.saklamaGun} gün · ${liste.length} haber</p></div></div>
+<nav class="kat-menu" aria-label="Kategoriler">${diger.map((k) => `<a href="/kategori/${k.slug}/" style="--kat:${k.renk}">${h(k.ad)}</a>`).join('')}</nav>`,
+    icerik: `<main class="kap govde"><div class="ana">${haberListesi(liste, 'Bu kategoride son günlerde haber yok.')}</div>${yanKutular(servis)}</main>`,
   });
 }
 
