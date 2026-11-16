@@ -6,6 +6,10 @@ on:
         description: 'Boşlukla ayrılmış adresler (boşsa varsayılan liste)'
         required: false
         default: ''
+      spor:
+        description: 'Adresleri TFF lig sayfası olarak dene'
+        type: boolean
+        default: false
       ham:
         description: 'Arama sonucunu ham HTML göster'
         type: boolean
@@ -30,7 +34,11 @@ jobs:
         with:
           node-version: 22
       - run: npm ci
-      - if: ${{ inputs.kaynaklar == '' }}
+      - if: ${{ inputs.spor }}
+        run: node scripts/spor-dene.js
+        env:
+          ADRESLER: ${{ inputs.adresler }}
+      - if: ${{ inputs.kaynaklar == '' && !inputs.spor }}
         run: node scripts/kaynak-dene.js
         env:
           ADRESLER: ${{ inputs.adresler }}
