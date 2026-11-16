@@ -14,7 +14,7 @@ function ilceCipleri(hikaye) {
   const ilceler = hikaye.ilceler.length ? hikaye.ilceler : [];
   return [
     ...ilceler.slice(0, 2).map((s) => `<a class="cip" href="/ilce/${s}/">${h(ilceAdi(s))}</a>`),
-    !ilceler.length ? '<span class="cip">Mersin</span>' : '',
+    !ilceler.length ? `<span class="cip">${hikaye.genel ? 'Türkiye / Dünya' : 'Mersin'}</span>` : '',
     `<span class="cip gri">${h(katAdi(hikaye.kategori))}</span>`,
   ].join('');
 }

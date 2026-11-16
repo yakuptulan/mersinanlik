@@ -103,8 +103,10 @@ function ilceDugmeleri() {
 }
 
 export function anaSayfa({ hikayeler, servis, simdi }) {
-  const manset = mansetSec(hikayeler, simdi);
-  const liste = hikayeler.filter((x) => x !== manset).slice(0, AYAR.anaSayfaHaberSayisi);
+  const mersin = hikayeler.filter((x) => !x.genel);
+  const genel = hikayeler.filter((x) => x.genel).slice(0, AYAR.anaSayfaGenelSayisi);
+  const manset = mansetSec(mersin, simdi);
+  const liste = mersin.filter((x) => x !== manset).slice(0, AYAR.anaSayfaHaberSayisi);
   const ust = `${sonDakikaBandi(sonDakikaSec(hikayeler, simdi))}
 <div class="su-an-bas">
 <div><p>${tarihUzun(new Date(simdi).toISOString())}</p><h1>Mersin'de şu an</h1></div>
@@ -115,7 +117,9 @@ ${suAnKartlari(servis)}`;
 <div class="ana">
 <div class="bolum-bas"><h2>Manşet</h2><span>Son güncelleme: ${saat(new Date(simdi).toISOString())}</span></div>
 ${manset ? mansetKarti(manset) : '<div class="bos">Haberler toplanıyor…</div>'}
-<div class="bolum-bas" style="margin-top:14px"><h2>Son haberler</h2></div>
+${genel.length ? `<div class="bolum-bas" style="margin-top:14px"><h2>Türkiye ve dünyadan</h2><span>Birçok kaynağın yazdığı önemli gelişmeler</span></div>
+${haberListesi(genel)}` : ''}
+<div class="bolum-bas" style="margin-top:14px"><h2>Mersin'den son haberler</h2></div>
 ${haberListesi(liste)}
 </div>
 ${yanKutular(servis)}

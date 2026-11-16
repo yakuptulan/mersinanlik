@@ -24,7 +24,7 @@ test('kategori ve risk', () => {
   assert.equal(kategoriBul('Limon hasadı başladı, üreticiler memnun'), 'tarim');
   assert.deepEqual(riskBul('Trafik kazasında 1 kişi hayatını kaybetti'), []);
   assert.deepEqual(riskBul('Otomobil şarampole devrildi: 45 yaşındaki sürücü öldü'), []);
-  assert.deepEqual(riskBul('Kazada 7 yaşındaki çocuk hayatını kaybetti'), ['çocuk / mahremiyet']);
+  assert.deepEqual(riskBul('Kazada 7 yaşındaki çocuk hayatını kaybetti'), []);
   assert.deepEqual(riskBul('Bıçaklı kavgada 1 kişi hayatını kaybetti'), ['ölüm / şiddet']);
   assert.deepEqual(riskBul('Kaza sonrası sürücü gözaltına alındı'), ['suç isnadı']);
   assert.deepEqual(riskBul('Kütüphane açılıyor'), []);
@@ -63,12 +63,14 @@ test('ayrılma eki', () => {
 test('karma kaynak filtresi ve sansür', async () => {
   const { haberiDegerlendir } = await import('../src/lib/store.js');
   const k = { kapsam: 'karma' };
-  assert.equal(haberiDegerlendir({ baslik: 'Romelu Lukaku milli takımı bıraktı', link: 'https://a.com/1' }, k), null);
+  assert.equal(haberiDegerlendir({ baslik: 'Romelu Lukaku milli takımı bıraktı', link: 'https://a.com/1' }, k).genel, true);
+  assert.equal(haberiDegerlendir({ baslik: "Toroslar'da kuaför hizmeti", link: 'https://a.com/9' }, k).genel, false);
   assert.ok(haberiDegerlendir({ baslik: "Toroslar'da kuaför hizmeti", link: 'https://a.com/2' }, k));
   assert.ok(haberiDegerlendir({ baslik: 'Vali Toros KKTC resepsiyonuna katıldı', link: 'https://a.com/3' }, k));
   assert.equal(haberiDegerlendir({ baslik: 'Mersin Sahili', link: 'https://a.com/galeri/5' }, k), null);
   const s = haberiDegerlendir({ baslik: "Mersin'de s*lahlı s*ldırı", link: 'https://a.com/4' }, k);
-  assert.ok(s.riskNedenleri.includes('sansürlü ifade'));
+  assert.deepEqual(s.riskNedenleri, []);
+  assert.deepEqual(riskBul("Tarsus'ta otomobil devrildi: 6 yaşındaki çocuk hayatını kaybetti"), []);
   assert.equal(duzMetin('Gülnar&amp;#039;a &#8217;'), 'Gülnar\'a ’');
 });
 
@@ -90,4 +92,19 @@ test('eczane ve su kesintisi ayrıştırma', async () => {
   assert.equal(k[0].ilceler[0].ilce, 'mezitli');
   assert.deepEqual(k[0].ilceler[0].mahalleler, ['Çevlik']);
   assert.equal(k[0].bitis, '2026-11-16T13:00:00.000Z');
+});
+
+test('Türkiye/dünya haberi ancak 3 site yazınca yayınlanır', async () => {
+  const { haberiDegerlendir, hikayeyeEkle, yayindakiler } = await import('../src/lib/store.js');
+  const veri = { hikayeler: [] };
+  const ekle = (ad, i) => {
+    const kaynak = { id: ad, ad, kapsam: 'karma' };
+    hikayeyeEkle(veri, haberiDegerlendir({ baslik: 'Ekim ayında ihracat yüzde 8,1 arttı', link: `https://${ad}/${i}` }, kaynak), kaynak);
+  };
+  ekle('a.com', 1);
+  ekle('b.com', 2);
+  assert.equal(yayindakiler(veri).length, 0);
+  ekle('c.com', 3);
+  assert.equal(yayindakiler(veri).length, 1);
+  assert.equal(yayindakiler(veri)[0].genel, true);
 });

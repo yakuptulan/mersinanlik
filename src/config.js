@@ -58,6 +58,9 @@ export const RISK_KELIMELERI = {
 // Bir haber kaç saat "son dakika" sayılır, ana sayfada kaç saat tutulur
 export const AYAR = {
   sonDakikaSaat: 2,
+  // Mersin dışı (Türkiye/dünya) haber, en az bu kadar farklı site yazdıysa "önemli" sayılıp yayınlanır
+  genelKaynakEsigi: 3,
+  anaSayfaGenelSayisi: 5,
   saklamaGun: 7,
   anaSayfaHaberSayisi: 30,
   ilceHaberSayisi: 40,

@@ -1,4 +1,4 @@
-// Haber toplayıcı: kaynakları okur, Mersin haberlerini ayıklar, aynı haberleri birleştirir,
+// Haber toplayıcı: kaynakları okur, Mersin haberlerini ayıklar (Türkiye/dünya haberlerini birden çok site yazdıysa alır), aynı haberleri birleştirir,
 // riskli olanları Telegram onayına gönderir, izin verilen kaynaklarda özet yazdırır.
 //
 // Kullanım:  node src/collect.js            → tüm aktif kaynaklar
@@ -8,7 +8,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { KAYNAKLAR, aktifKaynaklar } from './sources.js';
 import { kaynakOku } from './lib/rss.js';
-import { yukle, kaydet, temizle, haberiDegerlendir, hikayeyeEkle } from './lib/store.js';
+import { yukle, kaydet, temizle, haberiDegerlendir, hikayeyeEkle, onemliMi } from './lib/store.js';
 import { geminiHazirMi, topluOzetle } from './lib/gemini.js';
 import { telegramHazirMi, onayIste, kararlariOku } from './lib/telegram.js';
 
@@ -29,10 +29,9 @@ async function dene(id) {
   let mersin = 0;
   for (const h of haberler) {
     const d = haberiDegerlendir(h, kaynak);
-    if (d) {
-      mersin++;
-      console.log(`✓ [${d.ilceler.join(',') || 'mersin'}] [${d.kategori}]${d.riskNedenleri.length ? ' [RİSKLİ]' : ''} ${d.baslik}`);
-    }
+    if (!d) continue;
+    if (!d.genel) mersin++;
+    console.log(`${d.genel ? '·' : '✓'} [${d.genel ? 'genel' : d.ilceler.join(',') || 'mersin'}] [${d.kategori}]${d.riskNedenleri.length ? ' [RİSKLİ]' : ''} ${d.baslik}`);
   }
   console.log(`\n${haberler.length} haber okundu, ${mersin} tanesi Mersin ile ilgili.`);
 }
@@ -53,15 +52,19 @@ async function main() {
       for (const ham of haberler) {
         const haber = haberiDegerlendir(ham, kaynak);
         if (!haber) continue;
-        const { hikaye, yeni } = hikayeyeEkle(veri, haber, kaynak);
+        const { yeni } = hikayeyeEkle(veri, haber, kaynak);
         if (yeni) yeniSayi++;
-        if (hikaye.durum === 'onay-bekliyor' && !hikaye.onaySoruldu) yeniRiskliler.push(hikaye);
       }
       delete durum.kaynakHatalari[kaynak.id];
     } catch (e) {
       durum.kaynakHatalari[kaynak.id] = { hata: String(e.message || e), zaman: new Date().toISOString() };
       console.warn(`! ${kaynak.ad}: ${e.message}`);
     }
+  }
+
+  // Onaya gidecekler: riskli olup henüz sorulmamış, ve Türkiye/dünya haberiyse önemli hâle gelmiş olanlar
+  for (const h of veri.hikayeler) {
+    if (h.durum === 'onay-bekliyor' && !h.onaySoruldu && onemliMi(h)) yeniRiskliler.push(h);
   }
 
   // 2) Telegram: önce basılan düğmeleri oku, sonra yeni riskli haberleri gönder

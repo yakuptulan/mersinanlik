@@ -20,7 +20,13 @@ export function kaydet(veri, dosya = VERI_DOSYASI) {
 // Eski haberleri siler
 export function temizle(veri, simdi = Date.now()) {
   const sinir = simdi - AYAR.saklamaGun * 24 * 3600 * 1000;
-  veri.hikayeler = veri.hikayeler.filter((h) => new Date(h.sonGuncelleme).getTime() >= sinir);
+  const genelSinir = simdi - 24 * 3600 * 1000;
+  veri.hikayeler = veri.hikayeler.filter((h) => {
+    if (new Date(h.sonGuncelleme).getTime() < sinir) return false;
+    // Bir günde önemli hâle gelmeyen Türkiye/dünya haberini tutmaya gerek yok
+    if (h.genel && !onemliMi(h) && new Date(h.ilkGorulme).getTime() < genelSinir) return false;
+    return true;
+  });
   return veri;
 }
 
@@ -33,17 +39,21 @@ export function haberiDegerlendir(ham, kaynak) {
   const yerel = kaynak.kapsam === 'yerel' || kaynak.kapsam === 'kurum';
   const karma = kaynak.kapsam === 'karma';
   let ilceler = ilceBul(metin, { yerelKaynak: yerel || karma });
+  // Mersin dışı haber "genel" (Türkiye/dünya) olarak işaretlenir; ancak birkaç site
+  // birden yazarsa önemli sayılıp yayınlanır (bkz. onemliMi).
+  let genel = false;
   if (karma) {
     const isaret = yerelIsaretVar(metin);
     // Yenişehir Bursa/Diyarbakır'da da var: karma kaynakta tek başına yetmez
     if (!isaret) ilceler = ilceler.filter((s) => s !== 'yenisehir');
-    if (!isaret && ilceler.length === 0) return null;
+    if (!isaret && ilceler.length === 0) genel = true;
   } else if (!yerel && !mersinIlgili(metin) && ilceler.length === 0) {
-    return null;
+    genel = true;
   }
   return {
     ...ham,
     ilceler,
+    genel,
     kategori: kategoriBul(metin),
     riskNedenleri: riskBul(metin),
   };
@@ -84,6 +94,7 @@ export function hikayeyeEkle(veri, haber, kaynak) {
       enIyi.kaynaklar.push(kayit);
     }
     enIyi.ilceler = [...new Set([...enIyi.ilceler, ...haber.ilceler])];
+    if (!haber.genel) enIyi.genel = false;
     enIyi.riskNedenleri = [...new Set([...enIyi.riskNedenleri, ...haber.riskNedenleri])];
     enIyi.sonGuncelleme = new Date().toISOString();
     if (!enIyi.ozet && kaynak.yapayZekaOzeti && haber.aciklama) {
@@ -102,6 +113,7 @@ export function hikayeyeEkle(veri, haber, kaynak) {
     ozet: null,
     ozetIcinMetin: kaynak.yapayZekaOzeti ? haber.aciklama || null : null,
     ilceler: haber.ilceler,
+    genel: !!haber.genel,
     kategori: haber.kategori,
     riskNedenleri: haber.riskNedenleri,
     durum: haber.riskNedenleri.length ? 'onay-bekliyor' : 'yayinda',
@@ -114,8 +126,14 @@ export function hikayeyeEkle(veri, haber, kaynak) {
   return { hikaye, yeni: true, eklendi: true };
 }
 
+// Mersin haberi her zaman; Türkiye/dünya haberi ancak yeterince site yazdıysa
+export function onemliMi(h) {
+  if (!h.genel) return true;
+  return new Set(h.kaynaklar.map((k) => k.ad)).size >= AYAR.genelKaynakEsigi;
+}
+
 export function yayindakiler(veri) {
   return veri.hikayeler
-    .filter((h) => h.durum === 'yayinda')
+    .filter((h) => h.durum === 'yayinda' && onemliMi(h))
     .sort((a, b) => new Date(b.ilkGorulme) - new Date(a.ilkGorulme));
 }
