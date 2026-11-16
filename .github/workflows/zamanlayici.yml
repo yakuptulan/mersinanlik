@@ -13,20 +13,35 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     env:
-      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CF_HESAP: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       GH_DISPATCH_TOKEN: ${{ secrets.GH_DISPATCH_TOKEN }}
+      AD: mersinanlik-zamanlayici
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
       - name: Worker'ı yayınla
         if: ${{ env.GH_DISPATCH_TOKEN != '' }}
         working-directory: zamanlayici
         run: |
-          npx --yes wrangler@4 deploy
-          printf '%s' "$GH_DISPATCH_TOKEN" | npx --yes wrangler@4 secret put GH_TOKEN
+          set -euo pipefail
+          API="https://api.cloudflare.com/client/v4/accounts/$CF_HESAP/workers/scripts/$AD"
+          jq -n --arg t "$GH_DISPATCH_TOKEN" '{
+            main_module: "index.js",
+            compatibility_date: "2026-11-01",
+            bindings: [{type: "secret_text", name: "GH_TOKEN", text: $t}]
+          }' > /tmp/meta.json
+          echo "1) Kod yükleniyor"
+          curl -sS -X PUT "$API" -H "Authorization: Bearer $CF_TOKEN" \
+            -F "metadata=@/tmp/meta.json;type=application/json" \
+            -F "index.js=@index.js;type=application/javascript+module" > /tmp/r1.json
+          jq '{success, errors}' /tmp/r1.json
+          jq -e '.success' /tmp/r1.json > /dev/null
+          echo "2) Zamanlama ayarlanıyor"
+          curl -sS -X PUT "$API/schedules" -H "Authorization: Bearer $CF_TOKEN" \
+            -H "Content-Type: application/json" --data '[{"cron":"*/30 * * * *"}]' > /tmp/r2.json
+          jq '{success, errors, result}' /tmp/r2.json
+          jq -e '.success' /tmp/r2.json > /dev/null
+          rm -f /tmp/meta.json
       - name: Anahtar eksik
         if: ${{ env.GH_DISPATCH_TOKEN == '' }}
         run: echo "GH_DISPATCH_TOKEN sırrı tanımlı değil; zamanlayıcı kurulmadı."
