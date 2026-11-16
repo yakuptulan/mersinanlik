@@ -38,8 +38,13 @@ export function fotoSec(hikaye) {
   let liste = [];
   if (hikaye.genel) liste = KONU_ONCELIKLI.has(hikaye.kategori) ? havuz(hikaye.kategori) : [];
   if (!liste.length && KONU_ONCELIKLI.has(kat)) liste = havuz(kat);
-  if (!liste.length && !hikaye.genel) for (const i of hikaye.ilceler) if ((liste = havuz(i)).length) break;
-  if (!liste.length) liste = havuz(hikaye.genel ? 'genel' : 'mersin');
+  // Konunun fotoğrafı azsa (ör. siyasette tek fotoğraf) ilçe/Mersin fotoğraflarıyla karıştır ki tekrar etmesin
+  if (liste.length < 3) {
+    let yer = [];
+    if (!hikaye.genel) for (const i of hikaye.ilceler) if ((yer = havuz(i)).length) break;
+    if (!yer.length) yer = havuz(hikaye.genel ? 'genel' : 'mersin');
+    liste = [...liste, ...yer];
+  }
   if (!liste.length) return null;
   return liste[sayiOzeti(hikaye.id) % liste.length];
 }
