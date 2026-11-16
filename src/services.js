@@ -57,7 +57,10 @@ async function hava() {
       gunler[gun].min = Math.min(gunler[gun].min, t);
       gunler[gun].max = Math.max(gunler[gun].max, t);
       const saat = Number(new Date(s.time).toLocaleString('en-GB', { timeZone: 'Europe/Istanbul', hour: '2-digit', hour12: false }));
-      if (saat >= 11 && saat <= 14 && s.data.next_6_hours) gunler[gun].sembol = s.data.next_6_hours.summary.symbol_code;
+      const kod = s.data.next_6_hours?.summary.symbol_code || s.data.next_1_hours?.summary.symbol_code;
+      if (saat >= 11 && saat <= 14 && kod) gunler[gun].sembol = kod;
+      // Öğle saati geçmişse (bugün) günün ilk tahmini yedek olarak kullanılır
+      if (!gunler[gun].yedek && kod) gunler[gun].yedek = kod;
     }
     sonuc[ilce.slug] = {
       sicaklik: Math.round(simdi.data.instant.details.air_temperature),
@@ -66,7 +69,7 @@ async function hava() {
         tarih,
         min: Math.round(g.min),
         max: Math.round(g.max),
-        durum: sembolMetni(g.sembol),
+        durum: sembolMetni(g.sembol || g.yedek),
       })),
     };
   }

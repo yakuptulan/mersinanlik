@@ -34,7 +34,7 @@ function ustSatir(aktif) {
 const ILCE_ADLARI = Object.fromEntries(ILCELER.map((i) => [i.slug, i.ad]));
 const guvenliJson = (v) => JSON.stringify(v).replace(/</g, '\\u003c');
 
-export function sayfa({ baslik, aciklama = SITE.description, yol = '/', aktif = yol, ust = '', icerik, noindex = false, jsonLd = null, hava = null }) {
+export function sayfa({ baslik, aciklama = SITE.description, yol = '/', aktif = yol, ust = '', icerik, noindex = false, jsonLd = null, hava = null, ekVeri = null }) {
   const tamBaslik = baslik ? `${baslik} | ${SITE.name}` : `${SITE.name} – Mersin son dakika haberleri`;
   const kanonik = SITE.url + yol;
   return `<!doctype html>
@@ -88,7 +88,7 @@ ${icerik}
 <a href="/kesintiler/"${aktif === '/kesintiler/' ? ' aria-current="page"' : ''}>${ikon.damla(26)}Kesinti</a>
 <a href="/menu/">${ikon.menu(26)}Menü</a>
 </nav>
-<script>window.__ILCE_ADLARI__=${guvenliJson(ILCE_ADLARI)};${hava ? `window.__HAVA__=${guvenliJson(hava)};` : ''}</script>
+<script>window.__ILCE_ADLARI__=${guvenliJson(ILCE_ADLARI)};${hava ? `window.__HAVA__=${guvenliJson(hava)};` : ''}${ekVeri ? Object.entries(ekVeri).map(([k, v]) => `window.${k}=${guvenliJson(v)};`).join('') : ''}</script>
 <script src="/app.js" defer></script>
 </body>
 </html>`;

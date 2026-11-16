@@ -4,6 +4,7 @@ import { sayfa, saat, tarihUzun, ilceAdi } from './layout.js';
 import { ikon } from './ikonlar.js';
 import { haberListesi, mansetKarti, reklamAlani } from './parcalar.js';
 import { telefonGoster } from '../lib/eczane.js';
+import { havaIkonu, havaTuru } from './havaIkon.js';
 
 // Resmî servis bağlantıları (veri entegrasyonu tamamlanana kadar doğrudan kaynağa yönlendirir)
 export const RESMI = {
@@ -19,36 +20,68 @@ function sonDeprem(servis) {
   return d || null;
 }
 
+const gunKisa = (tarih) => new Date(`${tarih}T12:00:00`).toLocaleDateString('tr-TR', { weekday: 'short', timeZone: SITE.timezone });
+
+// Deprem büyüklüklerinden küçük çizgi grafik (eskiden yeniye)
+function depremCizgisi(liste) {
+  const d = liste.slice(0, 12).reverse();
+  if (d.length < 2) return '';
+  const w = 160, hgt = 44;
+  const max = Math.max(...d.map((x) => x.buyukluk), 3);
+  const nokta = d.map((x, i) => [((i / (d.length - 1)) * w).toFixed(1), (hgt - (x.buyukluk / max) * (hgt - 6) - 3).toFixed(1)]);
+  const yol = nokta.map((p, i) => `${i ? 'L' : 'M'}${p[0]} ${p[1]}`).join(' ');
+  return `<svg class="widget-cizgi" viewBox="0 0 ${w} ${hgt}" preserveAspectRatio="none" aria-hidden="true"><path d="${yol} L${w} ${hgt} L0 ${hgt}Z" fill="currentColor" opacity=".15"/><path d="${yol}" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>`;
+}
+
+// JS ile ilçe değişince kullanılacak ikon şablonları (id'ler JS tarafında yenilenir)
+const TUR_DURUM = { gunes: 'Açık', parcali: 'Parçalı bulutlu', bulut: 'Bulutlu', yagmur: 'Yağmurlu', firtina: 'Gök gürültülü', kar: 'Kar', sis: 'Sisli' };
+function ikonOrnek(tur) {
+  return havaIkonu(TUR_DURUM[tur], 84);
+}
+
+function havaWidget(hava, ilceSlug) {
+  const gunler = (hava?.gunler || []).slice(1, 4);
+  return `<a class="widget widget-hava" href="/hava-durumu/#${ilceSlug}" data-hava-kart>
+<div class="widget-bas"><span class="widget-etiket">Hava · <span data-ilce-ad>${h(ilceAdi(ilceSlug))}</span></span></div>
+<div class="hava-ana">
+<span data-hava-ikon>${havaIkonu(hava?.durum || '', 84)}</span>
+<div><span class="hava-derece" data-hava-derece>${hava ? `${hava.sicaklik}°` : '–'}</span>
+<span class="hava-durum" data-hava-durum>${hava ? h(hava.durum) : 'Veri bekleniyor'}</span>
+<span class="hava-uc" data-hava-uc>${hava?.gunler?.[0] ? `↑ ${hava.gunler[0].max}°  ↓ ${hava.gunler[0].min}°` : ''}</span></div>
+</div>
+<div class="hava-gunler" data-hava-gunler>${gunler.map((g) => `<div><span>${gunKisa(g.tarih)}</span>${havaIkonu(g.durum, 34)}<b>${g.max}°</b></div>`).join('')}</div>
+</a>`;
+}
+
 function suAnKartlari(servis, ilceSlug = SITE.defaultIlce) {
   const hava = servis?.hava?.[ilceSlug];
   const dep = sonDeprem(servis);
-  return `<div class="kartlar">
-<a class="kart" href="/hava-durumu/#${ilceSlug}" data-hava-kart>
-<div class="ust-bilgi"><span>Hava · <span data-ilce-ad>${h(ilceAdi(ilceSlug))}</span></span><span style="color:#FF8A1F">${ikon.gunes(28)}</span></div>
-<span class="deger" data-hava-derece>${hava ? `${hava.sicaklik}°` : '–'}</span>
-<span class="alt" data-hava-durum>${hava ? h(hava.durum) : 'Veri bekleniyor'}</span>
-<span class="ek" data-hava-yarin>${hava?.gunler?.[1] ? `Yarın ${hava.gunler[1].max}° / ${hava.gunler[1].min}°` : ''}</span>
+  const eczaneler = servis?.eczane?.liste || [];
+  const ilceEcz = eczaneler.filter((e) => e.ilce === ilceSlug).slice(0, 2);
+  const su = aktifSuKesintileri(servis);
+  return `<div class="widgetlar">
+${havaWidget(hava, ilceSlug)}
+<a class="widget widget-yesil" href="/nobetci-eczane/" data-eczane-kart>
+<div class="widget-bas"><span class="widget-rozet">${ikon.eczane(24)}</span><span class="widget-etiket">Nöbetçi eczane</span></div>
+<span class="widget-deger">${eczaneler.length || '–'}<small>${eczaneler.length ? ' açık' : ''}</small></span>
+<div class="widget-liste" data-eczane-liste>${ilceEcz.map((e) => `<span>${h(e.ad)}</span>`).join('') || '<span>İlçene göre listeyi gör</span>'}</div>
+<span class="widget-alt" data-eczane-ilce>${ilceEcz.length ? h(ilceAdi(ilceSlug)) + ' · telefon ve adres →' : 'Adres ve telefon →'}</span>
 </a>
-<a class="kart" href="/nobetci-eczane/">
-<div class="ust-bilgi"><span>Nöbetçi eczane</span><span style="color:#7FB0FF">${ikon.eczane(28)}</span></div>
-<span class="deger yazi">${servis?.eczane?.liste?.length ? `${servis.eczane.liste.length} eczane açık` : 'Bu gece açık olanlar'}</span>
-<span class="ek">İlçene göre adres ve telefon →</span>
+<a class="widget widget-turuncu widget-kesinti" href="/kesintiler/">
+<div class="widget-bas"><span class="widget-rozet">${ikon.damla(24)}</span><span class="widget-etiket">Kesintiler</span><span class="widget-sayi">${servis?.suKesintisi ? `${su.length} su` : ''}</span></div>
+<div class="takvim">${su.slice(0, 3).map((k) => `<div class="takvim-satir"><span class="takvim-saat">${k.bitis ? saat(k.bitis) : '—'}<small>bitiş</small></span><span class="takvim-metin"><b>${h(k.ilceler.map((i) => i.ad).join(', '))}</b><small>${h(k.ilceler.flatMap((i) => i.mahalleler).slice(0, 3).join(', '))}</small></span></div>`).join('') || `<div class="takvim-satir"><span class="takvim-metin"><b>${servis?.suKesintisi ? 'Su kesintisi yok' : 'Su ve elektrik'}</b><small>Elektrik için Toroslar EDAŞ sorgusu →</small></span></div>`}</div>
+${su.length > 3 ? `<span class="widget-alt">+${su.length - 3} kesinti daha →</span>` : ''}
 </a>
-<a class="kart uyari" href="/kesintiler/">
-<div class="ust-bilgi"><span>Kesintiler</span><span style="color:#FF8A1F">${ikon.damla(28)}</span></div>
-<span class="deger yazi">${(() => { const n = aktifSuKesintileri(servis).length; return servis?.suKesintisi ? (n ? `${n} su kesintisi` : 'Su kesintisi yok') : 'Su ve elektrik'; })()}</span>
-<span class="ek">Mahalle mahalle liste →</span>
-</a>
-<a class="kart" href="/deprem/">
-<div class="ust-bilgi"><span>Son deprem</span><span style="color:#7FB0FF">${ikon.deprem(28)}</span></div>
-<span class="deger">${dep ? dep.buyukluk.toFixed(1).replace('.', ',') : '–'}</span>
-<span class="alt">${dep ? h(dep.yer) : 'Son 7 günde kayıt yok'}</span>
-<span class="ek">${dep ? `<span data-once="${dep.tarih}">${saat(dep.tarih)}</span> · AFAD` : 'AFAD'}</span>
+<a class="widget widget-mor" href="/deprem/">
+<div class="widget-bas"><span class="widget-rozet">${ikon.deprem(24)}</span><span class="widget-etiket">Son deprem</span></div>
+<span class="widget-deger">${dep ? dep.buyukluk.toFixed(1).replace('.', ',') : '–'}</span>
+<span class="widget-yazi">${dep ? h(dep.yer) : 'Son 7 günde kayıt yok'}</span>
+<span class="widget-alt">${dep ? `<span data-once="${dep.tarih}">${saat(dep.tarih)}</span> · AFAD` : 'AFAD'}</span>
+${depremCizgisi(servis?.deprem || [])}
 </a>
 </div>`;
 }
 
-// Son dakika: son 2 saatte, birden fazla kaynağın yazdığı ya da acil kategorideki en yeni haber
 function sonDakikaSec(hikayeler, simdi) {
   return hikayeler.find(
     (x) =>
@@ -132,7 +165,13 @@ ${ilceDugmeleri()}
     yol: '/',
     ust,
     icerik,
-    hava: servis?.hava || null,
+    hava: servis?.hava
+      ? Object.fromEntries(Object.entries(servis.hava).map(([k, v]) => [k, { ...v, tur: havaTuru(v.durum), gunler: v.gunler.map((g) => ({ ...g, gun: gunKisa(g.tarih), tur: havaTuru(g.durum) })) }]))
+      : null,
+    ekVeri: {
+      __ECZ__: Object.fromEntries(ILCELER.map((i) => [i.slug, (servis?.eczane?.liste || []).filter((e) => e.ilce === i.slug).slice(0, 2).map((e) => e.ad)])),
+      __HAVA_IKON__: Object.fromEntries(['gunes', 'parcali', 'bulut', 'yagmur', 'firtina', 'kar', 'sis'].map((t) => [t, ikonOrnek(t)])),
+    },
     jsonLd: { '@context': 'https://schema.org', '@type': 'WebSite', name: SITE.name, url: SITE.url, inLanguage: 'tr' },
   });
 }
@@ -144,9 +183,9 @@ export function ilceSayfasi({ ilce, hikayeler, servis, simdi }) {
 <div><p>${tarihUzun(new Date(simdi).toISOString())}</p><h1>${h(ilce.ad)} haberleri</h1></div>
 <button class="ilce-sec" type="button" data-ilcem-yap="${ilce.slug}" style="border:none;font:inherit;cursor:pointer">${ikon.konum(20)}<span>Benim ilçem yap</span><span class="daire">${ikon.ok(18)}</span></button>
 </div>
-${hava ? `<div class="kartlar" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">${hava.gunler
+${hava ? `<div class="widgetlar widgetlar-gun">${hava.gunler
     .slice(0, 4)
-    .map((g, i) => `<div class="kart"><div class="ust-bilgi"><span>${i === 0 ? 'Bugün' : new Date(g.tarih).toLocaleDateString('tr-TR', { weekday: 'long' })}</span></div><span class="deger">${g.max}°</span><span class="alt">${h(g.durum)} · en düşük ${g.min}°</span></div>`)
+    .map((g, i) => `<div class="widget widget-gun"><span class="widget-etiket">${i === 0 ? 'Bugün' : new Date(`${g.tarih}T12:00:00`).toLocaleDateString('tr-TR', { weekday: 'long' })}</span>${havaIkonu(g.durum, 56)}<span class="hava-derece kucuk">${g.max}°</span><span class="hava-durum">${h(g.durum)}</span><span class="hava-uc">↓ en düşük ${g.min}°</span></div>`)
     .join('')}</div>` : ''}`;
   const icerik = `<main class="kap govde">
 <div class="ana">

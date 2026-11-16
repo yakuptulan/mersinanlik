@@ -30,13 +30,36 @@
     document.querySelectorAll('[data-ilce-sec] [data-ilce-ad]').forEach(function (s) { s.textContent = adlar[ilcem]; });
     var hava = (window.__HAVA__ || {})[ilcem];
     var kart = document.querySelector('[data-hava-kart]');
+    var ikonlar = window.__HAVA_IKON__ || {};
+    var sira = 0;
+    // Aynı sayfada birden fazla SVG olacağı için gradient id'lerini benzersiz yap
+    function ikon(tur, boyut) {
+      var html = ikonlar[tur] || '';
+      sira++;
+      html = html.replace(/id="([gbkh])(\d+)"/g, 'id="$1j' + sira + '"').replace(/url\(#([gbkh])\d+\)/g, 'url(#$1j' + sira + ')');
+      return boyut ? html.replace(/width="\d+" height="\d+"/, 'width="' + boyut + '" height="' + boyut + '"') : html;
+    }
     if (hava && kart) {
       kart.href = '/hava-durumu/#' + ilcem;
       kart.querySelector('[data-ilce-ad]').textContent = adlar[ilcem];
       kart.querySelector('[data-hava-derece]').textContent = hava.sicaklik + '°';
       kart.querySelector('[data-hava-durum]').textContent = hava.durum;
-      var yarin = hava.gunler && hava.gunler[1];
-      kart.querySelector('[data-hava-yarin]').textContent = yarin ? 'Yarın ' + yarin.max + '° / ' + yarin.min + '°' : '';
+      if (hava.tur) kart.querySelector('[data-hava-ikon]').innerHTML = ikon(hava.tur);
+      var bugun = hava.gunler && hava.gunler[0];
+      kart.querySelector('[data-hava-uc]').textContent = bugun ? '↑ ' + bugun.max + '°  ↓ ' + bugun.min + '°' : '';
+      var g = kart.querySelector('[data-hava-gunler]');
+      if (g && hava.gunler) {
+        g.innerHTML = hava.gunler.slice(1, 4).map(function (d) {
+          return '<div><span>' + d.gun + '</span>' + ikon(d.tur, 34) + '<b>' + d.max + '°</b></div>';
+        }).join('');
+      }
+    }
+    var ecz = (window.__ECZ__ || {})[ilcem];
+    var ek = document.querySelector('[data-eczane-kart]');
+    if (ek && ecz && ecz.length) {
+      ek.href = '/nobetci-eczane/#' + ilcem;
+      ek.querySelector('[data-eczane-liste]').innerHTML = ecz.map(function (a) { var s = document.createElement('span'); s.textContent = a; return s.outerHTML; }).join('');
+      ek.querySelector('[data-eczane-ilce]').textContent = adlar[ilcem] + ' · telefon ve adres →';
     }
   }
   document.querySelectorAll('[data-ilcem-yap]').forEach(function (b) {

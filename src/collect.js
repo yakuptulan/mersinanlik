@@ -9,6 +9,7 @@ import path from 'node:path';
 import { KAYNAKLAR, aktifKaynaklar } from './sources.js';
 import { kaynakOku } from './lib/rss.js';
 import { yukle, kaydet, temizle, haberiDegerlendir, hikayeyeEkle, onemliMi } from './lib/store.js';
+import { riskBul } from './lib/text.js';
 import { geminiHazirMi, topluOzetle } from './lib/gemini.js';
 import { telegramHazirMi, onayIste, kararlariOku } from './lib/telegram.js';
 
@@ -62,6 +63,13 @@ async function main() {
       durum.kaynakHatalari[kaynak.id] = { hata: String(e.message || e), zaman: new Date().toISOString() };
       console.warn(`! ${kaynak.ad}: ${e.message}`);
     }
+  }
+
+  // Risk kuralları değişmiş olabilir: bekleyenleri güncel kurallarla yeniden değerlendir
+  for (const h of veri.hikayeler) {
+    if (h.durum !== 'onay-bekliyor' || h.onaylandi) continue;
+    h.riskNedenleri = [...new Set(h.kaynaklar.flatMap((k) => riskBul(k.baslik)))];
+    if (!h.riskNedenleri.length) h.durum = 'yayinda';
   }
 
   // Onaya gidecekler: riskli olup henüz sorulmamış, ve Türkiye/dünya haberiyse önemli hâle gelmiş olanlar

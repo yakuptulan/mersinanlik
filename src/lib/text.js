@@ -154,21 +154,12 @@ export function kategoriBul(metin = '') {
   return enIyi || 'gundem';
 }
 
-// Haber riskli mi? Riskliyse nedenlerini döndürür.
-const TRAFIK_KAZASI = ['trafik kaza', 'kazada', 'kazası', 'kazayla', 'çarpış', 'devrildi', 'şarampole', 'otomobil', 'kamyon', 'tır ', 'motosiklet', 'otobüs', 'minibüs'];
-// Haber riskli mi? Riskliyse nedenlerini döndürür.
-// İstisna: trafik kazası haberlerinde ölüm, yaş ve çocuk bilgisi onay gerektirmez
-// (sitede isim verilmiyor). İstismar/taciz, suç isnadı ve siyaset kuralları yine geçerlidir.
+// Haber riskli mi? Riskliyse nedenlerini döndürür (bkz. config RISK_KELIMELERI).
 export function riskBul(metin = '') {
   const k = kucuk(metin);
-  const trafik = TRAFIK_KAZASI.some((w) => kelimeVar(k, w));
-  const nedenler = [];
-  for (const [neden, liste] of Object.entries(RISK_KELIMELERI)) {
-    let kelimeler = liste;
-    if (trafik && neden === 'çocuk / mahremiyet') kelimeler = liste.filter((w) => ['istismar', 'taciz', 'fuhuş', 'tecavüz'].includes(w));
-    if (kelimeler.some((w) => kelimeVar(k, w))) nedenler.push(neden);
-  }
-  return nedenler;
+  return Object.entries(RISK_KELIMELERI)
+    .filter(([, liste]) => liste.some((w) => kelimeVar(k, w)))
+    .map(([neden]) => neden);
 }
 
 export function kisaKimlik(s = '') {

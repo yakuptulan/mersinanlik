@@ -27,7 +27,9 @@ test('kategori ve risk', () => {
   assert.deepEqual(riskBul('Kazada 7 yaşındaki çocuk hayatını kaybetti'), []);
   assert.deepEqual(riskBul('Bıçaklı kavgada 1 kişi hayatını kaybetti'), []);
   assert.deepEqual(riskBul('Genç kadın intihar etti'), ['intihar']);
-  assert.deepEqual(riskBul('Kaza sonrası sürücü gözaltına alındı'), ['suç isnadı']);
+  assert.deepEqual(riskBul('Kaza sonrası sürücü gözaltına alındı'), []);
+  assert.deepEqual(riskBul('CHP il başkanından açıklama'), []);
+  assert.deepEqual(riskBul('Öğretmene taciz suçlaması'), ['istismar / taciz']);
   assert.deepEqual(riskBul('Kütüphane açılıyor'), []);
 });
 
