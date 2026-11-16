@@ -141,6 +141,14 @@ export async function listeYaz(liste, mevcutSluglar = new Set()) {
       if (!baslik || bulunan.some((b) => b.baslik === baslik)) continue;
       const v = await vikipediGetir(baslik);
       if (v.metin.length < 300) continue;
+      // Yanlış madde gelmesin: terimin anlamlı kelimeleri başlıkta ya da maddenin girişinde geçmeli
+      const anahtar = slugify(terim).split('-').filter((k) => k.length > 2 && !/^\d+$/.test(k) && !['film', 'roman'].includes(k));
+      const yer = slugify(`${v.baslik} ${v.metin.slice(0, 600)}`);
+      if (anahtar.filter((k) => yer.includes(k)).length < Math.ceil(anahtar.length * 0.7)) {
+        console.warn(`! Liste maddesi eşleşmedi: ${terim} → ${v.baslik}`);
+        continue;
+      }
+      if (/\bfilm\b/i.test(terim) && !/film/i.test(v.metin.slice(0, 600))) continue;
       bulunan.push(v);
     } catch (e) {
       console.warn(`! Liste maddesi (${terim}): ${e.message}`);
