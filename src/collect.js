@@ -11,7 +11,8 @@ import { kaynakOku } from './lib/rss.js';
 import { yukle, kaydet, temizle, haberiDegerlendir, hikayeyeEkle, onemliMi } from './lib/store.js';
 import { riskBul } from './lib/text.js';
 import { AYAR } from './config.js';
-import { gorselUretimHazirMi, gorselUret, gorselAdaylari, sahipsizleriSil } from './lib/gorsel-uret.js';
+import { gorselUretimHazirMi, gorselUret, gorselAdaylari, sahipsizleriSil, kurumFotosuIndir } from './lib/gorsel-uret.js';
+import { kurumOku } from './lib/kurum.js';
 import { geminiHazirMi, topluOzetle } from './lib/gemini.js';
 import { telegramHazirMi, onayIste, kararlariOku } from './lib/telegram.js';
 
@@ -49,16 +50,22 @@ async function main() {
   let yeniSayi = 0;
 
   // 1) Kaynakları oku
+  const kayitliLinkler = new Set(veri.hikayeler.flatMap((h) => h.kaynaklar.map((k) => k.link)));
+  const fotoKuyrugu = [];
   for (const kaynak of aktifKaynaklar()) {
     try {
-      const haberler = await kaynakOku(kaynak);
+      const haberler = kaynak.tur === 'html' ? await kurumOku(kaynak, { bilinen: (l) => kayitliLinkler.has(l) }) : await kaynakOku(kaynak);
       for (const ham of haberler) {
         const haber = haberiDegerlendir(ham, kaynak);
         if (!haber) continue;
         // 24 saatten eski Türkiye/dünya haberi alınmaz (temizlenip tekrar eklenmesin)
         if (haber.genel && haber.tarih && Date.now() - new Date(haber.tarih).getTime() > 24 * 36e5) continue;
-        const { yeni } = hikayeyeEkle(veri, haber, kaynak);
+        const { yeni, hikaye } = hikayeyeEkle(veri, haber, kaynak);
         if (yeni) yeniSayi++;
+        // Kurum fotoğrafı: yapay zekâ görselinden ve temsili fotoğraftan önce gelir
+        if (kaynak.fotoKullan && ham.foto && hikaye && (!hikaye.gorsel || hikaye.gorselKaynak === 'yz')) {
+          fotoKuyrugu.push({ hikaye, url: ham.foto, ad: kaynak.ad });
+        }
       }
       delete durum.kaynakHatalari[kaynak.id];
     } catch (e) {
@@ -115,7 +122,17 @@ async function main() {
     }
   }
 
-  // 4) Yapay zekâ görselleri (günlük limitle)
+  // 4a) Kurum fotoğrafları
+  for (const { hikaye, url, ad } of fotoKuyrugu) {
+    try {
+      hikaye.gorsel = await kurumFotosuIndir(hikaye, url, ad);
+      console.log(`📷 Kurum fotoğrafı: ${hikaye.baslik}`);
+    } catch (e) {
+      console.warn(`! Kurum fotoğrafı: ${e.message}`);
+    }
+  }
+
+  // 4b) Yapay zekâ görselleri (günlük limitle)
   for (const h of veri.hikayeler) if (/HTTP (401|403|429)/.test(h.gorselHatasi || '')) delete h.gorselHatasi;
   if (gorselUretimHazirMi()) {
     const bugun = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Istanbul' });

@@ -77,6 +77,7 @@ function ilceMetni(hikaye) {
 }
 
 export async function gorselUret(hikaye) {
+  hikaye.gorselKaynak = 'yz';
   if (CF_HAZIR) {
     const { veri, prompt } = await cfUret(hikaye);
     return kaydet(hikaye, veri, prompt);
@@ -112,6 +113,15 @@ async function tekDeneme(hikaye, anahtar) {
   const parca = json?.candidates?.[0]?.content?.parts?.find((p) => p.inlineData?.data);
   if (!parca) throw new Error(`Görsel dönmedi (${json?.candidates?.[0]?.finishReason || json?.promptFeedback?.blockReason || 'bilinmiyor'})`);
   return kaydet(hikaye, Buffer.from(parca.inlineData.data, 'base64'));
+}
+
+// Kurumun kendi haber fotoğrafını indirip saklar
+export async function kurumFotosuIndir(hikaye, url, kaynakAd) {
+  const res = await fetch(url, { headers: { 'User-Agent': 'MersinAnlikBot/1.0 (+https://mersinanlik.com)' }, signal: AbortSignal.timeout(30000) });
+  if (!res.ok) throw new Error(`Foto HTTP ${res.status}`);
+  const dosya = await kaydet(hikaye, Buffer.from(await res.arrayBuffer()));
+  hikaye.gorselKaynak = kaynakAd;
+  return dosya;
 }
 
 async function kaydet(hikaye, veri, prompt = '') {

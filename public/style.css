@@ -176,6 +176,8 @@ button.ilce-sec { border: none; font: inherit; font-weight: 700; cursor: pointer
 .kapak-foto .kapak-rozet, .kapak-foto .temsili, .kapak-foto .kunye { z-index: 1; }
 .temsili { position: absolute; right: 8px; bottom: 7px; font-size: 11px; font-weight: 700; letter-spacing: .02em; color: #fff; background: rgba(10,21,48,.55); padding: 2px 7px; border-radius: 6px; }
 .kunye { position: absolute; left: 14px; bottom: 10px; max-width: 70%; font-size: 12px; color: rgba(255,255,255,.9); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.temsili.kurum { max-width: calc(100% - 16px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.haber .temsili.kurum { font-size: 10px; }
 .kapak-genis .temsili { right: 14px; bottom: 10px; font-size: 12px; }
 .haber .zaman { margin-left: auto; color: var(--ikincil); font-size: 15px; white-space: nowrap; }
 .haber .zaman b { color: var(--metin); font-size: 16px; }
@@ -274,6 +276,8 @@ a.satir:hover { color: var(--derin-mavi); }
 .kapak-foto .kapak-rozet, .kapak-foto .temsili, .kapak-foto .kunye { z-index: 1; }
 .temsili { position: absolute; right: 8px; bottom: 7px; font-size: 11px; font-weight: 700; letter-spacing: .02em; color: #fff; background: rgba(10,21,48,.55); padding: 2px 7px; border-radius: 6px; }
 .kunye { position: absolute; left: 14px; bottom: 10px; max-width: 70%; font-size: 12px; color: rgba(255,255,255,.9); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.temsili.kurum { max-width: calc(100% - 16px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.haber .temsili.kurum { font-size: 10px; }
 .kapak-genis .temsili { right: 14px; bottom: 10px; font-size: 12px; }
 .haber .zaman { margin-left: 0; width: 100%; }
   .haber h3 { grid-column: 1 / -1; }

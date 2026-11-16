@@ -15,9 +15,20 @@
 // `npm run collect -- --dene <id>` ile deneyin.
 
 export const KAYNAKLAR = [
-  // --- Resmî kurumlar ---
-  // Valilik ve Büyükşehir'in RSS akışı yok (Kasım 2026'da kontrol edildi).
-  // İleride duyuru sayfaları ayrıca okunabilir.
+  // --- Resmî kurumlar (haber sayfası okunur, fotoğrafı "Foto: Kurum" diye kullanılır) ---
+  {
+    id: 'mersin-buyuksehir',
+    ad: 'Mersin Büyükşehir Belediyesi',
+    tur: 'html',
+    liste: 'https://www.mersin.bel.tr/haberler',
+    linkDesen: '/haber/[a-z0-9-]+-\\d{10}$',
+    gorselDesen: '/uploads/images/',
+    enFazla: 8,
+    kapsam: 'kurum',
+    yapayZekaOzeti: true,
+    fotoKullan: true,
+    aktif: true,
+  },
 
   // --- Yerel siteler (sadece başlık + link) ---
   // Hepsi Mersin haberlerinin yanında ajans kaynaklı ulusal haber de yayınlıyor,
