@@ -47,7 +47,7 @@ Kurallar:
 - Konu bir kişi, hastalık/tıp, suç, ölüm, felaket ya da siyasi tartışma ise yazı yazma, sadece {"uygun": false} döndür.
 - Başlık: Google'da aranacak şekilde net olsun (ör. "Tantuni nedir? Mersin'in meşhur lezzeti hakkında 7 bilgi"). En fazla 90 karakter.
 - spot: 1-2 cümle, yazının özeti.
-- bolumler: 5-8 madde. Her maddenin kısa bir başlığı ve 2-4 cümlelik metni olsun. Maddeler birbirini tekrar etmesin.
+- bolumler: 5-8 madde. Her maddenin kısa bir başlığı ve 3-4 cümlelik metni olsun (toplam en az 250 kelime). Maddeler birbirini tekrar etmesin.
 - sss: metinden cevaplanabilen 2-3 soru-cevap (kısa).
 - aciklama: arama motoru için 140-155 karakterlik açıklama.
 - Yalnızca JSON döndür: {"baslik":"","spot":"","aciklama":"","bolumler":[{"baslik":"","metin":""}],"sss":[{"soru":"","cevap":""}]}`;
@@ -59,7 +59,7 @@ export async function bilgiYaz(konu, mevcutSluglar = new Set()) {
   if (j?.uygun === false) throw new Error('Konu bilgi köşesine uygun değil');
   const bolumler = (j?.bolumler || []).filter((b) => b?.baslik && b?.metin && b.metin.length > 60);
   const kelime = bolumler.map((b) => b.metin).join(' ').split(/\s+/).length;
-  if (!j?.baslik || bolumler.length < 4 || kelime < 220) throw new Error(`Yazı yetersiz (${bolumler.length} bölüm, ${kelime} kelime)`);
+  if (!j?.baslik || bolumler.length < 4 || kelime < 160) throw new Error(`Yazı yetersiz (${bolumler.length} bölüm, ${kelime} kelime)`);
   let slug = slugify(j.baslik).slice(0, 70).replace(/-+$/, '');
   if (mevcutSluglar.has(slug)) slug = `${slug}-${Date.now().toString(36).slice(-4)}`;
   let gorsel = null;
@@ -146,10 +146,15 @@ export async function listeYaz(liste, mevcutSluglar = new Set()) {
       console.warn(`! Liste maddesi (${terim}): ${e.message}`);
     }
   }
-  const hedef = Number(liste.baslik.match(/\b(\d+)\b/)?.[1]) || 5;
+  let hedef = Number(liste.baslik.match(/\b(\d+)\b/)?.[1]) || 5;
+  let listeBasligi = liste.baslik;
+  if (bulunan.length < hedef && bulunan.length >= 4) {
+    listeBasligi = liste.baslik.replace(String(hedef), String(bulunan.length));
+    hedef = bulunan.length;
+  }
   const secilen = bulunan.slice(0, hedef);
   if (secilen.length < hedef) throw new Error(`Yeterli madde bulunamadı (${secilen.length}/${hedef})`);
-  const icerik = `Liste başlığı: ${liste.baslik}\n\n${secilen.map((v, i) => `[${i + 1}] ${v.baslik}\n${v.metin.slice(0, 1400)}`).join('\n\n')}`;
+  const icerik = `Liste başlığı: ${listeBasligi}\n\n${secilen.map((v, i) => `[${i + 1}] ${v.baslik}\n${v.metin.slice(0, 1400)}`).join('\n\n')}`;
   const j = await jsonYaz(LISTE_TALIMAT, icerik, { sicaklik: 0.6 });
   const bolumler = (j?.bolumler || []).filter((b) => b?.baslik && b?.metin && b.metin.length > 50);
   if (!j?.baslik || bolumler.length < hedef) throw new Error(`Liste yazısı yetersiz (${bolumler.length})`);
