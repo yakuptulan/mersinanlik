@@ -57,6 +57,7 @@ export async function bilgiYaz(konu, mevcutSluglar = new Set()) {
   if (v.metin.length < 900) throw new Error(`Kaynak metin kısa (${v.metin.length})`);
   const j = await jsonYaz(TALIMAT, `Madde: ${v.baslik}\n\n${v.metin.slice(0, 7000)}`, { sicaklik: 0.5 });
   if (j?.uygun === false) throw new Error('Konu bilgi köşesine uygun değil');
+  if (j?.baslik && /\b(hakkinda|ozellikleri|nedir\?? .*bilgi)\b/i.test(j.baslik) && !/[ıışğçöüİŞĞÇÖÜ]/.test(j.baslik)) throw new Error('Başlık Türkçe karaktersiz yazılmış');
   const bolumler = (j?.bolumler || []).filter((b) => b?.baslik && b?.metin && b.metin.length > 60);
   const kelime = bolumler.map((b) => b.metin).join(' ').split(/\s+/).length;
   if (!j?.baslik || bolumler.length < 4 || kelime < 160) throw new Error(`Yazı yetersiz (${bolumler.length} bölüm, ${kelime} kelime)`);

@@ -88,7 +88,7 @@ export const TUR_AD = { oneri: 'Öneriler', gundem: 'Gündemden', lezzet: 'Lezze
 
 // Liste / öneri yazıları ("Bu akşam ne izlesem?" gibi). Her madde Vikipedi'de aranır, bulunanlarla yazılır.
 export const LISTELER = [
-  { kimlik: 'romantik-komedi', baslik: 'Bu akşam ne izlesem? 5 romantik komedi filmi', maddeler: ['Notting Hill 1999 film', "Harry Sally'ye Rastlayınca film", 'Aşk Her Yerde 2003 film', 'Özel Bayan 1990 film', 'Gurur ve Önyargı 2005 film', 'Sevgililer Günü 2010 film'] },
+  { kimlik: 'romantik-komedi', baslik: 'Bu akşam ne izlesem? 5 romantik komedi filmi', maddeler: ['Notting Hill 1999 film', 'When Harry Met Sally film', 'Aşk Her Yerde 2003 film', 'Pretty Woman 1990 film', 'Gurur ve Önyargı 2005 film', 'Sevgililer Günü 2010 film', 'Bridget Jones film', 'Elle Gibi film', 'Aşk Tesadüfleri Sever film'] },
   { kimlik: 'mersin-lezzet', baslik: "Mersin'e gelen herkesin tatması gereken 5 lezzet", maddeler: ['Tantuni', 'Cezerye', 'Kerebiç', 'Batırık', 'Bici bici', 'Karsambaç'] },
   { kimlik: 'aile-animasyon', baslik: 'Aileyle izlenecek 5 animasyon film', maddeler: ['Oyuncak Hikâyesi 1995', 'Kayıp Balık Nemo', 'Ratatuy film', 'Yukarı Bak 2009 film', 'Karlar Ülkesi 2013 film', 'Ters Yüz 2015 film'] },
   { kimlik: 'mersin-gezi', baslik: "Hafta sonu Mersin'de gezilecek 6 tarihi yer", maddeler: ['Kızkalesi', 'Uzuncaburç', 'Alahan Manastırı', 'Kleopatra Kapısı', 'Mamure Kalesi', 'Anemurium', 'Silifke Kalesi'] },
