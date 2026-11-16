@@ -175,3 +175,52 @@ export function paylasCubugu(url, baslik) {
 <button type="button" data-kopyala>Linki kopyala</button>
 </div>`;
 }
+
+// Haberin kapak görselinin adresi (manşet kaydırıcısı için)
+export function kapakAdresi(hikaye) {
+  if (hikaye.gorsel && fs.existsSync(new URL(`../../public/uretilen/${hikaye.gorsel}`, import.meta.url))) return { src: `/uretilen/${hikaye.gorsel}`, kurum: hikaye.gorselKaynak && hikaye.gorselKaynak !== 'yz' ? hikaye.gorselKaynak : null };
+  const foto = fotoSec(hikaye);
+  if (foto) return { src: `/foto/${foto.id}-800.webp`, kurum: null };
+  return { src: `/gorsel/${kapakAdi(hikaye)}.svg`, kurum: null, cizim: true };
+}
+
+// Manşet: en önemli 10 haber, birkaç saniyede bir değişir
+export function mansetKaydirici(hikayeler) {
+  if (!hikayeler.length) return '<div class="bos">Haberler toplanıyor…</div>';
+  return `<section class="manset-kaydirici" data-kaydirici aria-roledescription="carousel" aria-label="Manşet haberleri">
+<div class="mk-sahne">
+${hikayeler
+  .map((x, i) => {
+    const kat = katBilgi(x);
+    const b = baglanti(x);
+    const g = kapakAdresi(x);
+    const yer = x.ilceler.length ? ilceAdi(x.ilceler[0]) : x.genel ? '' : 'Mersin';
+    return `<article class="mk-slayt${i ? '' : ' aktif'}" data-slayt aria-roledescription="slide" aria-label="${i + 1} / ${hikayeler.length}"${i ? ' aria-hidden="true"' : ''} style="--kat:${kat.renk}">
+<a class="mk-link" href="${h(b.href)}"${b.dis}${i ? ' tabindex="-1"' : ''}>
+<img class="mk-gorsel${g.cizim ? ' cizim' : ''}" src="${h(g.src)}" alt="" ${i ? 'loading="lazy"' : 'fetchpriority="high"'} decoding="async" width="800" height="450">
+<span class="mk-golge"></span>
+<span class="mk-ic"><span class="mk-cipler"><span class="mk-kat">${(katIkon[kat.slug] || katIkon.gundem)(16)} ${h(kat.ad)}</span>${yer ? `<span class="mk-yer">${h(yer)}</span>` : ''}</span>
+<h3>${h(x.baslik)}</h3></span>
+</a>${g.kurum ? `<span class="mk-kunye">Foto: ${h(g.kurum)}</span>` : ''}
+</article>`;
+  })
+  .join('\n')}
+<button class="mk-ok mk-geri" type="button" data-kaydir="-1" aria-label="Önceki haber">${ikon.ok(20)}</button>
+<button class="mk-ok mk-ileri" type="button" data-kaydir="1" aria-label="Sonraki haber">${ikon.ok(20)}</button>
+<span class="mk-ilerleme" aria-hidden="true"><span data-ilerleme></span></span>
+</div>
+<div class="mk-noktalar" role="tablist">${hikayeler.map((_, i) => `<button type="button" data-git="${i}" aria-label="${i + 1}. manşet"${i ? '' : ' aria-current="true"'}>${i + 1}</button>`).join('')}</div>
+</section>`;
+}
+
+// Bölümler: kategori kısa kartları (son 24 saatteki haber sayısı ve son başlık)
+export function bolumKartlari(bolumler) {
+  return `<div class="bolum-kartlar">${bolumler
+    .map((b, i) => `<a class="bolum-kart" href="${h(b.href)}" style="--kat:${b.renk};--sira:${i}">
+<span class="bk-ikon">${(katIkon[b.ikon] || katIkon.gundem)(22)}</span>
+<span class="bk-ad">${h(b.ad)}</span>
+<span class="bk-sayi">${b.sayi} haber</span>
+${b.son ? `<span class="bk-son">${h(b.son)}</span>` : ''}
+</a>`)
+    .join('')}</div>`;
+}

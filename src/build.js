@@ -8,7 +8,7 @@ import * as S from './templates/sayfalar.js';
 import * as R from './templates/rehber.js';
 import * as B from './templates/bilgi.js';
 import { baslikTemizle, kategoriBul, htmlKacis } from './lib/text.js';
-import { kendiSayfasiVar, sayfasiVar, haberYolu } from './templates/parcalar.js';
+import { kendiSayfasiVar, sayfasiVar, haberYolu, kapakAdresi } from './templates/parcalar.js';
 import { okunanlarEsle } from './lib/okunanlar.js';
 
 const DIST = path.resolve('dist');
@@ -52,7 +52,17 @@ export function insaEt({ simdi = Date.now() } = {}) {
       /(sarı|turuncu|kırmızı) kod|meteoroloji.{0,40}uyar|uyarı.{0,20}(yağış|sağanak|fırtına|sel)|(kuvvetli|şiddetli) (yağış|sağanak|rüzgar|fırtına)/i.test(x.baslik) &&
       (!x.genel || /mersin|akdeniz|doğu akdeniz|çukurova/i.test(x.baslik))
   ) || null;
-  servis.enCokOkunan = okunanlarEsle(servis.okunanlar, hikayeler, haberYolu, ILCELER);
+  // Elektrik kesintisi haberleri (Toroslar EDAŞ listesi sadece doğrulamalı adres sorgusuyla alınabiliyor)
+  servis.elektrikHaber = hikayeler
+    .filter((x) => !x.genel && simdi - new Date(x.ilkGorulme).getTime() < 48 * 36e5 && /elektrik(ler)? kesinti|elektrik(ler)?\s.{0,20}kesil|elektriksiz kal/i.test(x.baslik))
+    .slice(0, 3)
+    .map((x) => ({ baslik: x.baslik, yol: sayfasiVar(x) ? haberYolu(x) : x.kaynaklar[0].link, ilkGorulme: x.ilkGorulme }));
+  servis.enCokOkunan = okunanlarEsle(servis.okunanlar, hikayeler, haberYolu, ILCELER).map((o) => {
+    const x = hikayeler.find((y) => haberYolu(y) === o.yol);
+    if (x) return { ...o, gorsel: kapakAdresi(x).src };
+    const ikonu = [[/eczane/, 'eczane'], [/kesinti/, 'damla'], [/deprem/, 'deprem'], [/namaz/, 'hilal'], [/akaryakit/, 'yakit'], [/hava/, 'konum'], [/spor/, 'top'], [/piyasa/, 'ok']].find(([d]) => d.test(o.yol));
+    return { ...o, ikon: ikonu ? ikonu[1] : 'ok' };
+  });
 
   const sayfalar = [];
   const ekle = (yol, html, haritaya = true) => {

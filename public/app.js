@@ -197,6 +197,90 @@
   setInterval(namazGuncelle, 30000);
   document.addEventListener('click', function (e) { if (e.target.closest('[data-ilce-deger]')) setTimeout(namazGuncelle, 0); });
 
+  // ---------- Sekmeler (su / elektrik) ----------
+  document.querySelectorAll('[data-sekme-kap]').forEach(function (kap) {
+    kap.querySelectorAll('[data-sekme]').forEach(function (b) {
+      b.addEventListener('click', function (e) {
+        e.preventDefault();
+        var ad = b.getAttribute('data-sekme');
+        kap.querySelectorAll('[data-sekme]').forEach(function (x) { x.setAttribute('aria-selected', x === b ? 'true' : 'false'); });
+        kap.querySelectorAll('[data-panel]').forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== ad; p.classList.toggle('gecis', !p.hidden); });
+      });
+    });
+  });
+
+  // ---------- Manşet kaydırıcısı ----------
+  document.querySelectorAll('[data-kaydirici]').forEach(function (k) {
+    var slaytlar = [].slice.call(k.querySelectorAll('[data-slayt]'));
+    var noktalar = [].slice.call(k.querySelectorAll('[data-git]'));
+    var bar = k.querySelector('[data-ilerleme]');
+    var sure = 6000, sira = 0, zaman = null, durdu = false;
+    var azHareket = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (slaytlar.length < 2) return;
+    function goster(i) {
+      sira = (i + slaytlar.length) % slaytlar.length;
+      slaytlar.forEach(function (s, j) {
+        var aktif = j === sira;
+        s.classList.toggle('aktif', aktif);
+        if (aktif) s.removeAttribute('aria-hidden'); else s.setAttribute('aria-hidden', 'true');
+        var a = s.querySelector('a'); if (a) a.tabIndex = aktif ? 0 : -1;
+      });
+      noktalar.forEach(function (n, j) { if (j === sira) n.setAttribute('aria-current', 'true'); else n.removeAttribute('aria-current'); });
+      basla();
+    }
+    function basla() {
+      clearTimeout(zaman);
+      if (bar) { bar.classList.remove('akiyor'); void bar.offsetWidth; }
+      if (durdu || azHareket || document.hidden) return;
+      if (bar) { bar.style.setProperty('--sure', sure + 'ms'); bar.classList.add('akiyor'); }
+      zaman = setTimeout(function () { goster(sira + 1); }, sure);
+    }
+    noktalar.forEach(function (n) { n.addEventListener('click', function () { goster(Number(n.getAttribute('data-git'))); }); });
+    k.querySelectorAll('[data-kaydir]').forEach(function (b) { b.addEventListener('click', function () { goster(sira + Number(b.getAttribute('data-kaydir'))); }); });
+    var sahne = k.querySelector('.mk-sahne');
+    sahne.addEventListener('mouseenter', function () { durdu = true; basla(); });
+    sahne.addEventListener('mouseleave', function () { durdu = false; basla(); });
+    k.addEventListener('focusin', function () { durdu = true; basla(); });
+    k.addEventListener('focusout', function () { durdu = false; basla(); });
+    document.addEventListener('visibilitychange', basla);
+    var x0 = null;
+    sahne.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    sahne.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 40) goster(sira + (dx < 0 ? 1 : -1));
+    });
+    basla();
+  });
+
+  // ---------- Son dakika akışı ----------
+  document.querySelectorAll('[data-son-dakika]').forEach(function (b) {
+    var ogeler = [].slice.call(b.querySelectorAll('.sd-oge')), no = b.querySelector('[data-sd-no]'), i = 0, dur = false;
+    if (ogeler.length < 2) return;
+    b.addEventListener('mouseenter', function () { dur = true; });
+    b.addEventListener('mouseleave', function () { dur = false; });
+    setInterval(function () {
+      if (dur || document.hidden) return;
+      var eski = ogeler[i]; i = (i + 1) % ogeler.length; var yeni = ogeler[i];
+      eski.classList.remove('aktif'); eski.classList.add('cikti'); eski.tabIndex = -1;
+      yeni.classList.remove('cikti'); yeni.classList.add('aktif'); yeni.tabIndex = 0;
+      setTimeout(function () { eski.classList.remove('cikti'); }, 600);
+      if (no) no.textContent = i + 1;
+    }, 4500);
+  });
+
+  // ---------- Kaydırınca beliren kartlar ----------
+  if ('IntersectionObserver' in window) {
+    var gozcu = new IntersectionObserver(function (girdiler) {
+      girdiler.forEach(function (g) { if (g.isIntersecting) { g.target.classList.add('gorundu'); gozcu.unobserve(g.target); } });
+    }, { rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.govde .haber, .govde .kutu-haber, .bolum-kart, .govde .kat-blok, .yan .kutu, .bilgi-kart, .etkinlik, .gundem-kutu').forEach(function (el, n) {
+      el.classList.add('belir');
+      el.style.setProperty('--gecikme', ((n % 4) * 0.06) + 's');
+      gozcu.observe(el);
+    });
+  }
+
   // ---------- Paylaş ----------
   document.querySelectorAll('[data-paylas]').forEach(function (p) {
     var url = p.getAttribute('data-url'), baslik = p.getAttribute('data-baslik');

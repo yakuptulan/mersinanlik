@@ -2,12 +2,12 @@ import { SITE, ILCELER, AYAR } from '../config.js';
 import { htmlKacis as h, ayrilmaEki } from '../lib/text.js';
 import { sayfa, saat, tarihUzun, ilceAdi } from './layout.js';
 import { ikon } from './ikonlar.js';
-import { haberListesi, mansetKarti, reklamAlani, haberYolu, katBilgi, ilceCipleri, kutuKarti, gundemListesi, paylasCubugu } from './parcalar.js';
+import { sayfasiVar, haberListesi, mansetKarti, mansetKaydirici, bolumKartlari, reklamAlani, haberYolu, katBilgi, ilceCipleri, kutuKarti, gundemListesi, paylasCubugu } from './parcalar.js';
 import { KATEGORILER, GENEL, GUNDEM } from '../config.js';
 import { telefonGoster } from '../lib/eczane.js';
 import { havaIkonu, havaTuru } from './havaIkon.js';
 import { FOTOLAR } from '../fotolar.js';
-import { piyasaSeridi, namazKutusu, akaryakitKutusu, fmt, yon, ONDALIK, bugunVakit, namazVerisi, sporKutusu, puanTablosu, macListesi, etkinlikKarti, meteoBandi, burcKutusu } from './servisParcalari.js';
+import { kutuBasligi, piyasaSeridi, namazKutusu, akaryakitKutusu, fmt, yon, ONDALIK, bugunVakit, namazVerisi, sporKutusu, puanTablosu, macListesi, etkinlikKarti, meteoBandi, burcKutusu } from './servisParcalari.js';
 import { BURCLAR } from '../lib/burc.js';
 import { guncelEtkinlikler } from '../lib/etkinlik.js';
 import { bilgiKarti } from './bilgi.js';
@@ -86,6 +86,21 @@ function havaWidget(hava, ilceSlug) {
 // Kesinti saati: "09:00–16:00" (başlangıç ya da bitiş yoksa tek saat)
 const kesintiAraligi = (k) => [k.baslangic && saat(k.baslangic), k.bitis && saat(k.bitis)].filter(Boolean).join('–') || '—';
 
+// Su / elektrik sekmeli kesinti içeriği (ana sayfa kartı ve yan kutu)
+function kesintiSekmeleri(servis, su, { adet = 2, kart = false } = {}) {
+  const el = servis?.elektrikHaber || [];
+  const suSatir = (k) =>
+    kart
+      ? `<a class="takvim-satir" href="/kesintiler/"><span class="takvim-metin"><b>${h(k.ilceler.map((i) => i.ad).join(', '))}</b><small>${kesintiAraligi(k)}</small></span></a>`
+      : `<a class="yan-satir" href="/kesintiler/"><span class="yan-rozet su">${ikon.damla(18)}</span><span class="yan-metin"><b>${h(k.ilceler.map((i) => i.ad).join(', '))}</b><small>${h(k.ilceler.flatMap((i) => i.mahalleler).join(', '))}</small></span><span class="yan-sag"><small>saat</small><b>${kesintiAraligi(k)}</b></span></a>`;
+  const suIc = su.slice(0, adet).map(suSatir).join('') + (su.length > adet ? `<a class="sekme-alt" href="/kesintiler/">+${su.length - adet} kesinti daha →</a>` : '') || `<div class="sekme-bos">${servis?.suKesintisi ? 'Şu an duyurulmuş su kesintisi yok' : 'MESKİ listesi alınamadı'}</div>`;
+  const elIc = `${el.map((x) => `<a class="${kart ? 'takvim-satir' : 'yan-satir'}" href="${h(x.yol)}">${kart ? '' : `<span class="yan-rozet elektrik">${ikon.simsek(18)}</span>`}<span class="${kart ? 'takvim-metin' : 'yan-metin'}"><b>${h(x.baslik)}</b><small>${saat(x.ilkGorulme)}</small></span></a>`).join('')}
+<a class="sekme-dugme" href="${RESMI.edas}" rel="noopener" target="_blank">${ikon.simsek(16)} Adresinle sorgula <span>→</span></a>${el.length ? '' : '<span class="sekme-not">Toroslar EDAŞ listeyi adres sorgusuyla veriyor · Arıza: 186</span>'}`;
+  return `<div class="sekmeler" data-sekmeler role="tablist"><button type="button" role="tab" aria-selected="true" data-sekme="su">${ikon.damla(14)} Su${su.length ? ` <i>${su.length}</i>` : ''}</button><button type="button" role="tab" aria-selected="false" data-sekme="elektrik">${ikon.simsek(14)} Elektrik${el.length ? ` <i>${el.length}</i>` : ''}</button></div>
+<div class="sekme-panel" data-panel="su" role="tabpanel">${suIc}</div>
+<div class="sekme-panel" data-panel="elektrik" role="tabpanel" hidden>${elIc}</div>`;
+}
+
 function suAnKartlari(servis, ilceSlug = SITE.defaultIlce, simdi = Date.now()) {
   const hava = servis?.hava?.[ilceSlug];
   const dep = sonDeprem(servis);
@@ -102,11 +117,10 @@ ${havaWidget(hava, ilceSlug)}
 <div class="widget-liste" data-eczane-liste>${ilceEcz.map((e) => `<span>${h(e.ad)}</span>`).join('') || '<span>İlçene göre listeyi gör</span>'}</div>
 <span class="widget-alt" data-eczane-ilce>${ilceEcz.length ? h(ilceAdi(ilceSlug)) + ' · adres →' : 'Adres ve telefon →'}</span>
 </a>
-<a class="widget widget-turuncu widget-kesinti" href="/kesintiler/">
-<div class="widget-bas"><span class="widget-rozet">${ikon.damla(18)}</span><span class="widget-etiket">Kesintiler</span><span class="widget-sayi">${servis?.suKesintisi ? `${su.length} su` : ''}</span></div>
-<div class="takvim">${su.slice(0, 2).map((k) => `<div class="takvim-satir"><span class="takvim-metin"><b>${h(k.ilceler.map((i) => i.ad).join(', '))}</b><small>${kesintiAraligi(k)}</small></span></div>`).join('') || `<div class="takvim-satir"><span class="takvim-metin"><b>${servis?.suKesintisi ? 'Su kesintisi yok' : 'Su ve elektrik'}</b><small>Elektrik sorgusu →</small></span></div>`}</div>
-${su.length > 2 ? `<span class="widget-alt">+${su.length - 2} kesinti daha →</span>` : ''}
-</a>
+<div class="widget widget-turuncu widget-kesinti" data-sekme-kap>
+<div class="widget-bas"><a class="widget-etiket-link" href="/kesintiler/"><span class="widget-rozet">${ikon.damla(18)}</span><span class="widget-etiket">Kesintiler</span></a></div>
+${kesintiSekmeleri(servis, su, { adet: 2, kart: true })}
+</div>
 <a class="widget widget-mor" href="/deprem/">
 <div class="widget-bas"><span class="widget-rozet">${ikon.deprem(18)}</span><span class="widget-etiket">Son deprem</span></div>
 <span class="widget-deger">${dep ? dep.buyukluk.toFixed(1).replace('.', ',') : '–'}</span>
@@ -123,23 +137,49 @@ ${vakit ? `<a class="widget widget-camgobegi" href="/namaz-vakitleri/" data-nama
 </a>` : ''}
 ${yakit ? `<a class="widget widget-sari" href="/akaryakit-fiyatlari/">
 <div class="widget-bas"><span class="widget-rozet">${ikon.yakit(18)}</span><span class="widget-etiket">Akaryakıt</span></div>
-<div class="yakit-mini"><span><small>Benzin</small><b>${fmt(yakit.benzin)} ₺</b></span><span><small>Motorin</small><b>${fmt(yakit.motorin)} ₺</b></span></div>
-<span class="widget-alt">Opet · Mersin merkez</span>
+<div class="yakit-mini"><span><small>Benzin</small><b>${fmt(yakit.benzin)} ₺</b></span><span><small>Motorin</small><b>${fmt(yakit.motorin)} ₺</b></span>${yakit.lpg ? `<span><small>LPG</small><b>${fmt(yakit.lpg)} ₺</b></span>` : ''}</div>
 </a>` : ''}
 </div>`;
 }
 
+// Son dakika: son 6 saatin öne çıkan haberleri (en fazla 5), bantta sırayla döner
 function sonDakikaSec(hikayeler, simdi) {
-  return hikayeler.find(
-    (x) =>
-      (simdi - new Date(x.ilkGorulme).getTime()) / 36e5 <= AYAR.sonDakikaSaat &&
-      (x.kaynaklar.length > 1 || ['hava', 'kaza', 'asayis'].includes(x.kategori))
-  );
+  return hikayeler
+    .filter((x) => (simdi - new Date(x.ilkGorulme).getTime()) / 36e5 <= 6 && (x.kaynaklar.length > 1 || ['hava', 'kaza', 'asayis'].includes(x.kategori) || x.trend))
+    .slice(0, 5);
 }
 
-function sonDakikaBandi(hikaye) {
-  if (!hikaye) return '';
-  return `<div class="son-dakika"><span class="etiket">SON DAKİKA</span><a href="${h(hikaye.kaynaklar[0].link)}" rel="noopener nofollow" target="_blank">${h(hikaye.baslik)}</a><time datetime="${hikaye.ilkGorulme}">${saat(hikaye.ilkGorulme)}</time></div>`;
+function sonDakikaBandi(liste) {
+  if (!liste.length) return '';
+  const link = (x) => (sayfasiVar(x) ? { href: haberYolu(x), dis: '' } : { href: x.kaynaklar[0].link, dis: ' rel="noopener nofollow" target="_blank"' });
+  return `<div class="son-dakika" data-son-dakika><span class="etiket">SON DAKİKA</span><span class="sd-akis">${liste
+    .map((x, i) => { const l = link(x); return `<a class="sd-oge${i ? '' : ' aktif'}" href="${h(l.href)}"${l.dis}${i ? ' tabindex="-1"' : ''}><span>${h(x.baslik)}</span><time datetime="${x.ilkGorulme}">${saat(x.ilkGorulme)}</time></a>`; })
+    .join('')}</span>${liste.length > 1 ? `<span class="sd-sayac" aria-hidden="true"><b data-sd-no>1</b>/${liste.length}</span>` : ''}</div>`;
+}
+
+// Manşet kaydırıcısı: son 24 saatin en önemli 10 haberi (kaynak sayısı, kendi yazımız, görsel, çok aranan, yenilik)
+function mansetleriSec(hikayeler, simdi) {
+  const puan = (x) => {
+    const yas = (simdi - new Date(x.ilkGorulme).getTime()) / 36e5;
+    return new Set(x.kaynaklar.map((k) => k.ad)).size * 3 + (x.metin ? 2 : 0) + (x.gorsel ? 1.5 : 0) + (x.trend ? 2 : 0) + Math.max(0, 8 - yas) * 0.5;
+  };
+  let aday = hikayeler.filter((x) => simdi - new Date(x.ilkGorulme).getTime() < 24 * 36e5);
+  if (aday.length < 10) aday = hikayeler.slice(0, 40);
+  return [...aday].sort((a, b) => puan(b) - puan(a)).slice(0, 10);
+}
+
+// Bölümler: son 24 saatte haberi olan kategoriler, çoktan aza
+function bolumleriSec(hikayeler, simdi) {
+  const son = hikayeler.filter((x) => simdi - new Date(x.ilkGorulme).getTime() < 24 * 36e5);
+  const kaynak = son.length >= 10 ? son : hikayeler;
+  return KATEGORI_SAYFALARI.filter((k) => k.slug !== 'tum-haberler')
+    .map((k) => {
+      const liste = kaynak.filter(k.filtre);
+      return { href: `/kategori/${k.slug}/`, ad: k.slug === 'turkiye-dunya' ? 'Türkiye / Dünya' : k.ad, renk: k.renk, ikon: k.slug === 'turkiye-dunya' ? 'genel' : k.slug, sayi: liste.length, son: liste[0]?.baslik };
+    })
+    .filter((b) => b.sayi > 0)
+    .sort((a, b) => b.sayi - a.sayi)
+    .slice(0, 12);
 }
 
 function mansetSec(hikayeler, simdi) {
@@ -163,28 +203,22 @@ export function yanKutular(servis, ilce = null, { anaSayfa = false } = {}) {
   const okunan = servis?.enCokOkunan || [];
   return `<aside class="yan">
 ${reklamAlani('yan-ust')}
-${okunan.length >= 3 ? `<section class="kutu"><div class="kutu-bas"><h2>En çok okunanlar</h2><span class="kutu-alt">son 24 saat</span></div>
-<ol class="gundem-liste tek">${okunan.map((o, i) => `<li><span class="gundem-no">${i + 1}</span><span class="gundem-ic"><a href="${h(o.yol)}">${h(o.baslik)}</a></span></li>`).join('')}</ol></section>` : ''}
-${ilce ? `<section class="kutu">
-<div class="kutu-bas"><h2>${h(ilce.ad)} nöbetçi eczaneler</h2><a href="/nobetci-eczane/#${ilce.slug}">Tümü</a></div>
+${okunan.length >= 3 ? `<section class="kutu kutu-okunan">${kutuBasligi({ ikon: ikon.alev(18), baslik: 'En çok okunanlar', alt: 'son 24 saat' })}
+<ol class="okunan-liste">${okunan.map((o, i) => `<li><a href="${h(o.yol)}"><span class="ok-no">${i + 1}</span>${o.gorsel ? `<img src="${h(o.gorsel)}" alt="" width="64" height="48" loading="lazy">` : `<span class="ok-ikon">${(ikon[o.ikon] || ikon.ok)(20)}</span>`}<span class="ok-baslik">${h(o.baslik)}</span></a></li>`).join('')}</ol></section>` : ''}
+${ilce ? `<section class="kutu kutu-eczane">
+${kutuBasligi({ ikon: ikon.eczane(18), baslik: `${h(ilce.ad)} nöbetçi eczaneler`, link: `/nobetci-eczane/#${ilce.slug}` })}
 ${eczaneler.map((e) => `<a class="satir" href="tel:${h(e.telefon)}"><span>${ikon.eczane(20)} ${h(e.ad)}</span><small>${h(telefonGoster(e.telefon))}</small></a>`).join('') || `<a class="satir" href="/nobetci-eczane/"><span>Bugünün listesi</span><small>→</small></a>`}
 </section>` : ''}
-<section class="kutu">
-<div class="kutu-bas"><h2>${ilce ? `${h(ilce.ad)} kesintileri` : 'Bugünkü kesintiler'}</h2><a href="/kesintiler/">Tümü</a></div>
-<div class="yan-liste">
-${su.slice(0, 4).map((k) => `<a class="yan-satir" href="/kesintiler/">
-<span class="yan-rozet su">${ikon.damla(18)}</span>
-<span class="yan-metin"><b>${h(k.ilceler.map((i) => i.ad).join(', '))}</b><small>${h(k.ilceler.flatMap((i) => i.mahalleler).join(', '))}</small></span>
-<span class="yan-sag"><small>saat</small><b>${kesintiAraligi(k)}</b></span></a>`).join('') || `<div class="yan-satir"><span class="yan-rozet su">${ikon.damla(18)}</span><span class="yan-metin"><b>Su kesintisi yok</b><small>MESKİ duyurusu bulunmuyor</small></span></div>`}
-</div>
-<a class="yan-dugme" href="${RESMI.edas}" rel="noopener" target="_blank">${ikon.simsek(18)} Elektrik kesintisi sorgula <span>→</span></a>
+<section class="kutu kutu-kesinti">
+${kutuBasligi({ ikon: ikon.damla(18), baslik: ilce ? `${h(ilce.ad)} kesintileri` : 'Kesintiler', link: '/kesintiler/' })}
+<div class="yan-liste" data-sekme-kap>${kesintiSekmeleri(servis, su, { adet: 4 })}</div>
 </section>
 ${anaSayfa ? '' : namazKutusu(servis, ilce)}
 ${sporKutusu(servis)}
 ${anaSayfa ? '' : akaryakitKutusu(servis, ilce)}
 ${burcKutusu(servis)}
-<section class="kutu">
-<div class="kutu-bas"><h2>Son depremler</h2><a href="/deprem/">Tümü</a></div>
+<section class="kutu kutu-deprem">
+${kutuBasligi({ ikon: ikon.deprem(18), baslik: 'Son depremler', link: '/deprem/' })}
 <div class="yan-liste">
 ${(servis?.deprem || []).slice(0, 4).map((d) => { const y = depremYeri(d.yer); return `<div class="yan-satir">
 <span class="yan-rozet deprem ${depremSinifi(d.buyukluk)}">${d.buyukluk.toFixed(1).replace('.', ',')}</span>
@@ -234,15 +268,18 @@ function gundemdekilerSec(hikayeler, simdi, haric) {
 export function anaSayfa({ hikayeler, servis, simdi }) {
   const mersin = hikayeler.filter((x) => !x.genel);
   const genel = hikayeler.filter((x) => x.genel).slice(0, 4);
-  const manset = mansetSec(mersin, simdi);
-  const liste = mersin.filter((x) => x !== manset).slice(0, 8);
-  const gundem = gundemdekilerSec(hikayeler, simdi, new Set([manset]));
-  const gosterilen = new Set([manset, ...liste]);
+  const mansetler = mansetleriSec(mersin, simdi);
+  const manset = mansetler[0];
+  const mansetSet = new Set(mansetler);
+  const liste = mersin.filter((x) => !mansetSet.has(x)).slice(0, 8);
+  const gundem = gundemdekilerSec(hikayeler, simdi, mansetSet);
+  const gosterilen = new Set([...mansetler, ...liste]);
+  const bolumler = bolumleriSec(hikayeler, simdi);
   const ust = `${meteoBandi(servis)}${sonDakikaBandi(sonDakikaSec(hikayeler.filter((x) => x !== manset), simdi))}
 <div class="su-an-bas su-an-kompakt">
 <div><h1>Mersin'de şu an</h1><p>${tarihUzun(new Date(simdi).toISOString())} · <span class="canli-saat" data-canli-saat>${saat(new Date(simdi).toISOString())}</span></p></div>
 <div class="ilce-secici" data-ilce-secici>
-<button class="ilce-sec" type="button" aria-expanded="false" aria-controls="ilce-liste">${ikon.konum(20)}<span>Benim ilçem: <span data-ilce-ad>Seç</span></span><span class="daire">${ikon.asagi(18)}</span></button>
+<button class="ilce-sec" type="button" aria-expanded="false" aria-controls="ilce-liste">${ikon.konum(20)}<span data-ilce-ad>Mersin</span><span class="daire">${ikon.asagi(18)}</span></button>
 <div class="ilce-acilir" id="ilce-liste" hidden>${ILCELER.map((i) => `<button type="button" data-ilce-deger="${i.slug}" aria-pressed="false">${h(i.ad)}</button>`).join('')}</div>
 </div>
 </div>
@@ -250,9 +287,9 @@ ${suAnKartlari(servis, SITE.defaultIlce, simdi)}
 ${piyasaSeridi(servis?.piyasa)}`;
   const icerik = `<main class="kap govde">
 <div class="ana">
-<div class="bolum-bas"><h2>Manşet</h2><span>Son güncelleme: ${saat(new Date(simdi).toISOString())} (<span data-once="${new Date(simdi).toISOString()}"></span>)</span></div>
-${manset ? mansetKarti(manset) : '<div class="bos">Haberler toplanıyor…</div>'}
-${gundem.length >= 2 ? `<section class="kutu gundem-kutu"><div class="kutu-bas"><h2>Gündemdekiler</h2><span class="kutu-alt">En çok kaynağın yazdığı haberler</span></div>${gundemListesi(gundem)}</section>` : ''}
+${mansetKaydirici(mansetler)}
+${gundem.length >= 2 ? `<section class="kutu gundem-kutu"><div class="kutu-bas"><h2>Çok konuşulanlar</h2><span class="kutu-alt">En çok sitenin yazdığı haberler</span></div>${gundemListesi(gundem)}</section>` : ''}
+${bolumler.length >= 3 ? `<section class="bolumler-blok"><div class="bolum-bas"><h2>Gündemdekiler</h2><span>Son 24 saat · bölümler</span></div>${bolumKartlari(bolumler)}</section>` : ''}
 <div class="bolum-bas" style="margin-top:14px"><h2>Mersin'den son haberler</h2><a class="bolum-link" href="/kategori/tum-haberler/">Tüm haberler →</a></div>
 ${haberListesi(liste)}
 ${(() => {
@@ -359,15 +396,7 @@ export function haberSayfasi({ hikaye, ilgili, servis }) {
 ${gorselUrl ? `<figure class="haber-gorsel"><img src="/uretilen/${h(hikaye.gorsel)}" alt="${kurumFoto ? h(hikaye.baslik) : 'Temsili görsel (yapay zekâ ile üretildi)'}" width="800" height="450" decoding="async"><figcaption>${kurumFoto ? `Fotoğraf: ${h(kurumFoto)}` : 'Temsili görsel · yapay zekâ ile üretilmiştir'}</figcaption></figure>` : ''}
 ${hikaye.ozet ? `<p class="haber-spot">${h(hikaye.ozet)}</p>` : ''}
 ${paragraflar}
-<div class="haber-kaynak">${ikon.bilgi ? ikon.bilgi(20) : ''}<p>${
-    hikaye.kurum && tamYazi
-      ? `Bu haber, <strong>${h(kurumKayit.ad)}</strong> tarafından yayımlanan duyuru esas alınarak ${SITE.name} tarafından derlenmiştir.`
-      : tamYazi
-        ? `Bu haber, <strong>${h(kurumKayit.ad)}</strong> haberinden yararlanılarak ${SITE.name} tarafından kendi cümlelerimizle hazırlanmıştır.`
-        : `Haberin ayrıntıları kaynağında yer alıyor.`
-  } Kaynak: <a href="${h(kurumKayit.link)}" rel="noopener" target="_blank">${h(kurumKayit.ad)} →</a>${
-    digerleri.length ? `<br>Konuyu yazan diğer kaynaklar: ${digerleri.slice(0, 4).map((k) => `<a href="${h(k.link)}" rel="noopener nofollow" target="_blank">${h(k.ad)}</a>`).join(', ')}` : ''
-  }</p></div>
+<p class="haber-kaynak-kisa">Kaynak: ${[kurumKayit, ...digerleri.slice(0, 2)].map((k) => `<a href="${h(k.link)}" rel="noopener nofollow" target="_blank">${h(k.ad)}</a>`).join(', ')}</p>
 ${paylasCubugu(SITE.url + yol, hikaye.baslik)}
 </article>
 ${ilgili.length ? `<div class="bolum-bas"><h2>${ilce ? `${h(ilce.ad)}'${ayrilmaEki(ilce.ad)} diğer haberler` : 'Diğer haberler'}</h2></div>\n${haberListesi(ilgili)}` : ''}
@@ -380,6 +409,7 @@ ${yanKutular(servis, ilce)}
     yol,
     aktif: '/',
     noindex: !tamYazi,
+    tema: kat.slug === 'genel' ? 'dunya' : kat.slug,
     ust,
     icerik,
     jsonLd,
@@ -534,17 +564,17 @@ export function akaryakitSayfasi({ servis }) {
   const a = servis?.akaryakit;
   const satirlar = ILCELER.map((i) => {
     const f = a?.ilceler?.[i.slug];
-    return `<tr><th scope="row">${h(i.ad)}</th><td>${f ? fmt(f.benzin) + ' ₺' : '–'}</td><td>${f ? fmt(f.motorin) + ' ₺' : '–'}</td></tr>`;
+    return `<tr><th scope="row">${h(i.ad)}</th><td>${f ? fmt(f.benzin) + ' ₺' : '–'}</td><td>${f ? fmt(f.motorin) + ' ₺' : '–'}</td><td>${f?.lpg ? fmt(f.lpg) + ' ₺' : '–'}</td></tr>`;
   }).join('');
   const m = a?.ilceler?.akdeniz;
   return sayfa({
-    baslik: 'Mersin akaryakıt fiyatları – benzin, motorin bugün',
-    aciklama: `Mersin'de bugün benzin ${m ? fmt(m.benzin) + ' ₺' : ''}, motorin ${m ? fmt(m.motorin) + ' ₺' : ''}. 13 ilçe için güncel pompa fiyatları.`,
+    baslik: 'Mersin akaryakıt fiyatları – benzin, motorin, LPG bugün',
+    aciklama: `Mersin'de bugün benzin ${m ? fmt(m.benzin) + ' ₺' : ''}, motorin ${m ? fmt(m.motorin) + ' ₺' : ''}${m?.lpg ? `, LPG ${fmt(m.lpg)} ₺` : ''}. 13 ilçe için güncel pompa fiyatları.`,
     yol: '/akaryakit-fiyatlari/',
     ust: `<div class="su-an-bas"><div><h1>Akaryakıt fiyatları</h1><p style="margin-top:8px">Mersin · ilçe ilçe pompa fiyatları</p></div></div>`,
     icerik: `<main class="kap govde"><div class="ana">
-<div class="tablo-kap"><table class="tablo"><thead><tr><th>İlçe</th><th>Benzin (95)</th><th>Motorin</th></tr></thead><tbody>${satirlar}</tbody></table></div>
-<p style="color:var(--ikincil);font-size:15px">Kaynak: Opet ilçe pompa fiyatları (litre). Diğer istasyonlarda fiyatlar birkaç kuruş farklı olabilir. Son güncelleme: ${a?.guncelleme ? saat(a.guncelleme) : '–'}</p>
+<div class="tablo-kap"><table class="tablo"><thead><tr><th>İlçe</th><th>Benzin (95)</th><th>Motorin</th><th>LPG</th></tr></thead><tbody>${satirlar}</tbody></table></div>
+<p style="color:var(--ikincil);font-size:15px">Kaynak: benzin ve motorin Opet, LPG (otogaz) Petrol Ofisi ilçe pompa fiyatları (litre). Diğer istasyonlarda fiyatlar birkaç kuruş farklı olabilir. Son güncelleme: ${a?.guncelleme ? saat(a.guncelleme) : '–'}</p>
 </div>${yanKutular(servis)}</main>`,
   });
 }
@@ -652,6 +682,7 @@ ${k.aciklama ? `<p>${h(k.aciklama.charAt(0) + k.aciklama.slice(1).toLocaleLowerC
 ${su.length ? `<div class="eczane-liste">${su.map(kart).join('')}</div>` : servis?.suKesintisi ? '<div class="bos">Şu an duyurulmuş su kesintisi yok.</div>' : `<div class="bos">Liste şu an alınamadı. <a href="${RESMI.meski}" rel="noopener" target="_blank">MESKİ'nin sayfasına bakın →</a></div>`}
 ${servis?.suKesintisi ? guncellemeNotu(servis.suKesintisi, 'MESKİ', RESMI.meski) : ''}
 <div class="bolum-bas" style="margin-top:34px"><h2>Elektrik kesintileri</h2></div>
+${(servis?.elektrikHaber || []).length ? `<div class="yan-liste" style="margin-bottom:14px">${servis.elektrikHaber.map((x) => `<a class="yan-satir" href="${h(x.yol)}"><span class="yan-rozet elektrik">${ikon.simsek(18)}</span><span class="yan-metin"><b>${h(x.baslik)}</b><small>${saat(x.ilkGorulme)}</small></span></a>`).join('')}</div>` : ''}
 <p style="color:var(--govde)">Toroslar EDAŞ, kesintileri adres seçerek sorgulatıyor. Kendi adresinizi buradan seçebilirsiniz:</p>
 <p><a class="hap" href="${RESMI.edas}" rel="noopener" target="_blank">Elektrik kesintisi sorgula<span class="daire">${ikon.ok(18)}</span></a></p>`;
   return sayfa({

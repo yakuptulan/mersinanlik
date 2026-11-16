@@ -21,6 +21,7 @@ import { etkinlikGetir } from './lib/etkinlik.js';
 import { meteoGetir } from './lib/meteo.js';
 import { burcYaz } from './lib/burc.js';
 import { okunanlarGetir } from './lib/okunanlar.js';
+import { ulkeKodu } from './lib/bayrak.js';
 
 const DOSYA = path.resolve('data/servisler.json');
 const UA = 'mersinanlik.com iletisim@mersinanlik.com';
@@ -193,6 +194,20 @@ async function main() {
       console.log(`Spor: Süper Lig ${spor.superLig?.puan?.length || 0} takım, 3. Lig ${spor.ucuncuLig?.puan?.length || 0}, milli ${spor.milli?.maclar?.length || 0} maç`);
     } catch (e) {
       console.warn('! Spor:', e.message);
+    }
+  }
+  // Milli maçlardaki ülkelerin bayrakları (bir kez indirilir)
+  const kodlar = new Set((yeni.spor?.milli?.maclar || eski.spor?.milli?.maclar || []).flatMap((m) => [ulkeKodu(m.ev), ulkeKodu(m.dep)]).filter(Boolean));
+  for (const kod of kodlar) {
+    const dosya = path.resolve(`public/bayrak/${kod}.png`);
+    if (fs.existsSync(dosya)) continue;
+    try {
+      const r = await fetch(`https://flagcdn.com/w80/${kod}.png`, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(15000) });
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      fs.mkdirSync(path.dirname(dosya), { recursive: true });
+      fs.writeFileSync(dosya, Buffer.from(await r.arrayBuffer()));
+    } catch (e) {
+      console.warn(`! Bayrak (${kod}): ${e.message}`);
     }
   }
   fs.mkdirSync(path.dirname(DOSYA), { recursive: true });

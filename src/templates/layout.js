@@ -3,6 +3,7 @@ import crypto from 'node:crypto';
 import { SITE, ILCELER } from '../config.js';
 import { htmlKacis as h } from '../lib/text.js';
 import { ikon, logoIsaret } from './ikonlar.js';
+import { temaBul, temaSahnesi } from './temalar.js';
 
 // CSS/JS değişince tarayıcı eski dosyayı kullanmasın diye adrese içerik özeti eklenir
 const surum = (dosya) => {
@@ -61,13 +62,15 @@ const KURULUS = {
   publishingPrinciples: SITE.url + '/yayin-ilkeleri/',
 };
 
-export function sayfa({ baslik, aciklama = SITE.description, yol = '/', aktif = yol, ust = '', icerik, noindex = false, jsonLd = null, hava = null, ekVeri = null, gorsel = null, tur = 'website' }) {
+export function sayfa({ baslik, aciklama = SITE.description, yol = '/', aktif = yol, ust = '', icerik, noindex = false, jsonLd = null, hava = null, ekVeri = null, gorsel = null, tur = 'website', tema = undefined }) {
+  const t = temaSahnesi(tema === undefined ? temaBul(yol) : tema);
   const tamBaslik = baslik ? `${baslik} | ${SITE.name}` : `${SITE.name} – Mersin son dakika haberleri`;
   const kanonik = SITE.url + yol;
   return `<!doctype html>
 <html lang="tr">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${h(tamBaslik)}</title>
 <meta name="description" content="${h(aciklama)}">
@@ -98,7 +101,8 @@ ${gorsel ? `<meta property="og:image" content="${h(gorsel)}">` : `<meta property
 ${jsonLd ? `<script type="application/ld+json">${guvenliJson(jsonLd)}</script>` : ''}
 </head>
 <body>
-<header class="ust${ust ? '' : ' kisa'}">
+<header class="ust${ust ? '' : ' kisa'}${t.sinif}"${t.stil}>
+${t.sahne}
 <div class="kap">
 ${ustSatir(aktif)}
 ${ust}

@@ -56,7 +56,7 @@ const SABIT = {
 
 // Yolları sitede gösterilecek başlıklara çevirir (ana sayfa ve teknik sayfalar hariç)
 export function okunanlarEsle(okunanlar, hikayeler, haberYolu, ilceler) {
-  const haberler = new Map(hikayeler.filter((x) => x.metin).map((x) => [haberYolu(x), x.baslik]));
+  const haberler = new Map(hikayeler.filter((x) => x.metin || x.ozet).map((x) => [haberYolu(x), x.baslik]));
   const sonuc = [];
   for (const { yol, sayi } of okunanlar?.liste || []) {
     let baslik = haberler.get(yol) || SABIT[yol];

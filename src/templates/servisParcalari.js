@@ -5,6 +5,27 @@ import { DIYANET_ILCE, VAKITLER } from '../lib/namaz.js';
 import { ikon } from './ikonlar.js';
 import { SITE, ILCELER } from '../config.js';
 import { BURCLAR } from '../lib/burc.js';
+import { ulkeKodu } from '../lib/bayrak.js';
+import fs from 'node:fs';
+
+// Yan kutu başlığı: renkli bant, ikon, başlık ve "Tümü" bağlantısı
+export function kutuBasligi({ ikon: ik = '', baslik, link = null, alt = null }) {
+  return `<div class="kutu-bas kutu-bant"><span class="kb-ikon">${ik}</span><h2>${baslik}</h2>${link ? `<a href="${link}">Tümü <span aria-hidden="true">→</span></a>` : alt ? `<span class="kutu-alt">${alt}</span>` : ''}</div>`;
+}
+
+// Ülke bayrağı (indirilmişse) ya da takım rozeti (baş harfler)
+export function bayrak(ad) {
+  const kod = ulkeKodu(ad);
+  if (kod && fs.existsSync(new URL(`../../public/bayrak/${kod}.png`, import.meta.url))) return `<img class="bayrak" src="/bayrak/${kod}.png" alt="" width="28" height="20" loading="lazy">`;
+  return '';
+}
+export function takimRozeti(ad, mersin = false) {
+  const harf = String(ad).split(/\s+/).filter((k) => /^[A-ZÇĞİÖŞÜ0-9]/.test(k)).slice(0, 2).map((k) => k[0]).join('') || '?';
+  let n = 0;
+  for (const c of String(ad)) n = (n * 31 + c.charCodeAt(0)) >>> 0;
+  const renk = mersin ? '#C8102E' : `hsl(${n % 360} 55% 42%)`;
+  return `<span class="takim-rozet" style="--tr:${renk}">${h(harf)}</span>`;
+}
 
 // Gösterimde ondalık sayısı
 export const ONDALIK = { gram: 2, ceyrek: 0, gumus: 2, usd: 2, eur: 2, btc: 0, bist: 0 };
@@ -55,7 +76,7 @@ export function namazKutusu(servis, ilce = null, simdi = Date.now()) {
   if (!v) return '';
   const yer = ilce && !['akdeniz', 'mezitli', 'toroslar', 'yenisehir'].includes(slug) ? ilce.ad : 'Mersin merkez';
   return `<section class="kutu namaz-kutu" data-namaz${ilce ? ` data-namaz-sabit="${slug}"` : ''}>
-<div class="kutu-bas"><h2>Namaz vakitleri</h2><a href="/namaz-vakitleri/${ilce ? `${slug}/` : ''}">Tümü</a></div>
+${kutuBasligi({ ikon: ikon.hilal(18), baslik: 'Namaz vakitleri', link: `/namaz-vakitleri/${ilce ? `${slug}/` : ''}` })}
 <div class="namaz-sonraki">${ikon.hilal(20)}<span><small data-namaz-yer>${h(yer)}</small><b data-namaz-sonraki>Bugünün vakitleri</b></span></div>
 <div class="namaz-izgara">${VAKITLER.map(([k, ad]) => `<div data-vakit="${k}"><small>${ad}</small><b>${h(v[k])}</b></div>`).join('')}</div>
 <script type="application/json" data-namaz-veri>${JSON.stringify(namazVerisi(servis, simdi)).replace(/</g, '\\u003c')}</script>
@@ -74,13 +95,14 @@ export function akaryakitKutusu(servis, ilce = null) {
     const parca = [fark(m.benzin, a.onceki.benzin) && `benzin ${fark(m.benzin, a.onceki.benzin)}`, fark(m.motorin, a.onceki.motorin) && `motorin ${fark(m.motorin, a.onceki.motorin)}`].filter(Boolean);
     if (parca.length) not = `<p class="kutu-not">Son değişiklik: ${parca.join(', ')}</p>`;
   }
-  return `<section class="kutu">
-<div class="kutu-bas"><h2>Akaryakıt</h2><a href="/akaryakit-fiyatlari/">Tümü</a></div>
+  return `<section class="kutu kutu-yakit">
+${kutuBasligi({ ikon: ikon.yakit(18), baslik: 'Akaryakıt', link: '/akaryakit-fiyatlari/' })}
 <div class="yakit-izgara">
 <div><span class="yan-rozet yakit">${ikon.yakit(18)}</span><span><small>Benzin</small><b>${fmt(f.benzin)} ₺</b></span></div>
 <div><span class="yan-rozet yakit">${ikon.yakit(18)}</span><span><small>Motorin</small><b>${fmt(f.motorin)} ₺</b></span></div>
+${f.lpg ? `<div><span class="yan-rozet yakit lpg">${ikon.yakit(18)}</span><span><small>LPG</small><b>${fmt(f.lpg)} ₺</b></span></div>` : ''}
 </div>
-${not}<p class="kutu-not">Opet pompa fiyatı · ${h(ilce && a?.ilceler?.[slug] ? ilce.ad : 'Mersin merkez')}</p>
+${not}<p class="kutu-not">Opet${f.lpg ? ', LPG Petrol Ofisi' : ''} · ${h(ilce && a?.ilceler?.[slug] ? ilce.ad : 'Mersin merkez')}</p>
 </section>`;
 }
 
@@ -92,11 +114,18 @@ export function sporKutusu(servis) {
   const mersin = (sp?.ucuncuLig?.puan || []).filter((x) => x.mersin);
   const milli = sp?.milli?.maclar?.[0];
   if (!mersin.length && !milli) return '';
-  return `<section class="kutu">
-<div class="kutu-bas"><h2>Spor</h2><a href="/spor/">Tümü</a></div>
+  const [evG, depG] = String(milli?.skor || '').split('-').map(Number);
+  const trEv = milli && /türkiye/i.test(milli.ev);
+  const sonuc = milli && Number.isFinite(evG) ? ((trEv ? evG - depG : depG - evG) > 0 ? 'G' : evG === depG ? 'B' : 'M') : null;
+  return `<section class="kutu kutu-spor">
+${kutuBasligi({ ikon: ikon.top ? ikon.top(18) : '⚽', baslik: 'Spor', link: '/spor/' })}
+${milli ? `<a class="milli-kart" href="/spor/#milli">
+<span class="milli-ust">A Milli Takım · ${h(milli.organizasyon)}</span>
+<span class="milli-skor"><span class="milli-takim">${bayrak(milli.ev) || takimRozeti(milli.ev)}<b>${h(milli.ev)}</b></span><span class="milli-sonuc${sonuc ? ` s-${sonuc}` : ''}">${h(String(milli.skor || 'v').replace('-', ' – '))}</span><span class="milli-takim">${bayrak(milli.dep) || takimRozeti(milli.dep)}<b>${h(milli.dep)}</b></span></span>
+<span class="milli-alt">${kisaTarih(milli.tarih)}${sonuc ? ` · ${sonuc === 'G' ? 'Galibiyet' : sonuc === 'B' ? 'Beraberlik' : 'Mağlubiyet'}` : ''}</span>
+</a>` : ''}
 <div class="yan-liste">
-${mersin.map((t) => `<a class="yan-satir" href="/spor/#mersin"><span class="yan-rozet spor">${t.sira}.</span><span class="yan-metin"><b>${h(t.takim)}</b><small>3. Lig 3. Grup · ${t.o} maç</small></span><span class="yan-sag"><small>puan</small><b>${t.p}</b></span></a>`).join('')}
-${milli ? `<a class="yan-satir" href="/spor/#milli"><span class="yan-rozet milli">TR</span><span class="yan-metin"><b>${h(milli.ev)} ${h(milli.skor)} ${h(milli.dep)}</b><small>A Milli · ${h(milli.organizasyon)}</small></span><span class="yan-sag"><small>${kisaTarih(milli.tarih)}</small></span></a>` : ''}
+${mersin.map((t) => `<a class="yan-satir takim-satir" href="/spor/#mersin">${takimRozeti(t.takim, true)}<span class="yan-metin"><b>${h(t.takim)}</b><small>3. Lig 3. Grup · ${t.sira}. sırada · ${t.o} maç</small></span><span class="yan-sag puan-rozet"><b>${t.p}</b><small>puan</small></span></a>`).join('')}
 </div>
 </section>`;
 }
@@ -109,7 +138,7 @@ export function puanTablosu(puan, { kisa = false } = {}) {
 
 export function macListesi(maclar) {
   return `<div class="mac-liste">${maclar
-    .map((m) => `<div class="mac${m.mersin ? ' mersin' : ''}"><span class="mac-zaman">${kisaTarih(m.tarih)}${m.saat ? ` · ${m.saat}` : ''}</span><span class="mac-ev">${h(m.ev)}</span><span class="mac-skor${m.skor ? '' : ' bos'}">${m.skor ? h(m.skor.replace('-', ' - ')) : 'v'}</span><span class="mac-dep">${h(m.dep)}</span></div>`)
+    .map((m) => `<div class="mac${m.mersin ? ' mersin' : ''}"><span class="mac-zaman">${kisaTarih(m.tarih)}${m.saat ? ` · ${m.saat}` : ''}</span><span class="mac-ev">${h(m.ev)} ${bayrak(m.ev)}</span><span class="mac-skor${m.skor ? '' : ' bos'}">${m.skor ? h(m.skor.replace('-', ' - ')) : 'v'}</span><span class="mac-dep">${bayrak(m.dep)} ${h(m.dep)}</span></div>`)
     .join('')}</div>`;
 }
 
@@ -149,8 +178,8 @@ export function meteoBandi(servis, ilceSlug = null) {
 // ---------- Burçlar ----------
 export function burcKutusu(servis) {
   if (!servis?.burc?.yorumlar) return '';
-  return `<section class="kutu">
-<div class="kutu-bas"><h2>Günlük burçlar</h2><a href="/burclar/">Tümü</a></div>
+  return `<section class="kutu kutu-burc">
+${kutuBasligi({ ikon: '✦', baslik: 'Günlük burçlar', link: '/burclar/' })}
 <div class="burc-izgara">${BURCLAR.map(([slug, ad, , isaret]) => `<a href="/burclar/#${slug}"><span>${isaret}</span>${h(ad)}</a>`).join('')}</div>
 </section>`;
 }
