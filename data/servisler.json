@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-16T19:31:20.764Z",
+ "guncelleme": "2026-11-16T19:58:07.825Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -7,7 +7,7 @@
    "gunler": [
     {
      "tarih": "2026-11-16",
-     "min": 15,
+     "min": 16,
      "max": 16,
      "durum": "Parçalı bulutlu"
     },
@@ -15,19 +15,19 @@
      "tarih": "2026-11-17",
      "min": 13,
      "max": 20,
-     "durum": "Hafif sağanak"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-18",
      "min": 15,
-     "max": 21,
+     "max": 20,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-19",
      "min": 14,
      "max": 20,
-     "durum": "Parçalı bulutlu"
+     "durum": "Bulutlu"
     },
     {
      "tarih": "2026-11-20",
@@ -362,14 +362,14 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 14,
-   "durum": "Az bulutlu",
+   "sicaklik": 15,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-16",
      "min": 14,
-     "max": 14,
-     "durum": "Parçalı bulutlu"
+     "max": 15,
+     "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-17",
@@ -386,7 +386,7 @@
     {
      "tarih": "2026-11-19",
      "min": 15,
-     "max": 20,
+     "max": 21,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -505,7 +505,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-16T19:31:24.664Z",
+  "guncelleme": "2026-11-16T19:58:11.497Z",
   "liste": [
    {
     "ad": "Abay Eczanesi",
@@ -774,7 +774,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-16T19:31:25.650Z",
+  "guncelleme": "2026-11-16T19:58:12.661Z",
   "liste": [
    {
     "tur": "su",
@@ -882,6 +882,22 @@
        "Kösbucağı",
        "Tabiye",
        "Yüksek"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Tarsus ilçesi Barbaros mahallesi ana isale hatıda meydana gelen arıza sebebiyle su kesintisi yaşanmaktadır suları saat 24.00 da verilmesi planlanmaktadır",
+    "baslangic": "2026-11-16T19:36:00.000Z",
+    "bitis": "2026-11-16T21:00:05.000Z",
+    "ilceler": [
+     {
+      "ilce": "tarsus",
+      "ad": "Tarsus",
+      "mahalleler": [
+       "Barbaros"
       ]
      }
     ]
@@ -1060,7 +1076,7 @@
   "kaynakSaati": "2026-11-16 22:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-16T19:31:31.399Z",
+  "guncelleme": "2026-11-16T19:58:18.586Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 72.99,
@@ -2799,7 +2815,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-16T19:31:31.913Z",
+  "guncelleme": "2026-11-16T19:58:19.042Z",
   "liste": [
    {
     "yol": "/",
