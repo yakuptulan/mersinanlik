@@ -39,6 +39,21 @@ export async function meteoGetir(ua) {
     if (!r.ok) throw new Error(`HTTP ${r.status} MGM ${gun}`);
     return r.json();
   };
-  const uyarilar = [...uyariCoz(await al('today'), 'bugun'), ...uyariCoz(await al('tomorrow'), 'yarin')];
+  // Günler birbirinden bağımsız: biri hata verirse diğeri yine alınır; geçici hatada bir kez daha denenir
+  const uyarilar = [];
+  let basari = 0;
+  for (const [gun, ad] of [['today', 'bugun'], ['tomorrow', 'yarin']]) {
+    for (let deneme = 0; deneme < 2; deneme++) {
+      try {
+        uyarilar.push(...uyariCoz(await al(gun), ad));
+        basari++;
+        break;
+      } catch (e) {
+        if (deneme) console.warn(`! Meteoroloji (${gun}): ${e.message}`);
+        else await new Promise((x) => setTimeout(x, 3000));
+      }
+    }
+  }
+  if (!basari) throw new Error('MGM uyarıları alınamadı');
   return { guncelleme: new Date().toISOString(), uyarilar };
 }
