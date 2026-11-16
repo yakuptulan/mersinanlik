@@ -24,24 +24,25 @@
   // Benim ilçem
   var ilcem = oku('ilcem');
   var adlar = window.__ILCE_ADLARI__ || {};
-  if (ilcem && adlar[ilcem]) {
-    document.querySelectorAll('[data-ilce-sec]').forEach(function (a) { a.href = '/ilce/' + ilcem + '/'; });
-    document.querySelectorAll('[data-ilcem]').forEach(function (a) { a.href = '/ilce/' + ilcem + '/'; });
-    document.querySelectorAll('[data-ilce-sec] [data-ilce-ad]').forEach(function (s) { s.textContent = adlar[ilcem]; });
-    var hava = (window.__HAVA__ || {})[ilcem];
+  var ikonlar = window.__HAVA_IKON__ || {};
+  var sira = 0;
+  // Aynı sayfada birden fazla SVG olacağı için gradient id'lerini benzersiz yap
+  function ikon(tur, boyut) {
+    var html = ikonlar[tur] || '';
+    sira++;
+    html = html.replace(/id="([gbkh])(\d+)"/g, 'id="$1j' + sira + '"').replace(/url\(#([gbkh])\d+\)/g, 'url(#$1j' + sira + ')');
+    return boyut ? html.replace(/width="\d+" height="\d+"/, 'width="' + boyut + '" height="' + boyut + '"') : html;
+  }
+  function ilceUygula(slug) {
+    if (!slug || !adlar[slug]) return;
+    document.querySelectorAll('[data-ilcem]').forEach(function (a) { a.href = '/ilce/' + slug + '/'; });
+    document.querySelectorAll('[data-ilce-secici] [data-ilce-ad]').forEach(function (s) { s.textContent = adlar[slug]; });
+    document.querySelectorAll('[data-ilce-deger]').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-ilce-deger') === slug ? 'true' : 'false'); });
+    var hava = (window.__HAVA__ || {})[slug];
     var kart = document.querySelector('[data-hava-kart]');
-    var ikonlar = window.__HAVA_IKON__ || {};
-    var sira = 0;
-    // Aynı sayfada birden fazla SVG olacağı için gradient id'lerini benzersiz yap
-    function ikon(tur, boyut) {
-      var html = ikonlar[tur] || '';
-      sira++;
-      html = html.replace(/id="([gbkh])(\d+)"/g, 'id="$1j' + sira + '"').replace(/url\(#([gbkh])\d+\)/g, 'url(#$1j' + sira + ')');
-      return boyut ? html.replace(/width="\d+" height="\d+"/, 'width="' + boyut + '" height="' + boyut + '"') : html;
-    }
     if (hava && kart) {
-      kart.href = '/hava-durumu/#' + ilcem;
-      kart.querySelector('[data-ilce-ad]').textContent = adlar[ilcem];
+      kart.href = '/hava-durumu/#' + slug;
+      kart.querySelector('[data-ilce-ad]').textContent = adlar[slug];
       kart.querySelector('[data-hava-derece]').textContent = hava.sicaklik + '°';
       kart.querySelector('[data-hava-durum]').textContent = hava.durum;
       if (hava.tur) kart.querySelector('[data-hava-ikon]').innerHTML = ikon(hava.tur);
@@ -54,14 +55,40 @@
         }).join('');
       }
     }
-    var ecz = (window.__ECZ__ || {})[ilcem];
+    var ecz = (window.__ECZ__ || {})[slug] || [];
     var ek = document.querySelector('[data-eczane-kart]');
-    if (ek && ecz && ecz.length) {
-      ek.href = '/nobetci-eczane/#' + ilcem;
-      ek.querySelector('[data-eczane-liste]').innerHTML = ecz.map(function (a) { var s = document.createElement('span'); s.textContent = a; return s.outerHTML; }).join('');
-      ek.querySelector('[data-eczane-ilce]').textContent = adlar[ilcem] + ' · telefon ve adres →';
+    if (ek) {
+      ek.href = '/nobetci-eczane/' + (ecz.length ? '#' + slug : '');
+      ek.querySelector('[data-eczane-liste]').innerHTML = ecz.length
+        ? ecz.map(function (a) { var s = document.createElement('span'); s.textContent = a; return s.outerHTML; }).join('')
+        : '<span>' + adlar[slug] + ' için liste yok, tüm Mersin →</span>';
+      ek.querySelector('[data-eczane-ilce]').textContent = ecz.length ? adlar[slug] + ' · telefon ve adres →' : 'Adres ve telefon →';
     }
   }
+  if (ilcem) ilceUygula(ilcem);
+
+  // İlçe seçici: düğmeye basınca liste açılır, sayfa değişmez
+  document.querySelectorAll('[data-ilce-secici]').forEach(function (kap) {
+    var dugme = kap.querySelector('.ilce-sec');
+    var liste = kap.querySelector('.ilce-acilir');
+    function ac(acik) {
+      liste.hidden = !acik;
+      dugme.setAttribute('aria-expanded', acik ? 'true' : 'false');
+    }
+    dugme.addEventListener('click', function (e) { e.stopPropagation(); ac(liste.hidden); });
+    liste.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-ilce-deger]');
+      if (!b) return;
+      var slug = b.getAttribute('data-ilce-deger');
+      yaz('ilcem', slug);
+      ilcem = slug;
+      ilceUygula(slug);
+      ac(false);
+      dugme.focus();
+    });
+    document.addEventListener('click', function (e) { if (!kap.contains(e.target)) ac(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !liste.hidden) { ac(false); dugme.focus(); } });
+  });
   document.querySelectorAll('[data-ilcem-yap]').forEach(function (b) {
     var slug = b.getAttribute('data-ilcem-yap');
     if (ilcem === slug) b.querySelector('span').textContent = 'Benim ilçem ✓';

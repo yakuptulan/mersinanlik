@@ -1,6 +1,19 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
 import { SITE, ILCELER } from '../config.js';
 import { htmlKacis as h } from '../lib/text.js';
 import { ikon, logoIsaret } from './ikonlar.js';
+
+// CSS/JS değişince tarayıcı eski dosyayı kullanmasın diye adrese içerik özeti eklenir
+const surum = (dosya) => {
+  try {
+    return crypto.createHash('md5').update(fs.readFileSync(new URL(`../../public/${dosya}`, import.meta.url))).digest('hex').slice(0, 8);
+  } catch {
+    return '1';
+  }
+};
+const CSS_SURUM = surum('style.css');
+const JS_SURUM = surum('app.js');
 
 const MENU = [
   ['/', 'Gündem'],
@@ -57,7 +70,7 @@ ${noindex ? '<meta name="robots" content="noindex, follow">' : ''}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/style.css?v=${CSS_SURUM}">
 ${jsonLd ? `<script type="application/ld+json">${guvenliJson(jsonLd)}</script>` : ''}
 </head>
 <body>
@@ -89,7 +102,7 @@ ${icerik}
 <a href="/menu/">${ikon.menu(26)}Menü</a>
 </nav>
 <script>window.__ILCE_ADLARI__=${guvenliJson(ILCE_ADLARI)};${hava ? `window.__HAVA__=${guvenliJson(hava)};` : ''}${ekVeri ? Object.entries(ekVeri).map(([k, v]) => `window.${k}=${guvenliJson(v)};`).join('') : ''}</script>
-<script src="/app.js" defer></script>
+<script src="/app.js?v=${JS_SURUM}" defer></script>
 </body>
 </html>`;
 }

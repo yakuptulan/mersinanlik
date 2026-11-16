@@ -143,7 +143,10 @@ export function anaSayfa({ hikayeler, servis, simdi }) {
   const ust = `${sonDakikaBandi(sonDakikaSec(hikayeler.filter((x) => x !== manset), simdi))}
 <div class="su-an-bas">
 <div><p>${tarihUzun(new Date(simdi).toISOString())}</p><h1>Mersin'de şu an</h1></div>
-<a class="ilce-sec" href="/ilceler/" data-ilce-sec>${ikon.konum(20)}<span>Benim ilçem: <span data-ilce-ad>Seç</span></span><span class="daire">${ikon.asagi(18)}</span></a>
+<div class="ilce-secici" data-ilce-secici>
+<button class="ilce-sec" type="button" aria-expanded="false" aria-controls="ilce-liste">${ikon.konum(20)}<span>Benim ilçem: <span data-ilce-ad>Seç</span></span><span class="daire">${ikon.asagi(18)}</span></button>
+<div class="ilce-acilir" id="ilce-liste" hidden>${ILCELER.map((i) => `<button type="button" data-ilce-deger="${i.slug}" aria-pressed="false">${h(i.ad)}</button>`).join('')}</div>
+</div>
 </div>
 ${suAnKartlari(servis)}`;
   const icerik = `<main class="kap govde">
