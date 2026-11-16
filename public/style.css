@@ -306,3 +306,23 @@ a.satir:hover { color: var(--derin-mavi); }
 .eczane-dugmeler .hap { padding: 12px 20px; }
 .dugme-cizgi { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 999px; border: 2px solid var(--lacivert); color: var(--lacivert); text-decoration: none; font-weight: 700; background: #fff; }
 .not { color: var(--ikincil); font-size: 15px; }
+
+/* ---------- Yan kutu listeleri (kesinti, deprem) ---------- */
+.yan-liste { display: flex; flex-direction: column; gap: 8px; }
+.yan-satir { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 16px; background: #f6f8fc; color: var(--metin); text-decoration: none; }
+a.yan-satir:hover { background: var(--acik); color: var(--metin); }
+.yan-rozet { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; }
+.yan-rozet.su { background: #e3efff; color: var(--derin-mavi); }
+.yan-rozet.deprem.dusuk { background: #e6f6ee; color: #1d7a4d; }
+.yan-rozet.deprem.orta { background: #fff1e3; color: #9a3f06; }
+.yan-rozet.deprem.yuksek { background: #fde8e8; color: #b42318; }
+.yan-metin { display: flex; flex-direction: column; min-width: 0; }
+.yan-metin b { font-size: 16px; line-height: 1.25; }
+.yan-metin small { font-size: 14px; color: var(--ikincil); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.yan-sag { display: flex; flex-direction: column; align-items: flex-end; line-height: 1.2; }
+.yan-sag small { font-size: 12px; color: var(--ikincil); }
+.yan-sag b { font-size: 16px; }
+.yan-dugme { display: flex; align-items: center; gap: 8px; padding: 12px 14px; border-radius: 16px; border: 1px dashed var(--cizgi); color: var(--metin); text-decoration: none; font-weight: 700; font-size: 15px; }
+.yan-dugme svg { color: var(--turuncu, #FF8A1F); }
+.yan-dugme span { margin-left: auto; font-weight: 600; font-size: 13px; color: var(--ikincil); }
+.yan-dugme:hover { border-color: var(--mavi); color: var(--metin); }

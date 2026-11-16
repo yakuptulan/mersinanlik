@@ -16,6 +16,29 @@ export const RESMI = {
   metno: 'https://www.yr.no/',
 };
 
+// AFAD yer adını sadeleştirir: "Akdeniz - [08.36 km] Gülnar (Mersin)" → Gülnar (Mersin), "Denizde, 8 km"
+export function depremYeri(yer = '') {
+  const m = yer.match(/^(.*?)\s*-\s*\[([\d.]+)\s*km\]\s*(.+)$/);
+  if (m) {
+    const km = Math.round(Number(m[2]));
+    const denizde = /akdeniz|deniz/i.test(m[1]);
+    return { ad: m[3].trim(), ek: denizde ? `${km} km açıkta` : `${km} km uzakta` };
+  }
+  return { ad: yer.trim(), ek: '' };
+}
+function depremSinifi(b) {
+  return b >= 4 ? 'yuksek' : b >= 3 ? 'orta' : 'dusuk';
+}
+function gunEtiketi(iso) {
+  const gun = (d) => new Date(d).toLocaleDateString('sv-SE', { timeZone: SITE.timezone });
+  const bugun = gun(Date.now());
+  const dun = gun(Date.now() - 864e5);
+  const g = gun(iso);
+  if (g === bugun) return 'bugün';
+  if (g === dun) return 'dün';
+  return new Date(iso).toLocaleDateString('tr-TR', { timeZone: SITE.timezone, day: 'numeric', month: 'short' });
+}
+
 function sonDeprem(servis) {
   const d = servis?.deprem?.[0];
   return d || null;
@@ -76,7 +99,7 @@ ${su.length > 3 ? `<span class="widget-alt">+${su.length - 3} kesinti daha →</
 <a class="widget widget-mor" href="/deprem/">
 <div class="widget-bas"><span class="widget-rozet">${ikon.deprem(24)}</span><span class="widget-etiket">Son deprem</span></div>
 <span class="widget-deger">${dep ? dep.buyukluk.toFixed(1).replace('.', ',') : '–'}</span>
-<span class="widget-yazi">${dep ? h(dep.yer) : 'Son 7 günde kayıt yok'}</span>
+<span class="widget-yazi">${dep ? h(depremYeri(dep.yer).ad) : 'Son 7 günde kayıt yok'}</span>
 <span class="widget-alt">${dep ? `<span data-once="${dep.tarih}">${saat(dep.tarih)}</span> · AFAD` : 'AFAD'}</span>
 ${depremCizgisi(servis?.deprem || [])}
 </a>
@@ -122,12 +145,22 @@ ${eczaneler.map((e) => `<a class="satir" href="tel:${h(e.telefon)}"><span>${ikon
 </section>` : ''}
 <section class="kutu">
 <div class="kutu-bas"><h2>${ilce ? `${h(ilce.ad)} kesintileri` : 'Bugünkü kesintiler'}</h2><a href="/kesintiler/">Tümü</a></div>
-${su.slice(0, 4).map((k) => `<a class="satir" href="/kesintiler/"><span>${ikon.damla(20)} ${h(k.ilceler.map((i) => `${i.ad} – ${i.mahalleler.slice(0, 2).join(', ')}`).join(' · '))}</span><small>${k.bitis ? `bitiş ${saat(k.bitis)}` : ''}</small></a>`).join('') || `<div class="satir"><span>${ikon.damla(20)} Su kesintisi yok</span><small>MESKİ</small></div>`}
-<a class="satir" href="${RESMI.edas}" rel="noopener" target="_blank"><span>${ikon.simsek(20)} Elektrik kesintileri</span><small>Toroslar EDAŞ →</small></a>
+<div class="yan-liste">
+${su.slice(0, 4).map((k) => `<a class="yan-satir" href="/kesintiler/">
+<span class="yan-rozet su">${ikon.damla(18)}</span>
+<span class="yan-metin"><b>${h(k.ilceler.map((i) => i.ad).join(', '))}</b><small>${h(k.ilceler.flatMap((i) => i.mahalleler).join(', '))}</small></span>
+<span class="yan-sag">${k.bitis ? `<small>bitiş</small><b>${saat(k.bitis)}</b>` : ''}</span></a>`).join('') || `<div class="yan-satir"><span class="yan-rozet su">${ikon.damla(18)}</span><span class="yan-metin"><b>Su kesintisi yok</b><small>MESKİ duyurusu bulunmuyor</small></span></div>`}
+</div>
+<a class="yan-dugme" href="${RESMI.edas}" rel="noopener" target="_blank">${ikon.simsek(18)} Elektrik kesintisi sorgula <span>→</span></a>
 </section>
 <section class="kutu">
 <div class="kutu-bas"><h2>Son depremler</h2><a href="/deprem/">Tümü</a></div>
-${(servis?.deprem || []).slice(0, 4).map((d) => `<div class="satir"><span><strong>${d.buyukluk.toFixed(1).replace('.', ',')}</strong> · ${h(d.yer)}</span><small>${saat(d.tarih)}</small></div>`).join('') || '<div class="satir"><small>Son 7 günde kayıt yok</small></div>'}
+<div class="yan-liste">
+${(servis?.deprem || []).slice(0, 4).map((d) => { const y = depremYeri(d.yer); return `<div class="yan-satir">
+<span class="yan-rozet deprem ${depremSinifi(d.buyukluk)}">${d.buyukluk.toFixed(1).replace('.', ',')}</span>
+<span class="yan-metin"><b>${h(y.ad)}</b><small>${h(y.ek || `${d.derinlik.toFixed(0)} km derinlikte`)}</small></span>
+<span class="yan-sag"><small>${gunEtiketi(d.tarih)}</small><b>${saat(d.tarih)}</b></span></div>`; }).join('') || '<div class="yan-satir"><span class="yan-metin"><b>Son 7 günde kayıt yok</b></span></div>'}
+</div>
 </section>
 </aside>`;
 }
@@ -247,7 +280,7 @@ export function depremSayfasi({ servis }) {
     icerik: `<main class="kap govde"><div class="ana">${
       liste.length
         ? `<div class="tablo-kap"><table class="tablo"><thead><tr><th>Büyüklük</th><th>Yer</th><th>Derinlik</th><th>Zaman</th></tr></thead><tbody>${liste
-            .map((d) => `<tr><td><strong>${d.buyukluk.toFixed(1).replace('.', ',')}</strong></td><td>${h(d.yer)}</td><td>${d.derinlik.toFixed(1)} km</td><td>${new Date(d.tarih).toLocaleString('tr-TR', { timeZone: SITE.timezone, day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}</td></tr>`)
+            .map((d) => `<tr><td><strong>${d.buyukluk.toFixed(1).replace('.', ',')}</strong></td><td>${h(depremYeri(d.yer).ad)}${depremYeri(d.yer).ek ? `<br><small>${h(depremYeri(d.yer).ek)}</small>` : ''}</td><td>${d.derinlik.toFixed(1)} km</td><td>${new Date(d.tarih).toLocaleString('tr-TR', { timeZone: SITE.timezone, day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}</td></tr>`)
             .join('')}</tbody></table></div>`
         : '<div class="bos">Son 7 günde bölgede kayıtlı deprem yok.</div>'
     }<p style="color:var(--ikincil);font-size:15px">Veri: <a href="${RESMI.afad}" rel="noopener" target="_blank">AFAD</a>.</p></div></main>`,
