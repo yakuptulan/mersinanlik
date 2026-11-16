@@ -1,6 +1,6 @@
 // Aday kaynakları GitHub sunucusundan dener: erişim, haber linkleri, RSS, robots.txt
 const UA = 'MersinAnlikBot/1.0 (+https://mersinanlik.com/kaynaklarimiz/)';
-const ADAYLAR = process.argv.slice(2).length ? process.argv.slice(2) : [
+const ADAYLAR = (process.env.ADRESLER || '').trim() ? process.env.ADRESLER.trim().split(/\s+/) : process.argv.slice(2).length ? process.argv.slice(2) : [
   'https://www.mersin.pol.tr/', 'https://www.mersin.gov.tr/haberler', 'https://mersin.meb.gov.tr/', 'https://www.mersin.edu.tr/haberler',
   'https://www.mtso.org.tr/haberler', 'https://www.akdeniz.bel.tr/haberler', 'https://www.toroslar.bel.tr/', 'https://www.mezitli.bel.tr/',
   'https://www.silifke.bel.tr/', 'https://www.anamur.bel.tr/', 'https://www.bozyazi.bel.tr/', 'https://www.gulnar.bel.tr/', 'https://www.aydincik.bel.tr/',
