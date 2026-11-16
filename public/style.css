@@ -47,6 +47,8 @@ img { max-width: 100%; }
 .ust-satir { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 20px; padding: 22px 0; }
 .logo { display: flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; font-size: 26px; letter-spacing: -.02em; }
 .logo:hover { color: #fff; }
+.logo img { display: block; height: 64px; width: auto; }
+.alt-bilgi .logo img { height: 56px; }
 .logo b { font-weight: 800; }
 .logo span { font-weight: 500; }
 .menu { display: flex; flex-wrap: wrap; gap: 4px; }
@@ -230,6 +232,7 @@ a.satir:hover { color: var(--derin-mavi); }
 
 /* ---------- Mobil ---------- */
 .mobil-menu { display: none; }
+@media (max-width: 600px) { .logo img { height: 52px; } }
 @media (max-width: 900px) {
   .kap { padding: 0 16px; }
   .menu { display: none; }

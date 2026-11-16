@@ -399,10 +399,13 @@ export function bilgiSayfalari() {
       baslik: 'Künye',
       aciklama: `${SITE.name} künye bilgileri.`,
       govde: `<p><strong>Yayın adı:</strong> ${SITE.name}</p>
-<p><strong>İmtiyaz sahibi ve sorumlu müdür:</strong> [AD SOYAD]</p>
-<p><strong>Adres:</strong> [İŞ YERİ ADRESİ]</p>
+<p><strong>Yayın türü:</strong> Yaygın, süreli internet haber sitesi (Mersin yerel haberleri)</p>
+<p><strong>İmtiyaz sahibi:</strong> Yakup Tulan</p>
+<p><strong>Sorumlu yazı işleri müdürü:</strong> Yakup Tulan</p>
+<p><strong>Adres:</strong> Mersin, Türkiye</p>
 <p><strong>E-posta:</strong> <a href="mailto:${SITE.email}">${SITE.email}</a></p>
-<p><strong>Yer sağlayıcı:</strong> Cloudflare, Inc.</p>`,
+<p><strong>Yer sağlayıcı:</strong> Cloudflare, Inc.</p>
+<p>Sitede yer alan haberler kaynak gösterilerek derlenir; haberlerin hukuki sorumluluğu kaynağına aittir. Düzeltme ve cevap hakkı talepleri için yukarıdaki e-posta adresine yazabilirsiniz.</p>`,
     }),
     ({
       yol: '/iletisim/',

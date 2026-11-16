@@ -38,7 +38,7 @@ export function ilceAdi(slug) {
 
 function ustSatir(aktif) {
   return `<div class="ust-satir">
-<a class="logo" href="/" aria-label="${SITE.name} ana sayfa">${logoIsaret(44)}<span>mersin<b>anlık</b></span></a>
+<a class="logo" href="/" aria-label="${SITE.name} ana sayfa"><img src="/logo.webp" width="96" height="64" alt="${SITE.name}"></a>
 <nav class="menu" aria-label="Ana menü">${MENU.map(([u, ad]) => `<a href="${u}"${u === aktif ? ' aria-current="page"' : ''}>${ad}</a>`).join('')}</nav>
 <a class="ara-dugme" href="/ara/" aria-label="Sitede ara">${ikon.ara(22)}</a>
 </div>`;
@@ -46,6 +46,17 @@ function ustSatir(aktif) {
 
 const ILCE_ADLARI = Object.fromEntries(ILCELER.map((i) => [i.slug, i.ad]));
 const guvenliJson = (v) => JSON.stringify(v).replace(/</g, '\\u003c');
+
+const KURULUS = {
+  '@context': 'https://schema.org',
+  '@type': 'NewsMediaOrganization',
+  name: SITE.name,
+  url: SITE.url + '/',
+  logo: { '@type': 'ImageObject', url: SITE.url + '/logo-kare.png', width: 512, height: 512 },
+  email: SITE.email,
+  areaServed: 'Mersin',
+  publishingPrinciples: SITE.url + '/yayin-ilkeleri/',
+};
 
 export function sayfa({ baslik, aciklama = SITE.description, yol = '/', aktif = yol, ust = '', icerik, noindex = false, jsonLd = null, hava = null, ekVeri = null }) {
   const tamBaslik = baslik ? `${baslik} | ${SITE.name}` : `${SITE.name} – Mersin son dakika haberleri`;
@@ -65,12 +76,18 @@ ${noindex ? '<meta name="robots" content="noindex, follow">' : ''}
 <meta property="og:url" content="${kanonik}">
 <meta property="og:locale" content="${SITE.locale}">
 <meta property="og:type" content="website">
+<meta property="og:image" content="${SITE.url}/paylasim.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0A1530">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css?v=${CSS_SURUM}">
+<script type="application/ld+json">${guvenliJson(KURULUS)}</script>
 ${jsonLd ? `<script type="application/ld+json">${guvenliJson(jsonLd)}</script>` : ''}
 </head>
 <body>
@@ -84,7 +101,7 @@ ${icerik}
 <footer class="alt-bilgi">
 <div class="kap">
 <div style="max-width:460px">
-<a class="logo" href="/">${logoIsaret(40)}<span>mersin<b>anlık</b></span></a>
+<a class="logo" href="/"><img src="/logo.webp" width="84" height="56" alt="${SITE.name}" loading="lazy"></a>
 <p>${h(SITE.slogan)}</p>
 <p><small>Haberler kaynak gösterilerek derlenir; haberin tamamı her zaman kaynağında okunabilir. Kaynağı yazılmayan görseller temsilidir ve bir kısmı yapay zekâ ile üretilmiştir (<a href="/gorsel-kaynaklari/" style="color:inherit">ayrıntılar</a>).</small></p>
 </div>
