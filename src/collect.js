@@ -36,13 +36,13 @@ function durumYukle() {
   }
 }
 
-async function benzerleriBirlestir(veri, yeniIdler) {
+async function benzerleriBirlestir(veri, yeniIdler, tam = false) {
   const simdi = Date.now();
   const aday = veri.hikayeler
     .filter((h) => !h.genel && h.durum !== 'reddedildi' && simdi - new Date(h.ilkGorulme).getTime() < 36 * 36e5)
     .sort((a, b) => new Date(b.ilkGorulme) - new Date(a.ilkGorulme))
     .slice(0, 90);
-  if (aday.length < 2 || !aday.some((h) => yeniIdler.has(h.id))) return 0;
+  if (aday.length < 2 || (!tam && !aday.some((h) => yeniIdler.has(h.id)))) return 0;
   const talimat = `Aşağıda numaralı yerel haber başlıkları var. AYNI OLAYI (aynı kişi/kurum, aynı yer, aynı gelişme) anlatan başlıkları grupla.
 Sadece kesinlikle aynı olay olanları grupla. Aynı konudaki farklı olaylar (iki ayrı kaza, iki ayrı operasyon, aynı belediyenin iki ayrı hizmeti) ayrı kalsın. Emin değilsen gruplama.
 Yalnızca JSON döndür: {"gruplar": [[1, 4], [2, 7, 9]]}. Aynı olay yoksa {"gruplar": []}.`;
@@ -50,7 +50,7 @@ Yalnızca JSON döndür: {"gruplar": [[1, 4], [2, 7, 9]]}. Aynı olay yoksa {"gr
   let birlesen = 0;
   for (const grup of j?.gruplar || []) {
     const uyeler = [...new Set(grup)].map((n) => aday[Number(n) - 1]).filter((h) => h && veri.hikayeler.includes(h));
-    if (uyeler.length < 2 || uyeler.length > 6 || !uyeler.some((h) => yeniIdler.has(h.id))) continue;
+    if (uyeler.length < 2 || uyeler.length > 6 || (!tam && !uyeler.some((h) => yeniIdler.has(h.id)))) continue;
     // Ana haber: kendi yazımız olan, yoksa ilk görülen
     uyeler.sort((a, b) => Boolean(b.metin) - Boolean(a.metin) || new Date(a.ilkGorulme) - new Date(b.ilkGorulme));
     const [ana, ...digerleri] = uyeler;
@@ -136,9 +136,13 @@ async function main() {
   }
 
   // Aynı olayı farklı başlıklarla yazan haberleri tek haberde birleştir (yapay zekâ ile, sadece yeni haber varsa)
-  if (geminiHazirMi() && yeniIdler.size) {
+  // Günde bir kez son 36 saatin tamamı taranır, diğer çalışmalarda sadece yeni haberler
+  const bugunGun = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Istanbul' });
+  const tamTarama = durum.tamBirlestirme !== bugunGun;
+  if (geminiHazirMi() && (yeniIdler.size || tamTarama)) {
     try {
-      const n = await benzerleriBirlestir(veri, yeniIdler);
+      const n = await benzerleriBirlestir(veri, yeniIdler, tamTarama);
+      durum.tamBirlestirme = bugunGun;
       if (n) console.log(`🔗 Aynı olay olduğu için birleştirilen haber: ${n}`);
     } catch (e) {
       console.warn(`! Birleştirme: ${e.message.slice(0, 160)}`);
