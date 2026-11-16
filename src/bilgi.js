@@ -28,7 +28,7 @@ async function main() {
   veri.trendDenenen ??= [];
   let konu = null;
   // 1) Önce Google'da bugün çok aranan bir konu (günde en fazla 2)
-  if (bugunkuGundem < 2) {
+  if (bugunkuGundem < 2 && !(zorla && process.argv.includes('--liste'))) {
     let trendler = [];
     try {
       trendler = JSON.parse(fs.readFileSync(path.resolve('data/durum.json'), 'utf8')).trendler?.liste || [];

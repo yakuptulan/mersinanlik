@@ -111,10 +111,10 @@ export async function sporGetir(ua) {
 export const LIGLER = [
   { kod: 'super-lig', ad: 'Trendyol Süper Lig', kisa: 'Süper Lig', url: `${TFF}198`, form: true },
   { kod: '1-lig', ad: 'Trendyol 1. Lig', kisa: '1. Lig', url: `${TFF}142`, form: true },
-  { kod: '2-lig-beyaz', ad: 'Nesine 2. Lig Beyaz Grup', kisa: '2. Lig Beyaz', url: `${TFF}976&grupID=3541`, form: false },
-  { kod: '2-lig-kirmizi', ad: 'Nesine 2. Lig Kırmızı Grup', kisa: '2. Lig Kırmızı', url: `${TFF}976&grupID=3542`, form: false },
-  { kod: '3-lig-1', ad: 'Nesine 3. Lig 1. Grup', kisa: '3. Lig 1. Grup', url: `${TFF}971&grupID=3543`, form: false },
-  { kod: '3-lig-2', ad: 'Nesine 3. Lig 2. Grup', kisa: '3. Lig 2. Grup', url: `${TFF}971&grupID=3544`, form: false },
+  { kod: '2-lig-beyaz', ad: 'Nesine 2. Lig Beyaz Grup', kisa: '2. Lig Beyaz', url: `${TFF}976&grupID=3541`, form: true },
+  { kod: '2-lig-kirmizi', ad: 'Nesine 2. Lig Kırmızı Grup', kisa: '2. Lig Kırmızı', url: `${TFF}976&grupID=3542`, form: true },
+  { kod: '3-lig-1', ad: 'Nesine 3. Lig 1. Grup', kisa: '3. Lig 1. Grup', url: `${TFF}971&grupID=3543`, form: true },
+  { kod: '3-lig-2', ad: 'Nesine 3. Lig 2. Grup', kisa: '3. Lig 2. Grup', url: `${TFF}971&grupID=3544`, form: true },
   { kod: '3-lig-3', ad: 'Nesine 3. Lig 3. Grup', kisa: '3. Lig 3. Grup', url: `${TFF}971&grupID=3545`, form: true, mersin: true },
 ];
 

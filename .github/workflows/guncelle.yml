@@ -57,7 +57,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Merak edilenler (günde 2 bilgi yazısı)
-        run: node src/bilgi.js ${{ inputs.bilgi_zorla && '--simdi' || '' }}
+        run: node src/bilgi.js ${{ inputs.bilgi_zorla && '--simdi --liste' || '' }}
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
