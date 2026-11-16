@@ -1,0 +1,32 @@
+name: Zamanlayıcıyı kur (Cloudflare)
+
+# Cloudflare'de her 30 dakikada güncellemeyi başlatan küçük bir Worker kurar.
+# Sadece zamanlayici/ klasörü değişince ya da elle çalıştırılınca çalışır.
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths: ['zamanlayici/**', '.github/workflows/zamanlayici.yml']
+
+jobs:
+  kur:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      GH_DISPATCH_TOKEN: ${{ secrets.GH_DISPATCH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Worker'ı yayınla
+        if: ${{ env.GH_DISPATCH_TOKEN != '' }}
+        working-directory: zamanlayici
+        run: |
+          npx --yes wrangler@4 deploy
+          printf '%s' "$GH_DISPATCH_TOKEN" | npx --yes wrangler@4 secret put GH_TOKEN
+      - name: Anahtar eksik
+        if: ${{ env.GH_DISPATCH_TOKEN == '' }}
+        run: echo "GH_DISPATCH_TOKEN sırrı tanımlı değil; zamanlayıcı kurulmadı."
