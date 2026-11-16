@@ -1,14 +1,14 @@
 {
- "guncelleme": "2026-11-16T15:58:31.193Z",
+ "guncelleme": "2026-11-16T16:03:12.920Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 18,
+   "sicaklik": 17,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-16",
      "min": 15,
-     "max": 18,
+     "max": 17,
      "durum": "Az bulutlu"
     },
     {
@@ -38,13 +38,13 @@
    ]
   },
   "anamur": {
-   "sicaklik": 18,
+   "sicaklik": 17,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-16",
      "min": 14,
-     "max": 18,
+     "max": 17,
      "durum": "Az bulutlu"
     },
     {
@@ -74,13 +74,13 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 18,
+   "sicaklik": 17,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-16",
      "min": 15,
-     "max": 18,
+     "max": 17,
      "durum": "Az bulutlu"
     },
     {
@@ -183,13 +183,13 @@
   },
   "erdemli": {
    "sicaklik": 16,
-   "durum": "Açık",
+   "durum": "Sisli",
    "gunler": [
     {
      "tarih": "2026-11-16",
      "min": 14,
      "max": 16,
-     "durum": "Az bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-17",
@@ -505,7 +505,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-16T15:58:36.231Z",
+  "guncelleme": "2026-11-16T16:03:16.205Z",
   "liste": [
    {
     "ad": "Abay Eczanesi",
@@ -774,7 +774,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-16T15:58:37.671Z",
+  "guncelleme": "2026-11-16T16:03:17.174Z",
   "liste": [
    {
     "tur": "su",
@@ -811,23 +811,6 @@
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
-    "aciklama": "Tarsus İlçesi Enerjisa'nın bölgedeki enerji kesintisine bağlı Bahşiş ve Yeşiltepe Mahallelerinde 19:00 kadar içme su kesintisi ve basınç düşüklüğü yaşanacaktır.",
-    "baslangic": "2026-11-16T06:50:00.000Z",
-    "bitis": "2026-11-16T16:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "tarsus",
-      "ad": "Tarsus",
-      "mahalleler": [
-       "Bahşiş",
-       "Yeşiltepe"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
     "aciklama": "Gülnar ilçesi Büyükeceli mahallesi ve Yanışlı mahallelerini besleyen terfi hattında meydana gelen arıza kaynaklı saat 23.59 a kadar su kesintisi yaşanacaktır.",
     "baslangic": "2026-11-16T15:15:00.000Z",
     "bitis": "2026-11-16T20:59:00.000Z",
@@ -838,6 +821,22 @@
       "mahalleler": [
        "Büyükeceli",
        "Koçaşlı"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Kocavilayet Mahallesi 2913 SK taki arızadan dolayı saat 20:30 a kadar kesinti yaşanacaktır",
+    "baslangic": "2026-11-16T16:00:00.000Z",
+    "bitis": "2026-11-16T17:30:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "yenisehir",
+      "ad": "Yenişehir",
+      "mahalleler": [
+       "Kocavilayet"
       ]
      }
     ]
