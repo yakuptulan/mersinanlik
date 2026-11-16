@@ -142,7 +142,7 @@ export function anaSayfa({ hikayeler, servis, simdi }) {
   const liste = mersin.filter((x) => x !== manset).slice(0, AYAR.anaSayfaHaberSayisi);
   const ust = `${sonDakikaBandi(sonDakikaSec(hikayeler.filter((x) => x !== manset), simdi))}
 <div class="su-an-bas">
-<div><p>${tarihUzun(new Date(simdi).toISOString())}</p><h1>Mersin'de şu an</h1></div>
+<div><p>${tarihUzun(new Date(simdi).toISOString())} · <span class="canli-saat" data-canli-saat>${saat(new Date(simdi).toISOString())}</span></p><h1>Mersin'de şu an</h1></div>
 <div class="ilce-secici" data-ilce-secici>
 <button class="ilce-sec" type="button" aria-expanded="false" aria-controls="ilce-liste">${ikon.konum(20)}<span>Benim ilçem: <span data-ilce-ad>Seç</span></span><span class="daire">${ikon.asagi(18)}</span></button>
 <div class="ilce-acilir" id="ilce-liste" hidden>${ILCELER.map((i) => `<button type="button" data-ilce-deger="${i.slug}" aria-pressed="false">${h(i.ad)}</button>`).join('')}</div>
@@ -151,7 +151,7 @@ export function anaSayfa({ hikayeler, servis, simdi }) {
 ${suAnKartlari(servis)}`;
   const icerik = `<main class="kap govde">
 <div class="ana">
-<div class="bolum-bas"><h2>Manşet</h2><span>Son güncelleme: ${saat(new Date(simdi).toISOString())}</span></div>
+<div class="bolum-bas"><h2>Manşet</h2><span>Son güncelleme: ${saat(new Date(simdi).toISOString())} (<span data-once="${new Date(simdi).toISOString()}"></span>)</span></div>
 ${manset ? mansetKarti(manset) : '<div class="bos">Haberler toplanıyor…</div>'}
 ${genel.length ? `<div class="bolum-bas" style="margin-top:14px"><h2>Türkiye ve dünyadan</h2><span>Birçok kaynağın yazdığı önemli gelişmeler</span></div>
 ${haberListesi(genel)}` : ''}
@@ -183,7 +183,7 @@ export function ilceSayfasi({ ilce, hikayeler, servis, simdi }) {
   const liste = hikayeler.filter((x) => x.ilceler.includes(ilce.slug)).slice(0, AYAR.ilceHaberSayisi);
   const hava = servis?.hava?.[ilce.slug];
   const ust = `<div class="su-an-bas">
-<div><p>${tarihUzun(new Date(simdi).toISOString())}</p><h1>${h(ilce.ad)} haberleri</h1></div>
+<div><p>${tarihUzun(new Date(simdi).toISOString())} · <span class="canli-saat" data-canli-saat>${saat(new Date(simdi).toISOString())}</span></p><h1>${h(ilce.ad)} haberleri</h1></div>
 <button class="ilce-sec" type="button" data-ilcem-yap="${ilce.slug}" style="border:none;font:inherit;cursor:pointer">${ikon.konum(20)}<span>Benim ilçem yap</span><span class="daire">${ikon.ok(18)}</span></button>
 </div>
 ${hava ? `<div class="widgetlar widgetlar-gun">${hava.gunler

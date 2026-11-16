@@ -18,8 +18,15 @@
       el.textContent = once(el.getAttribute('data-once'));
     });
   }
+  // Başlıktaki canlı saat (Türkiye saati)
+  function saatiGuncelle() {
+    var t = new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Istanbul' });
+    document.querySelectorAll('[data-canli-saat]').forEach(function (el) { el.textContent = t; });
+  }
   zamanlariGuncelle();
+  saatiGuncelle();
   setInterval(zamanlariGuncelle, 60000);
+  setInterval(saatiGuncelle, 10000);
 
   // Benim ilçem
   var ilcem = oku('ilcem');

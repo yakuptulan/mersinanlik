@@ -32,19 +32,25 @@ export const ILCELER = [
   { slug: 'yenisehir', ad: 'Yenişehir', lat: 36.78, lon: 34.58, belirsiz: true },
 ];
 
+// Her kategorinin rengi kartlarda ikon kutusu ve etiket rengi olarak kullanılır
 export const KATEGORILER = [
-  { slug: 'asayis', ad: 'Asayiş', kelimeler: ['polis', 'jandarma', 'operasyon', 'gözaltı', 'tutuklan', 'şüpheli', 'hırsız', 'kaçakçı', 'uyuşturucu'] },
-  { slug: 'kaza', ad: 'Kaza', kelimeler: ['kazada', 'kazası', 'kazayla', 'çarpış', 'devrildi', 'yangın', 'yaralandı'] },
-  { slug: 'belediye', ad: 'Belediye', kelimeler: ['belediye', 'büyükşehir', 'meclis', 'muhtar', 'asfalt', 'park'] },
-  { slug: 'ekonomi', ad: 'Ekonomi', kelimeler: ['ekonomi', 'ihracat', 'liman', 'esnaf', 'fiyat', 'yatırım', 'ticaret', 'borsa', 'hibe'] },
-  { slug: 'tarim', ad: 'Tarım', kelimeler: ['hasat', 'üretici', 'çiftçi', 'tarım', 'narenciye', 'limon', 'portakal', 'muz', 'sera', 'hal fiyat'] },
-  { slug: 'egitim', ad: 'Eğitim', kelimeler: ['okul', 'öğrenci', 'öğretmen', 'üniversite', 'eğitim', 'sınav', 'kütüphane'] },
-  { slug: 'saglik', ad: 'Sağlık', kelimeler: ['hastane', 'sağlık', 'doktor', 'hasta', 'aşı'] },
-  { slug: 'spor', ad: 'Spor', kelimeler: ['maç', 'idmanyurdu', 'idman yurdu', 'lig', 'spor', 'şampiyon', 'basketbol', 'futbol', 'voleybol'] },
-  { slug: 'ulasim', ad: 'Ulaşım', kelimeler: ['yolu', 'yolda', 'karayolu', 'trafik', 'otobüs', 'metro', 'feribot', 'havalimanı', 'köprü', 'otoyol'] },
-  { slug: 'hava', ad: 'Hava', kelimeler: ['yağış', 'sağanak', 'fırtına', 'meteoroloji', 'hava durumu', 'selde', 'sel felaketi', 'su baskın'] },
-  { slug: 'kultur', ad: 'Kültür-Sanat', kelimeler: ['festival', 'konser', 'sergi', 'tiyatro', 'etkinlik', 'müze'] },
+  { slug: 'siyaset', renk: '#8E4EC6', ad: 'Siyaset', kelimeler: ['parti', 'chp', 'ak parti', 'mhp', 'dem parti', 'iyi parti', 'milletvekili', 'il başkan', 'ilçe başkan', 'teşkilat', 'özgür özel', 'erdoğan', 'bahçeli', 'kurultay', 'miting', 'seçim', 'kayyum', 'tbmm'] },
+  { slug: 'asayis', renk: '#3E4C6E', ad: 'Asayiş', kelimeler: ['polis', 'jandarma', 'operasyon', 'gözaltı', 'tutuklan', 'şüpheli', 'hırsız', 'kaçakçı', 'uyuşturucu'] },
+  { slug: 'kaza', renk: '#EF5F00', ad: 'Kaza', kelimeler: ['kazada', 'kazası', 'kazayla', 'çarpış', 'devrildi', 'yangın', 'yaralandı'] },
+  { slug: 'belediye', renk: '#0588F0', ad: 'Belediye', kelimeler: ['belediye', 'büyükşehir', 'meclis', 'muhtar', 'asfalt', 'park'] },
+  { slug: 'ekonomi', renk: '#C98A00', ad: 'Ekonomi', kelimeler: ['ekonomi', 'ihracat', 'liman', 'esnaf', 'fiyat', 'yatırım', 'ticaret', 'borsa', 'hibe'] },
+  { slug: 'tarim', renk: '#5BA82B', ad: 'Tarım', kelimeler: ['hasat', 'üretici', 'çiftçi', 'tarım', 'narenciye', 'limon', 'portakal', 'muz', 'sera', 'hal fiyat'] },
+  { slug: 'egitim', renk: '#6E56CF', ad: 'Eğitim', kelimeler: ['okul', 'öğrenci', 'öğretmen', 'üniversite', 'eğitim', 'sınav', 'kütüphane'] },
+  { slug: 'saglik', renk: '#12A594', ad: 'Sağlık', kelimeler: ['hastane', 'sağlık', 'doktor', 'hasta', 'aşı'] },
+  { slug: 'spor', renk: '#2B9A66', ad: 'Spor', kelimeler: ['maç', 'idmanyurdu', 'idman yurdu', 'lig', 'spor', 'şampiyon', 'basketbol', 'futbol', 'voleybol', 'belediye spor', 'belediyespor', 'puan', 'galibiyet', 'mağlubiyet', 'gol', 'turnuva', 'kulüp'] },
+  { slug: 'ulasim', renk: '#0797B9', ad: 'Ulaşım', kelimeler: ['yolu', 'yolda', 'karayolu', 'trafik', 'otobüs', 'metro', 'feribot', 'havalimanı', 'köprü', 'otoyol'] },
+  { slug: 'hava', renk: '#3E8EDE', ad: 'Hava', kelimeler: ['yağış', 'sağanak', 'fırtına', 'meteoroloji', 'hava durumu', 'selde', 'sel felaketi', 'su baskın'] },
+  { slug: 'kultur', renk: '#D6409F', ad: 'Kültür-Sanat', kelimeler: ['festival', 'konser', 'sergi', 'tiyatro', 'etkinlik', 'müze'] },
 ];
+
+// Kategorisi bulunamayan haber ve Türkiye/dünya haberleri
+export const GUNDEM = { slug: 'gundem', renk: '#DC3E42', ad: 'Gündem' };
+export const GENEL = { slug: 'genel', renk: '#475569', ad: 'Türkiye / Dünya' };
 
 // Bu kelimelerden biri geçen haber otomatik yayınlanmaz; Telegram onayına düşer.
 // Hukuki riskin büyük kısmı bu tür haberlerde: kişilik hakları, çocuklar, suç isnadı.

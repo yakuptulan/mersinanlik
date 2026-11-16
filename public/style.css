@@ -144,7 +144,9 @@ button.ilce-sec { border: none; font: inherit; font-weight: 700; cursor: pointer
 .cip.turuncu { background: #fff1e3; color: var(--turuncu-yazi); font-weight: 800; }
 .cipler { display: flex; flex-wrap: wrap; gap: 8px; }
 
-.manset { background: #fff; border-radius: 28px; padding: 32px; border: 1px solid var(--cizgi); display: flex; flex-direction: column; gap: 16px; }
+.manset { --kat: #DC3E42; position: relative; overflow: hidden; background: #fff; background: linear-gradient(180deg, color-mix(in srgb, var(--kat) 9%, #fff), #fff 45%); border-radius: 28px; padding: 32px; border: 1px solid var(--cizgi); border-top: 6px solid var(--kat); display: flex; flex-direction: column; gap: 16px; }
+.manset .cipler { align-items: center; }
+.manset .kat-ikon { width: 58px; height: 58px; margin: 0 6px 0 0; background: #fff; box-shadow: 0 6px 18px -8px var(--kat); }
 .manset h3 { margin: 0; font-size: 34px; line-height: 1.2; letter-spacing: -.02em; font-weight: 800; }
 .manset h3 a { color: var(--metin); text-decoration: none; }
 .manset p { margin: 0; color: var(--govde); font-size: 19px; }
@@ -155,8 +157,11 @@ button.ilce-sec { border: none; font: inherit; font-weight: 700; cursor: pointer
 .hap:hover { color: #fff; background: #13224a; }
 .hap .daire { width: 40px; height: 40px; border-radius: 999px; background: var(--mavi); display: flex; align-items: center; justify-content: center; }
 
-.haber { background: #fff; border-radius: var(--r); padding: 22px 26px; border: 1px solid var(--cizgi); display: flex; gap: 22px; }
+.haber { --kat: #DC3E42; position: relative; background: #fff; border-radius: var(--r); padding: 22px 26px 22px 30px; border: 1px solid var(--cizgi); display: flex; gap: 22px; overflow: hidden; }
+.haber::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--kat); }
 .haber .saat { min-width: 64px; display: flex; flex-direction: column; gap: 2px; }
+.haber .saat .kat-ikon, .kat-ikon { width: 52px; height: 52px; flex: none; border-radius: 16px; display: inline-flex; align-items: center; justify-content: center; color: var(--kat); background: #f4f6fa; background: color-mix(in srgb, var(--kat) 13%, #fff); margin-bottom: 8px; }
+.cip.kat { color: var(--kat); color: color-mix(in srgb, var(--kat) 72%, #000); background: #f1f5f9; background: color-mix(in srgb, var(--kat) 12%, #fff); }
 .haber .saat b { font-size: 20px; }
 .haber .saat span { color: var(--ikincil); font-size: 14px; }
 .haber .icerik { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
@@ -234,7 +239,10 @@ a.satir:hover { color: var(--derin-mavi); }
   .manset { padding: 20px; border-radius: 24px; }
   .manset h3 { font-size: 24px; }
   .haber { padding: 18px; gap: 14px; flex-direction: column; }
-  .haber .saat { flex-direction: row; gap: 10px; align-items: baseline; }
+  .haber .saat { flex-direction: row; gap: 10px; align-items: center; }
+  .haber .kat-ikon { width: 42px; height: 42px; border-radius: 13px; margin: 0 4px 0 0; }
+  .haber .kat-ikon svg { width: 22px; height: 22px; }
+  .haber { padding-left: 24px; }
   .haber h3 { font-size: 19px; }
   .metin-sayfa { padding: 22px; }
   body { padding-bottom: 84px; }
