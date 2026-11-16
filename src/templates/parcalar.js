@@ -54,6 +54,14 @@ export function fotoKunye(f) {
 }
 
 function kapak(hikaye, kat, link, sinif = '') {
+  const buyukMu = sinif.includes('genis');
+  // 1) Habere özel yapay zekâ görseli
+  if (hikaye.gorsel && fs.existsSync(new URL(`../../public/uretilen/${hikaye.gorsel}`, import.meta.url))) {
+    return `<a class="kapak kapak-foto ${sinif}" href="${h(link)}" rel="noopener nofollow" target="_blank" tabindex="-1" aria-hidden="true" title="Temsili görsel, yapay zekâ ile üretilmiştir">
+<img src="/uretilen/${h(hikaye.gorsel)}" alt="" loading="${buyukMu ? 'eager' : 'lazy'}" decoding="async" width="800" height="450">
+<span class="kapak-rozet">${(katIkon[kat.slug] || katIkon.gundem)(buyukMu ? 26 : 20)}</span><span class="temsili">Temsili · YZ</span></a>`;
+  }
+  // 2) Kütüphaneden temsili fotoğraf
   const foto = fotoSec(hikaye);
   if (foto) {
     const buyuk = sinif.includes('genis');

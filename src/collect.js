@@ -10,6 +10,8 @@ import { KAYNAKLAR, aktifKaynaklar } from './sources.js';
 import { kaynakOku } from './lib/rss.js';
 import { yukle, kaydet, temizle, haberiDegerlendir, hikayeyeEkle, onemliMi } from './lib/store.js';
 import { riskBul } from './lib/text.js';
+import { AYAR } from './config.js';
+import { gorselUretimHazirMi, gorselUret, gorselAdaylari, sahipsizleriSil } from './lib/gorsel-uret.js';
 import { geminiHazirMi, topluOzetle } from './lib/gemini.js';
 import { telegramHazirMi, onayIste, kararlariOku } from './lib/telegram.js';
 
@@ -112,6 +114,26 @@ async function main() {
       console.warn(`! Gemini: ${e.message}`);
     }
   }
+
+  // 4) Yapay zekâ görselleri (günlük limitle)
+  if (gorselUretimHazirMi()) {
+    const bugun = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Istanbul' });
+    if (durum.gorsel?.gun !== bugun) durum.gorsel = { gun: bugun, adet: 0 };
+    const kalan = Math.min(AYAR.calismaBasinaGorsel, AYAR.gunlukGorselLimiti - durum.gorsel.adet);
+    for (const h of gorselAdaylari(veri.hikayeler).slice(0, Math.max(0, kalan))) {
+      try {
+        h.gorsel = await gorselUret(h);
+        durum.gorsel.adet++;
+        console.log(`🖼  Görsel üretildi: ${h.baslik}`);
+      } catch (e) {
+        h.gorselHatasi = String(e.message).slice(0, 120);
+        console.warn(`! Görsel: ${e.message}`);
+        if (/HTTP (401|403|429)/.test(e.message)) break; // anahtar/kota sorunu: bu çalışmada bırak
+      }
+    }
+  }
+  const silinen = sahipsizleriSil(veri.hikayeler);
+  if (silinen) console.log(`${silinen} eski görsel silindi.`);
 
   kaydet(veri);
   fs.writeFileSync(DURUM_DOSYASI, JSON.stringify(durum, null, 1));

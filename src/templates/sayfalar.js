@@ -356,7 +356,8 @@ export function bilgiSayfalari() {
       yol: '/gorsel-kaynaklari/',
       baslik: 'Görsel kaynakları',
       aciklama: `${SITE.name} sitesinde kullanılan temsili fotoğrafların kaynakları ve lisansları.`,
-      govde: `<p>Haber kartlarındaki fotoğraflar <strong>temsilidir</strong>; haberdeki olayın fotoğrafı değildir. Mersin'in ilçelerini ve haberin konusunu gösterir. Fotoğrafların tamamı Wikimedia Commons'tan, ticari kullanıma izin veren lisanslarla alınmıştır. Fotoğrafçılara teşekkür ederiz.</p>
+      govde: `<p>Üzerinde <strong>"Temsili · YZ"</strong> yazan görseller yapay zekâ ile, haberin konusunu anlatmak için üretilmiştir; gerçek bir fotoğraf değildir ve olaydaki kişileri göstermez.</p>
+<p>Haber kartlarındaki diğer fotoğraflar <strong>temsilidir</strong>; haberdeki olayın fotoğrafı değildir. Mersin'in ilçelerini ve haberin konusunu gösterir. Fotoğrafların tamamı Wikimedia Commons'tan, ticari kullanıma izin veren lisanslarla alınmıştır. Fotoğrafçılara teşekkür ederiz.</p>
 <ul>${FOTOLAR.map((f) => `<li><a href="${h(f.sayfa)}" rel="noopener" target="_blank">${h(f.sayfa.split('File:')[1])}</a> — ${h(f.yazar)} · ${h(f.lisans)}</li>`).join('')}</ul>
 <p>Lisanslar: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.tr" rel="noopener" target="_blank">CC BY-SA</a>, <a href="https://creativecommons.org/licenses/by/4.0/deed.tr" rel="noopener" target="_blank">CC BY</a>, CC0 ve kamu malı. Fotoğraflar sitede küçültülüp kırpılmıştır.</p>`,
     }),
