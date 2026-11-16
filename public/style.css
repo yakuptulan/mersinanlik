@@ -460,3 +460,35 @@ a.cip.kat:hover { filter: brightness(.95); }
 .etkinlik-ic small { color: var(--ikincil); font-size: 14px; }
 @media (max-width: 900px) { .izgara-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .izgara-3 { grid-template-columns: 1fr; } .etkinlik { flex-direction: row; } .etkinlik-gorsel { width: 116px; flex: none; } }
+
+/* ---------- Rehber ---------- */
+.rehber-bolum { background: #fff; border: 1px solid var(--cizgi); border-radius: var(--r); padding: 18px; display: flex; flex-direction: column; gap: 12px; }
+.rehber-bolum h2 { margin: 4px 4px 0; font-size: 26px; }
+.rehber-foto { margin: 0; position: relative; }
+.rehber-foto img { width: 100%; height: auto; aspect-ratio: 16 / 7; object-fit: cover; border-radius: 16px; display: block; }
+.rehber-foto figcaption { font-size: 12px; color: var(--ikincil); margin-top: 6px; }
+.rehber-liste { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.rehber-liste li { background: #f6f8fc; border-radius: 16px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; }
+.rehber-liste b { font-size: 18px; }
+.rehber-liste span { color: var(--govde); font-size: 16px; line-height: 1.5; }
+.rehber-liste a { font-weight: 700; font-size: 15px; text-decoration: none; margin-top: 4px; }
+.acil-izgara { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.acil { display: flex; align-items: center; gap: 16px; background: #fff; border: 1px solid var(--cizgi); border-radius: var(--r); padding: 16px 18px; text-decoration: none; color: var(--metin); }
+.acil:hover { border-color: var(--mavi); color: var(--metin); }
+.acil-no { flex: none; min-width: 78px; text-align: center; font-size: 30px; font-weight: 800; border-radius: 16px; padding: 10px 8px; font-variant-numeric: tabular-nums; }
+.acil.kirmizi .acil-no { background: #fde8e8; color: #b42318; }
+.acil.mavi .acil-no { background: #e3efff; color: var(--derin-mavi); }
+.acil.turuncu .acil-no { background: #fff1e3; color: var(--turuncu-yazi); }
+.acil.yesil .acil-no { background: #e6f6ee; color: #1d7a4d; }
+.acil.mor .acil-no { background: #f1eaff; color: #6E56CF; }
+.acil-ic { display: flex; flex-direction: column; gap: 3px; }
+.acil-ic b { font-size: 18px; }
+.acil-ic small { color: var(--ikincil); font-size: 15px; line-height: 1.4; }
+.yan-rozet.saglik { background: #e6f7f5; color: #12A594; }
+.rehber-izgara { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.rehber-kart { display: flex; flex-direction: column; gap: 6px; background: #fff; border: 1px solid var(--cizgi); border-radius: var(--r); padding: 18px; text-decoration: none; color: var(--metin); }
+.rehber-kart .yan-rozet { background: #eef3ff; color: var(--derin-mavi); margin-bottom: 4px; }
+.rehber-kart b { font-size: 19px; }
+.rehber-kart small { color: var(--ikincil); font-size: 15px; }
+.rehber-kart:hover { border-color: var(--mavi); color: var(--metin); }
+@media (max-width: 640px) { .rehber-liste, .acil-izgara, .rehber-izgara { grid-template-columns: 1fr; } }

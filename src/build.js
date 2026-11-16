@@ -5,6 +5,7 @@ import { SITE, ILCELER } from './config.js';
 import { yukle, yayindakiler, VERI_KLASORU } from './lib/store.js';
 import { ilceAdi } from './templates/layout.js';
 import * as S from './templates/sayfalar.js';
+import * as R from './templates/rehber.js';
 import { baslikTemizle, kategoriBul, htmlKacis } from './lib/text.js';
 import { kendiSayfasiVar, haberYolu } from './templates/parcalar.js';
 
@@ -60,6 +61,10 @@ export function insaEt({ simdi = Date.now() } = {}) {
   ekle('/piyasalar/', S.piyasaSayfasi({ servis }));
   ekle('/spor/', S.sporSayfasi({ servis, hikayeler }));
   ekle('/etkinlikler/', S.etkinlikSayfasi({ servis, simdi }));
+  ekle('/rehber/', R.rehberSayfasi({ servis }));
+  ekle('/rehber/gezilecek-yerler/', R.gezilecekSayfasi({ servis }));
+  ekle('/rehber/acil-telefonlar/', R.acilSayfasi({ servis }));
+  ekle('/rehber/hastaneler/', R.hastaneSayfasi({ servis }));
   for (const kategori of S.KATEGORI_SAYFALARI) ekle(`/kategori/${kategori.slug}/`, S.kategoriSayfasi({ kategori, hikayeler, servis }));
   ekle('/namaz-vakitleri/', S.namazSayfasi({ servis, simdi }));
   for (const ilce of ILCELER) ekle(`/namaz-vakitleri/${ilce.slug}/`, S.namazIlceSayfasi({ ilce, servis, simdi }));
