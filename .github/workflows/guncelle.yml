@@ -24,6 +24,9 @@ jobs:
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Sırada bekleyen çalışmalar da en güncel veriden başlasın
+          ref: main
 
       - uses: actions/setup-node@v4
         with:
@@ -61,7 +64,7 @@ jobs:
             echo "Değişiklik yok"
           else
             git commit -m "Veri güncellemesi $(date -u +%Y-%m-%dT%H:%MZ)"
-            git pull --rebase --autostash || true
+            git pull --rebase -X theirs --autostash || { git rebase --abort; git pull --no-rebase -X ours --no-edit; }
             git push
           fi
 

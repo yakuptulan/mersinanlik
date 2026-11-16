@@ -58,7 +58,7 @@ const KURULUS = {
   publishingPrinciples: SITE.url + '/yayin-ilkeleri/',
 };
 
-export function sayfa({ baslik, aciklama = SITE.description, yol = '/', aktif = yol, ust = '', icerik, noindex = false, jsonLd = null, hava = null, ekVeri = null }) {
+export function sayfa({ baslik, aciklama = SITE.description, yol = '/', aktif = yol, ust = '', icerik, noindex = false, jsonLd = null, hava = null, ekVeri = null, gorsel = null, tur = 'website' }) {
   const tamBaslik = baslik ? `${baslik} | ${SITE.name}` : `${SITE.name} – Mersin son dakika haberleri`;
   const kanonik = SITE.url + yol;
   return `<!doctype html>
@@ -75,14 +75,15 @@ ${noindex ? '<meta name="robots" content="noindex, follow">' : ''}
 <meta property="og:description" content="${h(aciklama)}">
 <meta property="og:url" content="${kanonik}">
 <meta property="og:locale" content="${SITE.locale}">
-<meta property="og:type" content="website">
-<meta property="og:image" content="${SITE.url}/paylasim.jpg">
+<meta property="og:type" content="${tur}">
+${gorsel ? `<meta property="og:image" content="${h(gorsel)}">` : `<meta property="og:image" content="${SITE.url}/paylasim.jpg">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:height" content="630">`}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0A1530">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="${SITE.name}" href="/rss.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">

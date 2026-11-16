@@ -1,9 +1,19 @@
 import fs from 'node:fs';
-import { htmlKacis as h } from '../lib/text.js';
+import { htmlKacis as h, slugify } from '../lib/text.js';
 import { FOTOLAR } from '../fotolar.js';
 import { KATEGORILER, GUNDEM, GENEL } from '../config.js';
 import { ikon, katIkon } from './ikonlar.js';
 import { saat, ilceAdi } from './layout.js';
+
+// Kendi haber sayfası olan hikâyeler (kurum haberleri, kendi yazımızla)
+export const kendiSayfasiVar = (hikaye) => Boolean(hikaye.metin);
+export const haberYolu = (hikaye) => `/haber/${slugify(hikaye.baslik).slice(0, 70).replace(/-+$/, '')}-${hikaye.id}/`;
+// Kart bağlantısı: kendi sayfası varsa oraya, yoksa kaynağa
+function baglanti(hikaye) {
+  return kendiSayfasiVar(hikaye)
+    ? { href: haberYolu(hikaye), dis: '' }
+    : { href: hikaye.kaynaklar[0].link, dis: ' rel="noopener nofollow" target="_blank"' };
+}
 
 const katAdi = (slug) => KATEGORILER.find((k) => k.slug === slug)?.ad || 'Gündem';
 
@@ -53,13 +63,13 @@ export function fotoKunye(f) {
   return `Foto: ${f.yazar} · ${f.lisans} · Wikimedia Commons`;
 }
 
-function kapak(hikaye, kat, link, sinif = '') {
+export function kapak(hikaye, kat, link, sinif = '', dis = ' rel="noopener nofollow" target="_blank"') {
   const buyukMu = sinif.includes('genis');
   // 1) Habere özel yapay zekâ görseli
   if (hikaye.gorsel && fs.existsSync(new URL(`../../public/uretilen/${hikaye.gorsel}`, import.meta.url))) {
     const kurum = hikaye.gorselKaynak && hikaye.gorselKaynak !== 'yz' ? hikaye.gorselKaynak : null;
     const etiket = kurum ? `Foto: ${h(kurum)}` : 'Temsili · YZ';
-    return `<a class="kapak kapak-foto ${sinif}" href="${h(link)}" rel="noopener nofollow" target="_blank" tabindex="-1" aria-hidden="true" title="${kurum ? `Fotoğraf: ${h(kurum)}` : 'Temsili görsel, yapay zekâ ile üretilmiştir'}">
+    return `<a class="kapak kapak-foto ${sinif}" href="${h(link)}"${dis} tabindex="-1" aria-hidden="true" title="${kurum ? `Fotoğraf: ${h(kurum)}` : 'Temsili görsel, yapay zekâ ile üretilmiştir'}">
 <img src="/uretilen/${h(hikaye.gorsel)}" alt="${kurum ? '' : 'Temsili görsel (yapay zekâ ile üretildi)'}" loading="${buyukMu ? 'eager' : 'lazy'}" decoding="async" width="800" height="450">
 <span class="kapak-rozet">${(katIkon[kat.slug] || katIkon.gundem)(buyukMu ? 26 : 20)}</span>${kurum ? `<span class="temsili kurum">${etiket}</span>` : ''}</a>`;
   }
@@ -67,17 +77,17 @@ function kapak(hikaye, kat, link, sinif = '') {
   const foto = fotoSec(hikaye);
   if (foto) {
     const buyuk = sinif.includes('genis');
-    return `<a class="kapak kapak-foto ${sinif}" href="${h(link)}" rel="noopener nofollow" target="_blank" tabindex="-1" aria-hidden="true" title="${h(fotoKunye(foto))}">
+    return `<a class="kapak kapak-foto ${sinif}" href="${h(link)}"${dis} tabindex="-1" aria-hidden="true" title="${h(fotoKunye(foto))}">
 <img src="/foto/${foto.id}-${buyuk ? 800 : 400}.webp"${buyuk ? '' : ` srcset="/foto/${foto.id}-400.webp 400w, /foto/${foto.id}-800.webp 800w" sizes="(max-width: 900px) 104px, 176px"`} alt="" loading="${buyuk ? 'eager' : 'lazy'}" decoding="async" width="${buyuk ? 800 : 400}" height="${buyuk ? 500 : 300}">
 <span class="kapak-rozet">${(katIkon[kat.slug] || katIkon.gundem)(buyuk ? 26 : 20)}</span>${buyuk ? `<span class="kunye">${h(fotoKunye(foto))}</span>` : ''}</a>`;
   }
-  return kapakCizim(hikaye, kat, link, sinif);
+  return kapakCizim(hikaye, kat, link, sinif, dis);
 }
 
-function kapakCizim(hikaye, kat, link, sinif = '') {
+function kapakCizim(hikaye, kat, link, sinif = '', dis = ' rel="noopener nofollow" target="_blank"') {
   // Aynı ilçe tekrar edince sıkıcı olmasın: güneşin yeri habere göre değişir
   const v = parseInt(String(hikaye.id).slice(-2), 36) % 3;
-  return `<a class="kapak kapak-v${v} ${sinif}" href="${h(link)}" rel="noopener nofollow" target="_blank" tabindex="-1" aria-hidden="true" style="--gorsel:url(/gorsel/${kapakAdi(hikaye)}.svg)"><span class="kapak-gunes"></span><span class="kapak-cizim"></span><span class="kapak-rozet">${(katIkon[kat.slug] || katIkon.gundem)(20)}</span></a>`;
+  return `<a class="kapak kapak-v${v} ${sinif}" href="${h(link)}"${dis} tabindex="-1" aria-hidden="true" style="--gorsel:url(/gorsel/${kapakAdi(hikaye)}.svg)"><span class="kapak-gunes"></span><span class="kapak-cizim"></span><span class="kapak-rozet">${(katIkon[kat.slug] || katIkon.gundem)(20)}</span></a>`;
 }
 
 const katKutusu = (kat, boyut = 26) => `<span class="kat-ikon" aria-hidden="true">${(katIkon[kat.slug] || katIkon.gundem)(boyut)}</span>`;
@@ -87,7 +97,7 @@ function kaynakMetni(hikaye) {
   return adlar.length > 3 ? `${adlar.slice(0, 3).join(', ')} +${adlar.length - 3}` : adlar.join(', ');
 }
 
-function ilceCipleri(hikaye) {
+export function ilceCipleri(hikaye) {
   const ilceler = hikaye.ilceler.length ? hikaye.ilceler : [];
   return [
     ...ilceler.slice(0, 2).map((s) => `<a class="cip" href="/ilce/${s}/">${h(ilceAdi(s))}</a>`),
@@ -102,11 +112,12 @@ export function haberKarti(hikaye) {
   const goruldu = new Set([ana.ad]);
   const digerleri = hikaye.kaynaklar.slice(1).filter((k) => !goruldu.has(k.ad) && goruldu.add(k.ad)).slice(0, 3);
   const kat = katBilgi(hikaye);
+  const b = baglanti(hikaye);
   return `<article class="haber" style="--kat:${kat.renk}">
-${kapak(hikaye, kat, ana.link)}
+${kapak(hikaye, kat, b.href, '', b.dis)}
 <div class="icerik">
 <div class="cipler">${ilceCipleri(hikaye)}<span class="zaman"><b>${saat(hikaye.ilkGorulme)}</b> · <span data-once="${hikaye.ilkGorulme}"></span></span></div>
-<h3><a href="${h(ana.link)}" rel="noopener nofollow" target="_blank">${h(hikaye.baslik)}</a></h3>
+<h3><a href="${h(b.href)}"${b.dis}>${h(hikaye.baslik)}</a></h3>
 ${hikaye.ozet ? `<p>${h(hikaye.ozet)}</p>` : ''}
 <span class="kaynak">Kaynak: <strong>${h(kaynakMetni(hikaye))}</strong> · <a href="${h(ana.link)}" rel="noopener nofollow" target="_blank">Haberin tamamı kaynağında →</a>${
     digerleri.length ? ` · Diğer kaynaklar: ${digerleri.map((k) => `<a href="${h(k.link)}" rel="noopener nofollow" target="_blank">${h(k.ad)}</a>`).join(', ')}` : ''
@@ -119,14 +130,15 @@ export function mansetKarti(hikaye) {
   const ana = hikaye.kaynaklar[0];
   const coklu = hikaye.kaynaklar.length > 1;
   const kat = katBilgi(hikaye);
+  const b = baglanti(hikaye);
   return `<article class="manset" style="--kat:${kat.renk}">
-${kapak(hikaye, kat, ana.link, 'kapak-genis')}
+${kapak(hikaye, kat, b.href, 'kapak-genis', b.dis)}
 <div class="cipler">${coklu ? '<span class="cip turuncu">● Gelişen olay</span>' : ''}${ilceCipleri(hikaye)}</div>
-<h3><a href="${h(ana.link)}" rel="noopener nofollow" target="_blank">${h(hikaye.baslik)}</a></h3>
+<h3><a href="${h(b.href)}"${b.dis}>${h(hikaye.baslik)}</a></h3>
 ${hikaye.ozet ? `<p>${h(hikaye.ozet)}</p>` : ''}
 <div class="manset-alt">
 <span class="kaynak-sayi"><strong>${hikaye.kaynaklar.length} kaynak</strong> yazdı · ${h(kaynakMetni(hikaye))} · <span data-once="${hikaye.ilkGorulme}">${saat(hikaye.ilkGorulme)}</span></span>
-<a class="hap" href="${h(ana.link)}" rel="noopener nofollow" target="_blank">Haberi oku<span class="daire">${ikon.ok(18)}</span></a>
+<a class="hap" href="${h(b.href)}"${b.dis}>Haberi oku<span class="daire">${ikon.ok(18)}</span></a>
 </div>
 </article>`;
 }

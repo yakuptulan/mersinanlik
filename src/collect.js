@@ -12,7 +12,16 @@ import { yukle, kaydet, temizle, haberiDegerlendir, hikayeyeEkle, onemliMi } fro
 import { riskBul } from './lib/text.js';
 import { AYAR } from './config.js';
 import { gorselUretimHazirMi, gorselUret, gorselAdaylari, sahipsizleriSil, kurumFotosuIndir } from './lib/gorsel-uret.js';
-import { kurumOku } from './lib/kurum.js';
+import { kurumOku, kurumMetniGetir } from './lib/kurum.js';
+
+// Hikâyenin bir kurum kaynağı varsa (belediye vb.) o kaynağı ve kaydını döndürür
+function kurumKaynagi(h) {
+  for (const kayit of h.kaynaklar) {
+    const kaynak = KAYNAKLAR.find((k) => k.id === kayit.kaynakId);
+    if (kaynak?.kapsam === 'kurum') return { kaynak, kayit };
+  }
+  return null;
+}
 import { geminiHazirMi, topluOzetle } from './lib/gemini.js';
 import { telegramHazirMi, onayIste, kararlariOku } from './lib/telegram.js';
 
@@ -112,15 +121,32 @@ async function main() {
 
   // 3) Özet: sadece izin verilen kaynaklardan gelen, özeti olmayan yayındaki haberler
   if (geminiHazirMi()) {
-    const bekleyen = veri.hikayeler.filter((h) => !h.ozet && h.ozetIcinMetin && h.durum === 'yayinda').slice(0, 20);
+    // Eski kurum haberlerinin tam metnini bir kez al (haber sayfası yazılabilsin diye)
+    const eksikMetin = veri.hikayeler
+      .filter((h) => h.durum === 'yayinda' && !h.metin && !h.ozetIcinMetin && !h.metinDenendi && kurumKaynagi(h))
+      .slice(0, 6);
+    for (const h of eksikMetin) {
+      h.metinDenendi = true;
+      const { kaynak, kayit } = kurumKaynagi(h);
+      try {
+        const d = await kurumMetniGetir(kayit.link, kaynak);
+        if (d.govde && d.govde.length > 300) h.ozetIcinMetin = d.govde;
+        h.kurum = kaynak.ad;
+      } catch (e) {
+        console.warn(`! Kurum metni (${kaynak.ad}): ${e.message}`);
+      }
+    }
+    const bekleyen = veri.hikayeler.filter((h) => h.ozetIcinMetin && (!h.ozet || (h.kurum && !h.metin)) && h.durum === 'yayinda').slice(0, 8);
     try {
-      const ozetler = await topluOzetle(bekleyen.map((h) => `${h.baslik}\n${h.ozetIcinMetin}`));
+      const sonuclar = await topluOzetle(bekleyen.map((h) => `${h.baslik}\n${h.ozetIcinMetin}`));
       bekleyen.forEach((h, i) => {
-        if (ozetler[i]) {
-          h.ozet = ozetler[i];
-          delete h.ozetIcinMetin;
-        }
+        const r = sonuclar[i];
+        if (!r) return;
+        h.ozet = r.ozet;
+        if (r.metin && h.kurum) h.metin = r.metin;
+        delete h.ozetIcinMetin;
       });
+      if (bekleyen.length) console.log(`✍️  Özet: ${sonuclar.filter(Boolean).length}/${bekleyen.length}, haber yazısı: ${bekleyen.filter((h) => h.metin).length}`);
     } catch (e) {
       console.warn(`! Gemini: ${e.message}`);
     }

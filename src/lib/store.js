@@ -97,9 +97,10 @@ export function hikayeyeEkle(veri, haber, kaynak) {
     if (!haber.genel) enIyi.genel = false;
     enIyi.riskNedenleri = [...new Set([...enIyi.riskNedenleri, ...haber.riskNedenleri])];
     enIyi.sonGuncelleme = new Date().toISOString();
-    if (!enIyi.ozet && kaynak.yapayZekaOzeti && haber.aciklama) {
-      enIyi.ozetIcinMetin = haber.aciklama;
+    if (kaynak.yapayZekaOzeti && (haber.govde || haber.aciklama) && (!enIyi.ozet || (!enIyi.metin && haber.govde))) {
+      enIyi.ozetIcinMetin = haber.govde || haber.aciklama;
     }
+    if (kaynak.kapsam === 'kurum') enIyi.kurum = kaynak.ad;
     // Yayındaki bir hikâyeye riskli kaynak eklendiyse tekrar onaya düşer
     if (enIyi.durum === 'yayinda' && haber.riskNedenleri.length && !enIyi.onaylandi) {
       enIyi.durum = 'onay-bekliyor';
@@ -111,7 +112,8 @@ export function hikayeyeEkle(veri, haber, kaynak) {
     id: kisaKimlik(haber.link),
     baslik: haber.baslik,
     ozet: null,
-    ozetIcinMetin: kaynak.yapayZekaOzeti ? haber.aciklama || null : null,
+    ozetIcinMetin: kaynak.yapayZekaOzeti ? haber.govde || haber.aciklama || null : null,
+    ...(kaynak.kapsam === 'kurum' ? { kurum: kaynak.ad } : {}),
     ilceler: haber.ilceler,
     genel: !!haber.genel,
     kategori: haber.kategori,

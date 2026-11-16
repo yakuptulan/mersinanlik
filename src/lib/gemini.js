@@ -6,12 +6,15 @@
 const MODEL = process.env.GEMINI_MODEL || 'gemini-3.5-flash-lite';
 
 const TALIMAT = `Sen Mersin'de yayın yapan yerel bir haber sitesinin editörüsün.
-Sana numaralı haber metinleri vereceğim. Her biri için Türkçe, tarafsız, 2 cümlelik kısa bir özet yaz.
+Sana numaralı haber metinleri vereceğim (çoğu belediye/kurum basın duyurusu). Her biri için iki şey yaz:
+1) "ozet": Türkçe, tarafsız, 2 cümlelik kısa özet.
+2) "metin": Metin yeterince bilgi içeriyorsa (en az 4-5 cümlelik bilgi), 3 paragraflık, 120-220 kelimelik kısa bir haber yazısı.
+   Paragrafları "\n\n" ile ayır. İlk paragraf ne, nerede, ne zaman sorularını cevaplasın. Bilgi azsa "metin" boş ("") olsun.
 Kurallar:
-- Metni kopyalama, tamamen kendi cümlelerinle yaz.
-- Metinde olmayan hiçbir bilgiyi ekleme, yorum katma.
+- Metni kopyalama, tamamen kendi cümlelerinle yaz; kurumun övgü ve slogan dilini kullanma, haber diliyle yaz.
+- Metinde olmayan hiçbir bilgiyi ekleme, yorum katma, tahmin yürütme.
 - Kişilerin tam adını yazma; gerekirse görevini yaz (ör. "Büyükşehir Belediye Başkanı").
-- Yalnızca JSON döndür: [{"no": 1, "ozet": "..."}, ...]`;
+- Yalnızca JSON döndür: [{"no": 1, "ozet": "...", "metin": "..."}, ...]`;
 
 export function geminiHazirMi() {
   return Boolean(process.env.GEMINI_API_KEY);
@@ -19,7 +22,7 @@ export function geminiHazirMi() {
 
 export async function topluOzetle(metinler) {
   if (!geminiHazirMi() || metinler.length === 0) return [];
-  const icerik = metinler.map((m, i) => `${i + 1}) ${m.slice(0, 1500)}`).join('\n\n');
+  const icerik = metinler.map((m, i) => `${i + 1}) ${m.slice(0, 4000)}`).join('\n\n');
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
   const res = await fetch(url, {
     method: 'POST',
@@ -34,5 +37,8 @@ export async function topluOzetle(metinler) {
   const json = await res.json();
   const yazi = json?.candidates?.[0]?.content?.parts?.[0]?.text || '[]';
   const sonuc = JSON.parse(yazi);
-  return metinler.map((_, i) => sonuc.find((s) => Number(s.no) === i + 1)?.ozet || null);
+  return metinler.map((_, i) => {
+    const s = sonuc.find((x) => Number(x.no) === i + 1);
+    return s?.ozet ? { ozet: s.ozet.trim(), metin: (s.metin || '').trim() || null } : null;
+  });
 }

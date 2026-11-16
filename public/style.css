@@ -329,3 +329,16 @@ a.yan-satir:hover { background: var(--acik); color: var(--metin); }
 .yan-dugme svg { color: var(--turuncu, #FF8A1F); }
 .yan-dugme span { margin-left: auto; font-weight: 600; font-size: 13px; color: var(--ikincil); }
 .yan-dugme:hover { border-color: var(--mavi); color: var(--metin); }
+
+/* ---------- Haber sayfası ---------- */
+.haber-bas h1 { font-size: clamp(26px, 4vw, 40px); line-height: 1.2; margin: 14px 0 10px; max-width: 860px; }
+.haber-bas .cipler .cip { background: rgba(255,255,255,.12); color: #fff; }
+.haber-meta { color: var(--acik-yazi); font-size: 16px; margin: 0; }
+.haber-yazi { background: #fff; border-radius: 24px; padding: clamp(18px, 3vw, 32px); box-shadow: 0 1px 2px rgba(10,21,48,.06); margin-bottom: 32px; border-top: 6px solid var(--kat); }
+.haber-gorsel { margin: 0 0 22px; }
+.haber-gorsel img { width: 100%; height: auto; border-radius: 16px; display: block; aspect-ratio: 16 / 9; object-fit: cover; }
+.haber-gorsel figcaption { font-size: 14px; color: var(--ikincil); margin-top: 8px; }
+.haber-yazi p { font-size: 19px; line-height: 1.7; margin: 0 0 18px; }
+.haber-yazi .haber-spot { font-size: 21px; font-weight: 700; line-height: 1.5; }
+.haber-kaynak { display: flex; gap: 12px; background: #F1F5FF; border-radius: 16px; padding: 16px 18px; margin-top: 8px; }
+.haber-kaynak p { font-size: 16px !important; line-height: 1.55 !important; margin: 0 !important; color: var(--ikincil); }

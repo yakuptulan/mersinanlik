@@ -35,6 +35,15 @@ function mutlak(src, taban, kokten = false) {
   }
 }
 
+// Haberin gövdesi: sayfadaki paragraflar (menü, çerez uyarısı vb. hariç)
+export function govdeCoz(html) {
+  const temiz = html.replace(/<(script|style|nav|header|footer|aside|form|noscript)\b[\s\S]*?<\/\1>/gi, ' ');
+  const paragraflar = [...temiz.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)]
+    .map((m) => duzMetin(m[1]).replace(/\s+/g, ' ').trim())
+    .filter((t) => t.length >= 60 && !/çerez|cookie|kvkk|kişisel veri|tüm hakları|copyright|©/i.test(t));
+  return [...new Set(paragraflar)].join('\n').slice(0, 5000);
+}
+
 export function detayCoz(html, link, kaynak) {
   const baslikHam = meta(html, 'og:title') || html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || html.match(/<title>([\s\S]*?)<\/title>/i)?.[1] || '';
   let baslik = duzMetin(baslikHam);
@@ -61,7 +70,13 @@ export function detayCoz(html, link, kaynak) {
   const gunAyYil = link.match(/-(\d{2})(\d{2})(20\d{2})\.html$/);
   if (!tarih && gunAyYil) tarih = new Date(`${gunAyYil[3]}-${gunAyYil[2]}-${gunAyYil[1]}T12:00:00+03:00`).toISOString();
 
-  return { baslik, aciklama, link, tarih, foto: foto ? mutlak(foto, link, kaynak.gorselKokten) : null };
+  const govde = govdeCoz(html);
+  return { baslik, aciklama, govde, link, tarih, foto: foto ? mutlak(foto, link, kaynak.gorselKokten) : null };
+}
+
+// Kayıtlı bir kurum haberinin metnini sonradan almak için (eski kayıtlar)
+export async function kurumMetniGetir(link, kaynak) {
+  return detayCoz(await sayfaGetir(link), link, kaynak);
 }
 
 // bilinen(link) → zaten kayıtlı haberse detay sayfası tekrar indirilmez.

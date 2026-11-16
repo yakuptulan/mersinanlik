@@ -2,7 +2,7 @@ import { SITE, ILCELER, AYAR } from '../config.js';
 import { htmlKacis as h, ayrilmaEki } from '../lib/text.js';
 import { sayfa, saat, tarihUzun, ilceAdi } from './layout.js';
 import { ikon } from './ikonlar.js';
-import { haberListesi, mansetKarti, reklamAlani } from './parcalar.js';
+import { haberListesi, mansetKarti, reklamAlani, haberYolu, katBilgi, ilceCipleri } from './parcalar.js';
 import { telefonGoster } from '../lib/eczane.js';
 import { havaIkonu, havaTuru } from './havaIkon.js';
 import { FOTOLAR } from '../fotolar.js';
@@ -238,6 +238,63 @@ ${yanKutular(servis, ilce)}
     aktif: '/ilceler/',
     ust,
     icerik,
+  });
+}
+
+// Kurum duyurusundan kendi cümlelerimizle yazılmış haberin sayfası
+export function haberSayfasi({ hikaye, ilgili, servis }) {
+  const kat = katBilgi(hikaye);
+  const yol = haberYolu(hikaye);
+  const kurumKayit = hikaye.kaynaklar.find((k) => k.ad === hikaye.kurum) || hikaye.kaynaklar[0];
+  const digerleri = hikaye.kaynaklar.filter((k) => k !== kurumKayit);
+  const kurumFoto = hikaye.gorselKaynak && hikaye.gorselKaynak !== 'yz' ? hikaye.gorselKaynak : null;
+  const gorselUrl = hikaye.gorsel ? `${SITE.url}/uretilen/${hikaye.gorsel}` : null;
+  const paragraflar = hikaye.metin.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean).map((p) => `<p>${h(p)}</p>`).join('\n');
+  const ilce = ILCELER.find((i) => hikaye.ilceler.includes(i.slug)) || null;
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: hikaye.baslik.slice(0, 110),
+    description: hikaye.ozet || undefined,
+    datePublished: hikaye.ilkGorulme,
+    dateModified: hikaye.sonGuncelleme || hikaye.ilkGorulme,
+    mainEntityOfPage: SITE.url + yol,
+    image: [gorselUrl || `${SITE.url}/paylasim.jpg`],
+    articleSection: kat.ad,
+    contentLocation: { '@type': 'Place', name: ilce ? `${ilce.ad}, Mersin` : 'Mersin' },
+    isBasedOn: kurumKayit.link,
+    author: { '@type': 'Organization', name: SITE.name, url: SITE.url + '/' },
+    publisher: { '@type': 'NewsMediaOrganization', name: SITE.name, logo: { '@type': 'ImageObject', url: `${SITE.url}/logo-kare.png` } },
+  };
+  const ust = `<div class="su-an-bas haber-bas"><div>
+<div class="cipler">${ilceCipleri(hikaye)}</div>
+<h1>${h(hikaye.baslik)}</h1>
+<p class="haber-meta"><time datetime="${hikaye.ilkGorulme}">${tarihUzun(hikaye.ilkGorulme)} · ${saat(hikaye.ilkGorulme)}</time> · Kaynak: ${h(kurumKayit.ad)}</p>
+</div></div>`;
+  const icerik = `<main class="kap govde">
+<div class="ana">
+<article class="haber-yazi" style="--kat:${kat.renk}">
+${gorselUrl ? `<figure class="haber-gorsel"><img src="/uretilen/${h(hikaye.gorsel)}" alt="${kurumFoto ? h(hikaye.baslik) : 'Temsili görsel (yapay zekâ ile üretildi)'}" width="800" height="450" decoding="async"><figcaption>${kurumFoto ? `Fotoğraf: ${h(kurumFoto)}` : 'Temsili görsel · yapay zekâ ile üretilmiştir'}</figcaption></figure>` : ''}
+${hikaye.ozet ? `<p class="haber-spot">${h(hikaye.ozet)}</p>` : ''}
+${paragraflar}
+<div class="haber-kaynak">${ikon.bilgi ? ikon.bilgi(20) : ''}<p>Bu haber, <strong>${h(kurumKayit.ad)}</strong> tarafından yayımlanan duyuru esas alınarak ${SITE.name} tarafından derlenmiştir. Duyurunun aslı: <a href="${h(kurumKayit.link)}" rel="noopener" target="_blank">${h(kurumKayit.ad)} →</a>${
+    digerleri.length ? `<br>Konuyu yazan diğer kaynaklar: ${digerleri.slice(0, 4).map((k) => `<a href="${h(k.link)}" rel="noopener nofollow" target="_blank">${h(k.ad)}</a>`).join(', ')}` : ''
+  }</p></div>
+</article>
+${ilgili.length ? `<div class="bolum-bas"><h2>${ilce ? `${h(ilce.ad)}'${ayrilmaEki(ilce.ad)} diğer haberler` : 'Diğer haberler'}</h2></div>\n${haberListesi(ilgili)}` : ''}
+</div>
+${yanKutular(servis, ilce)}
+</main>`;
+  return sayfa({
+    baslik: hikaye.baslik,
+    aciklama: (hikaye.ozet || hikaye.metin).slice(0, 160),
+    yol,
+    aktif: '/',
+    ust,
+    icerik,
+    jsonLd,
+    gorsel: gorselUrl,
+    tur: 'article',
   });
 }
 
