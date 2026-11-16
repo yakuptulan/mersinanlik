@@ -1,0 +1,15 @@
+{
+  "name": "Mersin Anlık",
+  "short_name": "Mersin Anlık",
+  "description": "Mersin ve 13 ilçesinden son dakika haberleri, nöbetçi eczaneler, kesintiler, hava durumu ve namaz vakitleri.",
+  "lang": "tr",
+  "start_url": "/?kaynak=uygulama",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0A1530",
+  "theme_color": "#0A1530",
+  "icons": [
+    { "src": "/ikon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/logo-kare.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

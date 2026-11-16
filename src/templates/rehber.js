@@ -4,7 +4,8 @@ import { htmlKacis as h } from '../lib/text.js';
 import { sayfa } from './layout.js';
 import { yanKutular } from './sayfalar.js';
 import { FOTOLAR } from '../fotolar.js';
-import { fotoKunye } from './parcalar.js';
+import { fotoKunye, paylasCubugu } from './parcalar.js';
+import { SITE } from '../config.js';
 import { ikon } from './ikonlar.js';
 
 const harita = (ad) => `https://www.google.com/maps/search/${encodeURIComponent(`${ad}, Mersin`)}`;
@@ -90,6 +91,7 @@ ${f ? `<figure class="rehber-foto"><img src="/foto/${f.id}-800.webp" alt="${h(b.
     aktif: '/rehber/',
     ust: ust("Mersin'de gezilecek yerler", 'Tarih, deniz ve yayla: ilçe ilçe öneriler'),
     icerik: `<main class="kap govde"><div class="ana">${bolumler}
+${paylasCubugu(`${SITE.url}/rehber/gezilecek-yerler/`, "Mersin'de gezilecek yerler")}
 <p style="color:var(--ikincil);font-size:15px">Ziyaret saatleri ve ücretler değişebilir; gitmeden önce müze ve ören yerlerinin güncel bilgisini kontrol edin.</p></div>${yanKutular(servis)}</main>`,
   });
 }
@@ -103,6 +105,7 @@ export function acilSayfasi({ servis }) {
     ust: ust('Acil ve önemli numaralar', 'Numaraya dokununca arama başlar'),
     icerik: `<main class="kap govde"><div class="ana">
 <div class="acil-izgara">${ACIL.map(([no, ad, ac, renk]) => `<a class="acil ${renk}" href="tel:${no}"><span class="acil-no">${no}</span><span class="acil-ic"><b>${h(ad)}</b><small>${h(ac)}</small></span></a>`).join('')}</div>
+${paylasCubugu(`${SITE.url}/rehber/acil-telefonlar/`, 'Mersin acil ve önemli telefon numaraları')}
 <p style="color:var(--ikincil);font-size:15px">Türkiye'de 155, 156 ve 110 gibi eski acil numaralar da 112'ye yönlendirilir. Nöbetçi eczaneler için <a href="/nobetci-eczane/">nöbetçi eczane sayfasına</a> bakın.</p>
 </div>${yanKutular(servis)}</main>`,
   });

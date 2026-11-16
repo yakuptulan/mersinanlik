@@ -492,3 +492,14 @@ a.cip.kat:hover { filter: brightness(.95); }
 .rehber-kart small { color: var(--ikincil); font-size: 15px; }
 .rehber-kart:hover { border-color: var(--mavi); color: var(--metin); }
 @media (max-width: 640px) { .rehber-liste, .acil-izgara, .rehber-izgara { grid-template-columns: 1fr; } }
+
+/* ---------- Yazı boyutu düğmesi, paylaş ---------- */
+.ust-dugmeler { display: flex; gap: 10px; align-items: center; }
+.yazi-dugme { border: none; cursor: pointer; font: inherit; font-weight: 800; font-size: 18px; }
+.yazi-dugme sup { font-size: 12px; }
+.yazi-dugme[aria-pressed="true"] { background: #fcd34d; }
+.paylas { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--cizgi); }
+.paylas-baslik { font-weight: 800; margin-right: 4px; }
+.paylas a, .paylas button { font: inherit; font-size: 15px; font-weight: 700; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--cizgi); background: #fff; color: var(--metin); text-decoration: none; cursor: pointer; }
+.paylas a:hover, .paylas button:hover { border-color: var(--mavi); }
+.paylas .paylas-wa { background: #25D366; border-color: #25D366; color: #fff; }

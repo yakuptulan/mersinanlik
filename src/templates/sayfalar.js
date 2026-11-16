@@ -2,7 +2,7 @@ import { SITE, ILCELER, AYAR } from '../config.js';
 import { htmlKacis as h, ayrilmaEki } from '../lib/text.js';
 import { sayfa, saat, tarihUzun, ilceAdi } from './layout.js';
 import { ikon } from './ikonlar.js';
-import { haberListesi, mansetKarti, reklamAlani, haberYolu, katBilgi, ilceCipleri, kutuKarti, gundemListesi } from './parcalar.js';
+import { haberListesi, mansetKarti, reklamAlani, haberYolu, katBilgi, ilceCipleri, kutuKarti, gundemListesi, paylasCubugu } from './parcalar.js';
 import { KATEGORILER, GENEL, GUNDEM } from '../config.js';
 import { telefonGoster } from '../lib/eczane.js';
 import { havaIkonu, havaTuru } from './havaIkon.js';
@@ -322,7 +322,7 @@ export function haberSayfasi({ hikaye, ilgili, servis }) {
   const ust = `<div class="su-an-bas haber-bas"><div>
 <div class="cipler">${ilceCipleri(hikaye)}</div>
 <h1>${h(hikaye.baslik)}</h1>
-<p class="haber-meta"><time datetime="${hikaye.ilkGorulme}">${tarihUzun(hikaye.ilkGorulme)} · ${saat(hikaye.ilkGorulme)}</time> · Kaynak: ${h(kurumKayit.ad)}</p>
+<p class="haber-meta"><time datetime="${hikaye.ilkGorulme}">${tarihUzun(hikaye.ilkGorulme)} · ${saat(hikaye.ilkGorulme)}</time> · Kaynak: ${h(kurumKayit.ad)} · ${Math.max(1, Math.round(`${hikaye.ozet || ''} ${hikaye.metin}`.split(/\s+/).length / 200))} dk okuma</p>
 </div></div>`;
   const icerik = `<main class="kap govde">
 <div class="ana">
@@ -333,6 +333,7 @@ ${paragraflar}
 <div class="haber-kaynak">${ikon.bilgi ? ikon.bilgi(20) : ''}<p>Bu haber, <strong>${h(kurumKayit.ad)}</strong> tarafından yayımlanan duyuru esas alınarak ${SITE.name} tarafından derlenmiştir. Duyurunun aslı: <a href="${h(kurumKayit.link)}" rel="noopener" target="_blank">${h(kurumKayit.ad)} →</a>${
     digerleri.length ? `<br>Konuyu yazan diğer kaynaklar: ${digerleri.slice(0, 4).map((k) => `<a href="${h(k.link)}" rel="noopener nofollow" target="_blank">${h(k.ad)}</a>`).join(', ')}` : ''
   }</p></div>
+${paylasCubugu(SITE.url + yol, hikaye.baslik)}
 </article>
 ${ilgili.length ? `<div class="bolum-bas"><h2>${ilce ? `${h(ilce.ad)}'${ayrilmaEki(ilce.ad)} diğer haberler` : 'Diğer haberler'}</h2></div>\n${haberListesi(ilgili)}` : ''}
 </div>

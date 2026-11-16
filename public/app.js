@@ -190,6 +190,35 @@
   setInterval(namazGuncelle, 30000);
   document.addEventListener('click', function (e) { if (e.target.closest('[data-ilce-deger]')) setTimeout(namazGuncelle, 0); });
 
+  // ---------- Yazı boyutu (yaşlılar için büyük yazı) ----------
+  var BOYLAR = ['1', '1.12', '1.25'];
+  document.querySelectorAll('[data-yazi-boyu]').forEach(function (b) {
+    function etiket() { var z = oku('yaziBoyu') || '1'; b.setAttribute('aria-pressed', z !== '1' ? 'true' : 'false'); b.title = z === '1.25' ? 'Normal boyuta dön' : 'Yazıları büyüt'; }
+    etiket();
+    b.addEventListener('click', function () {
+      var z = oku('yaziBoyu') || '1';
+      var yeni = BOYLAR[(BOYLAR.indexOf(z) + 1) % BOYLAR.length];
+      yaz('yaziBoyu', yeni);
+      document.documentElement.style.zoom = yeni === '1' ? '' : yeni;
+      etiket();
+    });
+  });
+
+  // ---------- Paylaş ----------
+  document.querySelectorAll('[data-paylas]').forEach(function (p) {
+    var url = p.getAttribute('data-url'), baslik = p.getAttribute('data-baslik');
+    if (navigator.share) {
+      var d = document.createElement('button');
+      d.type = 'button'; d.textContent = 'Diğer…';
+      d.addEventListener('click', function () { navigator.share({ title: baslik, url: url }).catch(function () {}); });
+      p.appendChild(d);
+    }
+    var k = p.querySelector('[data-kopyala]');
+    if (k) k.addEventListener('click', function () {
+      (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(function () { k.textContent = 'Kopyalandı ✓'; setTimeout(function () { k.textContent = 'Linki kopyala'; }, 2000); }).catch(function () { prompt('Linki kopyalayın:', url); });
+    });
+  });
+
   // Arama sayfası
   var kutu = document.getElementById('ara-kutu');
   if (kutu) {

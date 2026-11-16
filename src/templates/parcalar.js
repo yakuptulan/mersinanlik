@@ -173,3 +173,16 @@ export function haberListesi(hikayeler, bosMesaj = 'Şu an gösterilecek haber y
 }
 
 export const reklamAlani = (ad = 'yan') => `<div class="reklam" data-reklam="${ad}" aria-hidden="true">REKLAM</div>`;
+
+// Paylaş düğmeleri (WhatsApp öncelikli; telefonda sistem paylaşımı da açılır)
+export function paylasCubugu(url, baslik) {
+  const u = encodeURIComponent(url);
+  const t = encodeURIComponent(baslik);
+  return `<div class="paylas" data-paylas data-url="${h(url)}" data-baslik="${h(baslik)}">
+<span class="paylas-baslik">Paylaş</span>
+<a class="paylas-wa" href="https://wa.me/?text=${t}%20${u}" rel="noopener" target="_blank">WhatsApp</a>
+<a href="https://x.com/intent/post?text=${t}&url=${u}" rel="noopener" target="_blank">X</a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=${u}" rel="noopener" target="_blank">Facebook</a>
+<button type="button" data-kopyala>Linki kopyala</button>
+</div>`;
+}

@@ -36,7 +36,8 @@ export function takimAdi(ad) {
     .toLocaleLowerCase('tr-TR')
     .split(' ')
     .map((k) => (/^(fk|sk)$/.test(k) ? k.toLocaleUpperCase('tr-TR') : k.charAt(0).toLocaleUpperCase('tr-TR') + k.slice(1)))
-    .join(' ');
+    .join(' ')
+    .replace(/\b(Uefa|Fifa|Afc|Fk|Sk)\b/g, (k) => k.toLocaleUpperCase('tr-TR'));
 }
 
 export const mersinMi = (ad) => MERSIN_TAKIMLARI.some((m) => String(ad).toLocaleUpperCase('tr-TR').includes(m));
