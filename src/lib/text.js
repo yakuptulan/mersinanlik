@@ -52,7 +52,23 @@ export function baslikTemizle(baslik = '', kaynakAdi = '') {
     const ek = new RegExp(`\\s*[-|–]\\s*${kaynakAdi.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*$`, 'i');
     b = b.replace(ek, '');
   }
-  return b.replace(/^son dakika[:!\s-]*/i, '').trim();
+  b = b.replace(/^son dakika[:!\s-]*/i, '').trim();
+  return buyukHarfDuzelt(b);
+}
+
+// TAMAMI BÜYÜK HARF başlıkları okunaklı hâle getirir: "MERSİN’DE ARAÇ SAYISI" → "Mersin’de araç sayısı"
+const OZEL_ADLAR = ['mersin', 'tarsus', 'erdemli', 'silifke', 'anamur', 'mut', 'gülnar', 'bozyazı', 'aydıncık', 'çamlıyayla', 'mezitli', 'yenişehir', 'toroslar', 'akdeniz', 'türkiye', 'meski', 'mesk', 'tbmm', 'chp', 'akp', 'mhp', 'kktc', 'aratos', 'atatürk', 'prof', 'dr', 'doç'];
+function buyukHarfDuzelt(b) {
+  const harfler = b.replace(/[^A-Za-zÇĞİÖŞÜçğıöşü]/g, '');
+  if (harfler.length < 8) return b;
+  const buyuk = harfler.replace(/[^A-ZÇĞİÖŞÜ]/g, '').length;
+  if (buyuk / harfler.length < 0.8) return b;
+  let s = kucuk(b);
+  s = s.replace(/[a-zçğıöşü]+/g, (w) => {
+    if (['tbmm', 'chp', 'akp', 'mhp', 'kktc', 'meski', 'mesk'].includes(w)) return w.toLocaleUpperCase('tr-TR');
+    return OZEL_ADLAR.includes(w) ? w.charAt(0).toLocaleUpperCase('tr-TR') + w.slice(1) : w;
+  });
+  return s.charAt(0).toLocaleUpperCase('tr-TR') + s.slice(1);
 }
 
 const DURAK = new Set(

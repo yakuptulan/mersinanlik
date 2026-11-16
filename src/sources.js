@@ -24,11 +24,13 @@ export const KAYNAKLAR = [
   // bu yüzden 'karma': başlık/özette Mersin, ilçe ya da yerel bir işaret aranır.
   // robots.txt kontrolü: hiçbiri yapay zekâ botlarını engellemiyor; yine de
   // telif güvenliği için özet yazdırmıyoruz (yapayZekaOzeti: false).
-  { id: 'imece', ad: 'İmece Gazetesi', url: 'https://www.imecegazetesi.com/rss', tur: 'rss', kapsam: 'karma', yapayZekaOzeti: false, aktif: true },
+  // İmece: GitHub sunucularından gelen isteğe 403 veriyor (bot engeli) → kapalı
+  { id: 'imece', ad: 'İmece Gazetesi', url: 'https://www.imecegazetesi.com/rss', tur: 'rss', kapsam: 'karma', yapayZekaOzeti: false, aktif: false },
   { id: 'mersinportal', ad: 'Mersin Portal', url: 'https://www.mersinportal.com/rss', tur: 'rss', kapsam: 'karma', yapayZekaOzeti: false, aktif: true },
   { id: 'mersintime', ad: 'Mersin Time', url: 'https://www.mersintime.com/rss', tur: 'rss', kapsam: 'karma', yapayZekaOzeti: false, aktif: true },
   { id: 'mersinobjektif', ad: 'Mersin Objektif', url: 'https://www.mersinobjektif.com.tr/rss', tur: 'rss', kapsam: 'karma', yapayZekaOzeti: false, aktif: true },
-  { id: 'istemersin', ad: "İş'te Mersin", url: 'https://www.istemersin.com/rss', tur: 'rss', kapsam: 'karma', yapayZekaOzeti: false, aktif: true },
+  // İş'te Mersin: GitHub sunucularından gelen isteğe 403 veriyor (bot engeli) → kapalı
+  { id: 'istemersin', ad: "İş'te Mersin", url: 'https://www.istemersin.com/rss', tur: 'rss', kapsam: 'karma', yapayZekaOzeti: false, aktif: false },
   { id: 'cukurova', ad: 'Çukurova Gazetesi', url: 'https://cukurovagazetesi.com/rss', tur: 'rss', kapsam: 'karma', yapayZekaOzeti: false, aktif: true },
   { id: 'mersinhabermerkezi', ad: 'Mersin Haber Merkezi', url: 'https://www.mersinhabermerkezi.com/rss', tur: 'rss', kapsam: 'karma', yapayZekaOzeti: false, aktif: true },
 

@@ -109,3 +109,9 @@ test('Türkiye/dünya haberi ancak 3 site yazınca yayınlanır', async () => {
   assert.equal(yayindakiler(veri).length, 1);
   assert.equal(yayindakiler(veri)[0].genel, true);
 });
+
+test('büyük harf başlık düzeltme', () => {
+  assert.equal(baslikTemizle('MERSİN’DE ARAÇ SAYISI 1 MİLYONA YAKLAŞTI!'), 'Mersin’de araç sayısı 1 milyona yaklaştı!');
+  assert.equal(baslikTemizle("TOROSLAR BELEDİYESİNDEN ÖZEL BİREYLERE HİZMET"), 'Toroslar belediyesinden özel bireylere hizmet');
+  assert.equal(baslikTemizle("Mersin'de MESKİ çalışması"), "Mersin'de MESKİ çalışması");
+});

@@ -5,6 +5,7 @@ import { SITE, ILCELER } from './config.js';
 import { yukle, yayindakiler, VERI_KLASORU } from './lib/store.js';
 import { ilceAdi } from './templates/layout.js';
 import * as S from './templates/sayfalar.js';
+import { baslikTemizle } from './lib/text.js';
 
 const DIST = path.resolve('dist');
 
@@ -28,7 +29,8 @@ export function insaEt({ simdi = Date.now() } = {}) {
   fs.cpSync(path.resolve('public'), DIST, { recursive: true });
 
   const veri = yukle();
-  const hikayeler = yayindakiler(veri);
+  // Eski kayıtlarda kalan TAMAMI BÜYÜK başlıklar da düzelsin
+  const hikayeler = yayindakiler(veri).map((x) => ({ ...x, baslik: baslikTemizle(x.baslik) }));
   const servis = servisYukle();
 
   const sayfalar = [];

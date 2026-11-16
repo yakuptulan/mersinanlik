@@ -107,7 +107,7 @@ export function anaSayfa({ hikayeler, servis, simdi }) {
   const genel = hikayeler.filter((x) => x.genel).slice(0, AYAR.anaSayfaGenelSayisi);
   const manset = mansetSec(mersin, simdi);
   const liste = mersin.filter((x) => x !== manset).slice(0, AYAR.anaSayfaHaberSayisi);
-  const ust = `${sonDakikaBandi(sonDakikaSec(hikayeler, simdi))}
+  const ust = `${sonDakikaBandi(sonDakikaSec(hikayeler.filter((x) => x !== manset), simdi))}
 <div class="su-an-bas">
 <div><p>${tarihUzun(new Date(simdi).toISOString())}</p><h1>Mersin'de şu an</h1></div>
 <a class="ilce-sec" href="/ilceler/" data-ilce-sec>${ikon.konum(20)}<span>Benim ilçem: <span data-ilce-ad>Seç</span></span><span class="daire">${ikon.asagi(18)}</span></a>
