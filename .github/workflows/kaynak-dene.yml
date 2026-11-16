@@ -6,6 +6,10 @@ on:
         description: 'Boşlukla ayrılmış adresler (boşsa varsayılan liste)'
         required: false
         default: ''
+      ara:
+        description: 'Sayfada aranacak ifade (regex)'
+        required: false
+        default: ''
       kaynaklar:
         description: 'Denenecek kaynak kimlikleri (sources.js), boşlukla'
         required: false
@@ -24,5 +28,7 @@ jobs:
       - run: npm ci
       - if: ${{ inputs.kaynaklar == '' }}
         run: node scripts/kaynak-dene.js ${{ inputs.adresler }}
+        env:
+          ARA: ${{ inputs.ara }}
       - if: ${{ inputs.kaynaklar != '' }}
         run: for k in ${{ inputs.kaynaklar }}; do echo "=== $k"; node src/collect.js --dene $k || true; done
