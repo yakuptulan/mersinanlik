@@ -41,8 +41,8 @@ async function cfYaz(icerik) {
     const res = await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/ai/run/${model}`, {
       method: 'POST',
       headers: { Authorization: `Bearer ${process.env.CLOUDFLARE_API_TOKEN}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ messages: [{ role: 'system', content: TALIMAT }, { role: 'user', content: icerik }], max_tokens: 3500, temperature: 0.2 }),
-      signal: AbortSignal.timeout(120000),
+      body: JSON.stringify({ messages: [{ role: 'system', content: TALIMAT }, { role: 'user', content: icerik }], max_tokens: 1800, temperature: 0.2 }),
+      signal: AbortSignal.timeout(100000),
     });
     if (!res.ok) {
       sonHata = `${model} HTTP ${res.status}: ${(await res.text()).slice(0, 160)}`;
@@ -58,6 +58,22 @@ async function cfYaz(icerik) {
   throw new Error(`Cloudflare AI ${sonHata}`);
 }
 
+// Cloudflare ile yazarken küçük parçalar halinde gönder (zaman aşımı olmasın, kısmi başarı kaybolmasın)
+async function cfToplu(metinler) {
+  const sonuc = [];
+  for (let i = 0; i < metinler.length; i += 2) {
+    const parca = metinler.slice(i, i + 2);
+    try {
+      const r = sonucCoz(parca, await cfYaz(parca.map((m, j) => `${j + 1}) ${m.slice(0, 2500)}`).join('\n\n')));
+      sonuc.push(...r);
+    } catch (e) {
+      console.warn(`! Cloudflare yazım: ${e.message.slice(0, 120)}`);
+      sonuc.push(...parca.map(() => null));
+    }
+  }
+  return sonuc;
+}
+
 function sonucCoz(metinler, sonuc) {
   return metinler.map((_, i) => {
     const s = (sonuc || []).find((x) => Number(x.no) === i + 1);
@@ -68,7 +84,7 @@ function sonucCoz(metinler, sonuc) {
 export async function topluOzetle(metinler) {
   if (!geminiHazirMi() || metinler.length === 0) return [];
   const icerik = metinler.map((m, i) => `${i + 1}) ${m.slice(0, 4000)}`).join('\n\n');
-  if (!process.env.GEMINI_API_KEY) return sonucCoz(metinler, await cfYaz(icerik));
+  if (!process.env.GEMINI_API_KEY) return cfToplu(metinler);
   let res;
   let sonHata = '';
   for (const model of [...new Set(YEDEK_MODELLER)]) {
@@ -92,7 +108,7 @@ export async function topluOzetle(metinler) {
   if (!res.ok) {
     if (!cfHazir()) throw new Error(`Gemini ${sonHata}`);
     console.warn(`! Gemini yoğun (${sonHata.slice(0, 60)}…), Cloudflare ile yazılıyor`);
-    return sonucCoz(metinler, await cfYaz(icerik));
+    return cfToplu(metinler);
   }
   const json = await res.json();
   return sonucCoz(metinler, jsonDizisi(json?.candidates?.[0]?.content?.parts?.[0]?.text || '[]'));
