@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-16T18:06:56.704Z",
+ "guncelleme": "2026-11-16T18:08:27.645Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -774,7 +774,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-16T18:07:01.729Z",
+  "guncelleme": "2026-11-16T18:08:41.415Z",
   "liste": [
    {
     "tur": "su",
@@ -845,32 +845,32 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-16T18:02:29.725Z",
+  "guncelleme": "2026-11-16T18:08:43.762Z",
   "kalemler": {
    "gram": {
-    "alis": 6244.66,
-    "satis": 6245.63,
-    "degisim": -0.56
+    "alis": 6232.74,
+    "satis": 6233.67,
+    "degisim": -0.75
    },
    "ceyrek": {
-    "alis": 10224,
-    "satis": 10313,
-    "degisim": -0.05
+    "alis": 10205,
+    "satis": 10294,
+    "degisim": -0.23
    },
    "gumus": {
-    "alis": 76.22,
-    "satis": 76.3,
-    "degisim": -3.64
+    "alis": 76.04,
+    "satis": 76.14,
+    "degisim": -3.84
    },
    "usd": {
-    "alis": 50.3828,
-    "satis": 50.3935,
+    "alis": 50.3807,
+    "satis": 50.3953,
     "degisim": 0.04
    },
    "eur": {
-    "alis": 55.4879,
-    "satis": 55.5002,
-    "degisim": -0.12
+    "alis": 55.4708,
+    "satis": 55.4821,
+    "degisim": -0.15
    },
    "bist": {
     "alis": null,
@@ -878,125 +878,125 @@
     "degisim": -0.01
    },
    "btc": {
-    "satis": 3267485,
-    "usd": 64843,
-    "degisim": 0.62
+    "satis": 3271845,
+    "usd": 64930,
+    "degisim": 0.64
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 6244.66,
-    "satis": 6245.63,
-    "degisim": -0.56
+    "alis": 6232.74,
+    "satis": 6233.67,
+    "degisim": -0.75
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 10224,
-    "satis": 10313,
-    "degisim": -0.05
+    "alis": 10205,
+    "satis": 10294,
+    "degisim": -0.23
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 20474,
-    "satis": 20621,
-    "degisim": -0.05
+    "alis": 20435,
+    "satis": 20581,
+    "degisim": -0.24
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 40823,
-    "satis": 41090,
-    "degisim": -0.05
+    "alis": 40744,
+    "satis": 41012,
+    "degisim": -0.24
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 41922,
-    "satis": 42188,
-    "degisim": -0.05
+    "alis": 41841,
+    "satis": 42107,
+    "degisim": -0.24
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 41922,
-    "satis": 42188,
-    "degisim": -0.05
+    "alis": 41841,
+    "satis": 42107,
+    "degisim": -0.24
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 41922,
-    "satis": 42188,
-    "degisim": -0.05
+    "alis": 41841,
+    "satis": 42107,
+    "degisim": -0.24
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5713.16,
-    "satis": 5910.21,
-    "degisim": -0.05
+    "alis": 5702.19,
+    "satis": 5898.93,
+    "degisim": -0.24
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4328,
-    "satis": 5065,
-    "degisim": 0
+    "alis": 4319,
+    "satis": 5050,
+    "degisim": -0.3
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3427.02,
-    "satis": 4600.68,
-    "degisim": -0.05
+    "alis": 3420.27,
+    "satis": 4592.87,
+    "degisim": -0.22
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 6213.44,
-    "satis": 6214.41,
-    "degisim": -0.56
+    "alis": 6201.58,
+    "satis": 6202.5,
+    "degisim": -0.75
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 76.22,
-    "satis": 76.3,
-    "degisim": -3.64
+    "alis": 76.04,
+    "satis": 76.14,
+    "degisim": -3.84
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.3828,
-    "satis": 50.3935,
+    "alis": 50.3807,
+    "satis": 50.3953,
     "degisim": 0.04
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.4879,
-    "satis": 55.5002,
-    "degisim": -0.12
+    "alis": 55.4708,
+    "satis": 55.4821,
+    "degisim": -0.15
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.5174,
-    "satis": 66.5278,
-    "degisim": -0.12
+    "alis": 66.5003,
+    "satis": 66.5106,
+    "degisim": -0.15
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.0152,
-    "satis": 60.0495,
-    "degisim": 0.04
+    "alis": 59.9848,
+    "satis": 60.0298,
+    "degisim": 0
    },
    {
     "k": "SAR",
@@ -1013,10 +1013,10 @@
     "degisim": 0.16
    }
   ],
-  "kaynakSaati": "2026-11-16 21:02:02"
+  "kaynakSaati": "2026-11-16 21:08:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-16T18:07:05.676Z",
+  "guncelleme": "2026-11-16T18:08:44.858Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 72.99,
@@ -2009,37 +2009,261 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-16T18:05:27.570Z",
+  "guncelleme": "2026-11-16T18:08:44.858Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
    "puan": [
     {
      "sira": 1,
-     "takim": "Devre",
-     "ham": "Devre",
-     "o": 1,
-     "g": 2,
-     "b": 3,
-     "m": 4,
-     "a": 5,
-     "y": 6,
-     "av": 7,
-     "p": 8,
+     "takim": "Galatasaray",
+     "ham": "GALATASARAY A.Ş.",
+     "o": 11,
+     "g": 9,
+     "b": 1,
+     "m": 1,
+     "a": 27,
+     "y": 15,
+     "av": 12,
+     "p": 28,
      "mersin": false
     },
     {
      "sira": 2,
-     "takim": "Devre",
-     "ham": "Devre",
-     "o": 18,
-     "g": 19,
-     "b": 20,
-     "m": 21,
-     "a": 22,
-     "y": 23,
-     "av": 24,
+     "takim": "Trabzonspor",
+     "ham": "TRABZONSPOR A.Ş.",
+     "o": 11,
+     "g": 8,
+     "b": 1,
+     "m": 2,
+     "a": 26,
+     "y": 8,
+     "av": 18,
      "p": 25,
+     "mersin": false
+    },
+    {
+     "sira": 3,
+     "takim": "Amed Sportif Faaliyetler",
+     "ham": "AMED SPORTİF FAALİYETLER",
+     "o": 11,
+     "g": 7,
+     "b": 2,
+     "m": 2,
+     "a": 28,
+     "y": 15,
+     "av": 13,
+     "p": 23,
+     "mersin": false
+    },
+    {
+     "sira": 4,
+     "takim": "Beşiktaş",
+     "ham": "BEŞİKTAŞ A.Ş.",
+     "o": 11,
+     "g": 7,
+     "b": 1,
+     "m": 3,
+     "a": 23,
+     "y": 12,
+     "av": 11,
+     "p": 22,
+     "mersin": false
+    },
+    {
+     "sira": 5,
+     "takim": "Kasımpaşa",
+     "ham": "KASIMPAŞA A.Ş.",
+     "o": 11,
+     "g": 5,
+     "b": 5,
+     "m": 1,
+     "a": 17,
+     "y": 11,
+     "av": 6,
+     "p": 20,
+     "mersin": false
+    },
+    {
+     "sira": 6,
+     "takim": "Fenerbahçe",
+     "ham": "FENERBAHÇE A.Ş.",
+     "o": 11,
+     "g": 6,
+     "b": 1,
+     "m": 4,
+     "a": 29,
+     "y": 10,
+     "av": 19,
+     "p": 19,
+     "mersin": false
+    },
+    {
+     "sira": 7,
+     "takim": "Kocaelispor",
+     "ham": "KOCAELİSPOR",
+     "o": 11,
+     "g": 6,
+     "b": 1,
+     "m": 4,
+     "a": 13,
+     "y": 9,
+     "av": 4,
+     "p": 19,
+     "mersin": false
+    },
+    {
+     "sira": 8,
+     "takim": "İstanbul Başakşehir FK",
+     "ham": "İSTANBUL BAŞAKŞEHİR FK",
+     "o": 11,
+     "g": 5,
+     "b": 2,
+     "m": 4,
+     "a": 19,
+     "y": 17,
+     "av": 2,
+     "p": 17,
+     "mersin": false
+    },
+    {
+     "sira": 9,
+     "takim": "Arca Çorum FK",
+     "ham": "ARCA ÇORUM FK",
+     "o": 11,
+     "g": 5,
+     "b": 1,
+     "m": 5,
+     "a": 21,
+     "y": 21,
+     "av": 0,
+     "p": 16,
+     "mersin": false
+    },
+    {
+     "sira": 10,
+     "takim": "Göztepe",
+     "ham": "GÖZTEPE A.Ş.",
+     "o": 11,
+     "g": 4,
+     "b": 3,
+     "m": 4,
+     "a": 22,
+     "y": 19,
+     "av": 3,
+     "p": 15,
+     "mersin": false
+    },
+    {
+     "sira": 11,
+     "takim": "Çaykur Rizespor",
+     "ham": "ÇAYKUR RİZESPOR A.Ş.",
+     "o": 11,
+     "g": 4,
+     "b": 2,
+     "m": 5,
+     "a": 13,
+     "y": 16,
+     "av": -3,
+     "p": 14,
+     "mersin": false
+    },
+    {
+     "sira": 12,
+     "takim": "Erzurumspor FK",
+     "ham": "ERZURUMSPOR FK",
+     "o": 11,
+     "g": 4,
+     "b": 2,
+     "m": 5,
+     "a": 10,
+     "y": 17,
+     "av": -7,
+     "p": 14,
+     "mersin": false
+    },
+    {
+     "sira": 13,
+     "takim": "Corendon Alanyaspor",
+     "ham": "CORENDON ALANYASPOR",
+     "o": 11,
+     "g": 3,
+     "b": 3,
+     "m": 5,
+     "a": 9,
+     "y": 18,
+     "av": -9,
+     "p": 12,
+     "mersin": false
+    },
+    {
+     "sira": 14,
+     "takim": "Gençlerbirliği",
+     "ham": "GENÇLERBİRLİĞİ",
+     "o": 11,
+     "g": 3,
+     "b": 2,
+     "m": 6,
+     "a": 12,
+     "y": 21,
+     "av": -9,
+     "p": 11,
+     "mersin": false
+    },
+    {
+     "sira": 15,
+     "takim": "Tümosan Konyaspor",
+     "ham": "TÜMOSAN KONYASPOR",
+     "o": 11,
+     "g": 2,
+     "b": 2,
+     "m": 7,
+     "a": 6,
+     "y": 14,
+     "av": -8,
+     "p": 8,
+     "mersin": false
+    },
+    {
+     "sira": 16,
+     "takim": "Gaziantep",
+     "ham": "GAZİANTEP FUTBOL KULÜBÜ A.Ş.",
+     "o": 11,
+     "g": 2,
+     "b": 2,
+     "m": 7,
+     "a": 9,
+     "y": 19,
+     "av": -10,
+     "p": 8,
+     "mersin": false
+    },
+    {
+     "sira": 17,
+     "takim": "Samsunspor",
+     "ham": "SAMSUNSPOR A.Ş.",
+     "o": 11,
+     "g": 2,
+     "b": 1,
+     "m": 8,
+     "a": 11,
+     "y": 26,
+     "av": -15,
+     "p": 7,
+     "mersin": false
+    },
+    {
+     "sira": 18,
+     "takim": "Eyüpspor",
+     "ham": "EYÜPSPOR",
+     "o": 11,
+     "g": 1,
+     "b": 0,
+     "m": 10,
+     "a": 3,
+     "y": 30,
+     "av": -27,
+     "p": 3,
      "mersin": false
     }
    ],
@@ -2124,30 +2348,254 @@
    "puan": [
     {
      "sira": 1,
-     "takim": "Devre",
-     "ham": "Devre",
-     "o": 1,
-     "g": 2,
+     "takim": "Malatya Yeşilyurt Spor",
+     "ham": "MALATYA YEŞİLYURT SPOR KULÜBÜ",
+     "o": 12,
+     "g": 9,
      "b": 3,
-     "m": 4,
-     "a": 5,
-     "y": 6,
-     "av": 7,
-     "p": 8,
+     "m": 0,
+     "a": 46,
+     "y": 10,
+     "av": 36,
+     "p": 30,
      "mersin": false
     },
     {
      "sira": 2,
-     "takim": "Devre",
-     "ham": "Devre",
-     "o": 18,
-     "g": 19,
-     "b": 20,
-     "m": 21,
-     "a": 22,
-     "y": 23,
-     "av": 24,
+     "takim": "Açıkalın Erciyes 38",
+     "ham": "AÇIKALIN ERCİYES 38 FUTBOL SPOR KULÜBÜ",
+     "o": 12,
+     "g": 9,
+     "b": 2,
+     "m": 1,
+     "a": 29,
+     "y": 12,
+     "av": 17,
+     "p": 29,
+     "mersin": false
+    },
+    {
+     "sira": 3,
+     "takim": "Halil Bayram İnşaat Karaköprü Belediyespor",
+     "ham": "HALİL BAYRAM İNŞAAT KARAKÖPRÜ BELEDİYESPOR",
+     "o": 12,
+     "g": 8,
+     "b": 2,
+     "m": 2,
+     "a": 30,
+     "y": 13,
+     "av": 17,
+     "p": 26,
+     "mersin": false
+    },
+    {
+     "sira": 4,
+     "takim": "Eti Gübre Mazıdağı Fosfat Spor",
+     "ham": "ETİ GÜBRE MAZIDAĞI FOSFAT SPOR",
+     "o": 12,
+     "g": 7,
+     "b": 4,
+     "m": 1,
+     "a": 21,
+     "y": 6,
+     "av": 15,
      "p": 25,
+     "mersin": false
+    },
+    {
+     "sira": 5,
+     "takim": "Niğde Belediyesi Spor",
+     "ham": "NİĞDE BELEDİYESİ SPOR",
+     "o": 12,
+     "g": 8,
+     "b": 1,
+     "m": 3,
+     "a": 24,
+     "y": 14,
+     "av": 10,
+     "p": 25,
+     "mersin": false
+    },
+    {
+     "sira": 6,
+     "takim": "Ejderoğlu Kırşehir",
+     "ham": "EJDEROĞLU KIRŞEHİR FUTBOL SPOR KULÜBÜ",
+     "o": 12,
+     "g": 7,
+     "b": 3,
+     "m": 2,
+     "a": 32,
+     "y": 15,
+     "av": 17,
+     "p": 24,
+     "mersin": false
+    },
+    {
+     "sira": 7,
+     "takim": "Bitlis 1916",
+     "ham": "BİTLİS 1916 FUTBOL SPOR KULÜBÜ",
+     "o": 12,
+     "g": 7,
+     "b": 2,
+     "m": 3,
+     "a": 22,
+     "y": 10,
+     "av": 12,
+     "p": 23,
+     "mersin": false
+    },
+    {
+     "sira": 8,
+     "takim": "Yeni Mersin İdmanyurdu",
+     "ham": "YENİ MERSİN İDMANYURDU FUTBOL A.Ş.",
+     "o": 11,
+     "g": 7,
+     "b": 0,
+     "m": 4,
+     "a": 16,
+     "y": 10,
+     "av": 6,
+     "p": 21,
+     "mersin": true
+    },
+    {
+     "sira": 9,
+     "takim": "Kırıkkale FK Spor",
+     "ham": "KIRIKKALE FK SPOR KULÜBÜ",
+     "o": 11,
+     "g": 6,
+     "b": 2,
+     "m": 3,
+     "a": 20,
+     "y": 13,
+     "av": 7,
+     "p": 20,
+     "mersin": false
+    },
+    {
+     "sira": 10,
+     "takim": "Ayos Osmaniyespor",
+     "ham": "AYOS OSMANİYESPOR FUTBOL KULÜBÜ",
+     "o": 12,
+     "g": 6,
+     "b": 1,
+     "m": 5,
+     "a": 21,
+     "y": 18,
+     "av": 3,
+     "p": 19,
+     "mersin": false
+    },
+    {
+     "sira": 11,
+     "takim": "Adana Adaletgücü Spor",
+     "ham": "ADANA ADALETGÜCÜ SPOR SPORTİF FAALİYETLER A.Ş.",
+     "o": 12,
+     "g": 4,
+     "b": 1,
+     "m": 7,
+     "a": 20,
+     "y": 26,
+     "av": -6,
+     "p": 13,
+     "mersin": false
+    },
+    {
+     "sira": 12,
+     "takim": "Ağrı 1970 Spor",
+     "ham": "AĞRI 1970 SPOR KULÜBÜ",
+     "o": 12,
+     "g": 3,
+     "b": 2,
+     "m": 7,
+     "a": 11,
+     "y": 19,
+     "av": -8,
+     "p": 11,
+     "mersin": false
+    },
+    {
+     "sira": 13,
+     "takim": "Diyarbekir Spor",
+     "ham": "DİYARBEKİR SPOR A.Ş.",
+     "o": 12,
+     "g": 3,
+     "b": 1,
+     "m": 8,
+     "a": 13,
+     "y": 17,
+     "av": -4,
+     "p": 10,
+     "mersin": false
+    },
+    {
+     "sira": 14,
+     "takim": "Yozgat Belediyesi Bozok Spor",
+     "ham": "YOZGAT BELEDİYESİ BOZOK SPOR",
+     "o": 12,
+     "g": 2,
+     "b": 3,
+     "m": 7,
+     "a": 7,
+     "y": 27,
+     "av": -20,
+     "p": 9,
+     "mersin": false
+    },
+    {
+     "sira": 15,
+     "takim": "1964 Silifke Spor",
+     "ham": "1964 SİLİFKE SPOR KULÜBÜ",
+     "o": 12,
+     "g": 2,
+     "b": 2,
+     "m": 8,
+     "a": 12,
+     "y": 25,
+     "av": -13,
+     "p": 8,
+     "mersin": true
+    },
+    {
+     "sira": 16,
+     "takim": "Karaman",
+     "ham": "KARAMAN FUTBOL KULÜBÜ",
+     "o": 11,
+     "g": 2,
+     "b": 0,
+     "m": 9,
+     "a": 8,
+     "y": 35,
+     "av": -27,
+     "p": 6,
+     "mersin": false
+    },
+    {
+     "sira": 17,
+     "takim": "Adanaspor",
+     "ham": "ADANASPOR A.Ş.",
+     "o": 12,
+     "g": 1,
+     "b": 1,
+     "m": 10,
+     "a": 10,
+     "y": 39,
+     "av": -29,
+     "p": 4,
+     "mersin": false
+    },
+    {
+     "sira": 18,
+     "takim": "Yeni Malatyaspor",
+     "ham": "YENİ MALATYASPOR",
+     "o": 11,
+     "g": 0,
+     "b": 0,
+     "m": 11,
+     "a": 0,
+     "y": 33,
+     "av": -33,
+     "p": -3,
      "mersin": false
     }
    ],
