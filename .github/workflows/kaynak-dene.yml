@@ -6,6 +6,10 @@ on:
         description: 'Boşlukla ayrılmış adresler (boşsa varsayılan liste)'
         required: false
         default: ''
+      ham:
+        description: 'Arama sonucunu ham HTML göster'
+        type: boolean
+        default: false
       ara:
         description: 'Sayfada aranacak ifade (regex)'
         required: false
@@ -30,5 +34,6 @@ jobs:
         run: node scripts/kaynak-dene.js ${{ inputs.adresler }}
         env:
           ARA: ${{ inputs.ara }}
+          RAW: ${{ inputs.ham && '1' || '' }}
       - if: ${{ inputs.kaynaklar != '' }}
         run: for k in ${{ inputs.kaynaklar }}; do echo "=== $k"; node src/collect.js --dene $k || true; done

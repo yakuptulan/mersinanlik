@@ -36,6 +36,6 @@ for (const url of ADAYLAR) {
   const kok = new URL(url).origin;
   const rb = (await al(kok + '/robots.txt')).metin;
   const robots = /User-agent:\s*\*[\s\S]{0,200}?Disallow:\s*\/\s*$/im.test(rb) ? 'robots: * HEPSİ YASAK' : /GPTBot|CCBot|Google-Extended|ClaudeBot/i.test(rb) ? 'robots: YZ botları anılıyor' : 'robots: serbest';
-  const ara = process.env.ARA ? metin.match(new RegExp(`[\\s\\S]{0,150}(${process.env.ARA})[\\s\\S]{0,250}`, 'i'))?.[0]?.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ') : '';
+  const ara = process.env.ARA ? metin.match(new RegExp(`[\\s\\S]{0,${process.env.RAW ? 500 : 150}}(${process.env.ARA})[\\s\\S]{0,${process.env.RAW ? 1200 : 250}}`, 'i'))?.[0]?.replace(process.env.RAW ? /^\b$/ : /<[^>]+>/g, ' ').replace(/\s+/g, ' ') : '';
   console.log(`\n### ${url}\n${durum} · ${robots}\n${ozet}${ara ? `\nARA: ${ara}` : ''}`);
 }
