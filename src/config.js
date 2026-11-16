@@ -49,7 +49,9 @@ export const KATEGORILER = [
 // Bu kelimelerden biri geçen haber otomatik yayınlanmaz; Telegram onayına düşer.
 // Hukuki riskin büyük kısmı bu tür haberlerde: kişilik hakları, çocuklar, suç isnadı.
 export const RISK_KELIMELERI = {
-  'ölüm / şiddet': ['öldü', 'ölü', 'hayatını kaybetti', 'yaşamını yitirdi', 'cinayet', 'öldürül', 'cesed', 'cansız beden', 'bıçak', 'silahlı', 'kurşun', 'darp', 'intihar'],
+  // Kaza, silahlı saldırı, ölüm haberleri onaysız yayınlanır (sitede isim verilmiyor).
+  // İntihar haberleri hassas olduğu için (yayın ilkeleri) onaya gider.
+  'intihar': ['intihar'],
   'suç isnadı': ['gözaltı', 'tutuklan', 'şüpheli', 'zanlı', 'operasyon', 'dolandırıc', 'rüşvet', 'yolsuzluk', 'iddianame', 'sanık'],
   'çocuk / mahremiyet': ['yaşındaki', 'kız öğrenci', 'erkek öğrenci', 'istismar', 'taciz', 'fuhuş', 'tecavüz', 'kayıp çocuk'],
   'siyaset': ['ak parti', 'chp', 'mhp', 'dem parti', 'iyi parti', 'yeniden refah', 'milletvekili', 'kayyum', 'seçim'],

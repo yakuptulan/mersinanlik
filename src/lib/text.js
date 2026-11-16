@@ -149,7 +149,6 @@ export function riskBul(metin = '') {
   const nedenler = [];
   for (const [neden, liste] of Object.entries(RISK_KELIMELERI)) {
     let kelimeler = liste;
-    if (trafik && neden === 'ölüm / şiddet') kelimeler = liste.filter((w) => !['öldü', 'ölü', 'hayatını kaybetti', 'yaşamını yitirdi'].includes(w));
     if (trafik && neden === 'çocuk / mahremiyet') kelimeler = liste.filter((w) => ['istismar', 'taciz', 'fuhuş', 'tecavüz'].includes(w));
     if (kelimeler.some((w) => kelimeVar(k, w))) nedenler.push(neden);
   }
