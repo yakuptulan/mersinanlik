@@ -54,7 +54,11 @@ async function main() {
   const fotoKuyrugu = [];
   for (const kaynak of aktifKaynaklar()) {
     try {
-      const haberler = kaynak.tur === 'html' ? await kurumOku(kaynak, { bilinen: (l) => kayitliLinkler.has(l) }) : await kaynakOku(kaynak);
+      durum.kurumGorulen ??= {};
+      const haberler =
+        kaynak.tur === 'html'
+          ? await kurumOku(kaynak, { bilinen: (l) => kayitliLinkler.has(l), gorulen: (durum.kurumGorulen[kaynak.id] ??= []) })
+          : await kaynakOku(kaynak);
       for (const ham of haberler) {
         const haber = haberiDegerlendir(ham, kaynak);
         if (!haber) continue;
