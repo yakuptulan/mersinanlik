@@ -8,6 +8,7 @@ import * as S from './templates/sayfalar.js';
 import * as R from './templates/rehber.js';
 import { baslikTemizle, kategoriBul, htmlKacis } from './lib/text.js';
 import { kendiSayfasiVar, haberYolu } from './templates/parcalar.js';
+import { okunanlarEsle } from './lib/okunanlar.js';
 
 const DIST = path.resolve('dist');
 
@@ -38,6 +39,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
     return { ...x, baslik: baslikTemizle(x.baslik), kategori: k !== 'gundem' ? k : x.kategori };
   });
   const servis = servisYukle();
+  servis.enCokOkunan = okunanlarEsle(servis.okunanlar, hikayeler, haberYolu, ILCELER);
 
   const sayfalar = [];
   const ekle = (yol, html, haritaya = true) => {
@@ -66,6 +68,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
   ekle('/rehber/gezilecek-yerler/', R.gezilecekSayfasi({ servis }));
   ekle('/rehber/acil-telefonlar/', R.acilSayfasi({ servis }));
   ekle('/rehber/hastaneler/', R.hastaneSayfasi({ servis }));
+  ekle('/tatil-takvimi/', R.tatilSayfasi({ servis, simdi }));
   for (const kategori of S.KATEGORI_SAYFALARI) ekle(`/kategori/${kategori.slug}/`, S.kategoriSayfasi({ kategori, hikayeler, servis }));
   ekle('/namaz-vakitleri/', S.namazSayfasi({ servis, simdi }));
   for (const ilce of ILCELER) ekle(`/namaz-vakitleri/${ilce.slug}/`, S.namazIlceSayfasi({ ilce, servis, simdi }));

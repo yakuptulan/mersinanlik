@@ -529,3 +529,18 @@ a.cip.kat:hover { filter: brightness(.95); }
 .burc p { margin: 8px 0 0; font-size: 17px; line-height: 1.6; color: var(--govde); }
 .burc:target { border-color: #8E4EC6; box-shadow: 0 0 0 3px #f1eaff; }
 @media (max-width: 640px) { .burc-liste { grid-template-columns: 1fr; } }
+
+/* ---------- Tatil takvimi ---------- */
+.takvim-kutu { display: flex; flex-direction: column; gap: 12px; margin-bottom: 14px; }
+.takvim { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.takvim li { display: grid; grid-template-columns: 280px minmax(0, 1fr); column-gap: 16px; row-gap: 2px; align-items: baseline; background: #fff; border: 1px solid var(--cizgi); border-radius: 16px; padding: 14px 18px; }
+.takvim .takvim-tarih { grid-row: span 2; font-weight: 700; color: var(--derin-mavi); }
+.takvim b { font-size: 18px; }
+.takvim b em { font-style: normal; font-size: 13px; background: #e6f6ee; color: #1d7a4d; padding: 3px 10px; border-radius: 999px; margin-left: 6px; vertical-align: 2px; }
+.takvim small { color: var(--ikincil); font-size: 15px; }
+.takvim li.gecti { opacity: .5; }
+.takvim li.simdi { border-color: #2B9A66; box-shadow: inset 4px 0 0 #2B9A66; }
+@media (max-width: 640px) { .takvim li { grid-template-columns: 1fr; } .takvim .takvim-tarih { grid-row: auto; } }
+.gundem-liste.tek { grid-template-columns: 1fr; }
+.gundem-liste.tek .gundem-no { font-size: 24px; width: 28px; }
+.gundem-liste.tek .gundem-ic a { font-size: 16px; }

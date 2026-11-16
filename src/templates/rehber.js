@@ -142,7 +142,69 @@ ${kart('/nobetci-eczane/', 'Nöbetçi eczaneler', 'Bugün açık eczaneler', iko
 ${kart('/namaz-vakitleri/', 'Namaz vakitleri', '13 ilçe için Diyanet vakitleri', ikon.hilal(22))}
 ${kart('/akaryakit-fiyatlari/', 'Akaryakıt fiyatları', 'İlçe ilçe benzin ve motorin', ikon.yakit(22))}
 ${kart('/etkinlikler/', 'Etkinlikler', "Bu hafta Mersin'de ne var?", ikon.gunes(22))}
+${kart('/tatil-takvimi/', 'Tatil takvimi', 'Ara tatil, sömestr ve resmî tatiller', ikon.gunes(22))}
 ${kart('/kesintiler/', 'Kesintiler', 'Su ve elektrik kesintileri', ikon.damla(22))}
 </div></div>${yanKutular(servis)}</main>`,
+  });
+}
+
+// ---------- Okul ve resmî tatil takvimi ----------
+// Kaynak: MEB 2026-2027 Eğitim ve Öğretim Yılı Çalışma Takvimi; 2027 dini bayramlar: Diyanet dini günler takvimi.
+export const OKUL_TAKVIMI = [
+  ['2026-09-14', null, 'Okulların açılışı', 'Birinci dönem başladı'],
+  ['2026-11-16', '2026-11-20', 'Birinci ara tatil', '5 iş günü, hafta sonlarıyla 9 gün'],
+  ['2027-01-22', null, 'Birinci dönemin sonu', 'Karne günü'],
+  ['2027-01-25', '2027-02-05', 'Yarıyıl (sömestr) tatili', '2 hafta'],
+  ['2027-02-08', null, 'İkinci dönem başlıyor', ''],
+  ['2027-03-08', '2027-03-12', 'İkinci ara tatil', 'Ramazan Bayramı ile aynı haftaya denk geliyor'],
+  ['2027-06-25', null, 'Ders yılının sonu', 'Karne günü, yaz tatili başlıyor'],
+];
+export const RESMI_TATILLER = [
+  ['2027-01-01', null, 'Yılbaşı', ''],
+  ['2027-03-08', null, 'Ramazan Bayramı arifesi', 'Yarım gün (öğleden sonra)'],
+  ['2027-03-09', '2027-03-11', 'Ramazan Bayramı', '3 gün'],
+  ['2027-04-23', null, 'Ulusal Egemenlik ve Çocuk Bayramı', ''],
+  ['2027-05-01', null, 'Emek ve Dayanışma Günü', 'Cumartesiye denk geliyor'],
+  ['2027-05-15', null, 'Kurban Bayramı arifesi', 'Yarım gün, cumartesiye denk geliyor'],
+  ['2027-05-16', '2027-05-19', 'Kurban Bayramı', '4 gün'],
+  ['2027-05-19', null, "Atatürk'ü Anma, Gençlik ve Spor Bayramı", 'Kurban Bayramı\'nın 4. günüyle aynı gün'],
+  ['2027-07-15', null, 'Demokrasi ve Millî Birlik Günü', ''],
+  ['2027-08-30', null, 'Zafer Bayramı', ''],
+  ['2027-10-28', null, 'Cumhuriyet Bayramı arifesi', 'Yarım gün (öğleden sonra)'],
+  ['2027-10-29', null, 'Cumhuriyet Bayramı', ''],
+];
+
+const gunAdi = (t) => new Date(`${t}T12:00:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric', weekday: 'long' });
+const kisaGun = (t) => new Date(`${t}T12:00:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long' });
+
+function takvimSatirlari(liste, bugun) {
+  return liste
+    .map(([bas, son, ad, not]) => {
+      const gecti = (son || bas) < bugun;
+      const simdi = bas <= bugun && (son || bas) >= bugun;
+      return `<li class="${gecti ? 'gecti' : ''}${simdi ? ' simdi' : ''}"><span class="takvim-tarih">${son ? `${kisaGun(bas)} – ${kisaGun(son)}` : kisaGun(bas)}</span><b>${h(ad)}${simdi ? ' <em>Şu an</em>' : ''}</b>${not ? `<small>${h(not)}</small>` : ''}</li>`;
+    })
+    .join('');
+}
+
+export function tatilSayfasi({ servis, simdi = Date.now() }) {
+  const bugun = new Date(simdi).toLocaleDateString('sv-SE', { timeZone: SITE.timezone });
+  const tum = [...OKUL_TAKVIMI.map((x) => [...x, 'okul']), ...RESMI_TATILLER.map((x) => [...x, 'resmi'])]
+    .filter(([bas, son, ad]) => bas > bugun && !/sonu|başlıyor|açılış/i.test(ad))
+    .sort((a, b) => a[0].localeCompare(b[0]));
+  const siradaki = tum[0];
+  const kalan = siradaki ? Math.round((new Date(`${siradaki[0]}T00:00:00`) - new Date(`${bugun}T00:00:00`)) / 864e5) : null;
+  return sayfa({
+    baslik: 'Okul tatilleri ve resmî tatiller 2026-2027 – ara tatil, sömestr, bayramlar',
+    aciklama: 'MEB 2026-2027 takvimi: ara tatiller, yarıyıl tatili, okulların kapanışı ve 2027 resmî tatiller, Ramazan ve Kurban Bayramı tarihleri.',
+    yol: '/tatil-takvimi/',
+    aktif: '/rehber/',
+    ust: `<div class="su-an-bas"><div><h1>Tatil takvimi</h1><p style="margin-top:8px">${siradaki ? `Sıradaki: <b>${h(siradaki[2])}</b> · ${kalan === 1 ? 'yarın' : `${kalan} gün sonra`} (${h(gunAdi(siradaki[0]))})` : 'Okul ve resmî tatiller'}</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">
+<section class="takvim-kutu"><div class="bolum-bas"><h2>Okul takvimi 2026-2027</h2><span>MEB çalışma takvimi</span></div><ol class="takvim">${takvimSatirlari(OKUL_TAKVIMI, bugun)}</ol></section>
+<section class="takvim-kutu"><div class="bolum-bas"><h2>Resmî tatiller 2027</h2><span>Dini bayramlar Diyanet takvimine göre</span></div><ol class="takvim">${takvimSatirlari(RESMI_TATILLER, bugun)}</ol></section>
+${paylasCubugu(`${SITE.url}/tatil-takvimi/`, 'Okul tatilleri ve resmî tatiller 2026-2027')}
+<p style="color:var(--ikincil);font-size:15px">Kaynak: Millî Eğitim Bakanlığı 2026-2027 çalışma takvimi ve Diyanet İşleri Başkanlığı dini günler takvimi. Hava koşulları nedeniyle valilikçe verilen tatiller bu listede yer almaz; böyle bir karar olursa haberlerde duyurulur.</p>
+</div>${yanKutular(servis)}</main>`,
   });
 }

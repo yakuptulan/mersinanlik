@@ -142,8 +142,11 @@ function ilceEczaneleri(servis, slug) {
 export function yanKutular(servis, ilce = null) {
   const su = aktifSuKesintileri(servis).filter((k) => !ilce || k.ilceler.some((i) => i.ilce === ilce.slug));
   const eczaneler = ilce ? ilceEczaneleri(servis, ilce.slug) : [];
+  const okunan = servis?.enCokOkunan || [];
   return `<aside class="yan">
 ${reklamAlani('yan-ust')}
+${okunan.length >= 3 ? `<section class="kutu"><div class="kutu-bas"><h2>En çok okunanlar</h2><span class="kutu-alt">son 24 saat</span></div>
+<ol class="gundem-liste tek">${okunan.map((o, i) => `<li><span class="gundem-no">${i + 1}</span><span class="gundem-ic"><a href="${h(o.yol)}">${h(o.baslik)}</a></span></li>`).join('')}</ol></section>` : ''}
 ${ilce ? `<section class="kutu">
 <div class="kutu-bas"><h2>${h(ilce.ad)} nöbetçi eczaneler</h2><a href="/nobetci-eczane/#${ilce.slug}">Tümü</a></div>
 ${eczaneler.map((e) => `<a class="satir" href="tel:${h(e.telefon)}"><span>${ikon.eczane(20)} ${h(e.ad)}</span><small>${h(telefonGoster(e.telefon))}</small></a>`).join('') || `<a class="satir" href="/nobetci-eczane/"><span>Bugünün listesi</span><small>→</small></a>`}
@@ -632,7 +635,7 @@ ${servis?.suKesintisi ? guncellemeNotu(servis.suKesintisi, 'MESKİ', RESMI.meski
 export function menuSayfasi() {
   const linkler = [
     ['/', 'Ana sayfa'], ['/ilceler/', 'İlçeler'], ['/nobetci-eczane/', 'Nöbetçi eczane'], ['/kesintiler/', 'Kesintiler'],
-    ['/hava-durumu/', 'Hava durumu'], ['/deprem/', 'Son depremler'], ['/piyasalar/', 'Altın ve döviz'], ['/spor/', 'Spor'], ['/etkinlikler/', 'Etkinlikler'], ['/rehber/', 'Mersin rehberi'], ['/burclar/', 'Burçlar'], ['/rehber/acil-telefonlar/', 'Acil telefonlar'], ['/namaz-vakitleri/', 'Namaz vakitleri'],
+    ['/hava-durumu/', 'Hava durumu'], ['/deprem/', 'Son depremler'], ['/piyasalar/', 'Altın ve döviz'], ['/spor/', 'Spor'], ['/etkinlikler/', 'Etkinlikler'], ['/rehber/', 'Mersin rehberi'], ['/burclar/', 'Burçlar'], ['/tatil-takvimi/', 'Tatil takvimi'], ['/rehber/acil-telefonlar/', 'Acil telefonlar'], ['/namaz-vakitleri/', 'Namaz vakitleri'],
     ['/akaryakit-fiyatlari/', 'Akaryakıt fiyatları'], ['/ara/', 'Haber ara'], ['/kunye/', 'Künye'],
     ['/iletisim/', 'İletişim'], ['/kaynaklarimiz/', 'Kaynaklarımız'], ['/gizlilik/', 'Gizlilik'],
   ];

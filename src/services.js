@@ -20,6 +20,7 @@ import { sporGetir } from './lib/spor.js';
 import { etkinlikGetir } from './lib/etkinlik.js';
 import { meteoGetir } from './lib/meteo.js';
 import { burcYaz } from './lib/burc.js';
+import { okunanlarGetir } from './lib/okunanlar.js';
 
 const DOSYA = path.resolve('data/servisler.json');
 const UA = 'mersinanlik.com iletisim@mersinanlik.com';
@@ -150,6 +151,13 @@ async function main() {
     console.log(`Akaryakıt: ${Object.keys(yeni.akaryakit.ilceler).length} ilçe`);
   } catch (e) {
     console.warn('! Akaryakıt:', e.message);
+  }
+  // En çok okunanlar (Cloudflare Web Analytics)
+  try {
+    const o = await okunanlarGetir();
+    if (o) yeni.okunanlar = o;
+  } catch (e) {
+    console.warn('! Okunanlar:', e.message);
   }
   // Meteorolojik uyarılar (MGM)
   try {
