@@ -8,6 +8,10 @@
   "istemersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T12:50:13.260Z"
+  },
+  "cukurova": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-16T17:31:24.743Z"
   }
  },
  "gorsel": {
@@ -23,7 +27,8 @@
    "https://www.mersin.bel.tr/haber/buyuksehirin-hello-mersin-kurslariyla-cocuklar-ingilizceyi-severek-ogreniyor-1794635526",
    "https://www.mersin.bel.tr/haber/mersin-buyuksehirden-toroslarda-yol-seferberligi-1794634997",
    "https://www.mersin.bel.tr/haber/mersin-sinema-ofisi-kenti-sinema-dunyasinin-cekim-merkezlerinden-biri-haline-getiriyor-1794553363",
-   "https://www.mersin.bel.tr/haber/buyuksehirin-dev-projeleri-anamurdan-tarsusa-devam-ediyor-1794550039"
+   "https://www.mersin.bel.tr/haber/buyuksehirin-dev-projeleri-anamurdan-tarsusa-devam-ediyor-1794550039",
+   "https://www.mersin.bel.tr/haber/baskan-vekili-genc-cop31de-akdeniz-kiyi-kentlerinin-ortak-gelecegini-konustu-1794850058"
   ],
   "yenisehir-belediyesi": [
    "https://yenisehir.bel.tr/haber/yenisehirde-yesil-seferberlik-suru",
@@ -56,8 +61,36 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-16T17:01:21.916Z",
+  "guncelleme": "2026-11-16T17:31:28.936Z",
   "liste": [
+   {
+    "baslik": "izlanda lüksemburg",
+    "trafik": 1000
+   },
+   {
+    "baslik": "ülker",
+    "trafik": 200
+   },
+   {
+    "baslik": "seyyanen zam memur emeklisi",
+    "trafik": 200
+   },
+   {
+    "baslik": "almanya hollanda maçı hangi kanalda",
+    "trafik": 500
+   },
+   {
+    "baslik": "hülya koçyiğit",
+    "trafik": 2000
+   },
+   {
+    "baslik": "pierce brosnan",
+    "trafik": 100
+   },
+   {
+    "baslik": "moldova",
+    "trafik": 100
+   },
    {
     "baslik": "asels",
     "trafik": 100
@@ -69,34 +102,6 @@
    {
     "baslik": "eylem tok",
     "trafik": 200
-   },
-   {
-    "baslik": "indirim",
-    "trafik": 2000
-   },
-   {
-    "baslik": "slovakya",
-    "trafik": 100
-   },
-   {
-    "baslik": "moldova millî futbol takımı",
-    "trafik": 200
-   },
-   {
-    "baslik": "yatsı namazı kaçta",
-    "trafik": 10000
-   },
-   {
-    "baslik": "henry cavill",
-    "trafik": 200
-   },
-   {
-    "baslik": "kamu son dakika",
-    "trafik": 100
-   },
-   {
-    "baslik": "ziraat bankası",
-    "trafik": 5000
    }
   ]
  }
