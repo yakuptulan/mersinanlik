@@ -62,4 +62,7 @@ jobs:
 
       - name: Cloudflare'e yayınla
         if: ${{ env.CLOUDFLARE_API_TOKEN != '' }}
-        run: npx --yes wrangler@4 pages deploy dist --project-name=mersinanlik --branch=main --commit-dirty=true
+        run: |
+          # Proje yoksa ilk seferde oluştur (varsa hata verir, yok sayılır)
+          npx --yes wrangler@4 pages project create mersinanlik --production-branch=main || true
+          npx --yes wrangler@4 pages deploy dist --project-name=mersinanlik --branch=main --commit-dirty=true
