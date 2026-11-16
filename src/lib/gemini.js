@@ -34,16 +34,28 @@ function jsonDizisi(yazi) {
 }
 
 // Yedek: Cloudflare Workers AI (ücretsiz günlük kota)
+const CF_MODELLER = ['@cf/meta/llama-3.3-70b-instruct-fp8-fast', '@cf/meta/llama-4-scout-17b-16e-instruct', '@cf/google/gemma-3-12b-it'];
 async function cfYaz(icerik) {
-  const res = await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/ai/run/@cf/google/gemma-3-12b-it`, {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${process.env.CLOUDFLARE_API_TOKEN}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ messages: [{ role: 'system', content: TALIMAT }, { role: 'user', content: icerik }], max_tokens: 3500, temperature: 0.2 }),
-    signal: AbortSignal.timeout(120000),
-  });
-  if (!res.ok) throw new Error(`Cloudflare AI HTTP ${res.status}: ${(await res.text()).slice(0, 200)}`);
-  const r = (await res.json()).result?.response;
-  return typeof r === 'string' ? jsonDizisi(r) : r;
+  let sonHata = '';
+  for (const model of CF_MODELLER) {
+    const res = await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/ai/run/${model}`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${process.env.CLOUDFLARE_API_TOKEN}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: [{ role: 'system', content: TALIMAT }, { role: 'user', content: icerik }], max_tokens: 3500, temperature: 0.2 }),
+      signal: AbortSignal.timeout(120000),
+    });
+    if (!res.ok) {
+      sonHata = `${model} HTTP ${res.status}: ${(await res.text()).slice(0, 160)}`;
+      continue;
+    }
+    const r = (await res.json()).result?.response;
+    try {
+      return typeof r === 'string' ? jsonDizisi(r) : r;
+    } catch {
+      sonHata = `${model}: JSON okunamadı`;
+    }
+  }
+  throw new Error(`Cloudflare AI ${sonHata}`);
 }
 
 function sonucCoz(metinler, sonuc) {
