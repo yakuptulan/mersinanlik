@@ -1,0 +1,898 @@
+{
+ "guncelleme": "2026-11-16T12:50:16.747Z",
+ "hava": {
+  "akdeniz": {
+   "sicaklik": 21,
+   "durum": "Açık",
+   "gunler": [
+    {
+     "tarih": "2026-11-16",
+     "min": 16,
+     "max": 21,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-17",
+     "min": 13,
+     "max": 20,
+     "durum": "Hafif sağanak"
+    },
+    {
+     "tarih": "2026-11-18",
+     "min": 15,
+     "max": 21,
+     "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-19",
+     "min": 14,
+     "max": 20,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-20",
+     "min": 16,
+     "max": 21,
+     "durum": "Değişken"
+    }
+   ]
+  },
+  "anamur": {
+   "sicaklik": 22,
+   "durum": "Az bulutlu",
+   "gunler": [
+    {
+     "tarih": "2026-11-16",
+     "min": 15,
+     "max": 22,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-17",
+     "min": 14,
+     "max": 20,
+     "durum": "Açık"
+    },
+    {
+     "tarih": "2026-11-18",
+     "min": 13,
+     "max": 20,
+     "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-19",
+     "min": 15,
+     "max": 20,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-20",
+     "min": 16,
+     "max": 22,
+     "durum": "Değişken"
+    }
+   ]
+  },
+  "aydincik": {
+   "sicaklik": 21,
+   "durum": "Az bulutlu",
+   "gunler": [
+    {
+     "tarih": "2026-11-16",
+     "min": 16,
+     "max": 21,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-17",
+     "min": 14,
+     "max": 19,
+     "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-18",
+     "min": 14,
+     "max": 18,
+     "durum": "Hafif sağanak"
+    },
+    {
+     "tarih": "2026-11-19",
+     "min": 15,
+     "max": 22,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-20",
+     "min": 15,
+     "max": 22,
+     "durum": "Değişken"
+    }
+   ]
+  },
+  "bozyazi": {
+   "sicaklik": 21,
+   "durum": "Az bulutlu",
+   "gunler": [
+    {
+     "tarih": "2026-11-16",
+     "min": 14,
+     "max": 21,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-17",
+     "min": 13,
+     "max": 19,
+     "durum": "Açık"
+    },
+    {
+     "tarih": "2026-11-18",
+     "min": 13,
+     "max": 19,
+     "durum": "Az bulutlu"
+    },
+    {
+     "tarih": "2026-11-19",
+     "min": 14,
+     "max": 20,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-20",
+     "min": 15,
+     "max": 22,
+     "durum": "Değişken"
+    }
+   ]
+  },
+  "camliyayla": {
+   "sicaklik": 13,
+   "durum": "Hafif sağanak",
+   "gunler": [
+    {
+     "tarih": "2026-11-16",
+     "min": 6,
+     "max": 13,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-17",
+     "min": 6,
+     "max": 12,
+     "durum": "Hafif sağanak"
+    },
+    {
+     "tarih": "2026-11-18",
+     "min": 4,
+     "max": 12,
+     "durum": "Hafif yağmurlu"
+    },
+    {
+     "tarih": "2026-11-19",
+     "min": 9,
+     "max": 13,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-20",
+     "min": 7,
+     "max": 15,
+     "durum": "Değişken"
+    }
+   ]
+  },
+  "erdemli": {
+   "sicaklik": 20,
+   "durum": "Parçalı bulutlu",
+   "gunler": [
+    {
+     "tarih": "2026-11-16",
+     "min": 14,
+     "max": 20,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-17",
+     "min": 13,
+     "max": 19,
+     "durum": "Hafif sağanak"
+    },
+    {
+     "tarih": "2026-11-18",
+     "min": 13,
+     "max": 19,
+     "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-19",
+     "min": 14,
+     "max": 20,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-20",
+     "min": 16,
+     "max": 20,
+     "durum": "Değişken"
+    }
+   ]
+  },
+  "gulnar": {
+   "sicaklik": 15,
+   "durum": "Az bulutlu",
+   "gunler": [
+    {
+     "tarih": "2026-11-16",
+     "min": 10,
+     "max": 15,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-17",
+     "min": 9,
+     "max": 15,
+     "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-18",
+     "min": 8,
+     "max": 13,
+     "durum": "Hafif yağmurlu"
+    },
+    {
+     "tarih": "2026-11-19",
+     "min": 10,
+     "max": 16,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-20",
+     "min": 10,
+     "max": 16,
+     "durum": "Değişken"
+    }
+   ]
+  },
+  "mezitli": {
+   "sicaklik": 21,
+   "durum": "Açık",
+   "gunler": [
+    {
+     "tarih": "2026-11-16",
+     "min": 16,
+     "max": 21,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-17",
+     "min": 14,
+     "max": 20,
+     "durum": "Hafif sağanak"
+    },
+    {
+     "tarih": "2026-11-18",
+     "min": 14,
+     "max": 20,
+     "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-19",
+     "min": 14,
+     "max": 20,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-20",
+     "min": 16,
+     "max": 21,
+     "durum": "Değişken"
+    }
+   ]
+  },
+  "mut": {
+   "sicaklik": 20,
+   "durum": "Açık",
+   "gunler": [
+    {
+     "tarih": "2026-11-16",
+     "min": 14,
+     "max": 20,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-17",
+     "min": 12,
+     "max": 20,
+     "durum": "Az bulutlu"
+    },
+    {
+     "tarih": "2026-11-18",
+     "min": 10,
+     "max": 20,
+     "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-19",
+     "min": 13,
+     "max": 20,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-20",
+     "min": 13,
+     "max": 21,
+     "durum": "Değişken"
+    }
+   ]
+  },
+  "silifke": {
+   "sicaklik": 22,
+   "durum": "Açık",
+   "gunler": [
+    {
+     "tarih": "2026-11-16",
+     "min": 15,
+     "max": 22,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-17",
+     "min": 12,
+     "max": 20,
+     "durum": "Hafif sağanak"
+    },
+    {
+     "tarih": "2026-11-18",
+     "min": 12,
+     "max": 19,
+     "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-19",
+     "min": 13,
+     "max": 23,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-20",
+     "min": 15,
+     "max": 21,
+     "durum": "Değişken"
+    }
+   ]
+  },
+  "tarsus": {
+   "sicaklik": 22,
+   "durum": "Az bulutlu",
+   "gunler": [
+    {
+     "tarih": "2026-11-16",
+     "min": 14,
+     "max": 22,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-17",
+     "min": 13,
+     "max": 20,
+     "durum": "Hafif sağanak"
+    },
+    {
+     "tarih": "2026-11-18",
+     "min": 14,
+     "max": 22,
+     "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-19",
+     "min": 15,
+     "max": 20,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-20",
+     "min": 16,
+     "max": 22,
+     "durum": "Değişken"
+    }
+   ]
+  },
+  "toroslar": {
+   "sicaklik": 21,
+   "durum": "Açık",
+   "gunler": [
+    {
+     "tarih": "2026-11-16",
+     "min": 16,
+     "max": 21,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-17",
+     "min": 13,
+     "max": 20,
+     "durum": "Hafif sağanak"
+    },
+    {
+     "tarih": "2026-11-18",
+     "min": 15,
+     "max": 21,
+     "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-19",
+     "min": 14,
+     "max": 20,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-20",
+     "min": 16,
+     "max": 21,
+     "durum": "Değişken"
+    }
+   ]
+  },
+  "yenisehir": {
+   "sicaklik": 21,
+   "durum": "Açık",
+   "gunler": [
+    {
+     "tarih": "2026-11-16",
+     "min": 16,
+     "max": 21,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-17",
+     "min": 13,
+     "max": 20,
+     "durum": "Hafif sağanak"
+    },
+    {
+     "tarih": "2026-11-18",
+     "min": 15,
+     "max": 21,
+     "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-19",
+     "min": 14,
+     "max": 20,
+     "durum": "Değişken"
+    },
+    {
+     "tarih": "2026-11-20",
+     "min": 16,
+     "max": 21,
+     "durum": "Değişken"
+    }
+   ]
+  }
+ },
+ "deprem": [
+  {
+   "buyukluk": 1.5,
+   "yer": "Erdemli (Mersin)",
+   "il": "Mersin",
+   "ilce": "Erdemli",
+   "derinlik": 7,
+   "tarih": "2026-11-12T14:52:48.000Z"
+  },
+  {
+   "buyukluk": 2.6,
+   "yer": "Akdeniz - [08.36 km] Gülnar (Mersin)",
+   "il": "Mersin",
+   "ilce": "Gülnar",
+   "derinlik": 15.45,
+   "tarih": "2026-11-12T08:39:44.000Z"
+  },
+  {
+   "buyukluk": 1.6,
+   "yer": "Karaisalı (Adana)",
+   "il": "Adana",
+   "ilce": "Karaisalı",
+   "derinlik": 7,
+   "tarih": "2026-11-11T21:09:59.000Z"
+  },
+  {
+   "buyukluk": 1.4,
+   "yer": "Akdeniz - [18.57 km] Gazipaşa (Antalya)",
+   "il": "Antalya",
+   "ilce": "Gazipaşa",
+   "derinlik": 9.93,
+   "tarih": "2026-11-10T10:46:46.000Z"
+  }
+ ],
+ "eczane": {
+  "guncelleme": "2026-11-16T12:50:20.755Z",
+  "liste": [
+   {
+    "ad": "Abay Eczanesi",
+    "bolge": "MEZİTLİ",
+    "ilce": "mezitli",
+    "adres": "ATATÜRK MH. 31039 SK. DAMLA SİTESİ A BLOK NO:10/A",
+    "tarif": "ÜNİVERSİTE YOLU ÖZEL ORTADOĞU HASTANESİ KUZEY YANI MEZİTLİ",
+    "telefon": "03243587375",
+    "lat": 36.764217,
+    "lon": 34.548006,
+    "saat": "16.11.2026 18:00 / 17.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Ayşem Eczanesi",
+    "bolge": "TOROSLAR",
+    "ilce": "toroslar",
+    "adres": "TOZKOPARAN MH. 87045 SK. NO:19/A",
+    "tarif": "TOZKOPARAN MAH 87045 SOK. TOZKOPARAN SAĞLIK OCAĞI KARŞISI (PALMİYE DÜĞÜN SALONU KARŞISI)/TOROSLAR",
+    "telefon": "03243202026",
+    "lat": 36.819278,
+    "lon": 34.614734,
+    "saat": "16.11.2026 18:00 / 17.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Aysu Kösel Eczanesi",
+    "bolge": "YENİŞEHİR",
+    "ilce": "yenisehir",
+    "adres": "BAHÇELİEVLER MH. 16. CD. NO:5E",
+    "tarif": "45 EVLER YOLU SUPHİ ŞALGAM KARŞISI",
+    "telefon": "03243267289",
+    "lat": 36.785419,
+    "lon": 34.600074,
+    "saat": "16.11.2026 18:00 / 17.11.2026 00:00 nöbetçidir."
+   },
+   {
+    "ad": "Damla Eczanesi",
+    "bolge": "AKDENİZ",
+    "ilce": "akdeniz",
+    "adres": "CAMISERIF MAH.170.CAD. CEMALPASA CAD. NO.93/C",
+    "tarif": "CAMİŞERİF MH. FABRİKALAR CD. EVKUR ALIŞVERİŞ MERKEZİ YANI / AKDENİZ",
+    "telefon": "03242393722",
+    "lat": 36.801134,
+    "lon": 34.62706,
+    "saat": "16.11.2026 18:00 / 17.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Deren Eczanesi",
+    "bolge": "AKDENİZ",
+    "ilce": "akdeniz",
+    "adres": "YENİ MH. 5328 SK. NO:7/C",
+    "tarif": "TOROS DEVLET HASTANESİ ACİL KARŞISI",
+    "telefon": "03243365152",
+    "lat": 36.805363,
+    "lon": 34.633478,
+    "saat": "16.11.2026 18:00 / 17.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Güleç Eczanesi",
+    "bolge": "MEZİTLİ",
+    "ilce": "mezitli",
+    "adres": "MENDERES MH. MİLLİ EGEMENLİK CD. MIZRAK 5 APT. NO:6/B",
+    "tarif": "ESKİ MEZİTLİ BELEDİYE ARKASI TEDAŞ ÖDEME NOKTASI KARŞISI/MEZİTLİ",
+    "telefon": "03243583467",
+    "lat": 36.748426,
+    "lon": 34.530797,
+    "saat": "16.11.2026 18:00 / 17.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "İrem Eczanesi",
+    "bolge": "AKDENİZ",
+    "ilce": "akdeniz",
+    "adres": "GÜNEŞ MH. 5822 SK. NO:5/A",
+    "tarif": "SELAHATTİN EYYUBİ SAĞLIK OCAĞI YANI",
+    "telefon": "03242357656",
+    "lat": 36.822691,
+    "lon": 34.637539,
+    "saat": "16.11.2026 18:00 / 17.11.2026 00:00 nöbetçidir."
+   },
+   {
+    "ad": "Koç Eczanesi",
+    "bolge": "MEZİTLİ",
+    "ilce": "mezitli",
+    "adres": "AKDENİZ MAH. 39607 SOK. ÇEVİK-1 PLAZA ALTI NO:19",
+    "tarif": "SOLİ CENTER BATISI 14. NOTER 2 ARKA SOKAĞI",
+    "telefon": "03243582500",
+    "lat": 36.734998,
+    "lon": 34.513915,
+    "saat": "16.11.2026 18:00 / 17.11.2026 00:00 nöbetçidir."
+   },
+   {
+    "ad": "Lida Eczanesi",
+    "bolge": "TOROSLAR",
+    "ilce": "toroslar",
+    "adres": "KORUKENT MH. 96015 SK. NO:15/A",
+    "tarif": "KORUKENT MH. 96013 SK. MERSİN ŞEHİR HASTANESİ CİVARI TOKİ EVLERİ KARŞISI, TOKİ CAMİİ ÜZERİ TOROSLAR",
+    "telefon": "03242372817",
+    "lat": 36.851194,
+    "lon": 34.607191,
+    "saat": "16.11.2026 18:00 / 17.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Okyanus Eczanesi",
+    "bolge": "YENİŞEHİR",
+    "ilce": "yenisehir",
+    "adres": "50.YIL MAH. 27143 SOK. NO:4/A",
+    "tarif": "METRO ALIŞ VERİŞ MERKEZİ ARKASI - 50. YIL POLİS KARAKOLU CİVARI 50. YIL ASM KARŞISI YENİŞEHİR/YENİŞEHİR",
+    "telefon": "03243284282",
+    "lat": 36.798235,
+    "lon": 34.571399,
+    "saat": "16.11.2026 18:00 / 17.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Somer Plus Eczanesi",
+    "bolge": "YENİŞEHİR",
+    "ilce": "yenisehir",
+    "adres": "BARBAROS MH. 2121 SK. NO:2/A",
+    "tarif": "YENİŞEHİR KAYMAKAMLIĞI KARŞISI BARBAROS ÇOCUK PARKI ARKASI 15 NOLU SAĞLIK OCAĞI YANI/YENİŞEHİR",
+    "telefon": "03243254457",
+    "lat": 36.779319,
+    "lon": 34.574678,
+    "saat": "16.11.2026 18:00 / 17.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Makam Eczanesi",
+    "bolge": "TARSUS",
+    "ilce": "tarsus",
+    "adres": "ŞEHİTKERİM MH. 3406 SK. NO:8/A",
+    "tarif": "Makam Camii Civarı Ulu Cami Yolu Üzeri",
+    "telefon": "03246243066",
+    "lat": 36.916798,
+    "lon": 34.897179,
+    "saat": "16.11.2026 18:00 / 17.11.2026 00:00 nöbetçidir."
+   },
+   {
+    "ad": "Meltem Eczanesi",
+    "bolge": "TARSUS",
+    "ilce": "tarsus",
+    "adres": "TEKKE MH. TÜRKMENİSTAN CD. NO:58CC",
+    "tarif": "YENİ DEVLET HAST. POLİKLİNİKLER KARŞISI",
+    "telefon": "03245022062",
+    "lat": 36.914306,
+    "lon": 34.912756,
+    "saat": "16.11.2026 18:00 / 17.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Özkara Eczanesi",
+    "bolge": "TARSUS",
+    "ilce": "tarsus",
+    "adres": "ŞEHİT İSHAK MH. NENEHATUN CD. NO:37/A",
+    "tarif": "ŞEHİT İSHAK ASM YANI",
+    "telefon": "03246258088",
+    "lat": 36.923859,
+    "lon": 34.883017,
+    "saat": "16.11.2026 18:00 / 17.11.2026 00:00 nöbetçidir."
+   },
+   {
+    "ad": "Üçgençarşı Eczanesi",
+    "bolge": "TARSUS",
+    "ilce": "tarsus",
+    "adres": "ÖGRETMENLER MAH. DUMLUPINAR CAD.NO:6/B",
+    "tarif": "Öğretmenler Mah. Özel MMT Amerikan Hastanesi Karşısı",
+    "telefon": "03246247438",
+    "lat": 36.909522,
+    "lon": 34.882067,
+    "saat": "16.11.2026 18:00 / 17.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Sağlık Eczanesi",
+    "bolge": "SİLİFKE",
+    "ilce": "silifke",
+    "adres": "TAŞUCU MAH. İSMET İNÖNÜ CAD.NO:6/D",
+    "tarif": "İSMET İNÖNÜ CD.MUTLULAR İŞHANI NO:6 TAŞUCU",
+    "telefon": "03247414067",
+    "lat": 36.319651,
+    "lon": 33.880229,
+    "saat": "16.11.2026 18:00 / 17.11.2026 00:00 nöbetçidir."
+   },
+   {
+    "ad": "Ünlü Eczanesi",
+    "bolge": "SİLİFKE",
+    "ilce": "silifke",
+    "adres": "GÖKSU MAH. 72 SOK. NO:4D",
+    "tarif": "GÖKSU ASM KARŞISI - SEÇKİNLER MAĞZASI ARKASI",
+    "telefon": "03247143377",
+    "lat": 36.380452,
+    "lon": 33.93654,
+    "saat": "16.11.2026 18:00 / 17.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Merkez Eczanesi",
+    "bolge": "MUT",
+    "ilce": "mut",
+    "adres": "PINARBASI MAH KOCAHACI SOK.NO:27/D",
+    "tarif": "PINARBASI MAH KOCAHACI SOK.NO.29 MUT",
+    "telefon": "03247741253",
+    "lat": 36.644772,
+    "lon": 33.438232,
+    "saat": "16.11.2026 18:00 / 17.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Kır Eczanesi",
+    "bolge": "GÜLNAR",
+    "ilce": "gulnar",
+    "adres": "SARAY MAH. AKKAVAK CAD. NO: 12/E",
+    "tarif": "SARAY MAH. AKKAVAK CAD. NO: 12/E ESKİ DEVLET HASTANESİ KARŞISI",
+    "telefon": "03247512727",
+    "lat": 36.338403,
+    "lon": 33.40324,
+    "saat": "16.11.2026 18:00 / 17.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Anıl Eczanesi",
+    "bolge": "ERDEMLİ",
+    "ilce": "erdemli",
+    "adres": "MERKEZ MAH. KAZIM KARABEKİR CAD. NO:80/G",
+    "tarif": "MERKEZ MH. KAZIM KARABEKIR CD.MERSIN",
+    "telefon": "03245155223",
+    "lat": 36.610793,
+    "lon": 34.302666,
+    "saat": "16.11.2026 18:00 / 17.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Gül Eczanesi",
+    "bolge": "ERDEMLİ",
+    "ilce": "erdemli",
+    "adres": "MERKEZ MAH.ABDURRAHMAN ŞEVKİ CAD.NO:19/A",
+    "tarif": "MERKEZ MAH. ABDURRAHMAN ŞEVK CD 19/A MÜFTÜLÜK YANI ÖZEL YENİŞEHİR HASTANESİ KARŞISI",
+    "telefon": "03245152552",
+    "lat": 36.605138,
+    "lon": 34.313676,
+    "saat": "16.11.2026 18:00 / 17.11.2026 00:00 nöbetçidir."
+   },
+   {
+    "ad": "Atalay Eczanesi",
+    "bolge": "BOZYAZI",
+    "ilce": "bozyazi",
+    "adres": "MERKEZ MAH. SAĞLIK SK. NO:10/B",
+    "tarif": "MERKEZ MH. SAGLIK OCAGI ÖZCAN ÇETINKAYA AP.NO:10/A",
+    "telefon": "03248513399",
+    "lat": 36.106187,
+    "lon": 32.970492,
+    "saat": "16.11.2026 17:00 / 17.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Demircioğlu Eczanesi",
+    "bolge": "ANAMUR",
+    "ilce": "anamur",
+    "adres": "AKARCA MAH.AHMET TANER KIŞLALI CAD.NO:4/A",
+    "tarif": "AKARCA MAHALLESI AHMET TANER KISLALI CADDESI 4/A",
+    "telefon": "03248144643",
+    "lat": 36.074966,
+    "lon": 32.827241,
+    "saat": "16.11.2026 18:00 / 17.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Kutay Eczanesi",
+    "bolge": "AYDINCIK",
+    "ilce": "aydincik",
+    "adres": "CUMHURİYET MAH. SİLİFKE CAD. NO:1/D",
+    "tarif": "CUMHURİYET MH. HASTANE CAD. AYDINCIK DEVLET HAST. KARŞISI",
+    "telefon": "03248412233",
+    "lat": 36.152821,
+    "lon": 33.33882,
+    "saat": "16.11.2026 17:00 / 17.11.2026 08:00 nöbetçidir."
+   }
+  ]
+ },
+ "suKesintisi": {
+  "guncelleme": "2026-11-16T12:50:21.731Z",
+  "liste": [
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "MEZİTLİ İLÇESİ ÇEVLİK MAHALLESİNDE MEYDANA GELEN ŞEBEKE ARIZASI NEDENİYLE ÇEVLİK MAHALLESİNDE SAAT 16:00 A KADAR BİR KISIM SU KESİNTİSİ YAŞANACAKTIR.",
+    "baslangic": "2026-11-16T06:41:55.000Z",
+    "bitis": "2026-11-16T13:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "mezitli",
+      "ad": "Mezitli",
+      "mahalleler": [
+       "Çevlik"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "AKDENİZ İLÇESİ MÜFİDE İLHAN MAHALLESİNDE 6120 SOKAKTAKİ ANA BORU ARIZASI NEDENİYLE SAAT 16:00 A KADAR BİR KISIM SU KESİNTİSİ YAŞANACAKTIR.",
+    "baslangic": "2026-11-16T11:51:44.000Z",
+    "bitis": "2026-11-16T13:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "akdeniz",
+      "ad": "Akdeniz",
+      "mahalleler": [
+       "Müfide İlhan"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "YENİŞEHİR İLÇESİ MENTEŞ MAHALLESİ 20. CADDE ÜZERİNDEKİ ARIZADAN DOLAYI SAAT 18.30 A KADAR BİR KISIM SU KESİNTİSİ YAŞANACAKTIR.",
+    "baslangic": "2026-11-16T12:33:05.000Z",
+    "bitis": "2026-11-16T15:30:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "yenisehir",
+      "ad": "Yenişehir",
+      "mahalleler": [
+       "Menteş"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "TOROSLAR İLÇESİ HOROZLU MAHALLESİNDE ARIZADAN KAYNAKLI SAAT 17:00 A KADAR SU KESİNTİSİ YAŞANACAKTIR.",
+    "baslangic": "2026-11-16T11:54:07.000Z",
+    "bitis": "2026-11-16T14:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "toroslar",
+      "ad": "Toroslar",
+      "mahalleler": [
+       "Değnek",
+       "Horozlu",
+       "Tırtar",
+       "Yavca"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "ERDEMLİ İLÇESİNE BAĞLI MERKEZ MAHALLESİ,AKDENİZ MAHALLELERİ GENELİ ARIZA NEDENİ İLE SAAT 17:00 E KADAR SU KESİNTİSİ YAŞANACAKTIR",
+    "baslangic": "2026-11-16T12:00:00.000Z",
+    "bitis": "2026-11-16T14:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "erdemli",
+      "ad": "Erdemli",
+      "mahalleler": [
+       "Akdeniz",
+       "Merkez"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Tarsus İlçesi Enerjisa'nın bölgedeki enerji kesintisine bağlı Bahşiş ve Yeşiltepe Mahallelerinde 19:00 kadar içme su kesintisi ve basınç düşüklüğü yaşanacaktır.",
+    "baslangic": "2026-11-16T06:50:00.000Z",
+    "bitis": "2026-11-16T16:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "tarsus",
+      "ad": "Tarsus",
+      "mahalleler": [
+       "Bahşiş",
+       "Yeşiltepe"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Silifke ilçesi Atayurt Mahallesi Ergenekon cadde ve Sanat okulu civarı Türk Telekom altyapı çalışmasından kaynaklı oluşan arızadan saat 18:00 a kadar su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-16T12:19:00.000Z",
+    "bitis": "2026-11-16T15:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "silifke",
+      "ad": "Silifke",
+      "mahalleler": [
+       "Atayurt"
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
