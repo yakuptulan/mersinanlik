@@ -23,8 +23,13 @@ Rules (must follow):
 - NO children in any sensitive or negative context.
 - Nothing political or partisan: no party flags, symbols or rallies with banners.`;
 
+// Birden fazla hesap kullanılabilir: GEMINI_API_KEY ve GEMINI_API_KEY_2.
+// İlkinin kotası/kredisi bitince ikincisine geçilir.
+const ANAHTARLAR = [process.env.GEMINI_API_KEY, process.env.GEMINI_API_KEY_2].filter(Boolean);
+let sira = 0;
+
 export function gorselUretimHazirMi() {
-  return Boolean(process.env.GEMINI_API_KEY);
+  return ANAHTARLAR.length > 0;
 }
 
 function ilceMetni(hikaye) {
@@ -33,11 +38,26 @@ function ilceMetni(hikaye) {
 }
 
 export async function gorselUret(hikaye) {
+  for (;;) {
+    try {
+      return await tekDeneme(hikaye, ANAHTARLAR[sira]);
+    } catch (e) {
+      // Kota/kredi bitti ve başka anahtar varsa onunla dene
+      if (/HTTP (403|429)/.test(e.message) && sira < ANAHTARLAR.length - 1) {
+        sira++;
+        continue;
+      }
+      throw e;
+    }
+  }
+}
+
+async function tekDeneme(hikaye, anahtar) {
   const metin = `${KURALLAR}\n\nHeadline (Turkish): "${hikaye.baslik}"\nTopic category: ${hikaye.kategori}\nLocation: ${ilceMetni(hikaye)}`;
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
   const res = await fetch(url, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'x-goog-api-key': process.env.GEMINI_API_KEY },
+    headers: { 'Content-Type': 'application/json', 'x-goog-api-key': anahtar },
     body: JSON.stringify({
       contents: [{ role: 'user', parts: [{ text: metin }] }],
       generationConfig: { responseModalities: ['IMAGE'], imageConfig: { aspectRatio: '16:9' } },
