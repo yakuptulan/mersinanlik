@@ -45,14 +45,14 @@ async function cfYaz(icerik) {
       signal: AbortSignal.timeout(100000),
     });
     if (!res.ok) {
-      sonHata = `${model} HTTP ${res.status}: ${(await res.text()).slice(0, 160)}`;
+      sonHata += ` | ${model} HTTP ${res.status}: ${(await res.text()).slice(0, 120)}`;
       continue;
     }
     const r = (await res.json()).result?.response;
     try {
       return typeof r === 'string' ? jsonDizisi(r) : r;
     } catch {
-      sonHata = `${model}: JSON okunamadı`;
+      sonHata += ` | ${model}: JSON okunamadı: ${String(typeof r === 'string' ? r : JSON.stringify(r)).slice(0, 200)}`;
     }
   }
   throw new Error(`Cloudflare AI ${sonHata}`);
@@ -67,7 +67,7 @@ async function cfToplu(metinler) {
       const r = sonucCoz(parca, await cfYaz(parca.map((m, j) => `${j + 1}) ${m.slice(0, 2500)}`).join('\n\n')));
       sonuc.push(...r);
     } catch (e) {
-      console.warn(`! Cloudflare yazım: ${e.message.slice(0, 120)}`);
+      console.warn(`! Cloudflare yazım: ${e.message.slice(0, 700)}`);
       sonuc.push(...parca.map(() => null));
     }
   }
