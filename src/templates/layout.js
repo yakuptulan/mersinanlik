@@ -24,6 +24,7 @@ const MENU = [
   ['/deprem/', 'Deprem'],
   ['/spor/', 'Spor'],
   ['/piyasalar/', 'Piyasalar'],
+  ['/bilgi/', 'Bilgi'],
 ];
 
 export function saat(iso) {
@@ -111,7 +112,7 @@ ${icerik}
 <p><small>Haberler kaynak gösterilerek derlenir; haberin tamamı her zaman kaynağında okunabilir. Kaynağı yazılmayan görseller temsilidir ve bir kısmı yapay zekâ ile üretilmiştir (<a href="/gorsel-kaynaklari/" style="color:inherit">ayrıntılar</a>).</small></p>
 </div>
 <nav class="alt-menu" aria-label="Alt menü">
-<a href="/rehber/">Mersin rehberi</a><a href="/etkinlikler/">Etkinlikler</a><a href="/spor/">Spor</a><a href="/burclar/">Burçlar</a><a href="/tatil-takvimi/">Tatil takvimi</a><a href="/piyasalar/">Altın ve döviz</a><a href="/namaz-vakitleri/">Namaz vakitleri</a><a href="/akaryakit-fiyatlari/">Akaryakıt</a>
+<a href="/bilgi/">Merak edilenler</a><a href="/rehber/">Mersin rehberi</a><a href="/etkinlikler/">Etkinlikler</a><a href="/spor/">Spor</a><a href="/burclar/">Burçlar</a><a href="/tatil-takvimi/">Tatil takvimi</a><a href="/piyasalar/">Altın ve döviz</a><a href="/namaz-vakitleri/">Namaz vakitleri</a><a href="/akaryakit-fiyatlari/">Akaryakıt</a>
 <a href="/kunye/">Künye</a><a href="/iletisim/">İletişim</a><a href="/kaynaklarimiz/">Kaynaklarımız</a>
 <a href="/yayin-ilkeleri/">Yayın ilkeleri</a><a href="/gizlilik/">Gizlilik</a><a href="/cerez-politikasi/">Çerez politikası</a><a href="/gorsel-kaynaklari/">Görsel kaynakları</a>
 </nav>

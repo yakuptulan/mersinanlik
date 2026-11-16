@@ -6,6 +6,7 @@ import { yukle, yayindakiler, VERI_KLASORU } from './lib/store.js';
 import { ilceAdi } from './templates/layout.js';
 import * as S from './templates/sayfalar.js';
 import * as R from './templates/rehber.js';
+import * as B from './templates/bilgi.js';
 import { baslikTemizle, kategoriBul, htmlKacis } from './lib/text.js';
 import { kendiSayfasiVar, haberYolu } from './templates/parcalar.js';
 import { okunanlarEsle } from './lib/okunanlar.js';
@@ -39,6 +40,11 @@ export function insaEt({ simdi = Date.now() } = {}) {
     return { ...x, baslik: baslikTemizle(x.baslik), kategori: k !== 'gundem' ? k : x.kategori };
   });
   const servis = servisYukle();
+  let bilgiYazilari = [];
+  try {
+    bilgiYazilari = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'bilgi.json'), 'utf8')).yazilar || [];
+  } catch {}
+  servis.bilgi = bilgiYazilari;
   // Meteoroloji uyarısı haberi (MGM verisi alınamazsa yedek): son 18 saatte Mersin'i ilgilendiren uyarı haberi
   servis.meteoHaber = hikayeler.find(
     (x) =>
@@ -76,6 +82,9 @@ export function insaEt({ simdi = Date.now() } = {}) {
   ekle('/rehber/acil-telefonlar/', R.acilSayfasi({ servis }));
   ekle('/rehber/hastaneler/', R.hastaneSayfasi({ servis }));
   ekle('/tatil-takvimi/', R.tatilSayfasi({ servis, simdi }));
+  // Merak edilenler
+  ekle('/bilgi/', B.bilgiListeSayfasi({ yazilar: bilgiYazilari, servis }));
+  for (const yazi of bilgiYazilari) ekle(B.bilgiYolu(yazi), B.bilgiSayfasi({ yazi, yazilar: bilgiYazilari, servis }));
   for (const kategori of S.KATEGORI_SAYFALARI) ekle(`/kategori/${kategori.slug}/`, S.kategoriSayfasi({ kategori, hikayeler, servis }));
   ekle('/namaz-vakitleri/', S.namazSayfasi({ servis, simdi }));
   for (const ilce of ILCELER) ekle(`/namaz-vakitleri/${ilce.slug}/`, S.namazIlceSayfasi({ ilce, servis, simdi }));

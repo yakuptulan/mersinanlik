@@ -10,6 +10,7 @@ import { FOTOLAR } from '../fotolar.js';
 import { piyasaSeridi, namazKutusu, akaryakitKutusu, fmt, yon, ONDALIK, bugunVakit, sporKutusu, puanTablosu, macListesi, etkinlikKarti, meteoBandi, burcKutusu } from './servisParcalari.js';
 import { BURCLAR } from '../lib/burc.js';
 import { guncelEtkinlikler } from '../lib/etkinlik.js';
+import { bilgiKarti } from './bilgi.js';
 import { DIYANET_ILCE, VAKITLER } from '../lib/namaz.js';
 
 // Resmî servis bağlantıları (veri entegrasyonu tamamlanana kadar doğrudan kaynağa yönlendirir)
@@ -244,6 +245,10 @@ ${(() => {
 <div class="izgara izgara-3">${ek.map(etkinlikKarti).join('')}</div>
 </section>` : '';
 })()}
+${(servis?.bilgi || []).length >= 2 ? `<section class="kat-blok" style="--kat:#8E4EC6">
+<div class="bolum-bas kat-bas"><h2><span class="kat-cizgi"></span>Merak edilenler</h2><a href="/bilgi/">Tümü →</a></div>
+<div class="izgara">${servis.bilgi.slice(0, 2).map(bilgiKarti).join('')}</div>
+</section>` : ''}
 ${kategoriBloklari(mersin.filter((x) => x !== manset), gosterilen)}
 ${genel.length ? `<section class="kat-blok" style="--kat:${GENEL.renk}">
 <div class="bolum-bas kat-bas"><h2><span class="kat-cizgi"></span>Türkiye ve dünyadan</h2><a href="/kategori/turkiye-dunya/">Tümü →</a></div>
@@ -635,7 +640,7 @@ ${servis?.suKesintisi ? guncellemeNotu(servis.suKesintisi, 'MESKİ', RESMI.meski
 export function menuSayfasi() {
   const linkler = [
     ['/', 'Ana sayfa'], ['/ilceler/', 'İlçeler'], ['/nobetci-eczane/', 'Nöbetçi eczane'], ['/kesintiler/', 'Kesintiler'],
-    ['/hava-durumu/', 'Hava durumu'], ['/deprem/', 'Son depremler'], ['/piyasalar/', 'Altın ve döviz'], ['/spor/', 'Spor'], ['/etkinlikler/', 'Etkinlikler'], ['/rehber/', 'Mersin rehberi'], ['/burclar/', 'Burçlar'], ['/tatil-takvimi/', 'Tatil takvimi'], ['/rehber/acil-telefonlar/', 'Acil telefonlar'], ['/namaz-vakitleri/', 'Namaz vakitleri'],
+    ['/hava-durumu/', 'Hava durumu'], ['/deprem/', 'Son depremler'], ['/piyasalar/', 'Altın ve döviz'], ['/spor/', 'Spor'], ['/bilgi/', 'Merak edilenler'], ['/etkinlikler/', 'Etkinlikler'], ['/rehber/', 'Mersin rehberi'], ['/burclar/', 'Burçlar'], ['/tatil-takvimi/', 'Tatil takvimi'], ['/rehber/acil-telefonlar/', 'Acil telefonlar'], ['/namaz-vakitleri/', 'Namaz vakitleri'],
     ['/akaryakit-fiyatlari/', 'Akaryakıt fiyatları'], ['/ara/', 'Haber ara'], ['/kunye/', 'Künye'],
     ['/iletisim/', 'İletişim'], ['/kaynaklarimiz/', 'Kaynaklarımız'], ['/gizlilik/', 'Gizlilik'],
   ];

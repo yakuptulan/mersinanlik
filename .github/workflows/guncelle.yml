@@ -4,7 +4,12 @@ on:
   schedule:
     # Her 30 dakikada bir (GitHub saatleri UTC'dir; zamanlama birkaç dakika gecikebilir)
     - cron: '5,35 * * * *'
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      bilgi_zorla:
+        description: 'Merak edilenler yazısını saat/aralık beklemeden yaz'
+        type: boolean
+        default: false
   push:
     branches: [main]
 
@@ -51,6 +56,11 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
+      - name: Merak edilenler (günde 2 bilgi yazısı)
+        run: node src/bilgi.js ${{ inputs.bilgi_zorla && '--simdi' || '' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
       - name: Temsili fotoğrafları indir (sadece eksik olanlar)
         run: node scripts/foto-indir.js
 
@@ -61,7 +71,7 @@ jobs:
         run: |
           git config user.name "mersinanlik-bot"
           git config user.email "bot@mersinanlik.com"
-          git add -A data/ public/foto/ public/uretilen/ public/etkinlik/
+          git add -A data/ public/foto/ public/uretilen/ public/etkinlik/ public/bilgi/
           if git diff --cached --quiet; then
             echo "Değişiklik yok"
           else
