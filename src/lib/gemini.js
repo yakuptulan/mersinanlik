@@ -1,9 +1,9 @@
 // Kısa özetleri Gemini ile yazar. Haberleri tek tek değil, toplu gönderir
 // (ücretsiz kotayı ve aylık krediyi verimli kullanmak için).
 //
-// Ortam değişkenleri: GEMINI_API_KEY, GEMINI_MODEL (varsayılan: gemini-2.5-flash-lite)
+// Ortam değişkenleri: GEMINI_API_KEY, GEMINI_MODEL (varsayılan: gemini-3.5-flash-lite)
 
-const MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
+const MODEL = process.env.GEMINI_MODEL || 'gemini-3.5-flash-lite';
 
 const TALIMAT = `Sen Mersin'de yayın yapan yerel bir haber sitesinin editörüsün.
 Sana numaralı haber metinleri vereceğim. Her biri için Türkçe, tarafsız, 2 cümlelik kısa bir özet yaz.
