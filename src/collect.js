@@ -52,6 +52,8 @@ async function main() {
       for (const ham of haberler) {
         const haber = haberiDegerlendir(ham, kaynak);
         if (!haber) continue;
+        // 24 saatten eski Türkiye/dünya haberi alınmaz (temizlenip tekrar eklenmesin)
+        if (haber.genel && haber.tarih && Date.now() - new Date(haber.tarih).getTime() > 24 * 36e5) continue;
         const { yeni } = hikayeyeEkle(veri, haber, kaynak);
         if (yeni) yeniSayi++;
       }
