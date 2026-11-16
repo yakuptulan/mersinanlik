@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-16T13:30:39.140Z",
+ "guncelleme": "2026-11-16T13:43:12.282Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 21,
@@ -505,7 +505,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-16T13:30:42.687Z",
+  "guncelleme": "2026-11-16T13:43:16.825Z",
   "liste": [
    {
     "ad": "Abay Eczanesi",
@@ -774,7 +774,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-16T13:30:43.592Z",
+  "guncelleme": "2026-11-16T13:43:17.832Z",
   "liste": [
    {
     "tur": "su",
@@ -805,6 +805,22 @@
       "ad": "Mut",
       "mahalleler": [
        "Karşıyaka"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Tarsus ilçesi Gazipaşa mahallesi ana isale hattında meydana gelen arızadan kaynaklı su kesintisi yaşanmaktadır tahmini olarak saat 20,00 da verilmesi planlanmaktadır",
+    "baslangic": "2026-11-16T13:40:00.000Z",
+    "bitis": "2026-11-16T17:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "tarsus",
+      "ad": "Tarsus",
+      "mahalleler": [
+       "Gazipaşa"
       ]
      }
     ]
