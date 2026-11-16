@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "mersin-buyuksehir": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-16T18:57:40.039Z"
   }
  },
  "gorsel": {
@@ -74,8 +78,16 @@
   "iha-mersin": []
  },
  "trendler": {
-  "guncelleme": "2026-11-16T18:31:22.574Z",
+  "guncelleme": "2026-11-16T18:57:49.055Z",
   "liste": [
+   {
+    "baslik": "dua lipa",
+    "trafik": 100
+   },
+   {
+    "baslik": "çelik",
+    "trafik": 200
+   },
    {
     "baslik": "jumanji yeni seviye oyuncuları",
     "trafik": 100
@@ -97,24 +109,16 @@
     "trafik": 10000
    },
    {
+    "baslik": "emekli emlak vergisi muafiyeti",
+    "trafik": 1000
+   },
+   {
     "baslik": "weather tomorrow",
     "trafik": 2000
    },
    {
-    "baslik": "وضعیت هوای فردا",
-    "trafik": 1000
-   },
-   {
     "baslik": "estonya millî futbol takımı",
-    "trafik": 500
-   },
-   {
-    "baslik": "etiyopya",
-    "trafik": 200
-   },
-   {
-    "baslik": "ömer sarıgül",
-    "trafik": 100
+    "trafik": 1000
    }
   ]
  }
