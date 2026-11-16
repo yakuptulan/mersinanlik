@@ -58,6 +58,8 @@ export function insaEt({ simdi = Date.now() } = {}) {
   ekle('/nobetci-eczane/', S.eczaneSayfasi({ servis }));
   ekle('/kesintiler/', S.kesintiSayfasi({ servis }));
   ekle('/piyasalar/', S.piyasaSayfasi({ servis }));
+  ekle('/spor/', S.sporSayfasi({ servis, hikayeler }));
+  ekle('/etkinlikler/', S.etkinlikSayfasi({ servis, simdi }));
   for (const kategori of S.KATEGORI_SAYFALARI) ekle(`/kategori/${kategori.slug}/`, S.kategoriSayfasi({ kategori, hikayeler, servis }));
   ekle('/namaz-vakitleri/', S.namazSayfasi({ servis, simdi }));
   for (const ilce of ILCELER) ekle(`/namaz-vakitleri/${ilce.slug}/`, S.namazIlceSayfasi({ ilce, servis, simdi }));

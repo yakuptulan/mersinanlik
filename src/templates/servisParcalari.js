@@ -82,3 +82,42 @@ export function akaryakitKutusu(servis, ilce = null) {
 ${not}<p class="kutu-not">Opet pompa fiyatı · ${h(ilce && a?.ilceler?.[slug] ? ilce.ad : 'Mersin merkez')}</p>
 </section>`;
 }
+
+// ---------- Spor ----------
+const kisaTarih = (t) => new Date(`${t}T12:00:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' });
+
+export function sporKutusu(servis) {
+  const sp = servis?.spor;
+  const mersin = (sp?.ucuncuLig?.puan || []).filter((x) => x.mersin);
+  const milli = sp?.milli?.maclar?.[0];
+  if (!mersin.length && !milli) return '';
+  return `<section class="kutu">
+<div class="kutu-bas"><h2>Spor</h2><a href="/spor/">Tümü</a></div>
+<div class="yan-liste">
+${mersin.map((t) => `<a class="yan-satir" href="/spor/#mersin"><span class="yan-rozet spor">${t.sira}.</span><span class="yan-metin"><b>${h(t.takim)}</b><small>3. Lig 3. Grup · ${t.o} maç</small></span><span class="yan-sag"><small>puan</small><b>${t.p}</b></span></a>`).join('')}
+${milli ? `<a class="yan-satir" href="/spor/#milli"><span class="yan-rozet milli">TR</span><span class="yan-metin"><b>${h(milli.ev)} ${h(milli.skor)} ${h(milli.dep)}</b><small>A Milli · ${h(milli.organizasyon)}</small></span><span class="yan-sag"><small>${kisaTarih(milli.tarih)}</small></span></a>` : ''}
+</div>
+</section>`;
+}
+
+export function puanTablosu(puan, { kisa = false } = {}) {
+  return `<div class="tablo-kap"><table class="tablo tablo-puan"><thead><tr><th>#</th><th>Takım</th><th>O</th>${kisa ? '' : '<th>G</th><th>B</th><th>M</th><th>AV</th>'}<th>P</th></tr></thead><tbody>${puan
+    .map((t) => `<tr${t.mersin ? ' class="mersin"' : ''}><td>${t.sira}</td><th scope="row">${h(t.takim)}</th><td>${t.o}</td>${kisa ? '' : `<td>${t.g}</td><td>${t.b}</td><td>${t.m}</td><td>${t.av > 0 ? '+' : ''}${t.av}</td>`}<td><strong>${t.p}</strong></td></tr>`)
+    .join('')}</tbody></table></div>`;
+}
+
+export function macListesi(maclar) {
+  return `<div class="mac-liste">${maclar
+    .map((m) => `<div class="mac${m.mersin ? ' mersin' : ''}"><span class="mac-zaman">${kisaTarih(m.tarih)}${m.saat ? ` · ${m.saat}` : ''}</span><span class="mac-ev">${h(m.ev)}</span><span class="mac-skor${m.skor ? '' : ' bos'}">${m.skor ? h(m.skor.replace('-', ' - ')) : 'v'}</span><span class="mac-dep">${h(m.dep)}</span></div>`)
+    .join('')}</div>`;
+}
+
+// ---------- Etkinlikler ----------
+const AY_KISA = ['Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz', 'Tem', 'Ağu', 'Eyl', 'Eki', 'Kas', 'Ara'];
+export function etkinlikKarti(e) {
+  const [y, a, g] = (e.tarih || '').split('-');
+  return `<a class="etkinlik" href="${h(e.link)}" rel="noopener" target="_blank">
+<span class="etkinlik-gorsel">${e.foto ? `<img src="/etkinlik/${h(e.foto)}" alt="" loading="lazy" width="600" height="600">` : ''}${e.tarih ? `<span class="etkinlik-tarih"><b>${Number(g)}</b>${AY_KISA[Number(a) - 1]}</span>` : ''}</span>
+<span class="etkinlik-ic"><b>${h(e.baslik)}</b><small>${[e.tarih ? new Date(`${e.tarih}T12:00:00`).toLocaleDateString('tr-TR', { weekday: 'long' }) : null, e.saat, e.yer].filter(Boolean).map(h).join(' · ') || 'Ayrıntılar duyuruda'}</small></span>
+</a>`;
+}

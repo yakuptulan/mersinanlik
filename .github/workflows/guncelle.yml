@@ -59,7 +59,7 @@ jobs:
         run: |
           git config user.name "mersinanlik-bot"
           git config user.email "bot@mersinanlik.com"
-          git add -A data/ public/foto/ public/uretilen/
+          git add -A data/ public/foto/ public/uretilen/ public/etkinlik/
           if git diff --cached --quiet; then
             echo "Değişiklik yok"
           else

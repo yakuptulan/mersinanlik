@@ -16,6 +16,8 @@ import { suKesintileriniGetir } from './lib/kesinti.js';
 import { piyasaGetir } from './lib/piyasa.js';
 import { namazGetir } from './lib/namaz.js';
 import { akaryakitGetir } from './lib/akaryakit.js';
+import { sporGetir } from './lib/spor.js';
+import { etkinlikGetir } from './lib/etkinlik.js';
 
 const DOSYA = path.resolve('data/servisler.json');
 const UA = 'mersinanlik.com iletisim@mersinanlik.com';
@@ -146,6 +148,25 @@ async function main() {
     console.log(`Akaryakıt: ${Object.keys(yeni.akaryakit.ilceler).length} ilçe`);
   } catch (e) {
     console.warn('! Akaryakıt:', e.message);
+  }
+  // Etkinlikler (Mersin Büyükşehir): 3 saatte bir
+  if (!eski.etkinlik || Date.now() - new Date(eski.etkinlik.guncelleme).getTime() > 170 * 60e3) {
+    try {
+      yeni.etkinlik = await etkinlikGetir(UA, eski.etkinlik?.liste);
+      console.log(`Etkinlik: ${yeni.etkinlik.liste.length} (tarihli: ${yeni.etkinlik.liste.filter((e) => e.tarih).length})`);
+    } catch (e) {
+      console.warn('! Etkinlik:', e.message);
+    }
+  }
+  // Spor (TFF): saatte bir yeter
+  if (!eski.spor || Date.now() - new Date(eski.spor.guncelleme).getTime() > 55 * 60e3) {
+    try {
+      const spor = await sporGetir(UA);
+      yeni.spor = { ...eski.spor, ...spor };
+      console.log(`Spor: Süper Lig ${spor.superLig?.puan?.length || 0} takım, 3. Lig ${spor.ucuncuLig?.puan?.length || 0}, milli ${spor.milli?.maclar?.length || 0} maç`);
+    } catch (e) {
+      console.warn('! Spor:', e.message);
+    }
   }
   fs.mkdirSync(path.dirname(DOSYA), { recursive: true });
   fs.writeFileSync(DOSYA, JSON.stringify(yeni, null, 1));

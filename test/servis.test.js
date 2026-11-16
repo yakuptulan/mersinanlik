@@ -45,3 +45,38 @@ test('trendler: RSS ve başlık eşleşmesi', () => {
   assert.ok(!trendEslesir('henry cavill', 'Henry Ford fabrikası'));
   assert.ok(!trendEslesir('ab', 'Abdullah'));
 });
+
+import { puanCoz, haftaCoz, milliCoz, takimAdi } from '../src/lib/spor.js';
+test('spor: TFF tabloları', () => {
+  const html = `<table><tr><td>Takım</td><td>O</td></tr>
+<tr><td><b><a href="x">1.GALATASARAY A.Ş.</a></b></td><td>11</td><td>9</td><td>1</td><td>1</td><td>27</td><td>15</td><td>12</td><td>28</td></tr>
+<tr><td><a>2.YENİ MERSİN İDMANYURDU FUTBOL A.Ş.</a></td><td>11</td><td>7</td><td>0</td><td>4</td><td>16</td><td>10</td><td>6</td><td>21</td></tr></table>
+<table><tr align="left"><td><b><span>15.11.2026</span>&nbsp;<span>13:00</span></b></td><td><a>ADANASPOR A.Ş.</a></td><td><a>4-0</a></td><td><a>1964 SİLİFKE SPOR KULÜBÜ</a></td><td>Detaylar</td></tr>
+<tr><td>16.11.2026</td><td>EJDEROĞLU KIRŞEHİR FUTBOL SPOR KULÜBÜ</td><td>-</td><td>KARAMAN FUTBOL KULÜBÜ</td></tr></table>
+<table><tr><td>TÜRKİYE</td><td>1-2</td><td>BELÇİKA</td><td>12.11.2026</td><td>UEFA ULUSLAR LİGİ</td><td>A Milli</td></tr></table>`;
+  const p = puanCoz(html);
+  assert.equal(p.length, 2);
+  assert.equal(p[1].takim, 'Yeni Mersin İdmanyurdu');
+  assert.equal(p[1].p, 21);
+  assert.ok(p[1].mersin);
+  const m = haftaCoz(html);
+  assert.equal(m[0].saat, '13:00');
+  assert.equal(m[0].skor, '4-0');
+  assert.equal(m[0].dep, '1964 Silifke Spor');
+  assert.ok(m[0].mersin);
+  assert.equal(m[1].skor, null);
+  assert.equal(milliCoz(html)[0].dep, 'Belçika');
+  assert.equal(takimAdi('ARCA ÇORUM FK'), 'Arca Çorum FK');
+});
+
+import { listeCoz, ayrintiCoz } from '../src/lib/etkinlik.js';
+test('etkinlik: liste ve tarih/yer okuma', () => {
+  const l = listeCoz(`<div class="card h-100"> <a href="https://www.mersin.bel.tr/etkinlik/kilikya-yolu-1794382405"> <img src="https://www.mersin.bel.tr/uploads/images/a.jpeg" class="card-img-top" alt=""> </a> <div class="card-body"> <h5 class="card-title"> Tarihi Kilikya Yolu Yürüyüşü </h5> </div> </div>`);
+  assert.equal(l.length, 1);
+  assert.equal(l[0].baslik, 'Tarihi Kilikya Yolu Yürüyüşü');
+  assert.ok(l[0].yayin.startsWith('2026-11'));
+  const simdi = new Date('2026-11-16T12:00:00Z').getTime();
+  assert.deepEqual(ayrintiCoz('Tarih: 14 Kasım Cumartesi Saat: 09.30 Yer: Gülek Kalesi. Başvuru için', simdi), { tarih: '2026-11-14', saat: '09:30', yer: 'Gülek Kalesi' });
+  assert.equal(ayrintiCoz('3 Ocak konseri', simdi).tarih, '2027-01-03');
+  assert.equal(ayrintiCoz('Etkinlik detayları', simdi).tarih, null);
+});

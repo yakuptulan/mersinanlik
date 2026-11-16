@@ -7,7 +7,8 @@ import { KATEGORILER, GENEL, GUNDEM } from '../config.js';
 import { telefonGoster } from '../lib/eczane.js';
 import { havaIkonu, havaTuru } from './havaIkon.js';
 import { FOTOLAR } from '../fotolar.js';
-import { piyasaSeridi, namazKutusu, akaryakitKutusu, fmt, yon, ONDALIK, bugunVakit } from './servisParcalari.js';
+import { piyasaSeridi, namazKutusu, akaryakitKutusu, fmt, yon, ONDALIK, bugunVakit, sporKutusu, puanTablosu, macListesi, etkinlikKarti } from './servisParcalari.js';
+import { guncelEtkinlikler } from '../lib/etkinlik.js';
 import { DIYANET_ILCE, VAKITLER } from '../lib/namaz.js';
 
 // Resmî servis bağlantıları (veri entegrasyonu tamamlanana kadar doğrudan kaynağa yönlendirir)
@@ -157,6 +158,7 @@ ${su.slice(0, 4).map((k) => `<a class="yan-satir" href="/kesintiler/">
 <a class="yan-dugme" href="${RESMI.edas}" rel="noopener" target="_blank">${ikon.simsek(18)} Elektrik kesintisi sorgula <span>→</span></a>
 </section>
 ${namazKutusu(servis, ilce)}
+${sporKutusu(servis)}
 ${akaryakitKutusu(servis, ilce)}
 <section class="kutu">
 <div class="kutu-bas"><h2>Son depremler</h2><a href="/deprem/">Tümü</a></div>
@@ -230,6 +232,13 @@ ${manset ? mansetKarti(manset) : '<div class="bos">Haberler toplanıyor…</div>
 ${gundem.length >= 2 ? `<section class="kutu gundem-kutu"><div class="kutu-bas"><h2>Gündemdekiler</h2><span class="kutu-alt">En çok kaynağın yazdığı haberler</span></div>${gundemListesi(gundem)}</section>` : ''}
 <div class="bolum-bas" style="margin-top:14px"><h2>Mersin'den son haberler</h2><a class="bolum-link" href="/kategori/tum-haberler/">Tüm haberler →</a></div>
 ${haberListesi(liste)}
+${(() => {
+  const ek = guncelEtkinlikler(servis?.etkinlik, simdi).slice(0, 3);
+  return ek.length ? `<section class="kat-blok" style="--kat:#D6409F">
+<div class="bolum-bas kat-bas"><h2><span class="kat-cizgi"></span>Bu hafta Mersin'de</h2><a href="/etkinlikler/">Tüm etkinlikler →</a></div>
+<div class="izgara izgara-3">${ek.map(etkinlikKarti).join('')}</div>
+</section>` : '';
+})()}
 ${kategoriBloklari(mersin.filter((x) => x !== manset), gosterilen)}
 ${genel.length ? `<section class="kat-blok" style="--kat:${GENEL.renk}">
 <div class="bolum-bas kat-bas"><h2><span class="kat-cizgi"></span>Türkiye ve dünyadan</h2><a href="/kategori/turkiye-dunya/">Tümü →</a></div>
@@ -361,6 +370,42 @@ export function kategoriSayfasi({ kategori, hikayeler, servis }) {
     ust: `<div class="su-an-bas"><div><h1>${h(kategori.ad)}</h1><p style="margin-top:8px">Son ${AYAR.saklamaGun} gün · ${liste.length} haber</p></div></div>
 <nav class="kat-menu" aria-label="Kategoriler">${diger.map((k) => `<a href="/kategori/${k.slug}/" style="--kat:${k.renk}">${h(k.ad)}</a>`).join('')}</nav>`,
     icerik: `<main class="kap govde"><div class="ana">${haberListesi(liste, 'Bu kategoride son günlerde haber yok.')}</div>${yanKutular(servis)}</main>`,
+  });
+}
+
+// ---------- Etkinlikler ----------
+export function etkinlikSayfasi({ servis, simdi }) {
+  const liste = guncelEtkinlikler(servis?.etkinlik, simdi);
+  return sayfa({
+    baslik: "Mersin etkinlikleri – bu hafta Mersin'de ne var?",
+    aciklama: "Mersin'de bu hafta konser, tiyatro, festival, spor ve kültür etkinlikleri. Mersin Büyükşehir Belediyesi etkinlik takvimi.",
+    yol: '/etkinlikler/',
+    ust: `<div class="su-an-bas"><div><h1>Bu hafta Mersin'de</h1><p style="margin-top:8px">Konser, festival, yürüyüş, atölye ve daha fazlası</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">
+${liste.length ? `<div class="izgara izgara-3">${liste.map(etkinlikKarti).join('')}</div>` : '<div class="bos">Şu an duyurulmuş etkinlik yok.</div>'}
+<p style="color:var(--ikincil);font-size:15px">Kaynak ve afişler: Mersin Büyükşehir Belediyesi. Etkinliğe dokununca belediyenin duyurusu açılır; başvuru ve ayrıntılar oradadır.</p>
+</div>${yanKutular(servis)}</main>`,
+  });
+}
+
+// ---------- Spor ----------
+export function sporSayfasi({ servis, hikayeler }) {
+  const sp = servis?.spor || {};
+  const haberler = hikayeler.filter((x) => !x.genel && x.kategori === 'spor').slice(0, 8);
+  const bolum = (id, baslik, alt, ic) => `<section class="spor-bolum" id="${id}"><div class="bolum-bas"><h2>${baslik}</h2>${alt ? `<span>${alt}</span>` : ''}</div>${ic}</section>`;
+  const icerik = `<main class="kap govde"><div class="ana">
+${sp.ucuncuLig?.puan?.length ? bolum('mersin', 'Mersin takımları', h(sp.ucuncuLig.ad), `${sp.ucuncuLig.maclar?.length ? `<h3 class="ara-baslik">Bu haftanın maçları</h3>${macListesi(sp.ucuncuLig.maclar)}` : ''}<h3 class="ara-baslik">Puan durumu</h3>${puanTablosu(sp.ucuncuLig.puan)}`) : ''}
+${sp.milli?.maclar?.length ? bolum('milli', 'A Milli Takım', 'Son maçlar', macListesi(sp.milli.maclar.map((m) => ({ ...m, mersin: false, saat: null })))) : ''}
+${sp.superLig?.puan?.length ? bolum('super-lig', 'Trendyol Süper Lig', '', `${sp.superLig.maclar?.length ? `<h3 class="ara-baslik">Haftanın maçları</h3>${macListesi(sp.superLig.maclar)}` : ''}<h3 class="ara-baslik">Puan durumu</h3>${puanTablosu(sp.superLig.puan)}`) : ''}
+${haberler.length ? `<div class="bolum-bas"><h2>Mersin spor haberleri</h2><a class="bolum-link" href="/kategori/spor/">Tümü →</a></div>${haberListesi(haberler)}` : ''}
+<p style="color:var(--ikincil);font-size:15px">Kaynak: Türkiye Futbol Federasyonu (tff.org). Son güncelleme: ${sp.guncelleme ? saat(sp.guncelleme) : '–'}</p>
+</div>${yanKutular(servis)}</main>`;
+  return sayfa({
+    baslik: 'Spor – Mersin takımları, Süper Lig puan durumu, Milli Takım',
+    aciklama: 'Yeni Mersin İdmanyurdu ve Mersin takımlarının puan durumu, haftanın maçları, Süper Lig puan tablosu ve A Milli Takım sonuçları.',
+    yol: '/spor/',
+    ust: `<div class="su-an-bas"><div><h1>Spor</h1><p style="margin-top:8px">Mersin takımları · Süper Lig · A Milli Takım</p></div></div>`,
+    icerik,
   });
 }
 
@@ -568,7 +613,7 @@ ${servis?.suKesintisi ? guncellemeNotu(servis.suKesintisi, 'MESKİ', RESMI.meski
 export function menuSayfasi() {
   const linkler = [
     ['/', 'Ana sayfa'], ['/ilceler/', 'İlçeler'], ['/nobetci-eczane/', 'Nöbetçi eczane'], ['/kesintiler/', 'Kesintiler'],
-    ['/hava-durumu/', 'Hava durumu'], ['/deprem/', 'Son depremler'], ['/piyasalar/', 'Altın ve döviz'], ['/namaz-vakitleri/', 'Namaz vakitleri'],
+    ['/hava-durumu/', 'Hava durumu'], ['/deprem/', 'Son depremler'], ['/piyasalar/', 'Altın ve döviz'], ['/spor/', 'Spor'], ['/etkinlikler/', 'Etkinlikler'], ['/namaz-vakitleri/', 'Namaz vakitleri'],
     ['/akaryakit-fiyatlari/', 'Akaryakıt fiyatları'], ['/ara/', 'Haber ara'], ['/kunye/', 'Künye'],
     ['/iletisim/', 'İletişim'], ['/kaynaklarimiz/', 'Kaynaklarımız'], ['/gizlilik/', 'Gizlilik'],
   ];
