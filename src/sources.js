@@ -15,6 +15,32 @@
 // `npm run collect -- --dene <id>` ile deneyin.
 
 export const KAYNAKLAR = [
+  // --- Haber ajansları (sadece başlık + link; fotoğraf ve metin kullanılmaz) ---
+  {
+    id: 'dha-mersin',
+    ad: 'DHA',
+    tur: 'html',
+    liste: 'https://www.dha.com.tr/mersin-haber/',
+    linkDesen: 'dha\\.com\\.tr/yerel-haberler/mersin/[a-z]+/[a-z0-9-]+-\\d{6,}$',
+    ilceLinkten: true,
+    enFazla: 10,
+    kapsam: 'yerel',
+    yapayZekaOzeti: false,
+    fotoKullan: false,
+    aktif: true,
+  },
+  {
+    id: 'iha-mersin',
+    ad: 'İHA',
+    tur: 'html',
+    liste: 'https://www.iha.com.tr/mersin-haberleri',
+    linkDesen: 'iha\\.com\\.tr/mersin-haberleri/[a-z0-9-]+-\\d{6,}$',
+    enFazla: 10,
+    kapsam: 'yerel',
+    yapayZekaOzeti: false,
+    fotoKullan: false,
+    aktif: true,
+  },
   // --- Resmî kurumlar (haber sayfası okunur, fotoğrafı "Foto: Kurum" diye kullanılır) ---
   {
     id: 'mersin-buyuksehir',

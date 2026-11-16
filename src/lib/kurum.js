@@ -5,6 +5,7 @@
 // Kaynak ayarı (sources.js): { tur: 'html', liste, linkDesen, gorselDesen, enFazla }
 
 import { duzMetin, baslikTemizle } from './text.js';
+import { ILCELER } from '../config.js';
 
 const UA = 'MersinAnlikBot/1.0 (+https://mersinanlik.com/kaynaklarimiz/)';
 
@@ -98,6 +99,11 @@ export async function kurumOku(kaynak, { bilinen = () => false, gorulen = null }
       // Tarihi olan eski haberleri (3 günden eski) alma; tarihsizleri ilk çalışmada alma
       if (d.tarih && Date.now() - new Date(d.tarih).getTime() > 3 * 864e5) continue;
       if (!d.tarih && ilkKez) continue;
+      // Adreste ilçe varsa (ör. DHA: /yerel-haberler/mersin/tarsus/...) ilçe adını metne ekle
+      if (kaynak.ilceLinkten) {
+        const ilce = ILCELER.find((i) => new RegExp(`/mersin/${i.slug}/`).test(link));
+        if (ilce) d.aciklama = `${ilce.ad} ${d.aciklama || ''}`.trim();
+      }
       if (d.baslik) sonuc.push(d);
     } catch (e) {
       console.warn(`! ${kaynak.ad} detay: ${e.message}`);
