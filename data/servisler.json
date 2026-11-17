@@ -1,14 +1,14 @@
 {
- "guncelleme": "2026-11-17T15:32:21.775Z",
+ "guncelleme": "2026-11-17T16:02:13.197Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 18,
+   "sicaklik": 17,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 16,
-     "max": 18,
+     "max": 17,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -39,7 +39,7 @@
   },
   "anamur": {
    "sicaklik": 17,
-   "durum": "Az bulutlu",
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-17",
@@ -74,14 +74,14 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 17,
-   "durum": "Az bulutlu",
+   "sicaklik": 16,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 14,
-     "max": 17,
-     "durum": "Parçalı bulutlu"
+     "max": 16,
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-18",
@@ -110,13 +110,13 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 17,
-   "durum": "Az bulutlu",
+   "sicaklik": 16,
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 12,
-     "max": 17,
+     "max": 16,
      "durum": "Az bulutlu"
     },
     {
@@ -146,13 +146,13 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 9,
+   "sicaklik": 8,
    "durum": "Hafif sağanak",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 6,
-     "max": 9,
+     "max": 8,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -182,13 +182,13 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 17,
-   "durum": "Az bulutlu",
+   "sicaklik": 16,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 14,
-     "max": 17,
+     "max": 16,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -254,13 +254,13 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 18,
-   "durum": "Az bulutlu",
+   "sicaklik": 17,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 16,
-     "max": 18,
+     "max": 17,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -290,14 +290,14 @@
    ]
   },
   "mut": {
-   "sicaklik": 16,
+   "sicaklik": 15,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 12,
-     "max": 16,
-     "durum": "Açık"
+     "max": 15,
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-18",
@@ -326,14 +326,14 @@
    ]
   },
   "silifke": {
-   "sicaklik": 16,
+   "sicaklik": 15,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 12,
-     "max": 16,
-     "durum": "Az bulutlu"
+     "max": 15,
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-18",
@@ -362,13 +362,13 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 16,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 15,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 15,
-     "max": 16,
+     "max": 15,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -398,13 +398,13 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 18,
+   "sicaklik": 17,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 16,
-     "max": 18,
+     "max": 17,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -434,13 +434,13 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 18,
+   "sicaklik": 17,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 16,
-     "max": 18,
+     "max": 17,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -497,7 +497,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-17T15:32:26.548Z",
+  "guncelleme": "2026-11-17T16:02:17.837Z",
   "liste": [
    {
     "ad": "Aydoğan Eczanesi",
@@ -766,7 +766,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-17T15:32:27.812Z",
+  "guncelleme": "2026-11-17T16:02:18.826Z",
   "liste": [
    {
     "tur": "su",
@@ -799,22 +799,6 @@
       "ad": "Silifke",
       "mahalleler": [
        "Narlıkuyu"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Mut ilçesi yukarı köselerli mahallesi içmesuyu arızası kaynaklı sular kesilmiş olup arızanın giderilip suların verilmesi 19:00 olarak planlanmaktadır",
-    "baslangic": "2026-11-17T15:16:04.000Z",
-    "bitis": "2026-11-17T16:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "mut",
-      "ad": "Mut",
-      "mahalleler": [
-       "Yukarıköselerli"
       ]
      }
     ]
@@ -1060,7 +1044,7 @@
   "kaynakSaati": "2026-11-17 17:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-17T15:32:34.932Z",
+  "guncelleme": "2026-11-17T16:02:23.722Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -1969,7 +1953,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-17T15:02:25.177Z",
+  "guncelleme": "2026-11-17T16:02:27.127Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -7942,11 +7926,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-17T15:32:35.549Z",
+  "guncelleme": "2026-11-17T16:02:25.005Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 66
+    "sayi": 64
    },
    {
     "yol": "/kategori/belediye/",
@@ -8063,15 +8047,15 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-17T15:32:37.223Z",
+  "guncelleme": "2026-11-17T16:03:08.835Z",
   "deniz": {
-   "sicaklik": 22.1,
+   "sicaklik": 22,
    "dalga": 0.1
   },
   "hava": {
    "aqi": 52,
-   "pm25": 17.8,
-   "pm10": 27.8,
+   "pm25": 23.2,
+   "pm10": 32.5,
    "uvMax": 1.7
   }
  }

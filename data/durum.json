@@ -12,15 +12,11 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-17T15:31:23.030Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-17",
-  "adet": 4
+  "adet": 6
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -165,11 +161,39 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-17T15:31:45.730Z",
+  "guncelleme": "2026-11-17T16:01:42.108Z",
   "liste": [
    {
-    "baslik": "anthony taylor",
+    "baslik": "lig",
+    "trafik": 200
+   },
+   {
+    "baslik": "yeni akit",
+    "trafik": 200
+   },
+   {
+    "baslik": "rheinmetall",
     "trafik": 100
+   },
+   {
+    "baslik": "regaip kandili ne zaman",
+    "trafik": 100
+   },
+   {
+    "baslik": "galatasaray aston villa",
+    "trafik": 100
+   },
+   {
+    "baslik": "dubai basketball - anadolu efes",
+    "trafik": 500
+   },
+   {
+    "baslik": "ibrahim karakaş",
+    "trafik": 500
+   },
+   {
+    "baslik": "anthony taylor",
+    "trafik": 200
    },
    {
     "baslik": "gelin",
@@ -178,34 +202,6 @@
    {
     "baslik": "sürücü belgesi",
     "trafik": 2000
-   },
-   {
-    "baslik": "altınbaş holding",
-    "trafik": 10000
-   },
-   {
-    "baslik": "gta 6 turkiye saati",
-    "trafik": 200
-   },
-   {
-    "baslik": "grand theft auto",
-    "trafik": 200
-   },
-   {
-    "baslik": "yatırımcı",
-    "trafik": 100
-   },
-   {
-    "baslik": "xiaomi 18 pro",
-    "trafik": 200
-   },
-   {
-    "baslik": "palamut",
-    "trafik": 5000
-   },
-   {
-    "baslik": "polonya",
-    "trafik": 100
    }
   ]
  },
