@@ -58,20 +58,12 @@ export function insaEt({ simdi = Date.now() } = {}) {
     .filter((x) => !x.genel && simdi - new Date(x.ilkGorulme).getTime() < 48 * 36e5 && /elektrik(ler)? kesinti|elektrik(ler)?\s.{0,20}kesil|elektriksiz kal/i.test(x.baslik))
     .slice(0, 3)
     .map((x) => ({ baslik: x.baslik, yol: sayfasiVar(x) ? haberYolu(x) : x.kaynaklar[0].link, ilkGorulme: x.ilkGorulme }));
-  // En çok okunanlar: sadece haberler; okunma verisi azsa son günlerin öne çıkan haberleriyle tamamlanır
-  {
-    const okunan = okunanlarEsle(servis.okunanlar, hikayeler, haberYolu, ILCELER, 50).filter((o) => o.yol.startsWith('/haber/'));
-    const liste = okunan.map((o) => ({ ...o, x: hikayeler.find((y) => haberYolu(y) === o.yol) })).filter((o) => o.x).slice(0, 5);
-    const aday = hikayeler
-      .filter((x) => !x.genel && sayfasiVar(x) && !liste.some((o) => o.x === x) && simdi - new Date(x.ilkGorulme).getTime() < 48 * 36e5)
-      .sort((a, b) => b.kaynaklar.length - a.kaynaklar.length || Boolean(b.gorsel) - Boolean(a.gorsel))
-      .slice(0, 15);
-    // Gün içinde değişsin diye adaylar saate göre karıştırılır
-    const tohum = Math.floor(simdi / 36e5);
-    aday.sort((a, b) => ((parseInt(a.id, 36) + tohum) % 97) - ((parseInt(b.id, 36) + tohum) % 97));
-    while (liste.length < 5 && aday.length) liste.push({ x: aday.shift() });
-    servis.enCokOkunan = liste.map(({ x }) => ({ yol: haberYolu(x), baslik: x.baslik, gorsel: kapakAdresi(x).src }));
-  }
+  // En sıcak haberler: Mersin'den en son gelen 5 haber, yeniden eskiye
+  servis.enCokOkunan = hikayeler
+    .filter((x) => !x.genel)
+    .sort((a, b) => new Date(b.ilkGorulme) - new Date(a.ilkGorulme))
+    .slice(0, 5)
+    .map((x) => ({ yol: sayfasiVar(x) ? haberYolu(x) : x.kaynaklar[0].link, baslik: x.baslik, gorsel: kapakAdresi(x).src, zaman: x.ilkGorulme }));
 
   const sayfalar = [];
   const ekle = (yol, html, haritaya = true) => {

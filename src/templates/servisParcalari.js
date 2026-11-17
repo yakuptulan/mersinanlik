@@ -210,9 +210,6 @@ export function sayaclarBlogu(servis, { tatiller = [], simdi = Date.now() } = {}
 ${kart('#1e66f5', '👥', 'Mersin nüfusu (tahmini)', `<span data-nufus data-taban="${NUFUS.mersin}" data-artis="${NUFUS.mersinArtis}" data-tarih="${NUFUS.tarih}">${fmt(NUFUS.mersin, 0)}</span>`, `Türkiye: <span data-nufus data-taban="${NUFUS.turkiye}" data-artis="${NUFUS.turkiyeArtis}" data-tarih="${NUFUS.tarih}">${fmt(NUFUS.turkiye, 0)}</span> · TÜİK 2025 verisinden`)}
 ${deniz != null ? kart('#0ea5e9', '🌊', 'Deniz suyu sıcaklığı', `<span data-sayi-hedef="${deniz}" data-ondalik="1">${fmt(deniz, 1)}</span>°C`, `${deniz >= 24 ? 'Yüzmeye çok uygun' : deniz >= 21 ? 'Serin ama yüzülür' : 'Soğuk, kısa yüzme'}${sy.deniz?.dalga != null ? ` · dalga ${fmt(sy.deniz.dalga, 1)} m` : ''} · Mersin açıkları`) : ''}
 ${aqiAd ? kart(aqiAd[1], '🍃', 'Hava kalitesi', `${aqiAd[0]}`, `Endeks ${Math.round(aqi)}${sy.hava?.pm25 != null ? ` · PM2,5: ${fmt(sy.hava.pm25, 0)} µg/m³` : ''}${sy.hava?.uvMax != null ? ` · UV en fazla ${fmt(sy.hava.uvMax, 0)}` : ''}`) : ''}
-${v ? kart('#f59e0b', '☀️', 'Gün ışığı', `${Math.floor(gun / 60)} sa ${gun % 60} dk`, `Doğuş ${h(v.gunes)} · batış ${h(v.aksam)} · <span data-gunbatimi="${h(v.aksam)}" data-gundogumu="${h(v.gunes)}"></span>`) : ''}
-${tatil ? kart('#e5484d', '🗓️', 'Sıradaki tatil', `<span data-geri-gun="${tatil[0]}">–</span> gün`, `${h(tatil[2])} · ${new Date(`${tatil[0]}T12:00:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long' })}`) : ''}
-<a class="sayac sayac-link" href="/trafik/" style="--s:#22c55e"><span class="sayac-ikon">🚦</span><span class="sayac-etiket">Canlı trafik</span><b class="sayac-deger">Haritayı aç →</b><span class="sayac-alt">Mersin'de yollar şu an ne durumda?</span></a>
 ${kart('#8e4ec6', '🎉', `${yil} yılbaşına`, `<span data-geri-sayim="${yil}-01-01T00:00:00+03:00">–</span>`, 'gün · saat · dakika · saniye')}
 </div></section>`;
 }

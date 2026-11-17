@@ -40,7 +40,21 @@ export function ilceAdi(slug) {
   return ILCELER.find((i) => i.slug === slug)?.ad || slug;
 }
 
+// Hangi menü düğmesi seçili görünsün (alt sayfalar ve haberler de kendi bölümünü işaretler)
+function menuAktif(aktif) {
+  if (MENU.some(([u]) => u === aktif)) return aktif;
+  if (!aktif) return null;
+  const k = aktif.match(/^\/kategori\/([a-z-]+)\//)?.[1];
+  if (k) {
+    if (['kultur', 'saglik', 'egitim', 'tarim', 'hava'].includes(k)) return '/kategori/yasam/';
+    if (['genel', 'turkiye-dunya'].includes(k)) return '/kategori/turkiye-dunya/';
+    if (['gundem', 'kaza', 'ulasim', 'siyaset', 'tum-haberler'].includes(k)) return '/';
+  }
+  return MENU.find(([u]) => u !== '/' && aktif.startsWith(u))?.[0] || null;
+}
+
 function ustSatir(aktif) {
+  aktif = menuAktif(aktif);
   return `<div class="ust-satir">
 <a class="logo" href="/" aria-label="${SITE.name} ana sayfa"><img src="/logo.webp" width="96" height="64" alt="${SITE.name}"></a>
 <nav class="menu" aria-label="Ana menü">${MENU.map(([u, ad]) => `<a href="${u}"${u === aktif ? ' aria-current="page"' : ''}>${ad}</a>`).join('')}</nav>
