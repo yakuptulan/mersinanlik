@@ -12,11 +12,23 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "mersinportal": {
+   "hata": "This operation was aborted",
+   "zaman": "2026-11-17T18:31:51.044Z"
+  },
+  "mersinobjektif": {
+   "hata": "This operation was aborted",
+   "zaman": "2026-11-17T18:32:06.539Z"
+  },
+  "cukurova": {
+   "hata": "This operation was aborted",
+   "zaman": "2026-11-17T18:32:21.540Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-17",
-  "adet": 16
+  "adet": 18
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -162,47 +174,47 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-17T18:01:32.818Z",
+  "guncelleme": "2026-11-17T18:32:25.221Z",
   "liste": [
    {
-    "baslik": "benzin fiyatı",
+    "baslik": "žalgiris - bayern",
     "trafik": 200
    },
    {
-    "baslik": "manni l. perez",
+    "baslik": "var mısın yok musun",
     "trafik": 200
+   },
+   {
+    "baslik": "mane",
+    "trafik": 500
+   },
+   {
+    "baslik": "وضعیت هوای فردا",
+    "trafik": 1000
+   },
+   {
+    "baslik": "emirhan ilkhan",
+    "trafik": 200
+   },
+   {
+    "baslik": "game awards",
+    "trafik": 200
+   },
+   {
+    "baslik": "benzin fiyatı",
+    "trafik": 500
+   },
+   {
+    "baslik": "manni l. perez",
+    "trafik": 500
+   },
+   {
+    "baslik": "50 gram altın kaç tl",
+    "trafik": 2000
    },
    {
     "baslik": "danimarka",
     "trafik": 500
-   },
-   {
-    "baslik": "tutuklama",
-    "trafik": 500
-   },
-   {
-    "baslik": "ralph fiennes",
-    "trafik": 200
-   },
-   {
-    "baslik": "togg kadınlara özel kampanya",
-    "trafik": 500
-   },
-   {
-    "baslik": "açlık oyunları",
-    "trafik": 200
-   },
-   {
-    "baslik": "basketbol",
-    "trafik": 200
-   },
-   {
-    "baslik": "voleybol",
-    "trafik": 200
-   },
-   {
-    "baslik": "türkiye çekya",
-    "trafik": 1000
    }
   ]
  },
