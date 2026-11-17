@@ -2,8 +2,8 @@ name: Haberleri güncelle ve yayınla
 
 on:
   schedule:
-    # Her 30 dakikada bir (GitHub saatleri UTC'dir; zamanlama birkaç dakika gecikebilir)
-    - cron: '5,35 * * * *'
+    # Asıl zamanlayıcı Cloudflare Worker (30 dakikada bir). Bu yalnızca yedek: 3 saatte bir.
+    - cron: '17 */3 * * *'
   workflow_dispatch:
     inputs:
       bilgi_zorla:
