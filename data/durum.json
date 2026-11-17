@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-17T04:32:54.635Z"
   }
  },
  "gorsel": {
@@ -128,19 +132,27 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-17T04:31:44.512Z",
+  "guncelleme": "2026-11-17T04:33:16.153Z",
   "liste": [
    {
-    "baslik": "nuggets - suns",
+    "baslik": "tünel",
     "trafik": 100
+   },
+   {
+    "baslik": "nuggets - suns",
+    "trafik": 200
    },
    {
     "baslik": "çanakkale hava durumu",
     "trafik": 100
    },
    {
-    "baslik": "balıkesir hava durumu",
+    "baslik": "bandırma hava durumu",
     "trafik": 100
+   },
+   {
+    "baslik": "balıkesir hava durumu",
+    "trafik": 200
    },
    {
     "baslik": "pelicans - warriors",
@@ -151,24 +163,16 @@
     "trafik": 100
    },
    {
+    "baslik": "météo",
+    "trafik": 100
+   },
+   {
     "baslik": "погода",
     "trafik": 1000
    },
    {
-    "baslik": "meteoroloji",
-    "trafik": 500
-   },
-   {
     "baslik": "nets - 76ers",
     "trafik": 100
-   },
-   {
-    "baslik": "الطقس",
-    "trafik": 5000
-   },
-   {
-    "baslik": "deprem",
-    "trafik": 2000
    }
   ]
  },
