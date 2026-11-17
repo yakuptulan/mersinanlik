@@ -1,9 +1,9 @@
 {
- "guncelleme": "2026-11-17T11:01:48.323Z",
+ "guncelleme": "2026-11-17T11:31:45.693Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
-   "durum": "Açık",
+   "durum": "Hafif sağanak",
    "gunler": [
     {
      "tarih": "2026-11-17",
@@ -26,25 +26,25 @@
     {
      "tarih": "2026-11-20",
      "min": 17,
-     "max": 21,
+     "max": 20,
      "durum": "Bulutlu"
     },
     {
      "tarih": "2026-11-21",
      "min": 18,
-     "max": 20,
-     "durum": "Bulutlu"
+     "max": 21,
+     "durum": "Parçalı bulutlu"
     }
    ]
   },
   "anamur": {
-   "sicaklik": 20,
-   "durum": "Kuvvetli sağanak",
+   "sicaklik": 18,
+   "durum": "Hafif sağanak",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 13,
-     "max": 20,
+     "max": 19,
      "durum": "Hafif sağanak"
     },
     {
@@ -182,13 +182,13 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 20,
-   "durum": "Az bulutlu",
+   "sicaklik": 19,
+   "durum": "Hafif sağanak",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 14,
-     "max": 20,
+     "max": 19,
      "durum": "Hafif sağanak"
     },
     {
@@ -206,7 +206,7 @@
     {
      "tarih": "2026-11-20",
      "min": 16,
-     "max": 20,
+     "max": 19,
      "durum": "Bulutlu"
     },
     {
@@ -497,7 +497,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-17T11:01:53.059Z",
+  "guncelleme": "2026-11-17T11:31:49.518Z",
   "liste": [
    {
     "ad": "Aydoğan Eczanesi",
@@ -766,7 +766,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-17T11:01:54.415Z",
+  "guncelleme": "2026-11-17T11:31:50.613Z",
   "liste": [
    {
     "tur": "su",
@@ -1084,7 +1084,7 @@
   "kaynakSaati": "2026-11-17 14:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-17T11:02:03.369Z",
+  "guncelleme": "2026-11-17T11:31:58.535Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -7966,11 +7966,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-17T11:02:04.632Z",
+  "guncelleme": "2026-11-17T11:31:59.114Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 102
+    "sayi": 104
    },
    {
     "yol": "/kategori/belediye/",
@@ -8099,7 +8099,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-17T11:02:49.690Z",
+  "guncelleme": "2026-11-17T11:32:01.227Z",
   "deniz": {
    "sicaklik": 22.1,
    "dalga": 0.1
