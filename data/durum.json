@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-17T12:31:21.490Z"
   }
  },
  "gorsel": {
@@ -133,7 +137,8 @@
    "https://mersingundem.com/haber/13631/baskan-vekili-genc-mersinimizin-kiyilarini-direncli-hale-getirmek-bizlerin-en-asli-gorevleri-arasindadir.html",
    "https://mersingundem.com/haber/13630/mezitli-belediyesi-etkinlik-ve-sanat-merkezi-ozel-gunlere-ev-sahipligi-yapiyor.html",
    "https://mersingundem.com/haber/13632/mersinde-ureticilere-20-bin-310-fidan-ve-290-solar-kamera-destegi.html",
-   "https://mersingundem.com/haber/13633/tarsusta-traktor-ile-otomobil-carpisti-2-yarali.html"
+   "https://mersingundem.com/haber/13633/tarsusta-traktor-ile-otomobil-carpisti-2-yarali.html",
+   "https://mersingundem.com/haber/13634/zamanin-otesinde-marina-ve-doga-sanatseverlerle-bulustu.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -146,8 +151,16 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-17T12:01:46.404Z",
+  "guncelleme": "2026-11-17T12:31:52.956Z",
   "liste": [
+   {
+    "baslik": "thierry karadeniz",
+    "trafik": 200
+   },
+   {
+    "baslik": "feyza civelek",
+    "trafik": 500
+   },
    {
     "baslik": "can atalay",
     "trafik": 200
@@ -158,15 +171,15 @@
    },
    {
     "baslik": "kredi ve yurtlar genel müdürlüğü",
-    "trafik": 2000
-   },
-   {
-    "baslik": "iphone",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "vinicius júnior",
     "trafik": 200
+   },
+   {
+    "baslik": "iphone",
+    "trafik": 500
    },
    {
     "baslik": "2028",
@@ -179,14 +192,6 @@
    {
     "baslik": "iett",
     "trafik": 200
-   },
-   {
-    "baslik": "tohum",
-    "trafik": 500
-   },
-   {
-    "baslik": "singapore vs brazil",
-    "trafik": 500
    }
   ]
  },

@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-17T12:01:49.421Z",
+ "guncelleme": "2026-11-17T12:32:07.773Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -189,7 +189,7 @@
      "tarih": "2026-11-17",
      "min": 14,
      "max": 19,
-     "durum": "Hafif sağanak"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-18",
@@ -497,7 +497,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-17T12:01:55.586Z",
+  "guncelleme": "2026-11-17T12:32:11.896Z",
   "liste": [
    {
     "ad": "Aydoğan Eczanesi",
@@ -766,41 +766,8 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-17T12:01:56.969Z",
+  "guncelleme": "2026-11-17T12:32:12.975Z",
   "liste": [
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Silifke ilçesi Sayağzı ve Sarıcalar Mahallesi ana şebeke arızasından kaynaklı saat 17:00 a kadar su kesintisi yaşanacaktır.",
-    "baslangic": "2026-11-17T06:31:00.000Z",
-    "bitis": "2026-11-17T14:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "silifke",
-      "ad": "Silifke",
-      "mahalleler": [
-       "Sarıcalar",
-       "Sayağzı"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Mut Diştaş mahallesi genelinde meydana gelen içme suyu arızasından kaynaklı 15:30'a kadar içme suyu kesintisi yaşanacaktır.",
-    "baslangic": "2026-11-17T10:02:18.000Z",
-    "bitis": "2026-11-17T12:30:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "mut",
-      "ad": "Mut",
-      "mahalleler": [
-       "Diştaş"
-      ]
-     }
-    ]
-   },
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
@@ -901,6 +868,23 @@
        "Çağlarca",
        "Yeniköy",
        "Yüksekoluk"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Silifke ilçesi Sayağzı ve Sarıcalar Mahallesi ana şebeke arızasından kaynaklı saat 21:00 a kadar su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-17T06:31:00.000Z",
+    "bitis": "2026-11-17T18:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "silifke",
+      "ad": "Silifke",
+      "mahalleler": [
+       "Sarıcalar",
+       "Sayağzı"
       ]
      }
     ]
@@ -1100,7 +1084,7 @@
   "kaynakSaati": "2026-11-17 15:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-17T12:02:03.615Z",
+  "guncelleme": "2026-11-17T12:32:18.218Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -7982,11 +7966,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-17T12:02:04.359Z",
+  "guncelleme": "2026-11-17T12:32:18.788Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 107
+    "sayi": 109
    },
    {
     "yol": "/kategori/belediye/",
@@ -8041,7 +8025,7 @@
     "sayi": 1
    },
    {
-    "yol": "/kategori/saglik/",
+    "yol": "/burclar/",
     "sayi": 1
    },
    {
@@ -8049,7 +8033,7 @@
     "sayi": 1
    },
    {
-    "yol": "/burclar/",
+    "yol": "/kategori/saglik/",
     "sayi": 1
    },
    {
@@ -8115,7 +8099,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-17T12:02:52.709Z",
+  "guncelleme": "2026-11-17T12:32:20.258Z",
   "deniz": {
    "sicaklik": 22.1,
    "dalga": 0.1
