@@ -12,15 +12,11 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-17T19:31:18.610Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-17",
-  "adet": 20
+  "adet": 22
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -166,47 +162,47 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-17T19:31:42.556Z",
+  "guncelleme": "2026-11-17T20:01:43.755Z",
   "liste": [
    {
+    "baslik": "macaristan - kuzey irlanda",
+    "trafik": 200
+   },
+   {
+    "baslik": "fema",
+    "trafik": 200
+   },
+   {
+    "baslik": "wales vs portugal",
+    "trafik": 200
+   },
+   {
+    "baslik": "ukrayna - gürcistan",
+    "trafik": 200
+   },
+   {
     "baslik": "ويلز ضد البرتغال",
-    "trafik": 500
+    "trafik": 1000
+   },
+   {
+    "baslik": "mahallenin muhtarları",
+    "trafik": 1000
    },
    {
     "baslik": "irlanda - kosova",
     "trafik": 200
    },
    {
-    "baslik": "mahallenin muhtarları",
+    "baslik": "الدنمارك ضد النرويج",
     "trafik": 200
    },
    {
     "baslik": "danimarka bekleme listesi",
-    "trafik": 500
+    "trafik": 1000
    },
    {
-    "baslik": "polonya - isveç",
-    "trafik": 200
-   },
-   {
-    "baslik": "galler - portekiz",
-    "trafik": 5000
-   },
-   {
-    "baslik": "danimarka - norveç",
+    "baslik": "süper loto sonuçları",
     "trafik": 2000
-   },
-   {
-    "baslik": "bosna-hersek - romanya",
-    "trafik": 500
-   },
-   {
-    "baslik": "eurolig",
-    "trafik": 2000
-   },
-   {
-    "baslik": "sergey lavrov",
-    "trafik": 100
    }
   ]
  },
