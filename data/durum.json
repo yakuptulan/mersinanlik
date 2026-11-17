@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-17T03:01:19.322Z"
   }
  },
  "gorsel": {
@@ -132,11 +128,19 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-17T03:01:43.695Z",
+  "guncelleme": "2026-11-17T03:28:16.499Z",
   "liste": [
    {
-    "baslik": "sözcü tv",
+    "baslik": "malatya ezan",
+    "trafik": 10000
+   },
+   {
+    "baslik": "gaziantep",
     "trafik": 100
+   },
+   {
+    "baslik": "sözcü tv",
+    "trafik": 200
    },
    {
     "baslik": "yavuz bingöl",
@@ -151,27 +155,19 @@
     "trafik": 1000
    },
    {
+    "baslik": "riot",
+    "trafik": 100
+   },
+   {
     "baslik": "lol",
     "trafik": 200
    },
    {
     "baslik": "gta 6 metacritic",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "the body 2026",
-    "trafik": 100
-   },
-   {
-    "baslik": "fed başkanı warsh",
-    "trafik": 1000
-   },
-   {
-    "baslik": "xavi",
-    "trafik": 100
-   },
-   {
-    "baslik": "daniel radcliffe",
     "trafik": 100
    }
   ]
