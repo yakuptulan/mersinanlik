@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-17T10:16:04.934Z",
+ "guncelleme": "2026-11-17T10:32:16.097Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -505,7 +505,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-17T10:16:08.983Z",
+  "guncelleme": "2026-11-17T10:32:20.509Z",
   "liste": [
    {
     "ad": "Aydoğan Eczanesi",
@@ -774,7 +774,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-17T10:16:10.439Z",
+  "guncelleme": "2026-11-17T10:32:21.760Z",
   "liste": [
    {
     "tur": "su",
@@ -822,6 +822,22 @@
       "ad": "Mut",
       "mahalleler": [
        "Diştaş"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Mut Kale mahallesi genelinde meydana gelen içme suyu arızasından dolayı 16:00'a kadar içme suyu kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-17T10:24:48.000Z",
+    "bitis": "2026-11-17T13:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "mut",
+      "ad": "Mut",
+      "mahalleler": [
+       "Kale"
       ]
      }
     ]
@@ -1074,7 +1090,7 @@
   "kaynakSaati": "2026-11-17 13:16:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-17T09:31:59.831Z",
+  "guncelleme": "2026-11-17T10:32:29.161Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -7956,7 +7972,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-17T10:16:24.084Z",
+  "guncelleme": "2026-11-17T10:32:30.093Z",
   "liste": [
    {
     "yol": "/",
@@ -8011,11 +8027,7 @@
     "sayi": 2
    },
    {
-    "yol": "/akaryakit-fiyatlari/",
-    "sayi": 1
-   },
-   {
-    "yol": "/kategori/saglik/",
+    "yol": "/kategori/hava/",
     "sayi": 1
    },
    {
@@ -8023,7 +8035,11 @@
     "sayi": 1
    },
    {
-    "yol": "/kategori/hava/",
+    "yol": "/akaryakit-fiyatlari/",
+    "sayi": 1
+   },
+   {
+    "yol": "/kategori/saglik/",
     "sayi": 1
    },
    {
@@ -8071,6 +8087,10 @@
     "sayi": 1
    },
    {
+    "yol": "/haber/tuiosb-baskani-akyurek-balta-cop31-de-konustu-gelecek-taahhudu-degil-t-jctdfq/",
+    "sayi": 1
+   },
+   {
     "yol": "/kunye/",
     "sayi": 1
    },
@@ -8085,7 +8105,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-17T10:16:26.312Z",
+  "guncelleme": "2026-11-17T10:32:31.949Z",
   "deniz": {
    "sicaklik": 22.1,
    "dalga": 0.1
