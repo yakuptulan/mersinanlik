@@ -1,13 +1,13 @@
 {
- "guncelleme": "2026-11-17T01:31:36.690Z",
+ "guncelleme": "2026-11-17T02:01:54.239Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 14,
+   "sicaklik": 15,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-17",
-     "min": 13,
+     "min": 14,
      "max": 20,
      "durum": "Az bulutlu"
     },
@@ -20,8 +20,8 @@
     {
      "tarih": "2026-11-19",
      "min": 14,
-     "max": 20,
-     "durum": "Bulutlu"
+     "max": 21,
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-20",
@@ -45,19 +45,19 @@
      "tarih": "2026-11-17",
      "min": 14,
      "max": 20,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-18",
-     "min": 14,
+     "min": 13,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-19",
      "min": 15,
-     "max": 22,
-     "durum": "Parçalı bulutlu"
+     "max": 21,
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-20",
@@ -75,17 +75,17 @@
   },
   "aydincik": {
    "sicaklik": 15,
-   "durum": "Bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-17",
-     "min": 13,
+     "min": 14,
      "max": 20,
-     "durum": "Hafif sağanak"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-18",
-     "min": 13,
+     "min": 14,
      "max": 19,
      "durum": "Hafif sağanak"
     },
@@ -93,7 +93,7 @@
      "tarih": "2026-11-19",
      "min": 13,
      "max": 22,
-     "durum": "Bulutlu"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-20",
@@ -110,26 +110,26 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 15,
-   "durum": "Bulutlu",
+   "sicaklik": 14,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 13,
      "max": 20,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-18",
      "min": 13,
-     "max": 20,
+     "max": 21,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-19",
      "min": 14,
      "max": 21,
-     "durum": "Parçalı bulutlu"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-20",
@@ -151,21 +151,21 @@
    "gunler": [
     {
      "tarih": "2026-11-17",
-     "min": 5,
+     "min": 6,
      "max": 12,
      "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-18",
-     "min": 4,
+     "min": 7,
      "max": 13,
      "durum": "Hafif yağmurlu"
     },
     {
      "tarih": "2026-11-19",
-     "min": 7,
+     "min": 9,
      "max": 14,
-     "durum": "Parçalı bulutlu"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-20",
@@ -189,7 +189,7 @@
      "tarih": "2026-11-17",
      "min": 12,
      "max": 19,
-     "durum": "Parçalı bulutlu"
+     "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-18",
@@ -201,7 +201,7 @@
      "tarih": "2026-11-19",
      "min": 13,
      "max": 20,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-20",
@@ -219,13 +219,13 @@
   },
   "gulnar": {
    "sicaklik": 10,
-   "durum": "Sisli",
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 9,
-     "max": 15,
-     "durum": "Parçalı bulutlu"
+     "max": 14,
+     "durum": "Bulutlu"
     },
     {
      "tarih": "2026-11-18",
@@ -237,7 +237,7 @@
      "tarih": "2026-11-19",
      "min": 8,
      "max": 16,
-     "durum": "Hafif yağmurlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-20",
@@ -254,14 +254,14 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 14,
+   "sicaklik": 13,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 13,
      "max": 20,
-     "durum": "Az bulutlu"
+     "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-18",
@@ -271,7 +271,7 @@
     },
     {
      "tarih": "2026-11-19",
-     "min": 13,
+     "min": 14,
      "max": 21,
      "durum": "Bulutlu"
     },
@@ -297,11 +297,11 @@
      "tarih": "2026-11-17",
      "min": 12,
      "max": 20,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-18",
-     "min": 11,
+     "min": 10,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
@@ -309,7 +309,7 @@
      "tarih": "2026-11-19",
      "min": 12,
      "max": 20,
-     "durum": "Parçalı bulutlu"
+     "durum": "Açık"
     },
     {
      "tarih": "2026-11-20",
@@ -337,7 +337,7 @@
     },
     {
      "tarih": "2026-11-18",
-     "min": 12,
+     "min": 11,
      "max": 20,
      "durum": "Hafif sağanak"
     },
@@ -345,7 +345,7 @@
      "tarih": "2026-11-19",
      "min": 12,
      "max": 23,
-     "durum": "Bulutlu"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-20",
@@ -362,13 +362,13 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 14,
-   "durum": "Sağanak",
+   "sicaklik": 13,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 13,
-     "max": 20,
+     "max": 21,
      "durum": "Hafif sağanak"
     },
     {
@@ -403,7 +403,7 @@
    "gunler": [
     {
      "tarih": "2026-11-17",
-     "min": 13,
+     "min": 14,
      "max": 20,
      "durum": "Az bulutlu"
     },
@@ -416,8 +416,8 @@
     {
      "tarih": "2026-11-19",
      "min": 14,
-     "max": 20,
-     "durum": "Bulutlu"
+     "max": 21,
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-20",
@@ -439,7 +439,7 @@
    "gunler": [
     {
      "tarih": "2026-11-17",
-     "min": 13,
+     "min": 14,
      "max": 20,
      "durum": "Az bulutlu"
     },
@@ -452,8 +452,8 @@
     {
      "tarih": "2026-11-19",
      "min": 14,
-     "max": 20,
-     "durum": "Bulutlu"
+     "max": 21,
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-20",
@@ -505,7 +505,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-17T01:31:40.935Z",
+  "guncelleme": "2026-11-17T02:01:58.924Z",
   "liste": [
    {
     "ad": "Abay Eczanesi",
@@ -697,7 +697,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-17T01:31:42.132Z",
+  "guncelleme": "2026-11-17T02:02:00.292Z",
   "liste": [
    {
     "tur": "su",
@@ -894,7 +894,7 @@
   "kaynakSaati": "2026-11-17 04:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-17T01:31:47.555Z",
+  "guncelleme": "2026-11-17T02:02:06.605Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -1803,7 +1803,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-17T01:01:45.680Z",
+  "guncelleme": "2026-11-17T02:02:09.643Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -7776,7 +7776,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-17T01:31:48.177Z",
+  "guncelleme": "2026-11-17T02:02:07.140Z",
   "liste": [
    {
     "yol": "/",
@@ -7819,11 +7819,11 @@
     "sayi": 1
    },
    {
-    "yol": "/kategori/saglik/",
+    "yol": "/burclar/",
     "sayi": 1
    },
    {
-    "yol": "/burclar/",
+    "yol": "/kategori/saglik/",
     "sayi": 1
    },
    {
@@ -7881,15 +7881,15 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-17T01:31:50.242Z",
+  "guncelleme": "2026-11-17T02:02:53.693Z",
   "deniz": {
    "sicaklik": 22,
    "dalga": 0.1
   },
   "hava": {
-   "aqi": 42,
-   "pm25": 18.8,
-   "pm10": 26.8,
+   "aqi": 39,
+   "pm25": 14.4,
+   "pm10": 22.6,
    "uvMax": 1.8
   }
  }
