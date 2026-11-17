@@ -1,15 +1,15 @@
 {
- "guncelleme": "2026-11-17T19:08:57.003Z",
+ "guncelleme": "2026-11-17T19:31:56.173Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 16,
-   "durum": "Açık",
+   "sicaklik": 15,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-17",
-     "min": 16,
-     "max": 16,
-     "durum": "Bulutlu"
+     "min": 15,
+     "max": 15,
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-18",
@@ -21,12 +21,12 @@
      "tarih": "2026-11-19",
      "min": 15,
      "max": 21,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-20",
-     "min": 16,
-     "max": 20,
+     "min": 17,
+     "max": 21,
      "durum": "Bulutlu"
     },
     {
@@ -497,7 +497,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-17T19:09:00.308Z",
+  "guncelleme": "2026-11-17T19:31:59.136Z",
   "liste": [
    {
     "ad": "Aydoğan Eczanesi",
@@ -766,7 +766,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-17T19:09:01.119Z",
+  "guncelleme": "2026-11-17T19:32:00.143Z",
   "liste": [
    {
     "tur": "su",
@@ -1004,7 +1004,7 @@
   "kaynakSaati": "2026-11-17 22:01:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-17T19:01:59.814Z",
+  "guncelleme": "2026-11-17T19:32:04.341Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -7886,11 +7886,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-17T19:09:14.744Z",
+  "guncelleme": "2026-11-17T19:32:04.993Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 52
+    "sayi": 51
    },
    {
     "yol": "/kategori/belediye/",
@@ -7905,11 +7905,11 @@
     "sayi": 5
    },
    {
-    "yol": "/kategori/ekonomi/",
+    "yol": "/bilgi/",
     "sayi": 5
    },
    {
-    "yol": "/bilgi/",
+    "yol": "/kategori/ekonomi/",
     "sayi": 5
    },
    {
@@ -7933,11 +7933,11 @@
     "sayi": 1
    },
    {
-    "yol": "/kategori/saglik/",
+    "yol": "/burclar/",
     "sayi": 1
    },
    {
-    "yol": "/burclar/",
+    "yol": "/kategori/saglik/",
     "sayi": 1
    },
    {
@@ -7962,10 +7962,6 @@
    },
    {
     "yol": "/haber/omer-celik-fon-dolandiricilari-hesap-verecek-1bprydr/",
-    "sayi": 1
-   },
-   {
-    "yol": "/bilgi/mersin-tantunisi-nedir-tarihcesi-ve-bilinmeyenleri/",
     "sayi": 1
    },
    {
@@ -7995,7 +7991,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-17T19:09:16.268Z",
+  "guncelleme": "2026-11-17T19:32:08.280Z",
   "deniz": {
    "sicaklik": 22,
    "dalga": 0.12

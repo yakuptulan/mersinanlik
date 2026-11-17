@@ -12,11 +12,15 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-17T19:31:18.610Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-17",
-  "adet": 18
+  "adet": 20
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -162,47 +166,47 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-17T19:08:56.544Z",
+  "guncelleme": "2026-11-17T19:31:42.556Z",
   "liste": [
    {
-    "baslik": "galler - portekiz",
+    "baslik": "ويلز ضد البرتغال",
     "trafik": 500
    },
    {
-    "baslik": "bosna-hersek - romanya",
+    "baslik": "irlanda - kosova",
     "trafik": 200
    },
    {
+    "baslik": "mahallenin muhtarları",
+    "trafik": 200
+   },
+   {
+    "baslik": "danimarka bekleme listesi",
+    "trafik": 500
+   },
+   {
+    "baslik": "polonya - isveç",
+    "trafik": 200
+   },
+   {
+    "baslik": "galler - portekiz",
+    "trafik": 5000
+   },
+   {
+    "baslik": "danimarka - norveç",
+    "trafik": 2000
+   },
+   {
+    "baslik": "bosna-hersek - romanya",
+    "trafik": 500
+   },
+   {
     "baslik": "eurolig",
-    "trafik": 1000
+    "trafik": 2000
    },
    {
     "baslik": "sergey lavrov",
     "trafik": 100
-   },
-   {
-    "baslik": "downdetector",
-    "trafik": 200
-   },
-   {
-    "baslik": "žalgiris - bayern",
-    "trafik": 200
-   },
-   {
-    "baslik": "var mısın yok musun hande",
-    "trafik": 500
-   },
-   {
-    "baslik": "mane",
-    "trafik": 500
-   },
-   {
-    "baslik": "emirhan ilkhan",
-    "trafik": 500
-   },
-   {
-    "baslik": "وضعیت هوای فردا",
-    "trafik": 1000
    }
   ]
  },
