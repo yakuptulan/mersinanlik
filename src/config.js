@@ -74,6 +74,6 @@ export const AYAR = {
   birlestirmeEsigi: 0.5, // iki başlığın kelime benzerliği bu orandan yüksekse aynı haber sayılır
   birlestirmeSaat: 48,
   // Yapay zekâ görseli: Cloudflare'in günlük ücretsiz kotası ~150 görsel; güvenli pay bırakıyoruz
-  gunlukGorselLimiti: 80,
-  calismaBasinaGorsel: 6,
+  gunlukGorselLimiti: 36, // Cloudflare ücretsiz kota: görsel başına ~250 nöron, günde 10.000
+  calismaBasinaGorsel: 2, // gün boyuna yayılsın
 };

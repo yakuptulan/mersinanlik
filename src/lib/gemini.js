@@ -117,7 +117,7 @@ export async function topluOzetle(metinler) {
 }
 
 // Genel amaçlı: talimat + içerik → JSON (dizi ya da nesne). Önce Gemini, olmazsa Cloudflare.
-export async function jsonYaz(talimat, icerik, { sicaklik = 0.7 } = {}) {
+export async function jsonYaz(talimat, icerik, { sicaklik = 0.7, sadeceGemini = false } = {}) {
   const cozum = (t) => {
     const s = String(t || '').replace(/^```(?:json)?\s*|\s*```$/g, '').trim();
     const ilk = Math.min(...['[', '{'].map((c) => (s.indexOf(c) < 0 ? Infinity : s.indexOf(c))));
@@ -151,7 +151,7 @@ export async function jsonYaz(talimat, icerik, { sicaklik = 0.7 } = {}) {
       }
     }
   }
-  if (cfHazir()) {
+  if (cfHazir() && !sadeceGemini) {
     for (const model of CF_MODELLER) {
       const res = await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/ai/run/${model}`, {
         method: 'POST',

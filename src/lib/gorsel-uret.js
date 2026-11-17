@@ -10,6 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
 import { ILCELER } from '../config.js';
+import { jsonYaz } from './gemini.js';
 
 const MODEL = process.env.GEMINI_GORSEL_MODEL || 'gemini-2.5-flash-image';
 export const URETILEN_KLASOR = path.resolve('public/uretilen');
@@ -56,15 +57,12 @@ The main subject must clearly show the news topic (e.g. the service, the buildin
 Reply with the scene description only.`;
 
 async function cfUret(hikaye) {
-  const metin = await cfCalistir('@cf/meta/llama-3.1-8b-instruct-fast', {
-    messages: [
-      { role: 'system', content: SAHNE_TALIMATI },
-      { role: 'user', content: `Headline: "${hikaye.baslik}"\nCategory: ${hikaye.kategori}\nPlace: ${ilceMetni(hikaye)}` },
-    ],
-    max_tokens: 120,
-    temperature: 0.4,
-  });
-  const sahne = String(metin?.response || hikaye.baslik).replace(/^["']|["']$/g, '').trim();
+  // Sahne tarifini ücretsiz Gemini yazar (Cloudflare kotası sadece görsele harcansın)
+  let sahne = hikaye.baslik;
+  try {
+    const j = await jsonYaz(`${SAHNE_TALIMATI}\nReturn JSON only: {"sahne": "..."}`, `Headline: "${hikaye.baslik}"\nCategory: ${hikaye.kategori}\nPlace: ${ilceMetni(hikaye)}${hikaye.ozet ? `\nSummary (Turkish): ${hikaye.ozet}` : ''}`, { sicaklik: 0.4, sadeceGemini: true });
+    if (j?.sahne) sahne = String(j.sahne).trim();
+  } catch {}
   const prompt = `${sahne}. Realistic editorial news photograph, natural daylight, wide shot, sharp focus, no text, no letters, no watermark.`;
   const sonuc = await cfCalistir('@cf/black-forest-labs/flux-1-schnell', { prompt, steps: 6 });
   if (!sonuc?.image) throw new Error('Görsel dönmedi');
@@ -134,10 +132,12 @@ async function kaydet(hikaye, veri, prompt = '') {
 
 // Hangi haberlere görsel üretilsin: yayındaki, Mersin haberi, son 12 saat;
 // önce çok kaynaklı (önemli) olanlar, sonra en yeniler.
+// Ücretsiz kota günde ~40 görsele yetiyor: öncelik birden çok sitenin yazdığı ya da kendi yazımız olan haberler
 export function gorselAdaylari(hikayeler, simdi = Date.now()) {
   return hikayeler
     .filter((h) => h.durum === 'yayinda' && !h.gorsel && !h.gorselHatasi && !h.genel)
-    .filter((h) => simdi - new Date(h.ilkGorulme).getTime() < 12 * 36e5)
+    .filter((h) => simdi - new Date(h.ilkGorulme).getTime() < 8 * 36e5)
+    .filter((h) => new Set(h.kaynaklar.map((k) => k.ad)).size >= 2 || h.metin || h.trend)
     .sort((a, b) => b.kaynaklar.length - a.kaynaklar.length || new Date(b.ilkGorulme) - new Date(a.ilkGorulme));
 }
 
