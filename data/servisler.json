@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-17T09:31:47.742Z",
+ "guncelleme": "2026-11-17T10:02:08.411Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 19,
@@ -38,13 +38,13 @@
    ]
   },
   "anamur": {
-   "sicaklik": 21,
-   "durum": "Sağanak",
+   "sicaklik": 20,
+   "durum": "Kuvvetli sağanak",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 13,
-     "max": 21,
+     "max": 20,
      "durum": "Hafif sağanak"
     },
     {
@@ -74,8 +74,8 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 19,
-   "durum": "Kuvvetli sağanak",
+   "sicaklik": 18,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-17",
@@ -111,7 +111,7 @@
   },
   "bozyazi": {
    "sicaklik": 20,
-   "durum": "Hafif sağanak",
+   "durum": "Kuvvetli sağanak",
    "gunler": [
     {
      "tarih": "2026-11-17",
@@ -146,8 +146,8 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 12,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 13,
+   "durum": "Hafif sağanak",
    "gunler": [
     {
      "tarih": "2026-11-17",
@@ -182,7 +182,7 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 19,
+   "sicaklik": 20,
    "durum": "Az bulutlu",
    "gunler": [
     {
@@ -290,7 +290,7 @@
    ]
   },
   "mut": {
-   "sicaklik": 18,
+   "sicaklik": 19,
    "durum": "Az bulutlu",
    "gunler": [
     {
@@ -326,8 +326,8 @@
    ]
   },
   "silifke": {
-   "sicaklik": 20,
-   "durum": "Az bulutlu",
+   "sicaklik": 21,
+   "durum": "Hafif sağanak",
    "gunler": [
     {
      "tarih": "2026-11-17",
@@ -362,8 +362,8 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 19,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 20,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-17",
@@ -398,8 +398,8 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 19,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 20,
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-17",
@@ -434,8 +434,8 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 19,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 20,
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-17",
@@ -505,7 +505,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-17T09:31:52.005Z",
+  "guncelleme": "2026-11-17T10:02:13.262Z",
   "liste": [
    {
     "ad": "Aydoğan Eczanesi",
@@ -774,7 +774,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-17T09:01:47.998Z",
+  "guncelleme": "2026-11-17T10:02:14.640Z",
   "liste": [
    {
     "tur": "su",
@@ -789,6 +789,39 @@
       "mahalleler": [
        "Sarıcalar",
        "Sayağzı"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Yenişehir Menteş mahallesi 20. Cadde üzerinde meydana gelen arızadan kaynaklı Güvenevler ve Menteş mahallelerinde 14.00'a kadar içme suyu kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-17T09:57:05.000Z",
+    "bitis": "2026-11-17T11:00:11.000Z",
+    "ilceler": [
+     {
+      "ilce": "yenisehir",
+      "ad": "Yenişehir",
+      "mahalleler": [
+       "Güvenevler",
+       "Menteş"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Mut Diştaş mahallesi genelinde meydana gelen içme suyu arızasından kaynaklı 15:30'a kadar içme suyu kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-17T10:02:18.000Z",
+    "bitis": "2026-11-17T12:30:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "mut",
+      "ad": "Mut",
+      "mahalleler": [
+       "Diştaş"
       ]
      }
     ]
@@ -1950,7 +1983,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-17T09:01:55.170Z",
+  "guncelleme": "2026-11-17T10:02:30.594Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -7923,11 +7956,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-17T09:32:00.429Z",
+  "guncelleme": "2026-11-17T10:02:28.376Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 100
+    "sayi": 102
    },
    {
     "yol": "/kategori/belediye/",
@@ -7986,11 +8019,11 @@
     "sayi": 1
    },
    {
-    "yol": "/kategori/saglik/",
+    "yol": "/burclar/",
     "sayi": 1
    },
    {
-    "yol": "/burclar/",
+    "yol": "/kategori/saglik/",
     "sayi": 1
    },
    {
@@ -8048,16 +8081,16 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-17T09:32:02.429Z",
+  "guncelleme": "2026-11-17T10:03:14.355Z",
   "deniz": {
    "sicaklik": 22,
    "dalga": 0.1
   },
   "hava": {
-   "aqi": 41,
-   "pm25": 16,
-   "pm10": 26.5,
-   "uvMax": 1.8
+   "aqi": 40,
+   "pm25": 14.9,
+   "pm10": 26.2,
+   "uvMax": 1.7
   }
  }
 }
