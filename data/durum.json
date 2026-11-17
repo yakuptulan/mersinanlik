@@ -16,7 +16,7 @@
  },
  "gorsel": {
   "gun": "2026-11-17",
-  "adet": 14
+  "adet": 16
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -162,19 +162,31 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-17T17:31:40.992Z",
+  "guncelleme": "2026-11-17T18:01:32.818Z",
   "liste": [
+   {
+    "baslik": "benzin fiyatı",
+    "trafik": 200
+   },
+   {
+    "baslik": "manni l. perez",
+    "trafik": 200
+   },
+   {
+    "baslik": "danimarka",
+    "trafik": 500
+   },
+   {
+    "baslik": "tutuklama",
+    "trafik": 500
+   },
    {
     "baslik": "ralph fiennes",
     "trafik": 200
    },
    {
-    "baslik": "tutuklama",
-    "trafik": 200
-   },
-   {
     "baslik": "togg kadınlara özel kampanya",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "açlık oyunları",
@@ -189,20 +201,8 @@
     "trafik": 200
    },
    {
-    "baslik": "zeki murat göle",
-    "trafik": 200
-   },
-   {
-    "baslik": "rockstar games",
-    "trafik": 100
-   },
-   {
-    "baslik": "tübitak",
-    "trafik": 200
-   },
-   {
-    "baslik": "çekya türkiye",
-    "trafik": 500
+    "baslik": "türkiye çekya",
+    "trafik": 1000
    }
   ]
  },
