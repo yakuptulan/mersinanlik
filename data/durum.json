@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-17T04:32:54.635Z"
   }
  },
  "gorsel": {
@@ -132,10 +128,30 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-17T04:33:16.153Z",
+  "guncelleme": "2026-11-17T05:01:35.919Z",
   "liste": [
    {
+    "baslik": "üniversite",
+    "trafik": 100
+   },
+   {
+    "baslik": "zonguldak hava durumu",
+    "trafik": 100
+   },
+   {
+    "baslik": "hasat",
+    "trafik": 100
+   },
+   {
+    "baslik": "davion mitchell",
+    "trafik": 100
+   },
+   {
     "baslik": "tünel",
+    "trafik": 100
+   },
+   {
+    "baslik": "morgan stanley",
     "trafik": 100
    },
    {
@@ -143,36 +159,16 @@
     "trafik": 200
    },
    {
+    "baslik": "klay thompson",
+    "trafik": 100
+   },
+   {
     "baslik": "çanakkale hava durumu",
     "trafik": 100
    },
    {
     "baslik": "bandırma hava durumu",
-    "trafik": 100
-   },
-   {
-    "baslik": "balıkesir hava durumu",
     "trafik": 200
-   },
-   {
-    "baslik": "pelicans - warriors",
-    "trafik": 100
-   },
-   {
-    "baslik": "akhisar hava durumu",
-    "trafik": 100
-   },
-   {
-    "baslik": "météo",
-    "trafik": 100
-   },
-   {
-    "baslik": "погода",
-    "trafik": 1000
-   },
-   {
-    "baslik": "nets - 76ers",
-    "trafik": 100
    }
   ]
  },
