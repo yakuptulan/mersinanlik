@@ -16,7 +16,7 @@
  },
  "gorsel": {
   "gun": "2026-11-17",
-  "adet": 8
+  "adet": 10
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -161,11 +161,23 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-17T16:04:05.637Z",
+  "guncelleme": "2026-11-17T16:31:40.190Z",
   "liste": [
    {
+    "baslik": "çekya türkiye",
+    "trafik": 100
+   },
+   {
+    "baslik": "son depremler",
+    "trafik": 5000
+   },
+   {
+    "baslik": "van deprem son dakika",
+    "trafik": 200
+   },
+   {
     "baslik": "van deprem",
-    "trafik": 1000
+    "trafik": 10000
    },
    {
     "baslik": "polonya - türkiye",
@@ -190,18 +202,6 @@
    {
     "baslik": "regaip kandili ne zaman",
     "trafik": 100
-   },
-   {
-    "baslik": "dubai basketball - anadolu efes",
-    "trafik": 1000
-   },
-   {
-    "baslik": "ibrahim karakaş",
-    "trafik": 500
-   },
-   {
-    "baslik": "anthony taylor",
-    "trafik": 500
    }
   ]
  },
