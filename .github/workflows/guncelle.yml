@@ -56,6 +56,11 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
+      - name: Günün özeti (sabah bülteni)
+        run: node src/ozet.js ${{ inputs.bilgi_zorla && '--simdi' || '' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
       - name: Merak edilenler (günde 2 bilgi yazısı)
         run: node src/bilgi.js ${{ inputs.bilgi_zorla && '--simdi --liste' || '' }}
         env:

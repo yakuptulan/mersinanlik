@@ -46,6 +46,11 @@ export function insaEt({ simdi = Date.now() } = {}) {
     bilgiYazilari = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'bilgi.json'), 'utf8')).yazilar || [];
   } catch {}
   servis.bilgi = bilgiYazilari;
+  let ozetArsiv = [];
+  try {
+    ozetArsiv = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'ozet.json'), 'utf8')).arsiv || [];
+  } catch {}
+  servis.ozet = ozetArsiv[0] || null;
   // Meteoroloji uyarısı haberi (MGM verisi alınamazsa yedek): son 18 saatte Mersin'i ilgilendiren uyarı haberi
   servis.meteoHaber = hikayeler.find(
     (x) =>
@@ -85,6 +90,10 @@ export function insaEt({ simdi = Date.now() } = {}) {
   ekle('/nobetci-eczane/', S.eczaneSayfasi({ servis }));
   ekle('/kesintiler/', S.kesintiSayfasi({ servis }));
   ekle('/trafik/', S.trafikSayfasi({ servis }));
+  if (ozetArsiv.length) {
+    ekle('/gunun-ozeti/', S.ozetSayfasi({ ozet: ozetArsiv[0], arsiv: ozetArsiv, hikayeler, servis, son: true }));
+    for (const o of ozetArsiv) ekle(`/gunun-ozeti/${o.tarih}/`, S.ozetSayfasi({ ozet: o, arsiv: ozetArsiv, hikayeler, servis }));
+  }
   for (const lig of LIGLER) if (servis.spor?.ligler?.[lig.kod]) ekle(`/spor/${lig.kod}/`, S.ligSayfasi({ servis, kod: lig.kod }));
   ekle('/piyasalar/', S.piyasaSayfasi({ servis }));
   ekle('/spor/', S.sporSayfasi({ servis, hikayeler }));
@@ -147,6 +156,8 @@ export function insaEt({ simdi = Date.now() } = {}) {
     '/rss.xml',
     `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>${htmlKacis(SITE.name)}</title><link>${SITE.url}/</link><description>${htmlKacis(SITE.description)}</description><language>tr</language>\n${rssOgeleri.join('\n')}\n</channel></rss>\n`
   );
+  // Canlı yenileme için son haberler listesi (sayfa açıkken 2 dakikada bir okunur)
+  yaz('/son.json', JSON.stringify(hikayeler.filter((x) => !x.genel).sort((a, b) => new Date(b.ilkGorulme) - new Date(a.ilkGorulme)).slice(0, 20).map((x) => ({ id: x.id, b: x.baslik, z: x.ilkGorulme }))));
   yaz('/robots.txt', `User-agent: *\nAllow: /\nDisallow: /ara/\nDisallow: /menu/\n\nSitemap: ${SITE.url}/sitemap.xml\nSitemap: ${SITE.url}/haber-sitemap.xml\n`);
   // Cloudflare Pages: önbellek ayarları
   yaz(

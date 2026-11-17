@@ -327,6 +327,57 @@
     });
   });
 
+  // ---------- Taze haber rozeti: son 60 dakikadaki haberler ----------
+  document.querySelectorAll('[data-once]').forEach(function (el) {
+    var t = Date.parse(el.getAttribute('data-once'));
+    if (!t || Date.now() - t > 3600000) return;
+    var kart = el.closest('.haber, .kutu-haber, .kare-kart, .okunan-liste li');
+    if (kart && !kart.classList.contains('taze')) kart.classList.add('taze');
+  });
+
+  // ---------- Yeni haber bildirimi: sayfa açıkken yeni haber yayınlanırsa ----------
+  (function () {
+    if (!document.querySelector('.govde')) return;
+    var ilk = null;
+    function kontrol() {
+      if (document.hidden) return;
+      fetch('/son.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (liste) {
+        if (!Array.isArray(liste) || !liste.length) return;
+        if (ilk === null) { ilk = liste[0].z; return; }
+        var yeni = liste.filter(function (x) { return x.z > ilk; }).length;
+        if (!yeni) return;
+        var hap = document.querySelector('.yeni-haber-hap');
+        if (!hap) {
+          hap = document.createElement('button');
+          hap.type = 'button';
+          hap.className = 'yeni-haber-hap';
+          hap.addEventListener('click', function () { location.reload(); });
+          document.body.appendChild(hap);
+        }
+        hap.innerHTML = '<span class="canli-nokta"></span>' + yeni + ' yeni haber · göster';
+        hap.classList.add('gorunur');
+      }).catch(function () {});
+    }
+    kontrol();
+    setInterval(kontrol, 120000);
+  })();
+
+  // ---------- Okuma ilerleme çubuğu (haber ve bilgi yazıları) ----------
+  (function () {
+    var yazi = document.querySelector('.haber-yazi');
+    if (!yazi) return;
+    var cubuk = document.createElement('div');
+    cubuk.className = 'okuma-cubugu';
+    document.body.appendChild(cubuk);
+    function guncelle() {
+      var r = yazi.getBoundingClientRect();
+      var oran = Math.min(1, Math.max(0, -r.top / Math.max(1, r.height - window.innerHeight * 0.6)));
+      cubuk.style.transform = 'scaleX(' + oran + ')';
+    }
+    window.addEventListener('scroll', guncelle, { passive: true });
+    guncelle();
+  })();
+
   // ---------- Paylaş ----------
   document.querySelectorAll('[data-paylas]').forEach(function (p) {
     var url = p.getAttribute('data-url'), baslik = p.getAttribute('data-baslik');

@@ -7,7 +7,7 @@ import { KATEGORILER, GENEL, GUNDEM } from '../config.js';
 import { telefonGoster } from '../lib/eczane.js';
 import { havaIkonu, havaTuru } from './havaIkon.js';
 import { FOTOLAR } from '../fotolar.js';
-import { ligSerit, ligTablosu, sayaclarBlogu, kutuBasligi, piyasaSeridi, namazKutusu, akaryakitKutusu, fmt, yon, ONDALIK, bugunVakit, namazVerisi, sporKutusu, puanTablosu, macListesi, etkinlikKarti, meteoBandi, burcKutusu } from './servisParcalari.js';
+import { ligSerit, ligTablosu, sayacKutusu, sayaclarBlogu, kutuBasligi, piyasaSeridi, namazKutusu, akaryakitKutusu, fmt, yon, ONDALIK, bugunVakit, namazVerisi, sporKutusu, puanTablosu, macListesi, etkinlikKarti, meteoBandi, burcKutusu } from './servisParcalari.js';
 import { BURCLAR } from '../lib/burc.js';
 import { guncelEtkinlikler } from '../lib/etkinlik.js';
 import { bilgiKarti } from './bilgi.js';
@@ -228,6 +228,8 @@ ${(servis?.deprem || []).slice(0, 4).map((d) => { const y = depremYeri(d.yer); r
 <span class="yan-sag"><small>${gunEtiketi(d.tarih)}</small><b>${saat(d.tarih)}</b></span></div>`; }).join('') || '<div class="yan-satir"><span class="yan-metin"><b>Son 7 günde kayıt yok</b></span></div>'}
 </div>
 </section>
+${sayacKutusu(servis)}
+${reklamAlani('yan-alt')}
 </aside>`;
 }
 
@@ -252,7 +254,7 @@ function kategoriBloklari(mersin, haric) {
     if (bloklar.length === 5) break;
   }
   return bloklar
-    .map(({ kat, secim, toplam }) => `<section class="kat-blok" style="--kat:${kat.renk}">
+    .map(({ kat, secim, toplam }, i) => `${i === 2 ? reklamAlani('bloklar-arasi') : ''}<section class="kat-blok" style="--kat:${kat.renk}">
 <div class="bolum-bas kat-bas"><h2><span class="kat-cizgi"></span>${h(kat.ad)}</h2><a href="/kategori/${kat.slug}/">Tümü (${toplam}) →</a></div>
 <div class="izgara">${secim.map(kutuKarti).join('')}</div>
 </section>`)
@@ -296,11 +298,13 @@ ${piyasaSeridi(servis?.piyasa)}`;
   const icerik = `<main class="kap govde">
 <div class="ana">
 ${mansetKaydirici(mansetler)}
+${ozetKarti(servis?.ozet)}
 ${gundem.length >= 2 ? `<section class="kutu gundem-kutu"><div class="kutu-bas"><h2>Çok konuşulanlar</h2><span class="kutu-alt">En çok sitenin yazdığı haberler</span></div>${gundemListesi(gundem)}</section>` : ''}
 ${kacirma.length === 5 ? `<section class="kacirma-blok"><div class="bolum-bas"><h2><span class="kat-cizgi" style="--kat:var(--turuncu)"></span>Kaçırmayın</h2></div><div class="kare-izgara">${kacirma.map((x, i) => kareKart(x, i === 0)).join('')}</div></section>` : ''}
-${sayaclarBlogu(servis, { tatiller: [...RESMI_TATILLER, ...OKUL_TAKVIMI.filter((t) => /tatil/i.test(t[2]))], simdi })}
 <div class="bolum-bas" style="margin-top:14px"><h2>Mersin'den son haberler</h2><a class="bolum-link" href="/kategori/tum-haberler/">Tüm haberler →</a></div>
-${haberListesi(liste)}
+${haberListesi(liste.slice(0, 4))}
+${reklamAlani('akis')}
+${haberListesi(liste.slice(4))}
 ${(() => {
   const ek = guncelEtkinlikler(servis?.etkinlik, simdi).slice(0, 3);
   return ek.length ? `<section class="kat-blok" style="--kat:#D6409F">
@@ -377,7 +381,7 @@ export function haberSayfasi({ hikaye, ilgili, servis }) {
   const tamYazi = Boolean(hikaye.metin);
   const kurumFoto = hikaye.gorselKaynak && hikaye.gorselKaynak !== 'yz' ? hikaye.gorselKaynak : null;
   const gorselUrl = hikaye.gorsel ? `${SITE.url}/uretilen/${hikaye.gorsel}` : null;
-  const paragraflar = (hikaye.metin || '').split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean).map((p) => `<p>${h(p)}</p>`).join('\n');
+  const paragraflar = (hikaye.metin || '').split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean).map((p, i, a) => `<p>${h(p)}</p>${i === 1 && a.length > 3 ? reklamAlani('yazi-ici') : ''}`).join('\n');
   const ilce = ILCELER.find((i) => hikaye.ilceler.includes(i.slug)) || null;
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -408,6 +412,7 @@ ${paragraflar}
 <p class="haber-kaynak-kisa">Kaynak: ${[kurumKayit, ...digerleri.slice(0, 2)].map((k) => `<a href="${h(k.link)}" rel="noopener nofollow" target="_blank">${h(k.ad)}</a>`).join(', ')}</p>
 ${paylasCubugu(SITE.url + yol, hikaye.baslik)}
 </article>
+${reklamAlani('yazi-sonu')}
 ${ilgili.length ? `<div class="bolum-bas"><h2>${ilce ? `${h(ilce.ad)}'${ayrilmaEki(ilce.ad)} diğer haberler` : 'Diğer haberler'}</h2></div>\n${haberListesi(ilgili)}` : ''}
 </div>
 ${yanKutular(servis, ilce)}
@@ -857,6 +862,34 @@ export function trafikSayfasi({ servis }) {
 <div class="trafik-harita"><iframe src="${trafikAdresi(TRAFIK_NOKTALARI[0])}" title="Mersin canlı trafik haritası" loading="lazy" allowfullscreen></iframe></div>
 <div class="trafik-renkler"><span><i style="background:#22c55e"></i>Akıcı</span><span><i style="background:#facc15"></i>Yoğun</span><span><i style="background:#ef4444"></i>Sıkışık</span><span><i style="background:#7f1d1d"></i>Durma noktasında</span></div>
 <p style="color:var(--ikincil);font-size:15px">Harita ve trafik verisi: Yandex Haritalar. Veriler birkaç dakikada bir yenilenir; yola çıkmadan önce yol ve hava durumunu da kontrol edin.</p>
+</div>${yanKutular(servis)}</main>`,
+  });
+}
+
+// ---------- Günün özeti ----------
+const ozetTarih = (t) => new Date(`${t}T12:00:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric', weekday: 'long' });
+export function ozetKarti(o) {
+  if (!o) return '';
+  return `<a class="ozet-kart" href="/gunun-ozeti/"><span class="ozet-rozet">🗞️ Günün özeti</span><span class="ozet-ic"><small>${h(ozetTarih(o.tarih))} · 1 dakikada Mersin</small><b>${h(o.baslik)}</b></span><span class="ozet-ok">Oku →</span></a>`;
+}
+export function ozetSayfasi({ ozet: o, arsiv, hikayeler, servis, son = false }) {
+  const yol = son ? '/gunun-ozeti/' : `/gunun-ozeti/${o.tarih}/`;
+  const bul = (id) => hikayeler.find((x) => x.id === id);
+  return sayfa({
+    baslik: `Mersin günün özeti: ${o.baslik}`,
+    aciklama: `${ozetTarih(o.tarih)} Mersin gündemi. ${o.giris}`.slice(0, 160),
+    yol,
+    tema: 'gundem',
+    tur: 'article',
+    ust: `<div class="su-an-bas"><div><p>${h(ozetTarih(o.tarih))}</p><h1>${h(o.baslik)}</h1><p style="margin-top:8px">Günün özeti · Mersin'de son 24 saat</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">
+<article class="haber-yazi ozet-yazi">
+${o.giris ? `<p class="haber-spot">${h(o.giris)}</p>` : ''}
+<ol class="bilgi-maddeler ozet-maddeler">${o.maddeler.map((m) => { const x = bul(m.id); return `<li><h2>${x ? `<a href="${h(sayfasiVar(x) ? haberYolu(x) : x.kaynaklar[0].link)}">${h(x.baslik)}</a>` : ''}</h2><p>${h(m.metin)}</p></li>`; }).join('')}</ol>
+<p class="haber-kaynak-kisa">Bu özet, gün içinde sitemizde yayımlanan haberlerden yapay zekâ desteğiyle hazırlanmıştır. Ayrıntılar için başlıklara tıklayın.</p>
+${paylasCubugu(SITE.url + yol, `Mersin günün özeti: ${o.baslik}`)}
+</article>
+${arsiv.length > 1 ? `<div class="bolum-bas"><h2>Önceki günler</h2></div><div class="yan-liste ozet-arsiv">${arsiv.filter((a) => a.tarih !== o.tarih).slice(0, 10).map((a) => `<a class="yan-satir" href="/gunun-ozeti/${a.tarih}/"><span class="yan-metin"><b>${h(a.baslik)}</b><small>${h(ozetTarih(a.tarih))}</small></span></a>`).join('')}</div>` : ''}
 </div>${yanKutular(servis)}</main>`,
   });
 }

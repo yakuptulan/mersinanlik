@@ -224,3 +224,22 @@ export function ligTablosu(kayit) {
     .map((t) => `<tr${t.mersin ? ' class="mersin"' : ''}><td>${t.sira}</td><th scope="row"><span class="lt-takim">${takimRozeti(t.takim, t.mersin)}${h(t.takim)}</span></th><td>${t.o}</td><td>${t.g}</td><td>${t.b}</td><td>${t.m}</td><td>${t.av > 0 ? '+' : ''}${t.av}</td><td><strong>${t.p}</strong></td>${formVar ? `<td class="form">${(kayit.form[t.takim] || []).map((f) => `<i class="f-${f}">${f}</i>`).join('')}</td>` : ''}</tr>`)
     .join('')}</tbody></table></div>${formVar ? '<p class="form-not"><i class="f-G">G</i> galibiyet <i class="f-B">B</i> beraberlik <i class="f-M">M</i> mağlubiyet · son 5 maç, soldan sağa eskiden yeniye</p>' : ''}`;
 }
+
+// Yan kutu: Mersin sayaçları (nüfus, deniz suyu, hava kalitesi, yılbaşı)
+export function sayacKutusu(servis, simdi = Date.now()) {
+  const sy = servis?.sayac || {};
+  const deniz = sy.deniz?.sicaklik;
+  const aqi = sy.hava?.aqi;
+  const aqiAd = aqi == null ? null : aqi <= 20 ? ['Çok iyi', '#10b981'] : aqi <= 40 ? ['İyi', '#65a30d'] : aqi <= 60 ? ['Orta', '#ca8a04'] : aqi <= 80 ? ['Kötü', '#ea580c'] : aqi <= 100 ? ['Çok kötü', '#dc2626'] : ['Aşırı kötü', '#a21caf'];
+  const yil = Number(new Date(simdi).toLocaleDateString('sv-SE', { timeZone: SITE.timezone }).slice(0, 4)) + 1;
+  const satir = (renk, ikonu, etiket, deger, alt) => `<div class="sayac-satir" style="--s:${renk}"><span class="ss-ikon">${ikonu}</span><span class="ss-metin"><small>${etiket}</small><b>${deger}</b>${alt ? `<i>${alt}</i>` : ''}</span></div>`;
+  return `<section class="kutu kutu-sayac">
+${kutuBasligi({ ikon: '⏱', baslik: 'Mersin sayaçları', alt: '<span class="canli-nokta"></span> canlı' })}
+<div class="sayac-liste">
+${satir('#1e66f5', '👥', 'Mersin nüfusu (tahmini)', `<span data-nufus data-taban="${NUFUS.mersin}" data-artis="${NUFUS.mersinArtis}" data-tarih="${NUFUS.tarih}">${fmt(NUFUS.mersin, 0)}</span>`, 'TÜİK 2025 verisinden canlı tahmin')}
+${deniz != null ? satir('#0ea5e9', '🌊', 'Deniz suyu', `${fmt(deniz, 1)}°C`, deniz >= 24 ? 'Yüzmeye çok uygun' : deniz >= 21 ? 'Serin ama yüzülür' : 'Soğuk') : ''}
+${aqiAd ? satir(aqiAd[1], '🍃', 'Hava kalitesi', aqiAd[0], `Endeks ${Math.round(aqi)}${sy.hava?.pm25 != null ? ` · PM2,5 ${fmt(sy.hava.pm25, 0)}` : ''}`) : ''}
+${satir('#8e4ec6', '🎉', `${yil} yılbaşına`, `<span data-geri-sayim="${yil}-01-01T00:00:00+03:00">–</span>`, 'gün : saat : dakika : saniye')}
+</div>
+</section>`;
+}
