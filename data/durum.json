@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-17T03:01:19.322Z"
   }
  },
  "gorsel": {
@@ -128,11 +132,15 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-17T02:34:09.994Z",
+  "guncelleme": "2026-11-17T03:01:43.695Z",
   "liste": [
    {
+    "baslik": "sözcü tv",
+    "trafik": 100
+   },
+   {
     "baslik": "yavuz bingöl",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "telegram",
@@ -140,7 +148,7 @@
    },
    {
     "baslik": "heat - rockets",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "lol",
@@ -159,16 +167,12 @@
     "trafik": 1000
    },
    {
-    "baslik": "daniel radcliffe",
+    "baslik": "xavi",
     "trafik": 100
    },
    {
-    "baslik": "sabahattin sakıpağa kimdir",
-    "trafik": 500
-   },
-   {
-    "baslik": "uzak şehir son bölüm izle",
-    "trafik": 5000
+    "baslik": "daniel radcliffe",
+    "trafik": 100
    }
   ]
  },
