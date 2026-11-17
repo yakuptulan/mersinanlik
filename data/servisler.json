@@ -1,15 +1,15 @@
 {
- "guncelleme": "2026-11-17T15:02:12.005Z",
+ "guncelleme": "2026-11-17T15:32:21.775Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 19,
+   "sicaklik": 18,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-17",
      "min": 16,
-     "max": 19,
-     "durum": "Az bulutlu"
+     "max": 18,
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-18",
@@ -497,7 +497,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-17T15:02:15.877Z",
+  "guncelleme": "2026-11-17T15:32:26.548Z",
   "liste": [
    {
     "ad": "Aydoğan Eczanesi",
@@ -766,7 +766,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-17T15:02:16.833Z",
+  "guncelleme": "2026-11-17T15:32:27.812Z",
   "liste": [
    {
     "tur": "su",
@@ -799,6 +799,22 @@
       "ad": "Silifke",
       "mahalleler": [
        "Narlıkuyu"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Mut ilçesi yukarı köselerli mahallesi içmesuyu arızası kaynaklı sular kesilmiş olup arızanın giderilip suların verilmesi 19:00 olarak planlanmaktadır",
+    "baslangic": "2026-11-17T15:16:04.000Z",
+    "bitis": "2026-11-17T16:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "mut",
+      "ad": "Mut",
+      "mahalleler": [
+       "Yukarıköselerli"
       ]
      }
     ]
@@ -850,6 +866,22 @@
       "ad": "Tarsus",
       "mahalleler": [
        "Yarbay Şemsettin"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Bozyazı ilçesi Tekeli mahallesinde oluşan arıza nedeniyle kısmi olarak 18.11.2026 saat 11:00’a kadar su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-17T15:15:39.000Z",
+    "bitis": "2026-11-18T08:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "bozyazi",
+      "ad": "Bozyazı",
+      "mahalleler": [
+       "Tekeli"
       ]
      }
     ]
@@ -1028,7 +1060,7 @@
   "kaynakSaati": "2026-11-17 17:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-17T15:02:21.314Z",
+  "guncelleme": "2026-11-17T15:32:34.932Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -7910,11 +7942,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-17T15:02:22.007Z",
+  "guncelleme": "2026-11-17T15:32:35.549Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 79
+    "sayi": 66
    },
    {
     "yol": "/kategori/belediye/",
@@ -7953,11 +7985,11 @@
     "sayi": 2
    },
    {
-    "yol": "/kesintiler/",
-    "sayi": 2
+    "yol": "/kategori/hava/",
+    "sayi": 1
    },
    {
-    "yol": "/kategori/hava/",
+    "yol": "/kategori/saglik/",
     "sayi": 1
    },
    {
@@ -7969,11 +8001,11 @@
     "sayi": 1
    },
    {
-    "yol": "/kategori/saglik/",
+    "yol": "/kategori/tum-haberler/",
     "sayi": 1
    },
    {
-    "yol": "/kategori/tum-haberler/",
+    "yol": "/kesintiler/",
     "sayi": 1
    },
    {
@@ -8031,7 +8063,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-17T15:03:07.132Z",
+  "guncelleme": "2026-11-17T15:32:37.223Z",
   "deniz": {
    "sicaklik": 22.1,
    "dalga": 0.1
