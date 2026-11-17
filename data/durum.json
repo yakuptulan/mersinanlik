@@ -12,18 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "mersinportal": {
-   "hata": "This operation was aborted",
-   "zaman": "2026-11-17T18:31:51.044Z"
-  },
-  "mersinobjektif": {
-   "hata": "This operation was aborted",
-   "zaman": "2026-11-17T18:32:06.539Z"
-  },
-  "cukurova": {
-   "hata": "This operation was aborted",
-   "zaman": "2026-11-17T18:32:21.540Z"
   }
  },
  "gorsel": {
@@ -174,27 +162,39 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-17T18:32:25.221Z",
+  "guncelleme": "2026-11-17T19:01:49.591Z",
   "liste": [
+   {
+    "baslik": "eurolig",
+    "trafik": 1000
+   },
+   {
+    "baslik": "sergey lavrov",
+    "trafik": 100
+   },
+   {
+    "baslik": "downdetector",
+    "trafik": 200
+   },
    {
     "baslik": "žalgiris - bayern",
     "trafik": 200
    },
    {
-    "baslik": "var mısın yok musun",
-    "trafik": 200
+    "baslik": "var mısın yok musun hande",
+    "trafik": 500
    },
    {
     "baslik": "mane",
     "trafik": 500
    },
    {
-    "baslik": "وضعیت هوای فردا",
-    "trafik": 1000
-   },
-   {
     "baslik": "emirhan ilkhan",
     "trafik": 200
+   },
+   {
+    "baslik": "وضعیت هوای فردا",
+    "trafik": 1000
    },
    {
     "baslik": "game awards",
@@ -202,19 +202,7 @@
    },
    {
     "baslik": "benzin fiyatı",
-    "trafik": 500
-   },
-   {
-    "baslik": "manni l. perez",
-    "trafik": 500
-   },
-   {
-    "baslik": "50 gram altın kaç tl",
-    "trafik": 2000
-   },
-   {
-    "baslik": "danimarka",
-    "trafik": 500
+    "trafik": 1000
    }
   ]
  },
