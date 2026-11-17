@@ -977,3 +977,6 @@ a.cip.kat:hover { filter: brightness(.95); }
 .ozet-maddeler h2 a:hover { color: var(--mavi); }
 @media (max-width: 640px) { .ozet-kart { flex-wrap: wrap; } .ozet-ok { display: none; } }
 .haber.taze::after { right: auto; left: 10px; top: 10px; }
+.ilgili-kareler { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.ilgili-kareler .kare-kart { aspect-ratio: 4 / 3; }
+@media (max-width: 700px) { .ilgili-kareler { grid-template-columns: 1fr; } .ilgili-kareler .kare-kart { aspect-ratio: 16 / 9; } }

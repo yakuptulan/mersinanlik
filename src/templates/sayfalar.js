@@ -413,7 +413,8 @@ ${paragraflar}
 ${paylasCubugu(SITE.url + yol, hikaye.baslik)}
 </article>
 ${reklamAlani('yazi-sonu')}
-${ilgili.length ? `<div class="bolum-bas"><h2>${ilce ? `${h(ilce.ad)}'${ayrilmaEki(ilce.ad)} diğer haberler` : 'Diğer haberler'}</h2></div>\n${haberListesi(ilgili)}` : ''}
+${ilgili.length >= 3 ? `<div class="bolum-bas"><h2>Bunlar da ilginizi çekebilir</h2></div><div class="ilgili-kareler">${ilgili.slice(0, 3).map((x) => kareKart(x)).join('')}</div>` : ''}
+${ilgili.length > 3 ? `<div class="bolum-bas"><h2>${ilce ? `${h(ilce.ad)}'${ayrilmaEki(ilce.ad)} diğer haberler` : 'Diğer haberler'}</h2></div>\n${haberListesi(ilgili.slice(3))}` : ''}
 </div>
 ${yanKutular(servis, ilce)}
 </main>`;

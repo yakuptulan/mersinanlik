@@ -127,7 +127,7 @@ export async function kurumFotosuIndir(hikaye, url, kaynakAd) {
 async function kaydet(hikaye, veri, prompt = '') {
   fs.mkdirSync(URETILEN_KLASOR, { recursive: true });
   const dosya = `${hikaye.id}.webp`;
-  await sharp(veri).resize({ width: 800, height: 450, fit: 'cover' }).webp({ quality: 74 }).toFile(path.join(URETILEN_KLASOR, dosya));
+  await sharp(veri).resize({ width: 1200, height: 675, fit: 'cover' }).webp({ quality: 74 }).toFile(path.join(URETILEN_KLASOR, dosya));
   if (prompt) hikaye.gorselPrompt = prompt.slice(0, 400);
   return dosya;
 }

@@ -89,7 +89,7 @@ export function sayfa({ baslik, aciklama = SITE.description, yol = '/', aktif = 
 <title>${h(tamBaslik)}</title>
 <meta name="description" content="${h(aciklama)}">
 <link rel="canonical" href="${kanonik}">
-${noindex ? '<meta name="robots" content="noindex, follow">' : ''}
+${noindex ? '<meta name="robots" content="noindex, follow">' : '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">'}
 <meta property="og:site_name" content="${SITE.name}">
 <meta property="og:title" content="${h(tamBaslik)}">
 <meta property="og:description" content="${h(aciklama)}">
