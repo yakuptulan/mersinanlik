@@ -17,6 +17,8 @@ export function slugify(s = '') {
 }
 
 // HTML etiketlerini ve fazla boşlukları temizler
+const ADLI = { Ouml: 'Ö', ouml: 'ö', Uuml: 'Ü', uuml: 'ü', Ccedil: 'Ç', ccedil: 'ç', Acirc: 'Â', acirc: 'â', Icirc: 'Î', icirc: 'î', Ucirc: 'Û', ucirc: 'û', Eacute: 'É', eacute: 'é', ndash: '–', mdash: '—', laquo: '«', raquo: '»', bull: '•', middot: '·', deg: '°', euro: '€', copy: '©', reg: '®', trade: '™', sbquo: '‚', bdquo: '„' };
+
 export function duzMetin(s = '') {
   return String(s)
     .replace(/<!\[CDATA\[|\]\]>/g, '')
@@ -32,6 +34,7 @@ export function duzMetin(s = '') {
     .replace(/&(rsquo|lsquo);/g, '’')
     .replace(/&(rdquo|ldquo);/g, '"')
     .replace(/&hellip;/g, '…')
+    .replace(/&([a-z]+);/gi, (t, ad) => ADLI[ad] ?? t)
     .replace(/\s+/g, ' ')
     .trim();
 }

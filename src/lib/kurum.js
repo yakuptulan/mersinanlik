@@ -37,22 +37,42 @@ function mutlak(src, taban, kokten = false) {
 }
 
 // Haberin gövdesi: sayfadaki paragraflar (menü, çerez uyarısı vb. hariç)
-export function govdeCoz(html) {
-  const temiz = html.replace(/<(script|style|nav|header|footer|aside|form|noscript)\b[\s\S]*?<\/\1>/gi, ' ');
+export function govdeCoz(html, formDahil = false) {
+  const etiketler = formDahil ? 'script|style|nav|header|footer|aside|noscript' : 'script|style|nav|header|footer|aside|form|noscript';
+  const temiz = html.replace(new RegExp(`<(${etiketler})\\b[\\s\\S]*?<\\/\\1>`, 'gi'), ' ');
   const paragraflar = [...temiz.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)]
     .map((m) => duzMetin(m[1]).replace(/\s+/g, ' ').trim())
     .filter((t) => t.length >= 60 && !/çerez|cookie|kvkk|kişisel veri|tüm hakları|copyright|©|editörlerinin hiçbir müdahalesi|tarafından geçilen tüm/i.test(t));
-  return [...new Set(paragraflar)].join('\n').slice(0, 5000);
+  const sonuc = [...new Set(paragraflar)].join('\n').slice(0, 5000);
+  return sonuc || formDahil ? sonuc : govdeCoz(html, true);
+}
+
+const AYLAR = ['ocak', 'şubat', 'mart', 'nisan', 'mayıs', 'haziran', 'temmuz', 'ağustos', 'eylül', 'ekim', 'kasım', 'aralık'];
+// Sayfa metnindeki en yeni (geleceğe ait olmayan) tarihi bul: 09.11.2026 ya da 12 Kasım 2026
+export function metindenTarih(html) {
+  const govde = html.replace(/<(script|style|head)\b[\s\S]*?<\/\1>/gi, ' ');
+  const adaylar = [];
+  for (const m of govde.matchAll(/\b(\d{1,2})[./](\d{1,2})[./](20\d\d)\b/g)) adaylar.push([+m[3], +m[2], +m[1]]);
+  for (const m of govde.matchAll(/\b(\d{1,2}) (Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık) (20\d\d)\b/gi)) adaylar.push([+m[3], AYLAR.indexOf(m[2].toLocaleLowerCase('tr')) + 1, +m[1]]);
+  const simdi = Date.now() + 864e5;
+  const zamanlar = adaylar
+    .filter(([y, a, g]) => a >= 1 && a <= 12 && g >= 1 && g <= 31)
+    .map(([y, a, g]) => new Date(`${y}-${String(a).padStart(2, '0')}-${String(g).padStart(2, '0')}T12:00:00+03:00`).getTime())
+    .filter((t) => t <= simdi);
+  return zamanlar.length ? new Date(Math.max(...zamanlar)).toISOString() : null;
 }
 
 export function detayCoz(html, link, kaynak) {
   const h1 = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1];
-  const baslikHam = (kaynak.baslikH1 && h1 && duzMetin(h1).length > 15 ? h1 : null) || meta(html, 'og:title') || html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || html.match(/<title>([\s\S]*?)<\/title>/i)?.[1] || '';
+  const secili = kaynak.baslikEtiket
+    ? [...html.matchAll(new RegExp(`<${kaynak.baslikEtiket}\\b[^>]*>([\\s\\S]*?)<\\/${kaynak.baslikEtiket}>`, 'gi'))].map((m) => duzMetin(m[1]).replace(/\s*(--|\|).*$/, '').trim()).find((t) => t.length > 15)
+    : null;
+  const baslikHam = secili || (kaynak.baslikH1 && h1 && duzMetin(h1).length > 15 ? h1 : null) || meta(html, 'og:title') || html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || html.match(/<title>([\s\S]*?)<\/title>/i)?.[1] || '';
   let baslik = duzMetin(baslikHam);
   // Sondaki site/bölüm adlarını at: " | Mersin Yenişehir Belediyesi", " - Haberler", " | ... Resmi Web Sitesi"
   for (let i = 0; i < 3; i++) baslik = baslik.replace(/\s*[|–-]\s*[^|–]*(Belediye|Valili|Resmi Web|Haberler|Duyurular)[^|–]*$/i, '');
   baslik = baslik.replace(/\s*\|\s*Mersin\s+g\S{0,3}ndem\s*$/i, '');
-  baslik = baslikTemizle(baslik, kaynak.ad);
+  baslik = baslikTemizle(baslik.replace(/[\p{Extended_Pictographic}\u200B-\u200D\uFE0F]/gu, '').replace(/\s+/g, ' ').trim(), kaynak.ad);
   const aciklama = duzMetin(meta(html, 'og:description') || meta(html, 'description') || '').slice(0, 1200);
 
   // Fotoğraf: önce og:image, yoksa sayfadaki haber fotoğrafı (adında haberin adresi ya da tarih damgası geçen)
@@ -61,7 +81,7 @@ export function detayCoz(html, link, kaynak) {
   if (foto && kaynak.gorselDuzelt) foto = foto.replace(kaynak.gorselDuzelt[0], kaynak.gorselDuzelt[1]);
   if (!foto && kaynak.gorselDesen) {
     const desen = new RegExp(kaynak.gorselDesen, 'i');
-    const adaylar = [...html.matchAll(/<img[^>]+src=["']([^"']+)["']/gi)].map((m) => m[1]).filter((s) => desen.test(s));
+    const adaylar = [...html.matchAll(/<img[^>]+src=["']([^"']+)["']/gi)].map((m) => duzMetin(m[1])).filter((s) => desen.test(s));
     const kisa = link.split('/').pop().slice(0, 20).toLowerCase();
     foto = adaylar.find((s) => s.toLowerCase().includes(kisa)) || adaylar.find((s) => /\d{12,}/.test(s)) || (kaynak.gorselIlk ? adaylar[0] : null);
   }
@@ -72,6 +92,8 @@ export function detayCoz(html, link, kaynak) {
   if (!tarih && damga) tarih = new Date(Number(damga) * 1000).toISOString();
   const gunAyYil = link.match(/-(\d{2})(\d{2})(20\d{2})\.html$/);
   if (!tarih && gunAyYil) tarih = new Date(`${gunAyYil[3]}-${gunAyYil[2]}-${gunAyYil[1]}T12:00:00+03:00`).toISOString();
+
+  if (!tarih && kaynak.tarihMetinden) tarih = metindenTarih(html);
 
   const govde = govdeCoz(html);
   return { baslik, aciklama, govde, link, tarih, foto: foto ? mutlak(foto, link, kaynak.gorselKokten) : null };
