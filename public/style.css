@@ -1088,3 +1088,15 @@ a.cip.kat:hover { filter: brightness(.95); }
 .macgunu-satir { font-size: 13px; gap: 6px; padding: 9px 8px; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); }
 .macgunu-takim { display: block; overflow: visible; text-overflow: clip; -webkit-line-clamp: unset; overflow-wrap: anywhere; }
 .macgunu-orta { min-width: 58px; }
+
+/* Dinle */
+.dinle { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 16px; padding: 10px 18px; border-radius: 999px; border: 1.5px solid #d6e2ff; background: #f2f6ff; color: var(--derin-mavi); font: inherit; font-weight: 800; font-size: 15.5px; cursor: pointer; }
+.dinle:hover { background: #e6eeff; }
+.dinle.caliyor { background: var(--derin-mavi); color: #fff; border-color: var(--derin-mavi); }
+.dinle-ikon { font-size: 18px; }
+/* Google tercih edilen kaynak */
+.google-kaynak { display: flex; align-items: center; gap: 12px; margin-top: 16px; padding: 12px 16px; border-radius: 16px; border: 1px solid #e3e8f2; background: #fff; text-decoration: none; color: var(--metin); }
+.google-kaynak:hover { border-color: #c9d6f5; background: #fafcff; }
+.google-kaynak b { display: block; font-size: 15px; }
+.google-kaynak small { color: var(--ikincil); font-size: 13px; }
+.g-harf { flex: none; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 19px; color: #fff; background: conic-gradient(#ea4335 0 25%, #fbbc05 0 50%, #34a853 0 75%, #4285f4 0); }

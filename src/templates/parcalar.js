@@ -163,6 +163,9 @@ export function haberListesi(hikayeler, bosMesaj = 'Şu an gösterilecek haber y
 
 export const reklamAlani = (ad = 'yan') => `<div class="reklam" data-reklam="${ad}" aria-hidden="true">REKLAM</div>`;
 
+// Google'da "tercih edilen kaynak" yapma bağlantısı (Google'ın resmî bağlantı biçimi)
+export const googleKaynak = () => `<a class="google-kaynak" href="https://www.google.com/preferences/source?q=mersinanlik.com" rel="noopener" target="_blank"><span class="g-harf" aria-hidden="true">G</span><span><b>Google'da Mersin Anlık'ı tercih edilen kaynağın yap</b><small>Haberlerimiz Google aramalarında sana daha çok çıksın</small></span></a>`;
+
 // Paylaş düğmeleri (WhatsApp öncelikli; telefonda sistem paylaşımı da açılır)
 export function paylasCubugu(url, baslik) {
   const u = encodeURIComponent(url);
@@ -173,7 +176,8 @@ export function paylasCubugu(url, baslik) {
 <a href="https://x.com/intent/post?text=${t}&url=${u}" rel="noopener" target="_blank">X</a>
 <a href="https://www.facebook.com/sharer/sharer.php?u=${u}" rel="noopener" target="_blank">Facebook</a>
 <button type="button" data-kopyala>Linki kopyala</button>
-</div>`;
+</div>
+${googleKaynak()}`;
 }
 
 // Haberin kapak görselinin adresi (manşet kaydırıcısı için)

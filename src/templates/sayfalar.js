@@ -420,6 +420,7 @@ export function haberSayfasi({ hikaye, ilgili, servis }) {
 <div class="ana">
 <article class="haber-yazi" style="--kat:${kat.renk}">
 ${gorselUrl ? `<figure class="haber-gorsel"><img src="/uretilen/${h(hikaye.gorsel)}" alt="${kurumFoto ? h(hikaye.baslik) : 'Temsili görsel (yapay zekâ ile üretildi)'}" width="800" height="450" decoding="async"><figcaption>${kurumFoto ? `Fotoğraf: ${h(kurumFoto)}` : 'Temsili görsel · yapay zekâ ile üretilmiştir'}</figcaption></figure>` : ''}
+${dinleDugmesi()}
 ${hikaye.ozet ? `<p class="haber-spot">${h(hikaye.ozet)}</p>` : ''}
 ${paragraflar}
 <p class="haber-kaynak-kisa">Kaynak: ${[kurumKayit, ...digerleri.slice(0, 2)].map((k) => `<a href="${h(k.link)}" rel="noopener nofollow" target="_blank">${h(k.ad)}</a>`).join(', ')}</p>
@@ -469,6 +470,9 @@ export function kategoriSayfasi({ kategori, hikayeler, servis }) {
   });
 }
 
+// "Dinle": haberi tarayıcının Türkçe sesiyle okur (ses yoksa düğme gizli kalır)
+export const dinleDugmesi = () => `<button type="button" class="dinle" data-dinle hidden><span class="dinle-ikon" aria-hidden="true">🔊</span><span data-dinle-metin>Haberi dinle</span></button>`;
+
 // ---------- Konu sayfaları ----------
 export function konuSayfasi({ konu, konular, servis }) {
   const liste = konu.liste.slice(0, 80);
@@ -517,6 +521,24 @@ export function etkinlikSayfasi({ servis, simdi }) {
     baslik: "Mersin etkinlikleri – bu hafta Mersin'de ne var?",
     aciklama: "Mersin'de bu hafta konser, tiyatro, festival, spor ve kültür etkinlikleri. Mersin Büyükşehir Belediyesi etkinlik takvimi.",
     yol: '/etkinlikler/',
+    jsonLd: liste.filter((e) => e.tarih).length
+      ? {
+          '@context': 'https://schema.org',
+          '@graph': liste
+            .filter((e) => e.tarih)
+            .map((e) => ({
+              '@type': 'Event',
+              name: e.baslik,
+              startDate: e.saat ? `${e.tarih}T${e.saat}:00+03:00` : e.tarih,
+              eventStatus: 'https://schema.org/EventScheduled',
+              eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+              location: { '@type': 'Place', name: e.yer || 'Mersin', address: { '@type': 'PostalAddress', addressLocality: 'Mersin', addressCountry: 'TR' } },
+              image: e.foto ? [`${SITE.url}/etkinlik/${e.foto}`] : undefined,
+              url: e.link,
+              organizer: { '@type': 'Organization', name: 'Mersin Büyükşehir Belediyesi', url: 'https://www.mersin.bel.tr/' },
+            })),
+        }
+      : null,
     ust: `<div class="su-an-bas"><div><h1>Bu hafta Mersin'de</h1><p style="margin-top:8px">Konser, festival, yürüyüş, atölye ve daha fazlası</p></div></div>`,
     icerik: `<main class="kap govde"><div class="ana">
 ${liste.length ? `<div class="izgara izgara-3">${liste.map(etkinlikKarti).join('')}</div>` : '<div class="bos">Şu an duyurulmuş etkinlik yok.</div>'}

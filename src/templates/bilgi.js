@@ -1,7 +1,7 @@
 // "Merak edilenler" sayfaları
 import { htmlKacis as h } from '../lib/text.js';
 import { sayfa } from './layout.js';
-import { yanKutular } from './sayfalar.js';
+import { yanKutular, dinleDugmesi } from './sayfalar.js';
 import { paylasCubugu } from './parcalar.js';
 import { SITE } from '../config.js';
 import { TUR_AD } from '../bilgi-konulari.js';
@@ -65,6 +65,7 @@ export function bilgiSayfasi({ yazi: y, yazilar, servis }) {
     icerik: `<main class="kap govde"><div class="ana">
 <article class="haber-yazi bilgi-yazi" style="--kat:${TUR_RENK[y.tur] || '#475569'}">
 ${y.gorsel ? `<figure class="haber-gorsel"><img src="${h(gorselSrc(y))}" alt="${h(y.baslik)}" width="1200" height="675"><figcaption>Fotoğraf: ${h(y.gorsel.yazar)} · ${h(y.gorsel.lisans)} · <a href="${h(y.gorsel.sayfa)}" rel="noopener" target="_blank">Wikimedia Commons</a></figcaption></figure>` : ''}
+${dinleDugmesi()}
 ${y.spot ? `<p class="haber-spot">${h(y.spot)}</p>` : ''}
 <ol class="bilgi-maddeler">${y.bolumler.map((b) => `<li><h2>${h(b.baslik)}</h2><p>${h(b.metin)}${b.link ? ` <a href="${h(b.link)}" rel="noopener" target="_blank">Etkinlik sayfası →</a>` : ''}</p></li>`).join('')}</ol>
 ${y.sss?.length ? `<section class="bilgi-sss"><h2>Sık sorulanlar</h2>${y.sss.map((s) => `<details><summary>${h(s.soru)}</summary><p>${h(s.cevap)}</p></details>`).join('')}</section>` : ''}

@@ -415,3 +415,43 @@
     kutu.focus();
   }
 })();
+
+// Dinle: haberi tarayıcının Türkçe sesiyle okur
+(function () {
+  var dugme = document.querySelector('[data-dinle]');
+  if (!dugme || !('speechSynthesis' in window)) return;
+  var ss = window.speechSynthesis;
+  var ses = null;
+  function sesSec() {
+    var liste = ss.getVoices().filter(function (v) { return /^tr/i.test(v.lang); });
+    ses = liste.find(function (v) { return /google|natural|neural|yelda|emel/i.test(v.name); }) || liste[0] || null;
+    if (ses) dugme.hidden = false;
+  }
+  sesSec();
+  if (ss.onvoiceschanged !== undefined) ss.addEventListener('voiceschanged', sesSec);
+  var metin = dugme.querySelector('[data-dinle-metin]');
+  function bitir() { ss.cancel(); dugme.classList.remove('caliyor'); metin.textContent = 'Haberi dinle'; }
+  dugme.addEventListener('click', function () {
+    if (dugme.classList.contains('caliyor')) return bitir();
+    var yazi = dugme.closest('article');
+    var baslik = (document.querySelector('h1') || {}).textContent || '';
+    var dugumler = Array.prototype.filter.call(yazi.querySelectorAll('.haber-spot, p, li h2'), function (p) {
+      return !p.closest('.haber-kaynak, .haber-kaynak-kisa, .haber-konular, .paylas, .google-kaynak, figure');
+    });
+    var parcalar = [baslik].concat(dugumler.map(function (p) { return p.textContent; }));
+    // Uzun metinler bazı tarayıcılarda yarıda kesildiği için cümle cümle sıraya konur
+    var cumleler = parcalar.join('. ').replace(/\s+/g, ' ').match(/[^.!?]+[.!?]*/g) || [];
+    ss.cancel();
+    cumleler.forEach(function (c, i) {
+      var u = new SpeechSynthesisUtterance(c.trim());
+      u.lang = 'tr-TR';
+      if (ses) u.voice = ses;
+      u.rate = 0.95;
+      if (i === cumleler.length - 1) u.onend = bitir;
+      ss.speak(u);
+    });
+    dugme.classList.add('caliyor');
+    metin.textContent = 'Durdur';
+  });
+  window.addEventListener('pagehide', function () { ss.cancel(); });
+})();
