@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-18T11:01:47.451Z",
+ "guncelleme": "2026-11-18T11:31:46.309Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -497,7 +497,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-18T11:01:51.244Z",
+  "guncelleme": "2026-11-18T11:31:49.870Z",
   "liste": [
    {
     "ad": "Anadolu Eczanesi",
@@ -766,7 +766,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-18T11:01:52.213Z",
+  "guncelleme": "2026-11-18T11:31:50.874Z",
   "liste": [
    {
     "tur": "su",
@@ -780,6 +780,22 @@
       "ad": "Anamur",
       "mahalleler": [
        "Kalınören"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Mut ilçesi Meydan mahallesi içmesuyu arızası kaynaklı sular kesilmiş olup arızanın giderilip suların verilmesi 15:00 olarak planlanmaktadır.",
+    "baslangic": "2026-11-18T11:17:00.000Z",
+    "bitis": "2026-11-18T12:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "mut",
+      "ad": "Mut",
+      "mahalleler": [
+       "Meydan"
       ]
      }
     ]
@@ -958,7 +974,7 @@
   "kaynakSaati": "2026-11-18 13:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-18T11:01:56.493Z",
+  "guncelleme": "2026-11-18T11:31:57.184Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -1767,7 +1783,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-18T10:31:59.735Z",
+  "guncelleme": "2026-11-18T11:31:59.882Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -7740,11 +7756,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-18T11:01:56.893Z",
+  "guncelleme": "2026-11-18T11:31:57.814Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 41
+    "sayi": 40
    },
    {
     "yol": "/piyasalar/",
@@ -7761,7 +7777,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-18T11:01:58.399Z",
+  "guncelleme": "2026-11-18T11:32:39.303Z",
   "deniz": {
    "sicaklik": 22,
    "dalga": 0.2
