@@ -10,6 +10,7 @@ import { KONULAR, konuBul } from './konular.js';
 import * as S from './templates/sayfalar.js';
 import * as IS from './templates/ilceServis.js';
 import { ulasimSayfasi } from './templates/ulasim.js';
+import { gundemimSayfasi, akisVerisi } from './templates/gundemim.js';
 import { arsivAySayfasi } from './templates/arsiv.js';
 import { arsivYukle } from './lib/arsiv.js';
 import * as R from './templates/rehber.js';
@@ -135,6 +136,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
   ekle('/trafik/', S.trafikSayfasi({ servis }));
   ekle('/ulasim/', ulasimSayfasi({ servis, simdi }));
   ekle('/okullar-tatil-mi/', okulSayfasi({ okul, servis, simdi }));
+  ekle('/gundemim/', gundemimSayfasi({ servis, simdi }));
   if (ozetArsiv.length) {
     ekle('/gunun-ozeti/', S.ozetSayfasi({ ozet: ozetArsiv[0], arsiv: ozetArsiv, hikayeler, servis, son: true }));
     for (const o of ozetArsiv) ekle(`/gunun-ozeti/${o.tarih}/`, S.ozetSayfasi({ ozet: o, arsiv: ozetArsiv, hikayeler, servis }));
@@ -209,6 +211,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
     `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>${htmlKacis(SITE.name)}</title><link>${SITE.url}/</link><description>${htmlKacis(SITE.description)}</description><language>tr</language>\n${rssOgeleri.join('\n')}\n</channel></rss>\n`
   );
   // Canlı yenileme için son haberler listesi (sayfa açıkken 2 dakikada bir okunur)
+  yaz('/akis.json', JSON.stringify(akisVerisi(hikayeler, simdi)));
   yaz('/son.json', JSON.stringify(hikayeler.filter((x) => !x.genel).sort((a, b) => new Date(b.ilkGorulme) - new Date(a.ilkGorulme)).slice(0, 20).map((x) => ({ id: x.id, b: x.baslik, z: x.ilkGorulme }))));
   yaz('/robots.txt', `User-agent: *\nAllow: /\nDisallow: /ara/\nDisallow: /menu/\n\nSitemap: ${SITE.url}/sitemap.xml\nSitemap: ${SITE.url}/haber-sitemap.xml\n`);
   // Cloudflare Pages: önbellek ayarları
