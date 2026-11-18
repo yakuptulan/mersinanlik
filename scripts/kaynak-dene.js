@@ -36,6 +36,18 @@ for (const url of ADAYLAR) {
   const kok = new URL(url).origin;
   const rb = (await al(kok + '/robots.txt')).metin;
   const robots = /User-agent:\s*\*[\s\S]{0,200}?Disallow:\s*\/\s*$/im.test(rb) ? 'robots: * HEPSİ YASAK' : /GPTBot|CCBot|Google-Extended|ClaudeBot/i.test(rb) ? 'robots: YZ botları anılıyor' : 'robots: serbest';
+  if (process.env.ARA === 'INCELE') {
+    const t = (x) => x.replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
+    const govde = metin.replace(/<(script|style)\b[\s\S]*?<\/\1>/gi, ' ');
+    const basliklar = [...govde.matchAll(/<(h[1-4])[^>]*>([\s\S]*?)<\/\1>/gi)].map((m) => `${m[1]}:${t(m[2]).slice(0, 90)}`).filter((x) => x.length > 8).slice(0, 12);
+    const tarihler = [...new Set([...govde.matchAll(/\b\d{1,2}[./]\d{1,2}[./]20\d\d\b|\b\d{1,2} (Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık) 20\d\d/gi)].map((m) => m[0]))].slice(0, 8);
+    const pler = [...govde.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)].map((m) => t(m[1])).filter((x) => x.length > 40).slice(0, 4).map((x) => x.slice(0, 120));
+    const divler = [...govde.matchAll(/<div\b([^>]*)>([^<]{120,})/gi)].slice(0, 4).map((m) => `[${m[1].trim().slice(0, 60)}] ${t(m[2]).slice(0, 120)}`);
+    const resim = [...new Set([...metin.matchAll(/<img[^>]+src=["']([^"']+)["']/gi)].map((m) => m[1]))].filter((r) => !/logo|icon|flag|svg|ataturk/i.test(r)).slice(0, 6);
+    const title = t(metin.match(/<title>([\s\S]*?)<\/title>/i)?.[1] || '');
+    console.log(`\n### ${url}\n${durum} · title: ${title}\nBAŞLIK: ${basliklar.join(' ‖ ')}\nTARİH: ${tarihler.join(', ')}\nP: ${pler.join(' ‖ ')}\nDIV: ${divler.join(' ‖ ')}\nIMG: ${resim.join(' ')}`);
+    continue;
+  }
   if (process.env.ARA?.startsWith('DOKUM:')) {
     const d = new RegExp(process.env.ARA.slice(6), 'gi');
     const parcalar = [...metin.matchAll(d)].slice(0, 4).map((m) => metin.slice(Math.max(0, m.index - 300), m.index + 900).replace(/\s+/g, ' '));
