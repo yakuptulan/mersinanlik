@@ -190,8 +190,16 @@ async function main() {
       console.warn('! Etkinlik:', e.message);
     }
   }
-  // Spor (TFF): saatte bir yeter
-  if (!eski.spor || !eski.spor.ligler || (eski.spor.superLig?.puan?.length || 0) < 10 || Date.now() - new Date(eski.spor.guncelleme).getTime() > 55 * 60e3) {
+  // Spor (TFF): saatte bir yeter; maç saatlerinde her çalışmada (yarım saatte bir) yenilenir
+  const bugunTR = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Istanbul' });
+  const macVakti = Object.entries(eski.spor?.ligler || {}).some(([kod, l]) =>
+    (l.maclar || []).some((m) => {
+      if (m.tarih !== bugunTR || !m.saat || !(kod === 'super-lig' || m.mersin)) return false;
+      const t = new Date(`${m.tarih}T${m.saat}:00+03:00`).getTime();
+      return Date.now() > t - 20 * 60e3 && Date.now() < t + 150 * 60e3;
+    })
+  );
+  if (macVakti || !eski.spor || !eski.spor.ligler || (eski.spor.superLig?.puan?.length || 0) < 10 || Date.now() - new Date(eski.spor.guncelleme).getTime() > 55 * 60e3) {
     try {
       const spor = await sporGetir(UA);
       yeni.spor = { ...eski.spor, ...spor };

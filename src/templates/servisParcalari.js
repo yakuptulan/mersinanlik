@@ -130,6 +130,38 @@ ${mersin.map((t) => `<a class="yan-satir takim-satir" href="/spor/#mersin">${tak
 </section>`;
 }
 
+// Bugünün maçları: Süper Lig + Mersin takımlarının maçları. TFF verisi yarım saatte bir yenilenir.
+export function bugununMaclari(servis, simdi = Date.now()) {
+  const bugun = new Date(simdi).toLocaleDateString('sv-SE', { timeZone: 'Europe/Istanbul' });
+  const L = servis?.spor?.ligler || {};
+  const maclar = Object.entries(L).flatMap(([kod, l]) =>
+    (l.maclar || []).filter((m) => m.tarih === bugun && (kod === 'super-lig' || m.mersin)).map((m) => ({ ...m, lig: l.kisa, kod }))
+  );
+  return maclar
+    .map((m) => {
+      const bas = m.saat ? new Date(`${m.tarih}T${m.saat}:00+03:00`).getTime() : null;
+      const durum = m.skor && (!bas || simdi > bas + 115 * 60e3) ? 'bitti' : bas && simdi >= bas ? 'oynaniyor' : 'baslamadi';
+      return { ...m, bas, durum };
+    })
+    .sort((a, b) => (b.mersin ? 1 : 0) - (a.mersin ? 1 : 0) || (a.bas || 0) - (b.bas || 0));
+}
+
+export function macGunuKutusu(servis, simdi = Date.now()) {
+  const maclar = bugununMaclari(servis, simdi);
+  if (!maclar.length) return '';
+  const canli = maclar.some((m) => m.durum === 'oynaniyor');
+  const satir = (m) => `<a class="macgunu-satir${m.mersin ? ' mersin' : ''}" href="/spor/${m.kod}/">
+<span class="macgunu-takim ev">${h(m.ev)}</span>
+<span class="macgunu-orta ${m.durum}">${m.durum === 'baslamadi' ? h(m.saat || '–') : h(String(m.skor || '0-0').replace('-', ' – '))}<small>${m.durum === 'oynaniyor' ? 'oynanıyor' : m.durum === 'bitti' ? 'MS' : m.lig}</small></span>
+<span class="macgunu-takim dep">${h(m.dep)}</span>
+</a>`;
+  return `<section class="kutu kutu-macgunu">
+${kutuBasligi({ ikon: '⚽', baslik: 'Bugünün maçları', link: canli ? null : '/spor/', alt: canli ? '<span class="macgunu-canli">● oynanıyor</span>' : null })}
+<div class="macgunu-liste">${maclar.slice(0, 10).map(satir).join('')}</div>
+<p class="macgunu-not">Skorlar TFF verisinden yarım saatte bir güncellenir.</p>
+</section>`;
+}
+
 export function puanTablosu(puan, { kisa = false } = {}) {
   return `<div class="tablo-kap"><table class="tablo tablo-puan"><thead><tr><th>#</th><th>Takım</th><th>O</th>${kisa ? '' : '<th>G</th><th>B</th><th>M</th><th>AV</th>'}<th>P</th></tr></thead><tbody>${puan
     .map((t) => `<tr${t.mersin ? ' class="mersin"' : ''}><td>${t.sira}</td><th scope="row">${h(t.takim)}</th><td>${t.o}</td>${kisa ? '' : `<td>${t.g}</td><td>${t.b}</td><td>${t.m}</td><td>${t.av > 0 ? '+' : ''}${t.av}</td>`}<td><strong>${t.p}</strong></td></tr>`)

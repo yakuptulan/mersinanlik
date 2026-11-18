@@ -1,3 +1,4 @@
+import { macGunuKutusu } from './servisParcalari.js';
 import { SITE, ILCELER, AYAR } from '../config.js';
 import { htmlKacis as h, ayrilmaEki } from '../lib/text.js';
 import { sayfa, saat, tarihUzun, ilceAdi } from './layout.js';
@@ -214,6 +215,7 @@ export function yanKutular(servis, ilce = null, { anaSayfa = false } = {}) {
   const eczaneler = ilce ? ilceEczaneleri(servis, ilce.slug) : [];
   const okunan = servis?.enCokOkunan || [];
   return `<aside class="yan">
+${macGunuKutusu(servis)}
 ${reklamAlani('yan-ust')}
 ${okunan.length >= 3 ? `<section class="kutu kutu-okunan">${kutuBasligi({ ikon: ikon.alev(18), baslik: 'En sıcak haberler', alt: '<span class="canli-nokta"></span> canlı' })}
 <ol class="okunan-liste">${okunan.map((o, i) => `<li><a href="${h(o.yol)}"><span class="ok-no">${i + 1}</span>${o.gorsel ? `<img src="${h(o.gorsel)}" alt="" width="64" height="48" loading="lazy">` : `<span class="ok-ikon">${(ikon[o.ikon] || ikon.ok)(20)}</span>`}<span class="ok-baslik">${h(o.baslik)}${o.zaman ? `<small data-once="${o.zaman}">${saat(o.zaman)}</small>` : ''}</span></a></li>`).join('')}</ol></section>` : ''}
