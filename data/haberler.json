@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-18T21:31:47.320Z",
+ "guncelleme": "2026-11-18T21:58:47.031Z",
  "hikayeler": [
   {
    "id": "2r80dh",
@@ -3823,7 +3823,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-17T14:17:00+03:00",
-   "sonGuncelleme": "2026-11-18T21:31:40.026Z",
+   "sonGuncelleme": "2026-11-18T21:58:31.356Z",
    "kaynaklar": [
     {
      "kaynakId": "haberturk-mersin",
@@ -4595,7 +4595,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-17T19:11:00.000Z",
-   "sonGuncelleme": "2026-11-18T21:31:38.539Z",
+   "sonGuncelleme": "2026-11-18T21:58:30.288Z",
    "kaynaklar": [
     {
      "kaynakId": "mersintime",
@@ -11818,8 +11818,7 @@
   {
    "id": "417d5l",
    "baslik": "Fransa’da onlarca polis İçişleri Bakanlığı önünde eylem yaptı",
-   "ozet": null,
-   "ozetIcinMetin": null,
+   "ozet": "Fransa'da Alliance sendikasının çağrısıyla İçişleri Bakanlığı önünde toplanan polisler, çalışma koşullarının iyileştirilmesi ve risk primlerinde artış talebiyle eylem yaptı. Eylemin ardından sendika temsilcileri İçişleri Bakanı Laurent Nunez ile bir araya geldi.",
    "ilceler": [],
    "genel": true,
    "kategori": "asayis",
@@ -11836,7 +11835,12 @@
      "baslik": "Fransa’da onlarca polis İçişleri Bakanlığı önünde eylem yaptı",
      "tarih": "2026-11-18T13:14:29.000Z"
     }
-   ]
+   ],
+   "trend": "içişleri bakanlığı",
+   "metinDenemesi": 1,
+   "yaziKaynak": "Anadolu Ajansı",
+   "yazimDenemesi": 1,
+   "metin": "Fransa'nın başkenti Paris'te bulunan İçişleri Bakanlığı binasının önünde Alliance sendikasının çağrısı üzerine bir araya gelen onlarca polis gösteri düzenledi. Ellerinde sendika bayrakları taşıyan emniyet mensupları, hükümetten çalışma şartlarının iyileştirilmesini, maaşlarında ve primlerinde artış yapılmasını talep etti.\n\nEylemde, ülkede son haftalarda yaşanan ve şiddet olaylarına sahne olan gösterilere dikkat çeken polisler, risk primlerinde yüzde 35 oranında artış istediklerini belirtti. Lise öğrencilerinin 17 Eylül'den beri eğitim koşullarının iyileştirilmesi ve öğretmen sayısının artırılması amacıyla sürdürdüğü protestoların yanı sıra Sarı Yelekliler de hayat pahalılığına karşı eylemlerine devam ediyor.\n\nLise öğrencisi protestolarında hükümetin taahhütleri yetersiz bulununca eylemler 4 Kasım'da yeniden hareketlenmişti. Bu süreçteki gösterilerde yaklaşık 300 eğitim personeli yaralanırken 8 bin kişi gözaltına alınmıştı.\n\nProtestoların ardından sendika temsilcileri, İçişleri Bakanı Laurent Nunez ile bir görüşme gerçekleştirdi."
   },
   {
    "id": "1bfosq4",
@@ -13415,7 +13419,7 @@
   {
    "id": "1uwterd",
    "baslik": "AK Parti Mersin’den eski il başkanı Ali Kılıç’a ahde vefa ziyareti",
-   "ozet": "AK Parti Mersin İl Başkanlığı, eski il başkanı Ali Kılıç'a ahde vefa ziyareti gerçekleştirdi. Ziyarette geçmiş dönem çalışmaları ve teşkilat tecrübeleri paylaşıldı.",
+   "ozet": "AK Parti Mersin İl Başkanlığı, eski il başkanı Ali Kılıç'a ahde vefa ziyaretinde bulundu. Ziyarette Kılıç, görev yaptığı döneme ait hatıra ve tecrübelerini heyetle paylaştı.",
    "ilceler": [],
    "genel": false,
    "kategori": "siyaset",
@@ -13433,9 +13437,13 @@
      "tarih": "2026-11-18T21:20:00.000Z"
     }
    ],
-   "metinDenemesi": 1,
+   "metinDenemesi": 2,
    "yaziKaynak": "Çukurova Gazetesi",
-   "yazimDenemesi": 1
+   "yazimDenemesi": 2,
+   "metin": "AK Parti Mersin İl Başkanlığı heyeti, eski il başkanı Ali Kılıç'ı ziyaret etti. Gerçekleştirilen ahde vefa buluşmasında eski başkan Kılıç, görev yaptığı döneme ilişkin hatıralarını ve teşkilat çalışmalarındaki deneyimlerini heyetle paylaştı.\n\nİl başkanlığının sosyal medya üzerinden yaptığı açıklamada, partiye ve teşkilata emek veren isimlerin katkılarının önemine vurgu yapıldı. Açıklamada ayrıca geçmişten alınan güçle birlik ve beraberlik içinde çalışmalara devam edileceği ifade edilerek \"Geçmişten geleceğe, aynı dava ve aynı heyecanla\" mesajı aktarıldı.",
+   "gorselKaynak": "yz",
+   "gorselPrompt": "A quiet residential street in Mersin with apartment buildings and citrus trees in the background, daytime lighting.. Realistic editorial news photograph, natural daylight, wide shot, sharp focus, no text, no letters, no watermark.",
+   "gorsel": "1uwterd.webp"
   },
   {
    "id": "rlcdhl",
@@ -13457,6 +13465,121 @@
      "link": "https://www.aa.com.tr/tr/gundem/budonun-bugunku-12-seferi-iptal-edildi/4129855",
      "baslik": "BUDO'nun bugünkü 12 seferi iptal edildi",
      "tarih": "2026-11-18T21:17:30.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1rabhiw",
+   "baslik": "Venezuela ve ABD, 2005'te Chavez döneminde kesilen askeri işbirliğini yeniden başlattı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-18T21:49:03.000Z",
+   "sonGuncelleme": "2026-11-18T21:58:33.733Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/dunya/venezuela-ve-abd-2005te-chavez-doneminde-kesilen-askeri-isbirligini-yeniden-baslatti/4129876",
+     "baslik": "Venezuela ve ABD, 2005'te Chavez döneminde kesilen askeri işbirliğini yeniden başlattı",
+     "tarih": "2026-11-18T21:49:03.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1hcy9g3",
+   "baslik": "Antep fıstığı kabuğundan gıdaların raf ömrünü uzatan ambalaj geliştirildi",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "egitim",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-18T21:21:35.000Z",
+   "sonGuncelleme": "2026-11-18T21:58:33.738Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/bilim-teknoloji/antep-fistigi-kabugundan-gidalarin-raf-omrunu-uzatan-ambalaj-gelistirildi/4129861",
+     "baslik": "Antep fıstığı kabuğundan gıdaların raf ömrünü uzatan ambalaj geliştirildi",
+     "tarih": "2026-11-18T21:21:35.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1p161uu",
+   "baslik": "Uzmanlardan ebeveynlere \"tatilde ders baskısı yapmayın\" uyarısı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "egitim",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-18T21:21:54.000Z",
+   "sonGuncelleme": "2026-11-18T21:58:33.743Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/gundem/uzmanlardan-ebeveynlere-tatilde-ders-baskisi-yapmayin-uyarisi/4129862",
+     "baslik": "Uzmanlardan ebeveynlere \"tatilde ders baskısı yapmayın\" uyarısı",
+     "tarih": "2026-11-18T21:21:54.000Z"
+    }
+   ]
+  },
+  {
+   "id": "5e93a0",
+   "baslik": "Çocuklarda omega-3 eksikliğine karşı haftada 2 öğün balık önerisi",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "saglik",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-18T21:21:59.000Z",
+   "sonGuncelleme": "2026-11-18T21:58:33.748Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/gundem/cocuklarda-omega-3-eksikligine-karsi-haftada-2-ogun-balik-onerisi/4129863",
+     "baslik": "Çocuklarda omega-3 eksikliğine karşı haftada 2 öğün balık önerisi",
+     "tarih": "2026-11-18T21:21:59.000Z"
+    }
+   ]
+  },
+  {
+   "id": "15nhnt3",
+   "baslik": "Tedarik süreci uzayan yedek parçaya yapılan zam ayıplı hizmet sayıldı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "ekonomi",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-18T21:22:10.000Z",
+   "sonGuncelleme": "2026-11-18T21:58:33.752Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/gundem/tedarik-sureci-uzayan-yedek-parcaya-yapilan-zam-ayipli-hizmet-sayildi/4129864",
+     "baslik": "Tedarik süreci uzayan yedek parçaya yapılan zam ayıplı hizmet sayıldı",
+     "tarih": "2026-11-18T21:22:10.000Z"
     }
    ]
   }

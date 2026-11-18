@@ -16,7 +16,7 @@
  },
  "gorsel": {
   "gun": "2026-11-19",
-  "adet": 1
+  "adet": 2
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -228,11 +228,39 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-18T21:31:45.373Z",
+  "guncelleme": "2026-11-18T21:58:35.598Z",
   "liste": [
    {
+    "baslik": "now",
+    "trafik": 2000
+   },
+   {
+    "baslik": "tuvalet",
+    "trafik": 2000
+   },
+   {
+    "baslik": "yer altı",
+    "trafik": 500
+   },
+   {
+    "baslik": "fox",
+    "trafik": 500
+   },
+   {
+    "baslik": "içişleri bakanlığı",
+    "trafik": 100
+   },
+   {
+    "baslik": "tekin bingöl",
+    "trafik": 100
+   },
+   {
     "baslik": "ösym",
-    "trafik": 10000
+    "trafik": 20000
+   },
+   {
+    "baslik": "yeralti",
+    "trafik": 500
    },
    {
     "baslik": "yasak elma",
@@ -241,34 +269,6 @@
    {
     "baslik": "19 kasım ne günü",
     "trafik": 200
-   },
-   {
-    "baslik": "mallorca",
-    "trafik": 100
-   },
-   {
-    "baslik": "mcdonalds",
-    "trafik": 200
-   },
-   {
-    "baslik": "anne hathaway",
-    "trafik": 200
-   },
-   {
-    "baslik": "işkur",
-    "trafik": 5000
-   },
-   {
-    "baslik": "aski su kesintisi",
-    "trafik": 500
-   },
-   {
-    "baslik": "voyager 1",
-    "trafik": 200
-   },
-   {
-    "baslik": "bedelli askerlik",
-    "trafik": 1000
    }
   ]
  },
