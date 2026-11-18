@@ -12,11 +12,15 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-18T07:25:46.952Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-18",
-  "adet": 4
+  "adet": 6
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -153,7 +157,9 @@
    "https://mersingundem.com/haber/13636/akdenizde-mahallede-senlik-var-coskusu-basladi.html",
    "https://mersingundem.com/haber/13637/mersinde-denize-dusen-beton-mikserinin-surucusu-hayatini-kaybetti.html",
    "https://mersingundem.com/haber/13638/genc-buyuksehir-olarak-mersinin-kiyilari-butun-haliyle-mersinlilerindir-diyoruz.html",
-   "https://mersingundem.com/haber/13639/baskan-erkin-kara-milletin-sesini-hicbir-kayyum-susturamaz.html"
+   "https://mersingundem.com/haber/13639/baskan-erkin-kara-milletin-sesini-hicbir-kayyum-susturamaz.html",
+   "https://mersingundem.com/haber/13641/turkiyede-her-gun-6-bin-kisi-banka-borcu-nedeniyle-yasal-takibe-giriyor.html",
+   "https://mersingundem.com/haber/13640/protez-tirnak-kursuna-katilan-kadinlar-kendi-is-yerlerini-acmayi-hedefliyor.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -166,47 +172,47 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-18T07:01:33.163Z",
+  "guncelleme": "2026-11-18T07:26:12.203Z",
   "liste": [
    {
-    "baslik": "romanya",
-    "trafik": 200
+    "baslik": "genelge",
+    "trafik": 500
    },
    {
-    "baslik": "fed faiz kararı ne zaman",
+    "baslik": "süper loto çekiliş sonuçları",
+    "trafik": 5000
+   },
+   {
+    "baslik": "gökhan töre",
     "trafik": 100
+   },
+   {
+    "baslik": "romanya",
+    "trafik": 500
    },
    {
     "baslik": "tsg",
     "trafik": 100
    },
    {
-    "baslik": "hava durumu antalya",
-    "trafik": 200
+    "baslik": "fed faiz kararı ne zaman",
+    "trafik": 100
    },
    {
     "baslik": "naim süleymanoğlu",
     "trafik": 200
    },
    {
-    "baslik": "quentin grimes",
+    "baslik": "hava durumu antalya",
     "trafik": 200
+   },
+   {
+    "baslik": "quentin grimes",
+    "trafik": 500
    },
    {
     "baslik": "xauusd",
     "trafik": 100
-   },
-   {
-    "baslik": "özlem zengin",
-    "trafik": 500
-   },
-   {
-    "baslik": "uğur bilgin",
-    "trafik": 200
-   },
-   {
-    "baslik": "ikamet",
-    "trafik": 2000
    }
   ]
  },
