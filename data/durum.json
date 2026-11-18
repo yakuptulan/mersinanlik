@@ -12,15 +12,11 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-18T09:01:20.551Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-18",
-  "adet": 14
+  "adet": 16
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -185,15 +181,23 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-18T09:01:42.975Z",
+  "guncelleme": "2026-11-18T09:31:34.941Z",
   "liste": [
+   {
+    "baslik": "kdz ereğli haber",
+    "trafik": 200
+   },
+   {
+    "baslik": "2028 avrupa futbol şampiyonası",
+    "trafik": 2000
+   },
    {
     "baslik": "motorin",
     "trafik": 2000
    },
    {
     "baslik": "sağlık",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "federal rezerv",
@@ -201,15 +205,11 @@
    },
    {
     "baslik": "chery tiggo 5x",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "muratpaşa belediyesi",
     "trafik": 200
-   },
-   {
-    "baslik": "amad diallo",
-    "trafik": 500
    },
    {
     "baslik": "genelge",
@@ -218,10 +218,6 @@
    {
     "baslik": "gökhan töre",
     "trafik": 500
-   },
-   {
-    "baslik": "süper loto çekiliş sonuçları",
-    "trafik": 5000
    },
    {
     "baslik": "romanya",
