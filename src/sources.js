@@ -174,7 +174,7 @@ export const KAYNAKLAR = [
     kapsam: 'kurum',
     yapayZekaOzeti: true,
     fotoKullan: true,
-    aktif: false,
+    aktif: true,
   },
   {
     id: 'mersin-ticaret-borsasi',
@@ -187,7 +187,7 @@ export const KAYNAKLAR = [
     yapayZekaOzeti: true,
     baslikEtiket: 'h2',
     fotoKullan: false, // sitede 'izinsiz kullanılamaz' notu var; sadece metinden kendi haberimizi yazarız
-    aktif: false,
+    aktif: false, // GitHub sunucularından bağlantı zaman aşımına uğruyor (Kasım 2026)
   },
   {
     id: 'tarsus-universitesi',
@@ -202,7 +202,7 @@ export const KAYNAKLAR = [
     kapsam: 'kurum',
     yapayZekaOzeti: true,
     fotoKullan: true,
-    aktif: false,
+    aktif: true,
   },
   {
     id: 'toros-universitesi',
@@ -217,7 +217,7 @@ export const KAYNAKLAR = [
     kapsam: 'kurum',
     yapayZekaOzeti: true,
     fotoKullan: true,
-    aktif: false,
+    aktif: true,
   },
   {
     id: 'il-saglik',
@@ -235,7 +235,7 @@ export const KAYNAKLAR = [
     kapsam: 'kurum',
     yapayZekaOzeti: true,
     fotoKullan: true,
-    aktif: false,
+    aktif: true,
   },
   // Denendi (Kasım 2026): Bozyazı ve Çamlıyayla belediyeleri çok seyrek ve metinsiz haber giriyor;
   // MESKİ haber sayfasında başlık bulunamadı; İl Kültür Turizm ana sayfası bakanlık haberleri veriyor.
