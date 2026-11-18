@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-18T06:32:34.032Z",
+ "guncelleme": "2026-11-18T07:01:55.707Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 17,
@@ -74,7 +74,7 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 17,
+   "sicaklik": 18,
    "durum": "Bulutlu",
    "gunler": [
     {
@@ -110,7 +110,7 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 17,
+   "sicaklik": 19,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -218,7 +218,7 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 11,
+   "sicaklik": 12,
    "durum": "Sisli",
    "gunler": [
     {
@@ -434,7 +434,7 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 17,
+   "sicaklik": 18,
    "durum": "Bulutlu",
    "gunler": [
     {
@@ -497,7 +497,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-18T06:32:38.170Z",
+  "guncelleme": "2026-11-18T07:01:59.867Z",
   "liste": [
    {
     "ad": "Anadolu Eczanesi",
@@ -766,7 +766,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-18T06:32:39.182Z",
+  "guncelleme": "2026-11-18T07:02:01.007Z",
   "liste": [
    {
     "tur": "su",
@@ -780,6 +780,41 @@
       "ad": "Silifke",
       "mahalleler": [
        "Atakent"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "TOROSLAR İLÇESİ SELÇUKLAR MAHALLESİNDE 90027 SOKAKTAKİ ANA BORU ARIZASI NEDENİYLE SAAT 11:30 A KADAR BİR KISIM SU KESİNTİSİ YAŞANACAKTIR.",
+    "baslangic": "2026-11-18T06:44:03.000Z",
+    "bitis": "2026-11-18T08:30:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "toroslar",
+      "ad": "Toroslar",
+      "mahalleler": [
+       "Selçuklar",
+       "Toroslar"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "MEZİTLİ İLÇESİ ÇAMLICA MAHALLESİNDE MEYDANA GELEN ŞEBEKE ARIZASI NEDENİYLE ÇAMLICA, KUYULUK VE ÇANKAYA MAHALLELERİNDE SAAT 13:00 A KADAR BİR KISIM SU KESİNTİSİ YAŞANACAKTIR.",
+    "baslangic": "2026-11-18T07:02:47.000Z",
+    "bitis": "2026-11-18T10:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "mezitli",
+      "ad": "Mezitli",
+      "mahalleler": [
+       "Çamlıca",
+       "Çankaya",
+       "Kuyuluk"
       ]
      }
     ]
@@ -974,7 +1009,7 @@
   "kaynakSaati": "2026-11-18 09:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-18T06:32:46.282Z",
+  "guncelleme": "2026-11-18T07:02:05.185Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -7756,18 +7791,18 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-18T06:32:46.829Z",
+  "guncelleme": "2026-11-18T07:02:06.346Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 21
+    "sayi": 25
    },
    {
-    "yol": "/haber/omer-celik-fon-dolandiricilari-hesap-verecek-1bprydr/",
+    "yol": "/piyasalar/",
     "sayi": 1
    },
    {
-    "yol": "/kategori/tum-haberler/",
+    "yol": "/haber/omer-celik-fon-dolandiricilari-hesap-verecek-1bprydr/",
     "sayi": 1
    },
    {
@@ -7777,15 +7812,15 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-18T06:33:34.618Z",
+  "guncelleme": "2026-11-18T07:02:08.060Z",
   "deniz": {
    "sicaklik": 21.9,
    "dalga": 0.22
   },
   "hava": {
-   "aqi": 41,
-   "pm25": 16.5,
-   "pm10": 20.9,
+   "aqi": 36,
+   "pm25": 12.8,
+   "pm10": 16.2,
    "uvMax": 1.6
   }
  }
