@@ -23,6 +23,7 @@ import { burcYaz } from './lib/burc.js';
 import { okunanlarGetir } from './lib/okunanlar.js';
 import { ulkeKodu } from './lib/bayrak.js';
 import { sayacGetir } from './lib/sayac.js';
+import { ucuslariGetir } from './lib/ucus.js';
 
 const DOSYA = path.resolve('data/servisler.json');
 const UA = 'mersinanlik.com iletisim@mersinanlik.com';
@@ -204,6 +205,13 @@ async function main() {
     yeni.sayac = { ...eski.sayac, ...Object.fromEntries(Object.entries(sy).filter(([, v]) => v != null)) };
   } catch (e) {
     console.warn('! Sayaçlar:', e.message);
+  }
+  // Çukurova Havalimanı uçuşları (her çalışmada; hata olursa eskisi kalır)
+  try {
+    yeni.ucus = await ucuslariGetir(UA);
+    console.log(`Uçuşlar: ${yeni.ucus.giden.length} giden, ${yeni.ucus.gelen.length} gelen`);
+  } catch (e) {
+    console.warn('! Uçuşlar:', e.message);
   }
   // Milli maçlardaki ülkelerin bayrakları (bir kez indirilir)
   const kodlar = new Set((yeni.spor?.milli?.maclar || eski.spor?.milli?.maclar || []).flatMap((m) => [ulkeKodu(m.ev), ulkeKodu(m.dep)]).filter(Boolean));

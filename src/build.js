@@ -6,6 +6,7 @@ import { yukle, yayindakiler, VERI_KLASORU } from './lib/store.js';
 import { ilceAdi } from './templates/layout.js';
 import * as S from './templates/sayfalar.js';
 import * as IS from './templates/ilceServis.js';
+import { ulasimSayfasi } from './templates/ulasim.js';
 import * as R from './templates/rehber.js';
 import * as B from './templates/bilgi.js';
 import { LIGLER } from './lib/spor.js';
@@ -91,6 +92,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
   ekle('/nobetci-eczane/', S.eczaneSayfasi({ servis }));
   ekle('/kesintiler/', S.kesintiSayfasi({ servis }));
   ekle('/trafik/', S.trafikSayfasi({ servis }));
+  ekle('/ulasim/', ulasimSayfasi({ servis, simdi }));
   if (ozetArsiv.length) {
     ekle('/gunun-ozeti/', S.ozetSayfasi({ ozet: ozetArsiv[0], arsiv: ozetArsiv, hikayeler, servis, son: true }));
     for (const o of ozetArsiv) ekle(`/gunun-ozeti/${o.tarih}/`, S.ozetSayfasi({ ozet: o, arsiv: ozetArsiv, hikayeler, servis }));
