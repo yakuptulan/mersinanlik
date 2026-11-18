@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-18T13:22:53.752Z",
+ "guncelleme": "2026-11-18T13:31:55.328Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 19,
@@ -497,7 +497,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-18T13:22:58.074Z",
+  "guncelleme": "2026-11-18T13:31:58.754Z",
   "liste": [
    {
     "ad": "Anadolu Eczanesi",
@@ -766,7 +766,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-18T13:22:59.095Z",
+  "guncelleme": "2026-11-18T13:32:00.017Z",
   "liste": []
  },
  "piyasa": {
@@ -941,7 +941,7 @@
   "kaynakSaati": "2026-11-18 16:22:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-18T13:23:03.884Z",
+  "guncelleme": "2026-11-18T13:32:06.504Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -1750,7 +1750,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-18T12:31:50.353Z",
+  "guncelleme": "2026-11-18T13:32:09.180Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -2352,38 +2352,6 @@
     {
      "tarih": "2026-11-15",
      "saat": "13:00",
-     "ev": "Adanaspor",
-     "skor": "4-0",
-     "dep": "Yozgat Belediyesi Bozok Spor",
-     "mersin": false
-    },
-    {
-     "tarih": "2026-11-15",
-     "saat": "13:00",
-     "ev": "Eti Gübre Mazıdağı Fosfat Spor",
-     "skor": "2-0",
-     "dep": "Niğde Belediyesi Spor",
-     "mersin": false
-    },
-    {
-     "tarih": "2026-11-15",
-     "saat": "13:00",
-     "ev": "Halil Bayram İnşaat Karaköprü Belediyespor",
-     "skor": "4-1",
-     "dep": "Ağrı 1970 Spor",
-     "mersin": false
-    },
-    {
-     "tarih": "2026-11-15",
-     "saat": "13:00",
-     "ev": "Yeni Mersin İdmanyurdu",
-     "skor": null,
-     "dep": "Karaman",
-     "mersin": true
-    },
-    {
-     "tarih": "2026-11-15",
-     "saat": "13:00",
      "ev": "Diyarbekir Spor",
      "skor": "3-1",
      "dep": "1964 Silifke Spor",
@@ -2407,11 +2375,43 @@
     },
     {
      "tarih": "2026-11-15",
+     "saat": "13:00",
+     "ev": "Adanaspor",
+     "skor": "4-0",
+     "dep": "Yozgat Belediyesi Bozok Spor",
+     "mersin": false
+    },
+    {
+     "tarih": "2026-11-15",
+     "saat": "13:00",
+     "ev": "Eti Gübre Mazıdağı Fosfat Spor",
+     "skor": "2-0",
+     "dep": "Niğde Belediyesi Spor",
+     "mersin": false
+    },
+    {
+     "tarih": "2026-11-15",
+     "saat": "13:00",
+     "ev": "Halil Bayram İnşaat Karaköprü Belediyespor",
+     "skor": "4-1",
+     "dep": "Ağrı 1970 Spor",
+     "mersin": false
+    },
+    {
+     "tarih": "2026-11-15",
      "saat": "15:30",
      "ev": "Malatya Yeşilyurt Spor",
      "skor": "6-2",
      "dep": "Adana Adaletgücü Spor",
      "mersin": false
+    },
+    {
+     "tarih": "2026-12-02",
+     "saat": "14:00",
+     "ev": "Yeni Mersin İdmanyurdu",
+     "skor": null,
+     "dep": "Karaman",
+     "mersin": true
     }
    ]
   },
@@ -4179,6 +4179,20 @@
      },
      {
       "sira": 10,
+      "takim": "68 Aksaray Belediye Spor",
+      "ham": "68 AKSARAY BELEDİYE SPOR",
+      "o": 12,
+      "g": 4,
+      "b": 3,
+      "m": 5,
+      "a": 23,
+      "y": 19,
+      "av": 4,
+      "p": 15,
+      "mersin": false
+     },
+     {
+      "sira": 11,
       "takim": "Isbaş Isparta 32 Spor",
       "ham": "ISBAŞ ISPARTA 32 SPOR KULÜBÜ",
       "o": 12,
@@ -4192,7 +4206,7 @@
       "mersin": false
      },
      {
-      "sira": 11,
+      "sira": 12,
       "takim": "Menemen",
       "ham": "MENEMEN FUTBOL KULÜBÜ",
       "o": 12,
@@ -4206,7 +4220,7 @@
       "mersin": false
      },
      {
-      "sira": 12,
+      "sira": 13,
       "takim": "Ankaraspor",
       "ham": "ANKARASPOR",
       "o": 12,
@@ -4217,20 +4231,6 @@
       "y": 21,
       "av": -5,
       "p": 13,
-      "mersin": false
-     },
-     {
-      "sira": 13,
-      "takim": "68 Aksaray Belediye Spor",
-      "ham": "68 AKSARAY BELEDİYE SPOR",
-      "o": 11,
-      "g": 3,
-      "b": 3,
-      "m": 5,
-      "a": 20,
-      "y": 17,
-      "av": 3,
-      "p": 12,
       "mersin": false
      },
      {
@@ -4265,13 +4265,13 @@
       "sira": 16,
       "takim": "Arkent Arnavutköy Belediyesi Futbol SK",
       "ham": "ARKENT ARNAVUTKÖY BELEDİYESİ FUTBOL SK",
-      "o": 11,
+      "o": 12,
       "g": 1,
       "b": 1,
-      "m": 9,
-      "a": 7,
-      "y": 23,
-      "av": -16,
+      "m": 10,
+      "a": 9,
+      "y": 26,
+      "av": -17,
       "p": 1,
       "mersin": false
      },
@@ -4357,7 +4357,7 @@
       "tarih": "2026-11-18",
       "saat": "14:00",
       "ev": "Arkent Arnavutköy Belediyesi Futbol SK",
-      "skor": null,
+      "skor": "2-3",
       "dep": "68 Aksaray Belediye Spor",
       "mersin": false
      },
@@ -4773,6 +4773,13 @@
       "G",
       "G"
      ],
+     "68 Aksaray Belediye Spor": [
+      "G",
+      "M",
+      "M",
+      "M",
+      "G"
+     ],
      "Isbaş Isparta 32 Spor": [
       "B",
       "M",
@@ -4793,13 +4800,6 @@
       "M",
       "G",
       "B"
-     ],
-     "68 Aksaray Belediye Spor": [
-      "G",
-      "M",
-      "M",
-      "M",
-      "G"
      ],
      "Somaspor": [
       "M",
@@ -5001,18 +5001,32 @@
       "sira": 12,
       "takim": "Kırklarelispor",
       "ham": "KIRKLARELİSPOR",
-      "o": 10,
+      "o": 11,
       "g": 2,
-      "b": 3,
+      "b": 4,
       "m": 5,
-      "a": 8,
-      "y": 15,
+      "a": 9,
+      "y": 16,
       "av": -7,
-      "p": 9,
+      "p": 10,
       "mersin": false
      },
      {
       "sira": 13,
+      "takim": "Mke Ankaragücü",
+      "ham": "MKE ANKARAGÜCÜ",
+      "o": 11,
+      "g": 2,
+      "b": 5,
+      "m": 4,
+      "a": 17,
+      "y": 16,
+      "av": 1,
+      "p": 8,
+      "mersin": false
+     },
+     {
+      "sira": 14,
       "takim": "Fethiyespor",
       "ham": "FETHİYESPOR",
       "o": 10,
@@ -5023,20 +5037,6 @@
       "y": 20,
       "av": -10,
       "p": 8,
-      "mersin": false
-     },
-     {
-      "sira": 14,
-      "takim": "Mke Ankaragücü",
-      "ham": "MKE ANKARAGÜCÜ",
-      "o": 10,
-      "g": 2,
-      "b": 4,
-      "m": 4,
-      "a": 16,
-      "y": 15,
-      "av": 1,
-      "p": 7,
       "mersin": false
      },
      {
@@ -5119,7 +5119,7 @@
       "tarih": "2026-11-18",
       "saat": "14:00",
       "ev": "Mke Ankaragücü",
-      "skor": null,
+      "skor": "1-1",
       "dep": "Kırklarelispor",
       "mersin": false
      },
@@ -5413,13 +5413,13 @@
        "skor": null
       },
       {
-       "ev": "Ekinciler İskenderunspor",
-       "dep": "Mke Ankaragücü",
+       "ev": "Akedaş Kahramanmaraş İstiklal Spor",
+       "dep": "Adana 01 Futbol Kulübü SK",
        "skor": null
       },
       {
-       "ev": "Akedaş Kahramanmaraş İstiklal Spor",
-       "dep": "Adana 01 Futbol Kulübü SK",
+       "ev": "Ekinciler İskenderunspor",
+       "dep": "Mke Ankaragücü",
        "skor": null
       },
       {
@@ -5525,17 +5525,17 @@
       "B",
       "G"
      ],
-     "Fethiyespor": [
-      "B",
-      "M",
-      "G",
-      "M"
-     ],
      "Mke Ankaragücü": [
       "B",
       "B",
       "B",
       "M",
+      "M"
+     ],
+     "Fethiyespor": [
+      "B",
+      "M",
+      "G",
       "M"
      ],
      "Serik Spor": [
@@ -7321,38 +7321,6 @@
      {
       "tarih": "2026-11-15",
       "saat": "13:00",
-      "ev": "Adanaspor",
-      "skor": "4-0",
-      "dep": "Yozgat Belediyesi Bozok Spor",
-      "mersin": false
-     },
-     {
-      "tarih": "2026-11-15",
-      "saat": "13:00",
-      "ev": "Eti Gübre Mazıdağı Fosfat Spor",
-      "skor": "2-0",
-      "dep": "Niğde Belediyesi Spor",
-      "mersin": false
-     },
-     {
-      "tarih": "2026-11-15",
-      "saat": "13:00",
-      "ev": "Halil Bayram İnşaat Karaköprü Belediyespor",
-      "skor": "4-1",
-      "dep": "Ağrı 1970 Spor",
-      "mersin": false
-     },
-     {
-      "tarih": "2026-11-15",
-      "saat": "13:00",
-      "ev": "Yeni Mersin İdmanyurdu",
-      "skor": null,
-      "dep": "Karaman",
-      "mersin": true
-     },
-     {
-      "tarih": "2026-11-15",
-      "saat": "13:00",
       "ev": "Diyarbekir Spor",
       "skor": "3-1",
       "dep": "1964 Silifke Spor",
@@ -7376,11 +7344,43 @@
      },
      {
       "tarih": "2026-11-15",
+      "saat": "13:00",
+      "ev": "Adanaspor",
+      "skor": "4-0",
+      "dep": "Yozgat Belediyesi Bozok Spor",
+      "mersin": false
+     },
+     {
+      "tarih": "2026-11-15",
+      "saat": "13:00",
+      "ev": "Eti Gübre Mazıdağı Fosfat Spor",
+      "skor": "2-0",
+      "dep": "Niğde Belediyesi Spor",
+      "mersin": false
+     },
+     {
+      "tarih": "2026-11-15",
+      "saat": "13:00",
+      "ev": "Halil Bayram İnşaat Karaköprü Belediyespor",
+      "skor": "4-1",
+      "dep": "Ağrı 1970 Spor",
+      "mersin": false
+     },
+     {
+      "tarih": "2026-11-15",
       "saat": "15:30",
       "ev": "Malatya Yeşilyurt Spor",
       "skor": "6-2",
       "dep": "Adana Adaletgücü Spor",
       "mersin": false
+     },
+     {
+      "tarih": "2026-12-02",
+      "saat": "14:00",
+      "ev": "Yeni Mersin İdmanyurdu",
+      "skor": null,
+      "dep": "Karaman",
+      "mersin": true
      }
     ],
     "haftalar": {
@@ -7579,26 +7579,6 @@
        "skor": "3-0"
       },
       {
-       "ev": "Adanaspor",
-       "dep": "Yozgat Belediyesi Bozok Spor",
-       "skor": "4-0"
-      },
-      {
-       "ev": "Eti Gübre Mazıdağı Fosfat Spor",
-       "dep": "Niğde Belediyesi Spor",
-       "skor": "2-0"
-      },
-      {
-       "ev": "Halil Bayram İnşaat Karaköprü Belediyespor",
-       "dep": "Ağrı 1970 Spor",
-       "skor": "4-1"
-      },
-      {
-       "ev": "Yeni Mersin İdmanyurdu",
-       "dep": "Karaman",
-       "skor": null
-      },
-      {
        "ev": "Diyarbekir Spor",
        "dep": "1964 Silifke Spor",
        "skor": "3-1"
@@ -7614,9 +7594,29 @@
        "skor": "3-1"
       },
       {
+       "ev": "Adanaspor",
+       "dep": "Yozgat Belediyesi Bozok Spor",
+       "skor": "4-0"
+      },
+      {
+       "ev": "Eti Gübre Mazıdağı Fosfat Spor",
+       "dep": "Niğde Belediyesi Spor",
+       "skor": "2-0"
+      },
+      {
+       "ev": "Halil Bayram İnşaat Karaköprü Belediyespor",
+       "dep": "Ağrı 1970 Spor",
+       "skor": "4-1"
+      },
+      {
        "ev": "Malatya Yeşilyurt Spor",
        "dep": "Adana Adaletgücü Spor",
        "skor": "6-2"
+      },
+      {
+       "ev": "Yeni Mersin İdmanyurdu",
+       "dep": "Karaman",
+       "skor": null
       }
      ],
      "13": [
@@ -7812,7 +7812,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-18T13:23:04.325Z",
+  "guncelleme": "2026-11-18T13:32:07.264Z",
   "liste": [
    {
     "yol": "/",
@@ -7833,7 +7833,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-18T13:23:06.624Z",
+  "guncelleme": "2026-11-18T13:32:51.884Z",
   "deniz": {
    "sicaklik": 22,
    "dalga": 0.18
