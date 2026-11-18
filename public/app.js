@@ -430,7 +430,7 @@
   sesSec();
   if (ss.onvoiceschanged !== undefined) ss.addEventListener('voiceschanged', sesSec);
   var metin = dugme.querySelector('[data-dinle-metin]');
-  function bitir() { ss.cancel(); dugme.classList.remove('caliyor'); metin.textContent = 'Haberi dinle'; }
+  function bitir() { ss.cancel(); dugme.classList.remove('caliyor'); metin.textContent = 'Sesli dinle'; }
   dugme.addEventListener('click', function () {
     if (dugme.classList.contains('caliyor')) return bitir();
     var yazi = dugme.closest('article');

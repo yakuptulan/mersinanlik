@@ -11,6 +11,7 @@ import * as S from './templates/sayfalar.js';
 import * as IS from './templates/ilceServis.js';
 import { ulasimSayfasi } from './templates/ulasim.js';
 import { gundemimSayfasi, akisVerisi } from './templates/gundemim.js';
+import { geziListeSayfasi, geziSayfasi, geziYerleri, geziYolu } from './templates/gezi.js';
 import { arsivAySayfasi } from './templates/arsiv.js';
 import { arsivYukle } from './lib/arsiv.js';
 import * as R from './templates/rehber.js';
@@ -137,6 +138,13 @@ export function insaEt({ simdi = Date.now() } = {}) {
   ekle('/ulasim/', ulasimSayfasi({ servis, simdi }));
   ekle('/okullar-tatil-mi/', okulSayfasi({ okul, servis, simdi }));
   ekle('/gundemim/', gundemimSayfasi({ servis, simdi }));
+  let geziVeri = null;
+  try {
+    geziVeri = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'gezi.json'), 'utf8'));
+  } catch {}
+  const geziler = geziYerleri(geziVeri);
+  ekle('/gezi/', geziListeSayfasi({ yerler: geziler, servis }));
+  for (const yer of geziler) ekle(geziYolu(yer.slug), geziSayfasi({ yer, yerler: geziler, servis }));
   if (ozetArsiv.length) {
     ekle('/gunun-ozeti/', S.ozetSayfasi({ ozet: ozetArsiv[0], arsiv: ozetArsiv, hikayeler, servis, son: true }));
     for (const o of ozetArsiv) ekle(`/gunun-ozeti/${o.tarih}/`, S.ozetSayfasi({ ozet: o, arsiv: ozetArsiv, hikayeler, servis }));

@@ -80,6 +80,11 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
+      - name: Gezi rehberi (günde birkaç yer)
+        run: node src/gezi.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
       - name: Hafta sonu rehberi (perşembe/cuma)
         run: node src/haftasonu.js ${{ inputs.haftasonu_zorla && '--simdi' || '' }}
         env:
@@ -95,7 +100,7 @@ jobs:
         run: |
           git config user.name "mersinanlik-bot"
           git config user.email "bot@mersinanlik.com"
-          git add -A data/ public/foto/ public/uretilen/ public/etkinlik/ public/bilgi/ public/bayrak/
+          git add -A data/ public/foto/ public/uretilen/ public/etkinlik/ public/bilgi/ public/gezi/ public/bayrak/
           if git diff --cached --quiet; then
             echo "Değişiklik yok"
           else

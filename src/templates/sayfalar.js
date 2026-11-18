@@ -473,7 +473,7 @@ export function kategoriSayfasi({ kategori, hikayeler, servis }) {
 }
 
 // "Dinle": haberi tarayıcının Türkçe sesiyle okur (ses yoksa düğme gizli kalır)
-export const dinleDugmesi = () => `<button type="button" class="dinle" data-dinle hidden><span class="dinle-ikon" aria-hidden="true">🔊</span><span data-dinle-metin>Haberi dinle</span></button>`;
+export const dinleDugmesi = () => `<button type="button" class="dinle" data-dinle hidden><span class="dinle-ikon" aria-hidden="true">🔊</span><span data-dinle-metin>Sesli dinle</span></button>`;
 
 // ---------- Konu sayfaları ----------
 export function konuSayfasi({ konu, konular, servis }) {
@@ -806,7 +806,7 @@ ${(servis?.elektrikHaber || []).length ? `<div class="yan-liste" style="margin-b
 export function menuSayfasi() {
   const linkler = [
     ['/', 'Ana sayfa'], ['/gundemim/', '⭐ Benim Gündemim'], ['/ilceler/', 'İlçeler'], ['/nobetci-eczane/', 'Nöbetçi eczane'], ['/kesintiler/', 'Kesintiler'],
-    ['/hava-durumu/', 'Hava durumu'], ['/deprem/', 'Son depremler'], ['/piyasalar/', 'Altın ve döviz'], ['/spor/', 'Spor'], ['/bilgi/', 'Merak edilenler'], ['/etkinlikler/', 'Etkinlikler'], ['/rehber/', 'Mersin rehberi'], ['/burclar/', 'Burçlar'], ['/tatil-takvimi/', 'Tatil takvimi'], ['/rehber/acil-telefonlar/', 'Acil telefonlar'], ['/namaz-vakitleri/', 'Namaz vakitleri'],
+    ['/hava-durumu/', 'Hava durumu'], ['/deprem/', 'Son depremler'], ['/piyasalar/', 'Altın ve döviz'], ['/spor/', 'Spor'], ['/bilgi/', 'Merak edilenler'], ['/etkinlikler/', 'Etkinlikler'], ['/rehber/', 'Mersin rehberi'], ['/gezi/', 'Gezi rehberi'], ['/burclar/', 'Burçlar'], ['/tatil-takvimi/', 'Tatil takvimi'], ['/rehber/acil-telefonlar/', 'Acil telefonlar'], ['/namaz-vakitleri/', 'Namaz vakitleri'],
     ['/akaryakit-fiyatlari/', 'Akaryakıt fiyatları'], ['/ulasim/', 'Uçuşlar ve ulaşım'], ['/okullar-tatil-mi/', 'Okullar tatil mi?'], ['/konular/', 'Konular'], ['/arsiv/', 'Haber arşivi'], ['/ara/', 'Haber ara'], ['/kunye/', 'Künye'],
     ['/iletisim/', 'İletişim'], ['/kaynaklarimiz/', 'Kaynaklarımız'], ['/gizlilik/', 'Gizlilik'],
   ];

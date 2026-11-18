@@ -90,7 +90,7 @@ ${f ? `<figure class="rehber-foto"><img src="/foto/${f.id}-800.webp" alt="${h(b.
     yol: '/rehber/gezilecek-yerler/',
     aktif: '/rehber/',
     ust: ust("Mersin'de gezilecek yerler", 'Tarih, deniz ve yayla: ilçe ilçe öneriler'),
-    icerik: `<main class="kap govde"><div class="ana">${bolumler}
+    icerik: `<main class="kap govde"><div class="ana"><a class="gm-davet" href="/gezi/" style="margin-top:0"><span class="gm-davet-ikon" aria-hidden="true">🧭</span><span class="gm-davet-metin"><strong>Yer yer gezi rehberi</strong><small>Nerede, nasıl gidilir, ne zaman gidilir, yakında ne var: her yer için ayrı sayfa</small></span><span class="gm-davet-ok" aria-hidden="true">→</span></a>${bolumler}
 ${paylasCubugu(`${SITE.url}/rehber/gezilecek-yerler/`, "Mersin'de gezilecek yerler")}
 <p style="color:var(--ikincil);font-size:15px">Ziyaret saatleri ve ücretler değişebilir; gitmeden önce müze ve ören yerlerinin güncel bilgisini kontrol edin.</p></div>${yanKutular(servis)}</main>`,
   });
