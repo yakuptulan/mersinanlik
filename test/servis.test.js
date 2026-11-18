@@ -44,6 +44,12 @@ test('trendler: RSS ve başlık eşleşmesi', () => {
   assert.ok(trendEslesir('galatasaray', "Galatasaray'ın yeni transferi belli oldu"));
   assert.ok(!trendEslesir('henry cavill', 'Henry Ford fabrikası'));
   assert.ok(!trendEslesir('ab', 'Abdullah'));
+  assert.ok(!trendEslesir('gaz', "DSÖ'den Gazze'de hipotermi uyarısı"));
+  assert.ok(!trendEslesir('çin', 'Halkla ilişkilerden çini ustalığına'));
+  assert.ok(!trendEslesir('2. lig', "Fenerbahçe, Avrupa Ligi'nde yarın sahada"));
+  assert.ok(!trendEslesir('istanbul', 'İstanbul için lodos uyarısı'));
+  assert.ok(trendEslesir('juan mata', 'Juan Mata, 38 yaşında futbolculuk kariyerini noktaladı'));
+  assert.ok(trendEslesir('zeki murat göle', 'Fenerbahçe Yardımcı Antrenörü Zeki Murat Göle kulübe veda etti'));
 });
 
 import { puanCoz, haftaCoz, milliCoz, takimAdi } from '../src/lib/spor.js';

@@ -14,6 +14,7 @@ import { AYAR } from './config.js';
 import { gorselUretimHazirMi, gorselUret, gorselAdaylari, sahipsizleriSil, kurumFotosuIndir } from './lib/gorsel-uret.js';
 import { kurumOku, kurumMetniGetir } from './lib/kurum.js';
 import { trendGetir, trendEslesir } from './lib/trend.js';
+import { kucuk } from './lib/text.js';
 
 // Hikâyenin bir kurum kaynağı varsa (belediye vb.) o kaynağı ve kaydını döndürür
 function kurumKaynagi(h) {
@@ -158,10 +159,22 @@ async function main() {
   }
   const trendler = durum.trendler?.liste || [];
   let trendSayi = 0;
+  // Eski, gevşek kuralla verilmiş eşleşmeleri temizle (her arama için tek haber kalsın)
+  const gorulenTrend = new Set();
+  const trafikBul = (t) => trendler.find((x) => kucuk(x.baslik) === kucuk(t))?.trafik ?? 0;
+  for (const h of [...veri.hikayeler].sort((a, b) => new Date(a.ilkGorulme) - new Date(b.ilkGorulme))) {
+    if (!h.trend) continue;
+    const k = kucuk(h.trend);
+    if (!trendEslesir(h.trend, h.baslik, trafikBul(h.trend)) || gorulenTrend.has(k)) delete h.trend;
+    else gorulenTrend.add(k);
+  }
+  // Her çok aranan konu için en fazla bir haber öne çıkar (aynı aramaya onlarca haber bağlanmasın)
+  const kullanilan = new Set(veri.hikayeler.filter((h) => h.trend).map((h) => kucuk(h.trend)));
   for (const h of veri.hikayeler) {
     if (!h.genel || h.trend) continue;
-    const t = trendler.find((x) => trendEslesir(x.baslik, h.baslik));
+    const t = trendler.find((x) => !kullanilan.has(kucuk(x.baslik)) && trendEslesir(x.baslik, h.baslik, x.trafik));
     if (t) {
+      kullanilan.add(kucuk(t.baslik));
       h.trend = t.baslik;
       trendSayi++;
     }
