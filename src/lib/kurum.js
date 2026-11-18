@@ -85,7 +85,7 @@ export async function kurumMetniGetir(link, kaynak) {
 // bilinen(link) → zaten kayıtlı haberse detay sayfası tekrar indirilmez.
 // gorulen: bu kaynakta daha önce görülen linkler (durum.json'da saklanır). İlk çalışmada
 // liste sadece kaydedilir; tarihi belli olmayan eski haberler "yeni" diye yayınlanmasın.
-export async function kurumOku(kaynak, { bilinen = () => false, gorulen = null } = {}) {
+export async function kurumOku(kaynak, { bilinen = () => false, gorulen = null, eskiDahil = false } = {}) {
   const desen = new RegExp(kaynak.linkDesen, 'i');
   const tumu = [];
   for (const adres of [].concat(kaynak.liste)) {
@@ -107,7 +107,7 @@ export async function kurumOku(kaynak, { bilinen = () => false, gorulen = null }
     try {
       const d = detayCoz(await sayfaGetir(link), link, kaynak);
       // Tarihi olan eski haberleri (3 günden eski) alma; tarihsizleri ilk çalışmada alma
-      if (d.tarih && Date.now() - new Date(d.tarih).getTime() > 3 * 864e5) continue;
+      if (!eskiDahil && d.tarih && Date.now() - new Date(d.tarih).getTime() > 3 * 864e5) continue;
       if (!d.tarih && ilkKez) continue;
       // Adreste ilçe varsa (ör. DHA: /yerel-haberler/mersin/tarsus/...) ilçe adını metne ekle
       if (kaynak.ilceLinkten) {

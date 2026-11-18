@@ -70,13 +70,14 @@ Yalnızca JSON döndür: {"gruplar": [[1, 4], [2, 7, 9]]}. Aynı olay yoksa {"gr
 async function dene(id) {
   const kaynak = KAYNAKLAR.find((k) => k.id === id);
   if (!kaynak) throw new Error(`Kaynak bulunamadı: ${id}`);
-  const haberler = kaynak.tur === 'html' ? await kurumOku(kaynak) : await kaynakOku(kaynak);
+  const haberler = kaynak.tur === 'html' ? await kurumOku(kaynak, { eskiDahil: true }) : await kaynakOku(kaynak);
   let mersin = 0;
   for (const h of haberler) {
     const d = haberiDegerlendir(h, kaynak);
     if (!d) continue;
     if (!d.genel) mersin++;
     console.log(`${d.genel ? '·' : '✓'} [${d.genel ? 'genel' : d.ilceler.join(',') || 'mersin'}] [${d.kategori}]${d.riskNedenleri.length ? ' [RİSKLİ]' : ''} ${d.baslik}${h.govde !== undefined ? ` (metin ${h.govde.length} kr${h.foto ? ', foto' : ''})` : ''}`);
+    if (kaynak.tur === 'html') console.log(`    tarih: ${h.tarih || '-'} · foto: ${h.foto || '-'} · ${h.link}`);
   }
   console.log(`\n${haberler.length} haber okundu, ${mersin} tanesi Mersin ile ilgili.`);
 }
