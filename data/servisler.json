@@ -1,14 +1,14 @@
 {
- "guncelleme": "2026-11-18T15:13:37.854Z",
+ "guncelleme": "2026-11-18T15:32:03.486Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 19,
+   "sicaklik": 18,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-18",
      "min": 16,
-     "max": 19,
+     "max": 18,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -497,7 +497,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-18T15:13:41.271Z",
+  "guncelleme": "2026-11-18T15:32:07.627Z",
   "liste": [
    {
     "ad": "Anadolu Eczanesi",
@@ -766,8 +766,25 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-18T15:13:42.239Z",
-  "liste": []
+  "guncelleme": "2026-11-18T15:32:08.726Z",
+  "liste": [
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Mut ilçesi Kelceköy Mahallesi'nde içme suyu arızası nedeniyle sular kesilmiştir. Arızanın giderilerek suların tekrar verilmesi saat 21:00 olarak planlanmaktadır.",
+    "baslangic": "2026-11-18T15:25:00.000Z",
+    "bitis": "2026-11-18T18:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "mut",
+      "ad": "Mut",
+      "mahalleler": [
+       "Kelceköy"
+      ]
+     }
+    ]
+   }
+  ]
  },
  "piyasa": {
   "guncelleme": "2026-11-18T15:02:16.478Z",
@@ -941,7 +958,7 @@
   "kaynakSaati": "2026-11-18 18:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-18T15:02:19.157Z",
+  "guncelleme": "2026-11-18T15:32:13.696Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -1646,7 +1663,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-18T12:26:40.038Z",
+  "guncelleme": "2026-11-18T15:32:17.378Z",
   "liste": [
    {
     "id": "48wy1j",
@@ -1750,7 +1767,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-18T14:32:37.271Z",
+  "guncelleme": "2026-11-18T15:32:17.378Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -4095,6 +4112,34 @@
      },
      {
       "sira": 4,
+      "takim": "Aliağa",
+      "ham": "ALİAĞA FUTBOL A.Ş.",
+      "o": 12,
+      "g": 8,
+      "b": 2,
+      "m": 2,
+      "a": 22,
+      "y": 15,
+      "av": 7,
+      "p": 26,
+      "mersin": false
+     },
+     {
+      "sira": 5,
+      "takim": "Kızılkaya Tarım Şanlıurfaspor",
+      "ham": "KIZILKAYA TARIM ŞANLIURFASPOR",
+      "o": 12,
+      "g": 7,
+      "b": 3,
+      "m": 2,
+      "a": 28,
+      "y": 14,
+      "av": 14,
+      "p": 24,
+      "mersin": false
+     },
+     {
+      "sira": 6,
       "takim": "İnegöl Kafkas Spor",
       "ham": "İNEGÖL KAFKAS SPOR KULÜBÜ",
       "o": 12,
@@ -4105,34 +4150,6 @@
       "y": 15,
       "av": 7,
       "p": 23,
-      "mersin": false
-     },
-     {
-      "sira": 5,
-      "takim": "Aliağa",
-      "ham": "ALİAĞA FUTBOL A.Ş.",
-      "o": 11,
-      "g": 7,
-      "b": 2,
-      "m": 2,
-      "a": 20,
-      "y": 15,
-      "av": 5,
-      "p": 23,
-      "mersin": false
-     },
-     {
-      "sira": 6,
-      "takim": "Kızılkaya Tarım Şanlıurfaspor",
-      "ham": "KIZILKAYA TARIM ŞANLIURFASPOR",
-      "o": 11,
-      "g": 6,
-      "b": 3,
-      "m": 2,
-      "a": 26,
-      "y": 13,
-      "av": 13,
-      "p": 21,
       "mersin": false
      },
      {
@@ -4153,13 +4170,13 @@
       "sira": 8,
       "takim": "Efor Çay Erbaaspor",
       "ham": "EFOR ÇAY ERBAASPOR",
-      "o": 11,
+      "o": 12,
       "g": 5,
       "b": 2,
-      "m": 4,
-      "a": 20,
-      "y": 15,
-      "av": 5,
+      "m": 5,
+      "a": 21,
+      "y": 17,
+      "av": 4,
       "p": 17,
       "mersin": false
      },
@@ -4167,13 +4184,13 @@
       "sira": 9,
       "takim": "Sebat Spor",
       "ham": "SEBAT SPOR KULÜBÜ",
-      "o": 11,
+      "o": 12,
       "g": 4,
       "b": 3,
-      "m": 4,
+      "m": 5,
       "a": 25,
-      "y": 16,
-      "av": 9,
+      "y": 18,
+      "av": 7,
       "p": 15,
       "mersin": false
      },
@@ -4365,7 +4382,7 @@
       "tarih": "2026-11-18",
       "saat": "15:30",
       "ev": "Aliağa",
-      "skor": null,
+      "skor": "2-0",
       "dep": "Sebat Spor",
       "mersin": false
      },
@@ -4373,7 +4390,7 @@
       "tarih": "2026-11-18",
       "saat": "15:30",
       "ev": "Kızılkaya Tarım Şanlıurfaspor",
-      "skor": null,
+      "skor": "2-1",
       "dep": "Efor Çay Erbaaspor",
       "mersin": false
      }
@@ -4648,17 +4665,17 @@
       {
        "ev": "Arkent Arnavutköy Belediyesi Futbol SK",
        "dep": "68 Aksaray Belediye Spor",
-       "skor": null
+       "skor": "2-3"
       },
       {
        "ev": "Aliağa",
        "dep": "Sebat Spor",
-       "skor": null
+       "skor": "2-0"
       },
       {
        "ev": "Kızılkaya Tarım Şanlıurfaspor",
        "dep": "Efor Çay Erbaaspor",
-       "skor": null
+       "skor": "2-1"
       }
      ],
      "13": [
@@ -4731,25 +4748,25 @@
       "M",
       "G"
      ],
+     "Aliağa": [
+      "G",
+      "M",
+      "B",
+      "B",
+      "G"
+     ],
+     "Kızılkaya Tarım Şanlıurfaspor": [
+      "G",
+      "G",
+      "M",
+      "G",
+      "G"
+     ],
      "İnegöl Kafkas Spor": [
       "G",
       "G",
       "M",
       "B",
-      "G"
-     ],
-     "Aliağa": [
-      "G",
-      "G",
-      "M",
-      "B",
-      "B"
-     ],
-     "Kızılkaya Tarım Şanlıurfaspor": [
-      "G",
-      "G",
-      "G",
-      "M",
       "G"
      ],
      "Çorlu Spor 1947": [
@@ -4760,24 +4777,24 @@
       "M"
      ],
      "Efor Çay Erbaaspor": [
-      "M",
       "G",
       "G",
       "G",
-      "B"
+      "B",
+      "M"
      ],
      "Sebat Spor": [
-      "M",
       "G",
       "G",
       "G",
-      "G"
+      "G",
+      "M"
      ],
      "68 Aksaray Belediye Spor": [
+      "M",
+      "M",
+      "M",
       "G",
-      "M",
-      "M",
-      "M",
       "G"
      ],
      "Isbaş Isparta 32 Spor": [
@@ -4818,9 +4835,9 @@
      "Arkent Arnavutköy Belediyesi Futbol SK": [
       "M",
       "M",
-      "M",
       "B",
-      "G"
+      "G",
+      "M"
      ],
      "Hatayspor": [
       "M",
@@ -4959,13 +4976,13 @@
       "sira": 9,
       "takim": "Kütahyaspor",
       "ham": "KÜTAHYASPOR FUTBOL SPOR KULÜBÜ",
-      "o": 11,
+      "o": 12,
       "g": 5,
       "b": 1,
-      "m": 5,
-      "a": 17,
-      "y": 20,
-      "av": -3,
+      "m": 6,
+      "a": 18,
+      "y": 22,
+      "av": -4,
       "p": 16,
       "mersin": false
      },
@@ -4999,6 +5016,20 @@
      },
      {
       "sira": 12,
+      "takim": "Fethiyespor",
+      "ham": "FETHİYESPOR",
+      "o": 11,
+      "g": 3,
+      "b": 2,
+      "m": 6,
+      "a": 12,
+      "y": 21,
+      "av": -9,
+      "p": 11,
+      "mersin": false
+     },
+     {
+      "sira": 13,
       "takim": "Kırklarelispor",
       "ham": "KIRKLARELİSPOR",
       "o": 11,
@@ -5012,7 +5043,7 @@
       "mersin": false
      },
      {
-      "sira": 13,
+      "sira": 14,
       "takim": "Mke Ankaragücü",
       "ham": "MKE ANKARAGÜCÜ",
       "o": 11,
@@ -5022,20 +5053,6 @@
       "a": 17,
       "y": 16,
       "av": 1,
-      "p": 8,
-      "mersin": false
-     },
-     {
-      "sira": 14,
-      "takim": "Fethiyespor",
-      "ham": "FETHİYESPOR",
-      "o": 10,
-      "g": 2,
-      "b": 2,
-      "m": 6,
-      "a": 10,
-      "y": 20,
-      "av": -10,
       "p": 8,
       "mersin": false
      },
@@ -5135,7 +5152,7 @@
       "tarih": "2026-11-18",
       "saat": "15:30",
       "ev": "Fethiyespor",
-      "skor": null,
+      "skor": "2-1",
       "dep": "Kütahyaspor",
       "mersin": false
      },
@@ -5393,7 +5410,7 @@
       {
        "ev": "Fethiyespor",
        "dep": "Kütahyaspor",
-       "skor": null
+       "skor": "2-1"
       },
       {
        "ev": "Karacabey Belediye Spor",
@@ -5502,11 +5519,11 @@
       "G"
      ],
      "Kütahyaspor": [
-      "B",
       "G",
       "G",
       "G",
-      "G"
+      "G",
+      "M"
      ],
      "Karacabey Belediye Spor": [
       "G",
@@ -5522,6 +5539,13 @@
       "M",
       "M"
      ],
+     "Fethiyespor": [
+      "B",
+      "M",
+      "G",
+      "M",
+      "G"
+     ],
      "Kırklarelispor": [
       "B",
       "M",
@@ -5535,12 +5559,6 @@
       "M",
       "M",
       "B"
-     ],
-     "Fethiyespor": [
-      "B",
-      "M",
-      "G",
-      "M"
      ],
      "Serik Spor": [
       "M",
@@ -7583,26 +7601,6 @@
        "skor": "3-0"
       },
       {
-       "ev": "Adanaspor",
-       "dep": "Yozgat Belediyesi Bozok Spor",
-       "skor": "4-0"
-      },
-      {
-       "ev": "Eti Gübre Mazıdağı Fosfat Spor",
-       "dep": "Niğde Belediyesi Spor",
-       "skor": "2-0"
-      },
-      {
-       "ev": "Halil Bayram İnşaat Karaköprü Belediyespor",
-       "dep": "Ağrı 1970 Spor",
-       "skor": "4-1"
-      },
-      {
-       "ev": "Yeni Mersin İdmanyurdu",
-       "dep": "Karaman",
-       "skor": null
-      },
-      {
        "ev": "Diyarbekir Spor",
        "dep": "1964 Silifke Spor",
        "skor": "3-1"
@@ -7618,9 +7616,29 @@
        "skor": "3-1"
       },
       {
+       "ev": "Adanaspor",
+       "dep": "Yozgat Belediyesi Bozok Spor",
+       "skor": "4-0"
+      },
+      {
+       "ev": "Eti Gübre Mazıdağı Fosfat Spor",
+       "dep": "Niğde Belediyesi Spor",
+       "skor": "2-0"
+      },
+      {
+       "ev": "Halil Bayram İnşaat Karaköprü Belediyespor",
+       "dep": "Ağrı 1970 Spor",
+       "skor": "4-1"
+      },
+      {
        "ev": "Malatya Yeşilyurt Spor",
        "dep": "Adana Adaletgücü Spor",
        "skor": "6-2"
+      },
+      {
+       "ev": "Yeni Mersin İdmanyurdu",
+       "dep": "Karaman",
+       "skor": null
       }
      ],
      "13": [
@@ -7816,7 +7834,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-18T15:13:55.261Z",
+  "guncelleme": "2026-11-18T15:32:14.101Z",
   "liste": [
    {
     "yol": "/",
@@ -7837,7 +7855,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-18T15:13:56.711Z",
+  "guncelleme": "2026-11-18T15:32:59.864Z",
   "deniz": {
    "sicaklik": 22,
    "dalga": 0.18

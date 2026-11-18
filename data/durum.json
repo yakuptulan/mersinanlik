@@ -16,7 +16,7 @@
  },
  "gorsel": {
   "gun": "2026-11-18",
-  "adet": 19
+  "adet": 21
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -228,8 +228,16 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-18T15:13:29.063Z",
+  "guncelleme": "2026-11-18T15:31:44.445Z",
   "liste": [
+   {
+    "baslik": "eski",
+    "trafik": 5000
+   },
+   {
+    "baslik": "esra erol",
+    "trafik": 2000
+   },
    {
     "baslik": "uyarı",
     "trafik": 2000
@@ -247,12 +255,12 @@
     "trafik": 1000
    },
    {
-    "baslik": "akaryakıt indirim motorin",
-    "trafik": 5000
+    "baslik": "cemil tugay",
+    "trafik": 500
    },
    {
-    "baslik": "cemil tugay",
-    "trafik": 200
+    "baslik": "akaryakıt indirim motorin",
+    "trafik": 5000
    },
    {
     "baslik": "beşiktaş real madrid",
@@ -261,14 +269,6 @@
    {
     "baslik": "taşınmaz",
     "trafik": 100
-   },
-   {
-    "baslik": "abdullah öcalan",
-    "trafik": 500
-   },
-   {
-    "baslik": "arda güler sözleşme",
-    "trafik": 2000
    }
   ]
  },
