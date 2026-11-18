@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-18T12:01:33.136Z",
+ "guncelleme": "2026-11-18T12:26:20.032Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -9,7 +9,7 @@
      "tarih": "2026-11-18",
      "min": 16,
      "max": 20,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-19",
@@ -497,7 +497,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-18T12:01:37.182Z",
+  "guncelleme": "2026-11-18T12:26:23.506Z",
   "liste": [
    {
     "ad": "Anadolu Eczanesi",
@@ -766,7 +766,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-18T12:01:38.119Z",
+  "guncelleme": "2026-11-18T12:26:24.292Z",
   "liste": []
  },
  "piyasa": {
@@ -1646,7 +1646,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-18T09:32:06.522Z",
+  "guncelleme": "2026-11-18T12:26:40.038Z",
   "liste": [
    {
     "id": "48wy1j",
@@ -7723,19 +7723,31 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-18T12:01:44.663Z",
+  "guncelleme": "2026-11-18T12:26:37.366Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 40
+    "sayi": 38
+   },
+   {
+    "yol": "/piyasalar/",
+    "sayi": 1
+   },
+   {
+    "yol": "/trafik/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/mersin-buyuksehir-belediyesinde-olcay-tok-un-gorevden-resmen-ayrildi-611nvu/",
+    "sayi": 1
    }
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-18T12:01:46.352Z",
+  "guncelleme": "2026-11-18T12:26:40.038Z",
   "deniz": {
    "sicaklik": 22,
-   "dalga": 0.2
+   "dalga": 0.18
   },
   "hava": {
    "aqi": 33,
