@@ -16,7 +16,7 @@
  },
  "gorsel": {
   "gun": "2026-11-18",
-  "adet": 10
+  "adet": 12
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -81,7 +81,9 @@
    "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/ureticiye-gunes-paneli-destegi-2983291",
    "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/mersin-sehir-tiyatrosuna-2-odul-2983302",
    "https://www.dha.com.tr/yerel-haberler/mersin/mut/kaybolan-kucukbas-hayvanlar-dronla-bulundu-2983390",
-   "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/akdenizde-senlik-var-2983576"
+   "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/akdenizde-senlik-var-2983576",
+   "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/toroslarda-kadin-dayanismasi-buyuyor-2983925",
+   "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/kiyafet-evinde-kislik-kiyafetler-raflardaki-yer-2983919"
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
@@ -125,7 +127,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/protez-tirnak-kursuna-katilan-kadinlar-kendi-is-yerlerini-acmayi-hedefliyor-119525261",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/danalar-ve-insanlar-filminin-cekimleri-tarsusta-suruyor-119525376",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/tarsus-belediyesinin-ara-tatil-etkinliklerine-yogun-ilgi-119525366",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/baskan-vekili-genc-denizimizi-kirleten-105-gemiye-423-milyon-lira-ceza-uyguladik-119525356"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/baskan-vekili-genc-denizimizi-kirleten-105-gemiye-423-milyon-lira-ceza-uyguladik-119525356",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/toroslarda-yoruk-dugunu-gelenegi-yeniden-canlandirildi-119525406"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -174,23 +177,31 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-18T08:01:44.395Z",
+  "guncelleme": "2026-11-18T08:31:31.130Z",
   "liste": [
+   {
+    "baslik": "federal rezerv",
+    "trafik": 200
+   },
+   {
+    "baslik": "chery tiggo 5x",
+    "trafik": 200
+   },
    {
     "baslik": "muratpaşa belediyesi",
     "trafik": 100
    },
    {
     "baslik": "amad diallo",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "genelge",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "gökhan töre",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "süper loto çekiliş sonuçları",
@@ -198,7 +209,7 @@
    },
    {
     "baslik": "romanya",
-    "trafik": 1000
+    "trafik": 2000
    },
    {
     "baslik": "fed faiz kararı ne zaman",
@@ -206,14 +217,6 @@
    },
    {
     "baslik": "yenişafak",
-    "trafik": 100
-   },
-   {
-    "baslik": "tsg",
-    "trafik": 100
-   },
-   {
-    "baslik": "naim süleymanoğlu",
     "trafik": 200
    }
   ]
