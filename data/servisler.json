@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-18T16:34:47.392Z",
+ "guncelleme": "2026-11-18T16:36:32.780Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 17,
@@ -497,7 +497,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-18T16:34:52.170Z",
+  "guncelleme": "2026-11-18T16:36:36.164Z",
   "liste": [
    {
     "ad": "Anadolu Eczanesi",
@@ -766,7 +766,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-18T16:34:53.239Z",
+  "guncelleme": "2026-11-18T16:36:37.134Z",
   "liste": [
    {
     "tur": "su",
@@ -820,32 +820,32 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-18T16:34:57.299Z",
+  "guncelleme": "2026-11-18T16:36:39.274Z",
   "kalemler": {
    "gram": {
-    "alis": 6060.85,
-    "satis": 6061.77,
-    "degisim": -2.81
+    "alis": 6060.1,
+    "satis": 6060.9,
+    "degisim": -2.82
    },
    "ceyrek": {
-    "alis": 9981,
-    "satis": 10077,
-    "degisim": -2.48
+    "alis": 9978,
+    "satis": 10074,
+    "degisim": -2.51
    },
    "gumus": {
-    "alis": 72.57,
-    "satis": 72.67,
-    "degisim": -5.18
+    "alis": 72.7,
+    "satis": 72.78,
+    "degisim": -5.03
    },
    "usd": {
-    "alis": 50.4322,
-    "satis": 50.4456,
-    "degisim": 0.04
+    "alis": 50.4342,
+    "satis": 50.4453,
+    "degisim": 0.05
    },
    "eur": {
-    "alis": 55.3327,
-    "satis": 55.3491,
-    "degisim": -0.34
+    "alis": 55.3308,
+    "satis": 55.344,
+    "degisim": -0.35
    },
    "bist": {
     "alis": null,
@@ -853,125 +853,125 @@
     "degisim": -1.57
    },
    "btc": {
-    "satis": 3149331,
-    "usd": 62437,
-    "degisim": -2.17
+    "satis": 3151316,
+    "usd": 62475,
+    "degisim": -2.07
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 6060.85,
-    "satis": 6061.77,
-    "degisim": -2.81
+    "alis": 6060.1,
+    "satis": 6060.9,
+    "degisim": -2.82
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 9981,
-    "satis": 10077,
-    "degisim": -2.48
+    "alis": 9978,
+    "satis": 10074,
+    "degisim": -2.51
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 19987,
-    "satis": 20147,
-    "degisim": -2.48
+    "alis": 19981,
+    "satis": 20141,
+    "degisim": -2.51
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 39851,
-    "satis": 40146,
-    "degisim": -2.48
+    "alis": 39839,
+    "satis": 40134,
+    "degisim": -2.51
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40924,
-    "satis": 41218,
-    "degisim": -2.48
+    "alis": 40912,
+    "satis": 41206,
+    "degisim": -2.51
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40924,
-    "satis": 41218,
-    "degisim": -2.48
+    "alis": 40912,
+    "satis": 41206,
+    "degisim": -2.51
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40924,
-    "satis": 41218,
-    "degisim": -2.48
+    "alis": 40912,
+    "satis": 41206,
+    "degisim": -2.51
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5577.14,
-    "satis": 5773.89,
-    "degisim": -2.49
+    "alis": 5576.33,
+    "satis": 5773.07,
+    "degisim": -2.5
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4233,
+    "alis": 4232,
     "satis": 4940,
     "degisim": -2.76
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3343.32,
-    "satis": 4506.41,
-    "degisim": -2.21
+    "alis": 3342.82,
+    "satis": 4505.85,
+    "degisim": -2.23
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 6030.55,
-    "satis": 6031.46,
-    "degisim": -2.81
+    "alis": 6029.8,
+    "satis": 6030.59,
+    "degisim": -2.82
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 72.57,
-    "satis": 72.67,
-    "degisim": -5.18
+    "alis": 72.7,
+    "satis": 72.78,
+    "degisim": -5.03
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.4322,
-    "satis": 50.4456,
-    "degisim": 0.04
+    "alis": 50.4342,
+    "satis": 50.4453,
+    "degisim": 0.05
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.3327,
-    "satis": 55.3491,
-    "degisim": -0.34
+    "alis": 55.3308,
+    "satis": 55.344,
+    "degisim": -0.35
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.3242,
-    "satis": 66.3416,
+    "alis": 66.3276,
+    "satis": 66.3451,
     "degisim": -0.47
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 59.7964,
-    "satis": 59.8275,
-    "degisim": -0.35
+    "alis": 59.7837,
+    "satis": 59.8196,
+    "degisim": -0.36
    },
    {
     "k": "SAR",
@@ -988,10 +988,10 @@
     "degisim": -0.45
    }
   ],
-  "kaynakSaati": "2026-11-18 19:34:01"
+  "kaynakSaati": "2026-11-18 19:36:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-18T16:34:59.817Z",
+  "guncelleme": "2026-11-18T16:36:41.651Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -7867,7 +7867,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-18T16:35:00.139Z",
+  "guncelleme": "2026-11-18T16:36:41.945Z",
   "liste": [
    {
     "yol": "/",
@@ -7888,7 +7888,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-18T16:35:02.046Z",
+  "guncelleme": "2026-11-18T16:36:44.062Z",
   "deniz": {
    "sicaklik": 21.9,
    "dalga": 0.2
@@ -7899,5 +7899,972 @@
    "pm10": 23.7,
    "uvMax": 1.85
   }
+ },
+ "ucus": {
+  "guncelleme": "2026-11-18T16:36:44.831Z",
+  "giden": [
+   {
+    "no": [
+     "TK2465"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-18T16:55:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "BOARDING",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2091"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-18T17:35:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "KONTUAR AÇIK",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3015"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-18T17:55:00.000Z",
+    "tahmini": null,
+    "kapi": "104",
+    "durum": "KONTUAR AÇIK",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2467"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-18T18:20:00.000Z",
+    "tahmini": null,
+    "kapi": "108",
+    "durum": "KONTUAR AÇIK",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF4089"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ankara",
+    "planlanan": "2026-11-18T18:25:00.000Z",
+    "tahmini": null,
+    "kapi": "107",
+    "durum": "KONTUAR AÇIK",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3603"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Antalya",
+    "planlanan": "2026-11-18T19:05:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2093"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-18T19:25:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ9307"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "İzmir",
+    "planlanan": "2026-11-18T19:45:00.000Z",
+    "tahmini": null,
+    "kapi": "107",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2471"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-18T20:00:00.000Z",
+    "tahmini": null,
+    "kapi": "108",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF3147"
+    ],
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-18T20:05:00.000Z",
+    "tahmini": null,
+    "kapi": "109",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1860"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-18T20:20:00.000Z",
+    "tahmini": null,
+    "kapi": "102",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "TK2475"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-19T01:30:00.000Z",
+    "tahmini": null,
+    "kapi": "107",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2097"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-19T02:00:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3706"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Trabzon",
+    "planlanan": "2026-11-19T02:30:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1850"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-19T05:05:00.000Z",
+    "tahmini": null,
+    "kapi": "102",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "PC2081"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-19T05:10:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ7631"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "Antalya",
+    "planlanan": "2026-11-19T05:10:00.000Z",
+    "tahmini": null,
+    "kapi": "107",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF3143"
+    ],
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-19T05:15:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3011"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-19T05:45:00.000Z",
+    "tahmini": null,
+    "kapi": "109",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ9007"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "İzmir",
+    "planlanan": "2026-11-19T05:50:00.000Z",
+    "tahmini": null,
+    "kapi": "104",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3640"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Van",
+    "planlanan": "2026-11-19T06:05:00.000Z",
+    "tahmini": null,
+    "kapi": "108",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2453"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-19T06:25:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF4087"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ankara",
+    "planlanan": "2026-11-19T06:50:00.000Z",
+    "tahmini": null,
+    "kapi": "107",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2083"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-19T07:35:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1852"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-19T08:00:00.000Z",
+    "tahmini": null,
+    "kapi": "102",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "TK2455"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-19T08:45:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF1051"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ercan",
+    "planlanan": "2026-11-19T09:00:00.000Z",
+    "tahmini": null,
+    "kapi": "103",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "PC2101"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-19T09:55:00.000Z",
+    "tahmini": null,
+    "kapi": "109",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3601"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Antalya",
+    "planlanan": "2026-11-19T10:10:00.000Z",
+    "tahmini": null,
+    "kapi": "108",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2457"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-19T10:30:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2085"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-19T10:40:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1856"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-19T11:40:00.000Z",
+    "tahmini": null,
+    "kapi": "102",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "TK2459"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-19T12:10:00.000Z",
+    "tahmini": null,
+    "kapi": "108",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2087"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-19T12:15:00.000Z",
+    "tahmini": null,
+    "kapi": "109",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2461"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-19T13:30:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3013"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-19T13:50:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1858"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-19T15:00:00.000Z",
+    "tahmini": null,
+    "kapi": "104",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "TK2463"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-19T15:25:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF4089"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ankara",
+    "planlanan": "2026-11-19T15:45:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF1053"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ercan",
+    "planlanan": "2026-11-19T16:05:00.000Z",
+    "tahmini": null,
+    "kapi": "103",
+    "durum": "",
+    "hat": "dis"
+   }
+  ],
+  "gelen": [
+   {
+    "no": [
+     "PC2090"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-18T16:45:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "İNDİ",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1857"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-18T16:55:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "TK2466"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-18T17:35:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF4088"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ankara",
+    "planlanan": "2026-11-18T17:45:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3602"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Antalya",
+    "planlanan": "2026-11-18T18:25:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2092"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-18T18:35:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF3146"
+    ],
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-18T19:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ9306"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "İzmir",
+    "planlanan": "2026-11-18T19:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2470"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-18T19:15:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1859"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-18T19:45:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "PC3014"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-18T21:20:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2096"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-18T22:05:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2474"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-19T00:45:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2080"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-19T04:20:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF3142"
+    ],
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-19T04:30:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1849"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-19T04:30:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "XQ7630"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "Antalya",
+    "planlanan": "2026-11-19T04:40:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ9006"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "İzmir",
+    "planlanan": "2026-11-19T05:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3010"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-19T05:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3600"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Antalya",
+    "planlanan": "2026-11-19T05:25:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2452"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-19T05:40:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF4086"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ankara",
+    "planlanan": "2026-11-19T06:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2082"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-19T06:30:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1851"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-19T07:25:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "TK2454"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-19T08:00:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF1052"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ercan",
+    "planlanan": "2026-11-19T08:00:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "PC3707"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Trabzon",
+    "planlanan": "2026-11-19T09:20:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3641"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Van",
+    "planlanan": "2026-11-19T09:35:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2456"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-19T09:45:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2084"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-19T09:50:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1855"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-19T11:05:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "PC2086"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-19T11:25:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2458"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-19T11:25:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2460"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-19T12:45:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3012"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-19T13:15:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2100"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-19T13:50:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2462"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-19T14:40:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF4088"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ankara",
+    "planlanan": "2026-11-19T15:05:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF1054"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ercan",
+    "planlanan": "2026-11-19T15:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "TK2464"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-19T16:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   }
+  ]
  }
 }
