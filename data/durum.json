@@ -12,19 +12,11 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "mersin-universitesi": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-18T16:23:23.249Z"
-  },
-  "tarsus-universitesi": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-18T16:23:36.078Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-18",
-  "adet": 27
+  "adet": 29
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -236,14 +228,26 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-18T16:23:46.148Z",
+  "guncelleme": "2026-11-18T16:25:21.158Z",
   "liste": [
    {
-    "baslik": "doğu akdeniz",
+    "baslik": "fifa",
+    "trafik": 200
+   },
+   {
+    "baslik": "sağlık bakanlığı personel alımı",
+    "trafik": 200
+   },
+   {
+    "baslik": "kupa voley",
     "trafik": 100
    },
    {
     "baslik": "ankara elektrik kesintisi",
+    "trafik": 200
+   },
+   {
+    "baslik": "doğu akdeniz",
     "trafik": 100
    },
    {
@@ -265,18 +269,6 @@
    {
     "baslik": "31 aralık",
     "trafik": 200
-   },
-   {
-    "baslik": "azerbaycan",
-    "trafik": 500
-   },
-   {
-    "baslik": "asgari ücret 2027",
-    "trafik": 200
-   },
-   {
-    "baslik": "gta5",
-    "trafik": 100
    }
   ]
  },
