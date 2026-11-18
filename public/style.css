@@ -980,3 +980,22 @@ a.cip.kat:hover { filter: brightness(.95); }
 .ilgili-kareler { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
 .ilgili-kareler .kare-kart { aspect-ratio: 4 / 3; }
 @media (max-width: 700px) { .ilgili-kareler { grid-template-columns: 1fr; } .ilgili-kareler .kare-kart { aspect-ratio: 16 / 9; } }
+
+/* İlçe servis şeridi ve ilçe servis sayfaları */
+.ilce-servis { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 22px; }
+.ilce-servis-bas { display: inline-flex; align-items: center; gap: 5px; font-weight: 800; color: var(--derin-mavi); margin-right: 4px; }
+.ilce-servis .cip { font-size: 14.5px; padding: 7px 14px; }
+.ilce-servis .cip.aktif { background: var(--derin-mavi); color: #fff; }
+.giris-metni { font-size: 17px; line-height: 1.6; color: var(--govde); margin: 0 0 18px; }
+.yakit-kartlar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 0 0 16px; }
+.yakit-kart { background: #fff; border: 1px solid #e6ebf3; border-radius: 18px; padding: 18px 18px 16px; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 6px 18px rgba(10,21,48,.05); }
+.yakit-kart .yakit-ad { font-weight: 700; color: var(--ikincil); font-size: 15px; }
+.yakit-kart strong { font-size: 30px; color: var(--derin-mavi); letter-spacing: -.5px; }
+.yakit-kart small { color: var(--ikincil); font-size: 13.5px; }
+.eczane-grup h2 a { color: inherit; text-decoration: none; }
+.eczane-grup h2 a:hover { text-decoration: underline; }
+.kesinti h3 a { color: inherit; }
+@media (max-width: 640px) { .yakit-kartlar { grid-template-columns: 1fr; } .yakit-kart strong { font-size: 26px; } }
+.widgetlar.widgetlar-gun.gun5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+@media (max-width: 900px) { .widgetlar.widgetlar-gun.gun5 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .widgetlar.widgetlar-gun.gun5 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

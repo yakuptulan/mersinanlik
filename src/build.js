@@ -5,6 +5,7 @@ import { SITE, ILCELER } from './config.js';
 import { yukle, yayindakiler, VERI_KLASORU } from './lib/store.js';
 import { ilceAdi } from './templates/layout.js';
 import * as S from './templates/sayfalar.js';
+import * as IS from './templates/ilceServis.js';
 import * as R from './templates/rehber.js';
 import * as B from './templates/bilgi.js';
 import { LIGLER } from './lib/spor.js';
@@ -111,6 +112,13 @@ export function insaEt({ simdi = Date.now() } = {}) {
   ekle('/namaz-vakitleri/', S.namazSayfasi({ servis, simdi }));
   for (const ilce of ILCELER) ekle(`/namaz-vakitleri/${ilce.slug}/`, S.namazIlceSayfasi({ ilce, servis, simdi }));
   ekle('/akaryakit-fiyatlari/', S.akaryakitSayfasi({ servis }));
+  // İlçe bazlı servis sayfaları (Tarsus nöbetçi eczane, Erdemli hava durumu ...)
+  for (const ilce of ILCELER) {
+    ekle(`/nobetci-eczane/${ilce.slug}/`, IS.eczaneIlceSayfasi({ ilce, servis, simdi }));
+    ekle(`/hava-durumu/${ilce.slug}/`, IS.havaIlceSayfasi({ ilce, servis, simdi }));
+    ekle(`/kesintiler/${ilce.slug}/`, IS.kesintiIlceSayfasi({ ilce, servis, simdi }));
+    ekle(`/akaryakit-fiyatlari/${ilce.slug}/`, IS.akaryakitIlceSayfasi({ ilce, servis, simdi }));
+  }
   for (const { yol, html } of S.bilgiSayfalari()) ekle(yol, html);
   ekle('/menu/', S.menuSayfasi(), false);
   ekle('/ara/', S.araSayfasi(), false);

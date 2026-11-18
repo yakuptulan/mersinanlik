@@ -14,6 +14,7 @@ import { bilgiKarti } from './bilgi.js';
 import { LIGLER } from '../lib/spor.js';
 import { RESMI_TATILLER, OKUL_TAKVIMI } from './rehber.js';
 import { DIYANET_ILCE, VAKITLER } from '../lib/namaz.js';
+import { ilceServisMenusu } from './ilceServis.js';
 
 // Resmî servis bağlantıları (veri entegrasyonu tamamlanana kadar doğrudan kaynağa yönlendirir)
 export const RESMI = {
@@ -191,7 +192,16 @@ function mansetSec(hikayeler, simdi) {
   return [...liste].sort((a, b) => b.kaynaklar.length - a.kaynaklar.length || new Date(b.ilkGorulme) - new Date(a.ilkGorulme))[0];
 }
 
-function aktifSuKesintileri(servis, simdi = Date.now()) {
+// Tamamı BÜYÜK HARF yazılmış duyuruları cümle düzenine çevirir; normal yazılmışlara dokunmaz
+export function cumleDuzen(t = '') {
+  const harfler = t.replace(/[^A-Za-zÇĞİÖŞÜçğıöşü]/g, '');
+  const buyuk = harfler.replace(/[^A-ZÇĞİÖŞÜ]/g, '').length;
+  if (!harfler.length || buyuk / harfler.length < 0.6) return t;
+  const k = t.toLocaleLowerCase('tr-TR');
+  return k.charAt(0).toLocaleUpperCase('tr-TR') + k.slice(1);
+}
+
+export function aktifSuKesintileri(servis, simdi = Date.now()) {
   return (servis?.suKesintisi?.liste || []).filter((k) => !k.bitis || new Date(k.bitis).getTime() > simdi);
 }
 
@@ -208,11 +218,11 @@ ${reklamAlani('yan-ust')}
 ${okunan.length >= 3 ? `<section class="kutu kutu-okunan">${kutuBasligi({ ikon: ikon.alev(18), baslik: 'En sıcak haberler', alt: '<span class="canli-nokta"></span> canlı' })}
 <ol class="okunan-liste">${okunan.map((o, i) => `<li><a href="${h(o.yol)}"><span class="ok-no">${i + 1}</span>${o.gorsel ? `<img src="${h(o.gorsel)}" alt="" width="64" height="48" loading="lazy">` : `<span class="ok-ikon">${(ikon[o.ikon] || ikon.ok)(20)}</span>`}<span class="ok-baslik">${h(o.baslik)}${o.zaman ? `<small data-once="${o.zaman}">${saat(o.zaman)}</small>` : ''}</span></a></li>`).join('')}</ol></section>` : ''}
 ${ilce ? `<section class="kutu kutu-eczane">
-${kutuBasligi({ ikon: ikon.eczane(18), baslik: `${h(ilce.ad)} nöbetçi eczaneler`, link: `/nobetci-eczane/#${ilce.slug}` })}
+${kutuBasligi({ ikon: ikon.eczane(18), baslik: `${h(ilce.ad)} nöbetçi eczaneler`, link: `/nobetci-eczane/${ilce.slug}/` })}
 ${eczaneler.map((e) => `<a class="satir" href="tel:${h(e.telefon)}"><span>${ikon.eczane(20)} ${h(e.ad)}</span><small>${h(telefonGoster(e.telefon))}</small></a>`).join('') || `<a class="satir" href="/nobetci-eczane/"><span>Bugünün listesi</span><small>→</small></a>`}
 </section>` : ''}
 <section class="kutu kutu-kesinti">
-${kutuBasligi({ ikon: ikon.damla(18), baslik: ilce ? `${h(ilce.ad)} kesintileri` : 'Kesintiler', link: '/kesintiler/' })}
+${kutuBasligi({ ikon: ikon.damla(18), baslik: ilce ? `${h(ilce.ad)} kesintileri` : 'Kesintiler', link: ilce ? `/kesintiler/${ilce.slug}/` : '/kesintiler/' })}
 <div class="yan-liste" data-sekme-kap>${kesintiSekmeleri(servis, su, { adet: 4 })}</div>
 </section>
 ${anaSayfa ? '' : namazKutusu(servis, ilce)}
@@ -356,6 +366,7 @@ ${hava ? `<div class="widgetlar widgetlar-gun">${hava.gunler
     .join('')}</div>` : ''}`;
   const icerik = `<main class="kap govde">
 <div class="ana">
+${ilceServisMenusu(ilce, 'haber')}
 <div class="bolum-bas"><h2>${h(ilce.ad)}'${ayrilmaEki(ilce.ad)} son haberler</h2><span>${liste.length} haber</span></div>
 ${haberListesi(liste, `Son ${AYAR.saklamaGun} günde ${ilce.ad} ile ilgili haber bulunamadı.`)}
 </div>
@@ -596,6 +607,7 @@ export function namazIlceSayfasi({ ilce, servis, simdi }) {
     aktif: '/namaz-vakitleri/',
     ust: `<div class="su-an-bas"><div><h1>${h(ilce.ad)} namaz vakitleri</h1><p style="margin-top:8px">Bugün ve önümüzdeki 6 gün</p></div></div>`,
     icerik: `<main class="kap govde"><div class="ana">
+${ilceServisMenusu(ilce, 'namaz')}
 <div class="tablo-kap"><table class="tablo tablo-vakit"><thead><tr><th>Gün</th>${VAKITLER.map(([, ad]) => `<th>${ad}</th>`).join('')}</tr></thead><tbody>${satirlar || '<tr><td colspan="7">Vakitler yükleniyor.</td></tr>'}</tbody></table></div>
 <p style="color:var(--ikincil);font-size:15px">Kaynak: Diyanet İşleri Başkanlığı. <a href="/namaz-vakitleri/">Diğer ilçeler →</a></p>
 </div>${yanKutular(servis, ilce)}</main>`,
@@ -607,7 +619,7 @@ export function akaryakitSayfasi({ servis }) {
   const a = servis?.akaryakit;
   const satirlar = ILCELER.map((i) => {
     const f = a?.ilceler?.[i.slug];
-    return `<tr><th scope="row">${h(i.ad)}</th><td>${f ? fmt(f.benzin) + ' ₺' : '–'}</td><td>${f ? fmt(f.motorin) + ' ₺' : '–'}</td><td>${f?.lpg ? fmt(f.lpg) + ' ₺' : '–'}</td></tr>`;
+    return `<tr><th scope="row"><a href="/akaryakit-fiyatlari/${i.slug}/">${h(i.ad)}</a></th><td>${f ? fmt(f.benzin) + ' ₺' : '–'}</td><td>${f ? fmt(f.motorin) + ' ₺' : '–'}</td><td>${f?.lpg ? fmt(f.lpg) + ' ₺' : '–'}</td></tr>`;
   }).join('');
   const m = a?.ilceler?.akdeniz;
   return sayfa({
@@ -635,7 +647,7 @@ export function ilcelerSayfasi() {
 export function havaSayfasi({ servis }) {
   const satirlar = ILCELER.map((i) => {
     const hv = servis?.hava?.[i.slug];
-    return `<tr id="${i.slug}"><th scope="row"><a href="/ilce/${i.slug}/">${h(i.ad)}</a></th><td><strong>${hv ? hv.sicaklik + '°' : '–'}</strong> ${hv ? h(hv.durum) : ''}</td>${(hv?.gunler || [])
+    return `<tr id="${i.slug}"><th scope="row"><a href="/hava-durumu/${i.slug}/">${h(i.ad)}</a></th><td><strong>${hv ? hv.sicaklik + '°' : '–'}</strong> ${hv ? h(hv.durum) : ''}</td>${(hv?.gunler || [])
       .slice(1, 4)
       .map((g) => `<td>${g.max}° / ${g.min}°<br><small>${h(g.durum)}</small></td>`)
       .join('')}</tr>`;
@@ -678,17 +690,14 @@ function bilgiSayfasi({ yol, baslik, aciklama, govde }) {
   });
 }
 
-function guncellemeNotu(veri, kaynakAd, kaynakUrl) {
+export function guncellemeNotu(veri, kaynakAd, kaynakUrl) {
   const zaman = veri?.guncelleme
     ? new Date(veri.guncelleme).toLocaleString('tr-TR', { timeZone: SITE.timezone, day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' })
     : '';
   return `<p class="not">Kaynak: <a href="${kaynakUrl}" rel="noopener" target="_blank">${kaynakAd}</a>${zaman ? ` · Son kontrol: ${zaman}` : ''}. Gitmeden önce telefonla teyit etmenizi öneririz.</p>`;
 }
 
-export function eczaneSayfasi({ servis } = {}) {
-  const liste = servis?.eczane?.liste || [];
-  const gruplar = ILCELER.map((i) => ({ ilce: i, eczaneler: liste.filter((e) => e.ilce === i.slug) })).filter((g) => g.eczaneler.length);
-  const kart = (e) => `<article class="eczane">
+export const eczaneKarti = (e) => `<article class="eczane">
 <h3>${h(e.ad)}</h3>
 ${e.saat ? `<p class="eczane-saat">${h(e.saat)}</p>` : ''}
 <p>${h(e.adres)}</p>
@@ -698,9 +707,14 @@ ${e.telefon ? `<a class="hap" href="tel:${h(e.telefon)}">Ara: ${h(telefonGoster(
 ${e.lat ? `<a class="dugme-cizgi" href="https://www.google.com/maps/search/?api=1&query=${e.lat},${e.lon}" rel="noopener" target="_blank">${ikon.konum(18)} Yol tarifi</a>` : ''}
 </div>
 </article>`;
+
+export function eczaneSayfasi({ servis } = {}) {
+  const liste = servis?.eczane?.liste || [];
+  const gruplar = ILCELER.map((i) => ({ ilce: i, eczaneler: liste.filter((e) => e.ilce === i.slug) })).filter((g) => g.eczaneler.length);
+  const kart = eczaneKarti;
   const govde = liste.length
     ? `<div class="ilce-cipleri">${gruplar.map((g) => `<a class="cip" href="#${g.ilce.slug}">${h(g.ilce.ad)}</a>`).join('')}</div>
-${gruplar.map((g) => `<section class="eczane-grup" id="${g.ilce.slug}"><div class="bolum-bas"><h2>${h(g.ilce.ad)}</h2><span>${g.eczaneler.length} eczane</span></div><div class="eczane-liste">${g.eczaneler.map(kart).join('')}</div></section>`).join('')}
+${gruplar.map((g) => `<section class="eczane-grup" id="${g.ilce.slug}"><div class="bolum-bas"><h2><a href="/nobetci-eczane/${g.ilce.slug}/">${h(g.ilce.ad)}</a></h2><span>${g.eczaneler.length} eczane</span></div><div class="eczane-liste">${g.eczaneler.map(kart).join('')}</div></section>`).join('')}
 ${guncellemeNotu(servis.eczane, 'Mersin Eczacı Odası', RESMI.eczane)}`
     : `<div class="bos">Liste şu an alınamadı. <a href="${RESMI.eczane}" rel="noopener" target="_blank">Eczacı Odası'nın sayfasına bakın →</a></div>`;
   return sayfa({
@@ -716,10 +730,10 @@ export function kesintiSayfasi({ servis } = {}) {
   const su = aktifSuKesintileri(servis);
   const zaman = (t) => new Date(t).toLocaleString('tr-TR', { timeZone: SITE.timezone, day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' });
   const kart = (k) => `<article class="kesinti">
-<h3>${ikon.damla(22)} ${h(k.ilceler.map((i) => i.ad).join(', '))}</h3>
+<h3>${ikon.damla(22)} ${k.ilceler.map((i) => `<a href="/kesintiler/${i.ilce}/">${h(i.ad)}</a>`).join(', ')}</h3>
 <p class="kesinti-mahalle">${h(k.ilceler.flatMap((i) => i.mahalleler).join(', '))}</p>
 <p class="kesinti-saat">${k.baslangic ? zaman(k.baslangic) : ''}${k.bitis ? ` → ${zaman(k.bitis)}` : ''}</p>
-${k.aciklama ? `<p>${h(k.aciklama.charAt(0) + k.aciklama.slice(1).toLocaleLowerCase('tr-TR'))}</p>` : ''}
+${k.aciklama ? `<p>${h(cumleDuzen(k.aciklama))}</p>` : ''}
 </article>`;
   const govde = `<div class="bolum-bas"><h2>Su kesintileri</h2><span>${su.length} kesinti</span></div>
 ${su.length ? `<div class="eczane-liste">${su.map(kart).join('')}</div>` : servis?.suKesintisi ? '<div class="bos">Şu an duyurulmuş su kesintisi yok.</div>' : `<div class="bos">Liste şu an alınamadı. <a href="${RESMI.meski}" rel="noopener" target="_blank">MESKİ'nin sayfasına bakın →</a></div>`}
