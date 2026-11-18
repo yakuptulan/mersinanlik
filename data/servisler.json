@@ -1,14 +1,14 @@
 {
- "guncelleme": "2026-11-18T12:31:37.568Z",
+ "guncelleme": "2026-11-18T13:04:29.854Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 20,
+   "sicaklik": 19,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-18",
      "min": 16,
-     "max": 20,
+     "max": 19,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -74,14 +74,14 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 19,
-   "durum": "Bulutlu",
+   "sicaklik": 20,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-18",
      "min": 16,
      "max": 20,
-     "durum": "Parçalı bulutlu"
+     "durum": "Sisli"
     },
     {
      "tarih": "2026-11-19",
@@ -146,14 +146,14 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 11,
-   "durum": "Yağmurlu",
+   "sicaklik": 10,
+   "durum": "Hafif yağmurlu",
    "gunler": [
     {
      "tarih": "2026-11-18",
      "min": 10,
-     "max": 11,
-     "durum": "Yağmurlu"
+     "max": 10,
+     "durum": "Hafif yağmurlu"
     },
     {
      "tarih": "2026-11-19",
@@ -182,14 +182,14 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 18,
+   "sicaklik": 17,
    "durum": "Hafif yağmurlu",
    "gunler": [
     {
      "tarih": "2026-11-18",
      "min": 15,
-     "max": 18,
-     "durum": "Hafif yağmurlu"
+     "max": 17,
+     "durum": "Bulutlu"
     },
     {
      "tarih": "2026-11-19",
@@ -219,7 +219,7 @@
   },
   "gulnar": {
    "sicaklik": 12,
-   "durum": "Hafif yağmurlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-18",
@@ -254,13 +254,13 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 19,
-   "durum": "Hafif yağmurlu",
+   "sicaklik": 18,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-18",
      "min": 16,
-     "max": 19,
+     "max": 18,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -291,7 +291,7 @@
   },
   "mut": {
    "sicaklik": 20,
-   "durum": "Bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-18",
@@ -327,7 +327,7 @@
   },
   "silifke": {
    "sicaklik": 18,
-   "durum": "Hafif yağmurlu",
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-18",
@@ -398,13 +398,13 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 20,
+   "sicaklik": 19,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-18",
      "min": 16,
-     "max": 20,
+     "max": 19,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -434,13 +434,13 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 20,
+   "sicaklik": 19,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-18",
      "min": 16,
-     "max": 20,
+     "max": 19,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -497,7 +497,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-18T12:31:41.214Z",
+  "guncelleme": "2026-11-18T13:04:33.645Z",
   "liste": [
    {
     "ad": "Anadolu Eczanesi",
@@ -515,7 +515,7 @@
     "bolge": "MEZİTLİ",
     "ilce": "mezitli",
     "adres": "ATATÜRK MH. SANAYİ CD. NO:2A",
-    "tarif": "",
+    "tarif": "GMK.BLV.BABİL KAVŞAĞI SANAYİ GİRİŞİ/MEZİTLİ",
     "telefon": "03243592666",
     "lat": 36.757873,
     "lon": 34.542614,
@@ -766,7 +766,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-18T12:31:42.483Z",
+  "guncelleme": "2026-11-18T13:04:34.679Z",
   "liste": []
  },
  "piyasa": {
@@ -941,7 +941,7 @@
   "kaynakSaati": "2026-11-18 15:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-18T12:31:47.134Z",
+  "guncelleme": "2026-11-18T13:04:38.613Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -7812,7 +7812,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-18T12:31:48.484Z",
+  "guncelleme": "2026-11-18T13:04:39.135Z",
   "liste": [
    {
     "yol": "/",
@@ -7833,15 +7833,15 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-18T12:32:35.633Z",
+  "guncelleme": "2026-11-18T13:04:41.159Z",
   "deniz": {
    "sicaklik": 22,
    "dalga": 0.18
   },
   "hava": {
-   "aqi": 33,
-   "pm25": 10.6,
-   "pm10": 16.8,
+   "aqi": 41,
+   "pm25": 13,
+   "pm10": 19.3,
    "uvMax": 1.85
   }
  }
