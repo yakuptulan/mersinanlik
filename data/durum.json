@@ -12,11 +12,15 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "il-saglik": {
+   "hata": "The operation was aborted due to timeout",
+   "zaman": "2026-11-18T17:32:00.643Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-18",
-  "adet": 29
+  "adet": 31
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -228,15 +232,23 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-18T17:01:43.442Z",
+  "guncelleme": "2026-11-18T17:32:14.847Z",
   "liste": [
+   {
+    "baslik": "büşra özdemir",
+    "trafik": 200
+   },
+   {
+    "baslik": "gta vice city",
+    "trafik": 100
+   },
    {
     "baslik": "playstation",
     "trafik": 500
    },
    {
     "baslik": "ps4",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "yeraltı saat kaçta",
@@ -248,7 +260,7 @@
    },
    {
     "baslik": "kübra güran yiğitbaşı",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "fenerbahçe erkek basketbol takımı",
@@ -260,15 +272,7 @@
    },
    {
     "baslik": "fifa",
-    "trafik": 200
-   },
-   {
-    "baslik": "kupa voley",
-    "trafik": 200
-   },
-   {
-    "baslik": "sağlık bakanlığı personel alımı",
-    "trafik": 200
+    "trafik": 500
    }
   ]
  },
