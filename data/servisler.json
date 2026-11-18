@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-18T00:01:34.487Z",
+ "guncelleme": "2026-11-18T00:31:55.139Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 15,
@@ -39,7 +39,7 @@
   },
   "anamur": {
    "sicaklik": 14,
-   "durum": "Az bulutlu",
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-18",
@@ -110,12 +110,12 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 13,
+   "sicaklik": 14,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-18",
-     "min": 13,
+     "min": 14,
      "max": 20,
      "durum": "Parçalı bulutlu"
     },
@@ -218,7 +218,7 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 8,
+   "sicaklik": 9,
    "durum": "Az bulutlu",
    "gunler": [
     {
@@ -290,7 +290,7 @@
    ]
   },
   "mut": {
-   "sicaklik": 12,
+   "sicaklik": 11,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -362,8 +362,8 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 14,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 15,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-18",
@@ -497,7 +497,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-18T00:01:38.206Z",
+  "guncelleme": "2026-11-18T00:31:59.958Z",
   "liste": [
    {
     "ad": "Aydoğan Eczanesi",
@@ -700,7 +700,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-18T00:01:39.339Z",
+  "guncelleme": "2026-11-18T00:32:01.355Z",
   "liste": [
    {
     "tur": "su",
@@ -7674,7 +7674,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-18T00:01:44.997Z",
+  "guncelleme": "2026-11-18T00:32:15.568Z",
   "liste": [
    {
     "yol": "/",
@@ -7727,10 +7727,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-18T00:02:30.556Z",
+  "guncelleme": "2026-11-18T00:32:17.742Z",
   "deniz": {
    "sicaklik": 22,
-   "dalga": 0.12
+   "dalga": 0.18
   },
   "hava": {
    "aqi": 42,
