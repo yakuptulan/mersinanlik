@@ -101,6 +101,8 @@ async function deprem() {
     il: e.province,
     ilce: e.district,
     derinlik: Number(e.depth),
+    lat: Number(e.latitude),
+    lon: Number(e.longitude),
     tarih: new Date(`${e.date}Z`).toISOString(),
   }));
 }

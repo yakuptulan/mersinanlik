@@ -76,6 +76,19 @@ const KURULUS = {
   publishingPrinciples: SITE.url + '/yayin-ilkeleri/',
 };
 
+// Site geneli uyarı bantları (deprem, okul tatili). build.js her üretimde ayarlar.
+// bitis geçince sayfa açıkken de kendiliğinden gizlenir.
+let UYARILAR = [];
+export function uyarilariAyarla(liste = []) {
+  UYARILAR = liste;
+}
+function uyariBantlari() {
+  if (!UYARILAR.length) return '';
+  return UYARILAR.map(
+    (u) => `<a class="uyari-bandi ${u.tur}" href="${u.link}" data-bitis="${u.bitis}"><span class="kap"><span class="uyari-ikon" aria-hidden="true">${u.ikon}</span><span class="uyari-metin"><strong>${h(u.baslik)}</strong> ${h(u.metin)}</span><span class="uyari-ok" aria-hidden="true">→</span></span></a>`
+  ).join('') + '<script>document.querySelectorAll(".uyari-bandi[data-bitis]").forEach(function(b){if(Date.now()>+b.dataset.bitis)b.remove()})</script>';
+}
+
 export function sayfa({ baslik, aciklama = SITE.description, yol = '/', aktif = yol, ust = '', icerik, noindex = false, jsonLd = null, hava = null, ekVeri = null, gorsel = null, tur = 'website', tema = undefined }) {
   const t = temaSahnesi(tema === undefined ? temaBul(yol) : tema);
   const tamBaslik = baslik ? `${baslik} | ${SITE.name}` : `${SITE.name} – Mersin son dakika haberleri`;
@@ -115,6 +128,7 @@ ${gorsel ? `<meta property="og:image" content="${h(gorsel)}">` : `<meta property
 ${jsonLd ? `<script type="application/ld+json">${guvenliJson(jsonLd)}</script>` : ''}
 </head>
 <body>
+${uyariBantlari()}
 <header class="ust${ust ? '' : ' kisa'}${t.sinif}"${t.stil}>
 ${t.sahne}${yol === '/' ? '<div class="kure-sahne" aria-hidden="true"><img src="/kure.svg" alt="" width="640" height="640" fetchpriority="low"></div>' : ''}
 <div class="kap">

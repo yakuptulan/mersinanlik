@@ -3,7 +3,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { SITE, ILCELER } from './config.js';
 import { yukle, yayindakiler, VERI_KLASORU } from './lib/store.js';
-import { ilceAdi } from './templates/layout.js';
+import { ilceAdi, uyarilariAyarla } from './templates/layout.js';
+import { depremUyarisi } from './lib/uyarilar.js';
 import * as S from './templates/sayfalar.js';
 import * as IS from './templates/ilceServis.js';
 import { ulasimSayfasi } from './templates/ulasim.js';
@@ -73,6 +74,9 @@ export function insaEt({ simdi = Date.now() } = {}) {
     .sort((a, b) => new Date(b.ilkGorulme) - new Date(a.ilkGorulme))
     .slice(0, 5)
     .map((x) => ({ yol: sayfasiVar(x) ? haberYolu(x) : x.kaynaklar[0].link, baslik: x.baslik, gorsel: kapakAdresi(x).src, zaman: x.ilkGorulme }));
+
+  // Site geneli uyarı bantları
+  uyarilariAyarla([depremUyarisi(servis.deprem, simdi)].filter(Boolean));
 
   const sayfalar = [];
   const ekle = (yol, html, haritaya = true) => {

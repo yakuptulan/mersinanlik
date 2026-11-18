@@ -1037,3 +1037,15 @@ a.cip.kat:hover { filter: brightness(.95); }
 .arsiv-liste a { color: var(--metin); font-weight: 600; text-decoration: none; line-height: 1.4; }
 .arsiv-liste a:hover { color: var(--derin-mavi); text-decoration: underline; }
 .arsiv-liste small { color: var(--ikincil); white-space: nowrap; }
+
+/* Uyarı bandı (deprem, okul tatili) */
+.uyari-bandi { display: block; color: #fff; text-decoration: none; font-size: 15.5px; line-height: 1.4; position: relative; z-index: 30; }
+.uyari-bandi .kap { display: flex; align-items: center; gap: 12px; padding-top: 11px; padding-bottom: 11px; }
+.uyari-bandi.deprem { background: linear-gradient(90deg, #b42318, #d92d20); }
+.uyari-bandi.okul { background: linear-gradient(90deg, #c2410c, #f97316); }
+.uyari-ikon { font-size: 20px; flex: none; }
+.uyari-metin { flex: 1; }
+.uyari-metin strong { font-weight: 800; margin-right: 4px; }
+.uyari-ok { font-weight: 800; font-size: 18px; flex: none; }
+.uyari-bandi:hover .uyari-metin { text-decoration: underline; }
+@media (max-width: 640px) { .uyari-bandi { font-size: 14px; } }
