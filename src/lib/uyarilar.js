@@ -32,3 +32,29 @@ export function depremUyarisi(depremler = [], simdi = Date.now()) {
     bitis: d.bitis,
   };
 }
+
+// Okul tatili kararları: bugün ya da yarın için karar varsa
+const gunStr = (t) => new Date(t).toLocaleDateString('sv-SE', { timeZone: SITE.timezone });
+export function gunKararlari(kararlar = [], gun) {
+  return kararlar.filter((k) => k.gunler.includes(gun));
+}
+export function okulUyarisi(kararlar = [], simdi = Date.now()) {
+  const bugun = gunStr(simdi);
+  const yarin = gunStr(simdi + 864e5);
+  for (const [gun, ad] of [[yarin, 'Yarın'], [bugun, 'Bugün']]) {
+    const k = gunKararlari(kararlar, gun);
+    if (!k.length) continue;
+    const tum = k.some((x) => x.kapsam === 'tum');
+    const ilceler = [...new Set(k.flatMap((x) => x.ilceler))];
+    const gunAdi = new Date(`${gun}T12:00:00+03:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long', timeZone: SITE.timezone });
+    return {
+      tur: 'okul',
+      ikon: '🏫',
+      baslik: `${ad} okullar tatil:`,
+      metin: `${gunAdi} ${tum ? "Mersin'de" : `${ilceler.length} ilçede`} eğitime ara verildi · ayrıntılar`,
+      link: '/okullar-tatil-mi/',
+      bitis: new Date(`${gun}T17:00:00+03:00`).getTime(),
+    };
+  }
+  return null;
+}

@@ -755,7 +755,7 @@ export function menuSayfasi() {
   const linkler = [
     ['/', 'Ana sayfa'], ['/ilceler/', 'İlçeler'], ['/nobetci-eczane/', 'Nöbetçi eczane'], ['/kesintiler/', 'Kesintiler'],
     ['/hava-durumu/', 'Hava durumu'], ['/deprem/', 'Son depremler'], ['/piyasalar/', 'Altın ve döviz'], ['/spor/', 'Spor'], ['/bilgi/', 'Merak edilenler'], ['/etkinlikler/', 'Etkinlikler'], ['/rehber/', 'Mersin rehberi'], ['/burclar/', 'Burçlar'], ['/tatil-takvimi/', 'Tatil takvimi'], ['/rehber/acil-telefonlar/', 'Acil telefonlar'], ['/namaz-vakitleri/', 'Namaz vakitleri'],
-    ['/akaryakit-fiyatlari/', 'Akaryakıt fiyatları'], ['/ulasim/', 'Uçuşlar ve ulaşım'], ['/arsiv/', 'Haber arşivi'], ['/ara/', 'Haber ara'], ['/kunye/', 'Künye'],
+    ['/akaryakit-fiyatlari/', 'Akaryakıt fiyatları'], ['/ulasim/', 'Uçuşlar ve ulaşım'], ['/okullar-tatil-mi/', 'Okullar tatil mi?'], ['/arsiv/', 'Haber arşivi'], ['/ara/', 'Haber ara'], ['/kunye/', 'Künye'],
     ['/iletisim/', 'İletişim'], ['/kaynaklarimiz/', 'Kaynaklarımız'], ['/gizlilik/', 'Gizlilik'],
   ];
   return sayfa({

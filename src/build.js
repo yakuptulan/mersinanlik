@@ -4,7 +4,8 @@ import path from 'node:path';
 import { SITE, ILCELER } from './config.js';
 import { yukle, yayindakiler, VERI_KLASORU } from './lib/store.js';
 import { ilceAdi, uyarilariAyarla } from './templates/layout.js';
-import { depremUyarisi } from './lib/uyarilar.js';
+import { depremUyarisi, okulUyarisi } from './lib/uyarilar.js';
+import { okulSayfasi } from './templates/okul.js';
 import * as S from './templates/sayfalar.js';
 import * as IS from './templates/ilceServis.js';
 import { ulasimSayfasi } from './templates/ulasim.js';
@@ -75,8 +76,17 @@ export function insaEt({ simdi = Date.now() } = {}) {
     .slice(0, 5)
     .map((x) => ({ yol: sayfasiVar(x) ? haberYolu(x) : x.kaynaklar[0].link, baslik: x.baslik, gorsel: kapakAdresi(x).src, zaman: x.ilkGorulme }));
 
+  // Okul tatili kararları (haber bağlantısı canlı listeden ya da arşivden)
+  let okul = { kararlar: [] };
+  try {
+    okul = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'okul.json'), 'utf8'));
+  } catch {}
+  for (const k of okul.kararlar) {
+    const x = hikayeler.find((y) => y.id === k.haberId);
+    k.link = x ? (sayfasiVar(x) ? haberYolu(x) : x.kaynaklar[0].link) : arsivYukle().find((y) => y.id === k.haberId)?.yol || '/okullar-tatil-mi/';
+  }
   // Site geneli uyarı bantları
-  uyarilariAyarla([depremUyarisi(servis.deprem, simdi)].filter(Boolean));
+  uyarilariAyarla([depremUyarisi(servis.deprem, simdi), okulUyarisi(okul.kararlar, simdi)].filter(Boolean));
 
   const sayfalar = [];
   const ekle = (yol, html, haritaya = true) => {
@@ -114,6 +124,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
   ekle('/kesintiler/', S.kesintiSayfasi({ servis }));
   ekle('/trafik/', S.trafikSayfasi({ servis }));
   ekle('/ulasim/', ulasimSayfasi({ servis, simdi }));
+  ekle('/okullar-tatil-mi/', okulSayfasi({ okul, servis, simdi }));
   if (ozetArsiv.length) {
     ekle('/gunun-ozeti/', S.ozetSayfasi({ ozet: ozetArsiv[0], arsiv: ozetArsiv, hikayeler, servis, son: true }));
     for (const o of ozetArsiv) ekle(`/gunun-ozeti/${o.tarih}/`, S.ozetSayfasi({ ozet: o, arsiv: ozetArsiv, hikayeler, servis }));

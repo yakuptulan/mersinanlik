@@ -1049,3 +1049,15 @@ a.cip.kat:hover { filter: brightness(.95); }
 .uyari-ok { font-weight: 800; font-size: 18px; flex: none; }
 .uyari-bandi:hover .uyari-metin { text-decoration: underline; }
 @media (max-width: 640px) { .uyari-bandi { font-size: 14px; } }
+
+/* Okullar tatil mi */
+.okul-cevap { border-radius: 22px; padding: 24px 24px 20px; margin: 0 0 18px; border: 1px solid; }
+.okul-cevap strong { display: block; font-size: 26px; line-height: 1.25; letter-spacing: -.4px; margin: 6px 0 8px; }
+.okul-cevap p { margin: 0 0 8px; font-size: 16.5px; line-height: 1.55; color: var(--govde); }
+.okul-cevap.evet { background: #fff4ea; border-color: #fdc89a; }
+.okul-cevap.evet strong { color: #c2410c; }
+.okul-cevap.hayir { background: #f2f6ff; border-color: #d6e2ff; }
+.okul-cevap.hayir strong { color: var(--derin-mavi); }
+.okul-etiket { font-size: 14px; font-weight: 800; color: var(--ikincil); text-transform: uppercase; letter-spacing: .4px; }
+.okul-kaynak { font-size: 14.5px !important; }
+@media (max-width: 640px) { .okul-cevap strong { font-size: 22px; } }

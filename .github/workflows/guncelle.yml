@@ -56,6 +56,11 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
+      - name: Okul tatili kararları
+        run: node src/okul.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
       - name: Günün özeti (sabah bülteni)
         run: node src/ozet.js ${{ inputs.bilgi_zorla && '--simdi' || '' }}
         env:
