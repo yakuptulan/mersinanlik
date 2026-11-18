@@ -60,6 +60,11 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
+      - name: Maç sonu haberleri (Mersin takımları)
+        run: node src/mac.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
       - name: Okul tatili kararları
         run: node src/okul.js
         env:
