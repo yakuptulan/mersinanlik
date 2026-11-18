@@ -7,6 +7,8 @@ import { ilceAdi } from './templates/layout.js';
 import * as S from './templates/sayfalar.js';
 import * as IS from './templates/ilceServis.js';
 import { ulasimSayfasi } from './templates/ulasim.js';
+import { arsivAySayfasi } from './templates/arsiv.js';
+import { arsivYukle } from './lib/arsiv.js';
 import * as R from './templates/rehber.js';
 import * as B from './templates/bilgi.js';
 import { LIGLER } from './lib/spor.js';
@@ -86,6 +88,21 @@ export function insaEt({ simdi = Date.now() } = {}) {
     const ilgili = hikayeler.filter((x) => x.id !== hikaye.id && (!hikaye.ilceler.length || x.ilceler.some((i) => hikaye.ilceler.includes(i)))).slice(0, 6);
     yaz(haberYolu(hikaye), S.haberSayfasi({ hikaye, ilgili, servis }));
   }
+  // Kalıcı arşiv: canlı listeden düşmüş kendi haberlerimizin sayfaları ve aylık arşiv listeleri
+  const canliIdler = new Set(hikayeler.map((x) => x.id));
+  const arsiv = arsivYukle().filter((x) => !canliIdler.has(x.id));
+  for (const hikaye of arsiv) {
+    const ilgili = hikayeler.filter((x) => !x.genel && (!hikaye.ilceler.length || x.ilceler.some((i) => hikaye.ilceler.includes(i)))).slice(0, 6);
+    yaz(hikaye.yol, S.haberSayfasi({ hikaye, ilgili, servis }));
+  }
+  const tumKendi = [...kendiHaberler.map((x) => ({ ...x, yol: haberYolu(x) })), ...arsiv].sort((a, b) => new Date(b.ilkGorulme) - new Date(a.ilkGorulme));
+  const aylar = [...new Set(tumKendi.map((x) => new Date(x.ilkGorulme).toLocaleDateString('sv-SE', { timeZone: SITE.timezone }).slice(0, 7)))];
+  for (const ay of aylar) {
+    const liste = tumKendi.filter((x) => new Date(x.ilkGorulme).toLocaleDateString('sv-SE', { timeZone: SITE.timezone }).startsWith(ay));
+    ekle(`/arsiv/${ay}/`, arsivAySayfasi({ ay, hikayeler: liste, aylar, servis }));
+  }
+  if (aylar.length) yaz('/arsiv/index.html', `<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/arsiv/${aylar[0]}/"><link rel="canonical" href="${SITE.url}/arsiv/${aylar[0]}/">`);
+  servis.arsivSayisi = arsiv.length;
   for (const ilce of ILCELER) ekle(`/ilce/${ilce.slug}/`, S.ilceSayfasi({ ilce, hikayeler, servis, simdi }));
   ekle('/hava-durumu/', S.havaSayfasi({ servis }));
   ekle('/deprem/', S.depremSayfasi({ servis }));
@@ -141,7 +158,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
   );
 
   const bugun = new Date(simdi).toISOString().slice(0, 10);
-  const haberUrlleri = kendiHaberler.map((x) => `<url><loc>${SITE.url}${haberYolu(x)}</loc><lastmod>${(x.sonGuncelleme || x.ilkGorulme).slice(0, 10)}</lastmod></url>`);
+  const haberUrlleri = tumKendi.map((x) => `<url><loc>${SITE.url}${x.yol}</loc><lastmod>${(x.sonGuncelleme || x.ilkGorulme).slice(0, 10)}</lastmod></url>`);
   yaz(
     '/sitemap.xml',
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[

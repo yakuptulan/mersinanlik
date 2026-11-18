@@ -9,6 +9,7 @@ import path from 'node:path';
 import { KAYNAKLAR, aktifKaynaklar } from './sources.js';
 import { kaynakOku } from './lib/rss.js';
 import { yukle, kaydet, temizle, haberiDegerlendir, hikayeyeEkle, onemliMi } from './lib/store.js';
+import { arsiveEkle } from './lib/arsiv.js';
 import { riskBul } from './lib/text.js';
 import { AYAR } from './config.js';
 import { gorselUretimHazirMi, gorselUret, gorselAdaylari, sahipsizleriSil, kurumFotosuIndir } from './lib/gorsel-uret.js';
@@ -87,7 +88,13 @@ async function main() {
   const i = process.argv.indexOf('--dene');
   if (i > -1) return dene(process.argv[i + 1]);
 
-  const veri = temizle(yukle());
+  const ham = yukle();
+  // Silinmek üzere olan kendi haberlerimiz kalıcı arşive geçer (temizle listeyi yerinde değiştirir)
+  const onceki = [...ham.hikayeler];
+  const veri = temizle(ham);
+  const kalan = new Set(veri.hikayeler.map((h) => h.id));
+  const arsiveGiden = arsiveEkle(onceki.filter((h) => !kalan.has(h.id)));
+  if (arsiveGiden) console.log(`🗄  Arşive alınan haber: ${arsiveGiden}`);
   // Hariç tutulan bağlantılar (ör. video galerileri) sonradan eklendiyse eski kayıtlardan da çıkar
   for (const h of veri.hikayeler) {
     h.kaynaklar = h.kaynaklar.filter((k) => {
