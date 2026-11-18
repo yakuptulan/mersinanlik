@@ -1061,3 +1061,14 @@ a.cip.kat:hover { filter: brightness(.95); }
 .okul-etiket { font-size: 14px; font-weight: 800; color: var(--ikincil); text-transform: uppercase; letter-spacing: .4px; }
 .okul-kaynak { font-size: 14.5px !important; }
 @media (max-width: 640px) { .okul-cevap strong { font-size: 22px; } }
+
+/* Konular */
+.haber-konular { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 14px 0 0; font-weight: 700; color: var(--ikincil); font-size: 14.5px; }
+.haber-konular a { padding: 5px 12px; border-radius: 999px; background: #eef3ff; color: var(--derin-mavi); text-decoration: none; font-weight: 700; }
+.haber-konular a:hover { background: #dfe8ff; }
+.konu-izgara { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.konu-kart { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px; background: #fff; border: 1px solid #e6ebf3; border-radius: 16px; text-decoration: none; color: var(--metin); box-shadow: 0 4px 14px rgba(10,21,48,.04); }
+.konu-kart strong { font-size: 17px; color: var(--derin-mavi); }
+.konu-kart small { color: var(--ikincil); font-size: 13.5px; line-height: 1.45; }
+.konu-kart:hover { border-color: #c9d6f5; }
+@media (max-width: 640px) { .konu-izgara { grid-template-columns: 1fr; } }

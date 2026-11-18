@@ -421,6 +421,7 @@ ${gorselUrl ? `<figure class="haber-gorsel"><img src="/uretilen/${h(hikaye.gorse
 ${hikaye.ozet ? `<p class="haber-spot">${h(hikaye.ozet)}</p>` : ''}
 ${paragraflar}
 <p class="haber-kaynak-kisa">Kaynak: ${[kurumKayit, ...digerleri.slice(0, 2)].map((k) => `<a href="${h(k.link)}" rel="noopener nofollow" target="_blank">${h(k.ad)}</a>`).join(', ')}</p>
+${hikaye.konular?.length ? `<p class="haber-konular">Konu: ${hikaye.konular.map((k) => `<a href="/konu/${k.slug}/">${h(k.ad)}</a>`).join('')}</p>` : ''}
 ${paylasCubugu(SITE.url + yol, hikaye.baslik)}
 </article>
 ${reklamAlani('yazi-sonu')}
@@ -463,6 +464,31 @@ export function kategoriSayfasi({ kategori, hikayeler, servis }) {
     ust: `<div class="su-an-bas"><div><h1>${h(kategori.ad)}</h1><p style="margin-top:8px">Son ${AYAR.saklamaGun} gün · ${liste.length} haber</p></div></div>
 <nav class="kat-menu" aria-label="Kategoriler">${diger.map((k) => `<a href="/kategori/${k.slug}/" style="--kat:${k.renk}">${h(k.ad)}</a>`).join('')}</nav>`,
     icerik: `<main class="kap govde"><div class="ana">${haberListesi(liste, 'Bu kategoride son günlerde haber yok.')}</div>${yanKutular(servis)}</main>`,
+  });
+}
+
+// ---------- Konu sayfaları ----------
+export function konuSayfasi({ konu, konular, servis }) {
+  const liste = konu.liste.slice(0, 80);
+  return sayfa({
+    baslik: `${konu.ad} haberleri – Mersin`,
+    aciklama: `${konu.giris} Son gelişmeler tek sayfada.`,
+    yol: `/konu/${konu.slug}/`,
+    ust: `<div class="su-an-bas"><div><h1>${h(konu.ad)}</h1><p style="margin-top:8px">${liste.length} haber · güncel</p></div></div>
+<nav class="kat-menu" aria-label="Konular">${konular.filter((k) => k.slug !== konu.slug).map((k) => `<a href="/konu/${k.slug}/">${h(k.ad)}</a>`).join('')}</nav>`,
+    icerik: `<main class="kap govde"><div class="ana"><p class="giris-metni">${h(konu.giris)}</p>${haberListesi(liste, 'Bu konuda haber yok.')}</div>${yanKutular(servis)}</main>`,
+  });
+}
+
+export function konularSayfasi({ konular, servis }) {
+  return sayfa({
+    baslik: 'Mersin gündemindeki konular',
+    aciklama: 'Mersin\'de sık gündeme gelen konular ve her konudaki son haberler.',
+    yol: '/konular/',
+    ust: `<div class="su-an-bas"><div><h1>Konular</h1><p style="margin-top:8px">Mersin gündeminde sık geçen başlıklar</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana"><div class="konu-izgara">${konular
+      .map((k) => `<a class="konu-kart" href="/konu/${k.slug}/"><strong>${h(k.ad)}</strong><small>${k.liste.length} haber · son: ${h(k.liste[0].baslik.slice(0, 60))}${k.liste[0].baslik.length > 60 ? '…' : ''}</small></a>`)
+      .join('')}</div></div>${yanKutular(servis)}</main>`,
   });
 }
 
@@ -755,7 +781,7 @@ export function menuSayfasi() {
   const linkler = [
     ['/', 'Ana sayfa'], ['/ilceler/', 'İlçeler'], ['/nobetci-eczane/', 'Nöbetçi eczane'], ['/kesintiler/', 'Kesintiler'],
     ['/hava-durumu/', 'Hava durumu'], ['/deprem/', 'Son depremler'], ['/piyasalar/', 'Altın ve döviz'], ['/spor/', 'Spor'], ['/bilgi/', 'Merak edilenler'], ['/etkinlikler/', 'Etkinlikler'], ['/rehber/', 'Mersin rehberi'], ['/burclar/', 'Burçlar'], ['/tatil-takvimi/', 'Tatil takvimi'], ['/rehber/acil-telefonlar/', 'Acil telefonlar'], ['/namaz-vakitleri/', 'Namaz vakitleri'],
-    ['/akaryakit-fiyatlari/', 'Akaryakıt fiyatları'], ['/ulasim/', 'Uçuşlar ve ulaşım'], ['/okullar-tatil-mi/', 'Okullar tatil mi?'], ['/arsiv/', 'Haber arşivi'], ['/ara/', 'Haber ara'], ['/kunye/', 'Künye'],
+    ['/akaryakit-fiyatlari/', 'Akaryakıt fiyatları'], ['/ulasim/', 'Uçuşlar ve ulaşım'], ['/okullar-tatil-mi/', 'Okullar tatil mi?'], ['/konular/', 'Konular'], ['/arsiv/', 'Haber arşivi'], ['/ara/', 'Haber ara'], ['/kunye/', 'Künye'],
     ['/iletisim/', 'İletişim'], ['/kaynaklarimiz/', 'Kaynaklarımız'], ['/gizlilik/', 'Gizlilik'],
   ];
   return sayfa({

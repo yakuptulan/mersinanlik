@@ -6,6 +6,7 @@ import { yukle, yayindakiler, VERI_KLASORU } from './lib/store.js';
 import { ilceAdi, uyarilariAyarla } from './templates/layout.js';
 import { depremUyarisi, okulUyarisi } from './lib/uyarilar.js';
 import { okulSayfasi } from './templates/okul.js';
+import { KONULAR, konuBul } from './konular.js';
 import * as S from './templates/sayfalar.js';
 import * as IS from './templates/ilceServis.js';
 import { ulasimSayfasi } from './templates/ulasim.js';
@@ -98,17 +99,26 @@ export function insaEt({ simdi = Date.now() } = {}) {
   ekle('/ilceler/', S.ilcelerSayfasi());
   // Kendi haber sayfaları (kurum duyurularından kendi cümlelerimizle yazılanlar)
   const kendiHaberler = hikayeler.filter(kendiSayfasiVar);
+  // Konu sayfaları: canlı Mersin haberleri + arşiv; en az 3 haberi olan konular açılır
+  const arsivTum = arsivYukle();
+  const canliId = new Set(hikayeler.map((x) => x.id));
+  const konuHavuzu = [...hikayeler.filter((x) => !x.genel), ...arsivTum.filter((x) => !x.genel && !canliId.has(x.id))].sort((a, b) => new Date(b.ilkGorulme) - new Date(a.ilkGorulme));
+  const acikKonular = KONULAR.map((k) => ({ ...k, liste: konuHavuzu.filter((x) => k.desen.test(x.baslik)) })).filter((k) => k.liste.length >= 3);
+  const acikSlug = new Set(acikKonular.map((k) => k.slug));
+  const konuEtiketi = (x) => (x.genel ? [] : konuBul(x).filter((k) => acikSlug.has(k.slug)).slice(0, 3).map(({ slug, ad }) => ({ slug, ad })));
   for (const hikaye of hikayeler.filter(sayfasiVar)) {
     const ilgili = hikayeler.filter((x) => x.id !== hikaye.id && (!hikaye.ilceler.length || x.ilceler.some((i) => hikaye.ilceler.includes(i)))).slice(0, 6);
-    yaz(haberYolu(hikaye), S.haberSayfasi({ hikaye, ilgili, servis }));
+    yaz(haberYolu(hikaye), S.haberSayfasi({ hikaye: { ...hikaye, konular: konuEtiketi(hikaye) }, ilgili, servis }));
   }
   // Kalıcı arşiv: canlı listeden düşmüş kendi haberlerimizin sayfaları ve aylık arşiv listeleri
   const canliIdler = new Set(hikayeler.map((x) => x.id));
-  const arsiv = arsivYukle().filter((x) => !canliIdler.has(x.id));
+  const arsiv = arsivTum.filter((x) => !canliIdler.has(x.id));
   for (const hikaye of arsiv) {
     const ilgili = hikayeler.filter((x) => !x.genel && (!hikaye.ilceler.length || x.ilceler.some((i) => hikaye.ilceler.includes(i)))).slice(0, 6);
-    yaz(hikaye.yol, S.haberSayfasi({ hikaye, ilgili, servis }));
+    yaz(hikaye.yol, S.haberSayfasi({ hikaye: { ...hikaye, konular: konuEtiketi(hikaye) }, ilgili, servis }));
   }
+  for (const konu of acikKonular) ekle(`/konu/${konu.slug}/`, S.konuSayfasi({ konu, konular: acikKonular, servis }));
+  if (acikKonular.length) ekle('/konular/', S.konularSayfasi({ konular: acikKonular, servis }));
   const tumKendi = [...kendiHaberler.map((x) => ({ ...x, yol: haberYolu(x) })), ...arsiv].sort((a, b) => new Date(b.ilkGorulme) - new Date(a.ilkGorulme));
   const aylar = [...new Set(tumKendi.map((x) => new Date(x.ilkGorulme).toLocaleDateString('sv-SE', { timeZone: SITE.timezone }).slice(0, 7)))];
   for (const ay of aylar) {
