@@ -36,6 +36,13 @@ for (const url of ADAYLAR) {
   const kok = new URL(url).origin;
   const rb = (await al(kok + '/robots.txt')).metin;
   const robots = /User-agent:\s*\*[\s\S]{0,200}?Disallow:\s*\/\s*$/im.test(rb) ? 'robots: * HEPSİ YASAK' : /GPTBot|CCBot|Google-Extended|ClaudeBot/i.test(rb) ? 'robots: YZ botları anılıyor' : 'robots: serbest';
+  if (process.env.ARA?.startsWith('METIN')) {
+    const bas = process.env.ARA.split(':')[1] || '';
+    let t = metin.replace(/<(script|style|head|nav|footer)\b[\s\S]*?<\/\1>/gi, ' ').replace(/<(br|\/p|\/li|\/tr|\/h\d|\/div)[^>]*>/gi, '\n').replace(/<\/t[dh]>/gi, ' | ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/[ \t]+/g, ' ').replace(/\n\s*\n+/g, '\n');
+    if (bas) { const i = t.search(new RegExp(bas, 'i')); if (i > -1) t = t.slice(i); }
+    console.log(`\n### ${url}\n${durum}\n${t.slice(0, 7000)}`);
+    continue;
+  }
   if (process.env.ARA === 'INCELE') {
     const t = (x) => x.replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
     const govde = metin.replace(/<(script|style)\b[\s\S]*?<\/\1>/gi, ' ');
