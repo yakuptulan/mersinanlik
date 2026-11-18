@@ -48,18 +48,24 @@ export function govdeCoz(html, formDahil = false) {
 }
 
 const AYLAR = ['ocak', 'şubat', 'mart', 'nisan', 'mayıs', 'haziran', 'temmuz', 'ağustos', 'eylül', 'ekim', 'kasım', 'aralık'];
-// Sayfa metnindeki en yeni (geleceğe ait olmayan) tarihi bul: 09.11.2026 ya da 12 Kasım 2026
+// Haber başlığından (h1) sonra geçen ilk tarihi bul: 09.11.2026 ya da 12 Kasım 2026.
+// Kenardaki "diğer haberler" tarihleri karışmasın diye en yeni değil, ilk tarih alınır.
 export function metindenTarih(html) {
-  const govde = html.replace(/<(script|style|head)\b[\s\S]*?<\/\1>/gi, ' ');
-  const adaylar = [];
-  for (const m of govde.matchAll(/\b(\d{1,2})[./](\d{1,2})[./](20\d\d)\b/g)) adaylar.push([+m[3], +m[2], +m[1]]);
-  for (const m of govde.matchAll(/\b(\d{1,2}) (Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık) (20\d\d)\b/gi)) adaylar.push([+m[3], AYLAR.indexOf(m[2].toLocaleLowerCase('tr')) + 1, +m[1]]);
+  let govde = html.replace(/<(script|style|head|header|nav)\b[\s\S]*?<\/\1>/gi, ' ');
+  const h1 = govde.search(/<h1\b/i);
+  if (h1 > -1) govde = govde.slice(h1);
   const simdi = Date.now() + 864e5;
-  const zamanlar = adaylar
-    .filter(([y, a, g]) => a >= 1 && a <= 12 && g >= 1 && g <= 31)
-    .map(([y, a, g]) => new Date(`${y}-${String(a).padStart(2, '0')}-${String(g).padStart(2, '0')}T12:00:00+03:00`).getTime())
-    .filter((t) => t <= simdi);
-  return zamanlar.length ? new Date(Math.max(...zamanlar)).toISOString() : null;
+  const sira = (m) => m.index;
+  const hepsi = [
+    ...[...govde.matchAll(/\b(\d{1,2})[./](\d{1,2})[./](20\d\d)\b/g)].map((m) => [sira(m), +m[3], +m[2], +m[1]]),
+    ...[...govde.matchAll(/\b(\d{1,2}) (Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık) (20\d\d)\b/gi)].map((m) => [sira(m), +m[3], AYLAR.indexOf(m[2].toLocaleLowerCase('tr')) + 1, +m[1]]),
+  ].sort((a, b) => a[0] - b[0]);
+  for (const [, y, a, g] of hepsi) {
+    if (a < 1 || a > 12 || g < 1 || g > 31) continue;
+    const t = new Date(`${y}-${String(a).padStart(2, '0')}-${String(g).padStart(2, '0')}T12:00:00+03:00`).getTime();
+    if (t <= simdi && y >= 2020) return new Date(t).toISOString();
+  }
+  return null;
 }
 
 export function detayCoz(html, link, kaynak) {
@@ -93,6 +99,9 @@ export function detayCoz(html, link, kaynak) {
   const gunAyYil = link.match(/-(\d{2})(\d{2})(20\d{2})\.html$/);
   if (!tarih && gunAyYil) tarih = new Date(`${gunAyYil[3]}-${gunAyYil[2]}-${gunAyYil[1]}T12:00:00+03:00`).toISOString();
 
+  // Fotoğraf adındaki zaman damgası (ör. 30514-20261110151655.jpeg)
+  const fotoDamga = kaynak.tarihGorselden && foto?.match(/(20\d\d)(\d\d)(\d\d)(\d\d)(\d\d)\d{2,}/);
+  if (!tarih && fotoDamga) tarih = new Date(`${fotoDamga[1]}-${fotoDamga[2]}-${fotoDamga[3]}T${fotoDamga[4]}:${fotoDamga[5]}:00+03:00`).toISOString();
   if (!tarih && kaynak.tarihMetinden) tarih = metindenTarih(html);
 
   const govde = govdeCoz(html);

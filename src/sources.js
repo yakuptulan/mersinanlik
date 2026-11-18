@@ -197,7 +197,7 @@ export const KAYNAKLAR = [
     linkDesen: 'tarsus\\.edu\\.tr/Website/Haberler/\\d{4,}/1/[^?]+$',
     gorselDesen: '/Images/Uploads/MyContents/\\d',
     baslikEtiket: 'title',
-    tarihMetinden: true,
+    tarihGorselden: true,
     enFazla: 5,
     kapsam: 'kurum',
     yapayZekaOzeti: true,
