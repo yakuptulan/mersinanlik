@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-18T19:31:22.711Z"
   }
  },
  "gorsel": {
@@ -232,8 +228,20 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-18T19:31:48.106Z",
+  "guncelleme": "2026-11-18T20:01:52.307Z",
   "liste": [
+   {
+    "baslik": "bedelli askerlik",
+    "trafik": 500
+   },
+   {
+    "baslik": "gta san andreas",
+    "trafik": 200
+   },
+   {
+    "baslik": "ankara su kesintisi",
+    "trafik": 200
+   },
    {
     "baslik": "fed faiz kararı",
     "trafik": 500
@@ -243,12 +251,8 @@
     "trafik": 100
    },
    {
-    "baslik": "yeraltı oyuncuları",
-    "trafik": 50000
-   },
-   {
-    "baslik": "yeraltı 23 bölüm",
-    "trafik": 200
+    "baslik": "safiye soyman",
+    "trafik": 100
    },
    {
     "baslik": "açlık oyunları",
@@ -256,11 +260,7 @@
    },
    {
     "baslik": "taha çakmak",
-    "trafik": 100
-   },
-   {
-    "baslik": "safiye soyman",
-    "trafik": 100
+    "trafik": 500
    },
    {
     "baslik": "gs basketbol",
@@ -269,10 +269,6 @@
    {
     "baslik": "kara bela oyuncuları",
     "trafik": 200
-   },
-   {
-    "baslik": "thor",
-    "trafik": 100
    }
   ]
  },
