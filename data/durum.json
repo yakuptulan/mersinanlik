@@ -12,11 +12,15 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-18T09:01:20.551Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-18",
-  "adet": 12
+  "adet": 14
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -164,7 +168,11 @@
    "https://mersingundem.com/haber/13640/protez-tirnak-kursuna-katilan-kadinlar-kendi-is-yerlerini-acmayi-hedefliyor.html",
    "https://mersingundem.com/haber/13642/buyuksehirin-kiyafet-evinde-kislik-kiyafetler-raflardaki-yerini-aldi.html",
    "https://mersingundem.com/haber/13644/toroslarda-kadin-dayanismasi-buyuyor-cocuklar-eglenerek-ogreniyor.html",
-   "https://mersingundem.com/haber/13643/mersin-sinema-ofisi-film-yapimlarini-mersine-cekiyor.html"
+   "https://mersingundem.com/haber/13643/mersin-sinema-ofisi-film-yapimlarini-mersine-cekiyor.html",
+   "https://mersingundem.com/haber/13648/toroslarda-yoruk-dugunu-gelenegi-yeniden-canlandirildi.html",
+   "https://mersingundem.com/haber/13647/baskan-vekili-genc-denizimizi-kirleten-105-gemiye-423-milyon-lira-ceza-uyguladik.html",
+   "https://mersingundem.com/haber/13646/tarsus-belediyesinin-ara-tatil-etkinliklerine-yogun-ilgi.html",
+   "https://mersingundem.com/haber/13645/gulcan-kis-ithal-hayvan-skandalinin-hesabini-kim-verecek.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -177,23 +185,31 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-18T08:31:31.130Z",
+  "guncelleme": "2026-11-18T09:01:42.975Z",
   "liste": [
+   {
+    "baslik": "motorin",
+    "trafik": 2000
+   },
+   {
+    "baslik": "sağlık",
+    "trafik": 200
+   },
    {
     "baslik": "federal rezerv",
     "trafik": 200
    },
    {
     "baslik": "chery tiggo 5x",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "muratpaşa belediyesi",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "amad diallo",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "genelge",
@@ -201,7 +217,7 @@
    },
    {
     "baslik": "gökhan töre",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "süper loto çekiliş sonuçları",
@@ -210,14 +226,6 @@
    {
     "baslik": "romanya",
     "trafik": 2000
-   },
-   {
-    "baslik": "fed faiz kararı ne zaman",
-    "trafik": 200
-   },
-   {
-    "baslik": "yenişafak",
-    "trafik": 200
    }
   ]
  },
