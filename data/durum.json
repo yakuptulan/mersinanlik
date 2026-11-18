@@ -12,11 +12,19 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "mersin-universitesi": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-18T16:23:23.249Z"
+  },
+  "tarsus-universitesi": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-18T16:23:36.078Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-18",
-  "adet": 25
+  "adet": 27
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -228,8 +236,16 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-18T16:09:11.763Z",
+  "guncelleme": "2026-11-18T16:23:46.148Z",
   "liste": [
+   {
+    "baslik": "doğu akdeniz",
+    "trafik": 100
+   },
+   {
+    "baslik": "ankara elektrik kesintisi",
+    "trafik": 100
+   },
    {
     "baslik": "irak",
     "trafik": 200
@@ -239,12 +255,16 @@
     "trafik": 100
    },
    {
+    "baslik": "psn",
+    "trafik": 100
+   },
+   {
     "baslik": "dursun özbek",
     "trafik": 200
    },
    {
     "baslik": "31 aralık",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "azerbaycan",
@@ -257,18 +277,6 @@
    {
     "baslik": "gta5",
     "trafik": 100
-   },
-   {
-    "baslik": "eski",
-    "trafik": 5000
-   },
-   {
-    "baslik": "esra erol",
-    "trafik": 2000
-   },
-   {
-    "baslik": "gülse birsel",
-    "trafik": 500
    }
   ]
  },
