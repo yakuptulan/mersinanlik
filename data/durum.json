@@ -12,6 +12,14 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "mersintime": {
+   "hata": "This operation was aborted",
+   "zaman": "2026-11-18T19:25:05.194Z"
+  },
+  "mersinhabermerkezi": {
+   "hata": "This operation was aborted",
+   "zaman": "2026-11-18T19:25:20.811Z"
   }
  },
  "gorsel": {
@@ -228,26 +236,38 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-18T19:19:09.318Z",
+  "guncelleme": "2026-11-18T19:25:25.867Z",
   "liste": [
    {
-    "baslik": "taha çakmak",
+    "baslik": "fed faiz kararı",
+    "trafik": 500
+   },
+   {
+    "baslik": "cem küçük",
     "trafik": 100
    },
    {
+    "baslik": "yeraltı oyuncuları",
+    "trafik": 50000
+   },
+   {
     "baslik": "yeraltı 23 bölüm",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "açlık oyunları",
     "trafik": 200
    },
    {
-    "baslik": "gs basketbol",
+    "baslik": "taha çakmak",
     "trafik": 100
    },
    {
     "baslik": "safiye soyman",
+    "trafik": 100
+   },
+   {
+    "baslik": "gs basketbol",
     "trafik": 100
    },
    {
@@ -257,18 +277,6 @@
    {
     "baslik": "thor",
     "trafik": 100
-   },
-   {
-    "baslik": "cevher dizisi",
-    "trafik": 1000
-   },
-   {
-    "baslik": "fox tv",
-    "trafik": 200
-   },
-   {
-    "baslik": "high potential",
-    "trafik": 500
    }
   ]
  },
