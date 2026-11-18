@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-18T22:01:21.346Z"
   }
  },
  "gorsel": {
@@ -232,8 +228,20 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-18T22:01:47.369Z",
+  "guncelleme": "2026-11-18T22:31:47.387Z",
   "liste": [
+   {
+    "baslik": "gemini neon",
+    "trafik": 100
+   },
+   {
+    "baslik": "rockstar",
+    "trafik": 100
+   },
+   {
+    "baslik": "gassal 4 sezon",
+    "trafik": 100
+   },
    {
     "baslik": "now",
     "trafik": 2000
@@ -251,28 +259,16 @@
     "trafik": 500
    },
    {
-    "baslik": "içişleri bakanlığı",
-    "trafik": 100
-   },
-   {
     "baslik": "tekin bingöl",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "ösym",
-    "trafik": 20000
+    "trafik": 50000
    },
    {
-    "baslik": "yeralti",
-    "trafik": 500
-   },
-   {
-    "baslik": "yasak elma",
-    "trafik": 100
-   },
-   {
-    "baslik": "19 kasım ne günü",
-    "trafik": 200
+    "baslik": "ösym giriş",
+    "trafik": 10000
    }
   ]
  },
