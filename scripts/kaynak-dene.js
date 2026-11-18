@@ -19,6 +19,15 @@ async function al(url) {
     return { durum: 'HATA ' + (e.cause?.code || e.message).toString().slice(0, 40), metin: '' };
   }
 }
+if (process.env.ARA === 'UCUS') {
+  const { ucuslariGetir } = await import('../src/lib/ucus.js');
+  const v = await ucuslariGetir(UA);
+  for (const yon of ['giden', 'gelen']) {
+    console.log(`\n### ${yon}: ${v[yon].length}`);
+    for (const u of v[yon].slice(0, 15)) console.log(JSON.stringify(u));
+  }
+  process.exit(0);
+}
 for (const url of ADAYLAR) {
   const { durum, metin, son } = await al(url);
   const rss = /<rss|<feed|<channel/i.test(metin.slice(0, 2000));
