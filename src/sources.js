@@ -226,8 +226,11 @@ export const KAYNAKLAR = [
     liste: 'https://mersinism.saglik.gov.tr/',
     // Ana sayfada sabit sayfalar da var; haberlerin numarası 395000 üstü
     linkDesen: 'mersinism\\.saglik\\.gov\\.tr/TR-(39[5-9]\\d{3}|[4-9]\\d{5})/[a-z0-9-]+\\.html$',
-    tarihMetinden: true,
-    gorselDesen: 'dosyaism\\.saglik\\.gov\\.tr/Resim/',
+    baslikEtiket: 'title',
+    tarihGorselden: true,
+    gorselIlk: true,
+    // /Resim/<no>/1/ haberin kendi fotoğrafı; /0/ olanlar site geneli duyuru görselleri
+    gorselDesen: 'dosyaism\\.saglik\\.gov\\.tr/Resim/\\d+/1/',
     enFazla: 6,
     kapsam: 'kurum',
     yapayZekaOzeti: true,

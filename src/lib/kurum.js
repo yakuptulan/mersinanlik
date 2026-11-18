@@ -100,7 +100,7 @@ export function detayCoz(html, link, kaynak) {
   if (!tarih && gunAyYil) tarih = new Date(`${gunAyYil[3]}-${gunAyYil[2]}-${gunAyYil[1]}T12:00:00+03:00`).toISOString();
 
   // Fotoğraf adındaki zaman damgası (ör. 30514-20261110151655.jpeg)
-  const fotoDamga = kaynak.tarihGorselden && foto?.match(/(20\d\d)(\d\d)(\d\d)(\d\d)(\d\d)\d{2,}/);
+  const fotoDamga = kaynak.tarihGorselden && (foto?.match(/(20\d\d)(\d\d)(\d\d)(\d\d)(\d\d)\d{2,}/) || foto?.match(/(20\d\d)(\d\d)(\d\d)-at-(\d\d)(\d\d)/));
   if (!tarih && fotoDamga) tarih = new Date(`${fotoDamga[1]}-${fotoDamga[2]}-${fotoDamga[3]}T${fotoDamga[4]}:${fotoDamga[5]}:00+03:00`).toISOString();
   if (!tarih && kaynak.tarihMetinden) tarih = metindenTarih(html);
 
