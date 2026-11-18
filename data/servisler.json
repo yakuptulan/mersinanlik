@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-18T21:58:47.104Z",
+ "guncelleme": "2026-11-18T22:01:53.422Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 15,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-18T21:31:50.583Z",
+  "guncelleme": "2026-11-18T22:02:00.933Z",
   "liste": [
    {
     "ad": "Anadolu Eczanesi",
@@ -674,7 +674,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-18T21:59:02.721Z",
+  "guncelleme": "2026-11-18T22:02:01.900Z",
   "liste": [
    {
     "tur": "su",
@@ -882,7 +882,7 @@
   "kaynakSaati": "2026-11-19 00:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-18T21:31:55.883Z",
+  "guncelleme": "2026-11-18T22:02:06.694Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -7658,7 +7658,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-18T21:59:15.781Z",
+  "guncelleme": "2026-11-18T22:02:07.712Z",
   "liste": [
    {
     "yol": "/",
@@ -7695,20 +7695,20 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-18T21:59:17.971Z",
+  "guncelleme": "2026-11-18T22:02:09.425Z",
   "deniz": {
    "sicaklik": 21.9,
    "dalga": 0.34
   },
   "hava": {
-   "aqi": 51,
-   "pm25": 23.7,
-   "pm10": 30.8,
+   "aqi": 48,
+   "pm25": 22.6,
+   "pm10": 27.9,
    "uvMax": 2
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-18T21:32:42.078Z",
+  "guncelleme": "2026-11-18T22:02:10.229Z",
   "giden": [
    {
     "no": [
@@ -8213,7 +8213,7 @@
     "planlanan": "2026-11-18T22:05:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "ic"
    },
    {
@@ -8691,6 +8691,18 @@
     "havayolu": "Pegasus",
     "yer": "İzmir",
     "planlanan": "2026-11-19T21:30:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2096"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-19T21:45:00.000Z",
     "tahmini": null,
     "kapi": "",
     "durum": "",
