@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-18T13:31:55.243Z",
+ "guncelleme": "2026-11-18T14:03:40.686Z",
  "hikayeler": [
   {
    "id": "2r80dh",
@@ -4213,7 +4213,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-17T08:06:52.000Z",
-   "sonGuncelleme": "2026-11-18T13:31:32.248Z",
+   "sonGuncelleme": "2026-11-18T14:01:36.727Z",
    "kaynaklar": [
     {
      "kaynakId": "aa-guncel",
@@ -4812,7 +4812,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-17T14:17:00+03:00",
-   "sonGuncelleme": "2026-11-18T13:31:29.449Z",
+   "sonGuncelleme": "2026-11-18T14:01:34.426Z",
    "kaynaklar": [
     {
      "kaynakId": "haberturk-mersin",
@@ -4855,6 +4855,13 @@
      "link": "https://www.mersinobjektif.com.tr/tarsusta-kamyon-ile-otomobil-carpisti-1-olu-2-yarali",
      "baslik": "Tarsus'ta kamyon ile otomobil çarpıştı: 1 ölü, 2 yaralı",
      "tarih": "2026-11-18T13:16:00.000Z"
+    },
+    {
+     "kaynakId": "dha-mersin",
+     "ad": "DHA",
+     "link": "https://www.dha.com.tr/yerel-haberler/mersin/tarsus/otomobil-ile-kamyon-carpisti-1-olu-2-yarali-2984228",
+     "baslik": "Otomobil ile kamyon çarpıştı: 1 ölü, 2 yaralı",
+     "tarih": "2026-11-18T16:20:03+03:00"
     }
    ],
    "metinDenemesi": 1,
@@ -5476,14 +5483,16 @@
    "id": "1ofwcdj",
    "baslik": "Mersin Barosu: “Demokrasi, kayyım uygulamalarıyla kuşatılamaz!”",
    "ozet": "Mersin Barosu, Sözcü TV ve Sözcü.com.tr'ye TMSF tarafından kayyım atanmasına ve kanal yöneticilerinin gözaltına alınmasına tepki gösterdi. Açıklamada, bu tür uygulamaların basın özgürlüğüne ve demokratik düzene zarar verdiği vurgulandı.",
-   "ilceler": [],
+   "ilceler": [
+    "yenisehir"
+   ],
    "genel": false,
    "kategori": "gundem",
    "riskNedenleri": [],
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-17T13:12:00.000Z",
-   "sonGuncelleme": "2026-11-17T13:16:51.971Z",
+   "sonGuncelleme": "2026-11-18T14:01:45.090Z",
    "kaynaklar": [
     {
      "kaynakId": "cukurova",
@@ -5491,6 +5500,41 @@
      "link": "https://cukurovagazetesi.com/mersin-barosu-demokrasi-kayyim-uygulamalariyla-kusatilamaz",
      "baslik": "Mersin Barosu: “Demokrasi, kayyım uygulamalarıyla kuşatılamaz!”",
      "tarih": "2026-11-17T13:12:00.000Z"
+    },
+    {
+     "kaynakId": "cukurova",
+     "ad": "Çukurova Gazetesi",
+     "link": "https://cukurovagazetesi.com/yeni-parti-yenisehir-ilce-baskanligindan-sozcu-tv-tepkisi",
+     "baslik": "YENİ Parti Yenişehir İlçe Başkanlığı’ndan Sözcü TV tepkisi",
+     "tarih": "2026-11-17T19:39:00.000Z"
+    },
+    {
+     "kaynakId": "mersinportal",
+     "ad": "Mersin Portal",
+     "link": "https://www.mersinportal.com/mersin-milletvekilleri-basin-ozgurlugu-ve-haber-alma-hakki-korunmali",
+     "baslik": "Mersin Milletvekilleri: Basın Özgürlüğü ve Haber Alma Hakkı Korunmalı",
+     "tarih": "2026-11-18T06:01:00.000Z"
+    },
+    {
+     "kaynakId": "cukurova",
+     "ad": "Çukurova Gazetesi",
+     "link": "https://cukurovagazetesi.com/mersin-emek-ve-demokrasi-platformu-basin-hurdur-susturulamaz",
+     "baslik": "Mersin Emek ve Demokrasi Platformu: “Basın hürdür, susturulamaz”",
+     "tarih": "2026-11-18T10:19:00.000Z"
+    },
+    {
+     "kaynakId": "mersinhabermerkezi",
+     "ad": "Mersin Haber Merkezi",
+     "link": "https://www.mersinhabermerkezi.com/mersin-emek-ve-demokrasi-platformu-sozcu-tvye-kayyum-atanmasina-tepki-gosterdi",
+     "baslik": "Mersin Emek ve Demokrasi Platformu, Sözcü TV’ye kayyum atanmasına tepki gösterdi",
+     "tarih": "2026-11-18T10:24:00.000Z"
+    },
+    {
+     "kaynakId": "mersinportal",
+     "ad": "Mersin Portal",
+     "link": "https://www.mersinportal.com/mersinde-sozcu-tvye-kayyum-karari-protesto-edildi-ozgur-basin-susturulamaz",
+     "baslik": "Mersin'de Sözcü TV'ye Kayyum Kararı Protesto Edildi: Özgür Basın Susturulamaz",
+     "tarih": "2026-11-18T13:53:00.000Z"
     }
    ],
    "metinDenemesi": 1,
@@ -5715,144 +5759,6 @@
    "gorsel": "7flbwy.webp"
   },
   {
-   "id": "1w06nvn",
-   "baslik": "Kömür ocağında feci kaza: Kamyon şoförü yaşamını yitirdi",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "ulasim",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-17T13:54:00.000Z",
-   "sonGuncelleme": "2026-11-17T14:01:32.938Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "cukurova",
-     "ad": "Çukurova Gazetesi",
-     "link": "https://cukurovagazetesi.com/komur-ocaginda-feci-kaza-kamyon-soforu-yasamini-yitirdi",
-     "baslik": "Kömür ocağında feci kaza: Kamyon şoförü yaşamını yitirdi",
-     "tarih": "2026-11-17T13:54:00.000Z"
-    }
-   ]
-  },
-  {
-   "id": "1kfn7u8",
-   "baslik": "Bakan Mustafa Çiftçi, Devlet Bahçeli'yi ziyaret etti",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "siyaset",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-17T13:42:00.000Z",
-   "sonGuncelleme": "2026-11-17T14:01:32.944Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "cukurova",
-     "ad": "Çukurova Gazetesi",
-     "link": "https://cukurovagazetesi.com/bakan-mustafa-ciftci-devlet-bahceliyi-ziyaret-etti",
-     "baslik": "Bakan Mustafa Çiftçi, Devlet Bahçeli'yi ziyaret etti",
-     "tarih": "2026-11-17T13:42:00.000Z"
-    }
-   ]
-  },
-  {
-   "id": "rbuaf4",
-   "baslik": "FASHIONTEKS fuarı törenle açıldı",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "gundem",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-17T13:59:00.000Z",
-   "sonGuncelleme": "2026-11-17T14:01:33.105Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "mersinhabermerkezi",
-     "ad": "Mersin Haber Merkezi",
-     "link": "https://www.mersinhabermerkezi.com/fashionteks-fuari-torenle-acildi",
-     "baslik": "FASHIONTEKS fuarı törenle açıldı",
-     "tarih": "2026-11-17T13:59:00.000Z"
-    }
-   ]
-  },
-  {
-   "id": "tzy6tb",
-   "baslik": "Uzmanından uyarı: 'Ara tatili çocuklar için ikinci okul dönemine dönüştürmeyin'",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "egitim",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-17T13:43:00.000Z",
-   "sonGuncelleme": "2026-11-17T14:01:33.113Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "mersinhabermerkezi",
-     "ad": "Mersin Haber Merkezi",
-     "link": "https://www.mersinhabermerkezi.com/uzmanindan-uyari-ara-tatili-cocuklar-icin-ikinci-okul-donemine-donusturmeyin",
-     "baslik": "Uzmanından uyarı: 'Ara tatili çocuklar için ikinci okul dönemine dönüştürmeyin'",
-     "tarih": "2026-11-17T13:43:00.000Z"
-    }
-   ]
-  },
-  {
-   "id": "11gmjtn",
-   "baslik": "\"Davutpaşa Divanı\" buluşmalarının ilk konuğu Prof. Dr. Sadettin Ökten oldu",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "belediye",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-17T13:56:52.000Z",
-   "sonGuncelleme": "2026-11-17T14:01:36.776Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "aa-guncel",
-     "ad": "Anadolu Ajansı",
-     "link": "https://www.aa.com.tr/tr/kultur/davutpasa-divani-bulusmalarinin-ilk-konugu-prof-dr-sadettin-okten-oldu/4127923",
-     "baslik": "\"Davutpaşa Divanı\" buluşmalarının ilk konuğu Prof. Dr. Sadettin Ökten oldu",
-     "tarih": "2026-11-17T13:56:52.000Z"
-    }
-   ]
-  },
-  {
-   "id": "23s4tk",
-   "baslik": "30. Uluslararası Ankara Caz Festivali, \"Caz evrenseldir\" temasıyla başladı",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "kultur",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-17T13:49:24.000Z",
-   "sonGuncelleme": "2026-11-17T14:01:36.782Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "aa-guncel",
-     "ad": "Anadolu Ajansı",
-     "link": "https://www.aa.com.tr/tr/kultur/30-uluslararasi-ankara-caz-festivali-caz-evrenseldir-temasiyla-basladi/4127908",
-     "baslik": "30. Uluslararası Ankara Caz Festivali, \"Caz evrenseldir\" temasıyla başladı",
-     "tarih": "2026-11-17T13:49:24.000Z"
-    }
-   ]
-  },
-  {
    "id": "shwj69",
    "baslik": "Macaristan, Rusya'nın saldırısı nedeniyle Ukrayna'ya tren seferlerini kısıtladı",
    "ozet": "Macaristan, Rusya'ya ait bir İHA'nın Ukrayna'daki bir istasyon yakınlarına düşmesi üzerine tren seferlerini kısıtladı. Macar yetkililer Transkarpatya bölgesindeki saldırılara karşı uyarıda bulundu.",
@@ -5878,75 +5784,6 @@
    "yaziKaynak": "Anadolu Ajansı",
    "yazimDenemesi": 1,
    "metin": "Macaristan, Ukrayna sınırına yakın bir bölgeye düşen İHA'nın ardından demir yolu ulaşımında kısıtlamaya gitti. Başbakan Peter Magyar, Mukacevo Tren İstasyonu'nun yaklaşık 300 metre yakınındaki olay nedeniyle Macar mürettebatın tahliye edildiğini bildirdi.\n\nMacaristan Devlet Demir Yolları, güvenlik gerekçesiyle yolcu trenlerinin yalnızca Zahony ile Csap sınır istasyonları arasında çalışacağını duyurdu. Dışişleri Bakanı Anita Orban ise Rusya'nın Transkarpatya bölgesine yönelik İHA saldırıları düzenlediğini belirterek bölge halkıyla dayanışma içinde olduklarını açıkladı."
-  },
-  {
-   "id": "pybhhg",
-   "baslik": "COP31'de ziyaretçiler 1926 ve 2100'ün havasını soluyor",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "gundem",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-17T13:39:45.000Z",
-   "sonGuncelleme": "2026-11-17T14:01:36.799Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "aa-guncel",
-     "ad": "Anadolu Ajansı",
-     "link": "https://www.aa.com.tr/tr/gundem/cop31de-ziyaretciler-1926-ve-2100un-havasini-soluyor/4127887",
-     "baslik": "COP31'de ziyaretçiler 1926 ve 2100'ün havasını soluyor",
-     "tarih": "2026-11-17T13:39:45.000Z"
-    }
-   ]
-  },
-  {
-   "id": "16tl92i",
-   "baslik": "Hafta boyunca yurdun büyük bölümünde yağış etkili olacak",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "hava",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-17T13:34:40.000Z",
-   "sonGuncelleme": "2026-11-17T14:01:36.805Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "aa-guncel",
-     "ad": "Anadolu Ajansı",
-     "link": "https://www.aa.com.tr/tr/gundem/hafta-boyunca-yurdun-buyuk-bolumunde-yagis-etkili-olacak/4127877",
-     "baslik": "Hafta boyunca yurdun büyük bölümünde yağış etkili olacak",
-     "tarih": "2026-11-17T13:34:40.000Z"
-    }
-   ]
-  },
-  {
-   "id": "1pty07c",
-   "baslik": "\"Antalya Okyanus ve Denizler Mutabakatı\" yayımlandı",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "gundem",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-17T13:40:08.000Z",
-   "sonGuncelleme": "2026-11-17T14:01:36.811Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "aa-guncel",
-     "ad": "Anadolu Ajansı",
-     "link": "https://www.aa.com.tr/tr/cop31/antalya-okyanus-ve-denizler-mutabakati-yayimlandi/4127889",
-     "baslik": "\"Antalya Okyanus ve Denizler Mutabakatı\" yayımlandı",
-     "tarih": "2026-11-17T13:40:08.000Z"
-    }
-   ]
   },
   {
    "id": "18zvfry",
@@ -6137,29 +5974,6 @@
    ]
   },
   {
-   "id": "h3bvug",
-   "baslik": "SSB Başkanı Haluk Görgün, Manisa Savunma Sanayii İl Buluşması'nda konuştu",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "gundem",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-17T13:58:14.000Z",
-   "sonGuncelleme": "2026-11-17T14:31:38.203Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "aa-guncel",
-     "ad": "Anadolu Ajansı",
-     "link": "https://www.aa.com.tr/tr/bilim-teknoloji/ssb-baskani-haluk-gorgun-manisa-savunma-sanayii-il-bulusmasinda-konustu/4127925",
-     "baslik": "SSB Başkanı Haluk Görgün, Manisa Savunma Sanayii İl Buluşması'nda konuştu",
-     "tarih": "2026-11-17T13:58:14.000Z"
-    }
-   ]
-  },
-  {
    "id": "1ohc14p",
    "baslik": "Yemen'deki Husiler: Suudi Arabistan'ın Hudeyde ve Saada kentlerine düzenlediği saldırıda 11 kişi öldü",
    "ozet": null,
@@ -6243,7 +6057,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-17T13:05:49.000Z",
-   "sonGuncelleme": "2026-11-17T17:31:34.521Z",
+   "sonGuncelleme": "2026-11-18T14:01:36.686Z",
    "kaynaklar": [
     {
      "kaynakId": "aa-guncel",
@@ -6484,29 +6298,6 @@
    ]
   },
   {
-   "id": "1llc18e",
-   "baslik": "Bakan Uraloğlu'ndan Hızlı Geçiş Sistemi'ne ilişkin açıklama",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "gundem",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-17T14:00:16.000Z",
-   "sonGuncelleme": "2026-11-17T15:01:26.552Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "aa-guncel",
-     "ad": "Anadolu Ajansı",
-     "link": "https://www.aa.com.tr/tr/ekonomi/bakan-uraloglundan-hizli-gecis-sistemine-iliskin-aciklama/4127928",
-     "baslik": "Bakan Uraloğlu'ndan Hızlı Geçiş Sistemi'ne ilişkin açıklama",
-     "tarih": "2026-11-17T14:00:16.000Z"
-    }
-   ]
-  },
-  {
    "id": "wryat1",
    "baslik": "Bakan Fidan: Mekke savunma ittifakına yakın ilgi, çalışmalarımızın yaratabileceği olumlu etkinin açık göstergesidir",
    "ozet": null,
@@ -6530,33 +6321,10 @@
    ]
   },
   {
-   "id": "1a3qhxt",
-   "baslik": "SSB Başkanı Haluk Görgün: 2026 yılında şu ana kadar imzalanan sözleşmelerin değeri 16 milyar doları aştı",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "gundem",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-17T13:58:14.000Z",
-   "sonGuncelleme": "2026-11-17T15:01:26.564Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "aa-guncel",
-     "ad": "Anadolu Ajansı",
-     "link": "https://www.aa.com.tr/tr/bilim-teknoloji/ssb-baskani-haluk-gorgun-2026-yilinda-su-ana-kadar-imzalanan-sozlesmelerin-degeri-16-milyar-dolari-asti/4127925",
-     "baslik": "SSB Başkanı Haluk Görgün: 2026 yılında şu ana kadar imzalanan sözleşmelerin değeri 16 milyar doları aştı",
-     "tarih": "2026-11-17T13:58:14.000Z"
-    }
-   ]
-  },
-  {
    "id": "h56m3y",
    "baslik": "AB, Suriye ile siyasi ve ekonomik ortaklığını derinleştirmeye hazırlanıyor",
    "ozet": null,
-   "ozetIcinMetin": null,
+   "ozetIcinMetin": "Avrupa Birliği (AB) Komisyonunun Akdeniz'den sorumlu üyesi Dubravka Suica, Suriye ile ilişkileri ilerletmek üzere bir Ortaklık Anlaşması için çalışmaya hazır olduklarını belirterek, siyasi diyaloğu derinleştirmeyi, ticari ve ekonomik işbirliğini güçlendirmeyi hedeflediklerini söyledi.\nSuica, Şam'a düzenlediği ikinci ziyarette Suriye ile AB ortaklığında düzenlenen Suriye Ortaklık Koordinasyon Forumu marjında basına açıklamalarda bulundu.\nSuriye Dışişleri Bakanı Esad Hasan Şeybani ile oldukça verimli bir görüşme gerçekleştirdiğini belirten Suica, görüşmede AB-Suriye ilişkilerini, ekonomik işbirliğinin güçlendirilmesini ve yatırımların teşvik edilmesini ele aldıklarını aktardı.\nSuica, \"İnsan haklarına saygı ve azınlıkların korunmasının Suriye ile ilişkilerimizin temelini oluşturduğunu da vurguladım. Tüm Suriyeliler, ülkelerinin geleceğinde söz sahibi olmalı.\" dedi.\nSuriye'nin ilk kez ev sahipliği yaptığı Suriye Ortaklık Koordinasyon Forumu'nun açılışını yaptıklarını söyleyen Suica, forumda uluslararası desteğin koordinasyonu ve Suriye'nin öncelikleri doğrultusunda özel yatırımların çekilmesine odaklanıldığını kaydetti.\nSuica, bu çalışmalarla işletmelerin yeniden açılmasının, insanların iş bulmasının ve temel hizmetlerin yeniden işler hale gelmesinin amaçlandığını dile getirdi.\nAB'nin Suriye'nin toparlanmasına somut destek sağladığını belirten Suica, Aralık 2024'ten bu yana insani yardım, kalkınma ve istikrarın sağlanması için 1 milyar avroyu aşkın kaynak taahhüt ettiklerini söyledi.\nSuica, Haziran 2025'te Şam'a yaptığı ilk ziyarette 175 milyon avroluk destek açıkladığını hatırlatarak, AB Komisyonu Başkanı Ursula von der Leyen'in de ocakta, bu yıl ve gelecek yıl toparlanmanın desteklenmesi ve insani yardım sağlanması amacıyla 620 milyon avroluk kaynak duyurduğunu aktardı.\nSuriye kurumlarının reformları hayata geçirmesine ve yatırım koşullarının oluşturulmasına yardımcı olacak AB destekli Suriye Teknik Yardım Merkezi'ni bu sabah resmen faaliyete geçirdiklerini bildiren Suica, çalışma arkadaşlarıyla birlikte AB tarafından finanse edilen iki sözleşmeye de imza attıklarını belirtti.\nSuica, sözleşmelerin Suriye'de özel sektörün toparlanmasını desteklemeyi ve adalete erişimi iyileştirmeyi amaçladığını ifade etti.\nBir milyar avroluk destek paketinin uygulanması kapsamında, Mayıs 2025'te Suriye'ye yönelik ekonomik yaptırımları kaldırdıklarını hatırlatan Suica, güvenlik gerekçesiyle alınan tedbirler ile Beşşar Esed ve bağlantılı kişilere yönelik yaptırımların korunduğunun altını çizdi.\nSuica, 1978 tarihli AB-Suriye İşbirliği Anlaşması'nı da tamamen yeniden uygulamaya koyarak ticaretin önünü açtıklarını belirtti.\n\"AB-Suriye Ortaklık Anlaşması için çalışarak ilişkilerimizi daha ileri taşımaya hazırız.\" diyen Suica, bu konuda dün katıldığı AB Dışişleri Bakanları Toplantısı'nda mutabakata varıldığını anımsattı.\nSuica, AB'nin siyasi diyaloğu derinleştirmek, ticari ve ekonomik işbirliğini güçlendirmek ve Suriye'nin Avrupa-Akdeniz alanına yeniden entegrasyonunu desteklemek istediğini söyledi.\nSuriye'nin AB'nin Akdeniz Paktı'nın ayrılmaz bir parçası olduğunu vurgulayan Suica, sivil toplumun da ülkedeki geçiş sürecinde hayati rol oynadığını ifade etti.\nSuica, aral",
    "ilceler": [],
    "genel": true,
    "kategori": "ekonomi",
@@ -6573,7 +6341,11 @@
      "baslik": "AB, Suriye ile siyasi ve ekonomik ortaklığını derinleştirmeye hazırlanıyor",
      "tarih": "2026-11-17T15:06:07.000Z"
     }
-   ]
+   ],
+   "trend": "suriye",
+   "metinDenemesi": 1,
+   "yaziKaynak": "Anadolu Ajansı",
+   "yazimDenemesi": 1
   },
   {
    "id": "1subssb",
@@ -7311,29 +7083,6 @@
    ]
   },
   {
-   "id": "8o7pwy",
-   "baslik": "Marmara Denizi'ndeki çalışmalar COP31'de değerlendirildi",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "gundem",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-17T13:54:18.000Z",
-   "sonGuncelleme": "2026-11-17T18:01:26.351Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "aa-guncel",
-     "ad": "Anadolu Ajansı",
-     "link": "https://www.aa.com.tr/tr/gundem/marmara-denizindeki-calismalar-cop31de-degerlendirildi/4127918",
-     "baslik": "Marmara Denizi'ndeki çalışmalar COP31'de değerlendirildi",
-     "tarih": "2026-11-17T13:54:18.000Z"
-    }
-   ]
-  },
-  {
    "id": "tdnzbf",
    "baslik": "Bakan Kacır, yeşil dönüşüm için verilecek 3 milyar liralık destek çağrısının detaylarını açıkladı",
    "ozet": null,
@@ -7637,7 +7386,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-17T19:11:00.000Z",
-   "sonGuncelleme": "2026-11-18T13:31:28.332Z",
+   "sonGuncelleme": "2026-11-18T14:01:33.208Z",
    "kaynaklar": [
     {
      "kaynakId": "mersintime",
@@ -7696,7 +7445,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-17T19:25:00.000Z",
-   "sonGuncelleme": "2026-11-18T13:31:28.929Z",
+   "sonGuncelleme": "2026-11-18T14:01:33.771Z",
    "kaynaklar": [
     {
      "kaynakId": "cukurova",
@@ -7857,37 +7606,6 @@
      "tarih": "2026-11-17T19:43:00.000Z"
     }
    ]
-  },
-  {
-   "id": "1pu7umu",
-   "baslik": "YENİ Parti Yenişehir İlçe Başkanlığı’ndan Sözcü TV tepkisi",
-   "ozet": "Sözcü TV merkez binasına sabah saatlerinde polis ekiplerince operasyon düzenlenirken, kanal yönetimi ve bazı isimler gözaltına alındı. YENİ Parti Mersin Yenişehir İlçe Başkanlığı, yaşananlara tepki göstererek basın kuruluşlarına yönelik müdahalelerin demokrasiye tehdit olduğunu belirtti.",
-   "ilceler": [
-    "yenisehir"
-   ],
-   "genel": false,
-   "kategori": "siyaset",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-17T19:39:00.000Z",
-   "sonGuncelleme": "2026-11-17T20:01:33.781Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "cukurova",
-     "ad": "Çukurova Gazetesi",
-     "link": "https://cukurovagazetesi.com/yeni-parti-yenisehir-ilce-baskanligindan-sozcu-tv-tepkisi",
-     "baslik": "YENİ Parti Yenişehir İlçe Başkanlığı’ndan Sözcü TV tepkisi",
-     "tarih": "2026-11-17T19:39:00.000Z"
-    }
-   ],
-   "metinDenemesi": 1,
-   "yaziKaynak": "Çukurova Gazetesi",
-   "yazimDenemesi": 1,
-   "metin": "Sözcü TV'nin İstanbul Maslak'taki merkez binasına sabah saatlerinde polis ekipleri sevk edilerek operasyon gerçekleştirildi. Gerçekleştirilen operasyon kapsamında Sözcü TV Yönetim Kurulu Başkanı F.T.S., eski Sözcü TV Genel Müdürü A.A., İ.Ö. ve Y.Y. gözaltına alındı. Alınan mahkeme kararı doğrultusunda televizyon kanalına ve sozcu.com.tr internet sitesine Tasarruf Mevduatı Sigorta Fonu (TMSF) tarafından kayyum atandı.\n\nYaşanan gelişmelerin ardından YENİ Parti Mersin Yenişehir İlçe Başkanlığı bir açıklama yaparak duruma tepki gösterdi. Açıklamada, son dönemde medya kuruluşlarına yönelik art arda müdahaleler yapıldığına dikkat çekildi ve Sözcü avukatlarının soruşturma dosyasının daha önce Yargıtay'dan döndüğü ile gazetecilerin beraat ettiği yönündeki beyanları hatırlatıldı.\n\nİlçe Başkanlığı değerlendirmesinde, şafak vakti televizyon kanalına baskın yapılıp kayyum atanmasının kabul edilemeyeceği ifade edildi. Muhalif ekranların susturulduğu savunulan açıklamada, fon iddialarının konuşulduğu bir dönemde ekranların karartıldığı ve denetim kurumlarının tabloyu görmezden geldiği öne sürüldü.\n\nBasın kuruluşlarına yapılan bu müdahalelerin halkın haber alma hakkına ve demokrasiye açık bir tehdit olduğu vurgulandı. Açıklamada fonlara ilişkin iddiaların araştırılması gerektiği belirtilerek, basın kuruluşlarının hedef alınmasının kabul edilemeyeceği ve özgür basının susturulamayacağı kaydedildi.",
-   "gorselKaynak": "yz",
-   "gorselPrompt": "A quiet daytime street in Mersin with modern apartment buildings and distant Taurus mountains under a clear sky, showing a calm urban atmosphere with no people or political signs.. Realistic editorial news photograph, natural daylight, wide shot, sharp focus, no text, no letters, no watermark.",
-   "gorsel": "1pu7umu.webp"
   },
   {
    "id": "1x3vsi3",
@@ -8270,29 +7988,6 @@
      "link": "https://www.aa.com.tr/tr/dunya/kongo-havzasi-icin-1-milyon-hektarlik-orman-koruma-programi-tanitildi/4128139",
      "baslik": "Kongo Havzası için 1 milyon hektarlık orman koruma programı tanıtıldı",
      "tarih": "2026-11-17T15:56:23.000Z"
-    }
-   ]
-  },
-  {
-   "id": "1u4p9dh",
-   "baslik": "COP31'de fosil yakıtlardan uzaklaşma sürecinde elektrifikasyonun rolü tartışıldı",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "gundem",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-17T13:52:27.000Z",
-   "sonGuncelleme": "2026-11-17T22:31:49.630Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "aa-guncel",
-     "ad": "Anadolu Ajansı",
-     "link": "https://www.aa.com.tr/tr/ekonomi/cop31de-fosil-yakitlardan-uzaklasma-surecinde-elektrifikasyonun-rolu-tartisildi/4127915",
-     "baslik": "COP31'de fosil yakıtlardan uzaklaşma sürecinde elektrifikasyonun rolü tartışıldı",
-     "tarih": "2026-11-17T13:52:27.000Z"
     }
    ]
   },
@@ -8920,35 +8615,6 @@
      "tarih": "2026-11-17T19:52:02.000Z"
     }
    ]
-  },
-  {
-   "id": "1aerg3k",
-   "baslik": "Mersin Milletvekilleri: Basın Özgürlüğü ve Haber Alma Hakkı Korunmalı",
-   "ozet": "Sözcü TV ve sozcu.com.tr internet sitesine Tasarruf Mevduatı Sigorta Fonunun kayyum olarak atanması, Mersin milletvekillerinin tepkisine neden oldu. Kararı eleştiren milletvekilleri, durumun basın özgürlüğüne ve vatandaşların haber alma hakkına müdahale olduğunu savundu.",
-   "ilceler": [],
-   "genel": false,
-   "kategori": "siyaset",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-18T06:01:00.000Z",
-   "sonGuncelleme": "2026-11-18T06:31:32.494Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "mersinportal",
-     "ad": "Mersin Portal",
-     "link": "https://www.mersinportal.com/mersin-milletvekilleri-basin-ozgurlugu-ve-haber-alma-hakki-korunmali",
-     "baslik": "Mersin Milletvekilleri: Basın Özgürlüğü ve Haber Alma Hakkı Korunmalı",
-     "tarih": "2026-11-18T06:01:00.000Z"
-    }
-   ],
-   "metinDenemesi": 1,
-   "yaziKaynak": "Mersin Portal",
-   "yazimDenemesi": 3,
-   "metin": "İstanbul Cumhuriyet Başsavcılığının yürüttüğü soruşturma kapsamında Sözcü TV ve sozcu.com.tr internet sitesine Tasarruf Mevduatı Sigorta Fonunun kayyum olarak atanması Mersin milletvekillerinin tepkisini çekti. Kanal yöneticileri hakkında gözlem ve arama işlemlerinin de uygulanmasının ardından aralarında Ali Mahir Başarır, Talat Dinçer, Gülcan Kış, Mehmet Emin Ekmen ve Burhanettin Kocamaz açıklamalarda bulundu.\n\n\n\nMersin milletvekilleri, alınan kayyum kararını basın özgürlüğü ve vatandaşların haber alma hakkı açısından eleştirdi. Yapılan değerlendirmelerde, eleştirel yayın yapan medya kuruluşlarına yönelik müdahalelerin demokrasiyi zedelediği savunuldu. Soruşturmaya konu süreçlerin gazetecileri baskı altında tutmak amacıyla kullanılamayacağı ifade edildi.\n\n\n\nSöz konusu gelişmelerin ardından milletvekilleri, özgür basın olmadan demokratik bir toplumun var olamayacağını vurguladı. Medya kuruluşlarına yönelik baskılara karşı olduklarını belirten siyasetçiler, çalışanların ve halkın doğru bilgiye erişim hakkının korunması gerektiğini dile getirdi.",
-   "gorselKaynak": "yz",
-   "gorselPrompt": "A quiet newsroom desk with a microphone and a modern digital tablet displaying news articles, bathed in soft daylight, with a blurred background of a contemporary office.. Realistic editorial news photograph, natural daylight, wide shot, sharp focus, no text, no letters, no watermark.",
-   "gorsel": "1aerg3k.webp"
   },
   {
    "id": "1lxbfjz",
@@ -11486,7 +11152,7 @@
    "id": "19be43x",
    "baslik": "İsrail Savunma Bakanından Gazze, Lübnan ve Suriye'de işgali genişletip kalıcı hale getirme tehdidi",
    "ozet": null,
-   "ozetIcinMetin": null,
+   "ozetIcinMetin": "İsrail Savunma Bakanı Katz, yaptığı yazılı açıklamada, İsrail'in Gazze, Lübnan ve Suriye'de işgal ettiği bölgelerden çekilmeyeceğini ileri sürdü.\nKatz, \"Hamas'ın ortadan kaldırılması ve Gazze'nin silahsızlandırılması, Lübnan'ın tamamında Hizbullah'ın silahsızlandırılması ve Suriye'deki tehditlerin sona ermesi\" gerçekleşmeden İsrail ordusunun bu bölgelerde konuşlanmaya devam edeceğini savundu.\nİsrail ordusunun söz konusu bölgelerde çatışma yaşanması durumunda yeni topraklar ele geçirerek işgali genişletmeye hazır olduğunu öne süren Katz, işgal edilen bölgeleri \"İsrail'in kuzey ve güneydeki kalıcı güvenlik bölgelerinin bir parçası haline getireceklerini\" belirterek, işgali kalıcı hale getirmekle tehdit etti.\nGazze Şeridi'nin 365 kilometrekarelik toprağının yaklaşık yüzde 70'ini işgal altında tutan İsrail, Lübnan'ın güneyinde sınır boyunca yer yer 10 kilometre derinliğe ulaşan geniş bir alanı işgal etmişti.\nİsrail, Baas rejiminin devrilmesinin ardından Suriye'ye yüzlerce hava saldırısı düzenlemiş ve ülkenin güneyindeki tampon bölgeyi işgal etmişti.\nAnadolu Ajansı web sitesinde, AA Haber Akış Sistemi (HAS) üzerinden abonelere sunulan haberler, özetlenerek yayımlanmaktadır. Abonelik için lütfen iletişime geçiniz.\nBu haberde bir hata mı var? Her türlü talep, şikâyet ve görüş için okur temsilcimize ulaşabilirsiniz.",
    "ilceler": [],
    "genel": true,
    "kategori": "gundem",
@@ -11503,7 +11169,11 @@
      "baslik": "İsrail Savunma Bakanından Gazze, Lübnan ve Suriye'de işgali genişletip kalıcı hale getirme tehdidi",
      "tarih": "2026-11-18T08:55:09.000Z"
     }
-   ]
+   ],
+   "trend": "suriye",
+   "metinDenemesi": 1,
+   "yaziKaynak": "Anadolu Ajansı",
+   "yazimDenemesi": 1
   },
   {
    "id": "5m8jpm",
@@ -12785,40 +12455,6 @@
      "tarih": "2026-11-18T10:00:40.000Z"
     }
    ]
-  },
-  {
-   "id": "1cdggum",
-   "baslik": "Mersin Emek ve Demokrasi Platformu: “Basın hürdür, susturulamaz”",
-   "ozet": "Mersin Emek ve Demokrasi Platformu, bazı medya kuruluşlarına kayyım atanması ve yaşanan olaylara tepki göstermek amacıyla basın açıklaması düzenledi. Özgür Çocuk Parkı'nda gerçekleşen açıklamada, basın özgürlüğünün engellenemeyeceği vurgulandı.",
-   "ilceler": [],
-   "genel": false,
-   "kategori": "siyaset",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-18T10:19:00.000Z",
-   "sonGuncelleme": "2026-11-18T11:01:31.143Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "cukurova",
-     "ad": "Çukurova Gazetesi",
-     "link": "https://cukurovagazetesi.com/mersin-emek-ve-demokrasi-platformu-basin-hurdur-susturulamaz",
-     "baslik": "Mersin Emek ve Demokrasi Platformu: “Basın hürdür, susturulamaz”",
-     "tarih": "2026-11-18T10:19:00.000Z"
-    },
-    {
-     "kaynakId": "mersinhabermerkezi",
-     "ad": "Mersin Haber Merkezi",
-     "link": "https://www.mersinhabermerkezi.com/mersin-emek-ve-demokrasi-platformu-sozcu-tvye-kayyum-atanmasina-tepki-gosterdi",
-     "baslik": "Mersin Emek ve Demokrasi Platformu, Sözcü TV’ye kayyum atanmasına tepki gösterdi",
-     "tarih": "2026-11-18T10:24:00.000Z"
-    }
-   ],
-   "metinDenemesi": 1,
-   "yaziKaynak": "Çukurova Gazetesi",
-   "yazimDenemesi": 1,
-   "metin": "Mersin Emek ve Demokrasi Platformu, son dönemde bazı televizyon kanallarına yönelik gerçekleştirilen polis baskınları ve kayyım atanması kararlarını protesto etmek üzere bir araya geldi.\n\nÖzgür Çocuk Parkı'nda düzenlenen basın açıklamasına çok sayıda sivil toplum kuruluşu ile siyasi parti temsilcileri de katılarak destek verdi. Etkinlikte basın metnini Mersin Emek ve Demokrasi Platformu Dönem Sözcüsü ve Tüm Bel-Sen Mersin Şube Başkanı Mustafa Özbay okudu.\n\nÖzbay, iktidarın muhalif yayın organlarına yönelik müdahalelerinin halkın haber alma hakkına yapılmış hukuksuz bir saldırı olduğunu belirtti. Açıklamada, yaşanan fon krizleri ve basın üzerindeki baskıların kabul edilemez olduğu ifade edilerek, demokratik haklar savunulmaya devam edileceği kaydedildi.",
-   "gorselKaynak": "yz"
   },
   {
    "id": "15tfu4h",
@@ -15004,6 +14640,262 @@
      "link": "https://www.aa.com.tr/tr/dunya/nato-5g-6g-ve-uydu-iletisiminin-askeri-kullanimi-icin-ilk-stratejisini-yayimladi/4129387",
      "baslik": "NATO, 5G, 6G ve uydu iletişiminin askeri kullanımı için ilk stratejisini yayımladı",
      "tarih": "2026-11-18T13:22:03.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1pmyy5o",
+   "baslik": "Yeni Mersin İdman Yurdu - Karaman FK maçının yeni tarihi belli oldu!",
+   "ozet": null,
+   "ozetIcinMetin": "Silifke Şehir Stadyumu’nda oynanması planlanan karşılaşma öncesinde deplasman yolculuğuna çıkan Karaman FK kafilesi, talihsiz bir olayla karşı karşıya kalmıştı. Takım otobüsünde henüz belirlenemeyen bir nedenle çıkan yangın, deplasman yolculuğunun aksamasına neden olmuştu. Yaşanan olayın ardından Yeni Mersin İdman Yurdu ile Karaman FK arasında oynanacak müsabaka ileri bir tarihe ertelenmişti.\nErtelenen karşılaşmanın yeni programı belli oldu. Yapılan planlamaya göre Yeni Mersin İdman Yurdu ile Karaman Futbol Kulübü, 2 Aralık Çarşamba günü saat 14.00’te karşı karşıya gelecek. Mücadele, Mersin Stadyumu’nda oynanacak.\nBöylece iki takımın ligdeki 12. hafta mücadelesinin oynanacağı tarih ve saat de netleşmiş oldu. Yeni Mersin İdman Yurdu, kendi sahasında oynayacağı karşılaşmada sahaya galibiyet hedefiyle çıkarken, Karaman FK ise deplasmanda puan mücadelesi verecek.\nBu bağlantı sizi https://cukurovagazetesi.com dışındaki bir siteye yönlendiriyor.",
+   "ilceler": [],
+   "genel": false,
+   "kategori": "spor",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-18T13:52:00.000Z",
+   "sonGuncelleme": "2026-11-18T14:01:33.754Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "cukurova",
+     "ad": "Çukurova Gazetesi",
+     "link": "https://cukurovagazetesi.com/yeni-mersin-idman-yurdu-karaman-fk-macinin-yeni-tarihi-belli-oldu",
+     "baslik": "Yeni Mersin İdman Yurdu - Karaman FK maçının yeni tarihi belli oldu!",
+     "tarih": "2026-11-18T13:52:00.000Z"
+    }
+   ],
+   "metinDenemesi": 1,
+   "yaziKaynak": "Çukurova Gazetesi",
+   "yazimDenemesi": 1
+  },
+  {
+   "id": "j8zvg6",
+   "baslik": "Kırmızı bültenle aranan 2 isim de iade edilenler arasında",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-18T13:49:00.000Z",
+   "sonGuncelleme": "2026-11-18T14:01:33.759Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "cukurova",
+     "ad": "Çukurova Gazetesi",
+     "link": "https://cukurovagazetesi.com/kirmizi-bultenle-aranan-2-isim-de-iade-edilenler-arasinda",
+     "baslik": "Kırmızı bültenle aranan 2 isim de iade edilenler arasında",
+     "tarih": "2026-11-18T13:49:00.000Z"
+    }
+   ]
+  },
+  {
+   "id": "jofzvb",
+   "baslik": "Türkiye'nin milli uydu görüntüleri ücretsiz erişime açıldı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-18T13:36:00.000Z",
+   "sonGuncelleme": "2026-11-18T14:01:33.763Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "cukurova",
+     "ad": "Çukurova Gazetesi",
+     "link": "https://cukurovagazetesi.com/turkiyenin-milli-uydu-goruntuleri-ucretsiz-erisime-acildi",
+     "baslik": "Türkiye'nin milli uydu görüntüleri ücretsiz erişime açıldı",
+     "tarih": "2026-11-18T13:36:00.000Z"
+    }
+   ]
+  },
+  {
+   "id": "3etgrk",
+   "baslik": "Türk Eximbank ve NEXI arasında reasürans anlaşması imzalandı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "ekonomi",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-18T13:47:00.000Z",
+   "sonGuncelleme": "2026-11-18T14:01:34.421Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "mersinhabermerkezi",
+     "ad": "Mersin Haber Merkezi",
+     "link": "https://www.mersinhabermerkezi.com/turk-eximbank-ve-nexi-arasinda-reasurans-anlasmasi-imzalandi",
+     "baslik": "Türk Eximbank ve NEXI arasında reasürans anlaşması imzalandı",
+     "tarih": "2026-11-18T13:47:00.000Z"
+    }
+   ]
+  },
+  {
+   "id": "hq4tym",
+   "baslik": "Genç piyanist İlyun Bürkev uluslararası sahnelerde adından söz ettiriyor",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "kultur",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-18T13:59:24.000Z",
+   "sonGuncelleme": "2026-11-18T14:01:36.690Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/kultur/genc-piyanist-ilyun-burkev-uluslararasi-sahnelerde-adindan-soz-ettiriyor/4129439",
+     "baslik": "Genç piyanist İlyun Bürkev uluslararası sahnelerde adından söz ettiriyor",
+     "tarih": "2026-11-18T13:59:24.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1cp3r3k",
+   "baslik": "DSÖ: KDC'deki Ebola salgını, uluslararası öneme sahip bir halk sağlığı acil durumu olmaya devam ediyor",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "saglik",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-18T13:42:28.000Z",
+   "sonGuncelleme": "2026-11-18T14:01:36.695Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/dunya/dso-kdcdeki-ebola-salgini-uluslararasi-oneme-sahip-bir-halk-sagligi-acil-durumu-olmaya-devam-ediyor/4129418",
+     "baslik": "DSÖ: KDC'deki Ebola salgını, uluslararası öneme sahip bir halk sağlığı acil durumu olmaya devam ediyor",
+     "tarih": "2026-11-18T13:42:28.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1gt585g",
+   "baslik": "Dünya Gıda Programından iklim kaynaklı açlıkla mücadele için daha erken önlem ve finansman çağrısı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "saglik",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-18T13:39:14.000Z",
+   "sonGuncelleme": "2026-11-18T14:01:36.699Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/dunya/dunya-gida-programindan-iklim-kaynakli-aclikla-mucadele-icin-daha-erken-onlem-ve-finansman-cagrisi/4129413",
+     "baslik": "Dünya Gıda Programından iklim kaynaklı açlıkla mücadele için daha erken önlem ve finansman çağrısı",
+     "tarih": "2026-11-18T13:39:14.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1htipw5",
+   "baslik": "İsrail, Gazze'de Sarı Hattı ihlal ederek düzenlediği saldırılarla Filistinlileri bir kez daha göçe zorladı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "kaza",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-18T13:29:03.000Z",
+   "sonGuncelleme": "2026-11-18T14:01:36.704Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/dunya/israil-gazzede-sari-hatti-ihlal-ederek-duzenledigi-saldirilarla-filistinlileri-bir-kez-daha-goce-zorladi/4129399",
+     "baslik": "İsrail, Gazze'de Sarı Hattı ihlal ederek düzenlediği saldırılarla Filistinlileri bir kez daha göçe zorladı",
+     "tarih": "2026-11-18T13:29:03.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1ccyw43",
+   "baslik": "AB'den COP31'de iklim taahhütlerinin somut adımlara dönüştürülmesi çağrısı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-18T12:52:26.000Z",
+   "sonGuncelleme": "2026-11-18T14:01:36.708Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/ekonomi/abden-cop31de-iklim-taahhutlerinin-somut-adimlara-donusturulmesi-cagrisi/4129342",
+     "baslik": "AB'den COP31'de iklim taahhütlerinin somut adımlara dönüştürülmesi çağrısı",
+     "tarih": "2026-11-18T12:52:26.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1fmx7ov",
+   "baslik": "Milli sporcular Ebru Acer ve Abdullah Öztürk, tekler kategorisinde finale çıktı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "spor",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-18T13:30:37.000Z",
+   "sonGuncelleme": "2026-11-18T14:01:36.712Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/spor/milli-sporcular-ebru-acer-ve-abdullah-ozturk-tekler-kategorisinde-finale-cikti/4129402",
+     "baslik": "Milli sporcular Ebru Acer ve Abdullah Öztürk, tekler kategorisinde finale çıktı",
+     "tarih": "2026-11-18T13:30:37.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1nw4xnq",
+   "baslik": "Kremlin: Rusya, ABD ve Çin liderlerinin üçlü görüşmede ele alacağı konuların kapsamı geniş",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-18T13:27:13.000Z",
+   "sonGuncelleme": "2026-11-18T14:01:36.717Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/dunya/kremlin-rusya-abd-ve-cin-liderlerinin-uclu-gorusmede-ele-alacagi-konularin-kapsami-genis/4129395",
+     "baslik": "Kremlin: Rusya, ABD ve Çin liderlerinin üçlü görüşmede ele alacağı konuların kapsamı geniş",
+     "tarih": "2026-11-18T13:27:13.000Z"
     }
    ]
   }
