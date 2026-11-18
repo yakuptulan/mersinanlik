@@ -36,6 +36,12 @@ for (const url of ADAYLAR) {
   const kok = new URL(url).origin;
   const rb = (await al(kok + '/robots.txt')).metin;
   const robots = /User-agent:\s*\*[\s\S]{0,200}?Disallow:\s*\/\s*$/im.test(rb) ? 'robots: * HEPSİ YASAK' : /GPTBot|CCBot|Google-Extended|ClaudeBot/i.test(rb) ? 'robots: YZ botları anılıyor' : 'robots: serbest';
+  if (process.env.ARA?.startsWith('DOKUM:')) {
+    const d = new RegExp(process.env.ARA.slice(6), 'gi');
+    const parcalar = [...metin.matchAll(d)].slice(0, 4).map((m) => metin.slice(Math.max(0, m.index - 300), m.index + 900).replace(/\s+/g, ' '));
+    console.log(`\n### ${url}\n${durum} · ${metin.length} b\n${parcalar.map((p, i) => `--[${i}]-- ${p}`).join('\n')}`);
+    continue;
+  }
   if (process.env.ARA?.startsWith('LINK:')) {
     const d = new RegExp(process.env.ARA.slice(5), 'i');
     const hepsi = [...new Set([...metin.matchAll(/href=["']([^"'#]+)["']/gi)].map((m) => { try { return new URL(m[1].replace(/&amp;/g, '&'), son || url).href; } catch { return ''; } }))].filter((l) => d.test(l));
