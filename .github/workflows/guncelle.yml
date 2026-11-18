@@ -10,6 +10,10 @@ on:
         description: 'Merak edilenler yazısını saat/aralık beklemeden yaz'
         type: boolean
         default: false
+      haftasonu_zorla:
+        description: 'Hafta sonu rehberini gün/saat beklemeden yaz'
+        type: boolean
+        default: false
   push:
     branches: [main]
 
@@ -68,6 +72,11 @@ jobs:
 
       - name: Merak edilenler (günde 2 bilgi yazısı)
         run: node src/bilgi.js ${{ inputs.bilgi_zorla && '--simdi --liste' || '' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - name: Hafta sonu rehberi (perşembe/cuma)
+        run: node src/haftasonu.js ${{ inputs.haftasonu_zorla && '--simdi' || '' }}
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 

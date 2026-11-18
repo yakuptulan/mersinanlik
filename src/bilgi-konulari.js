@@ -84,7 +84,7 @@ export const KONULAR = [
   { vikipedi: 'Olba', tur: 'tarih' },
   { vikipedi: 'Çukurova', tur: 'sehir' },
 ];
-export const TUR_AD = { oneri: 'Öneriler', gundem: 'Gündemden', lezzet: 'Lezzetler', tarih: 'Tarih', doga: 'Doğa', bilim: 'Bilim', yasam: 'Yaşam', sehir: 'Şehir' };
+export const TUR_AD = { haftasonu: 'Hafta sonu', oneri: 'Öneriler', gundem: 'Gündemden', lezzet: 'Lezzetler', tarih: 'Tarih', doga: 'Doğa', bilim: 'Bilim', yasam: 'Yaşam', sehir: 'Şehir' };
 
 // Liste / öneri yazıları ("Bu akşam ne izlesem?" gibi). Her madde Vikipedi'de aranır, bulunanlarla yazılır.
 export const LISTELER = [
