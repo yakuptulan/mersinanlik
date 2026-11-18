@@ -224,8 +224,8 @@ export const KAYNAKLAR = [
     ad: 'Mersin İl Sağlık Müdürlüğü',
     tur: 'html',
     liste: 'https://mersinism.saglik.gov.tr/',
-    // Ana sayfada sabit sayfalar da var; haberlerin numarası 395000 üstü
-    linkDesen: 'mersinism\\.saglik\\.gov\\.tr/TR-(39[5-9]\\d{3}|[4-9]\\d{5})/[a-z0-9-]+\\.html$',
+    // Ana sayfada sabit sayfalar da var; haberlerin numarası 396000 üstü
+    linkDesen: 'mersinism\\.saglik\\.gov\\.tr/TR-(39[6-9]\\d{3}|[4-9]\\d{5})/[a-z0-9-]+\\.html$',
     baslikEtiket: 'title',
     tarihGorselden: true,
     gorselIlk: true,
