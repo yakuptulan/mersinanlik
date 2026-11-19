@@ -50,62 +50,75 @@ async function json(url) {
 }
 
 const servis = JSON.parse(fs.readFileSync('data/servisler.json', 'utf8'));
-let logolar = { takimlar: {}, bakilan: null };
+let logolar = { takimlar: {}, denenen: {}, listeler: {} };
 try {
   logolar = { ...logolar, ...JSON.parse(fs.readFileSync(VERI, 'utf8')) };
 } catch {}
+logolar.denenen ||= {};
+logolar.listeler ||= {};
 const ligler = servis.spor?.ligler || {};
-const eksikVar = Object.values(ligler).some((l) => (l.puan || []).some((t) => !logolar.takimlar[t.takim]));
-if (!eksikVar || (logolar.bakilan && Date.now() - new Date(logolar.bakilan).getTime() < 7 * 864e5 && !process.argv.includes('--simdi'))) {
-  console.log('Kulüp logoları: güncel.');
-  process.exit(0);
-}
+const bekle = () => new Promise((x) => setTimeout(x, 4500)); // ücretsiz anahtar: dakikada en fazla ~30 istek
+const SINIR = Number(process.env.LOGO_ISTEK || 14); // çalışma başına istek
+let istek = 0, yeni = 0, durdu = false;
 fs.mkdirSync(KLASOR, { recursive: true });
-const takimListesi = {};
-let yeni = 0, bulunamayan = [];
-for (const [kod, l] of Object.entries(ligler)) {
-  const eksik = (l.puan || []).filter((t) => !logolar.takimlar[t.takim]);
-  if (!eksik.length) continue;
-  const adaylar = [];
-  for (const lig of LIG_ADI[kod] || []) {
-    if (!takimListesi[lig]) {
-      try {
-        takimListesi[lig] = (await json(`${API}/search_all_teams.php?l=${encodeURIComponent(lig)}`)).teams || [];
-      } catch (e) {
-        console.warn(`! Logo listesi (${lig}): ${e.message}`);
-        takimListesi[lig] = [];
-      }
-      await new Promise((x) => setTimeout(x, 2500));
-    }
-    adaylar.push(...takimListesi[lig]);
+
+async function indir(takim, aday) {
+  const r = await fetch(`${aday.strBadge}/small`, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(20000) });
+  const ham = r.ok ? r : await fetch(aday.strBadge, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(20000) });
+  if (!ham.ok) throw new Error(`HTTP ${ham.status}`);
+  const dosya = `${aday.idTeam}.webp`;
+  if (!fs.existsSync(path.join(KLASOR, dosya))) await sharp(Buffer.from(await ham.arrayBuffer())).resize(96, 96, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } }).webp({ quality: 85 }).toFile(path.join(KLASOR, dosya));
+  logolar.takimlar[takim] = dosya;
+  yeni++;
+}
+async function sor(url) {
+  if (istek >= SINIR) { durdu = true; return null; }
+  istek++;
+  try {
+    const j = await json(url);
+    await bekle();
+    return j;
+  } catch (e) {
+    if (/429/.test(e.message)) durdu = true;
+    console.warn(`! Logo isteği: ${e.message}`);
+    return null;
   }
+}
+
+dongu: for (const [kod, l] of Object.entries(ligler)) {
+  const eksik = (l.puan || []).filter((t) => !logolar.takimlar[t.takim] && (logolar.denenen[t.takim] || 0) < 2);
+  if (!eksik.length) continue;
+  // 1) Ligin takım listesi (bir kez)
+  for (const lig of LIG_ADI[kod] || []) {
+    if (logolar.listeler[lig]) continue;
+    const j = await sor(`${API}/search_all_teams.php?l=${encodeURIComponent(lig)}`);
+    if (!j) break dongu;
+    logolar.listeler[lig] = (j.teams || []).map(({ idTeam, strTeam, strTeamAlternate, strBadge }) => ({ idTeam, strTeam, strTeamAlternate, strBadge }));
+  }
+  const adaylar = (LIG_ADI[kod] || []).flatMap((lig) => logolar.listeler[lig] || []);
   for (const t of eksik) {
     let aday = eslestir(t.takim, adaylar);
     if (!aday) {
-      // Ligde bulunamadıysa adıyla ara
-      try {
-        const r = (await json(`${API}/searchteams.php?t=${encodeURIComponent(t.takim)}`)).teams || [];
-        aday = eslestir(t.takim, r.filter((x) => x.strCountry === 'Turkey' && x.strSport === 'Soccer'));
-      } catch {}
-      await new Promise((x) => setTimeout(x, 2500));
+      // 2) Adıyla ara: sponsor adını atlamak için en uzun anlamlı kelimeden başla
+      const terimler = [...new Set([...kelimeler(t.takim).sort((a, b) => b.length - a.length).slice(0, 2), t.takim])];
+      for (const terim of terimler) {
+        const j = await sor(`${API}/searchteams.php?t=${encodeURIComponent(terim)}`);
+        if (!j) break dongu;
+        aday = eslestir(t.takim, (j.teams || []).filter((x) => x.strCountry === 'Turkey' && x.strSport === 'Soccer'));
+        if (aday) break;
+      }
     }
     if (!aday?.strBadge) {
-      bulunamayan.push(t.takim);
+      logolar.denenen[t.takim] = (logolar.denenen[t.takim] || 0) + 1;
       continue;
     }
     try {
-      const r = await fetch(`${aday.strBadge}/small`, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(20000) });
-      const ham = r.ok ? r : await fetch(aday.strBadge, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(20000) });
-      if (!ham.ok) throw new Error(`HTTP ${ham.status}`);
-      const dosya = `${aday.idTeam}.webp`;
-      await sharp(Buffer.from(await ham.arrayBuffer())).resize(96, 96, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } }).webp({ quality: 85 }).toFile(path.join(KLASOR, dosya));
-      logolar.takimlar[t.takim] = dosya;
-      yeni++;
+      await indir(t.takim, aday);
     } catch (e) {
       console.warn(`! Logo (${t.takim}): ${e.message}`);
     }
   }
 }
-logolar.bakilan = new Date().toISOString();
 fs.writeFileSync(VERI, JSON.stringify(logolar, null, 1));
-console.log(`Kulüp logoları: ${yeni} yeni, toplam ${Object.keys(logolar.takimlar).length}${bulunamayan.length ? `; bulunamayan: ${bulunamayan.join(', ')}` : ''}`);
+const toplam = Object.values(ligler).reduce((n, l) => n + (l.puan || []).length, 0);
+console.log(`Kulüp logoları: ${yeni} yeni, ${Object.keys(logolar.takimlar).length}/${toplam} takımın logosu var${durdu ? ' (istek sınırı, sonraki çalışmada devam)' : ''}`);
