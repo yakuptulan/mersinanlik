@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-19T08:31:57.742Z",
+ "guncelleme": "2026-11-19T08:34:56.751Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-19T08:32:00.425Z",
+  "guncelleme": "2026-11-19T08:35:00.500Z",
   "liste": [
    {
     "ad": "Arıç Eczanesi",
@@ -762,7 +762,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-19T08:32:01.376Z",
+  "guncelleme": "2026-11-19T08:35:01.897Z",
   "liste": [
    {
     "tur": "su",
@@ -1060,7 +1060,7 @@
   "kaynakSaati": "2026-11-19 11:10:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-19T08:32:07.286Z",
+  "guncelleme": "2026-11-19T08:35:07.269Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -8126,7 +8126,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-19T08:32:07.753Z",
+  "guncelleme": "2026-11-19T08:35:07.803Z",
   "liste": [
    {
     "yol": "/",
@@ -8219,7 +8219,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-19T08:32:50.080Z",
+  "guncelleme": "2026-11-19T08:35:12.698Z",
   "deniz": {
    "sicaklik": 21.9,
    "dalga": 0.68
@@ -8232,7 +8232,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-19T08:10:58.865Z",
+  "guncelleme": "2026-11-19T08:35:13.942Z",
   "giden": [
    {
     "no": [
@@ -8255,7 +8255,7 @@
     "planlanan": "2026-11-19T09:00:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "KONTUAR KAPALI",
+    "durum": "SON ÇAĞRI",
     "hat": "dis"
    },
    {
@@ -8279,7 +8279,7 @@
     "planlanan": "2026-11-19T10:10:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8725,6 +8725,18 @@
     "kapi": "107",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1852"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-20T08:25:00.000Z",
+    "tahmini": null,
+    "kapi": "102",
+    "durum": "",
+    "hat": "dis"
    }
   ],
   "gelen": [
@@ -9231,6 +9243,18 @@
     "kapi": "",
     "durum": "",
     "hat": "dis"
+   },
+   {
+    "no": [
+     "VF3142"
+    ],
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-20T08:20:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  }
