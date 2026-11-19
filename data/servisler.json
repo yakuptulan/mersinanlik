@@ -1,9 +1,9 @@
 {
- "guncelleme": "2026-11-19T00:31:51.747Z",
+ "guncelleme": "2026-11-19T01:01:52.333Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 16,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 15,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
@@ -326,7 +326,7 @@
    ]
   },
   "silifke": {
-   "sicaklik": 15,
+   "sicaklik": 14,
    "durum": "Az bulutlu",
    "gunler": [
     {
@@ -674,7 +674,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-19T00:31:58.585Z",
+  "guncelleme": "2026-11-19T01:02:05.088Z",
   "liste": [
    {
     "tur": "su",
@@ -7658,7 +7658,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-19T00:32:06.782Z",
+  "guncelleme": "2026-11-19T01:02:17.905Z",
   "liste": [
    {
     "yol": "/",
@@ -7695,20 +7695,20 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-19T00:32:54.595Z",
+  "guncelleme": "2026-11-19T01:02:19.384Z",
   "deniz": {
    "sicaklik": 21.9,
-   "dalga": 0.48
+   "dalga": 0.5
   },
   "hava": {
    "aqi": 44,
-   "pm25": 22.5,
-   "pm10": 26.7,
+   "pm25": 22,
+   "pm10": 27,
    "uvMax": 2
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-19T00:32:55.799Z",
+  "guncelleme": "2026-11-19T01:02:20.165Z",
   "giden": [
    {
     "no": [
@@ -7719,7 +7719,7 @@
     "planlanan": "2026-11-19T01:30:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8204,18 +8204,6 @@
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "TK2474"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-19T00:45:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC2080"
@@ -8703,6 +8691,18 @@
     "havayolu": "AJet",
     "yer": "Sabiha Gökçen",
     "planlanan": "2026-11-19T23:00:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2474"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-20T00:45:00.000Z",
     "tahmini": null,
     "kapi": "",
     "durum": "",

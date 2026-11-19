@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "dha-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-19T01:01:25.083Z"
   }
  },
  "gorsel": {
@@ -228,11 +232,11 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-19T00:31:51.360Z",
+  "guncelleme": "2026-11-19T01:01:52.028Z",
   "liste": [
    {
     "baslik": "pacers - rockets",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "gta 6 mandy",
@@ -240,7 +244,7 @@
    },
    {
     "baslik": "coritiba - santos",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "gemini neon",
@@ -255,6 +259,10 @@
     "trafik": 100
    },
    {
+    "baslik": "rockstar",
+    "trafik": 100
+   },
+   {
     "baslik": "dizi izle",
     "trafik": 2000
    },
@@ -265,10 +273,6 @@
    {
     "baslik": "tuvalet",
     "trafik": 2000
-   },
-   {
-    "baslik": "yer altı",
-    "trafik": 1000
    }
   ]
  },
