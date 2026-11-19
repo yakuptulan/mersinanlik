@@ -16,7 +16,7 @@
  },
  "gorsel": {
   "gun": "2026-11-19",
-  "adet": 20
+  "adet": 22
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -161,7 +161,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersindeki-trafik-kazasinda-olu-sayisi-2ye-yukseldi-119526579",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersin-devlet-opera-ve-balesi-tosca-operasini-sahneleyecek-119526592",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kaybolan-76-yasindaki-kadin-araniyor-119526632",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/kurum-aracini-ozel-islerinde-kullandigi-iddia-edilen-muze-mudurunun-yargilanmasina-119526618"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/kurum-aracini-ozel-islerinde-kullandigi-iddia-edilen-muze-mudurunun-yargilanmasina-119526618",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/akdeniz-belediyesi-ekiplerinden-firinlara-siki-denetim-119526677"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -214,7 +215,8 @@
    "https://mersingundem.com/haber/13657/akdenizde-yollar-ve-kaldirimlar-yenileniyor.html",
    "https://mersingundem.com/haber/13655/mide-balonu-operasyonunda-olen-universitelinin-davasinda-iddianame-hazirlandi.html",
    "https://mersingundem.com/haber/13654/iki-gun-agacta-mahsur-kalan-kedi-itfaiye-ekiplerini-gorunce-kacti.html",
-   "https://mersingundem.com/haber/13661/cocuklar-ara-tatili-atolyelerde-degerlendiriyor.html"
+   "https://mersingundem.com/haber/13661/cocuklar-ara-tatili-atolyelerde-degerlendiriyor.html",
+   "https://mersingundem.com/haber/13662/kaybolan-76-yasindaki-kadin-araniyor.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -257,11 +259,15 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-19T09:35:28.694Z",
+  "guncelleme": "2026-11-19T09:43:28.217Z",
   "liste": [
    {
+    "baslik": "malatya",
+    "trafik": 1000
+   },
+   {
     "baslik": "gss prim borcu",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "vincent van gogh",
@@ -294,10 +300,6 @@
    {
     "baslik": "toni kroos",
     "trafik": 100
-   },
-   {
-    "baslik": "prim",
-    "trafik": 20000
    }
   ]
  },
