@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-19T22:31:22.758Z"
   }
  },
  "gorsel": {
@@ -278,10 +274,14 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-19T22:31:54.482Z",
+  "guncelleme": "2026-11-19T23:01:47.504Z",
   "liste": [
    {
     "baslik": "güllü",
+    "trafik": 100
+   },
+   {
+    "baslik": "cyberleek",
     "trafik": 100
    },
    {
@@ -289,16 +289,8 @@
     "trafik": 1000
    },
    {
-    "baslik": "cyberleek",
-    "trafik": 100
-   },
-   {
-    "baslik": "euroleague puan durumu",
-    "trafik": 200
-   },
-   {
     "baslik": "güneşin doğduğu yer son bölüm",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "20 kasım ne günü",
@@ -319,6 +311,10 @@
    {
     "baslik": "mustapha yatabaré",
     "trafik": 100
+   },
+   {
+    "baslik": "mustafa levent sungur",
+    "trafik": 200
    }
   ]
  },
