@@ -100,7 +100,7 @@ ilAdlari.set(sade('K.MARAS'), 'kahramanmaras');
 ilAdlari.set(sade('KAHRAMANMARAS'), 'kahramanmaras');
 // Türkiye'nin Diyanet şehir kodları 500–580 aralığında
 let ardisikHata = 0;
-for (let s = 500; s <= 580 && istek < NAMAZ_ISTEK && Object.keys(veri.diyanet.ilce).length < 81; s++) {
+for (let s = 500; s <= 580 && istek < NAMAZ_ISTEK - 6 && Object.keys(veri.diyanet.ilce).length < 81; s++) {
   veri.diyanet.hata ||= {};
   if (veri.diyanet.tarananSehir.includes(s) || (veri.diyanet.hata[s] || 0) >= 3) continue;
   try {
