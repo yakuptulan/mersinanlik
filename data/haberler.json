@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-19T20:01:55.077Z",
+ "guncelleme": "2026-11-19T20:31:43.542Z",
  "hikayeler": [
   {
    "id": "2r80dh",
@@ -3823,7 +3823,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-17T14:17:00+03:00",
-   "sonGuncelleme": "2026-11-19T20:01:46.794Z",
+   "sonGuncelleme": "2026-11-19T20:31:36.387Z",
    "kaynaklar": [
     {
      "kaynakId": "haberturk-mersin",
@@ -6218,7 +6218,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-18T13:52:00.000Z",
-   "sonGuncelleme": "2026-11-19T20:01:45.132Z",
+   "sonGuncelleme": "2026-11-19T20:31:34.917Z",
    "kaynaklar": [
     {
      "kaynakId": "cukurova",
@@ -6418,75 +6418,6 @@
    "gorselKaynak": "yz",
    "gorselPrompt": "A high-angle view of a dense pine forest in the Taurus mountains, with a small propeller airplane flying low in the distant sky. Ordinary daytime light, no people.. Realistic editorial news photograph, natural daylight, wide shot, sharp focus, no text, no letters, no watermark.",
    "gorsel": "qj8z01.webp"
-  },
-  {
-   "id": "nwbpyy",
-   "baslik": "NYT: Trump, Vance'in \"seçimleri İran savaşı yüzünden kaybettikleri\" açıklamasından rahatsız",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "siyaset",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-18T20:22:43.000Z",
-   "sonGuncelleme": "2026-11-18T20:31:53.112Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "aa-guncel",
-     "ad": "Anadolu Ajansı",
-     "link": "https://www.aa.com.tr/tr/dunya/nyt-trump-vancein-secimleri-iran-savasi-yuzunden-kaybettikleri-aciklamasindan-rahatsiz/4129810",
-     "baslik": "NYT: Trump, Vance'in \"seçimleri İran savaşı yüzünden kaybettikleri\" açıklamasından rahatsız",
-     "tarih": "2026-11-18T20:22:43.000Z"
-    }
-   ]
-  },
-  {
-   "id": "5evwxd",
-   "baslik": "Fed tutanakları yetkililerin neredeyse tamamının ilave faiz artışı beklediğini gösterdi",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "gundem",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-18T20:11:50.000Z",
-   "sonGuncelleme": "2026-11-18T20:31:53.116Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "aa-guncel",
-     "ad": "Anadolu Ajansı",
-     "link": "https://www.aa.com.tr/tr/ekonomi/fed-tutanaklari-yetkililerin-neredeyse-tamaminin-ilave-faiz-artisi-bekledigini-gosterdi/4129801",
-     "baslik": "Fed tutanakları yetkililerin neredeyse tamamının ilave faiz artışı beklediğini gösterdi",
-     "tarih": "2026-11-18T20:11:50.000Z"
-    }
-   ]
-  },
-  {
-   "id": "1xkwved",
-   "baslik": "İstanbul'da selden etkilenenlerin su faturalarına erteleme ve taksit imkanı getirildi",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "hava",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-18T20:05:20.000Z",
-   "sonGuncelleme": "2026-11-18T20:31:53.120Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "aa-guncel",
-     "ad": "Anadolu Ajansı",
-     "link": "https://www.aa.com.tr/tr/gundem/istanbulda-selden-etkilenenlerin-su-faturalarina-erteleme-ve-taksit-imkani-getirildi/4129797",
-     "baslik": "İstanbul'da selden etkilenenlerin su faturalarına erteleme ve taksit imkanı getirildi",
-     "tarih": "2026-11-18T20:05:20.000Z"
-    }
-   ]
   },
   {
    "id": "1xln3tr",
@@ -11771,7 +11702,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-19T11:49:00.000Z",
-   "sonGuncelleme": "2026-11-19T20:01:46.780Z",
+   "sonGuncelleme": "2026-11-19T20:31:36.376Z",
    "kaynaklar": [
     {
      "kaynakId": "mersinhabermerkezi",
@@ -15198,14 +15129,16 @@
    "id": "hwy88p",
    "baslik": "Mersin'de tır nehre devrildi",
    "ozet": "Mersin'in Tarsus ilçesinde harnup yüklü bir tırın Berdan Nehri'ne devrilmesi sonucu kazayı atlatan sürücü ayakta tedavi edildi. Kendi imkanlarıyla araçtan çıkmayı başaran sürücünün sağlık durumunun iyi olduğu öğrenildi.",
-   "ilceler": [],
+   "ilceler": [
+    "tarsus"
+   ],
    "genel": false,
    "kategori": "kaza",
    "riskNedenleri": [],
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-19T22:55:55+03:00",
-   "sonGuncelleme": "2026-11-19T20:01:16.882Z",
+   "sonGuncelleme": "2026-11-19T20:31:40.046Z",
    "kaynaklar": [
     {
      "kaynakId": "haberturk-mersin",
@@ -15213,6 +15146,27 @@
      "link": "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-tir-nehre-devrildi-119527196",
      "baslik": "Mersin'de tır nehre devrildi",
      "tarih": "2026-11-19T22:55:55+03:00"
+    },
+    {
+     "kaynakId": "haberturk-mersin",
+     "ad": "Habertürk",
+     "link": "https://yerel-haberler.haberturk.com/mersin-haberleri/tir-kanala-devrildi-surucu-kendi-imkanlari-ile-kurtuldu-119527199",
+     "baslik": "Tır kanala devrildi, sürücü kendi imkanları ile kurtuldu",
+     "tarih": "2026-11-19T22:57:00+03:00"
+    },
+    {
+     "kaynakId": "mersintime",
+     "ad": "Mersin Time",
+     "link": "https://www.mersintime.com/tir-kanala-devrildi-surucu-kendi-imkanlari-ile-kurtuldu",
+     "baslik": "Tır kanala devrildi, sürücü kendi imkanları ile kurtuldu",
+     "tarih": "2026-11-19T19:57:18.000Z"
+    },
+    {
+     "kaynakId": "mersinobjektif",
+     "ad": "Mersin Objektif",
+     "link": "https://www.mersinobjektif.com.tr/tir-kanala-devrildi-surucu-kendi-imkanlari-ile-kurtuldu",
+     "baslik": "Tır kanala devrildi, sürücü kendi imkanları ile kurtuldu",
+     "tarih": "2026-11-19T20:09:00.000Z"
     }
    ],
    "metinDenemesi": 1,
@@ -15332,6 +15286,173 @@
      "link": "https://www.aa.com.tr/tr/gundem/cop31de-ulke-rozetleri-duzenlenen-etkinlikle-takas-edildi-/4131233",
      "baslik": "COP31'de ülke rozetleri düzenlenen etkinlikle takas edildi",
      "tarih": "2026-11-19T15:44:30.000Z"
+    }
+   ]
+  },
+  {
+   "id": "mvcv3e",
+   "baslik": "Mersin'in Gelişmişlik Haritası Açıklandı:",
+   "ozet": null,
+   "ozetIcinMetin": "Mersin'in 13 ilçesi arasındaki sosyoekonomik gelişmişlik farkları, Sanayi ve Teknoloji Bakanlığı tarafından hazırlanan İlçe Sosyo-Ekonomik Gelişmişlik Sıralaması Araştırması (İlçe SEGE-2022) verileriyle ortaya konuldu.\nTürkiye genelinde 973 ilçenin değerlendirildiği araştırmada Mersin'in Yenişehir ilçesi 49'uncu sırayla kentte ilk sırada yer alırken Çamlıyayla 636'ncı sırada kaldı.\nAkdeniz, Mezitli, Tarsus, Silifke ve Toroslar ikinci gelişmişlik kademesinde bulunurken Mersin'in diğer ilçeleri üçüncü, dördüncü ve beşinci kademelerde sıralandı.\nMERSİN'İN 13 İLÇESİ BEŞ FARKLI GELİŞMİŞLİK KADEMESİNDE Sanayi ve Teknoloji Bakanlığı Kalkınma Ajansları Genel Müdürlüğü tarafından yayımlanan İlçe SEGE-2022 araştırması, Türkiye'deki ilçelerin sosyoekonomik gelişmişlik düzeylerini karşılaştırıyor.\nDemografik yapı, eğitim, sağlık, istihdam, finansal göstergeler, ekonomik faaliyetler ve yaşam kalitesi gibi farklı ölçütler üzerinden gerçekleştirilen değerlendirmede ilçeler altı gelişmişlik kademesine ayrılıyor.\nMersin'in 13 ilçesi ise bu kademelerin beşinde yer alıyor. Kentte birinci gelişmişlik kademesinde yalnızca Yenişehir bulunurken altıncı kademede herhangi bir Mersin ilçesi yer almıyor.\nMERSİN'İN EN GELİŞMİŞ İLÇESİ YENİŞEHİR İlçe SEGE-2022 araştırmasına göre Yenişehir, Türkiye genelinde 49'uncu sırada yer alarak Mersin'in sosyoekonomik açıdan en gelişmiş ilçesi oldu.\nYenişehir, aynı zamanda kentte birinci gelişmişlik kademesine girebilen tek ilçe olarak kayıtlara geçti.\nYenişehir'i Türkiye genelinde 103'üncü sıradaki Akdeniz ve 107'nci sıradaki Mezitli takip etti.\nTARSUS, SİLİFKE VE TOROSLAR İKİNCİ KADEMEDE Mersin'de ikinci gelişmişlik kademesinde toplam beş ilçe bulunuyor.\nAkdeniz ve Mezitli'nin yanı sıra Tarsus, Silifke ve Toroslar da bu grupta yer alıyor.\nTürkiye genelinde Tarsus 198'inci, Silifke 217'nci ve Toroslar 240'ıncı sırada bulunuyor.\nERDEMLİ VE ANAMUR ÜÇÜNCÜ GELİŞMİŞLİK KADEMESİNDE Araştırmada Erdemli ve Anamur, üçüncü gelişmişlik kademesinde sınıflandırıldı.\nErdemli, Türkiye genelinde 251'inci sırada yer alırken Anamur 257'nci sırada bulunuyor.\nİki ilçe arasında Türkiye sıralamasında altı basamaklık fark bulunuyor.\nMUT, AYDINCIK, BOZYAZI VE GÜLNAR DÖRDÜNCÜ KADEMEDE Mersin'in dört ilçesi, sosyoekonomik gelişmişlik araştırmasında dördüncü kademede yer aldı.\nMut Türkiye genelinde 418'inci, Aydıncık 424'üncü, Bozyazı 442'nci ve Gülnar 479'uncu sırada bulunuyor.\nBu gruptaki ilçeler arasında en yüksek sıralamaya Mut sahip olurken Gülnar dördüncü kademedeki Mersin ilçeleri arasında son sırada yer aldı.\nÇAMLIYAYLA MERSİN'DE SON SIRADA İlçe SEGE-2022 araştırmasına göre Çamlıyayla, Türkiye genelinde 636'ncı sırada bulunuyor.\nBeşinci gelişmişlik kademesinde değerlendirilen Çamlıyayla, Mersin'in 13 ilçesi arasında sosyoekonomik gelişmişlik bakımından son sırada yer alıyor.\nYENİŞEHİR İLE ÇAMLIYAYLA ARASINDA 587 SIRA FARK VAR Mersin'in en yüksek sosyoekonomik gelişmişlik sıralamasına sahip Yenişehir ile en düşük sırada bulunan Çamlıyayla arasında Türkiye genelinde 587 basamaklık fark bulunuyor.\nYenişehir'in birinci, Çamlıyayla'nın ise beşinci gelişmişlik kademesinde yer alması, kent içindeki sosyoekonomik farklılıkları ortaya koyuyor.\nBununla birlikte",
+   "ilceler": [
+    "camliyayla",
+    "yenisehir"
+   ],
+   "genel": false,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-19T20:03:00.000Z",
+   "sonGuncelleme": "2026-11-19T20:31:34.908Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "mersinportal",
+     "ad": "Mersin Portal",
+     "link": "https://www.mersinportal.com/mersinin-gelismislik-haritasi-aciklandi-13-ilcenin-turkiye-siralamasi-belli-oldu",
+     "baslik": "Mersin'in Gelişmişlik Haritası Açıklandı:",
+     "tarih": "2026-11-19T20:03:00.000Z"
+    }
+   ],
+   "metinDenemesi": 1,
+   "yaziKaynak": "Mersin Portal",
+   "yazimDenemesi": 1
+  },
+  {
+   "id": "pee9oc",
+   "baslik": "Konya’da rektörün makam aracı takla attı: Eşi vefat etti",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "kaza",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-19T20:17:00.000Z",
+   "sonGuncelleme": "2026-11-19T20:31:36.147Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "cukurova",
+     "ad": "Çukurova Gazetesi",
+     "link": "https://cukurovagazetesi.com/konyada-rektorun-makam-araci-takla-atti-esi-vefat-etti",
+     "baslik": "Konya’da rektörün makam aracı takla attı: Eşi vefat etti",
+     "tarih": "2026-11-19T20:17:00.000Z"
+    }
+   ]
+  },
+  {
+   "id": "niheg2",
+   "baslik": "Bilal Erdoğan, Cristiano Ronaldo ile bir araya geldi",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "siyaset",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-19T20:11:00.000Z",
+   "sonGuncelleme": "2026-11-19T20:31:36.152Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "cukurova",
+     "ad": "Çukurova Gazetesi",
+     "link": "https://cukurovagazetesi.com/bilal-erdogan-cristiano-ronaldo-ile-bir-araya-geldi",
+     "baslik": "Bilal Erdoğan, Cristiano Ronaldo ile bir araya geldi",
+     "tarih": "2026-11-19T20:11:00.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1ic5fam",
+   "baslik": "Cumhurbaşkanlığı İletişim Başkanlığı heyeti Pakistan'da temaslarda bulundu",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-19T13:46:31.000Z",
+   "sonGuncelleme": "2026-11-19T20:31:38.440Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/gundem/cumhurbaskanligi-iletisim-baskanligi-heyeti-pakistanda-temaslarda-bulundu/4131051",
+     "baslik": "Cumhurbaşkanlığı İletişim Başkanlığı heyeti Pakistan'da temaslarda bulundu",
+     "tarih": "2026-11-19T13:46:31.000Z"
+    }
+   ]
+  },
+  {
+   "id": "185wurn",
+   "baslik": "Almanya, Fransa, İngiltere ve Ukrayna liderlerinden \"Rusya'ya kış boyunca enerji ateşkesi\" çağrısı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-19T20:13:31.000Z",
+   "sonGuncelleme": "2026-11-19T20:31:38.445Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/dunya/almanya-fransa-ingiltere-ve-ukrayna-liderlerinden-rusyaya-kis-boyunca-enerji-ateskesi-cagrisi/4131523",
+     "baslik": "Almanya, Fransa, İngiltere ve Ukrayna liderlerinden \"Rusya'ya kış boyunca enerji ateşkesi\" çağrısı",
+     "tarih": "2026-11-19T20:13:31.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1syi7xj",
+   "baslik": "Pentagon yetkilisi Miller, İran'la savaşın maliyetinin 48,3 milyar dolara ulaştığını açıkladı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-19T20:10:27.000Z",
+   "sonGuncelleme": "2026-11-19T20:31:38.450Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/dunya/pentagon-yetkilisi-miller-iranla-savasin-maliyetinin-48-3-milyar-dolara-ulastigini-acikladi/4131521",
+     "baslik": "Pentagon yetkilisi Miller, İran'la savaşın maliyetinin 48,3 milyar dolara ulaştığını açıkladı",
+     "tarih": "2026-11-19T20:10:27.000Z"
+    }
+   ]
+  },
+  {
+   "id": "15z95y9",
+   "baslik": "Suudi Kraliyet Divanı Danışmanı Al-Sheikh'ten Etnospor Kültür Festivali'ne övgü",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "spor",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-19T19:46:10.000Z",
+   "sonGuncelleme": "2026-11-19T20:31:38.455Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/spor/suudi-kraliyet-divani-danismani-al-sheikhten-etnospor-kultur-festivaline-ovgu/4131506",
+     "baslik": "Suudi Kraliyet Divanı Danışmanı Al-Sheikh'ten Etnospor Kültür Festivali'ne övgü",
+     "tarih": "2026-11-19T19:46:10.000Z"
     }
    ]
   }
