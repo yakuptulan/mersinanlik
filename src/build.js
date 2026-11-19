@@ -12,6 +12,8 @@ import * as IS from './templates/ilceServis.js';
 import { ulasimSayfasi } from './templates/ulasim.js';
 import { gundemimSayfasi, akisVerisi } from './templates/gundemim.js';
 import { logolariAyarla } from './templates/servisParcalari.js';
+import { akaryakitIlSayfasi, akaryakitTurkiyeSayfasi, namazIlSayfasi, namazTurkiyeSayfasi } from './templates/ulusal.js';
+import ILLER81 from './iller.json' with { type: 'json' };
 import { mahalleVerisi, mahalleSayfasi, mahallelerSayfasi, mahalleYolu } from './templates/mahalle.js';
 import { geziListeSayfasi, geziSayfasi, geziYerleri, geziYolu } from './templates/gezi.js';
 import { arsivAySayfasi } from './templates/arsiv.js';
@@ -141,6 +143,22 @@ export function insaEt({ simdi = Date.now() } = {}) {
   if (aylar.length) yaz('/arsiv/index.html', `<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/arsiv/${aylar[0]}/"><link rel="canonical" href="${SITE.url}/arsiv/${aylar[0]}/">`);
   servis.arsivSayisi = arsiv.length;
   const ilceHavuzu = [...hikayeler, ...arsivYukle().filter((x) => !hikayeler.some((y) => y.id === x.id))];
+  // 81 il: akaryakıt ve namaz vakitleri
+  let ulusal = { akaryakit: {}, namaz: {} };
+  try {
+    ulusal = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'ulusal.json'), 'utf8'));
+  } catch {}
+  ulusal.namaz ||= {};
+  if (servis.namaz?.bolgeler?.['9737']) ulusal.namaz.mersin = { vakitler: servis.namaz.bolgeler['9737'] };
+  for (const il of ILLER81) {
+    if (il.slug === 'mersin') continue;
+    const y = ulusal.akaryakit?.[il.slug];
+    if (y && Object.keys(y.ilceler || {}).length) ekle(`/akaryakit/${il.slug}/`, akaryakitIlSayfasi({ il, kayit: y, mersin: servis.akaryakit }));
+    const n = ulusal.namaz?.[il.slug];
+    if (n?.vakitler?.some((v) => v.tarih >= new Date(simdi).toLocaleDateString('sv-SE', { timeZone: 'Europe/Istanbul' }))) ekle(`/namaz-vakti/${il.slug}/`, namazIlSayfasi({ il, kayit: n, simdi }));
+  }
+  ekle('/akaryakit/', akaryakitTurkiyeSayfasi({ veri: ulusal.akaryakit || {}, mersin: servis.akaryakit }));
+  ekle('/namaz-vakti/', namazTurkiyeSayfasi({ veri: ulusal.namaz, simdi }));
   // Mahalle sayfaları
   let kesintiGecmis = { kayitlar: [] };
   try {

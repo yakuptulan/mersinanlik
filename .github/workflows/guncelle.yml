@@ -66,6 +66,9 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
+      - name: 81 il akaryakıt ve namaz vakitleri (döngüsel)
+        run: node src/ulusal.js || true
+
       - name: Kulüp logoları
         run: node src/logolar.js || true
 

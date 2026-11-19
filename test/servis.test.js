@@ -33,8 +33,8 @@ test('akaryakıt: Opet ilçe listesi', () => {
     { districtName: 'AKDENİZ', prices: [{ productCode: 'A100', amount: 72.99 }, { productCode: 'A121', amount: 97.1 }] },
     { districtName: 'ÇAMLIYAYLA', prices: [{ productCode: 'A100', amount: 73.2 }, { productCode: 'A128', amount: 97.3 }] },
   ]);
-  assert.deepEqual(s.akdeniz, { benzin: 72.99, motorin: 97.1 });
-  assert.deepEqual(s.camliyayla, { benzin: 73.2, motorin: 97.3 });
+  assert.deepEqual(s.akdeniz, { benzin: 72.99, motorin: 97.1, ad: 'Akdeniz' });
+  assert.deepEqual(s.camliyayla, { benzin: 73.2, motorin: 97.3, ad: 'Çamlıyayla' });
 });
 
 test('trendler: RSS ve başlık eşleşmesi', () => {

@@ -10,7 +10,8 @@ export function opetCoz(liste) {
     const bul = (kod) => d.prices?.find((p) => p.productCode === kod)?.amount ?? null;
     const benzin = bul('A100');
     const motorin = bul('A121') ?? bul('A128');
-    if (benzin || motorin) sonuc[slug] = { benzin, motorin };
+    const ad = String(d.districtName || '').toLocaleLowerCase('tr-TR').replace(/(^|[\s-])(\S)/g, (m, b, c) => b + c.toLocaleUpperCase('tr-TR'));
+    if (benzin || motorin) sonuc[slug] = { benzin, motorin, ...(ad ? { ad } : {}) };
   }
   return sonuc;
 }
