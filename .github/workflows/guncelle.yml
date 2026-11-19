@@ -152,3 +152,15 @@ jobs:
           KV=$(node -e 'try{process.stdout.write(require("./data/bildirim.json").kvId||"")}catch{}')
           if [ -n "$KV" ]; then printf 'name = "mersinanlik"\npages_build_output_dir = "dist"\ncompatibility_date = "2026-11-01"\n\n[[kv_namespaces]]\nbinding = "ABONE"\nid = "%s"\n' "$KV" > wrangler.toml; fi
           npx --yes wrangler@4 pages deploy dist --project-name=mersinanlik --branch=main --commit-dirty=true
+
+      - name: IndexNow (Bing ve diğer arama motorlarına bildir)
+        if: ${{ env.CLOUDFLARE_API_TOKEN != '' }}
+        run: |
+          sleep 20
+          node src/indexnow.js || true
+          git add data/indexnow.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "IndexNow durumu"
+            git pull --rebase -X theirs --autostash || { git rebase --abort; git pull --no-rebase -X ours --no-edit; }
+            git push || true
+          fi
