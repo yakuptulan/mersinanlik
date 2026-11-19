@@ -1,13 +1,13 @@
 {
- "guncelleme": "2026-11-19T06:01:48.736Z",
+ "guncelleme": "2026-11-19T06:32:00.088Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 15,
+   "sicaklik": 17,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
-     "min": 15,
+     "min": 17,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-19T06:01:54.043Z",
+  "guncelleme": "2026-11-19T06:32:03.306Z",
   "liste": [
    {
     "ad": "Arıç Eczanesi",
@@ -762,7 +762,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-19T06:01:55.456Z",
+  "guncelleme": "2026-11-19T06:32:04.266Z",
   "liste": [
    {
     "tur": "su",
@@ -954,7 +954,7 @@
   "kaynakSaati": "2026-11-19 09:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-19T06:02:01.849Z",
+  "guncelleme": "2026-11-19T06:32:09.681Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -1559,7 +1559,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-19T03:32:04.127Z",
+  "guncelleme": "2026-11-19T06:32:13.034Z",
   "liste": [
    {
     "id": "48wy1j",
@@ -1663,7 +1663,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-19T05:31:53.651Z",
+  "guncelleme": "2026-11-19T06:32:13.034Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -7730,11 +7730,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-19T06:02:02.579Z",
+  "guncelleme": "2026-11-19T06:32:10.138Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 35
+    "sayi": 36
    },
    {
     "yol": "/haber/mersin-de-kamyonet-ile-otomobilin-carpistigi-kazada-1-kisi-oldu-2-kisi-1bfosq4/",
@@ -7771,7 +7771,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-19T06:02:05.318Z",
+  "guncelleme": "2026-11-19T06:32:53.831Z",
   "deniz": {
    "sicaklik": 21.8,
    "dalga": 0.68
@@ -7784,32 +7784,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-19T06:02:06.545Z",
+  "guncelleme": "2026-11-19T06:32:54.619Z",
   "giden": [
-   {
-    "no": [
-     "PC3640"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Van",
-    "planlanan": "2026-11-19T06:05:00.000Z",
-    "tahmini": null,
-    "kapi": "108",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "TK2453"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-19T06:25:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
    {
     "no": [
      "VF4087"
@@ -7819,7 +7795,7 @@
     "planlanan": "2026-11-19T06:50:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "BOARDING",
     "hat": "ic"
    },
    {
@@ -7867,7 +7843,7 @@
     "planlanan": "2026-11-19T09:00:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -8265,33 +8241,45 @@
     "kapi": "107",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3011"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-20T06:05:00.000Z",
+    "tahmini": null,
+    "kapi": "109",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2453"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-20T06:25:00.000Z",
+    "tahmini": null,
+    "kapi": "108",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3620"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Milas Bodrum",
+    "planlanan": "2026-11-20T06:25:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "VF4086"
-    ],
-    "havayolu": "AJet",
-    "yer": "Ankara",
-    "planlanan": "2026-11-19T06:10:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC2082"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-19T06:30:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC1851"
@@ -8767,6 +8755,18 @@
     "havayolu": "Pegasus",
     "yer": "Antalya",
     "planlanan": "2026-11-20T06:00:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF4086"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ankara",
+    "planlanan": "2026-11-20T06:10:00.000Z",
     "tahmini": null,
     "kapi": "",
     "durum": "",
