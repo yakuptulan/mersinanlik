@@ -1,13 +1,13 @@
 {
- "guncelleme": "2026-11-19T06:32:00.088Z",
+ "guncelleme": "2026-11-19T07:02:08.610Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 17,
+   "sicaklik": 18,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
-     "min": 17,
+     "min": 18,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
@@ -38,8 +38,8 @@
    ]
   },
   "anamur": {
-   "sicaklik": 18,
-   "durum": "Yağmurlu",
+   "sicaklik": 19,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
@@ -74,7 +74,7 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 17,
+   "sicaklik": 20,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -110,8 +110,8 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 17,
-   "durum": "Hafif yağmurlu",
+   "sicaklik": 19,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
@@ -146,8 +146,8 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 11,
-   "durum": "Sisli",
+   "sicaklik": 13,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
@@ -182,7 +182,7 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 17,
+   "sicaklik": 18,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -218,7 +218,7 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 12,
+   "sicaklik": 14,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -254,7 +254,7 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 17,
+   "sicaklik": 18,
    "durum": "Bulutlu",
    "gunler": [
     {
@@ -290,7 +290,7 @@
    ]
   },
   "mut": {
-   "sicaklik": 15,
+   "sicaklik": 17,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -326,7 +326,7 @@
    ]
   },
   "silifke": {
-   "sicaklik": 17,
+   "sicaklik": 19,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -362,7 +362,7 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 17,
+   "sicaklik": 18,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -398,12 +398,12 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 17,
+   "sicaklik": 18,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
-     "min": 17,
+     "min": 18,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
@@ -434,12 +434,12 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 17,
+   "sicaklik": 18,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
-     "min": 17,
+     "min": 18,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-19T06:32:03.306Z",
+  "guncelleme": "2026-11-19T07:02:13.040Z",
   "liste": [
    {
     "ad": "Arıç Eczanesi",
@@ -762,7 +762,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-19T06:32:04.266Z",
+  "guncelleme": "2026-11-19T07:02:14.195Z",
   "liste": [
    {
     "tur": "su",
@@ -776,6 +776,45 @@
       "ad": "Silifke",
       "mahalleler": [
        "Atakent"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Akdeniz ilçesi Toroslar, Kazanlı, Cumhuriyet, Hürriyet, Anadolu mahallerine Tedaş’ın bölgedeki elektrik kesintisine bağlı saat 19:00’a kadar içmesuyu kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-19T06:50:00.000Z",
+    "bitis": "2026-11-19T16:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "akdeniz",
+      "ad": "Akdeniz",
+      "mahalleler": [
+       "Adanalıoğlu",
+       "Hürriyet",
+       "Kazanlı",
+       "Toroslar"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Akdeniz ilçesi Toroslar, Kazanlı, Cumhuriyet, Hürriyet, Anadolu mahallerine Tedaş’ın bölgedeki elektrik kesintisine bağlı saat 19:00’a kadar içmesuyu kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-19T06:50:00.000Z",
+    "bitis": "2026-11-19T16:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "akdeniz",
+      "ad": "Akdeniz",
+      "mahalleler": [
+       "Anadolu",
+       "Cumhuriyet",
+       "Hürriyet",
+       "Kazanlı",
+       "Toroslar"
       ]
      }
     ]
@@ -954,7 +993,7 @@
   "kaynakSaati": "2026-11-19 09:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-19T06:32:09.681Z",
+  "guncelleme": "2026-11-19T07:02:21.590Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -7730,11 +7769,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-19T06:32:10.138Z",
+  "guncelleme": "2026-11-19T07:02:22.170Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 36
+    "sayi": 30
    },
    {
     "yol": "/haber/mersin-de-kamyonet-ile-otomobilin-carpistigi-kazada-1-kisi-oldu-2-kisi-1bfosq4/",
@@ -7747,10 +7786,6 @@
    {
     "yol": "/haber/mersin-de-kimler-yasiyor-iste-sanliurfali-diyarbakirli-adanali-ve-dige-11ff6hs/",
     "sayi": 2
-   },
-   {
-    "yol": "/piyasalar/",
-    "sayi": 1
    },
    {
     "yol": "/haber/tarsus-ta-kadinlara-uretim-ve-satis-imkani-qn5595/",
@@ -7771,33 +7806,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-19T06:32:53.831Z",
+  "guncelleme": "2026-11-19T07:02:24.078Z",
   "deniz": {
    "sicaklik": 21.8,
    "dalga": 0.68
   },
   "hava": {
-   "aqi": 42,
-   "pm25": 19.1,
-   "pm10": 23.7,
+   "aqi": 40,
+   "pm25": 14.9,
+   "pm10": 19.4,
    "uvMax": 2
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-19T06:32:54.619Z",
+  "guncelleme": "2026-11-19T07:02:25.096Z",
   "giden": [
-   {
-    "no": [
-     "VF4087"
-    ],
-    "havayolu": "AJet",
-    "yer": "Ankara",
-    "planlanan": "2026-11-19T06:50:00.000Z",
-    "tahmini": null,
-    "kapi": "107",
-    "durum": "BOARDING",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC2083"
@@ -7807,7 +7830,7 @@
     "planlanan": "2026-11-19T07:35:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KONTUAR AÇIK",
+    "durum": "BOARDING",
     "hat": "ic"
    },
    {
@@ -7831,7 +7854,7 @@
     "planlanan": "2026-11-19T08:45:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8275,6 +8298,30 @@
     "planlanan": "2026-11-20T06:25:00.000Z",
     "tahmini": null,
     "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3640"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Van",
+    "planlanan": "2026-11-20T06:35:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF4087"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ankara",
+    "planlanan": "2026-11-20T06:50:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
     "durum": "",
     "hat": "ic"
    }
@@ -8767,6 +8814,18 @@
     "havayolu": "AJet",
     "yer": "Ankara",
     "planlanan": "2026-11-20T06:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2082"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-20T06:45:00.000Z",
     "tahmini": null,
     "kapi": "",
     "durum": "",
