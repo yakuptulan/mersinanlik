@@ -16,7 +16,7 @@
  },
  "gorsel": {
   "gun": "2026-11-19",
-  "adet": 26
+  "adet": 28
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -269,11 +269,19 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-19T16:09:21.014Z",
+  "guncelleme": "2026-11-19T16:31:54.075Z",
   "liste": [
    {
-    "baslik": "murat ağırel",
+    "baslik": "aile ve sosyal hizmetler bakanlığı",
     "trafik": 200
+   },
+   {
+    "baslik": "trt spor yıldız canlı",
+    "trafik": 200
+   },
+   {
+    "baslik": "murat ağırel",
+    "trafik": 500
    },
    {
     "baslik": "son yemek",
@@ -289,7 +297,7 @@
    },
    {
     "baslik": "chibuike nwaiwu",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "anthropic halka arz",
@@ -302,14 +310,6 @@
    {
     "baslik": "anthropic",
     "trafik": 1000
-   },
-   {
-    "baslik": "schengen bölgesi",
-    "trafik": 1000
-   },
-   {
-    "baslik": "merkez bankası",
-    "trafik": 500
    }
   ]
  },
