@@ -72,8 +72,17 @@ const KURULUS = {
   url: SITE.url + '/',
   logo: { '@type': 'ImageObject', url: SITE.url + '/logo-kare.png', width: 512, height: 512 },
   email: SITE.email,
-  areaServed: 'Mersin',
+  areaServed: { '@type': 'AdministrativeArea', name: 'Mersin, Türkiye' },
+  foundingDate: '2026',
+  founder: { '@type': 'Person', name: 'Yakup Tulan' },
   publishingPrinciples: SITE.url + '/yayin-ilkeleri/',
+  correctionsPolicy: SITE.url + '/duzeltme-politikasi/',
+  ethicsPolicy: SITE.url + '/yayin-ilkeleri/',
+  masthead: SITE.url + '/kunye/',
+  verificationFactCheckingPolicy: SITE.url + '/yapay-zeka-ilkeleri/',
+  actionableFeedbackPolicy: SITE.url + '/duzeltme-politikasi/',
+  diversityPolicy: SITE.url + '/hakkimizda/',
+  contactPoint: { '@type': 'ContactPoint', contactType: 'Haber merkezi', email: SITE.email, availableLanguage: 'tr' },
 };
 
 // Site geneli uyarı bantları (deprem, okul tatili). build.js her üretimde ayarlar.
@@ -146,7 +155,7 @@ ${icerik}
 </div>
 <nav class="alt-menu" aria-label="Alt menü">
 <a href="/gundemim/">Benim Gündemim</a><a href="/nobetci-eczane/">Nöbetçi eczane</a><a href="/kesintiler/">Kesintiler</a><a href="/hava-durumu/">Hava durumu</a><a href="/deprem/">Deprem</a><a href="/trafik/">Trafik haritası</a><a href="/ilceler/">İlçeler</a><a href="/bilgi/">Merak edilenler</a><a href="/rehber/">Mersin rehberi</a><a href="/gezi/">Gezi rehberi</a><a href="/etkinlikler/">Etkinlikler</a><a href="/spor/">Spor</a><a href="/burclar/">Burçlar</a><a href="/tatil-takvimi/">Tatil takvimi</a><a href="/piyasalar/">Altın ve döviz</a><a href="/namaz-vakitleri/">Namaz vakitleri</a><a href="/akaryakit-fiyatlari/">Akaryakıt</a>
-<a href="/kunye/">Künye</a><a href="/iletisim/">İletişim</a><a href="/kaynaklarimiz/">Kaynaklarımız</a><a href="/arsiv/">Haber arşivi</a>
+<a href="/hakkimizda/">Hakkımızda</a><a href="/kunye/">Künye</a><a href="/iletisim/">İletişim</a><a href="/yayin-ilkeleri/">Yayın ilkeleri</a><a href="/duzeltme-politikasi/">Düzeltme politikası</a><a href="/yapay-zeka-ilkeleri/">Yapay zekâ kullanımı</a><a href="/kaynaklarimiz/">Kaynaklarımız</a><a href="/arsiv/">Haber arşivi</a>
 <a href="/yayin-ilkeleri/">Yayın ilkeleri</a><a href="/gizlilik/">Gizlilik</a><a href="/cerez-politikasi/">Çerez politikası</a><a href="/gorsel-kaynaklari/">Görsel kaynakları</a>
 </nav>
 </div>

@@ -435,13 +435,13 @@ export function haberSayfasi({ hikaye, ilgili, servis, tumHaberler = null }) {
     articleSection: kat.ad,
     contentLocation: { '@type': 'Place', name: ilce ? `${ilce.ad}, Mersin` : 'Mersin' },
     isBasedOn: kurumKayit.link,
-    author: { '@type': 'Organization', name: SITE.name, url: SITE.url + '/' },
-    publisher: { '@type': 'NewsMediaOrganization', name: SITE.name, logo: { '@type': 'ImageObject', url: `${SITE.url}/logo-kare.png` } },
+    author: { '@type': 'Organization', name: hikaye.otomatik ? 'Mersin Anlık Veri Masası' : 'Mersin Anlık Haber Merkezi', url: SITE.url + '/hakkimizda/' },
+    publisher: { '@type': 'NewsMediaOrganization', name: SITE.name, url: SITE.url + '/', logo: { '@type': 'ImageObject', url: `${SITE.url}/logo-kare.png` }, publishingPrinciples: SITE.url + '/yayin-ilkeleri/', correctionsPolicy: SITE.url + '/duzeltme-politikasi/', masthead: SITE.url + '/kunye/' },
   };
   const ust = `<div class="su-an-bas haber-bas"><div>
 <div class="cipler">${ilceCipleri(hikaye)}</div>
 <h1>${h(hikaye.baslik)}</h1>
-<p class="haber-meta"><time datetime="${hikaye.ilkGorulme}">${tarihUzun(hikaye.ilkGorulme)} · ${saat(hikaye.ilkGorulme)}</time> · ${Math.max(1, Math.round(`${hikaye.ozet || ''} ${hikaye.metin || ''}`.split(/\s+/).length / 200))} dk okuma</p>
+<p class="haber-meta"><a class="imza" href="/hakkimizda/">${hikaye.otomatik ? 'Mersin Anlık Veri Masası' : 'Mersin Anlık Haber Merkezi'}</a> · <time datetime="${hikaye.ilkGorulme}">${tarihUzun(hikaye.ilkGorulme)} · ${saat(hikaye.ilkGorulme)}</time> · ${Math.max(1, Math.round(`${hikaye.ozet || ''} ${hikaye.metin || ''}`.split(/\s+/).length / 200))} dk okuma</p>
 </div></div>`;
   const icerik = `<main class="kap govde">
 <div class="ana">
@@ -455,6 +455,7 @@ ${!hikaye.metin && !hikaye.ozet ? `<div class="kisa-haber">
 <p>${hikaye.ozetIcinMetin ? 'Bu haberi kendi cümlelerimizle hazırlıyoruz; sayfa kısa süre içinde güncellenecek.' : 'Bu haberin ayrıntıları şimdilik yalnızca kaynağında yer alıyor.'} Haberi ilk duyuran: <b>${h(kurumKayit.ad)}</b>${hikaye.kaynaklar.length > 1 ? ` (toplam ${new Set(hikaye.kaynaklar.map((k) => k.ad)).size} kaynak)` : ''}.</p>
 <a class="kisa-haber-dugme" href="${h(kurumKayit.link)}" rel="noopener nofollow" target="_blank">Haberin ayrıntılarını ${h(kurumKayit.ad)}'da oku →</a>
 </div>` : ''}
+${hikaye.metin ? `<p class="haber-seffaf">${hikaye.otomatik ? 'Bu haber resmî veriden (aşağıdaki kaynak) Mersin Anlık Veri Masası tarafından otomatik olarak hazırlanmıştır.' : 'Bu haber, kaynaklardaki bilgilerden yararlanılarak Mersin Anlık Haber Merkezi tarafından kendi cümlelerimizle yazılmıştır; yazımda yapay zekâ desteği kullanılmıştır.'} <a href="/yapay-zeka-ilkeleri/">Nasıl çalışıyoruz?</a> · Hata mı gördünüz? <a href="/duzeltme-politikasi/">Düzeltme talebi</a></p>` : ''}
 <p class="haber-kaynak-kisa">Kaynak: ${[kurumKayit, ...digerleri.slice(0, 2)].map((k) => `<a href="${h(k.link)}" rel="noopener nofollow" target="_blank">${h(k.ad)}</a>`).join(', ')}</p>
 ${hikaye.konular?.length ? `<p class="haber-konular">Konu: ${hikaye.konular.map((k) => `<a href="/konu/${k.slug}/">${h(k.ad)}</a>`).join('')}</p>` : ''}
 ${paylasCubugu(SITE.url + yol, hikaye.baslik)}
@@ -887,23 +888,61 @@ export function bilgiSayfalari() {
     ({
       yol: '/kaynaklarimiz/',
       baslik: 'Kaynaklarımız ve çalışma şeklimiz',
-      aciklama: `${SITE.name} haberleri nasıl derler?`,
-      govde: `<p>${SITE.name}, Mersin ve ilçeleriyle ilgili haberleri farklı haber sitelerinden ve resmî kurumlardan derler.</p>
-<ul><li>Her haberin yanında kaynağı ve kaynağa giden bağlantı bulunur. Haberin tamamı her zaman kaynağında okunur.</li>
-<li>Başka sitelerin haber metinlerini ve fotoğraflarını kopyalamayız.</li>
-<li>Belediye ve kamu kurumlarının basın duyurularını kendi cümlelerimizle kısa haberlere dönüştürür, duyurunun aslına bağlantı veririz. Bu yazılarda yapay zekâ desteği kullanılır; metinde olmayan bilgi eklenmez.</li>
-<li>Kısa özetleri yalnızca resmî kurum duyurularında ve buna izin veren kaynaklarda kendi cümlelerimizle yazarız.</li>
-<li>Aynı olayı birden fazla kaynak yazdıysa tek kartta birleştirir, tüm kaynakları gösteririz.</li></ul>
-<p>Haberinizin burada yer almasını istemiyorsanız <a href="mailto:${SITE.email}">${SITE.email}</a> adresine yazmanız yeterli.</p>`,
+      aciklama: `${SITE.name} haberleri nasıl hazırlar?`,
+      govde: `<p>${SITE.name}, Mersin ve 13 ilçesindeki gelişmeleri üç yolla okura ulaştırır:</p>
+<ul><li><strong>Kurum duyuruları:</strong> Belediyeler, valilik, kaymakamlıklar, üniversiteler, il sağlık ve tarım müdürlükleri gibi resmî kurumların duyurularını kendi cümlelerimizle habere dönüştürürüz ve duyurunun aslına bağlantı veririz.</li>
+<li><strong>Derleme:</strong> Yerel ve ulusal haber sitelerinde Mersin'le ilgili çıkan haberleri izler, aynı olayı yazan kaynakları tek haberde birleştirir ve hepsini kaynak olarak gösteririz. Başka sitelerin metinlerini ve fotoğraflarını kopyalamayız; olayın bilgilerini kendi cümlelerimizle yazarız.</li>
+<li><strong>Veri haberleri:</strong> AFAD (deprem), MESKİ (su kesintisi), Karayolları (yol durumu), Diyanet (namaz ve iftar vakitleri), Eczacı Odası (nöbetçi eczaneler), TFF (maç sonuçları ve puan durumu) gibi resmî ve açık veri kaynaklarından kalıp cümlelerle otomatik kısa haberler hazırlarız.</li></ul>
+<p>Haberinizin ya da kurumunuzun içeriğinin burada yer almasını istemiyorsanız <a href="mailto:${SITE.email}">${SITE.email}</a> adresine yazmanız yeterli.</p>`,
+    }),
+    ({
+      yol: '/hakkimizda/',
+      baslik: 'Hakkımızda',
+      aciklama: `${SITE.name}: Mersin ve 13 ilçesinin yerel haber sitesi. Kim olduğumuz, ne yaptığımız ve nasıl çalıştığımız.`,
+      govde: `<p><strong>${SITE.name}</strong>, Mersin'in 13 ilçesindeki gelişmeleri hızlı, kaynaklı ve sade bir dille aktarmak için 2026'da kurulan yerel bir internet haber sitesidir. Amacımız, Mersinlilerin günlük hayatını doğrudan etkileyen bilgileri tek yerde toplamak: haberler, su ve elektrik kesintileri, nöbetçi eczaneler, hava durumu, yol durumu, okul tatilleri, maç sonuçları ve şehrin gündemi.</p>
+<h2>Kim yazıyor?</h2>
+<p>Haberler <strong>Mersin Anlık Haber Merkezi</strong> imzasıyla yayımlanır. Veriden otomatik hazırlanan kısa haberler <strong>Mersin Anlık Veri Masası</strong> imzasını taşır. Sitenin kurucusu ve sorumlu yazı işleri müdürü Yakup Tulan'dır; künye bilgileri <a href="/kunye/">künye</a> sayfasındadır.</p>
+<h2>Nasıl çalışıyoruz?</h2>
+<p>Her haberin altında kaynağı ve kaynağa giden bağlantı bulunur. Haber yazımında yapay zekâdan destek alırız; bunun sınırlarını <a href="/yapay-zeka-ilkeleri/">yapay zekâ kullanım ilkelerimizde</a>, kaynaklarımızı <a href="/kaynaklarimiz/">kaynaklarımız</a> sayfasında, yayın anlayışımızı <a href="/yayin-ilkeleri/">yayın ilkelerimizde</a> açıkça anlatıyoruz.</p>
+<h2>Bağımsızlık</h2>
+<p>${SITE.name} herhangi bir siyasi parti, kurum ya da şirketin yayın organı değildir. Reklam ve sponsorlu içerikler her zaman açıkça işaretlenir ve haber içeriğini etkilemez.</p>
+<h2>Bize ulaşın</h2>
+<p>Haber ihbarı, düzeltme talebi ve iş birliği için: <a href="mailto:${SITE.email}">${SITE.email}</a></p>`,
+    }),
+    ({
+      yol: '/duzeltme-politikasi/',
+      baslik: 'Düzeltme ve cevap hakkı politikası',
+      aciklama: `${SITE.name} yayımladığı haberlerdeki hataları nasıl düzeltir?`,
+      govde: `<p>Doğru bilgi vermek önceliğimizdir. Bir haberimizde hata olduğunu düşünüyorsanız haberin bağlantısıyla birlikte <a href="mailto:${SITE.email}">${SITE.email}</a> adresine yazın.</p>
+<ul><li>Talepleri en geç 24 saat içinde inceleriz.</li>
+<li>Olgusal bir hata varsa haberi düzeltir, haberin sonuna ne değiştiğini ve tarihini belirten bir "Düzeltme" notu ekleriz. Anlamı değiştirmeyen küçük yazım düzeltmelerinde not eklemeyebiliriz.</li>
+<li>Haberin tamamı yanlışsa haberi yayından kaldırır ve bunu açıklarız.</li>
+<li>Kaynağımızın haberi düzelttiğini ya da kaldırdığını fark edersek haberimizi de ona göre güncelleriz.</li>
+<li>Haberde adı geçen kişi ve kurumların cevap ve düzeltme hakkına saygı gösteririz; 5187 sayılı Basın Kanunu kapsamındaki talepler ayrıca değerlendirilir.</li></ul>`,
+    }),
+    ({
+      yol: '/yapay-zeka-ilkeleri/',
+      baslik: 'Yapay zekâ kullanım ilkelerimiz',
+      aciklama: `${SITE.name} haber hazırlarken yapay zekâyı nasıl ve hangi sınırlar içinde kullanır?`,
+      govde: `<p>${SITE.name} küçük bir ekiple çok sayıda kaynağı izleyebilmek için yapay zekâdan destek alır. Bunu açıkça söylüyor ve şu kurallarla sınırlıyoruz:</p>
+<ul><li><strong>Bilgi uydurulmaz.</strong> Yapay zekâya yalnızca kaynak metni verilir ve sadece o metindeki bilgilerle yazması istenir. Kaynakta olmayan isim, sayı, tarih ya da yorum eklenmez.</li>
+<li><strong>Kaynak her zaman görünür.</strong> Her haberin altında dayandığı kaynakların adı ve bağlantısı bulunur.</li>
+<li><strong>Hassas konular otomatik yayımlanmaz.</strong> Suç isnadı, ölüm, çocuklar ve kişisel veriler içeren haberler editör onayı olmadan yayına girmez.</li>
+<li><strong>Veri haberleri kalıp cümlelerle yazılır.</strong> Deprem, su kesintisi, yol durumu, akaryakıt, eczane ve maç sonucu haberleri yapay zekâ kullanılmadan, resmî verinin kendisinden hazırlanır.</li>
+<li><strong>Görseller işaretlenir.</strong> Yapay zekâ ile üretilen temsili görsellerin altında bu açıkça yazar; gerçek fotoğraf gibi sunulmaz.</li>
+<li><strong>Hatalar düzeltilir.</strong> Bir hata gördüğünüzde <a href="/duzeltme-politikasi/">düzeltme politikamıza</a> göre hızla düzeltiriz.</li></ul>`,
     }),
     ({
       yol: '/yayin-ilkeleri/',
       baslik: 'Yayın ilkeleri',
-      aciklama: `${SITE.name} yayın ilkeleri.`,
-      govde: `<ul><li>Haberleri kaynağını göstererek ve tarafsız biçimde sunarız.</li>
-<li>Suç, ölüm, çocuk ve kişisel bilgiler içeren haberler yayınlanmadan önce editör kontrolünden geçer.</li>
-<li>Kişilik haklarına saygı gösterir, masumiyet karinesini gözetiriz.</li>
-<li>Düzeltme ve cevap taleplerini en kısa sürede değerlendiririz.</li></ul>`,
+      aciklama: `${SITE.name} yayın ilkeleri ve etik kuralları.`,
+      govde: `<p>${SITE.name}, Basın Meslek İlkeleri'ni esas alır. Temel ilkelerimiz:</p>
+<ul><li><strong>Doğruluk:</strong> Haberleri doğrulanabilir kaynaklara dayandırır, kaynağını her zaman gösteririz. İddiaları iddia olarak, kesinleşmiş bilgileri kesin bilgi olarak yazarız.</li>
+<li><strong>Tarafsızlık:</strong> Siyasi parti, kurum ya da şirket adına yayın yapmayız. Haber ile yorumu birbirinden ayırırız.</li>
+<li><strong>Kişilik hakları:</strong> Masumiyet karinesine uyar; şüpheli, mağdur ve çocukların kimliğini korur, kişisel verileri yayımlamayız.</li>
+<li><strong>Hassas içerik:</strong> Suç, ölüm, intihar ve şiddet haberlerini sansasyondan uzak, ölçülü bir dille veririz; bu tür haberler editör onayından geçer.</li>
+<li><strong>Reklam ayrımı:</strong> Reklam ve sponsorlu içerik açıkça işaretlenir, haber içeriğini etkilemez.</li>
+<li><strong>Şeffaflık:</strong> Yapay zekâ desteğini nasıl kullandığımızı <a href="/yapay-zeka-ilkeleri/">açıkça anlatırız</a>; hatalarımızı <a href="/duzeltme-politikasi/">düzeltme politikamıza</a> göre düzeltiriz.</li></ul>`,
     }),
     ({
       yol: '/gizlilik/',
