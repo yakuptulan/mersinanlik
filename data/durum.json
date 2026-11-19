@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "mersin-buyuksehir": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-19T13:04:48.646Z"
   }
  },
  "gorsel": {
@@ -264,8 +260,24 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-19T13:05:21.295Z",
+  "guncelleme": "2026-11-19T13:25:47.994Z",
   "liste": [
+   {
+    "baslik": "ödeme",
+    "trafik": 500
+   },
+   {
+    "baslik": "jankat yılmaz",
+    "trafik": 100
+   },
+   {
+    "baslik": "kar fırtınası",
+    "trafik": 1000
+   },
+   {
+    "baslik": "emirhan ilkhan",
+    "trafik": 200
+   },
    {
     "baslik": "sefer karaahmetoğlu",
     "trafik": 200
@@ -273,6 +285,10 @@
    {
     "baslik": "melih kabasakal",
     "trafik": 100
+   },
+   {
+    "baslik": "a.101",
+    "trafik": 5000
    },
    {
     "baslik": "oyuncu",
@@ -285,26 +301,6 @@
    {
     "baslik": "danıştay",
     "trafik": 500
-   },
-   {
-    "baslik": "mattéo guendouzi",
-    "trafik": 500
-   },
-   {
-    "baslik": "altın sert düşüş",
-    "trafik": 2000
-   },
-   {
-    "baslik": "toprak razgatlıoğlu",
-    "trafik": 500
-   },
-   {
-    "baslik": "saniye caran",
-    "trafik": 500
-   },
-   {
-    "baslik": "ismail arı",
-    "trafik": 100
    }
   ]
  },
