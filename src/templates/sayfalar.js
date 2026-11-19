@@ -407,7 +407,7 @@ export function haberSayfasi({ hikaye, ilgili, servis, tumHaberler = null }) {
   const digerleri = hikaye.kaynaklar.filter((k) => !goruldu.has(k.ad) && goruldu.add(k.ad));
   const tamYazi = Boolean(hikaye.metin);
   const kurumFoto = hikaye.gorselKaynak && hikaye.gorselKaynak !== 'yz' ? hikaye.gorselKaynak : null;
-  const gorselUrl = hikaye.gorsel ? `${SITE.url}/uretilen/${hikaye.gorsel}` : null;
+  const gorselUrl = hikaye.gorsel ? `${SITE.url}/uretilen/${hikaye.gorsel}` : hikaye.kapak ? `${SITE.url}/kapak/${hikaye.kapak}.webp` : null;
   const paragraflar = (hikaye.metin || '').split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean).map((p, i, a) => `<p>${h(p)}</p>${i === 1 && a.length > 3 ? reklamAlani('yazi-ici') : ''}`).join('\n');
   const ilce = ILCELER.find((i) => hikaye.ilceler.includes(i.slug)) || null;
   const jsonLd = {
@@ -433,7 +433,8 @@ export function haberSayfasi({ hikaye, ilgili, servis, tumHaberler = null }) {
   const icerik = `<main class="kap govde">
 <div class="ana">
 <article class="haber-yazi" style="--kat:${kat.renk}">
-${gorselUrl ? `<figure class="haber-gorsel"><img src="/uretilen/${h(hikaye.gorsel)}" alt="${kurumFoto ? h(hikaye.baslik) : 'Temsili görsel (yapay zekâ ile üretildi)'}" width="800" height="450" decoding="async"><figcaption>${kurumFoto ? `Fotoğraf: ${h(kurumFoto)}` : 'Temsili görsel · yapay zekâ ile üretilmiştir'}</figcaption></figure>` : ''}
+${!hikaye.gorsel && hikaye.kapak ? `<figure class="haber-gorsel"><img src="/kapak/${h(hikaye.kapak)}.webp" alt="${h(hikaye.baslik)}" width="1200" height="675" decoding="async"></figure>` : ''}
+${hikaye.gorsel ? `<figure class="haber-gorsel"><img src="/uretilen/${h(hikaye.gorsel)}" alt="${kurumFoto ? h(hikaye.baslik) : 'Temsili görsel (yapay zekâ ile üretildi)'}" width="800" height="450" decoding="async"><figcaption>${kurumFoto ? `Fotoğraf: ${h(kurumFoto)}` : 'Temsili görsel · yapay zekâ ile üretilmiştir'}</figcaption></figure>` : ''}
 ${hikaye.metin || hikaye.ozet ? dinleDugmesi() : ''}
 ${hikaye.ozet ? `<p class="haber-spot">${h(hikaye.ozet)}</p>` : ''}
 ${paragraflar}
@@ -969,4 +970,26 @@ ${paylasCubugu(SITE.url + yol, `Mersin günün özeti: ${o.baslik}`)}
 ${arsiv.length > 1 ? `<div class="bolum-bas"><h2>Önceki günler</h2></div><div class="yan-liste ozet-arsiv">${arsiv.filter((a) => a.tarih !== o.tarih).slice(0, 10).map((a) => `<a class="yan-satir" href="/gunun-ozeti/${a.tarih}/"><span class="yan-metin"><b>${h(a.baslik)}</b><small>${h(ozetTarih(a.tarih))}</small></span></a>`).join('')}</div>` : ''}
 </div>${yanKutular(servis)}</main>`,
   });
+}
+
+// ---------- İşleyiş raporu (yönetim için, arama motorlarına kapalı) ----------
+const TUR_ADI = { yakit: 'Akaryakıt', deprem: 'Deprem', su: 'Su kesintisi', hava: 'Hava', eczane: 'Nöbetçi eczane', iftar: 'İftar', piyasa: 'Piyasa', ucus: 'Havalimanı', okul: 'Okul tatili', hafta: 'Haftanın özeti', etkinlik: 'Etkinlik', yol: 'Yol durumu', mac: 'Maç', superlig: 'Süper Lig programı', bulten: 'Spor bülteni', diger: 'Diğer' };
+export function durumSayfasi({ rapor }) {
+  const gunler = Object.keys(rapor?.gunler || {}).sort().reverse();
+  const bugun = rapor?.gunler?.[gunler[0]];
+  const dun = rapor?.gunler?.[gunler[1]];
+  const kart = (ad, a, b) => `<div class="eb-kare"><small>${ad}</small><b>${a ?? '–'}</b>${b != null ? `<em>Dün: ${b}${a !== b ? ` (${a > b ? '+' : ''}${a - b})` : ''}</em>` : ''}</div>`;
+  const icerik = `<main class="kap govde"><div class="ana">
+${bugun ? `<section class="ekonomi-bugun"><div class="eb-bas"><div><h2>Bugün (${h(gunler[0])})</h2><p>Son güncelleme: ${h(new Date(bugun.guncelleme).toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Istanbul' }))}</p></div></div>
+<div class="eb-kareler">${kart('Mersin haberi', bugun.mersinHaber, dun?.mersinHaber)}${kart('Kendi yazımız', bugun.kendiYazimiz, dun?.kendiYazimiz)}${kart('Otomatik haber', bugun.otomatik, dun?.otomatik)}${kart('Üretilen görsel', bugun.gorsel, dun?.gorsel)}${kart('Bilgi yazısı', bugun.bilgi, dun?.bilgi)}${kart('Gezi rehberi', bugun.gezi, dun?.gezi)}</div>
+<p class="eb-not">${bugun.kaynakHatalari.length ? `⚠️ Son 24 saatte erişilemeyen kaynaklar: ${h(bugun.kaynakHatalari.join(', '))}` : '✅ Son 24 saatte kaynak hatası yok.'}</p></section>
+<div class="bolum-bas"><h2>Bugünkü otomatik haberler</h2></div>
+${bugun.otomatikBasliklar.length ? `<div class="ky-liste yol-liste">${bugun.otomatikBasliklar.map((x) => `<div class="ky-satir"><span><b class="yol-neden">${h(TUR_ADI[x.tur] || x.tur || 'Diğer')}</b> ${h(x.baslik)}</span><small>${h(x.saat)}</small></div>`).join('')}</div>` : '<div class="bos">Bugün henüz otomatik haber çıkmadı.</div>'}` : '<div class="bos">Rapor henüz oluşmadı.</div>'}
+<div class="bolum-bas"><h2>Son günler</h2></div>
+<div class="tablo-kap"><table class="tablo"><thead><tr><th>Gün</th><th>Mersin haberi</th><th>Kendi yazımız</th><th>Otomatik</th><th>Görsel</th><th>Türkiye/dünya</th></tr></thead><tbody>${gunler
+    .slice(0, 14)
+    .map((g) => { const r = rapor.gunler[g]; return `<tr><th scope="row">${h(g)}</th><td>${r.mersinHaber}</td><td>${r.kendiYazimiz}</td><td>${r.otomatik}${Object.keys(r.otomatikTurler || {}).length ? `<br><small>${h(Object.entries(r.otomatikTurler).map(([k, v]) => `${TUR_ADI[k] || k} ${v}`).join(', '))}</small>` : ''}</td><td>${r.gorsel}</td><td>${r.turkiyeDunya}</td></tr>`; })
+    .join('')}</tbody></table></div>
+</div></main>`;
+  return sayfa({ baslik: 'İşleyiş raporu', aciklama: 'Mersin Anlık günlük işleyiş raporu.', yol: '/durum/', noindex: true, ust: `<div class="su-an-bas"><div><h1>İşleyiş raporu</h1><p style="margin-top:8px">Sitenin günlük özeti · yarım saatte bir güncellenir</p></div></div>`, icerik });
 }

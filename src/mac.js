@@ -123,6 +123,8 @@ async function main() {
           yaziKaynak: 'TFF',
           metinDenemesi: 2,
           macHaberi: true,
+          kapak: 'mac',
+          gorselHatasi: 'kapak var',
         });
         durum.yazilan.push(anahtar);
         delete durum.oynanan[`${m.tarih}|${takim}`];
@@ -211,6 +213,8 @@ async function macOnuYazilari({ servis, durum, veri, simdi }) {
           yaziKaynak: 'TFF',
           metinDenemesi: 2,
           macHaberi: true,
+          kapak: 'mac',
+          gorselHatasi: 'kapak var',
         });
         durum.yazilan.push(anahtar);
         yeni++;
@@ -295,6 +299,8 @@ async function haftalikBulten({ servis, durum, veri, simdi }) {
     metinDenemesi: 2,
     macHaberi: true,
     bulten: true,
+    kapak: 'bulten',
+    gorselHatasi: 'kapak var',
   });
   durum.haftalik = { tarih: bugun, siralar: anlik, yazilan: bugun };
   console.log('Haftalık spor bülteni yazıldı:', yazi.baslik);
@@ -363,6 +369,8 @@ async function haftasonuProgrami({ servis, durum, veri, simdi }) {
     yaziKaynak: 'TFF',
     metinDenemesi: 2,
     macHaberi: true,
+    kapak: 'superlig',
+    gorselHatasi: 'kapak var',
   });
   durum.program = bugun;
   console.log('Hafta sonu Süper Lig programı yazıldı:', yazi.baslik);

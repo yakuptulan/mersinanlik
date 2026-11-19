@@ -92,7 +92,14 @@ export function insaEt({ simdi = Date.now() } = {}) {
   }
   // Site geneli uyarı bantları
   servis.okul = okul;
-  uyarilariAyarla([depremUyarisi(servis.deprem, simdi), okulUyarisi(okul.kararlar, simdi)].filter(Boolean));
+  // Son dakika: otomatik haberlerden önemli olanlar (deprem, yol kapanması, uçuş iptali, hava uyarısı) 3 saat üstte bant olarak
+  const resmiBantlar = [depremUyarisi(servis.deprem, simdi), okulUyarisi(okul.kararlar, simdi)].filter(Boolean);
+  const sonDakika = hikayeler
+    .filter((x) => x.sonDakika && simdi - new Date(x.ilkGorulme).getTime() < 3 * 36e5)
+    .filter((x) => !(x.kapak === 'deprem' && resmiBantlar.some((b) => b.tur === 'deprem')) && !(x.kapak === 'okul' && resmiBantlar.some((b) => b.tur === 'okul')))
+    .slice(0, 2)
+    .map((x) => ({ tur: 'sondakika', ikon: '🔴', baslik: 'Son dakika:', metin: x.baslik, link: haberYolu(x), bitis: new Date(x.ilkGorulme).getTime() + 3 * 36e5 }));
+  uyarilariAyarla([...resmiBantlar, ...sonDakika]);
 
   const sayfalar = [];
   const ekle = (yol, html, haritaya = true) => {
@@ -142,6 +149,11 @@ export function insaEt({ simdi = Date.now() } = {}) {
   ekle('/ulasim/', ulasimSayfasi({ servis, simdi }));
   ekle('/okullar-tatil-mi/', okulSayfasi({ okul, servis, simdi }));
   ekle('/gundemim/', gundemimSayfasi({ servis, simdi }));
+  let rapor = null;
+  try {
+    rapor = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'rapor.json'), 'utf8'));
+  } catch {}
+  yaz('/durum/', S.durumSayfasi({ rapor }));
   let geziVeri = null;
   try {
     geziVeri = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'gezi.json'), 'utf8'));
@@ -225,7 +237,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
   // Canlı yenileme için son haberler listesi (sayfa açıkken 2 dakikada bir okunur)
   yaz('/akis.json', JSON.stringify(akisVerisi(hikayeler, simdi)));
   yaz('/son.json', JSON.stringify(hikayeler.filter((x) => !x.genel).sort((a, b) => new Date(b.ilkGorulme) - new Date(a.ilkGorulme)).slice(0, 20).map((x) => ({ id: x.id, b: x.baslik, z: x.ilkGorulme }))));
-  yaz('/robots.txt', `User-agent: *\nAllow: /\nDisallow: /ara/\nDisallow: /menu/\n\nSitemap: ${SITE.url}/sitemap.xml\nSitemap: ${SITE.url}/haber-sitemap.xml\n`);
+  yaz('/robots.txt', `User-agent: *\nAllow: /\nDisallow: /ara/\nDisallow: /menu/\nDisallow: /durum/\n\nSitemap: ${SITE.url}/sitemap.xml\nSitemap: ${SITE.url}/haber-sitemap.xml\n`);
   // Cloudflare Pages: önbellek ayarları
   yaz(
     '/_headers',

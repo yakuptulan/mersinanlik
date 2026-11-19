@@ -183,6 +183,7 @@ ${googleKaynak()}`;
 
 // Haberin kapak görselinin adresi (manşet kaydırıcısı için)
 export function kapakAdresi(hikaye) {
+  if (hikaye.kapak && fs.existsSync(new URL(`../../public/kapak/${hikaye.kapak}.webp`, import.meta.url))) return { src: `/kapak/${hikaye.kapak}.webp`, kurum: null, kapak: true };
   if (hikaye.gorsel && fs.existsSync(new URL(`../../public/uretilen/${hikaye.gorsel}`, import.meta.url))) return { src: `/uretilen/${hikaye.gorsel}`, kurum: hikaye.gorselKaynak && hikaye.gorselKaynak !== 'yz' ? hikaye.gorselKaynak : null };
   const foto = fotoSec(hikaye);
   if (foto) return { src: `/foto/${foto.id}-800.webp`, kurum: null };

@@ -38,7 +38,7 @@ durum.hava ||= [];
 const veri = yukle();
 const yeniler = [];
 
-function haber({ id, baslik, ozet, metin, kategori, ilceler = [], kaynak, gecici = false, guncelle = false }) {
+function haber({ id, baslik, ozet, metin, kategori, ilceler = [], kaynak, gecici = false, guncelle = false, kapak = null, sonDakika = false }) {
   const var_ = veri.hikayeler.find((x) => x.id === id);
   if (var_) {
     // Aynı günün haberi (ör. uçuş aksaklığı) yeni bilgiyle güncellenir
@@ -55,7 +55,7 @@ function haber({ id, baslik, ozet, metin, kategori, ilceler = [], kaynak, gecici
     genel: false, riskNedenleri: [], durum: 'yayinda', onaylandi: false,
     ilkGorulme: zaman, sonGuncelleme: zaman,
     kaynaklar: [{ kaynakId: 'veri', ad: kaynak.ad, link: kaynak.link, baslik, tarih: zaman }],
-    yaziKaynak: kaynak.ad, metinDenemesi: 2, otomatik: true, ...(gecici ? { gecici: true } : {}),
+    yaziKaynak: kaynak.ad, metinDenemesi: 2, otomatik: true, ...(gecici ? { gecici: true } : {}), ...(kapak ? { kapak } : {}), ...(sonDakika ? { sonDakika: true } : {}),
     gorselHatasi: 'otomatik haber: ilçe çizimi kullanılır',
   });
 }
@@ -88,7 +88,7 @@ if (ak?.degisim && ak.onceki && ak.degisim !== durum.yakit) {
         ab && am ? `İlçelere göre fiyatlar küçük farklılık gösteriyor: benzin ${para(ab[0])}–${para(ab[1])} TL, motorin ${para(am[0])}–${para(am[1])} TL arasında.` : '',
         'İlçe ilçe güncel fiyatlara Mersin Anlık akaryakıt sayfasından ulaşabilirsiniz. Fiyatlar istasyona göre değişebilir.',
       ].filter(Boolean).join('\n\n');
-      haber({ id: kimlik('y', ak.degisim), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'ekonomi', kaynak: { ad: 'Opet pompa fiyatları', link: 'https://www.opet.com.tr/akaryakit-fiyatlari' } });
+      haber({ id: kimlik('y', ak.degisim), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'ekonomi', kaynak: { ad: 'Opet pompa fiyatları', link: 'https://www.opet.com.tr/akaryakit-fiyatlari' } , kapak: 'yakit' });
     }
   }
   durum.yakit = ak.degisim;
@@ -116,7 +116,7 @@ for (const d of servis.deprem || []) {
     `Depremin merkez üssü, Mersin şehir merkezine kuş uçuşu yaklaşık ${Math.round(km)} kilometre uzaklıkta${yakin && mesafeKm(yakin, d) < 60 ? `; en yakın Mersin ilçesi ${yakin.ad} (yaklaşık ${Math.round(mesafeKm(yakin, d))} km)` : ''}.`,
     'Şu ana kadar resmî kurumlardan can ve mal kaybına ilişkin bir açıklama yapılmadı. Gelişmeler oldukça haber güncellenecek. Son depremlerin listesini Mersin Anlık deprem sayfasından takip edebilirsiniz.',
   ].join('\n\n');
-  haber({ id: kimlik('d', anahtar), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'gundem', ilceler: ilce ? [ilce.slug] : [], kaynak: { ad: 'AFAD', link: 'https://deprem.afad.gov.tr/last-earthquakes.html' } });
+  haber({ id: kimlik('d', anahtar), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'gundem', ilceler: ilce ? [ilce.slug] : [], kaynak: { ad: 'AFAD', link: 'https://deprem.afad.gov.tr/last-earthquakes.html' } , kapak: 'deprem', sonDakika: true });
 }
 durum.deprem = durum.deprem.slice(-200);
 
@@ -139,7 +139,7 @@ for (const k of servis.suKesintisi?.liste || []) {
     `MESKİ'nin duyurusu şöyle: "${String(k.aciklama).trim()}"`,
     k.bitis ? `Suyun ${gunStr(k.bitis)} saat ${saatStr(k.bitis)} civarında yeniden verilmesi planlanıyor. Arıza durumlarında süre uzayabilir; MESKİ'ye 185'ten ulaşılabilir.` : "Arıza ve bilgi için MESKİ'ye 185'ten ulaşılabilir.",
   ].filter(Boolean).join('\n\n');
-  haber({ id: kimlik('s', anahtar), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'belediye', ilceler, kaynak: { ad: 'MESKİ', link: 'https://www.meski.gov.tr/' } });
+  haber({ id: kimlik('s', anahtar), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'belediye', ilceler, kaynak: { ad: 'MESKİ', link: 'https://www.meski.gov.tr/' } , kapak: 'su' });
 }
 durum.su = durum.su.slice(-300);
 
@@ -160,7 +160,7 @@ for (const u of uyarilar) {
     u.metin ? `MGM'nin uyarı metni şöyle: "${u.metin}"` : '',
     'Vatandaşların sel, su baskını, yıldırım ve ani kuvvetli rüzgâr gibi olumsuzluklara karşı tedbirli olması öneriliyor. Acil durumlarda 112 aranabilir.',
   ].filter(Boolean).join('\n\n');
-  haber({ id: kimlik('h', anahtar), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'hava', ilceler: tum ? [] : u.ilceler, kaynak: { ad: 'Meteoroloji Genel Müdürlüğü', link: 'https://www.mgm.gov.tr/meteouyari/turkiye.aspx' } });
+  haber({ id: kimlik('h', anahtar), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'hava', ilceler: tum ? [] : u.ilceler, kaynak: { ad: 'Meteoroloji Genel Müdürlüğü', link: 'https://www.mgm.gov.tr/meteouyari/turkiye.aspx' } , kapak: 'hava', sonDakika: true });
 }
 durum.mgm = durum.mgm.slice(-100);
 
@@ -182,7 +182,7 @@ if (!uyarilar.length && trSaat >= 9 && !durum.hava.includes(yarin)) {
         etkilenen.map((x) => `${x.i.ad}: ${x.g.durum.toLocaleLowerCase('tr-TR')}, en yüksek ${x.g.max}°, en düşük ${x.g.min}°`).join('; ') + '.',
         'Bu bilgi resmî bir meteorolojik uyarı değil, hava tahminidir. Resmî uyarılar için Meteoroloji Genel Müdürlüğü duyuruları takip edilmelidir. İlçe ilçe 5 günlük tahmin Mersin Anlık hava durumu sayfasında.',
       ].join('\n\n');
-      haber({ id: kimlik('t', yarin), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'hava', ilceler: tum ? [] : etkilenen.map((x) => x.i.slug), kaynak: { ad: 'MET Norway hava tahmini', link: 'https://www.yr.no/' } });
+      haber({ id: kimlik('t', yarin), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'hava', ilceler: tum ? [] : etkilenen.map((x) => x.i.slug), kaynak: { ad: 'MET Norway hava tahmini', link: 'https://www.yr.no/' } , kapak: 'hava' });
     }
   }
 }
@@ -203,7 +203,7 @@ if (trSaat >= 17 && durum.eczane !== bugunISO && ecz.length >= 5 && ecz.some((e)
     ...gruplar.map((x) => `${x.i.ad}: ${x.l.map((e) => `${e.ad.replace(/\s+Eczanesi$/i, '')} Eczanesi (${String(e.adres || '').toLocaleLowerCase('tr-TR').replace(/(^|\s)(\S)/g, (m, b, c) => b + c.toLocaleUpperCase('tr-TR'))}${e.telefon ? `, ${tel(e.telefon)}` : ''})`).join('; ')}.`),
     "Nöbet süreleri eczaneye göre değişebilir; gitmeden önce telefonla teyit etmeniz önerilir. Konumlu liste ve yol tarifi için Mersin Anlık nöbetçi eczane sayfasını kullanabilirsiniz. Acil durumlarda 112'yi arayın.",
   ].join('\n\n');
-  haber({ id: kimlik('e', bugunISO), baslik: `Mersin nöbetçi eczaneler: ${gunStr(simdi)}`, ozet: metin.split('\n\n')[0], metin, kategori: 'saglik', kaynak: { ad: 'Mersin Eczacı Odası', link: 'https://www.mersineczaciodasi.org.tr/nobetci-eczaneler' }, gecici: true });
+  haber({ id: kimlik('e', bugunISO), baslik: `Mersin nöbetçi eczaneler: ${gunStr(simdi)}`, ozet: metin.split('\n\n')[0], metin, kategori: 'saglik', kaynak: { ad: 'Mersin Eczacı Odası', link: 'https://www.mersineczaciodasi.org.tr/nobetci-eczaneler' }, gecici: true , kapak: 'eczane' });
 }
 
 // ---------- 6) Ramazan: iftar ve sahur vakitleri (sabah 08.00'den sonra, günde bir) ----------
@@ -226,7 +226,7 @@ if (/Ramazan/i.test(hicri) && trSaat >= 8 && durum.iftar !== bugunISO) {
     `İlçe ilçe bugünkü vakitler: ${satirlar.join('; ')}.`,
     'Vakitler Diyanet İşleri Başkanlığı verilerinden alınmıştır. Tüm namaz vakitleri için Mersin Anlık namaz vakitleri sayfasına bakabilirsiniz.',
   ].join('\n\n');
-  haber({ id: kimlik('i', bugunISO), baslik: `Mersin iftar vakti: ${gunStr(simdi)} iftar saat kaçta?`, ozet: metin.split('\n\n')[0], metin, kategori: 'kultur', kaynak: { ad: 'Diyanet İşleri Başkanlığı', link: 'https://namazvakitleri.diyanet.gov.tr/' }, gecici: true });
+  haber({ id: kimlik('i', bugunISO), baslik: `Mersin iftar vakti: ${gunStr(simdi)} iftar saat kaçta?`, ozet: metin.split('\n\n')[0], metin, kategori: 'kultur', kaynak: { ad: 'Diyanet İşleri Başkanlığı', link: 'https://namazvakitleri.diyanet.gov.tr/' }, gecici: true , kapak: 'iftar' });
 }
 
 // ---------- 7) Hafta içi akşam: altın ve döviz günün kapanışı (18.15'ten sonra) ----------
@@ -259,7 +259,7 @@ if (pk && haftaGunu >= 1 && haftaGunu <= 5 && trDakika >= 18 * 60 + 15 && durum.
     kalem.map(([ad, x, b]) => `${ad} ${deger(x, b)}`).join(', ') + ' seviyesinden işlem görüyor.',
     'Kuyumcu ve bankalarda fiyatlar farklılık gösterebilir. Bu haber yatırım tavsiyesi değildir. Anlık fiyatlar Mersin Anlık piyasalar sayfasında.',
   ].join('\n\n');
-  haber({ id: kimlik('k', bugunISO), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'ekonomi', kaynak: { ad: 'Truncgil Finans', link: 'https://finans.truncgil.com/' } });
+  haber({ id: kimlik('k', bugunISO), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'ekonomi', kaynak: { ad: 'Truncgil Finans', link: 'https://finans.truncgil.com/' } , kapak: 'piyasa' });
 }
 
 // ---------- 8) Çukurova Havalimanı: iptal ya da uzun rötar ----------
@@ -275,7 +275,7 @@ if (iptal.length || rotar.length >= 2) {
     rotar.length ? `Rötarlı seferler: ${rotar.map(sefer).join('; ')}.` : '',
     "Yolcuların havalimanına gitmeden önce havayolu şirketinden uçuş durumunu teyit etmesi öneriliyor. Havalimanı çağrı merkezi: 0324 503 00 00. Anlık kalkış ve varışlar Mersin Anlık ulaşım sayfasında.",
   ].filter(Boolean).join('\n\n');
-  haber({ id: kimlik('u', bugunISO), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'ulasim', kaynak: { ad: 'Çukurova Havalimanı', link: 'https://www.cukurovaairport.aero/' }, gecici: true, guncelle: true });
+  haber({ id: kimlik('u', bugunISO), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'ulasim', kaynak: { ad: 'Çukurova Havalimanı', link: 'https://www.cukurovaairport.aero/' }, gecici: true, guncelle: true , kapak: 'ucus', sonDakika: iptal.length > 0 });
 }
 
 const ve = (a) => (a.length > 1 ? `${a.slice(0, -1).join(', ')} ve ${a.at(-1)}` : a[0] || '');
@@ -304,7 +304,7 @@ for (const k of okul.kararlar || []) {
     k.not ? `Karara ilişkin bilgi: ${k.not.replace(/[.!]?$/, '.')}` : '',
     'Kararın kapsamı (öğretmenler, özel okullar, kreşler, üniversiteler) kurumun duyurusuna göre değişebilir; ayrıntılar için resmî açıklamayı takip edin. Mersin\'de okul tatili kararlarını tek sayfada "Okullar tatil mi?" bölümümüzden izleyebilirsiniz.',
   ].filter(Boolean).join('\n\n');
-  haber({ id: kimlik('o', anahtar), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'egitim', ilceler: tum ? [] : k.ilceler, kaynak: kaynakHaber ? { ad: kaynakHaber.kaynaklar[0].ad, link: kaynakHaber.kaynaklar[0].link } : { ad: 'Mersin Valiliği', link: 'http://www.mersin.gov.tr/' } });
+  haber({ id: kimlik('o', anahtar), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'egitim', ilceler: tum ? [] : k.ilceler, kaynak: kaynakHaber ? { ad: kaynakHaber.kaynaklar[0].ad, link: kaynakHaber.kaynaklar[0].link } : { ad: 'Mersin Valiliği', link: 'http://www.mersin.gov.tr/' } , kapak: 'okul', sonDakika: true });
 }
 durum.okul = durum.okul.slice(-100);
 
@@ -325,7 +325,7 @@ if (haftaGunu === 0 && trSaat >= 18 && durum.haftaOzeti !== bugunISO) {
       ...secim.map((x, i) => `${i + 1}. ${x.baslik}: ${cumle(x)}`),
       'Haberlerin tamamına sitemizdeki ilgili sayfalardan ulaşabilirsiniz. Her pazar akşamı haftanın özeti Mersin Anlık\'ta.',
     ].join('\n\n');
-    haber({ id: kimlik('w', bugunISO), baslik: `Mersin'de bu hafta: öne çıkan ${secim.length} gelişme (${aralik})`, ozet: metin.split('\n\n')[0], metin, kategori: 'gundem', kaynak: { ad: 'Mersin Anlık derlemesi', link: 'https://mersinanlik.com/arsiv/' } });
+    haber({ id: kimlik('w', bugunISO), baslik: `Mersin'de bu hafta: öne çıkan ${secim.length} gelişme (${aralik})`, ozet: metin.split('\n\n')[0], metin, kategori: 'gundem', kaynak: { ad: 'Mersin Anlık derlemesi', link: 'https://mersinanlik.com/arsiv/' } , kapak: 'hafta' });
   }
 }
 
@@ -342,7 +342,7 @@ if (haftaGunu === 1 && trSaat >= 9 && durum.etkinlik !== bugunISO) {
       ...gunler.map((g) => `${gunStr(`${g}T12:00:00+03:00`)}: ${liste.filter((e) => e.tarih === g).map((e) => `${e.baslik.replace(/\.$/, '')}${[e.saat, e.yer].filter(Boolean).length ? ` (${[e.saat, e.yer].filter(Boolean).join(', ')})` : ''}`).join('; ')}.`),
       'Etkinliklerin ayrıntıları ve afişleri Mersin Anlık etkinlikler sayfasında. Saat ve yer değişiklikleri için belediyenin duyurularını takip edin.',
     ].join('\n\n');
-    haber({ id: kimlik('a', bugunISO), baslik: `Bu hafta Mersin'de neler var? ${aralik} etkinlik rehberi`, ozet: metin.split('\n\n')[0], metin, kategori: 'kultur', kaynak: { ad: 'Mersin Büyükşehir Belediyesi', link: 'https://www.mersin.bel.tr/' }, gecici: true });
+    haber({ id: kimlik('a', bugunISO), baslik: `Bu hafta Mersin'de neler var? ${aralik} etkinlik rehberi`, ozet: metin.split('\n\n')[0], metin, kategori: 'kultur', kaynak: { ad: 'Mersin Büyükşehir Belediyesi', link: 'https://www.mersin.bel.tr/' }, gecici: true , kapak: 'etkinlik' });
   }
 }
 
@@ -362,7 +362,7 @@ for (const y of servis.yollar?.liste || []) {
     `${y.baslangic ? `Kayıt ${new Date(`${y.baslangic}+03:00`).toLocaleString('tr-TR', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: TZ })} tarihli. ` : ''}${yakin ? `Yol, ${yakin.ad} ilçesi yakınlarında bulunuyor.` : ''}`,
     `Sürücülerin trafik işaret ve işaretçilerine uyması, mümkünse alternatif güzergâhları kullanması öneriliyor. Güncel durum ve harita için KGM'nin yol durumu sayfası (${KGM_SAYFA}) ve Mersin Anlık trafik sayfası takip edilebilir.`,
   ].join('\n\n');
-  haber({ id: kimlik('r', String(y.id)), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'ulasim', ilceler: yakin && mesafeKm(yakin, y) < 40 ? [yakin.slug] : [], kaynak: { ad: 'Karayolları Genel Müdürlüğü', link: KGM_SAYFA } });
+  haber({ id: kimlik('r', String(y.id)), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'ulasim', ilceler: yakin && mesafeKm(yakin, y) < 40 ? [yakin.slug] : [], kaynak: { ad: 'Karayolları Genel Müdürlüğü', link: KGM_SAYFA } , kapak: 'yol', sonDakika: !calisma });
 }
 durum.yol = durum.yol.slice(-300);
 

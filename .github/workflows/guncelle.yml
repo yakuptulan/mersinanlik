@@ -105,6 +105,12 @@ jobs:
       - name: Temsili fotoğrafları indir (sadece eksik olanlar)
         run: node scripts/foto-indir.js
 
+      - name: Günlük işleyiş raporu
+        run: node src/rapor.js || true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
       - name: Siteyi üret
         run: node src/build.js
 
