@@ -1,5 +1,6 @@
 // Mahalle sayfaları: /mahalle/<ilçe>/<mahalle>/
 // Güncel ve geçmiş su kesintileri (MESKİ), mahalleden haberler, ilçenin nöbetçi eczaneleri ve hava durumu.
+// Mahalle listesi: muratgozel/turkey-neighbourhoods (MIT lisansı) verisinden alınmıştır (src/mahalleler.json).
 // İçeriği olmayan (kesinti ya da haber kaydı bulunmayan) sayfalar arama motorlarına kapalı tutulur.
 import { htmlKacis as h, slugify } from '../lib/text.js';
 import { sayfa, saat } from './layout.js';

@@ -105,6 +105,11 @@ jobs:
       - name: Temsili fotoğrafları indir (sadece eksik olanlar)
         run: node scripts/foto-indir.js
 
+      - name: Search Console verisi (6 saatte bir)
+        run: node src/gsc.js || true
+        env:
+          GSC_ANAHTAR: ${{ secrets.GSC_ANAHTAR }}
+
       - name: Günlük işleyiş raporu
         run: node src/rapor.js || true
         env:

@@ -162,7 +162,11 @@ export function insaEt({ simdi = Date.now() } = {}) {
   try {
     rapor = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'rapor.json'), 'utf8'));
   } catch {}
-  yaz('/durum/', S.durumSayfasi({ rapor }));
+  let gsc = null;
+  try {
+    gsc = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'gsc.json'), 'utf8'));
+  } catch {}
+  yaz('/durum/', S.durumSayfasi({ rapor, gsc }));
   let geziVeri = null;
   try {
     geziVeri = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'gezi.json'), 'utf8'));

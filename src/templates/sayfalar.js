@@ -1025,9 +1025,22 @@ ${arsiv.length > 1 ? `<div class="bolum-bas"><h2>Önceki günler</h2></div><div 
   });
 }
 
+// Search Console: Google aramasından gelen trafik
+function gscBolumu(g) {
+  if (!g) return `<div class="bolum-bas"><h2>Google aramasından gelenler</h2></div><div class="bos">Search Console bağlantısı henüz kurulmadı.</div>`;
+  const fark = (a, b) => (b ? `<em>Önceki 7 gün: ${b.toLocaleString('tr-TR')} (${a >= b ? '+' : ''}${Math.round(((a - b) / b) * 100)}%)</em>` : '');
+  const tablo = (liste, bas) => `<div class="tablo-kap"><table class="tablo"><thead><tr><th>${bas}</th><th>Tıklama</th><th>Gösterim</th><th>TO</th><th>Sıra</th></tr></thead><tbody>${liste.map((x) => `<tr><th scope="row">${bas === 'Sayfa' ? `<a href="${h(x.ad)}">${h(x.ad)}</a>` : h(x.ad)}</th><td>${x.tiklama}</td><td>${x.gosterim}</td><td>%${String(x.ctr).replace('.', ',')}</td><td>${String(x.sira).replace('.', ',')}</td></tr>`).join('') || '<tr><td colspan="5">Henüz veri yok</td></tr>'}</tbody></table></div>`;
+  const enCok = Math.max(1, ...g.gunluk.map((x) => x.tiklama));
+  return `<div class="bolum-bas"><h2>Google aramasından gelenler</h2><span>${h(g.aralik.bas)} – ${h(g.aralik.bit)} · Search Console</span></div>
+<div class="eb-kareler" style="margin-bottom:14px"><div class="eb-kare"><small>Tıklama (7 gün)</small><b>${g.toplam.tiklama.toLocaleString('tr-TR')}</b>${fark(g.toplam.tiklama, g.toplam.oncekiTiklama)}</div><div class="eb-kare"><small>Gösterim (7 gün)</small><b>${g.toplam.gosterim.toLocaleString('tr-TR')}</b>${fark(g.toplam.gosterim, g.toplam.oncekiGosterim)}</div></div>
+${g.gunluk.length ? `<div class="gsc-grafik" title="Son 30 günün günlük tıklamaları">${g.gunluk.map((x) => `<span style="height:${Math.max(3, Math.round((x.tiklama / enCok) * 100))}%" title="${h(x.tarih)}: ${x.tiklama} tıklama"></span>`).join('')}</div>` : ''}
+<h3 class="ara-baslik">En çok tıklanan sayfalar</h3>${tablo(g.sayfalar, 'Sayfa')}
+<h3 class="ara-baslik">Hangi aramalarla geldik?</h3>${tablo(g.sorgular, 'Arama')}`;
+}
+
 // ---------- İşleyiş raporu (yönetim için, arama motorlarına kapalı) ----------
 const TUR_ADI = { yakit: 'Akaryakıt', deprem: 'Deprem', su: 'Su kesintisi', hava: 'Hava', eczane: 'Nöbetçi eczane', iftar: 'İftar', piyasa: 'Piyasa', ucus: 'Havalimanı', okul: 'Okul tatili', hafta: 'Haftanın özeti', etkinlik: 'Etkinlik', yol: 'Yol durumu', mac: 'Maç', superlig: 'Süper Lig programı', bulten: 'Spor bülteni', diger: 'Diğer' };
-export function durumSayfasi({ rapor }) {
+export function durumSayfasi({ rapor, gsc = null }) {
   const gunler = Object.keys(rapor?.gunler || {}).sort().reverse();
   const bugun = rapor?.gunler?.[gunler[0]];
   const dun = rapor?.gunler?.[gunler[1]];
@@ -1038,6 +1051,7 @@ ${bugun ? `<section class="ekonomi-bugun"><div class="eb-bas"><div><h2>Bugün ($
 <p class="eb-not">${bugun.kaynakHatalari.length ? `⚠️ Son 24 saatte erişilemeyen kaynaklar: ${h(bugun.kaynakHatalari.join(', '))}` : '✅ Son 24 saatte kaynak hatası yok.'}</p></section>
 <div class="bolum-bas"><h2>Bugünkü otomatik haberler</h2></div>
 ${bugun.otomatikBasliklar.length ? `<div class="ky-liste yol-liste">${bugun.otomatikBasliklar.map((x) => `<div class="ky-satir"><span><b class="yol-neden">${h(TUR_ADI[x.tur] || x.tur || 'Diğer')}</b> ${h(x.baslik)}</span><small>${h(x.saat)}</small></div>`).join('')}</div>` : '<div class="bos">Bugün henüz otomatik haber çıkmadı.</div>'}` : '<div class="bos">Rapor henüz oluşmadı.</div>'}
+${gscBolumu(gsc)}
 <div class="bolum-bas"><h2>Son günler</h2></div>
 <div class="tablo-kap"><table class="tablo"><thead><tr><th>Gün</th><th>Mersin haberi</th><th>Kendi yazımız</th><th>Otomatik</th><th>Görsel</th><th>Türkiye/dünya</th></tr></thead><tbody>${gunler
     .slice(0, 14)
