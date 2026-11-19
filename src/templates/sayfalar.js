@@ -1,5 +1,6 @@
 import { gundemimKarti } from './gundemim.js';
 import { sporYan, sporAnaIcerik, sporMu } from './spor.js';
+import { kategoriYan } from './kategoriYan.js';
 import { macGunuKutusu } from './servisParcalari.js';
 import { SITE, ILCELER, AYAR } from '../config.js';
 import { htmlKacis as h, ayrilmaEki } from '../lib/text.js';
@@ -396,7 +397,7 @@ ${yanKutular(servis, ilce)}
 }
 
 // Kurum duyurusundan kendi cümlelerimizle yazılmış haberin sayfası
-export function haberSayfasi({ hikaye, ilgili, servis }) {
+export function haberSayfasi({ hikaye, ilgili, servis, tumHaberler = null }) {
   const kat = katBilgi(hikaye);
   const yol = haberYolu(hikaye);
   const kurumKayit = hikaye.kaynaklar.find((k) => k.ad === (hikaye.kurum || hikaye.yaziKaynak)) || hikaye.kaynaklar[0];
@@ -446,7 +447,7 @@ ${reklamAlani('yazi-sonu')}
 ${ilgili.length >= 3 ? `<div class="bolum-bas"><h2>Bunlar da ilginizi çekebilir</h2></div><div class="ilgili-kareler">${ilgili.slice(0, 3).map((x) => kareKart(x)).join('')}</div>` : ''}
 ${ilgili.length > 3 ? `<div class="bolum-bas"><h2>${ilce ? `${h(ilce.ad)}'${ayrilmaEki(ilce.ad)} diğer haberler` : 'Diğer haberler'}</h2></div>\n${haberListesi(ilgili.slice(3))}` : ''}
 </div>
-${kat.slug === 'spor' ? sporYan(servis, ilgili) : yanKutular(servis, ilce)}
+${kat.slug === 'spor' ? sporYan(servis, tumHaberler || ilgili) : kategoriYan(kat.slug === 'genel' ? 'turkiye-dunya' : kat.slug, { servis, hikayeler: tumHaberler || ilgili, ilce, okul: servis?.okul }) || yanKutular(servis, ilce)}
 </main>`;
   return sayfa({
     baslik: hikaye.baslik,
@@ -482,7 +483,7 @@ export function kategoriSayfasi({ kategori, hikayeler, servis }) {
     ust: `<div class="su-an-bas"><div><h1>${h(kategori.ad)}</h1><p style="margin-top:8px">Son ${AYAR.saklamaGun} gün · ${liste.length} haber</p></div></div>
 <nav class="kat-menu" aria-label="Kategoriler">${diger.map((k) => `<a href="/kategori/${k.slug}/" style="--kat:${k.renk}">${h(k.ad)}</a>`).join('')}</nav>`,
     tema: kategori.slug === 'spor' ? 'spor' : undefined,
-    icerik: `<main class="kap govde"><div class="ana">${kategori.slug === 'spor' ? `<p class="giris-metni"><a href="/spor/">⚽ Mersin takımlarının puan durumu, fikstürü ve maçları için spor sayfası →</a></p>` : ''}${haberListesi(kategori.slug === 'spor' ? liste.filter(sporMu) : liste, 'Bu kategoride son günlerde haber yok.')}</div>${kategori.slug === 'spor' ? sporYan(servis, hikayeler) : yanKutular(servis)}</main>`,
+    icerik: `<main class="kap govde"><div class="ana">${kategori.slug === 'spor' ? `<p class="giris-metni"><a href="/spor/">⚽ Mersin takımlarının puan durumu, fikstürü ve maçları için spor sayfası →</a></p>` : ''}${haberListesi(kategori.slug === 'spor' ? liste.filter(sporMu) : liste, 'Bu kategoride son günlerde haber yok.')}</div>${kategori.slug === 'spor' ? sporYan(servis, hikayeler) : kategoriYan(kategori.slug, { servis, hikayeler, okul: servis?.okul }) || yanKutular(servis)}</main>`,
   });
 }
 

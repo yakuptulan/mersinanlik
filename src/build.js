@@ -91,6 +91,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
     k.link = x ? (sayfasiVar(x) ? haberYolu(x) : x.kaynaklar[0].link) : arsivYukle().find((y) => y.id === k.haberId)?.yol || '/okullar-tatil-mi/';
   }
   // Site geneli uyarı bantları
+  servis.okul = okul;
   uyarilariAyarla([depremUyarisi(servis.deprem, simdi), okulUyarisi(okul.kararlar, simdi)].filter(Boolean));
 
   const sayfalar = [];
@@ -112,7 +113,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
   const konuEtiketi = (x) => (x.genel ? [] : konuBul(x).filter((k) => acikSlug.has(k.slug)).slice(0, 3).map(({ slug, ad }) => ({ slug, ad })));
   for (const hikaye of hikayeler.filter(sayfasiVar)) {
     const ilgili = hikayeler.filter((x) => x.id !== hikaye.id && (!hikaye.ilceler.length || x.ilceler.some((i) => hikaye.ilceler.includes(i)))).slice(0, 6);
-    yaz(haberYolu(hikaye), S.haberSayfasi({ hikaye: { ...hikaye, konular: konuEtiketi(hikaye) }, ilgili, servis }));
+    yaz(haberYolu(hikaye), S.haberSayfasi({ hikaye: { ...hikaye, konular: konuEtiketi(hikaye) }, ilgili, servis, tumHaberler: hikayeler }));
   }
   // Kalıcı arşiv: canlı listeden düşmüş kendi haberlerimizin sayfaları ve aylık arşiv listeleri
   const canliIdler = new Set(hikayeler.map((x) => x.id));
