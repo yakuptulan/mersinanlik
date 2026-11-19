@@ -25,4 +25,12 @@ export const GEZI_YERLERI = [
   { slug: 'silifke-taskopru', ad: 'Silifke Taşköprü', ilce: 'silifke', tur: 'antik', viki: 'tr:Taşköprü (Silifke)' },
   { slug: 'meydancik-kalesi', ad: 'Meydancık Kalesi', ilce: 'gulnar', tur: 'kale', viki: 'tr:Meydancık Kalesi' },
   { slug: 'yumuktepe', ad: 'Yumuktepe Höyüğü', ilce: 'toroslar', tur: 'antik', viki: 'tr:Yumuktepe' },
+  { slug: 'akkum-plaji', ad: 'Taşucu ve Akkum Plajı', ilce: 'silifke', tur: 'deniz', viki: 'tr:Taşucu' },
+  { slug: 'anamur-plaji', ad: 'Anamur Plajları', ilce: 'anamur', tur: 'deniz', viki: 'tr:Anamur' },
+  { slug: 'susanoglu', ad: 'Susanoğlu', ilce: 'silifke', tur: 'deniz', viki: 'tr:Susanoğlu, Silifke' },
+  { slug: 'sebil-yayla', ad: 'Sebil Yaylası', ilce: 'camliyayla', tur: 'doga', viki: 'tr:Sebil, Çamlıyayla' },
+  { slug: 'gozne', ad: 'Gözne Yaylası', ilce: 'toroslar', tur: 'doga', viki: 'tr:Gözne, Toroslar' },
+  { slug: 'kirkkasik-bedesteni', ad: 'Kırkkaşık Bedesteni', ilce: 'tarsus', tur: 'muze', viki: 'tr:Kırkkaşık Bedesteni' },
+  { slug: 'olba-diocaesarea', ad: 'Olba (Ura) Antik Kenti', ilce: 'silifke', tur: 'antik', viki: 'tr:Olba' },
+  { slug: 'kelenderis', ad: 'Kelenderis Antik Kenti', ilce: 'aydincik', tur: 'antik', viki: 'tr:Kelenderis' },
 ];

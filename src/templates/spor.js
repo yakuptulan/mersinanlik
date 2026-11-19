@@ -1,5 +1,5 @@
 // Spor sayfaları: /spor/ ana sayfası ve spor sayfalarına özel yan sütun
-import { htmlKacis as h } from '../lib/text.js';
+import { htmlKacis as h, slugify as _slug } from '../lib/text.js';
 import { kareKart, haberListesi, reklamAlani, haberYolu, kapakAdresi } from './parcalar.js';
 import { kutuBasligi, takimRozeti, takimLogosu, ligTablosu, ligSerit, macListesi, bugununMaclari } from './servisParcalari.js';
 import { LIGLER } from '../lib/spor.js';
@@ -227,4 +227,52 @@ export function derbiKarti(servis, simdi = Date.now()) {
     : m.skor ? `<span class="dk-skor">${h(e)} – ${h(d)}</span><small>${durum === 'canli' ? '● oynanıyor' : 'maç sonucu'}</small>` : `<span class="dk-skor">–</span><small>${durum === 'canli' ? '● oynanıyor' : 'skor birazdan'}</small>`}</span>
 ${takim(m.dep)}</span>
 </a>`;
+}
+
+// ---------- Süper Lig takım sayfaları: /spor/takim/<takım>/ ----------
+export const takimYolu = (ad) => `/spor/takim/${_slug(String(ad).toLocaleLowerCase('tr-TR'))}/`;
+const TAKIM_DUR = new Set(['tümosan', 'corendon', 'metro', 'holding', 'çaykur', 'arca', 'zecorner', 'ikas', 'bitexen', 'fk', 'sk', 'as', 'a.ş.', 'istanbul', 'sportif', 'faaliyetler']);
+function takimAnahtar(ad) {
+  return String(ad).split(/\s+/).filter((k) => !TAKIM_DUR.has(k.toLocaleLowerCase('tr-TR')) && k.length >= 4).sort((a, b) => b.length - a.length)[0] || String(ad).split(/\s+/)[0];
+}
+export function takimSayfasi({ takim, lig, hikayeler, servis, simdi = Date.now() }) {
+  const t = lig.puan.find((x) => x.takim === takim);
+  const benim = (m) => m.ev === takim || m.dep === takim;
+  const sonuclar = Object.keys(lig.haftalar || {}).map(Number).sort((a, b) => b - a).map((n) => ({ n, m: (lig.haftalar[n] || []).find((x) => benim(x) && x.skor) })).filter((x) => x.m);
+  const gelecek = (lig.maclar || []).filter((m) => benim(m) && !m.skor).sort((a, b) => (a.tarih + (a.saat || '')).localeCompare(b.tarih + (b.saat || '')));
+  const anahtar = takimAnahtar(takim);
+  const re = new RegExp(`(^|[^a-zçğıöşü])${anahtar.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, 'i');
+  const haberler = hikayeler.filter((x) => x.kategori === 'spor' && re.test(x.baslik)).slice(0, 8);
+  const sr = (m) => sonuc(m, takim);
+  const ad = h(takim);
+  const ust3 = lig.puan.slice(0, 3).map((x) => x.takim);
+  const sss = [
+    { soru: `${takim} kaçıncı sırada?`, cevap: `${takim}, Trendyol Süper Lig'de ${t.o} maçta ${t.p} puanla ${t.sira}. sırada (${t.g} galibiyet, ${t.b} beraberlik, ${t.m} mağlubiyet).` },
+    ...(gelecek[0] ? [{ soru: `${takim} sonraki maçı ne zaman?`, cevap: `${takim}, ${kisaGun(gelecek[0].tarih)}${gelecek[0].saat ? ` saat ${gelecek[0].saat}` : ''} ${gelecek[0].ev === takim ? `sahasında ${gelecek[0].dep}` : `deplasmanda ${gelecek[0].ev}`} ile oynayacak.` }] : []),
+    ...(sonuclar[0] ? [{ soru: `${takim} son maçı kaç kaç bitti?`, cevap: `${sonuclar[0].n}. haftada ${sonuclar[0].m.ev} ${sonuclar[0].m.skor} ${sonuclar[0].m.dep}.` }] : []),
+  ];
+  return {
+    baslik: `${takim} puan durumu, fikstür ve son maçlar`,
+    aciklama: `${takim} Süper Lig'de ${t.sira}. sırada, ${t.p} puan. Son maç sonuçları, form durumu, sıradaki maç ve ${takim} haberleri.`,
+    jsonLd: [
+      { '@context': 'https://schema.org', '@type': 'SportsTeam', name: takim, sport: 'Futbol', memberOf: { '@type': 'SportsOrganization', name: 'Trendyol Süper Lig' } },
+      { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: sss.map((s) => ({ '@type': 'Question', name: s.soru, acceptedAnswer: { '@type': 'Answer', text: s.cevap } })) },
+    ],
+    ust: `<div class="su-an-bas"><div><div class="cipler"><a class="cip" href="/spor/super-lig/">Trendyol Süper Lig</a></div><h1 class="takim-baslik">${takimRozeti(takim)}${ad}</h1><p style="margin-top:8px">${t.sira}. sıra · ${t.p} puan · ${t.o} maç</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">
+<article class="mt-kart" style="margin-bottom:18px">
+<div class="mt-ust" style="background:linear-gradient(120deg,#0b3d1f,#15803d 60%,#22c55e)"><span class="mt-logo">${takimRozeti(takim)}</span><span class="mt-ad"><b>${ad}</b><small>Trendyol Süper Lig${ust3.includes(takim) ? ' · zirve yarışında' : ''}</small></span><span class="mt-sira"><b>${t.sira}.</b><small>${t.p} puan</small></span></div>
+<div class="mt-istat"><span><b>${t.o}</b>maç</span><span><b>${t.g}</b>galibiyet</span><span><b>${t.b}</b>beraberlik</span><span><b>${t.m}</b>mağlubiyet</span><span><b>${t.a}:${t.y}</b>gol</span></div>
+${lig.form?.[takim]?.length ? `<div class="mt-form"><small>Son ${lig.form[takim].length} maç</small>${lig.form[takim].map((f) => `<i class="f-${f}">${f}</i>`).join('')}</div>` : ''}
+</article>
+${gelecek.length ? `<div class="bolum-bas"><h2>Sıradaki maç</h2></div><div class="sl-maclar">${gelecek.slice(0, 2).map((m) => `<div class="sl-mac"><span class="sl-zaman">${h(goreliZaman(m.tarih, m.saat, simdi))}</span><span class="sl-takim">${takimRozeti(m.ev)}<b>${h(m.ev)}</b></span><span class="sl-skor"><i>v</i></span><span class="sl-takim">${takimRozeti(m.dep)}<b>${h(m.dep)}</b></span></div>`).join('')}</div>` : ''}
+${sonuclar.length ? `<div class="bolum-bas"><h2>Son maçlar</h2></div><div class="sl-maclar">${sonuclar.map(({ n, m }) => `<div class="sl-mac"><span class="sl-zaman">${n}. hafta · ${{ G: 'Galibiyet', B: 'Beraberlik', M: 'Mağlubiyet' }[sr(m)]}</span><span class="sl-takim">${takimRozeti(m.ev)}<b>${h(m.ev)}</b></span><span class="sl-skor"><b>${h(m.skor.split('-')[0])}</b><i>–</i><b>${h(m.skor.split('-')[1])}</b></span><span class="sl-takim">${takimRozeti(m.dep)}<b>${h(m.dep)}</b></span></div>`).join('')}</div>` : ''}
+${haberler.length ? `<div class="bolum-bas"><h2>${ad} haberleri</h2></div>${haberListesi(haberler)}` : ''}
+<div class="bolum-bas"><h2>Puan durumu</h2><a class="bolum-link" href="/spor/super-lig/">Lig sayfası →</a></div>
+${ligTablosu(lig)}
+<section class="bilgi-sss"><h2>Sık sorulanlar</h2>${sss.map((s) => `<details><summary>${h(s.soru)}</summary><p>${h(s.cevap)}</p></details>`).join('')}</section>
+<div class="mh-liste">${lig.puan.map((x) => `<a href="${takimYolu(x.takim)}"${x.takim === takim ? ' style="background:#dcfce7"' : ''}>${h(x.takim)}</a>`).join('')}</div>
+<p style="color:var(--ikincil);font-size:14px">Puan durumu ve fikstür: Türkiye Futbol Federasyonu (tff.org). Logolar: TheSportsDB.</p>
+</div>${sporYan(servis, hikayeler, simdi)}</main>`,
+  };
 }

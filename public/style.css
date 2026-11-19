@@ -1450,3 +1450,7 @@ a.cip.kat:hover { filter: brightness(.95); }
 .vakit-kart b { font-size: 26px; }
 .vakit-kart.iftar { background: linear-gradient(135deg, #312e81, #7c3aed); color: #fff; border: 0; }
 .vakit-kart.iftar small { color: #e9d5ff; }
+.takim-baslik { display: flex; align-items: center; gap: 14px; }
+.takim-baslik .takim-logo, .takim-baslik .takim-rozet { width: 56px; height: 56px; font-size: 18px; }
+.lt-takim a { color: inherit; text-decoration: none; }
+.lt-takim a:hover { text-decoration: underline; }

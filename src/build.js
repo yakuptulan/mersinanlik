@@ -14,6 +14,8 @@ import { gundemimSayfasi, akisVerisi } from './templates/gundemim.js';
 import { logolariAyarla } from './templates/servisParcalari.js';
 import { akaryakitIlSayfasi, akaryakitTurkiyeSayfasi, namazIlSayfasi, namazTurkiyeSayfasi } from './templates/ulusal.js';
 import ILLER81 from './iller.json' with { type: 'json' };
+import { takimSayfasi, takimYolu } from './templates/spor.js';
+import { sayfa as sayfaYap } from './templates/layout.js';
 import { mahalleVerisi, mahalleSayfasi, mahallelerSayfasi, mahalleYolu } from './templates/mahalle.js';
 import { geziListeSayfasi, geziSayfasi, geziYerleri, geziYolu } from './templates/gezi.js';
 import { arsivAySayfasi } from './templates/arsiv.js';
@@ -156,6 +158,12 @@ export function insaEt({ simdi = Date.now() } = {}) {
     if (y && Object.keys(y.ilceler || {}).length) ekle(`/akaryakit/${il.slug}/`, akaryakitIlSayfasi({ il, kayit: y, mersin: servis.akaryakit }));
     const n = ulusal.namaz?.[il.slug];
     if (n?.vakitler?.some((v) => v.tarih >= new Date(simdi).toLocaleDateString('sv-SE', { timeZone: 'Europe/Istanbul' }))) ekle(`/namaz-vakti/${il.slug}/`, namazIlSayfasi({ il, kayit: n, simdi }));
+  }
+  // Süper Lig takım sayfaları
+  const slLig = servis.spor?.ligler?.['super-lig'];
+  for (const t of slLig?.puan || []) {
+    const ts = takimSayfasi({ takim: t.takim, lig: slLig, hikayeler, servis, simdi });
+    ekle(takimYolu(t.takim), sayfaYap({ ...ts, yol: takimYolu(t.takim), tema: 'spor', aktif: '/spor/' }));
   }
   ekle('/akaryakit/', akaryakitTurkiyeSayfasi({ veri: ulusal.akaryakit || {}, mersin: servis.akaryakit }));
   ekle('/namaz-vakti/', namazTurkiyeSayfasi({ veri: ulusal.namaz, simdi }));

@@ -13,7 +13,7 @@ import { GEZI_YERLERI } from './gezi-yerleri.js';
 const UA = 'MersinAnlikBot/1.0 (+https://mersinanlik.com; iletisim@mersinanlik.com)';
 const DOSYA = path.resolve('data/gezi.json');
 const KLASOR = path.resolve('public/gezi');
-const GUNLUK = 4;
+const GUNLUK = 12;
 
 async function json(url) {
   const r = await fetch(url, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(25000) });
@@ -97,7 +97,7 @@ async function main() {
   const bugunku = veri.yerler.filter((y) => new Date(y.tarih).toLocaleDateString('sv-SE', { timeZone: 'Europe/Istanbul' }) === bugun).length;
   if (!zorla && bugunku >= GUNLUK) return console.log(`Gezi rehberi: bugün ${bugunku} yer yazıldı.`);
   const yapilan = new Set(veri.yerler.map((y) => y.slug));
-  const adet = zorla ? 3 : 1;
+  const adet = zorla ? 4 : 2;
   let yazilan = 0;
   for (const yer of GEZI_YERLERI) {
     if (yazilan >= adet) break;

@@ -1,5 +1,5 @@
 // Piyasa şeridi, namaz vakti ve akaryakıt kutuları (ana sayfa, ilçe sayfaları, servis sayfaları)
-import { htmlKacis as h } from '../lib/text.js';
+import { htmlKacis as h, slugify } from '../lib/text.js';
 import { KALEMLER } from '../lib/piyasa.js';
 import { DIYANET_ILCE, VAKITLER } from '../lib/namaz.js';
 import { ikon } from './ikonlar.js';
@@ -271,7 +271,7 @@ export function ligSerit(kayit) {
 export function ligTablosu(kayit) {
   const formVar = kayit.form && Object.values(kayit.form).some((f) => f.length);
   return `<div class="tablo-kap"><table class="tablo lig-tablo"><thead><tr><th>#</th><th>Takım</th><th>O</th><th>G</th><th>B</th><th>M</th><th>Av</th><th>P</th>${formVar ? '<th class="form-bas">Form</th>' : ''}</tr></thead><tbody>${kayit.puan
-    .map((t) => `<tr${t.mersin ? ' class="mersin"' : ''}><td>${t.sira}</td><th scope="row"><span class="lt-takim">${takimRozeti(t.takim, t.mersin)}${h(t.takim)}</span></th><td>${t.o}</td><td>${t.g}</td><td>${t.b}</td><td>${t.m}</td><td>${t.av > 0 ? '+' : ''}${t.av}</td><td><strong>${t.p}</strong></td>${formVar ? `<td class="form">${(kayit.form[t.takim] || []).map((f) => `<i class="f-${f}">${f}</i>`).join('')}</td>` : ''}</tr>`)
+    .map((t) => `<tr${t.mersin ? ' class="mersin"' : ''}><td>${t.sira}</td><th scope="row"><span class="lt-takim">${takimRozeti(t.takim, t.mersin)}${kayit.kisa === 'Süper Lig' ? `<a href="/spor/takim/${slugify(String(t.takim).toLocaleLowerCase('tr-TR'))}/">${h(t.takim)}</a>` : h(t.takim)}</span></th><td>${t.o}</td><td>${t.g}</td><td>${t.b}</td><td>${t.m}</td><td>${t.av > 0 ? '+' : ''}${t.av}</td><td><strong>${t.p}</strong></td>${formVar ? `<td class="form">${(kayit.form[t.takim] || []).map((f) => `<i class="f-${f}">${f}</i>`).join('')}</td>` : ''}</tr>`)
     .join('')}</tbody></table></div>${formVar ? '<p class="form-not"><i class="f-G">G</i> galibiyet <i class="f-B">B</i> beraberlik <i class="f-M">M</i> mağlubiyet · son 5 maç, soldan sağa eskiden yeniye</p>' : ''}`;
 }
 
