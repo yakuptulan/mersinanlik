@@ -108,6 +108,7 @@ export function sayfa({ baslik, aciklama = SITE.description, yol = '/', aktif = 
 <meta charset="utf-8">
 <script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="msvalidate.01" content="73186F4C8804CE1EDD17B492A973910D">
 <title>${h(tamBaslik)}</title>
 <meta name="description" content="${h(aciklama)}">
 <link rel="canonical" href="${kanonik}">
