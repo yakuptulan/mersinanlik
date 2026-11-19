@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-19T08:10:41.640Z",
+ "guncelleme": "2026-11-19T08:31:57.742Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-19T08:10:46.877Z",
+  "guncelleme": "2026-11-19T08:32:00.425Z",
   "liste": [
    {
     "ad": "Arıç Eczanesi",
@@ -762,7 +762,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-19T08:10:48.246Z",
+  "guncelleme": "2026-11-19T08:32:01.376Z",
   "liste": [
    {
     "tur": "su",
@@ -845,6 +845,23 @@
       "ad": "Tarsus",
       "mahalleler": [
        "Yeni"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "TOROSLAR İLÇESİ ZEKİ AYAN MAHALLESİ 82023 SOKAKTA ANA BORU ARIZASI NEDENİYLE ZEKİ AYAN VE OSMANİYE MAHALLELERİNDE SAAT 13:30 A KADAR BİR KISIM SU KESİNTİSİ YAŞANACAKTIR.",
+    "baslangic": "2026-11-19T08:21:09.000Z",
+    "bitis": "2026-11-19T10:30:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "toroslar",
+      "ad": "Toroslar",
+      "mahalleler": [
+       "Osmaniye",
+       "Zeki Ayan"
       ]
      }
     ]
@@ -1043,7 +1060,7 @@
   "kaynakSaati": "2026-11-19 11:10:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-19T08:10:54.698Z",
+  "guncelleme": "2026-11-19T08:32:07.286Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -1752,7 +1769,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-19T07:27:20.539Z",
+  "guncelleme": "2026-11-19T08:32:09.703Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -3096,6 +3113,26 @@
       }
      ]
     },
+    "kulup": {
+     "Gençlerbirliği": "3606",
+     "Gaziantep": "3672",
+     "Amed Sportif Faaliyetler": "3678",
+     "Çaykur Rizespor": "3631",
+     "Galatasaray": "3604",
+     "Samsunspor": "3597",
+     "Kocaelispor": "132",
+     "Fenerbahçe": "3592",
+     "Erzurumspor FK": "4123",
+     "Göztepe": "3688",
+     "Kasımpaşa": "39",
+     "Corendon Alanyaspor": "51",
+     "Tümosan Konyaspor": "3600",
+     "Beşiktaş": "3590",
+     "Trabzonspor": "3596",
+     "Eyüpspor": "3610",
+     "İstanbul Başakşehir FK": "3665",
+     "Arca Çorum FK": "3199"
+    },
     "form": {
      "Galatasaray": [
       "G",
@@ -3907,6 +3944,29 @@
       }
      ]
     },
+    "kulup": {
+     "Alagöz Holding Iğdır": "9387",
+     "Eminevim Ümraniyespor": "3661",
+     "İstanbulspor": "3617",
+     "Keçtaş Ankara Keçiörengücü": "6",
+     "Mardin 1969 Spor": "8758",
+     "Bandırma Spor": "130",
+     "Metro Holding Kayserispor": "72",
+     "Sms Grup Sarıyer": "3602",
+     "Mısırlıcomtr Fatih Karagümrük": "3611",
+     "Boluspor": "3593",
+     "Batman Petrol Spor": "34",
+     "Muğlaspor": "82",
+     "Turka Esenler Erokspor": "964",
+     "Antalyaspor": "52",
+     "Manisa": "2861",
+     "Orfa Yapı Pendikspor": "3623",
+     "Bursaspor": "3601",
+     "Ekenler Beton Sivasspor": "74",
+     "Bodrum FK": "4824",
+     "Artı Değer Van Spor": "2020",
+     "Van Spor": "2020"
+    },
     "form": {
      "Bursaspor": [
       "G",
@@ -4711,6 +4771,44 @@
       }
      ]
     },
+    "kulup": {
+     "Isbaş Isparta 32 Spor": "1484",
+     "Somaspor": "497",
+     "Seza Çimento Elazığspor": "37",
+     "Menemen": "1120",
+     "Hatayspor": "121",
+     "İnegöl Kafkas Spor": "3276",
+     "Adana Demirspor": "3603",
+     "Gmg Kastamonuspor": "4342",
+     "Güzide Gebze Spor": "746",
+     "Ankaraspor": "4355",
+     "Çorlu Spor 1947": "5044",
+     "Muş Spor": "8722",
+     "Arkent Arnavutköy Belediyesi Futbol SK": "6039",
+     "68 Aksaray Belediye Spor": "6496",
+     "Aliağa": "2720",
+     "Sebat Spor": "10300",
+     "Kızılkaya Tarım Şanlıurfaspor": "31",
+     "Efor Çay Erbaaspor": "3641",
+     "Kct 1461 Trabzon FK": "2375",
+     "Sakaryaspor": "3594",
+     "Akedaş Kahramanmaraş İstiklal Spor": "9908",
+     "Beyoğlu Yeni Çarşı Spor Faaliyetleri": "3096",
+     "Fethiyespor": "58",
+     "52 Orduspor FK": "4910",
+     "Adana 01 Futbol Kulübü SK": "9498",
+     "Erzincan Futbol Yatırımları": "2035",
+     "Karacabey Belediye Spor": "3292",
+     "Serik Spor": "4167",
+     "Kütahyaspor": "133",
+     "İskenderunspor": "4258",
+     "Sultan Su İnegölspor": "131",
+     "12 Bingöl Spor": "7632",
+     "Mke Ankaragücü": "3595",
+     "Ankara Demirspor": "11",
+     "Ekinciler İskenderunspor": "4258",
+     "Kırklarelispor": "50"
+    },
     "form": {
      "Muş Spor": [
       "M",
@@ -5445,6 +5543,44 @@
        "skor": null
       }
      ]
+    },
+    "kulup": {
+     "Serik Spor": "4167",
+     "Erzincan Futbol Yatırımları": "2035",
+     "12 Bingöl Spor": "7632",
+     "Sakaryaspor": "3594",
+     "Ankara Demirspor": "11",
+     "52 Orduspor FK": "4910",
+     "Kct 1461 Trabzon FK": "2375",
+     "Akedaş Kahramanmaraş İstiklal Spor": "9908",
+     "Mke Ankaragücü": "3595",
+     "Kırklarelispor": "50",
+     "Sultan Su İnegölspor": "131",
+     "Ekinciler İskenderunspor": "4258",
+     "Fethiyespor": "58",
+     "Kütahyaspor": "133",
+     "Karacabey Belediye Spor": "3292",
+     "Beyoğlu Yeni Çarşı Spor Faaliyetleri": "3096",
+     "Adana 01 Futbol Kulübü SK": "9498",
+     "İskenderunspor": "4258",
+     "Hatayspor": "121",
+     "Güzide Gebze Spor": "746",
+     "Menemen": "1120",
+     "İnegöl Kafkas Spor": "3276",
+     "Isbaş Isparta 32 Spor": "1484",
+     "Adana Demirspor": "3603",
+     "Gmg Kastamonuspor": "4342",
+     "Çorlu Spor 1947": "5044",
+     "Arkent Arnavutköy Belediyesi Futbol SK": "6039",
+     "Aliağa": "2720",
+     "Kızılkaya Tarım Şanlıurfaspor": "31",
+     "Ankaraspor": "4355",
+     "Seza Çimento Elazığspor": "37",
+     "Sebat Spor": "10300",
+     "Somaspor": "497",
+     "68 Aksaray Belediye Spor": "6496",
+     "Efor Çay Erbaaspor": "3641",
+     "Muş Spor": "8722"
     },
     "form": {
      "52 Orduspor FK": [
@@ -6183,6 +6319,63 @@
        "skor": null
       }
      ]
+    },
+    "kulup": {
+     "Amasyaspor FK": "2780",
+     "Zonguldak Spor": "2434",
+     "Orduspor 1967": "4929",
+     "Beykoz Anadolu Spor": "2744",
+     "Kdz.ereğli 1980 Spor": "3690",
+     "Pazarspor": "3662",
+     "Fatsa Belediyespor": "4933",
+     "Düzce Cam Düzcespor": "98",
+     "Kartal Bulvar Kartalimen Spor": "4491",
+     "Küçükçekmece Sinop Spor": "1092",
+     "Silivrispor": "44",
+     "İnkılap": "1465",
+     "Yalova FK 77 Spor": "3087",
+     "Galata Spor": "42",
+     "Gölcükspor": "3640",
+     "Tokat Belediye Spor": "11881",
+     "Büyükçekmece Gücü FK Spor": "4485",
+     "Karabük İdmanyurdu Spor": "10580",
+     "Beykoz İshaklı Spor Faaliyetleri": "4485",
+     "Bursa Yıldırım Spor": "8550",
+     "Söke 1970 Spor": "6176",
+     "Kepez Spor": "1841",
+     "Eskişehir Anadolu Spor Faaliyetleri": "4152",
+     "Balıkesirspor": "135",
+     "Bucaspor 1928": "4274",
+     "Etimesgut Spor": "4212",
+     "Karşıyaka": "3598",
+     "Bigaspor": "136",
+     "Uşak Spor": "5155",
+     "Eskişehirspor": "3",
+     "Alanya 1221": "3808",
+     "1922 Akşehir Spor": "6835",
+     "Gemlik Sümerbey Futbol Spor": "8486",
+     "Gaziemir G.o.g. Spor Yat.": "3095",
+     "Ayvalıkgücü Belediyespor": "105",
+     "Altay": "3591",
+     "Denizli İdmanyurdu 1959 Spor": "384",
+     "Diyarbekir Spor": "3196",
+     "Malatya Yeşilyurt Spor": "4844",
+     "Yozgat Belediyesi Bozok Spor": "7787",
+     "Ejderoğlu Kırşehir": "4499",
+     "Kırıkkale FK Spor": "186",
+     "Halil Bayram İnşaat Karaköprü Belediyespor": "4517",
+     "Ağrı 1970 Spor": "7890",
+     "Açıkalın Erciyes 38": "4398",
+     "Bitlis 1916": "3840",
+     "1964 Silifke Spor": "3666",
+     "Yeni Mersin İdmanyurdu": "4228",
+     "Eti Gübre Mazıdağı Fosfat Spor": "10337",
+     "Yeni Malatyaspor": "4879",
+     "Karaman": "165",
+     "Adanaspor": "3605",
+     "Niğde Belediyesi Spor": "9399",
+     "Ayos Osmaniyespor": "3051",
+     "Adana Adaletgücü Spor": "8742"
     },
     "form": {
      "Fatsa Belediyespor": [
@@ -6929,6 +7122,63 @@
       }
      ]
     },
+    "kulup": {
+     "Gemlik Sümerbey Futbol Spor": "8486",
+     "Bigaspor": "136",
+     "Alanya 1221": "3808",
+     "Denizli İdmanyurdu 1959 Spor": "384",
+     "1922 Akşehir Spor": "6835",
+     "Kepez Spor": "1841",
+     "Etimesgut Spor": "4212",
+     "Gaziemir G.o.g. Spor Yat.": "3095",
+     "Uşak Spor": "5155",
+     "Söke 1970 Spor": "6176",
+     "Altay": "3591",
+     "Bursa Yıldırım Spor": "8550",
+     "Eskişehirspor": "3",
+     "Ayvalıkgücü Belediyespor": "105",
+     "Balıkesirspor": "135",
+     "Eskişehir Anadolu Spor Faaliyetleri": "4152",
+     "Bucaspor 1928": "4274",
+     "Karşıyaka": "3598",
+     "Kdz.ereğli 1980 Spor": "3690",
+     "Fatsa Belediyespor": "4933",
+     "İnkılap": "1465",
+     "Zonguldak Spor": "2434",
+     "Amasyaspor FK": "2780",
+     "Gölcükspor": "3640",
+     "Galata Spor": "42",
+     "Pazarspor": "3662",
+     "Silivrispor": "44",
+     "Beykoz İshaklı Spor Faaliyetleri": "4485",
+     "Karabük İdmanyurdu Spor": "10580",
+     "Kartal Bulvar Kartalimen Spor": "4491",
+     "Orduspor 1967": "4929",
+     "Düzce Cam Düzcespor": "98",
+     "Yalova FK 77 Spor": "3087",
+     "Tokat Belediye Spor": "11881",
+     "Beykoz Anadolu Spor": "2744",
+     "Küçükçekmece Sinop Spor": "1092",
+     "Büyükçekmece Gücü FK Spor": "4485",
+     "Diyarbekir Spor": "3196",
+     "Malatya Yeşilyurt Spor": "4844",
+     "Yozgat Belediyesi Bozok Spor": "7787",
+     "Ejderoğlu Kırşehir": "4499",
+     "Kırıkkale FK Spor": "186",
+     "Halil Bayram İnşaat Karaköprü Belediyespor": "4517",
+     "Ağrı 1970 Spor": "7890",
+     "Açıkalın Erciyes 38": "4398",
+     "Bitlis 1916": "3840",
+     "1964 Silifke Spor": "3666",
+     "Yeni Mersin İdmanyurdu": "4228",
+     "Eti Gübre Mazıdağı Fosfat Spor": "10337",
+     "Yeni Malatyaspor": "4879",
+     "Karaman": "165",
+     "Adanaspor": "3605",
+     "Niğde Belediyesi Spor": "9399",
+     "Ayos Osmaniyespor": "3051",
+     "Adana Adaletgücü Spor": "8742"
+    },
     "form": {
      "Etimesgut Spor": [
       "G",
@@ -7674,6 +7924,63 @@
       }
      ]
     },
+    "kulup": {
+     "Ayos Osmaniyespor": "3051",
+     "Yeni Malatyaspor": "4879",
+     "Diyarbekir Spor": "3196",
+     "1964 Silifke Spor": "3666",
+     "Kırıkkale FK Spor": "186",
+     "Bitlis 1916": "3840",
+     "Açıkalın Erciyes 38": "4398",
+     "Ejderoğlu Kırşehir": "4499",
+     "Adanaspor": "3605",
+     "Yozgat Belediyesi Bozok Spor": "7787",
+     "Eti Gübre Mazıdağı Fosfat Spor": "10337",
+     "Niğde Belediyesi Spor": "9399",
+     "Halil Bayram İnşaat Karaköprü Belediyespor": "4517",
+     "Ağrı 1970 Spor": "7890",
+     "Malatya Yeşilyurt Spor": "4844",
+     "Adana Adaletgücü Spor": "8742",
+     "Yeni Mersin İdmanyurdu": "4228",
+     "Karaman": "165",
+     "Kdz.ereğli 1980 Spor": "3690",
+     "Fatsa Belediyespor": "4933",
+     "İnkılap": "1465",
+     "Zonguldak Spor": "2434",
+     "Amasyaspor FK": "2780",
+     "Gölcükspor": "3640",
+     "Galata Spor": "42",
+     "Pazarspor": "3662",
+     "Silivrispor": "44",
+     "Beykoz İshaklı Spor Faaliyetleri": "4485",
+     "Karabük İdmanyurdu Spor": "10580",
+     "Kartal Bulvar Kartalimen Spor": "4491",
+     "Orduspor 1967": "4929",
+     "Düzce Cam Düzcespor": "98",
+     "Yalova FK 77 Spor": "3087",
+     "Tokat Belediye Spor": "11881",
+     "Beykoz Anadolu Spor": "2744",
+     "Küçükçekmece Sinop Spor": "1092",
+     "Büyükçekmece Gücü FK Spor": "4485",
+     "Bursa Yıldırım Spor": "8550",
+     "Söke 1970 Spor": "6176",
+     "Kepez Spor": "1841",
+     "Eskişehir Anadolu Spor Faaliyetleri": "4152",
+     "Balıkesirspor": "135",
+     "Bucaspor 1928": "4274",
+     "Etimesgut Spor": "4212",
+     "Karşıyaka": "3598",
+     "Bigaspor": "136",
+     "Uşak Spor": "5155",
+     "Eskişehirspor": "3",
+     "Alanya 1221": "3808",
+     "1922 Akşehir Spor": "6835",
+     "Gemlik Sümerbey Futbol Spor": "8486",
+     "Gaziemir G.o.g. Spor Yat.": "3095",
+     "Ayvalıkgücü Belediyespor": "105",
+     "Altay": "3591",
+     "Denizli İdmanyurdu 1959 Spor": "384"
+    },
     "form": {
      "Malatya Yeşilyurt Spor": [
       "G",
@@ -7819,11 +8126,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-19T08:10:54.910Z",
+  "guncelleme": "2026-11-19T08:32:07.753Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 25
+    "sayi": 24
    },
    {
     "yol": "/spor/",
@@ -7886,11 +8193,11 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/tarihi-kilikya-yolu-nda-uc-parkur-daha-yurundu-1fgfdln/",
+    "yol": "/gundemim/",
     "sayi": 1
    },
    {
-    "yol": "/gundemim/",
+    "yol": "/haber/tarihi-kilikya-yolu-nda-uc-parkur-daha-yurundu-1fgfdln/",
     "sayi": 1
    },
    {
@@ -7912,7 +8219,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-19T08:10:57.603Z",
+  "guncelleme": "2026-11-19T08:32:50.080Z",
   "deniz": {
    "sicaklik": 21.9,
    "dalga": 0.68
