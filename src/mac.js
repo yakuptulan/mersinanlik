@@ -132,6 +132,7 @@ async function main() {
     }
   }
   yeni += await macOnuYazilari({ servis, durum, veri, simdi });
+  yeni += await haftalikBulten({ servis, durum, veri, simdi });
   durum.yazilan = durum.yazilan.slice(-200);
   // Eski kayıtları temizle (10 günden eski maç günleri)
   const sinir = new Date(simdi - 10 * 864e5).toISOString().slice(0, 10);
@@ -217,6 +218,86 @@ async function macOnuYazilari({ servis, durum, veri, simdi }) {
     }
   }
   return yeni;
+}
+
+// ---------- Haftalık spor bülteni: her pazartesi 10.00'dan sonra bir kez ----------
+const BULTEN_TALIMAT = `Sen Mersin'de yayın yapan yerel bir haber sitesinin spor editörüsün. Mersin takımlarının geçen haftasını özetleyen kısa bir "haftalık spor bülteni" haberi yaz.
+KURALLAR:
+- SADECE verilen bilgileri kullan. Golcü, oyuncu, teknik direktör, maçın nasıl geçtiği gibi verilmeyen hiçbir şeyi yazma.
+- Tarafsız, sade haber dili; abartı ve ünlem yok.
+- baslik: en fazla 95 karakter, haftanın en dikkat çeken Mersin sonucunu öne çıkarsın.
+- ozet: 1-2 cümle.
+- metin: her Mersin takımı için bir paragraf (haftanın sonucu, puan durumu, varsa sıralama değişimi, sıradaki maç); son paragraf Süper Lig'de zirve durumu (verildiyse). Paragraflar arasında boş satır.
+Yalnızca JSON döndür: {"baslik":"","ozet":"","metin":""}`;
+
+async function haftalikBulten({ servis, durum, veri, simdi }) {
+  const tr = new Date(new Date(simdi).toLocaleString('en-US', { timeZone: TZ }));
+  const bugun = new Date(simdi).toLocaleDateString('sv-SE', { timeZone: TZ });
+  const L = servis.spor?.ligler || {};
+  const anlik = {};
+  for (const l of Object.values(L)) for (const p of l.puan || []) if (p.mersin) anlik[p.takim] = { sira: p.sira, p: p.p, o: p.o };
+  durum.haftalik ||= {};
+  // İlk çalışmada karşılaştırma için anlık durumu sakla
+  if (!durum.haftalik.siralar) durum.haftalik = { tarih: bugun, siralar: anlik };
+  if (tr.getDay() !== 1 || tr.getHours() < 10 || durum.haftalik.yazilan === bugun || process.env.BULTEN_KAPALI) return 0;
+  const onceki = durum.haftalik.siralar || {};
+  const satirlar = [];
+  for (const [kod, l] of Object.entries(L)) {
+    for (const t of (l.puan || []).filter((x) => x.mersin)) {
+      const o = onceki[t.takim];
+      const oynanan = o ? Math.max(0, t.o - o.o) : 1;
+      const benim = (m) => m.ev === t.takim || m.dep === t.takim;
+      const sonuclar = Object.keys(l.haftalar || {}).map(Number).sort((a, b) => b - a)
+        .map((n) => (l.haftalar[n] || []).find((m) => benim(m) && m.skor)).filter(Boolean).slice(0, oynanan);
+      const siradaki = (l.maclar || []).filter((m) => benim(m) && !m.skor && m.tarih >= bugun).sort((a, b) => a.tarih.localeCompare(b.tarih))[0];
+      satirlar.push([
+        `Takım: ${t.takim} (${l.ad})`,
+        sonuclar.length ? `Haftanın maçı: ${sonuclar.map((m) => `${m.ev} ${m.skor} ${m.dep}`).join('; ')}` : 'Bu hafta maçı yoktu',
+        `Puan durumu: ${t.sira}. sıra, ${t.o} maç, ${t.p} puan (${t.g}G ${t.b}B ${t.m}M, attığı ${t.a}, yediği ${t.y})`,
+        o && o.sira !== t.sira ? `Sıralama değişimi: geçen hafta ${o.sira}. sıradaydı, şimdi ${t.sira}.` : o ? 'Sıralama değişimi: yok' : '',
+        siradaki ? `Sıradaki maç: ${gunAdi(siradaki.tarih)}${siradaki.saat ? ` ${siradaki.saat}` : ''}, ${siradaki.ev} – ${siradaki.dep}` : '',
+      ].filter(Boolean).join('\n'));
+    }
+  }
+  if (!satirlar.length) return 0;
+  const sl = L['super-lig']?.puan || [];
+  const slMetin = sl.length >= 3 ? `Süper Lig zirvesi: ${sl.slice(0, 3).map((t) => `${t.sira}. ${t.takim} ${t.p} puan`).join(', ')}` : '';
+  const girdi = `${satirlar.join('\n\n')}\n\n${slMetin}`;
+  let yazi = null;
+  try {
+    const j = await jsonYaz(BULTEN_TALIMAT, girdi, { sicaklik: 0.4, sadeceGemini: true });
+    if (j?.baslik && j?.metin && j.metin.length > 200) yazi = { baslik: String(j.baslik).trim().slice(0, 110), ozet: String(j.ozet || '').trim(), metin: String(j.metin).trim() };
+  } catch (e) {
+    console.log('Haftalık bülten: yapay zekâ hatası, şablon kullanılıyor', e.message);
+  }
+  if (!yazi) {
+    const paragraflar = Object.entries(L).flatMap(([, l]) => (l.puan || []).filter((x) => x.mersin).map((t) => `${t.takim}, ${t.o} maçta topladığı ${t.p} puanla ${l.ad} puan tablosunda ${t.sira}. sırada bulunuyor.`));
+    if (slMetin) paragraflar.push(`${slMetin}.`);
+    yazi = { baslik: 'Mersin takımlarında haftanın özeti', ozet: paragraflar[0], metin: paragraflar.join('\n\n') };
+  }
+  const zaman = new Date(simdi).toISOString();
+  veri.hikayeler.push({
+    id: 'b' + crypto.createHash('sha1').update(`bulten|${bugun}`).digest('hex').slice(0, 5),
+    baslik: yazi.baslik,
+    ozet: yazi.ozet,
+    metin: yazi.metin,
+    ilceler: [],
+    genel: false,
+    kategori: 'spor',
+    riskNedenleri: [],
+    durum: 'yayinda',
+    onaylandi: false,
+    ilkGorulme: zaman,
+    sonGuncelleme: zaman,
+    kaynaklar: [{ kaynakId: 'tff', ad: 'TFF', link: 'https://www.tff.org/', baslik: 'Puan durumları ve fikstür', tarih: zaman }],
+    yaziKaynak: 'TFF',
+    metinDenemesi: 2,
+    macHaberi: true,
+    bulten: true,
+  });
+  durum.haftalik = { tarih: bugun, siralar: anlik, yazilan: bugun };
+  console.log('Haftalık spor bülteni yazıldı:', yazi.baslik);
+  return 1;
 }
 
 // Haftalık sonuç listesinde bu maç skoru zaten varsa tablo da büyük ihtimalle bu maçı içeriyor
