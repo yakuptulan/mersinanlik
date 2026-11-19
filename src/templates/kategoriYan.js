@@ -112,7 +112,7 @@ function ucusKutusu(servis, simdi) {
 
 // Kategoriye göre kutuların sırası
 const DUZEN = {
-  ekonomi: (c) => [piyasaKutusu(c.servis), c.cok('Ekonomide çok konuşulanlar'), akaryakitKutusu(c.servis, c.ilce), sayacKutusu(c.servis)],
+  ekonomi: (c) => [c.cok('Ekonomide çok konuşulanlar'), piyasaKutusu(c.servis), akaryakitKutusu(c.servis, c.ilce), sayacKutusu(c.servis)],
   asayis: (c) => [c.cok('Asayişte öne çıkanlar'), acilKutusu(), trafikKarti(), depremKutusu(c.servis), eczaneKutusu(c.servis, c.ilce)],
   kaza: (c) => [trafikKarti(), c.cok('Son kazalar ve yangınlar'), acilKutusu(), depremKutusu(c.servis)],
   belediye: (c) => [kesintiKutusu(c.servis, c.simdi), c.cok('Belediyelerden öne çıkanlar'), etkinlikKutusu(c.servis, c.simdi), eczaneKutusu(c.servis, c.ilce)],
@@ -143,4 +143,40 @@ ${reklamAlani('yan-ust')}
 ${kutular.slice(1).join('\n')}
 ${reklamAlani('yan-alt')}
 </aside>`;
+}
+
+// ---------- Ekonomi sayfası: "Mersin'de bugün" kartı ----------
+const AY_EK = { Ocak: 'ta', Şubat: 'ta', Mart: 'ta', Nisan: 'da', Mayıs: 'ta', Haziran: 'da', Temmuz: 'da', Ağustos: 'ta', Eylül: 'de', Ekim: 'de', Kasım: 'da', Aralık: 'ta' };
+const bulunmaEki = (t) => AY_EK[String(t).split(' ').pop()] || 'da';
+export function ekonomiBugunKarti(servis) {
+  const k = servis?.piyasa?.kalemler;
+  const ak = servis?.akaryakit;
+  if (!k) return '';
+  const fiyat = ak?.ilceler?.merkez || ak?.ilceler?.yenisehir || null;
+  const kurus = (a, b) => Math.round((a - b) * 100);
+  const yakitFark = (tur) => (fiyat && ak?.onceki?.[tur] != null ? kurus(fiyat[tur], ak.onceki[tur]) : null);
+  const degisimTarih = ak?.degisim ? new Date(ak.degisim).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', timeZone: TZ }) : null;
+  const yuzde = (x) => `%${fmt(Math.abs(x), 2)}`;
+  const hareket = (x) => (x == null ? '' : Math.abs(x) < 0.05 ? 'yatay seyrediyor' : x > 0 ? `${yuzde(x)} yükseldi` : `${yuzde(x)} düştü`);
+  const ozet = [
+    k.gram ? `Gram altın ${hareket(k.gram.degisim)}` : '',
+    k.usd ? `dolar ${hareket(k.usd.degisim)}` : '',
+    k.eur ? `euro ${hareket(k.eur.degisim)}` : '',
+  ].filter(Boolean).join(', ');
+  const bf = yakitFark('benzin');
+  const mf = yakitFark('motorin');
+  const yakitCumle = degisimTarih && (bf || mf) ? ` Akaryakıtta son fiyat değişikliği ${degisimTarih}'${bulunmaEki(degisimTarih)} oldu: ${[bf ? `benzine ${Math.abs(bf)} kuruş ${bf > 0 ? 'zam' : 'indirim'}` : '', mf ? `motorine ${Math.abs(mf)} kuruş ${mf > 0 ? 'zam' : 'indirim'}` : ''].filter(Boolean).join(', ')}.` : '';
+  const kare = (ad, deger, alt, kod, alan = 'satis', degisim = null) => `<div class="eb-kare"><small>${ad}</small><b${kod ? ` data-tg="${kod}" data-alan="${alan}"` : ''}>${deger}</b>${degisim != null ? `<span${kod ? ` data-tg="${kod}" data-alan="degisim"` : ''}>${yon(degisim)}</span>` : ''}${alt ? `<em>${alt}</em>` : ''}</div>`;
+  const fark = (f) => (f ? `${f > 0 ? '+' : '−'}${fmt(Math.abs(f) / 100, 2)} ₺ (${degisimTarih})` : 'değişmedi');
+  return `<section class="ekonomi-bugun">
+<div class="eb-bas"><div><h2>Mersin'de bugün</h2><p>${h(ozet.charAt(0).toUpperCase() + ozet.slice(1))}.${h(yakitCumle)}</p></div><a href="/piyasalar/">Tüm piyasalar →</a></div>
+<div class="eb-kareler">
+${k.gram ? kare('Gram altın', `${fmt(k.gram.satis, 2)} ₺`, '', 'GRA', 'satis', k.gram.degisim) : ''}
+${k.usd ? kare('Dolar', `${fmt(k.usd.satis, 2)} ₺`, '', 'USD', 'satis', k.usd.degisim) : ''}
+${k.eur ? kare('Euro', `${fmt(k.eur.satis, 2)} ₺`, '', 'EUR', 'satis', k.eur.degisim) : ''}
+${fiyat?.benzin ? kare('Benzin (Mersin)', `${fmt(fiyat.benzin, 2)} ₺`, `Son değişim: ${fark(bf)}`) : ''}
+${fiyat?.motorin ? kare('Motorin (Mersin)', `${fmt(fiyat.motorin, 2)} ₺`, `Son değişim: ${fark(mf)}`) : ''}
+</div>
+<p class="eb-not">Altın ve döviz sayfa açıkken güncellenir; değişimler günlüktür. Akaryakıt: Mersin merkez pompa fiyatı. Yatırım tavsiyesi değildir.</p>
+</section>`;
 }
