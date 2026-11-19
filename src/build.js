@@ -131,7 +131,8 @@ export function insaEt({ simdi = Date.now() } = {}) {
   }
   if (aylar.length) yaz('/arsiv/index.html', `<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/arsiv/${aylar[0]}/"><link rel="canonical" href="${SITE.url}/arsiv/${aylar[0]}/">`);
   servis.arsivSayisi = arsiv.length;
-  for (const ilce of ILCELER) ekle(`/ilce/${ilce.slug}/`, S.ilceSayfasi({ ilce, hikayeler, servis, simdi }));
+  const ilceHavuzu = [...hikayeler, ...arsivYukle().filter((x) => !hikayeler.some((y) => y.id === x.id))];
+  for (const ilce of ILCELER) ekle(`/ilce/${ilce.slug}/`, S.ilceSayfasi({ ilce, hikayeler, servis, simdi, havuz: ilceHavuzu }));
   ekle('/hava-durumu/', S.havaSayfasi({ servis }));
   ekle('/deprem/', S.depremSayfasi({ servis }));
   ekle('/nobetci-eczane/', S.eczaneSayfasi({ servis }));

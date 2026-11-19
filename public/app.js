@@ -455,3 +455,29 @@
   });
   window.addEventListener('pagehide', function () { ss.cancel(); });
 })();
+
+// "Sen yokken": siteye 1,5 günden uzun aradan sonra gelen okura ana sayfada kaçırdığı öne çıkan haberler
+(function () {
+  var ANAHTAR = 'mersinanlik-son-ziyaret';
+  var simdi = Date.now();
+  var onceki = 0;
+  try { onceki = Number(localStorage.getItem(ANAHTAR)) || 0; localStorage.setItem(ANAHTAR, String(simdi)); } catch (e) { return; }
+  if (location.pathname !== '/' || !onceki) return;
+  var fark = simdi - onceki;
+  if (fark < 36 * 36e5) return;
+  var yer = document.querySelector('[data-gm-davet]');
+  if (!yer) return;
+  fetch('/akis.json').then(function (r) { return r.json(); }).then(function (liste) {
+    var secilen = liste.filter(function (x) { return new Date(x.z).getTime() > onceki && x.k !== 'turkiye-dunya'; })
+      .sort(function (a, b) { return b.s - a.s || new Date(b.z) - new Date(a.z); }).slice(0, 5);
+    if (secilen.length < 3) return;
+    var gun = Math.round(fark / 864e5);
+    var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+    var kutu = document.createElement('section');
+    kutu.className = 'kacirdin';
+    kutu.innerHTML = '<div class="kc-bas"><b>👋 Tekrar hoş geldin!</b><span>Sen yokken (' + (gun < 2 ? 'son 1 günde' : 'son ' + Math.min(gun, 3) + ' günde') + ') Mersin\'de öne çıkanlar</span><button type="button" aria-label="Kapat">✕</button></div><ol>' +
+      secilen.map(function (x) { return '<li><a href="' + esc(x.y) + '"><img src="' + esc(x.g) + '" alt="" width="72" height="54" loading="lazy"><span>' + esc(x.b) + '</span></a></li>'; }).join('') + '</ol>';
+    kutu.querySelector('button').addEventListener('click', function () { kutu.remove(); });
+    yer.parentNode.insertBefore(kutu, yer);
+  }).catch(function () {});
+})();

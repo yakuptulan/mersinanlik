@@ -358,8 +358,14 @@ ${ilceDugmeleri()}
   });
 }
 
-export function ilceSayfasi({ ilce, hikayeler, servis, simdi }) {
+export function ilceSayfasi({ ilce, hikayeler, servis, simdi, havuz = hikayeler }) {
   const liste = hikayeler.filter((x) => x.ilceler.includes(ilce.slug)).slice(0, AYAR.ilceHaberSayisi);
+  // Son 7 günde ilçenin öne çıkanları: en çok kaynağın yazdığı haberler
+  const kaynakSayisi = (x) => new Set((x.kaynaklar || []).map((k) => k.ad)).size;
+  const haftaninlari = havuz
+    .filter((x) => !x.genel && x.ilceler?.includes(ilce.slug) && simdi - new Date(x.ilkGorulme).getTime() < 7 * 864e5)
+    .sort((a, b) => kaynakSayisi(b) + (b.metin ? 1 : 0) - (kaynakSayisi(a) + (a.metin ? 1 : 0)) || new Date(b.ilkGorulme) - new Date(a.ilkGorulme))
+    .slice(0, 5);
   const hava = servis?.hava?.[ilce.slug];
   const ust = `${meteoBandi(servis, ilce.slug)}<div class="su-an-bas">
 <div><p>${tarihUzun(new Date(simdi).toISOString())} · <span class="canli-saat" data-canli-saat>${saat(new Date(simdi).toISOString())}</span></p><h1>${h(ilce.ad)} haberleri</h1></div>
@@ -372,6 +378,8 @@ ${hava ? `<div class="widgetlar widgetlar-gun">${hava.gunler
   const icerik = `<main class="kap govde">
 <div class="ana">
 ${ilceServisMenusu(ilce, 'haber')}
+${haftaninlari.length >= 3 ? `<section class="ilce-hafta"><div class="ih-bas"><span>📌</span><div><h2>Son 7 günde ${h(ilce.ad)}'${ayrilmaEki(ilce.ad)}</h2><small>Haftanın öne çıkan ${haftaninlari.length} gelişmesi</small></div></div>
+<ol>${haftaninlari.map((x) => `<li><a href="${h(haberYolu(x))}"><b>${h(x.baslik)}</b><small>${new Date(x.ilkGorulme).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long', timeZone: 'Europe/Istanbul' })}${kaynakSayisi(x) > 1 ? ` · ${kaynakSayisi(x)} kaynak yazdı` : ''}</small></a></li>`).join('')}</ol></section>` : ''}
 <div class="bolum-bas"><h2>${h(ilce.ad)}'${ayrilmaEki(ilce.ad)} son haberler</h2><span>${liste.length} haber</span></div>
 ${haberListesi(liste, `Son ${AYAR.saklamaGun} günde ${ilce.ad} ile ilgili haber bulunamadı.`)}
 </div>
