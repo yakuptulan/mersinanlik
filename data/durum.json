@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-19T08:01:39.016Z"
   }
  },
  "gorsel": {
@@ -158,7 +154,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-dogaseverler-tarihi-kilikya-yolunda-bulustu-119526368",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-orman-urunu-tasiyan-araclar-denetlendi-119526419",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/emniyet-muduru-aktas-esnaf-ve-vatandaslarla-bir-araya-geldi-119526451",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/otomobille-kamyonun-carpistigi-kazada-olu-sayisi-2ye-yukseldi-119526449"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/otomobille-kamyonun-carpistigi-kazada-olu-sayisi-2ye-yukseldi-119526449",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/5-sene-once-sahibi-olen-evden-bir-romork-guvercin-diskisi-cikti-119526491"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -254,8 +251,12 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-19T08:02:06.240Z",
+  "guncelleme": "2026-11-19T08:05:36.226Z",
   "liste": [
+   {
+    "baslik": "prim",
+    "trafik": 20000
+   },
    {
     "baslik": "rektör",
     "trafik": 200
@@ -266,7 +267,7 @@
    },
    {
     "baslik": "demet özdemir",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "e devlet",
@@ -290,10 +291,6 @@
    },
    {
     "baslik": "kur",
-    "trafik": 200
-   },
-   {
-    "baslik": "yerel yönetimler",
     "trafik": 200
    }
   ]

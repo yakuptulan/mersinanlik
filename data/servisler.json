@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-19T08:02:17.089Z",
+ "guncelleme": "2026-11-19T08:05:36.848Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 19,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-19T08:02:19.975Z",
+  "guncelleme": "2026-11-19T08:05:43.055Z",
   "liste": [
    {
     "ad": "Arıç Eczanesi",
@@ -762,7 +762,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-19T08:02:20.962Z",
+  "guncelleme": "2026-11-19T08:05:44.254Z",
   "liste": [
    {
     "tur": "su",
@@ -872,17 +872,17 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-19T08:02:23.257Z",
+  "guncelleme": "2026-11-19T08:05:47.057Z",
   "kalemler": {
    "gram": {
-    "alis": 6058.08,
-    "satis": 6058.98,
-    "degisim": 0.31
+    "alis": 6063.73,
+    "satis": 6064.75,
+    "degisim": 0.41
    },
    "ceyrek": {
-    "alis": 9985,
-    "satis": 10060,
-    "degisim": 0.18
+    "alis": 9994,
+    "satis": 10069,
+    "degisim": 0.27
    },
    "gumus": {
     "alis": 73.55,
@@ -890,103 +890,103 @@
     "degisim": 0.69
    },
    "usd": {
-    "alis": 50.4657,
-    "satis": 50.4692,
+    "alis": 50.4609,
+    "satis": 50.474,
     "degisim": 0.07
    },
    "eur": {
-    "alis": 55.5498,
-    "satis": 55.5598,
+    "alis": 55.5481,
+    "satis": 55.5593,
     "degisim": 0.27
    },
    "bist": {
     "alis": null,
-    "satis": 11520.38,
-    "degisim": 0.37
+    "satis": 11531.92,
+    "degisim": 0.47
    },
    "btc": {
-    "satis": 3212666,
-    "usd": 63659,
-    "degisim": -1.69
+    "satis": 3210291,
+    "usd": 63612,
+    "degisim": -1.68
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 6058.08,
-    "satis": 6058.98,
-    "degisim": 0.31
+    "alis": 6063.73,
+    "satis": 6064.75,
+    "degisim": 0.41
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 9985,
-    "satis": 10060,
-    "degisim": 0.18
+    "alis": 9994,
+    "satis": 10069,
+    "degisim": 0.27
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 19970,
-    "satis": 20120,
-    "degisim": 0.21
+    "alis": 19989,
+    "satis": 20139,
+    "degisim": 0.3
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 39818,
-    "satis": 40118,
-    "degisim": 0.27
+    "alis": 39855,
+    "satis": 40155,
+    "degisim": 0.36
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40903,
-    "satis": 41163,
-    "degisim": 0.21
+    "alis": 40940,
+    "satis": 41201,
+    "degisim": 0.3
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40903,
-    "satis": 41163,
-    "degisim": 0.21
+    "alis": 40940,
+    "satis": 41201,
+    "degisim": 0.3
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40903,
-    "satis": 41163,
-    "degisim": 0.21
+    "alis": 40940,
+    "satis": 41201,
+    "degisim": 0.3
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5572.57,
-    "satis": 5760.98,
-    "degisim": 0.12
+    "alis": 5577.76,
+    "satis": 5766.35,
+    "degisim": 0.21
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4223,
-    "satis": 4930,
-    "degisim": 0.1
+    "alis": 4228,
+    "satis": 4935,
+    "degisim": 0.2
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3340.5,
-    "satis": 4497.49,
-    "degisim": 0.11
+    "alis": 3343.7,
+    "satis": 4501.2,
+    "degisim": 0.19
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 6027.79,
-    "satis": 6028.68,
-    "degisim": 0.31
+    "alis": 6033.41,
+    "satis": 6034.42,
+    "degisim": 0.41
    },
    {
     "k": "GUMUS",
@@ -1000,47 +1000,47 @@
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.4657,
-    "satis": 50.4692,
+    "alis": 50.4609,
+    "satis": 50.474,
     "degisim": 0.07
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.5498,
-    "satis": 55.5598,
+    "alis": 55.5481,
+    "satis": 55.5593,
     "degisim": 0.27
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.5428,
-    "satis": 66.5587,
-    "degisim": 0.26
+    "alis": 66.5228,
+    "satis": 66.5387,
+    "degisim": 0.23
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 59.8502,
-    "satis": 59.8686,
-    "degisim": 0.09
+    "alis": 59.8374,
+    "satis": 59.867,
+    "degisim": 0.08
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.4502,
-    "satis": 13.4568,
+    "alis": 13.4513,
+    "satis": 13.4557,
     "degisim": 0.07
    },
    {
     "k": "RUB",
     "ad": "Rus rublesi",
-    "alis": 0.6119,
-    "satis": 0.6136,
-    "degisim": 0.1
+    "alis": 0.6127,
+    "satis": 0.6137,
+    "degisim": 0.17
    }
   ],
-  "kaynakSaati": "2026-11-19 11:02:01"
+  "kaynakSaati": "2026-11-19 11:05:01"
  },
  "akaryakit": {
   "guncelleme": "2026-11-19T08:02:25.762Z",
@@ -7819,11 +7819,15 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-19T08:02:26.346Z",
+  "guncelleme": "2026-11-19T08:05:57.448Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 25
+    "sayi": 26
+   },
+   {
+    "yol": "/spor/",
+    "sayi": 4
    },
    {
     "yol": "/haber/mersin-de-kamyonet-ile-otomobilin-carpistigi-kazada-1-kisi-oldu-2-kisi-1bfosq4/",
@@ -7831,10 +7835,6 @@
    },
    {
     "yol": "/spor/super-lig/",
-    "sayi": 3
-   },
-   {
-    "yol": "/spor/",
     "sayi": 3
    },
    {
@@ -7886,11 +7886,11 @@
     "sayi": 1
    },
    {
-    "yol": "/gundemim/",
+    "yol": "/haber/tarihi-kilikya-yolu-nda-uc-parkur-daha-yurundu-1fgfdln/",
     "sayi": 1
    },
    {
-    "yol": "/haber/tarihi-kilikya-yolu-nda-uc-parkur-daha-yurundu-1fgfdln/",
+    "yol": "/gundemim/",
     "sayi": 1
    },
    {
@@ -7912,7 +7912,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-19T08:02:27.863Z",
+  "guncelleme": "2026-11-19T08:06:00.156Z",
   "deniz": {
    "sicaklik": 21.9,
    "dalga": 0.68
@@ -7925,7 +7925,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-19T08:02:28.759Z",
+  "guncelleme": "2026-11-19T08:06:01.473Z",
   "giden": [
    {
     "no": [
