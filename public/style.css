@@ -1505,3 +1505,11 @@ a.cip.kat:hover { filter: brightness(.95); }
 .okul-durum.acik { background: #ecfdf5; color: #064e3b; border: 1px solid #a7f3d0; }
 .okul-durum.tatil { background: linear-gradient(135deg, #1e3a8a, #2563eb); color: #fff; }
 .okul-durum.tatil a { color: #fff; }
+.ilgili-sayfa { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 18px 0; padding: 14px 16px; background: #f1f5ff; border: 1px solid #dbe4ff; border-radius: 16px; }
+.ilgili-sayfa b { width: 100%; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--ikincil); }
+.ilgili-sayfa a { background: #fff; border: 1px solid #dbe4ff; border-radius: 999px; padding: 7px 12px; font-weight: 700; font-size: 14px; text-decoration: none; color: #1d4ed8; }
+.turkiye-serit { display: flex; gap: 8px; overflow-x: auto; padding: 4px 0 12px; margin-bottom: 8px; scrollbar-width: none; align-items: center; }
+.turkiye-serit::-webkit-scrollbar { display: none; }
+.turkiye-serit b { flex: none; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--ikincil); margin-right: 4px; }
+.turkiye-serit a { flex: none; background: #fff; border: 1px solid #e3e8f2; border-radius: 999px; padding: 8px 14px; font-weight: 700; font-size: 14px; text-decoration: none; color: inherit; white-space: nowrap; }
+.turkiye-serit a:hover { border-color: #93c5fd; }

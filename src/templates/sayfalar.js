@@ -287,6 +287,34 @@ function gundemdekilerSec(hikayeler, simdi, haric) {
   return secilen;
 }
 
+
+// Haberin konusuna göre kalıcı veri sayfalarına iç bağlantı (okur için faydalı, arama motoru için güçlü iç link)
+const ILGILI = [
+  [/gram altın|altın fiyat|altın(ı|ın)? (yüksel|düş|rekor)|ons altın/i, '/piyasalar/gram-altin/', 'Gram altın fiyatı (canlı)'],
+  [/çeyrek altın/i, '/piyasalar/ceyrek-altin/', 'Çeyrek altın fiyatı'],
+  [/dolar|döviz|\bkur(u|lar)?\b/i, '/piyasalar/dolar/', 'Dolar kuru ve çevirici'],
+  [/euro/i, '/piyasalar/euro/', 'Euro kuru'],
+  [/benzin|motorin|akaryakıt|mazot|lpg/i, '/akaryakit/', '81 il akaryakıt fiyatları'],
+  [/benzin|motorin|akaryakıt|mazot|lpg/i, '/akaryakit-fiyatlari/', 'Mersin akaryakıt fiyatları'],
+  [/deprem|sarsıntı|afad/i, '/son-depremler/', 'Son depremler (Türkiye)'],
+  [/okul.{0,30}tatil|kar tatili|eğitime ara/i, '/kar-tatili/', 'Okulların tatil olduğu iller'],
+  [/iftar|sahur|imsak|namaz|ramazan|bayram namazı/i, '/namaz-vakitleri/', 'Mersin namaz vakitleri'],
+  [/hava durumu|yağmur|sağanak|fırtına|kar yağışı|sıcaklık|meteoroloji|kuvvetli rüzgâr|kuvvetli rüzgar/i, '/hava-durumu/', 'Mersin hava durumu'],
+  [/su kesintisi|meski|elektrik kesintisi|toroslar edaş/i, '/kesintiler/', 'Güncel kesintiler'],
+  [/nöbetçi eczane/i, '/nobetci-eczane/', 'Nöbetçi eczaneler'],
+  [/galatasaray/i, '/spor/takim/galatasaray/', 'Galatasaray puan durumu ve fikstür'],
+  [/fenerbahçe/i, '/spor/takim/fenerbahce/', 'Fenerbahçe puan durumu ve fikstür'],
+  [/beşiktaş/i, '/spor/takim/besiktas/', 'Beşiktaş puan durumu ve fikstür'],
+  [/trabzonspor/i, '/spor/takim/trabzonspor/', 'Trabzonspor puan durumu ve fikstür'],
+  [/süper lig/i, '/spor/super-lig/', 'Süper Lig puan durumu'],
+];
+function ilgiliSayfalar(hikaye) {
+  const m = `${hikaye.baslik} ${hikaye.ozet || ''} ${hikaye.metin || ''}`;
+  const l = [];
+  for (const [re, yol, ad] of ILGILI) if (re.test(m) && !l.some((x) => x[0] === yol)) l.push([yol, ad]);
+  return l.length ? `<nav class="ilgili-sayfa" aria-label="İlgili sayfalar"><b>İlgili sayfalar</b>${l.slice(0, 4).map(([y, a]) => `<a href="${y}">${h(a)} →</a>`).join('')}</nav>` : '';
+}
+
 export function anaSayfa({ hikayeler, servis, simdi }) {
   const mersin = hikayeler.filter((x) => !x.genel);
   const genel = hikayeler.filter((x) => x.genel).slice(0, 4);
@@ -318,6 +346,7 @@ ${macGunuKarti(servis, hikayeler, simdi)}
 ${derbiKarti(servis, simdi)}
 ${gundemimKarti()}
 ${ozetKarti(servis?.ozet)}
+<nav class="turkiye-serit" aria-label="Türkiye geneli"><b>Türkiye geneli</b><a href="/son-depremler/">🌍 Son depremler</a><a href="/kar-tatili/">🏫 Okullar tatil mi?</a><a href="/piyasalar/gram-altin/">🪙 Gram altın</a><a href="/piyasalar/dolar/">💵 Dolar</a><a href="/akaryakit/">⛽ 81 il akaryakıt</a><a href="/hava-durumu/iller/">🌤️ 81 il hava</a><a href="/namaz-vakti/">🕌 81 il namaz</a><a href="/spor/super-lig/">⚽ Süper Lig</a></nav>
 ${gundem.length >= 2 ? `<section class="kutu gundem-kutu"><div class="kutu-bas"><h2>Çok konuşulanlar</h2><span class="kutu-alt">En çok sitenin yazdığı haberler</span></div>${gundemListesi(gundem)}</section>` : ''}
 ${kacirma.length === 5 ? `<section class="kacirma-blok"><div class="bolum-bas"><h2><span class="kat-cizgi" style="--kat:var(--turuncu)"></span>Kaçırmayın</h2></div><div class="kare-izgara">${kacirma.map((x, i) => kareKart(x, i === 0)).join('')}</div></section>` : ''}
 <div class="bolum-bas" style="margin-top:14px"><h2>Mersin'den son haberler</h2><a class="bolum-link" href="/kategori/tum-haberler/">Tüm haberler →</a></div>
@@ -459,6 +488,7 @@ ${!hikaye.metin && !hikaye.ozet ? `<div class="kisa-haber">
 ${hikaye.metin ? `<p class="haber-seffaf">${hikaye.otomatik ? 'Bu haber resmî veriden (aşağıdaki kaynak) Mersin Anlık Veri Masası tarafından otomatik olarak hazırlanmıştır.' : 'Bu haber, kaynaklardaki bilgilerden yararlanılarak Mersin Anlık Haber Merkezi tarafından kendi cümlelerimizle yazılmıştır; yazımda yapay zekâ desteği kullanılmıştır.'} <a href="/yapay-zeka-ilkeleri/">Nasıl çalışıyoruz?</a> · Hata mı gördünüz? <a href="/duzeltme-politikasi/">Düzeltme talebi</a></p>` : ''}
 <p class="haber-kaynak-kisa">Kaynak: ${[kurumKayit, ...digerleri.slice(0, 2)].map((k) => `<a href="${h(k.link)}" rel="noopener nofollow" target="_blank">${h(k.ad)}</a>`).join(', ')}</p>
 ${hikaye.konular?.length ? `<p class="haber-konular">Konu: ${hikaye.konular.map((k) => `<a href="/konu/${k.slug}/">${h(k.ad)}</a>`).join('')}</p>` : ''}
+${ilgiliSayfalar(hikaye)}
 ${paylasCubugu(SITE.url + yol, hikaye.baslik)}
 </article>
 ${reklamAlani('yazi-sonu')}
