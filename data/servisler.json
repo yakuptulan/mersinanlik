@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-19T11:01:45.220Z",
+ "guncelleme": "2026-11-19T11:08:43.841Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 21,
@@ -363,7 +363,7 @@
   },
   "tarsus": {
    "sicaklik": 21,
-   "durum": "Parçalı bulutlu",
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-19T11:01:49.680Z",
+  "guncelleme": "2026-11-19T11:08:47.916Z",
   "liste": [
    {
     "ad": "Arıç Eczanesi",
@@ -752,7 +752,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-19T11:01:50.820Z",
+  "guncelleme": "2026-11-19T11:08:48.934Z",
   "liste": [
    {
     "tur": "su",
@@ -909,22 +909,22 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-19T11:01:57.104Z",
+  "guncelleme": "2026-11-19T11:08:52.877Z",
   "kalemler": {
    "gram": {
-    "alis": 6061.83,
-    "satis": 6062.61,
-    "degisim": 0.37
+    "alis": 6051.95,
+    "satis": 6052.71,
+    "degisim": 0.21
    },
    "ceyrek": {
-    "alis": 10008,
-    "satis": 10078,
-    "degisim": 0.36
+    "alis": 9992,
+    "satis": 10062,
+    "degisim": 0.2
    },
    "gumus": {
-    "alis": 73.5,
-    "satis": 73.58,
-    "degisim": 0.62
+    "alis": 73.24,
+    "satis": 73.32,
+    "degisim": 0.27
    },
    "usd": {
     "alis": 50.4615,
@@ -932,105 +932,105 @@
     "degisim": 0.07
    },
    "eur": {
-    "alis": 55.6866,
-    "satis": 55.7005,
+    "alis": 55.6826,
+    "satis": 55.6975,
     "degisim": 0.52
    },
    "bist": {
     "alis": null,
-    "satis": 11420.12,
-    "degisim": -0.5
+    "satis": 11415.08,
+    "degisim": -0.54
    },
    "btc": {
-    "satis": 3217713,
-    "usd": 63758,
-    "degisim": -0.75
+    "satis": 3213558,
+    "usd": 63676,
+    "degisim": -0.68
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 6061.83,
-    "satis": 6062.61,
-    "degisim": 0.37
+    "alis": 6051.95,
+    "satis": 6052.71,
+    "degisim": 0.21
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 10008,
-    "satis": 10078,
-    "degisim": 0.36
+    "alis": 9992,
+    "satis": 10062,
+    "degisim": 0.2
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 20016,
-    "satis": 20155,
-    "degisim": 0.38
+    "alis": 19984,
+    "satis": 20123,
+    "degisim": 0.22
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 39910,
-    "satis": 40187,
-    "degisim": 0.44
+    "alis": 39846,
+    "satis": 40123,
+    "degisim": 0.28
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40997,
-    "satis": 41235,
-    "degisim": 0.38
+    "alis": 40931,
+    "satis": 41169,
+    "degisim": 0.22
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40997,
-    "satis": 41235,
-    "degisim": 0.38
+    "alis": 40931,
+    "satis": 41169,
+    "degisim": 0.22
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40997,
-    "satis": 41235,
-    "degisim": 0.38
+    "alis": 40931,
+    "satis": 41169,
+    "degisim": 0.22
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5585.25,
-    "satis": 5770.85,
-    "degisim": 0.29
+    "alis": 5576.48,
+    "satis": 5761.78,
+    "degisim": 0.13
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4235,
-    "satis": 4940,
-    "degisim": 0.3
+    "alis": 4231,
+    "satis": 4935,
+    "degisim": 0.2
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3348.31,
-    "satis": 4504.31,
-    "degisim": 0.26
+    "alis": 3342.91,
+    "satis": 4498.04,
+    "degisim": 0.12
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 6031.52,
-    "satis": 6032.29,
-    "degisim": 0.37
+    "alis": 6021.69,
+    "satis": 6022.45,
+    "degisim": 0.21
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 73.5,
-    "satis": 73.58,
-    "degisim": 0.62
+    "alis": 73.24,
+    "satis": 73.32,
+    "degisim": 0.27
    }
   ],
   "dovizler": [
@@ -1044,111 +1044,125 @@
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.6866,
-    "satis": 55.7005,
+    "alis": 55.6826,
+    "satis": 55.6975,
     "degisim": 0.52
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.6243,
-    "satis": 66.6383,
-    "degisim": 0.38
+    "alis": 66.6288,
+    "satis": 66.6436,
+    "degisim": 0.39
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 59.917,
-    "satis": 59.9505,
-    "degisim": 0.21
+    "alis": 59.9092,
+    "satis": 59.9441,
+    "degisim": 0.2
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.4506,
-    "satis": 13.457,
+    "alis": 13.4522,
+    "satis": 13.4555,
     "degisim": 0.08
    },
    {
     "k": "RUB",
     "ad": "Rus rublesi",
-    "alis": 0.6106,
-    "satis": 0.6205,
-    "degisim": 0.56
+    "alis": 0.6139,
+    "satis": 0.6189,
+    "degisim": 0.69
    }
   ],
-  "kaynakSaati": "2026-11-19 14:01:01"
+  "kaynakSaati": "2026-11-19 14:08:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-19T11:01:59.489Z",
+  "guncelleme": "2026-11-19T11:08:55.395Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
     "motorin": 97.2,
+    "ad": "Akdeniz",
     "lpg": 51.41
    },
    "anamur": {
     "benzin": 73.1,
     "motorin": 97.23,
+    "ad": "Anamur",
     "lpg": 51.41
    },
    "aydincik": {
     "benzin": 73.09,
     "motorin": 97.22,
+    "ad": "Aydıncık",
     "lpg": 51.41
    },
    "bozyazi": {
     "benzin": 73.1,
     "motorin": 97.21,
+    "ad": "Bozyazı",
     "lpg": 51.41
    },
    "camliyayla": {
     "benzin": 73.09,
     "motorin": 97.23,
+    "ad": "Çamlıyayla",
     "lpg": 51.41
    },
    "erdemli": {
     "benzin": 73.07,
     "motorin": 97.2,
+    "ad": "Erdemli",
     "lpg": 51.41
    },
    "gulnar": {
     "benzin": 73.09,
     "motorin": 97.21,
+    "ad": "Gülnar",
     "lpg": 51.41
    },
    "merkez": {
     "benzin": 73.07,
-    "motorin": 97.2
+    "motorin": 97.2,
+    "ad": "Merkez"
    },
    "mezitli": {
     "benzin": 73.07,
     "motorin": 97.2,
+    "ad": "Mezitli",
     "lpg": 51.41
    },
    "mut": {
     "benzin": 73.08,
     "motorin": 97.22,
+    "ad": "Mut",
     "lpg": 51.41
    },
    "silifke": {
     "benzin": 73.08,
     "motorin": 97.21,
+    "ad": "Silifke",
     "lpg": 51.41
    },
    "tarsus": {
     "benzin": 73.07,
     "motorin": 97.2,
+    "ad": "Tarsus",
     "lpg": 51.41
    },
    "toroslar": {
     "benzin": 73.07,
     "motorin": 97.2,
+    "ad": "Toroslar",
     "lpg": 51.41
    },
    "yenisehir": {
     "benzin": 73.07,
     "motorin": 97.2,
+    "ad": "Yenişehir",
     "lpg": 51.41
    }
   },
@@ -8146,7 +8160,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-19T11:01:59.872Z",
+  "guncelleme": "2026-11-19T11:08:55.696Z",
   "liste": [
    {
     "yol": "/",
@@ -8239,7 +8253,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-19T11:02:01.878Z",
+  "guncelleme": "2026-11-19T11:08:57.657Z",
   "deniz": {
    "sicaklik": 22,
    "dalga": 0.66
@@ -8252,7 +8266,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-19T11:02:03.806Z",
+  "guncelleme": "2026-11-19T11:08:59.469Z",
   "giden": [
    {
     "no": [
@@ -8774,18 +8788,6 @@
   "gelen": [
    {
     "no": [
-     "PC1855"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Ercan",
-    "planlanan": "2026-11-19T11:05:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "dis"
-   },
-   {
-    "no": [
      "PC2086"
     ],
     "havayolu": "Pegasus",
@@ -9299,11 +9301,23 @@
     "kapi": "",
     "durum": "",
     "hat": "dis"
+   },
+   {
+    "no": [
+     "PC1855"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-20T11:05:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "dis"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-19T11:02:03.805Z",
+  "guncelleme": "2026-11-19T11:08:59.469Z",
   "liste": [
    {
     "id": 6386,
