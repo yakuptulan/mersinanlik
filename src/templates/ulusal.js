@@ -294,10 +294,11 @@ function depremTablo(liste, simdi, ilLink = true) {
     .join('')}</tbody></table></div>`;
 }
 function depremOzet(liste, simdi, yerAdi) {
+  const gun = Math.max(1, Math.ceil((simdi - new Date(liste.at(-1)?.t || simdi)) / 864e5));
   const g24 = liste.filter((d) => simdi - new Date(d.t) < 864e5);
   const enB = [...liste].sort((a, b) => b.b - a.b)[0];
   const enB24 = [...g24].sort((a, b) => b.b - a.b)[0];
-  return `<section class="ekonomi-bugun"><div class="eb-kareler"><div class="eb-kare"><small>Son 24 saat</small><b>${g24.length} deprem</b><em>${yerAdi}</em></div><div class="eb-kare"><small>24 saatin en büyüğü</small><b>${enB24 ? enB24.b.toFixed(1).replace('.', ',') : '–'}</b><em>${enB24 ? h(enB24.ilce || enB24.il || enB24.yer) : 'kayıt yok'}</em></div><div class="eb-kare"><small>30 günün en büyüğü</small><b>${enB ? enB.b.toFixed(1).replace('.', ',') : '–'}</b><em>${enB ? h([enB.ilce, enB.il].filter(Boolean).join(', ') || enB.yer) : ''}</em></div><div class="eb-kare"><small>Son deprem</small><b>${liste[0] ? h(once(liste[0].t, simdi)) : '–'}</b><em>${liste[0] ? h(liste[0].il || liste[0].yer) : ''}</em></div></div></section>`;
+  return `<section class="ekonomi-bugun"><div class="eb-kareler"><div class="eb-kare"><small>Son 24 saat</small><b>${g24.length} deprem</b><em>${yerAdi}</em></div><div class="eb-kare"><small>24 saatin en büyüğü</small><b>${enB24 ? enB24.b.toFixed(1).replace('.', ',') : '–'}</b><em>${enB24 ? h(enB24.ilce || enB24.il || enB24.yer) : 'kayıt yok'}</em></div><div class="eb-kare"><small>Son ${gun} günün en büyüğü</small><b>${enB ? enB.b.toFixed(1).replace('.', ',') : '–'}</b><em>${enB ? h([enB.ilce, enB.il].filter(Boolean).join(', ') || enB.yer) : ''}</em></div><div class="eb-kare"><small>Son deprem</small><b>${liste[0] ? h(once(liste[0].t, simdi)) : '–'}</b><em>${liste[0] ? h(liste[0].il || liste[0].yer) : ''}</em></div></div></section>`;
 }
 
 export function sonDepremlerSayfasi({ kayit, simdi }) {

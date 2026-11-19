@@ -66,10 +66,17 @@ for (const il of havaSira.slice(0, HAVA_ADET)) {
 // ---------- Türkiye geneli depremler: AFAD, son 30 gün, M≥2 ----------
 try {
   const f = (d) => d.toISOString().slice(0, 19);
-  const r = await fetch(`https://servisnet.afad.gov.tr/apigateway/deprem/apiv2/event/filter?start=${f(new Date(Date.now() - 30 * 864e5))}&end=${f(new Date())}&minlat=35.0&maxlat=43.0&minlon=25.0&maxlon=45.5&minmag=2&orderby=timedesc&limit=3000&format=json`, { headers: { 'User-Agent': UA, Accept: 'application/json' }, signal: AbortSignal.timeout(30000) });
-  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  // AFAD tek istekte uzun aralık döndürmüyor: 10'ar günlük üç parça
+  const ham = [];
+  for (const [b, e] of [[10, 0], [20, 10], [30, 20]]) {
+    const r = await fetch(`https://servisnet.afad.gov.tr/apigateway/deprem/apiv2/event/filter?start=${f(new Date(Date.now() - b * 864e5))}&end=${f(new Date(Date.now() - e * 864e5))}&minlat=35.0&maxlat=43.0&minlon=25.0&maxlon=45.5&minmag=2&orderby=timedesc&limit=3000&format=json`, { headers: { 'User-Agent': UA, Accept: 'application/json' }, signal: AbortSignal.timeout(30000) });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    ham.push(...(await r.json()));
+    await bekle(800);
+  }
   const bas = (x) => String(x || '').toLocaleLowerCase('tr-TR').replace(/(^|[\s-])(\p{L})/gu, (m, a, c) => a + c.toLocaleUpperCase('tr-TR'));
-  const liste = (await r.json()).map((e) => ({ b: Math.round(Number(e.magnitude) * 10) / 10, yer: e.location, il: bas(e.province), ilce: bas(e.district), d: Math.round(Number(e.depth) * 10) / 10, lat: Number(e.latitude), lon: Number(e.longitude), t: new Date(`${e.date}Z`).toISOString() }));
+  const liste = [...new Map(ham.map((e) => [e.eventID || e.date + e.latitude, e])).values()].map((e) => ({ b: Math.round(Number(e.magnitude) * 10) / 10, yer: e.location, il: bas(e.province), ilce: bas(e.district), d: Math.round(Number(e.depth) * 10) / 10, lat: Number(e.latitude), lon: Number(e.longitude), t: new Date(`${e.date}Z`).toISOString() }));
+  liste.sort((a, b) => b.t.localeCompare(a.t));
   if (liste.length) veri.deprem = { guncelleme: new Date().toISOString(), liste };
 } catch (e) {
   console.warn('! Deprem (Türkiye):', e.message);
