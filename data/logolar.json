@@ -85,13 +85,18 @@
   "Galata Spor": "153067.webp",
   "Beykoz Anadolu Spor": "138976.webp",
   "Gölcükspor": "156259.webp",
-  "Tokat Belediye Spor": "149626.webp"
+  "Tokat Belediye Spor": "149626.webp",
+  "Etimesgut Spor": "138965.webp",
+  "Eskişehirspor": "133793.webp",
+  "Gemlik Sümerbey Futbol Spor": "149662.webp",
+  "Balıkesirspor": "134590.webp"
  },
  "denenen": {
   "Artı Değer Van Spor": 2,
   "Muş Spor": 2,
   "Isbaş Isparta 32 Spor": 2,
-  "Kartal Bulvar Kartalimen Spor": 1
+  "Kartal Bulvar Kartalimen Spor": 2,
+  "Büyükçekmece Gücü FK Spor": 1
  },
  "listeler": {
   "Turkish Super Lig": [
@@ -340,6 +345,68 @@
     "strTeam": "Karabük İdman Yurdu",
     "strTeamAlternate": "",
     "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/olwhic1731082721.png"
+   }
+  ],
+  "Turkish 3 Lig Group 2": [
+   {
+    "idTeam": "156260",
+    "strTeam": "1922 Akşehirspor",
+    "strTeamAlternate": "1922 Akşehir Spor Kulübü",
+    "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/bmvi6f1792685801.png"
+   },
+   {
+    "idTeam": "149630",
+    "strTeam": "Alanya 1221",
+    "strTeamAlternate": "Alanya 1221 FSK",
+    "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/hkx8na1731083000.png"
+   },
+   {
+    "idTeam": "134254",
+    "strTeam": "Altay",
+    "strTeamAlternate": "Altay Spor Kulübü, Altay SK, Büyük Altay, Great Altay",
+    "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/jtg8d61486321038.png"
+   },
+   {
+    "idTeam": "149621",
+    "strTeam": "Ayvalıkgücü Belediyespor",
+    "strTeamAlternate": "",
+    "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/lvg9sd1792601414.png"
+   },
+   {
+    "idTeam": "134590",
+    "strTeam": "Balıkesirspor",
+    "strTeamAlternate": "Balikesirspor",
+    "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/c5uwxy1679509910.png"
+   },
+   {
+    "idTeam": "156261",
+    "strTeam": "Bigaspor",
+    "strTeamAlternate": "Biga Spor Kulübü",
+    "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/jltu591784158139.png"
+   },
+   {
+    "idTeam": "143377",
+    "strTeam": "Bucaspor 1928",
+    "strTeamAlternate": "",
+    "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/1ed5ub1764455542.png"
+   },
+   {
+    "idTeam": "149633",
+    "strTeam": "Bursa Yıldırımspor",
+    "strTeamAlternate": "1923 Mustafakemalpaşaspor, 1923 M.K.Paşaspor",
+    "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/1shrie1764369815.png"
+   },
+   {
+    "idTeam": "153070",
+    "strTeam": "Denizli İdman Yurdu",
+    "strTeamAlternate": "Denizli İdman Yurdu Spor Kulübü, Denizli İdman Yurdu Güreller",
+    "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/50gotj1789923511.png"
+   },
+   {
+    "idTeam": "149634",
+    "strTeam": "Eskişehir Anadolu",
+    "strTeamAlternate": "Eskişehir Anadolu Spor Faaliyetleri Anonim Şirketi, Anadolu Üniversitesi",
+    "strBadge": "https://r2.thesportsdb.com/images/media/team/badge/ft5imk1775429487.png"
    }
   ]
  },
