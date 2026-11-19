@@ -12,11 +12,15 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-19T10:34:25.453Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-19",
-  "adet": 24
+  "adet": 26
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -259,7 +263,7 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-19T10:31:48.806Z",
+  "guncelleme": "2026-11-19T10:35:19.823Z",
   "liste": [
    {
     "baslik": "alihan kuriş",
@@ -290,12 +294,12 @@
     "trafik": 200
    },
    {
-    "baslik": "fiyat",
-    "trafik": 2000
-   },
-   {
     "baslik": "barış özbay",
     "trafik": 100
+   },
+   {
+    "baslik": "saglık bakanlıgı personel alımı",
+    "trafik": 500
    },
    {
     "baslik": "masterchef eleme potaya kim gitti",
