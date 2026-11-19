@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-19T12:58:19.506Z"
   }
  },
  "gorsel": {
@@ -260,7 +264,7 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-19T12:39:37.924Z",
+  "guncelleme": "2026-11-19T12:58:57.716Z",
   "liste": [
    {
     "baslik": "sefer karaahmetoğlu",
@@ -271,20 +275,20 @@
     "trafik": 100
    },
    {
-    "baslik": "danıştay",
-    "trafik": 200
+    "baslik": "oyuncu",
+    "trafik": 500
    },
    {
     "baslik": "paul onuachu",
-    "trafik": 200
+    "trafik": 500
+   },
+   {
+    "baslik": "danıştay",
+    "trafik": 500
    },
    {
     "baslik": "mattéo guendouzi",
-    "trafik": 200
-   },
-   {
-    "baslik": "oyuncu",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "toprak razgatlıoğlu",
@@ -292,15 +296,15 @@
    },
    {
     "baslik": "saniye caran",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "ismail arı",
     "trafik": 100
    },
    {
-    "baslik": "yunus akgün",
-    "trafik": 500
+    "baslik": "gençlik ve spor bakanlığı",
+    "trafik": 100
    }
   ]
  },
