@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "mersin-buyuksehir": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-19T13:04:48.646Z"
   }
  },
  "gorsel": {
@@ -260,7 +264,7 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-19T13:01:57.610Z",
+  "guncelleme": "2026-11-19T13:05:21.295Z",
   "liste": [
    {
     "baslik": "sefer karaahmetoğlu",
@@ -272,7 +276,7 @@
    },
    {
     "baslik": "oyuncu",
-    "trafik": 500
+    "trafik": 2000
    },
    {
     "baslik": "paul onuachu",
@@ -287,8 +291,12 @@
     "trafik": 500
    },
    {
+    "baslik": "altın sert düşüş",
+    "trafik": 2000
+   },
+   {
     "baslik": "toprak razgatlıoğlu",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "saniye caran",
@@ -296,10 +304,6 @@
    },
    {
     "baslik": "ismail arı",
-    "trafik": 100
-   },
-   {
-    "baslik": "gençlik ve spor bakanlığı",
     "trafik": 100
    }
   ]
