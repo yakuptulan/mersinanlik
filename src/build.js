@@ -12,7 +12,7 @@ import * as IS from './templates/ilceServis.js';
 import { ulasimSayfasi } from './templates/ulasim.js';
 import { gundemimSayfasi, akisVerisi } from './templates/gundemim.js';
 import { logolariAyarla } from './templates/servisParcalari.js';
-import { akaryakitIlSayfasi, akaryakitTurkiyeSayfasi, namazIlSayfasi, namazTurkiyeSayfasi } from './templates/ulusal.js';
+import { akaryakitIlSayfasi, akaryakitTurkiyeSayfasi, namazIlSayfasi, namazTurkiyeSayfasi, havaIlSayfasi, havaTurkiyeSayfasi, PIYASA_KALEMLERI, piyasaKalemSayfasi, piyasaKalemYolu } from './templates/ulusal.js';
 import ILLER81 from './iller.json' with { type: 'json' };
 import { takimSayfasi, takimYolu } from './templates/spor.js';
 import { sayfa as sayfaYap } from './templates/layout.js';
@@ -165,6 +165,19 @@ export function insaEt({ simdi = Date.now() } = {}) {
     const ts = takimSayfasi({ takim: t.takim, lig: slLig, hikayeler, servis, simdi });
     ekle(takimYolu(t.takim), sayfaYap({ ...ts, yol: takimYolu(t.takim), tema: 'spor', aktif: '/spor/' }));
   }
+  // 81 il hava durumu
+  for (const il of ILLER81) {
+    const hv = ulusal.hava?.[il.slug];
+    if (il.slug !== 'mersin' && hv?.gunler?.length && Date.now() - new Date(hv.guncelleme) < 2 * 864e5) ekle(`/hava-durumu/${il.slug}/`, havaIlSayfasi({ il, kayit: hv }));
+  }
+  ekle('/hava-durumu/iller/', havaTurkiyeSayfasi({ veri: ulusal.hava || {}, mersin: servis.hava?.yenisehir || servis.hava?.akdeniz }));
+  // Altın ve döviz sayfaları
+  let piyasaGecmis = { gunler: {} };
+  try {
+    piyasaGecmis = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'piyasa-gecmis.json'), 'utf8'));
+  } catch {}
+  const piyasaVar = new Set([...(servis.piyasa?.altinlar || []), ...(servis.piyasa?.dovizler || [])].filter((x) => x.satis).map((x) => x.k));
+  for (const kalem of PIYASA_KALEMLERI) if (piyasaVar.has(kalem.k)) ekle(piyasaKalemYolu(kalem.slug), piyasaKalemSayfasi({ kalem, servis, gecmis: piyasaGecmis }));
   ekle('/akaryakit/', akaryakitTurkiyeSayfasi({ veri: ulusal.akaryakit || {}, mersin: servis.akaryakit }));
   ekle('/namaz-vakti/', namazTurkiyeSayfasi({ veri: ulusal.namaz, simdi }));
   // Mahalle sayfaları

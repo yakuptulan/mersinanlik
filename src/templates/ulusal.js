@@ -3,6 +3,7 @@ import { htmlKacis as h } from '../lib/text.js';
 import { sayfa } from './layout.js';
 import { SITE } from '../config.js';
 import ILLER from '../iller.json' with { type: 'json' };
+import { havaIkonu } from './havaIkon.js';
 
 const TZ = 'Europe/Istanbul';
 const tl = (n) => (n == null ? '–' : `${Number(n).toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} TL`);
@@ -131,6 +132,142 @@ export function namazTurkiyeSayfasi({ veri, simdi }) {
 <div class="tablo-kap"><table class="tablo"><thead><tr><th>İl</th><th>İmsak</th><th>Öğle</th><th>İkindi</th><th>Akşam</th><th>Yatsı</th></tr></thead><tbody>${satirlar
       .map(({ il, v }) => `<tr${il.slug === 'mersin' ? ' class="mersin"' : ''}><th scope="row"><a href="${namazYolu(il.slug)}">${h(il.ad)}</a></th>${v ? ['imsak', 'ogle', 'ikindi', 'aksam', 'yatsi'].map((k) => `<td>${h(v[k])}</td>`).join('') : '<td colspan="5" style="color:var(--ikincil)">güncelleniyor</td>'}</tr>`)
       .join('')}</tbody></table></div>
+</div></main>`,
+  });
+}
+
+// ---------- 81 il hava durumu: /hava-durumu/<il>/ ----------
+export const ilHavaYolu = (slug) => (slug === 'mersin' ? '/hava-durumu/' : `/hava-durumu/${slug}/`);
+const gunEtiket = (t, i) => (i === 0 ? 'Bugün' : i === 1 ? 'Yarın' : new Date(`${t}T12:00:00+03:00`).toLocaleDateString('tr-TR', { weekday: 'long', timeZone: TZ }));
+const kucukHarf = (s) => String(s || '').toLocaleLowerCase('tr-TR');
+
+export function havaIlSayfasi({ il, kayit }) {
+  const hv = kayit;
+  const yarin = hv.gunler[1];
+  const yagisli = hv.gunler.filter((g) => g.yagis >= 1);
+  const bul = BULUNMA(il.ad);
+  const sss = [
+    { soru: `${il.ad} bugün hava nasıl?`, cevap: `${bul} şu an ${hv.sicaklik}° ve ${kucukHarf(hv.durum)}. Bugün en yüksek ${hv.gunler[0].max}°, en düşük ${hv.gunler[0].min}° bekleniyor.` },
+    ...(yarin ? [{ soru: `${il.ad} yarın hava nasıl olacak?`, cevap: `${bul} yarın ${kucukHarf(yarin.durum)} bir hava bekleniyor; sıcaklık ${yarin.min}° ile ${yarin.max}° arasında.` }] : []),
+    { soru: `${bul} bu hafta yağmur yağacak mı?`, cevap: yagisli.length ? `Tahmine göre ${yagisli.map((g) => new Date(`${g.tarih}T12:00:00+03:00`).toLocaleDateString('tr-TR', { weekday: 'long', timeZone: TZ })).join(', ')} günlerinde yağış bekleniyor.` : `Önümüzdeki ${hv.gunler.length} gün için kayda değer yağış beklenmiyor.` },
+  ];
+  return sayfa({
+    baslik: `${il.ad} hava durumu: bugün, yarın ve 7 günlük tahmin`,
+    aciklama: `${bul} hava şu an ${hv.sicaklik}°, ${kucukHarf(hv.durum)}.${yarin ? ` Yarın ${yarin.min}°/${yarin.max}°.` : ''} ${il.ad} için saatlik ve 7 günlük hava tahmini.`,
+    yol: ilHavaYolu(il.slug),
+    aktif: '/hava-durumu/',
+    jsonLd: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: sss.map((s) => ({ '@type': 'Question', name: s.soru, acceptedAnswer: { '@type': 'Answer', text: s.cevap } })) },
+    ust: `<div class="su-an-bas"><div><div class="cipler"><a class="cip" href="/hava-durumu/iller/">81 il hava durumu</a></div><h1>${h(il.ad)} hava durumu</h1><p style="margin-top:8px">Şu an ${hv.sicaklik}° · ${h(hv.durum)} · nem %${hv.nem} · rüzgâr ${hv.ruzgar} km/sa</p></div></div><div class="widgetlar widgetlar-gun gun5">${hv.gunler.slice(0, 5).map((g, i) => `<div class="widget widget-gun"><span class="widget-etiket">${gunEtiket(g.tarih, i)}</span>${havaIkonu(g.durum, 56)}<span class="hava-derece kucuk">${g.max}°</span><span class="hava-durum">${h(g.durum)}</span><span class="hava-uc">↓ en düşük ${g.min}°</span></div>`).join('')}</div>`,
+    icerik: `<main class="kap govde"><div class="ana">
+<p class="giris-metni">${h(bul)} hava şu an <strong>${hv.sicaklik}°</strong> ve ${h(kucukHarf(hv.durum))}.${yarin ? ` Yarın en yüksek ${yarin.max}°, en düşük ${yarin.min}° bekleniyor (${h(kucukHarf(yarin.durum))}).` : ''}</p>
+${hv.saatlik?.length ? `<div class="bolum-bas"><h2>Saatlik tahmin</h2><span>önümüzdeki 24 saat</span></div><div class="saatlik">${hv.saatlik.map((s) => `<div><small>${String(s.saat).padStart(2, '0')}:00</small>${havaIkonu(s.durum, 34)}<b>${s.sicaklik}°</b></div>`).join('')}</div>` : ''}
+<div class="bolum-bas"><h2>${hv.gunler.length} günlük tahmin</h2></div>
+<div class="tablo-kap"><table class="tablo"><thead><tr><th>Gün</th><th>Durum</th><th>En yüksek</th><th>En düşük</th><th>Yağış</th><th>Rüzgâr</th></tr></thead><tbody>${hv.gunler.map((g, i) => `<tr><th scope="row">${gunEtiket(g.tarih, i)}</th><td>${h(g.durum)}</td><td><strong>${g.max}°</strong></td><td>${g.min}°</td><td>${g.yagis ? `${g.yagis} mm` : '–'}</td><td>${g.ruzgar} km/sa</td></tr>`).join('')}</tbody></table></div>
+<section class="bilgi-sss"><h2>Sık sorulanlar</h2>${sss.map((s) => `<details><summary>${h(s.soru)}</summary><p>${h(s.cevap)}</p></details>`).join('')}</section>
+${ilSecici(ilHavaYolu, il.slug)}
+<p style="color:var(--ikincil);font-size:14px">Veri: MET Norway (yr.no), CC BY 4.0 · ${h(il.ad)} il merkezi için tahmin. Son güncelleme: ${h(saatStr(hv.guncelleme))}. Resmî uyarılar için MGM'yi takip edin.</p>
+</div></main>`,
+  });
+}
+
+export function havaTurkiyeSayfasi({ veri, mersin }) {
+  const satirlar = ILLER.map((il) => ({ il, hv: il.slug === 'mersin' ? mersin : veri[il.slug] })).filter((x) => x.hv);
+  const sirali = [...satirlar].sort((a, b) => (b.hv.gunler?.[0]?.max ?? -99) - (a.hv.gunler?.[0]?.max ?? -99));
+  return sayfa({
+    baslik: '81 il hava durumu: bugün il il sıcaklık ve tahmin',
+    aciklama: "Türkiye'nin 81 ilinde bugünkü hava durumu, en yüksek ve en düşük sıcaklıklar. En sıcak ve en soğuk iller.",
+    yol: '/hava-durumu/iller/',
+    aktif: '/hava-durumu/',
+    ust: `<div class="su-an-bas"><div><h1>81 il hava durumu</h1><p style="margin-top:8px">${satirlar.length} il · bugün</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">
+${sirali.length > 2 ? `<section class="ekonomi-bugun"><div class="eb-kareler"><div class="eb-kare"><small>Bugün en sıcak</small><b>${h(sirali[0].il.ad)}</b><em>${sirali[0].hv.gunler[0].max}°</em></div><div class="eb-kare"><small>Bugün en serin</small><b>${h(sirali.at(-1).il.ad)}</b><em>${sirali.at(-1).hv.gunler[0].max}°</em></div></div></section>` : ''}
+<div class="tablo-kap"><table class="tablo"><thead><tr><th>İl</th><th>Şu an</th><th>Bugün</th><th>En yüksek</th><th>En düşük</th></tr></thead><tbody>${satirlar.map(({ il, hv }) => `<tr${il.slug === 'mersin' ? ' class="mersin"' : ''}><th scope="row"><a href="${ilHavaYolu(il.slug)}">${h(il.ad)}</a></th><td>${hv.sicaklik}°</td><td>${h(hv.gunler?.[0]?.durum || hv.durum)}</td><td><strong>${hv.gunler?.[0]?.max ?? '–'}°</strong></td><td>${hv.gunler?.[0]?.min ?? '–'}°</td></tr>`).join('')}</tbody></table></div>
+<p style="color:var(--ikincil);font-size:14px">Veri: MET Norway (yr.no), CC BY 4.0.</p>
+</div></main>`,
+  });
+}
+
+// ---------- Altın ve döviz sayfaları: /piyasalar/<kalem>/ ----------
+export const PIYASA_KALEMLERI = [
+  { k: 'GRA', slug: 'gram-altin', ad: 'Gram altın', tur: 'altin', birim: 'gram', miktar: [1, 5, 10, 20, 50, 100] },
+  { k: 'CEYREKALTIN', slug: 'ceyrek-altin', ad: 'Çeyrek altın', tur: 'altin', birim: 'adet', miktar: [1, 2, 3, 5, 10, 20] },
+  { k: 'YARIMALTIN', slug: 'yarim-altin', ad: 'Yarım altın', tur: 'altin', birim: 'adet', miktar: [1, 2, 3, 5, 10] },
+  { k: 'TAMALTIN', slug: 'tam-altin', ad: 'Tam altın', tur: 'altin', birim: 'adet', miktar: [1, 2, 3, 5, 10] },
+  { k: 'CUMHURIYETALTINI', slug: 'cumhuriyet-altini', ad: 'Cumhuriyet altını', tur: 'altin', birim: 'adet', miktar: [1, 2, 3, 5, 10] },
+  { k: 'ATAALTIN', slug: 'ata-altin', ad: 'Ata altın', tur: 'altin', birim: 'adet', miktar: [1, 2, 3, 5, 10] },
+  { k: 'YIA', slug: '22-ayar-bilezik', ad: '22 ayar bilezik', tur: 'altin', birim: 'gram', miktar: [1, 5, 10, 20, 50, 100] },
+  { k: '18AYARALTIN', slug: '18-ayar-altin', ad: '18 ayar altın', tur: 'altin', birim: 'gram', miktar: [1, 5, 10, 20, 50] },
+  { k: '14AYARALTIN', slug: '14-ayar-altin', ad: '14 ayar altın', tur: 'altin', birim: 'gram', miktar: [1, 5, 10, 20, 50] },
+  { k: 'HAS', slug: 'has-altin', ad: 'Has altın', tur: 'altin', birim: 'gram', miktar: [1, 5, 10, 50, 100] },
+  { k: 'GUMUS', slug: 'gumus', ad: 'Gümüş', tur: 'altin', birim: 'gram', miktar: [1, 10, 50, 100, 500, 1000] },
+  { k: 'USD', slug: 'dolar', ad: 'Dolar', uzun: 'ABD doları', tur: 'doviz', birim: 'dolar', isaret: '$', miktar: [1, 10, 50, 100, 500, 1000, 5000, 10000] },
+  { k: 'EUR', slug: 'euro', ad: 'Euro', uzun: 'Euro', tur: 'doviz', birim: 'euro', isaret: '€', miktar: [1, 10, 50, 100, 500, 1000, 5000, 10000] },
+  { k: 'GBP', slug: 'sterlin', ad: 'Sterlin', uzun: 'İngiliz sterlini', tur: 'doviz', birim: 'sterlin', isaret: '£', miktar: [1, 10, 50, 100, 500, 1000, 5000] },
+  { k: 'CHF', slug: 'isvicre-frangi', ad: 'İsviçre frangı', uzun: 'İsviçre frangı', tur: 'doviz', birim: 'frank', isaret: 'CHF', miktar: [1, 10, 100, 500, 1000] },
+  { k: 'SAR', slug: 'riyal', ad: 'Riyal', uzun: 'Suudi riyali', tur: 'doviz', birim: 'riyal', isaret: 'SAR', miktar: [1, 10, 100, 500, 1000, 5000] },
+  { k: 'RUB', slug: 'ruble', ad: 'Ruble', uzun: 'Rus rublesi', tur: 'doviz', birim: 'ruble', isaret: '₽', miktar: [1, 100, 1000, 5000, 10000] },
+];
+export const piyasaKalemYolu = (slug) => `/piyasalar/${slug}/`;
+const para = (n, d = 2) => Number(n).toLocaleString('tr-TR', { minimumFractionDigits: d, maximumFractionDigits: d });
+const yonHtml = (d) => (d == null ? '–' : `<span class="${d > 0 ? 'artis' : d < 0 ? 'dusus' : ''}">${d > 0 ? '▲' : d < 0 ? '▼' : '•'} %${para(Math.abs(d))}</span>`);
+
+function cizgi(noktalar) {
+  if (noktalar.length < 2) return '';
+  const W = 900, H = 200, P = 8;
+  const d = noktalar.map((x) => x.v);
+  const min = Math.min(...d), max = Math.max(...d), ara = max - min || 1;
+  const xy = noktalar.map((x, i) => [P + (i * (W - 2 * P)) / (noktalar.length - 1), H - P - ((x.v - min) / ara) * (H - 2 * P)]);
+  const yol = xy.map(([x, y], i) => `${i ? 'L' : 'M'}${x.toFixed(1)},${y.toFixed(1)}`).join('');
+  const renk = d.at(-1) >= d[0] ? '#16a34a' : '#dc2626';
+  return `<figure class="piyasa-grafik"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Fiyat grafiği"><path d="${yol}L${W - P},${H}L${P},${H}Z" fill="${renk}" opacity=".08"/><path d="${yol}" fill="none" stroke="${renk}" stroke-width="2.5" stroke-linejoin="round"/></svg><figcaption><span>${h(new Date(`${noktalar[0].g}T12:00:00+03:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' }))}</span><span>en düşük ${para(min)} ₺ · en yüksek ${para(max)} ₺</span><span>${h(new Date(`${noktalar.at(-1).g}T12:00:00+03:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' }))}</span></figcaption></figure>`;
+}
+
+export function piyasaKalemSayfasi({ kalem, servis, gecmis }) {
+  const p = servis.piyasa;
+  const x = [...(p.altinlar || []), ...(p.dovizler || [])].find((y) => y.k === kalem.k);
+  const doviz = kalem.tur === 'doviz';
+  const baslikAd = doviz ? `${kalem.ad} kuru` : `${kalem.ad} fiyatı`;
+  const noktalar = Object.keys(gecmis?.gunler || {}).sort().slice(-90).map((g) => ({ g, v: gecmis.gunler[g][kalem.k] })).filter((n) => n.v);
+  const son7 = noktalar.slice(-8);
+  const birimTl = (m) => para(m * x.satis, x.satis * m >= 1000 ? 0 : 2);
+  const kucukAd = kalem.ad.toLocaleLowerCase('tr-TR');
+  const etiket = (m) => (doviz ? `${m.toLocaleString('tr-TR')} ${kalem.birim}` : kucukAd.startsWith(kalem.birim) ? `${m.toLocaleString('tr-TR')} ${kucukAd}` : `${m.toLocaleString('tr-TR')} ${kalem.birim} ${kucukAd}`);
+  const sss = doviz
+    ? [
+        { soru: `${kalem.ad} bugün kaç TL?`, cevap: `${kalem.uzun} bugün ${para(x.satis, 4)} TL'den satılıyor, alış fiyatı ${para(x.alis, 4)} TL (serbest piyasa).` },
+        { soru: `100 ${kalem.birim} kaç TL?`, cevap: `Güncel satış kuruyla 100 ${kalem.birim} ${birimTl(100)} TL ediyor.` },
+        { soru: `1000 TL kaç ${kalem.birim}?`, cevap: `Güncel kurla 1.000 TL yaklaşık ${para(1000 / x.satis)} ${kalem.birim} ediyor.` },
+      ]
+    : [
+        { soru: `${kalem.ad} bugün kaç TL?`, cevap: `${kalem.ad} bugün ${para(x.satis)} TL'den satılıyor, alış fiyatı ${para(x.alis)} TL (serbest piyasa; kuyumcuda işçilik ve makas farkı olabilir).` },
+        { soru: `${kalem.ad} alış ve satış farkı ne kadar?`, cevap: `Şu an alış ile satış arasındaki fark ${para(x.satis - x.alis)} TL (%${para(((x.satis - x.alis) / x.satis) * 100)}).` },
+        { soru: `${etiket(kalem.miktar[2])} kaç TL?`, cevap: `Güncel satış fiyatıyla ${etiket(kalem.miktar[2])} ${birimTl(kalem.miktar[2])} TL ediyor.` },
+      ];
+  const digerleri = PIYASA_KALEMLERI.filter((y) => y.tur === kalem.tur && y.k !== kalem.k);
+  return sayfa({
+    baslik: doviz ? `${kalem.ad} kaç TL? Bugün canlı ${kalem.ad.toLocaleLowerCase('tr-TR')} kuru ve çevirici` : `${kalem.ad} ne kadar? Bugün canlı ${kalem.ad.toLocaleLowerCase('tr-TR')} fiyatı`,
+    aciklama: `${baslikAd} bugün ${para(x.satis, doviz ? 4 : 2)} TL (satış). Alış-satış, günlük değişim, ${doviz ? 'kur çevirici' : 'altın hesaplama'} ve son günlerin fiyat grafiği.`,
+    yol: piyasaKalemYolu(kalem.slug),
+    aktif: '/piyasalar/',
+    jsonLd: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: sss.map((s) => ({ '@type': 'Question', name: s.soru, acceptedAnswer: { '@type': 'Answer', text: s.cevap } })) },
+    ust: `<div class="su-an-bas"><div><div class="cipler"><a class="cip" href="/piyasalar/">Piyasalar</a></div><h1>${h(baslikAd)}</h1><p style="margin-top:8px">Canlı · sayfa açıkken dakikada bir yenilenir · son güncelleme <span data-p-saat>${h(saatStr(p.guncelleme))}</span></p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">
+<section class="piyasa-kalem">
+<div class="pk-ana"><small>Satış</small><span data-tg="${kalem.k}" data-alan="satis"><strong>${para(x.satis, doviz ? 4 : 2)}</strong></span><em>₺${doviz ? ` / 1 ${h(kalem.isaret)}` : ` / ${kalem.birim}`}</em></div>
+<div class="pk-yan"><div><small>Alış</small><b data-tg="${kalem.k}" data-alan="alis">${x.alis ? para(x.alis, doviz ? 4 : 2) : '–'}</b></div><div><small>Günlük değişim</small><b data-tg="${kalem.k}" data-alan="degisim">${yonHtml(x.degisim)}</b></div></div>
+</section>
+<section class="hesap" data-hesap data-k="${kalem.k}" data-birim="${h(kalem.birim)}" data-fiyat="${x.satis}">
+<h2>${doviz ? 'Kur çevirici' : 'Hesaplama'}</h2>
+<div class="hesap-satir"><label><input type="number" inputmode="decimal" min="0" step="any" value="${doviz ? 100 : 1}" data-hesap-girdi> <span>${h(etiket(1).replace(/^1 /, ''))}</span></label><span class="hesap-esit">=</span><b data-hesap-sonuc>${birimTl(doviz ? 100 : 1)} TL</b></div>
+${doviz ? `<div class="hesap-satir"><label><input type="number" inputmode="decimal" min="0" step="any" value="1000" data-hesap-ters> <span>TL</span></label><span class="hesap-esit">=</span><b data-hesap-ters-sonuc>${para(1000 / x.satis)} ${h(kalem.birim)}</b></div>` : ''}
+</section>
+<div class="bolum-bas"><h2>${doviz ? `${kalem.ad} kaç TL?` : 'Miktara göre fiyat'}</h2><span>satış fiyatıyla</span></div>
+<div class="tablo-kap"><table class="tablo"><thead><tr><th>Miktar</th><th>Tutar</th></tr></thead><tbody>${kalem.miktar.map((m) => `<tr><th scope="row">${h(etiket(m))}</th><td><strong>${birimTl(m)} TL</strong></td></tr>`).join('')}</tbody></table></div>
+${noktalar.length >= 2 ? `<div class="bolum-bas"><h2>Son ${noktalar.length} gün</h2><span>günlük kapanış (satış)</span></div>${cizgi(noktalar)}<div class="tablo-kap"><table class="tablo"><thead><tr><th>Tarih</th><th>Fiyat</th><th>Değişim</th></tr></thead><tbody>${son7.slice(1).reverse().map((n, i, arr) => { const o = son7[son7.length - 2 - i]; return `<tr><th scope="row">${h(new Date(`${n.g}T12:00:00+03:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'short' }))}</th><td>${para(n.v, doviz ? 4 : 2)} ₺</td><td>${yonHtml(((n.v - o.v) / o.v) * 100)}</td></tr>`; }).join('')}</tbody></table></div>` : ''}
+<section class="bilgi-sss"><h2>Sık sorulanlar</h2>${sss.map((s) => `<details><summary>${h(s.soru)}</summary><p>${h(s.cevap)}</p></details>`).join('')}</section>
+<div class="bolum-bas"><h2>${doviz ? 'Diğer kurlar' : 'Diğer altın fiyatları'}</h2><a class="bolum-link" href="/piyasalar/">Tüm piyasalar →</a></div>
+<div class="mh-liste">${digerleri.map((y) => `<a href="${piyasaKalemYolu(y.slug)}">${h(y.ad)}</a>`).join('')}</div>
+<p style="color:var(--ikincil);font-size:14px">Kaynak: Truncgil Finans (serbest piyasa). Kuyumcu ve bankalarda fiyatlar farklı olabilir. Bu sayfa yatırım tavsiyesi değildir.</p>
 </div></main>`,
   });
 }

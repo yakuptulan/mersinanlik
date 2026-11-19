@@ -1454,3 +1454,30 @@ a.cip.kat:hover { filter: brightness(.95); }
 .takim-baslik .takim-logo, .takim-baslik .takim-rozet { width: 56px; height: 56px; font-size: 18px; }
 .lt-takim a { color: inherit; text-decoration: none; }
 .lt-takim a:hover { text-decoration: underline; }
+.saatlik { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 8px; margin-bottom: 18px; }
+.saatlik > div { background: #fff; border: 1px solid #e3e8f2; border-radius: 14px; padding: 10px 6px; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.saatlik small { color: var(--ikincil); font-weight: 700; font-size: 12px; }
+.saatlik b { font-size: 17px; }
+@media (max-width: 700px) { .saatlik { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.piyasa-kalem { display: grid; grid-template-columns: 1.4fr 1fr; gap: 14px; margin-bottom: 18px; }
+.pk-ana { background: linear-gradient(135deg, #78350f, #b45309 55%, #f59e0b); color: #fff; border-radius: 22px; padding: 22px 24px; display: flex; flex-direction: column; gap: 4px; }
+.pk-ana small { font-weight: 800; letter-spacing: .06em; text-transform: uppercase; font-size: 12px; opacity: .85; }
+.pk-ana strong { font-size: clamp(34px, 6vw, 52px); font-weight: 900; letter-spacing: -.02em; }
+.pk-ana em { font-style: normal; opacity: .85; font-weight: 700; }
+.pk-yan { display: grid; gap: 10px; }
+.pk-yan > div { background: #fff; border: 1px solid #e3e8f2; border-radius: 18px; padding: 14px 18px; display: flex; flex-direction: column; gap: 2px; }
+.pk-yan small { color: var(--ikincil); font-weight: 700; font-size: 13px; }
+.pk-yan b { font-size: 22px; }
+.pk-yan .artis { color: #15803d; } .pk-yan .dusus { color: #b91c1c; }
+@media (max-width: 700px) { .piyasa-kalem { grid-template-columns: 1fr; } }
+.hesap { background: #fff; border: 1px solid #e3e8f2; border-radius: 20px; padding: 18px 20px; margin-bottom: 22px; }
+.hesap h2 { font-size: 18px; margin: 0 0 12px; }
+.hesap-satir { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 6px 0; }
+.hesap-satir label { display: flex; align-items: center; gap: 8px; font-weight: 700; }
+.hesap-satir input { width: 140px; font: inherit; font-size: 20px; font-weight: 800; padding: 10px 12px; border: 2px solid #e3e8f2; border-radius: 12px; }
+.hesap-satir input:focus { outline: none; border-color: #f59e0b; }
+.hesap-esit { color: var(--ikincil); font-weight: 800; font-size: 20px; }
+.hesap-satir b { font-size: 24px; font-weight: 900; }
+.piyasa-grafik { margin: 0 0 14px; background: #fff; border: 1px solid #e3e8f2; border-radius: 18px; padding: 14px; }
+.piyasa-grafik svg { width: 100%; height: auto; display: block; }
+.piyasa-grafik figcaption { display: flex; justify-content: space-between; color: var(--ikincil); font-size: 13px; margin-top: 6px; }

@@ -29,19 +29,8 @@ import { ucuslariGetir } from './lib/ucus.js';
 const DOSYA = path.resolve('data/servisler.json');
 const UA = 'mersinanlik.com iletisim@mersinanlik.com';
 
-const SEMBOL = {
-  clearsky: 'Açık', fair: 'Az bulutlu', partlycloudy: 'Parçalı bulutlu', cloudy: 'Bulutlu',
-  fog: 'Sisli', lightrain: 'Hafif yağmurlu', rain: 'Yağmurlu', heavyrain: 'Kuvvetli yağmur',
-  lightrainshowers: 'Hafif sağanak', rainshowers: 'Sağanak', heavyrainshowers: 'Kuvvetli sağanak',
-  rainandthunder: 'Gök gürültülü yağmur', rainshowersandthunder: 'Gök gürültülü sağanak',
-  heavyrainandthunder: 'Kuvvetli fırtına', lightsleet: 'Hafif karla karışık', sleet: 'Karla karışık',
-  lightsnow: 'Hafif kar', snow: 'Kar', heavysnow: 'Yoğun kar', snowshowers: 'Kar sağanağı',
-};
-
-export function sembolMetni(kod = '') {
-  const temel = String(kod).replace(/_(day|night|polartwilight)$/, '');
-  return SEMBOL[temel] || 'Değişken';
-}
+import { sembolMetni } from './lib/sembol.js';
+export { sembolMetni };
 
 async function getJson(url) {
   const res = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'application/json' } });

@@ -139,6 +139,7 @@
         var alan = td.getAttribute('data-alan');
         var d = td.getAttribute('data-tg') === 'XU100' ? 0 : 2;
         if (alan === 'satis' && v.Selling) td.innerHTML = '<strong>' + sayi(v.Selling, d) + '</strong>';
+        if (alan === 'satis' && v.Selling) document.querySelectorAll('[data-hesap][data-k="' + td.getAttribute('data-tg') + '"]').forEach(function (hs) { hs.setAttribute('data-fiyat', v.Selling); hesapla(hs); });
         if (alan === 'alis' && v.Buying) td.textContent = sayi(v.Buying, d);
         if (alan === 'degisim') td.innerHTML = yonHtml(v.Change);
       });
@@ -149,6 +150,18 @@
       if (j.bitcoin && j.bitcoin.try) kalemYaz('btc', j.bitcoin.try, j.bitcoin.try_24h_change);
     }).catch(function () {});
   }
+  // ---------- Altın/döviz hesaplayıcı ----------
+  function tl(n) { return n.toLocaleString('tr-TR', { minimumFractionDigits: n >= 1000 ? 0 : 2, maximumFractionDigits: n >= 1000 ? 0 : 2 }); }
+  function hesapla(hs) {
+    var f = parseFloat(hs.getAttribute('data-fiyat'));
+    var g = hs.querySelector('[data-hesap-girdi]'), s = hs.querySelector('[data-hesap-sonuc]');
+    if (g && s) s.textContent = tl((parseFloat(String(g.value).replace(',', '.')) || 0) * f) + ' TL';
+    var t = hs.querySelector('[data-hesap-ters]'), ts = hs.querySelector('[data-hesap-ters-sonuc]');
+    if (t && ts) ts.textContent = ((parseFloat(String(t.value).replace(',', '.')) || 0) / f).toLocaleString('tr-TR', { maximumFractionDigits: 2 }) + ' ' + hs.getAttribute('data-birim');
+  }
+  document.querySelectorAll('[data-hesap]').forEach(function (hs) {
+    hs.addEventListener('input', function () { hesapla(hs); });
+  });
   piyasaTazele();
   setInterval(function () { if (!document.hidden) piyasaTazele(); }, 60000);
 

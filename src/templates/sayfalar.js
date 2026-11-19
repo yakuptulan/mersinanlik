@@ -623,7 +623,8 @@ ${k ? `${ligSerit(k)}${k.maclar?.length ? `<h3 class="ara-baslik">Haftanın maç
 }
 
 // ---------- Piyasalar ----------
-const tabloSatir = (x, kod = null) => `<tr${kod ? ` id="${kod}"` : ''}><th scope="row">${h(x.ad)}</th><td data-tg="${x.k}" data-alan="alis">${x.alis ? fmt(x.alis) : '–'}</td><td data-tg="${x.k}" data-alan="satis"><strong>${fmt(x.satis)}</strong></td><td data-tg="${x.k}" data-alan="degisim">${yon(x.degisim)}</td></tr>`;
+const KALEM_YOL = { GRA: 'gram-altin', CEYREKALTIN: 'ceyrek-altin', YARIMALTIN: 'yarim-altin', TAMALTIN: 'tam-altin', CUMHURIYETALTINI: 'cumhuriyet-altini', ATAALTIN: 'ata-altin', YIA: '22-ayar-bilezik', '18AYARALTIN': '18-ayar-altin', '14AYARALTIN': '14-ayar-altin', HAS: 'has-altin', GUMUS: 'gumus', USD: 'dolar', EUR: 'euro', GBP: 'sterlin', CHF: 'isvicre-frangi', SAR: 'riyal', RUB: 'ruble' };
+const tabloSatir = (x, kod = null) => `<tr${kod ? ` id="${kod}"` : ''}><th scope="row">${KALEM_YOL[x.k] ? `<a href="/piyasalar/${KALEM_YOL[x.k]}/">${h(x.ad)}</a>` : h(x.ad)}</th><td data-tg="${x.k}" data-alan="alis">${x.alis ? fmt(x.alis) : '–'}</td><td data-tg="${x.k}" data-alan="satis"><strong>${fmt(x.satis)}</strong></td><td data-tg="${x.k}" data-alan="degisim">${yon(x.degisim)}</td></tr>`;
 
 export function piyasaSayfasi({ servis }) {
   const p = servis?.piyasa;
@@ -735,7 +736,7 @@ export function havaSayfasi({ servis }) {
     yol: '/hava-durumu/',
     ust: `${meteoBandi(servis)}<div class="su-an-bas"><div><h1>Hava durumu</h1></div></div>`,
     icerik: `<main class="kap govde"><div class="ana"><div class="tablo-kap"><table class="tablo"><thead><tr><th>İlçe</th><th>Şu an</th>${gunAdlari.map((g) => `<th>${g}</th>`).join('')}</tr></thead><tbody>${satirlar}</tbody></table></div>
-<p style="color:var(--ikincil);font-size:15px">Veri: <a href="${RESMI.metno}" rel="noopener" target="_blank">MET Norway (yr.no)</a>, CC BY 4.0. Son güncelleme: ${servis?.guncelleme ? saat(servis.guncelleme) : '–'}</p></div></main>`,
+<p style="color:var(--ikincil);font-size:15px">Veri: <a href="${RESMI.metno}" rel="noopener" target="_blank">MET Norway (yr.no)</a>, CC BY 4.0. Son güncelleme: ${servis?.guncelleme ? saat(servis.guncelleme) : '–'}</p><p><a class="bolum-link" href="/hava-durumu/iller/">Türkiye'de 81 il hava durumu →</a></p></div></main>`,
   });
 }
 
