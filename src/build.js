@@ -12,6 +12,7 @@ import * as IS from './templates/ilceServis.js';
 import { ulasimSayfasi } from './templates/ulasim.js';
 import { gundemimSayfasi, akisVerisi } from './templates/gundemim.js';
 import { logolariAyarla } from './templates/servisParcalari.js';
+import { mahalleVerisi, mahalleSayfasi, mahallelerSayfasi, mahalleYolu } from './templates/mahalle.js';
 import { geziListeSayfasi, geziSayfasi, geziYerleri, geziYolu } from './templates/gezi.js';
 import { arsivAySayfasi } from './templates/arsiv.js';
 import { arsivYukle } from './lib/arsiv.js';
@@ -140,6 +141,14 @@ export function insaEt({ simdi = Date.now() } = {}) {
   if (aylar.length) yaz('/arsiv/index.html', `<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/arsiv/${aylar[0]}/"><link rel="canonical" href="${SITE.url}/arsiv/${aylar[0]}/">`);
   servis.arsivSayisi = arsiv.length;
   const ilceHavuzu = [...hikayeler, ...arsivYukle().filter((x) => !hikayeler.some((y) => y.id === x.id))];
+  // Mahalle sayfaları
+  let kesintiGecmis = { kayitlar: [] };
+  try {
+    kesintiGecmis = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'kesinti-gecmis.json'), 'utf8'));
+  } catch {}
+  const mahalleler = mahalleVerisi({ servis, gecmis: kesintiGecmis, haberler: ilceHavuzu.filter((x) => !x.genel) });
+  for (const m of mahalleler) ekle(mahalleYolu(m.ilce, m.ad), mahalleSayfasi({ m, servis, kardesler: mahalleler.filter((k) => k.ilce === m.ilce && k !== m) }), Boolean(m.kesintiler.length || m.haberler.length));
+  for (const ilce of ILCELER) ekle(`/mahalleler/${ilce.slug}/`, mahallelerSayfasi({ ilce, liste: mahalleler.filter((m) => m.ilce === ilce.slug) }));
   for (const ilce of ILCELER) ekle(`/ilce/${ilce.slug}/`, S.ilceSayfasi({ ilce, hikayeler, servis, simdi, havuz: ilceHavuzu }));
   ekle('/hava-durumu/', S.havaSayfasi({ servis }));
   ekle('/deprem/', S.depremSayfasi({ servis }));

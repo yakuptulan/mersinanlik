@@ -121,6 +121,20 @@ for (const d of servis.deprem || []) {
 durum.deprem = durum.deprem.slice(-200);
 
 // ---------- 3) Su kesintisi ----------
+// Mahalle sayfaları için tüm kesintilerin geçmişi (1 yıl)
+let gecmis = { kayitlar: [] };
+try {
+  gecmis = JSON.parse(fs.readFileSync('data/kesinti-gecmis.json', 'utf8'));
+} catch {}
+const gecmisVar = new Set(gecmis.kayitlar.map((x) => x.anahtar));
+for (const k of servis.suKesintisi?.liste || []) {
+  const anahtar = `${k.baslangic}|${k.aciklama}`.slice(0, 300);
+  if (gecmisVar.has(anahtar)) continue;
+  gecmisVar.add(anahtar);
+  gecmis.kayitlar.push({ anahtar, tur: k.tur || 'su', baslangic: k.baslangic, bitis: k.bitis, aciklama: k.aciklama, ilceler: (k.ilceler || []).map((i) => ({ ilce: i.ilce, mahalleler: i.mahalleler || [] })) });
+}
+gecmis.kayitlar = gecmis.kayitlar.filter((x) => !x.baslangic || simdi - new Date(x.baslangic).getTime() < 365 * 864e5);
+fs.writeFileSync('data/kesinti-gecmis.json', JSON.stringify(gecmis));
 for (const k of servis.suKesintisi?.liste || []) {
   const anahtar = `${k.baslangic}|${k.aciklama}`.slice(0, 300);
   if (durum.su.includes(anahtar)) continue;

@@ -18,6 +18,7 @@ const SERVISLER = [
   { tur: 'namaz', ad: 'Namaz vakitleri', yol: (s) => `/namaz-vakitleri/${s}/` },
   { tur: 'kesinti', ad: 'Kesintiler', yol: (s) => `/kesintiler/${s}/` },
   { tur: 'akaryakit', ad: 'Akaryakıt', yol: (s) => `/akaryakit-fiyatlari/${s}/` },
+  { tur: 'mahalle', ad: 'Mahalleler', yol: (s) => `/mahalleler/${s}/` },
 ];
 
 // İlçenin bütün servis sayfalarına bağlantı şeridi

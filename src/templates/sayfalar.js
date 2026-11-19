@@ -1,6 +1,7 @@
 import { gundemimKarti } from './gundemim.js';
 import { sporYan, sporAnaIcerik, sporMu, macGunuKarti, derbiKarti } from './spor.js';
 import { kategoriYan, ekonomiBugunKarti } from './kategoriYan.js';
+import { mahalleListesi, mahalleYolu, sade as mahalleSade } from './mahalle.js';
 import { macGunuKutusu } from './servisParcalari.js';
 import { SITE, ILCELER, AYAR } from '../config.js';
 import { htmlKacis as h, ayrilmaEki } from '../lib/text.js';
@@ -805,7 +806,7 @@ export function kesintiSayfasi({ servis } = {}) {
   const zaman = (t) => new Date(t).toLocaleString('tr-TR', { timeZone: SITE.timezone, day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' });
   const kart = (k) => `<article class="kesinti">
 <h3>${ikon.damla(22)} ${k.ilceler.map((i) => `<a href="/kesintiler/${i.ilce}/">${h(i.ad)}</a>`).join(', ')}</h3>
-<p class="kesinti-mahalle">${h(k.ilceler.flatMap((i) => i.mahalleler).join(', '))}</p>
+<p class="kesinti-mahalle">${k.ilceler.flatMap((i) => i.mahalleler.map((m) => { const bul = mahalleListesi().find((x) => x.ilce === i.ilce && x.anahtar === mahalleSade(m)); return bul ? `<a href="${mahalleYolu(i.ilce, bul.ad)}">${h(m)}</a>` : h(m); })).join(', ')}</p>
 <p class="kesinti-saat">${k.baslangic ? zaman(k.baslangic) : ''}${k.bitis ? ` → ${zaman(k.bitis)}` : ''}</p>
 ${k.aciklama ? `<p>${h(cumleDuzen(k.aciklama))}</p>` : ''}
 </article>`;
