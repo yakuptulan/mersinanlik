@@ -120,5 +120,5 @@ ${hafta.length ? `<h3 class="ara-baslik">Haftanın maçları</h3>${macListesi(ha
 <h3 class="ara-baslik">Puan durumu</h3>${ligTablosu(sl)}</section>` : ''}
 ${turkiye.length ? `<section class="spor-bolum"><div class="bolum-bas"><h2>Türkiye'den spor</h2></div>${haberListesi(turkiye)}</section>` : ''}
 ${sp.milli?.maclar?.length ? `<section class="spor-bolum" id="milli"><div class="bolum-bas"><h2>A Milli Takım</h2><span>Son maçlar</span></div>${macListesi(sp.milli.maclar.map((m) => ({ ...m, mersin: false, saat: null })))}</section>` : ''}
-<p style="color:var(--ikincil);font-size:14.5px">Puan durumu, fikstür ve kulüp logoları: Türkiye Futbol Federasyonu (tff.org). Skorlar maç günlerinde yarım saatte bir güncellenir.</p>`;
+<p style="color:var(--ikincil);font-size:14.5px">Puan durumu ve fikstür: Türkiye Futbol Federasyonu (tff.org). Kulüp logoları: TheSportsDB. Skorlar maç günlerinde yarım saatte bir güncellenir.</p>`;
 }

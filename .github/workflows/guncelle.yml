@@ -66,7 +66,7 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
-      - name: Kulüp logoları (TFF)
+      - name: Kulüp logoları
         run: node src/logolar.js || true
 
       - name: Maç sonu haberleri (Mersin takımları)

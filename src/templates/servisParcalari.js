@@ -21,14 +21,12 @@ export function bayrak(ad) {
 }
 // Kulüp logoları (TFF'den alınıp küçültülmüş): takım adı → dosya. Build sırasında doldurulur.
 let LOGOLAR = new Map();
-export function logolariAyarla(servis) {
+export function logolariAyarla() {
   LOGOLAR = new Map();
-  let kayit = {};
   try {
-    kayit = JSON.parse(fs.readFileSync(new URL('../../data/logolar.json', import.meta.url), 'utf8'));
+    const kayit = JSON.parse(fs.readFileSync(new URL('../../data/logolar.json', import.meta.url), 'utf8'));
+    for (const [ad, dosya] of Object.entries(kayit.takimlar || {})) LOGOLAR.set(sadeAd(ad), dosya);
   } catch {}
-  for (const lig of Object.values(servis?.spor?.ligler || {}))
-    for (const [ad, id] of Object.entries(lig.kulup || {})) if (kayit[id]?.dosya) LOGOLAR.set(sadeAd(ad), kayit[id].dosya);
 }
 const sadeAd = (ad) => String(ad).toLocaleLowerCase('tr-TR').replace(/[^a-zçğıöşü0-9]/g, '');
 export function takimLogosu(ad) {

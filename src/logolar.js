@@ -1,45 +1,111 @@
-// Kulüp logoları: resmî TFF kulüp sayfalarındaki logo (fys.tff.org) küçük boyutta kendi sunucumuza alınır.
-// Logolar takımı tanıtmak için puan tablosu ve maç kartlarında küçük boyutta kullanılır.
+// Kulüp logoları: TheSportsDB'nin açık API'sinden (takım rozetleri) küçük boyutta kendi sunucumuza alınır.
+// (TFF'nin logo sunucusu yurt dışından erişime kapalı.) Logolar yalnızca takımı tanıtmak için puan tablosu
+// ve maç kartlarında küçük boyutta kullanılır. Haftada bir yeni takım var mı diye bakılır.
 import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
-import { sayfa } from './lib/spor.js';
 
 const UA = 'MersinAnlikBot/1.0 (+https://mersinanlik.com; iletisim@mersinanlik.com)';
 const VERI = path.resolve('data/logolar.json');
 const KLASOR = path.resolve('public/logo');
-const CALISMA_BASINA = Number(process.env.LOGO_ADET || 25);
+const API = 'https://www.thesportsdb.com/api/v1/json/123';
+const LIG_ADI = {
+  'super-lig': ['Turkish Super Lig'],
+  '1-lig': ['Turkish 1 Lig'],
+  '2-lig-beyaz': ['Turkish 2 Lig'],
+  '2-lig-kirmizi': ['Turkish 2 Lig'],
+  '3-lig-1': ['Turkish 3 Lig Group 1'],
+  '3-lig-2': ['Turkish 3 Lig Group 2'],
+  '3-lig-3': ['Turkish 3 Lig Group 3'],
+};
+const DUR = new Set(['spor', 'sk', 'fk', 'as', 'a', 'ş', 'futbol', 'kulübü', 'kulubu', 'belediyespor', 'belediye', 'jk', 'gsk', 'idman', 'yurdu', 'idmanyurdu', 'gençlik', 'and', 'the']);
+const kelimeler = (ad) =>
+  String(ad)
+    .toLocaleLowerCase('tr-TR')
+    .replace(/[^a-zçğıöşü0-9 ]/g, ' ')
+    .split(/\s+/)
+    .filter((k) => k.length > 1 && !DUR.has(k));
+const sade = (ad) => String(ad).toLocaleLowerCase('tr-TR').replace(/[^a-zçğıöşü0-9]/g, '');
+
+function eslestir(ad, adaylar) {
+  const s = sade(ad);
+  const tam = adaylar.find((t) => [t.strTeam, ...(t.strTeamAlternate || '').split(',')].some((x) => x && sade(x) === s));
+  if (tam) return tam;
+  const k = new Set(kelimeler(ad));
+  const puanli = adaylar
+    .map((t) => {
+      const tk = new Set([...kelimeler(t.strTeam), ...kelimeler(t.strTeamAlternate || '')]);
+      return { t, p: [...k].filter((x) => tk.has(x) && x.length >= 4).length };
+    })
+    .filter((x) => x.p > 0)
+    .sort((a, b) => b.p - a.p);
+  if (!puanli.length || (puanli[1] && puanli[1].p === puanli[0].p)) return null;
+  return puanli[0].t;
+}
+
+async function json(url) {
+  const r = await fetch(url, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(20000) });
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  return r.json();
+}
 
 const servis = JSON.parse(fs.readFileSync('data/servisler.json', 'utf8'));
-let logolar = {};
+let logolar = { takimlar: {}, bakilan: null };
 try {
-  logolar = JSON.parse(fs.readFileSync(VERI, 'utf8'));
+  logolar = { ...logolar, ...JSON.parse(fs.readFileSync(VERI, 'utf8')) };
 } catch {}
-
-const kimlikler = new Map();
-// Önce Süper Lig ve Mersin'in ligi
-const sira = (k) => (k === 'super-lig' ? 0 : k === '3-lig-3' ? 1 : 2);
-for (const [, lig] of Object.entries(servis.spor?.ligler || {}).sort((a, b) => sira(a[0]) - sira(b[0]))) for (const [ad, id] of Object.entries(lig.kulup || {})) kimlikler.set(id, ad);
-const eksik = [...kimlikler].filter(([id]) => !logolar[id] || (!logolar[id].dosya && Date.now() - new Date(logolar[id].denendi || 0) > 7 * 864e5)).slice(0, CALISMA_BASINA);
-fs.mkdirSync(KLASOR, { recursive: true });
-let yeni = 0;
-for (const [id, ad] of eksik) {
-  try {
-    const html = await sayfa(`https://www.tff.org/Default.aspx?pageID=28&kulupID=${id}`, UA);
-    const m = html.match(/https?:\/\/fys\.tff\.org\/TFFUploadFolder\/KulupLogolari[\\/][^"'\s>]+/i);
-    if (!m) throw new Error('logo yok');
-    const url = m[0].replace(/\\/g, '/');
-    const r = await fetch(url, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(20000) });
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    const dosya = `${id}.webp`;
-    await sharp(Buffer.from(await r.arrayBuffer())).trim({ threshold: 12 }).resize(96, 96, { fit: 'contain', background: { r: 255, g: 255, b: 255, alpha: 1 } }).webp({ quality: 82 }).toFile(path.join(KLASOR, dosya));
-    logolar[id] = { ad, dosya };
-    yeni++;
-  } catch (e) {
-    logolar[id] = { ad, dosya: null, denendi: new Date().toISOString() };
-    console.warn(`! Logo (${ad}): ${e.message}`);
-  }
-  await new Promise((x) => setTimeout(x, 1200));
+const ligler = servis.spor?.ligler || {};
+const eksikVar = Object.values(ligler).some((l) => (l.puan || []).some((t) => !logolar.takimlar[t.takim]));
+if (!eksikVar || (logolar.bakilan && Date.now() - new Date(logolar.bakilan).getTime() < 7 * 864e5 && !process.argv.includes('--simdi'))) {
+  console.log('Kulüp logoları: güncel.');
+  process.exit(0);
 }
+fs.mkdirSync(KLASOR, { recursive: true });
+const takimListesi = {};
+let yeni = 0, bulunamayan = [];
+for (const [kod, l] of Object.entries(ligler)) {
+  const eksik = (l.puan || []).filter((t) => !logolar.takimlar[t.takim]);
+  if (!eksik.length) continue;
+  const adaylar = [];
+  for (const lig of LIG_ADI[kod] || []) {
+    if (!takimListesi[lig]) {
+      try {
+        takimListesi[lig] = (await json(`${API}/search_all_teams.php?l=${encodeURIComponent(lig)}`)).teams || [];
+      } catch (e) {
+        console.warn(`! Logo listesi (${lig}): ${e.message}`);
+        takimListesi[lig] = [];
+      }
+      await new Promise((x) => setTimeout(x, 2500));
+    }
+    adaylar.push(...takimListesi[lig]);
+  }
+  for (const t of eksik) {
+    let aday = eslestir(t.takim, adaylar);
+    if (!aday) {
+      // Ligde bulunamadıysa adıyla ara
+      try {
+        const r = (await json(`${API}/searchteams.php?t=${encodeURIComponent(t.takim)}`)).teams || [];
+        aday = eslestir(t.takim, r.filter((x) => x.strCountry === 'Turkey' && x.strSport === 'Soccer'));
+      } catch {}
+      await new Promise((x) => setTimeout(x, 2500));
+    }
+    if (!aday?.strBadge) {
+      bulunamayan.push(t.takim);
+      continue;
+    }
+    try {
+      const r = await fetch(`${aday.strBadge}/small`, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(20000) });
+      const ham = r.ok ? r : await fetch(aday.strBadge, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(20000) });
+      if (!ham.ok) throw new Error(`HTTP ${ham.status}`);
+      const dosya = `${aday.idTeam}.webp`;
+      await sharp(Buffer.from(await ham.arrayBuffer())).resize(96, 96, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } }).webp({ quality: 85 }).toFile(path.join(KLASOR, dosya));
+      logolar.takimlar[t.takim] = dosya;
+      yeni++;
+    } catch (e) {
+      console.warn(`! Logo (${t.takim}): ${e.message}`);
+    }
+  }
+}
+logolar.bakilan = new Date().toISOString();
 fs.writeFileSync(VERI, JSON.stringify(logolar, null, 1));
-console.log(`Kulüp logoları: ${yeni} yeni, toplam ${Object.values(logolar).filter((x) => x.dosya).length}`);
+console.log(`Kulüp logoları: ${yeni} yeni, toplam ${Object.keys(logolar.takimlar).length}${bulunamayan.length ? `; bulunamayan: ${bulunamayan.join(', ')}` : ''}`);

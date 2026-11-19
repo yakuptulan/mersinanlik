@@ -56,7 +56,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
     bilgiYazilari = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'bilgi.json'), 'utf8')).yazilar || [];
   } catch {}
   servis.bilgi = bilgiYazilari;
-  logolariAyarla(servis);
+  logolariAyarla();
   let ozetArsiv = [];
   try {
     ozetArsiv = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'ozet.json'), 'utf8')).arsiv || [];
