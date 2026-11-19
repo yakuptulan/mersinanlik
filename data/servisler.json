@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-19T12:59:06.309Z",
+ "guncelleme": "2026-11-19T13:02:35.145Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 21,
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-19T12:59:10.799Z",
+  "guncelleme": "2026-11-19T13:02:39.318Z",
   "liste": [
    {
     "ad": "Arıç Eczanesi",
@@ -752,7 +752,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-19T12:59:11.948Z",
+  "guncelleme": "2026-11-19T13:02:40.678Z",
   "liste": [
    {
     "tur": "su",
@@ -801,22 +801,6 @@
        "Hürriyet",
        "Kazanlı",
        "Toroslar"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Silifke İlçesi Sayağzı Mahallesinde doğalgaz alt yapı çalışmasından kaynaklı içme suyu arızası sebebi ile saat 16:00 a kadar su kesintisi uygulanacaktır.",
-    "baslangic": "2026-11-19T09:15:00.000Z",
-    "bitis": "2026-11-19T13:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "silifke",
-      "ad": "Silifke",
-      "mahalleler": [
-       "Sayağzı"
       ]
      }
     ]
@@ -906,161 +890,177 @@
       ]
      }
     ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Akdeniz İlçesi Iğdır Mahallesinde gerçekleşen enerji çalışmalarından dolayı geçici süre ile su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-19T13:05:00.000Z",
+    "bitis": "2026-11-19T21:00:05.000Z",
+    "ilceler": [
+     {
+      "ilce": "akdeniz",
+      "ad": "Akdeniz",
+      "mahalleler": [
+       "Iğdır"
+      ]
+     }
+    ]
    }
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-19T12:59:17.047Z",
+  "guncelleme": "2026-11-19T13:02:44.052Z",
   "kalemler": {
    "gram": {
-    "alis": 6033.26,
-    "satis": 6034.17,
-    "degisim": -0.1
+    "alis": 6036,
+    "satis": 6036.78,
+    "degisim": -0.06
    },
    "ceyrek": {
-    "alis": 9986,
-    "satis": 10060,
-    "degisim": 0.18
+    "alis": 9999,
+    "satis": 10073,
+    "degisim": 0.31
    },
    "gumus": {
-    "alis": 73.22,
-    "satis": 73.3,
-    "degisim": 0.24
+    "alis": 73.35,
+    "satis": 73.43,
+    "degisim": 0.42
    },
    "usd": {
-    "alis": 50.4614,
-    "satis": 50.472,
+    "alis": 50.4617,
+    "satis": 50.4717,
     "degisim": 0.07
    },
    "eur": {
-    "alis": 55.6322,
-    "satis": 55.6464,
+    "alis": 55.6344,
+    "satis": 55.654,
     "degisim": 0.43
    },
    "bist": {
     "alis": null,
-    "satis": 11426.67,
-    "degisim": -0.44
+    "satis": 11430.53,
+    "degisim": -0.41
    },
    "btc": {
-    "satis": 3220946,
-    "usd": 63831,
-    "degisim": -0.28
+    "satis": 3220965,
+    "usd": 63823,
+    "degisim": -0.26
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 6033.26,
-    "satis": 6034.17,
-    "degisim": -0.1
+    "alis": 6036,
+    "satis": 6036.78,
+    "degisim": -0.06
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 9986,
-    "satis": 10060,
-    "degisim": 0.18
+    "alis": 9999,
+    "satis": 10073,
+    "degisim": 0.31
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 19973,
-    "satis": 20121,
-    "degisim": 0.21
+    "alis": 19998,
+    "satis": 20147,
+    "degisim": 0.34
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 39823,
-    "satis": 40119,
-    "degisim": 0.27
+    "alis": 39874,
+    "satis": 40170,
+    "degisim": 0.4
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40907,
-    "satis": 41164,
-    "degisim": 0.21
+    "alis": 40960,
+    "satis": 41217,
+    "degisim": 0.34
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40907,
-    "satis": 41164,
-    "degisim": 0.21
+    "alis": 40960,
+    "satis": 41217,
+    "degisim": 0.34
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40907,
-    "satis": 41164,
-    "degisim": 0.21
+    "alis": 40960,
+    "satis": 41217,
+    "degisim": 0.34
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5573.2,
-    "satis": 5761.07,
-    "degisim": 0.12
+    "alis": 5580.37,
+    "satis": 5768.52,
+    "degisim": 0.25
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4225,
-    "satis": 4935,
-    "degisim": 0.2
+    "alis": 4230,
+    "satis": 4940,
+    "degisim": 0.3
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3340.89,
-    "satis": 4497.55,
-    "degisim": 0.11
+    "alis": 3345.31,
+    "satis": 4502.7,
+    "degisim": 0.22
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 6003.09,
-    "satis": 6004,
-    "degisim": -0.1
+    "alis": 6010.68,
+    "satis": 6011.48,
+    "degisim": 0.02
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 73.22,
-    "satis": 73.3,
-    "degisim": 0.24
+    "alis": 73.35,
+    "satis": 73.43,
+    "degisim": 0.42
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.4614,
-    "satis": 50.472,
+    "alis": 50.4617,
+    "satis": 50.4717,
     "degisim": 0.07
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.6322,
-    "satis": 55.6464,
+    "alis": 55.6344,
+    "satis": 55.654,
     "degisim": 0.43
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.5725,
-    "satis": 66.5906,
-    "degisim": 0.3
+    "alis": 66.5749,
+    "satis": 66.594,
+    "degisim": 0.31
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 59.8948,
-    "satis": 59.9288,
+    "alis": 59.8938,
+    "satis": 59.9296,
     "degisim": 0.18
    },
    {
@@ -1078,10 +1078,10 @@
     "degisim": 0.72
    }
   ],
-  "kaynakSaati": "2026-11-19 15:59:01"
+  "kaynakSaati": "2026-11-19 16:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-19T12:59:19.978Z",
+  "guncelleme": "2026-11-19T13:02:46.870Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -8161,7 +8161,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-19T12:59:20.468Z",
+  "guncelleme": "2026-11-19T13:02:47.299Z",
   "liste": [
    {
     "yol": "/",
@@ -8220,7 +8220,7 @@
     "sayi": 2
    },
    {
-    "yol": "/gundemim/",
+    "yol": "/haber/tarihi-kilikya-yolu-nda-uc-parkur-daha-yurundu-1fgfdln/",
     "sayi": 1
    },
    {
@@ -8228,7 +8228,7 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/tarihi-kilikya-yolu-nda-uc-parkur-daha-yurundu-1fgfdln/",
+    "yol": "/gundemim/",
     "sayi": 1
    },
    {
@@ -8262,20 +8262,20 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-19T12:59:21.985Z",
+  "guncelleme": "2026-11-19T13:02:49.955Z",
   "deniz": {
    "sicaklik": 21.7,
    "dalga": 0.9
   },
   "hava": {
-   "aqi": 45,
-   "pm25": 13.4,
-   "pm10": 21.1,
+   "aqi": 53,
+   "pm25": 14.5,
+   "pm10": 25.7,
    "uvMax": 2.3
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-19T12:59:23.984Z",
+  "guncelleme": "2026-11-19T13:02:52.371Z",
   "giden": [
    {
     "no": [
@@ -9338,7 +9338,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-19T12:59:23.983Z",
+  "guncelleme": "2026-11-19T13:02:52.371Z",
   "liste": [
    {
     "id": 6375,
