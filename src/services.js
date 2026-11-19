@@ -19,6 +19,7 @@ import { akaryakitGetir } from './lib/akaryakit.js';
 import { sporGetir, liglerGetir } from './lib/spor.js';
 import { etkinlikGetir } from './lib/etkinlik.js';
 import { meteoGetir } from './lib/meteo.js';
+import { yollariGetir } from './lib/yollar.js';
 import { burcYaz } from './lib/burc.js';
 import { okunanlarGetir } from './lib/okunanlar.js';
 import { ulkeKodu } from './lib/bayrak.js';
@@ -215,6 +216,13 @@ async function main() {
     yeni.sayac = { ...eski.sayac, ...Object.fromEntries(Object.entries(sy).filter(([, v]) => v != null)) };
   } catch (e) {
     console.warn('! Sayaçlar:', e.message);
+  }
+  // Kapalı ve çalışma yapılan yollar (KGM)
+  try {
+    yeni.yollar = await yollariGetir(UA);
+    console.log(`Yollar (KGM): Mersin'de ${yeni.yollar.liste.length} kayıt`);
+  } catch (e) {
+    console.warn('! Yollar (KGM):', e.message);
   }
   // Çukurova Havalimanı uçuşları (her çalışmada; hata olursa eskisi kalır)
   try {

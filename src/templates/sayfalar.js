@@ -936,7 +936,10 @@ export function trafikSayfasi({ servis }) {
 <div class="trafik-harita"><iframe src="${trafikAdresi(TRAFIK_NOKTALARI[0])}" title="Mersin canlı trafik haritası" loading="lazy" allowfullscreen></iframe></div>
 <div class="trafik-renkler"><span><i style="background:#22c55e"></i>Akıcı</span><span><i style="background:#facc15"></i>Yoğun</span><span><i style="background:#ef4444"></i>Sıkışık</span><span><i style="background:#7f1d1d"></i>Durma noktasında</span></div>
 <p style="color:var(--ikincil);font-size:15px">Harita ve trafik verisi: Yandex Haritalar. Veriler birkaç dakikada bir yenilenir; yola çıkmadan önce yol ve hava durumunu da kontrol edin.</p>
-</div>${yanKutular(servis)}</main>`,
+<section class="spor-bolum"><div class="bolum-bas"><h2>Mersin'de kapalı ve çalışma yapılan yollar</h2><a class="bolum-link" href="https://yol.kgm.gov.tr/kapaliyollar" rel="noopener" target="_blank">KGM haritası →</a></div>
+${(servis?.yollar?.liste || []).length ? `<div class="ky-liste yol-liste">${servis.yollar.liste.map((y) => `<div class="ky-satir"><span><b class="yol-neden${/çalışma|baraj/i.test(y.neden) ? '' : ' kapali'}">${h(y.neden)}</b> ${h(y.yol || y.no)}${y.km ? ` <small>(${h(y.km)}. km)</small>` : ''}${y.aciklama ? `<br><small>${h(y.aciklama)}</small>` : ''}</span><small>${y.baslangic ? h(new Date(`${y.baslangic}+03:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', timeZone: 'Europe/Istanbul' })) : ''}</small></div>`).join('')}</div>` : '<div class="bos">Karayolları verisine göre şu an Mersin\'de kapalı ya da çalışma yapılan yol görünmüyor.</div>'}
+<p style="color:var(--ikincil);font-size:14px">Kaynak: Karayolları Genel Müdürlüğü (yol.kgm.gov.tr). Liste yarım saatte bir güncellenir.</p></section>
+</div>${kategoriYan('ulasim', { servis, hikayeler: [] }) || yanKutular(servis)}</main>`,
   });
 }
 

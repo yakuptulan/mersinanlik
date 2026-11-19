@@ -60,9 +60,6 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
-      - name: Veriden otomatik haberler (akaryakıt, deprem, su kesintisi, hava)
-        run: node src/otomatik.js
-
       - name: Sabah bildirimleri (Benim Gündemim)
         run: node src/bildirim.js
         env:
@@ -81,6 +78,9 @@ jobs:
         run: node src/okul.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - name: Veriden otomatik haberler (akaryakıt, deprem, su, hava, eczane, okul, yollar…)
+        run: node src/otomatik.js
 
       - name: Günün özeti (sabah bülteni)
         run: node src/ozet.js ${{ inputs.bilgi_zorla && '--simdi' || '' }}

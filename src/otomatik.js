@@ -9,6 +9,9 @@ import { yukle, kaydet } from './lib/store.js';
 import { ILCELER } from './config.js';
 import { mesafeKm } from './lib/uyarilar.js';
 import { DIYANET_ILCE } from './lib/namaz.js';
+import { guncelEtkinlikler } from './lib/etkinlik.js';
+import { arsivYukle } from './lib/arsiv.js';
+import { KGM_SAYFA } from './lib/yollar.js';
 
 const TZ = 'Europe/Istanbul';
 const DOSYA = 'data/otomatik.json';
@@ -274,6 +277,94 @@ if (iptal.length || rotar.length >= 2) {
   ].filter(Boolean).join('\n\n');
   haber({ id: kimlik('u', bugunISO), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'ulasim', kaynak: { ad: 'Çukurova Havalimanı', link: 'https://www.cukurovaairport.aero/' }, gecici: true, guncelle: true });
 }
+
+const ve = (a) => (a.length > 1 ? `${a.slice(0, -1).join(', ')} ve ${a.at(-1)}` : a[0] || '');
+const kisaTarih = (iso) => new Date(`${iso}T12:00:00+03:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', timeZone: TZ });
+
+// ---------- 9) Okul tatili kararı ----------
+let okul = { kararlar: [] };
+try {
+  okul = JSON.parse(fs.readFileSync('data/okul.json', 'utf8'));
+} catch {}
+durum.okul ||= [];
+for (const k of okul.kararlar || []) {
+  const anahtar = `${k.haberId}|${k.gunler.join(',')}`;
+  if (durum.okul.includes(anahtar)) continue;
+  durum.okul.push(anahtar);
+  const ileri = k.gunler.filter((g) => g >= bugunISO).sort();
+  if (ilkKurulum || !ileri.length) continue;
+  const yarinStr = new Date(simdi + 864e5).toLocaleDateString('sv-SE', { timeZone: TZ });
+  const ne = ileri[0] === bugunISO ? 'bugün' : ileri[0] === yarinStr ? 'yarın' : kisaTarih(ileri[0]);
+  const tum = k.kapsam === 'tum' || !k.ilceler?.length;
+  const yer = tum ? "Mersin'de" : ve(k.ilceler.slice(0, -1).map(ilceAd).concat(yerde(k.ilceler.at(-1))));
+  const kaynakHaber = veri.hikayeler.find((x) => x.id === k.haberId);
+  const baslik = `${tum ? "Mersin'de" : yer} ${ne}${ileri.length > 1 ? ` ve ${ileri.length > 2 ? 'sonraki günlerde' : kisaTarih(ileri[1])}` : ''} okullar tatil`;
+  const metin = [
+    `${k.kurum || 'Yetkililer'} tarafından yapılan açıklamaya göre ${tum ? "Mersin'in tamamında" : `${yer}`} ${ileri.map(kisaTarih).join(', ')} tarihlerinde eğitim ve öğretime ara verildi.`,
+    k.not ? `Karara ilişkin bilgi: ${k.not.replace(/[.!]?$/, '.')}` : '',
+    'Kararın kapsamı (öğretmenler, özel okullar, kreşler, üniversiteler) kurumun duyurusuna göre değişebilir; ayrıntılar için resmî açıklamayı takip edin. Mersin\'de okul tatili kararlarını tek sayfada "Okullar tatil mi?" bölümümüzden izleyebilirsiniz.',
+  ].filter(Boolean).join('\n\n');
+  haber({ id: kimlik('o', anahtar), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'egitim', ilceler: tum ? [] : k.ilceler, kaynak: kaynakHaber ? { ad: kaynakHaber.kaynaklar[0].ad, link: kaynakHaber.kaynaklar[0].link } : { ad: 'Mersin Valiliği', link: 'http://www.mersin.gov.tr/' } });
+}
+durum.okul = durum.okul.slice(-100);
+
+// ---------- 10) Pazar akşamı: Mersin'de bu hafta öne çıkan 7 gelişme ----------
+if (haftaGunu === 0 && trSaat >= 18 && durum.haftaOzeti !== bugunISO) {
+  durum.haftaOzeti = bugunISO;
+  const canli = new Set(veri.hikayeler.map((x) => x.id));
+  const havuz = [...veri.hikayeler, ...arsivYukle().filter((x) => !canli.has(x.id))]
+    .filter((x) => !x.genel && !x.otomatik && !x.gecici && x.metin && (x.durum || 'yayinda') === 'yayinda' && simdi - new Date(x.ilkGorulme).getTime() < 7 * 864e5);
+  const kaynakSayisi = (x) => new Set((x.kaynaklar || []).map((k) => k.ad)).size;
+  const secim = havuz.sort((a, b) => kaynakSayisi(b) - kaynakSayisi(a) || new Date(b.ilkGorulme) - new Date(a.ilkGorulme)).slice(0, 7);
+  if (secim.length >= 5) {
+    const ilk = new Date(simdi - 6 * 864e5).toLocaleDateString('sv-SE', { timeZone: TZ });
+    const aralik = `${kisaTarih(ilk)} – ${kisaTarih(bugunISO)}`;
+    const cumle = (x) => String(x.ozet || x.metin).split(/(?<=[a-zçğıöşü)"”'’][.!?])\s+(?=[A-ZÇĞİÖŞÜ0-9"“])/)[0];
+    const metin = [
+      `Mersin'de geride kalan haftada (${aralik}) en çok konuşulan ${secim.length} gelişmeyi sizin için derledik.`,
+      ...secim.map((x, i) => `${i + 1}. ${x.baslik}: ${cumle(x)}`),
+      'Haberlerin tamamına sitemizdeki ilgili sayfalardan ulaşabilirsiniz. Her pazar akşamı haftanın özeti Mersin Anlık\'ta.',
+    ].join('\n\n');
+    haber({ id: kimlik('w', bugunISO), baslik: `Mersin'de bu hafta: öne çıkan ${secim.length} gelişme (${aralik})`, ozet: metin.split('\n\n')[0], metin, kategori: 'gundem', kaynak: { ad: 'Mersin Anlık derlemesi', link: 'https://mersinanlik.com/arsiv/' } });
+  }
+}
+
+// ---------- 11) Pazartesi sabahı: bu hafta Mersin'de hangi etkinlikler var? ----------
+if (haftaGunu === 1 && trSaat >= 9 && durum.etkinlik !== bugunISO) {
+  durum.etkinlik = bugunISO;
+  const pazar = new Date(simdi + 6 * 864e5).toLocaleDateString('sv-SE', { timeZone: TZ });
+  const liste = guncelEtkinlikler(servis.etkinlik, simdi).filter((e) => e.tarih && e.tarih >= bugunISO && e.tarih <= pazar);
+  if (liste.length >= 2) {
+    const aralik = `${kisaTarih(bugunISO)} – ${kisaTarih(pazar)}`;
+    const gunler = [...new Set(liste.map((e) => e.tarih))];
+    const metin = [
+      `Mersin'de bu hafta (${aralik}) ${liste.length} etkinlik var. Mersin Büyükşehir Belediyesi'nin duyurduğu konser, tiyatro, sergi ve diğer etkinlikler gün gün şöyle:`,
+      ...gunler.map((g) => `${gunStr(`${g}T12:00:00+03:00`)}: ${liste.filter((e) => e.tarih === g).map((e) => `${e.baslik.replace(/\.$/, '')}${[e.saat, e.yer].filter(Boolean).length ? ` (${[e.saat, e.yer].filter(Boolean).join(', ')})` : ''}`).join('; ')}.`),
+      'Etkinliklerin ayrıntıları ve afişleri Mersin Anlık etkinlikler sayfasında. Saat ve yer değişiklikleri için belediyenin duyurularını takip edin.',
+    ].join('\n\n');
+    haber({ id: kimlik('a', bugunISO), baslik: `Bu hafta Mersin'de neler var? ${aralik} etkinlik rehberi`, ozet: metin.split('\n\n')[0], metin, kategori: 'kultur', kaynak: { ad: 'Mersin Büyükşehir Belediyesi', link: 'https://www.mersin.bel.tr/' }, gecici: true });
+  }
+}
+
+// ---------- 12) KGM: Mersin'de trafiğe kapanan / çalışma yapılan yollar ----------
+durum.yol ||= [];
+for (const y of servis.yollar?.liste || []) {
+  if (durum.yol.includes(y.id)) continue;
+  durum.yol.push(y.id);
+  if (ilkKurulum) continue;
+  if (y.baslangic && simdi - new Date(`${y.baslangic}+03:00`).getTime() > 3 * 864e5) continue; // eski kayıt
+  const yakin = [...ILCELER].filter((i) => i.lat).sort((a, b) => mesafeKm(a, y) - mesafeKm(b, y))[0];
+  const calisma = /yol çalışması|baraj/i.test(y.neden);
+  const yolAd = y.yol || `${y.no} numaralı yol`;
+  const baslik = calisma ? `${yolAd} yolunda çalışma: sürücüler dikkat` : `${yolAd} yolu ${y.neden.toLocaleLowerCase('tr-TR')} nedeniyle trafiğe kapandı`;
+  const metin = [
+    `Karayolları Genel Müdürlüğü'nün kapalı ve çalışma yapılan yollar listesine göre, ${y.no ? `${y.no} numaralı ` : ''}${yolAd} yolunun${y.km ? ` ${y.km}. kilometreleri arasında` : ''} ${calisma ? `${y.neden.toLocaleLowerCase('tr-TR')} yapılıyor` : `${y.neden.toLocaleLowerCase('tr-TR')} nedeniyle ulaşım durduruldu`}.${y.aciklama ? ` Etkilenen kesim: ${y.aciklama}.` : ''}`,
+    `${y.baslangic ? `Kayıt ${new Date(`${y.baslangic}+03:00`).toLocaleString('tr-TR', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: TZ })} tarihli. ` : ''}${yakin ? `Yol, ${yakin.ad} ilçesi yakınlarında bulunuyor.` : ''}`,
+    `Sürücülerin trafik işaret ve işaretçilerine uyması, mümkünse alternatif güzergâhları kullanması öneriliyor. Güncel durum ve harita için KGM'nin yol durumu sayfası (${KGM_SAYFA}) ve Mersin Anlık trafik sayfası takip edilebilir.`,
+  ].join('\n\n');
+  haber({ id: kimlik('r', String(y.id)), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'ulasim', ilceler: yakin && mesafeKm(yakin, y) < 40 ? [yakin.slug] : [], kaynak: { ad: 'Karayolları Genel Müdürlüğü', link: KGM_SAYFA } });
+}
+durum.yol = durum.yol.slice(-300);
 
 durum.kuruldu = durum.kuruldu || new Date(simdi).toISOString();
 fs.writeFileSync(DOSYA, JSON.stringify(durum, null, 1));
