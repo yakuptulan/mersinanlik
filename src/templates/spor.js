@@ -140,6 +140,7 @@ export function sporAnaIcerik({ servis, hikayeler, simdi = Date.now(), ligMenusu
   const lider = sl?.puan?.[0];
   const turkiye = turkiye0.filter((x) => !slHaber.includes(x)).slice(0, 6);
   return `${ligMenusu}
+${derbiKarti(servis, simdi)}
 ${sl ? `<section class="spor-bolum sl-bolum" id="super-lig"><div class="bolum-bas"><h2>Trendyol Süper Lig</h2><a class="bolum-link" href="/spor/super-lig/">Puan durumu ve fikstür →</a></div>
 ${lider ? `<div class="sl-lider">${takimRozeti(lider.takim)}<span><small>Lider</small><b>${h(lider.takim)}</b></span><span class="sl-lider-p"><b>${lider.p}</b><small>puan · ${lider.o} maç</small></span>${sl.puan[1] ? `<span class="sl-lider-fark">${lider.p - sl.puan[1].p === 0 ? `${h(sl.puan[1].takim)} ile eşit puanda, averajla önde` : `En yakın takipçisi ${h(sl.puan[1].takim)} ile arasında ${lider.p - sl.puan[1].p} puan var`}</span>` : ''}</div>` : ''}
 ${ligSerit(sl)}
@@ -198,4 +199,32 @@ export function macGunuKarti(servis, hikayeler, simdi = Date.now()) {
       return `<a class="sl-serit-mac ${durum}" href="/spor/#super-lig"><span>${takimRozeti(m.ev)}${h(m.ev)}</span><b>${m.skor && durum !== 'baslamadi' ? h(m.skor.replace('-', ' – ')) : durum === 'baslamadi' ? h(m.saat || '') : '–'}</b><span>${takimRozeti(m.dep)}${h(m.dep)}</span>${durum === 'oynaniyor' ? '<i>canlı</i>' : ''}</a>`;
     })
     .join('')}</div></section>`;
+}
+
+// ---------- Derbi geri sayımı (Süper Lig) ----------
+const BUYUKLER = ['Galatasaray', 'Fenerbahçe', 'Beşiktaş', 'Trabzonspor'];
+export function derbiKarti(servis, simdi = Date.now()) {
+  const sl = servis?.spor?.ligler?.['super-lig'];
+  if (!sl?.maclar?.length) return '';
+  const sira = (ad) => (sl.puan || []).find((p) => p.takim === ad);
+  const ust3 = (ad) => (sira(ad)?.sira || 99) <= 3;
+  const adaylar = sl.maclar
+    .filter((m) => (BUYUKLER.includes(m.ev) && BUYUKLER.includes(m.dep)) || (ust3(m.ev) && ust3(m.dep)))
+    .map((m) => ({ ...m, bas: new Date(`${m.tarih}T${m.saat || '20:00'}:00+03:00`).getTime() }))
+    .filter((m) => m.bas - simdi < 7 * 864e5 && simdi - m.bas < 14 * 36e5)
+    .sort((a, b) => a.bas - b.bas);
+  const m = adaylar[0];
+  if (!m) return '';
+  const durum = simdi < m.bas ? 'once' : simdi < m.bas + 115 * 60e3 ? 'canli' : 'bitti';
+  const derbi = BUYUKLER.includes(m.ev) && BUYUKLER.includes(m.dep);
+  const [e, d] = String(m.skor || '').split('-');
+  const takim = (ad) => { const p = sira(ad); return `<span class="dk-takim">${takimRozeti(ad)}<b>${h(ad)}</b>${p ? `<small>${p.sira}. sıra · ${p.p} puan</small>` : ''}</span>`; };
+  return `<a class="derbi-kart ${durum}" href="/spor/#super-lig">
+<span class="dk-ust"><b>${derbi ? '🔥 DERBİ' : '⭐ ZİRVE MAÇI'}</b><small>Trendyol Süper Lig · ${h(kisaGun(m.tarih))}${m.saat ? ` ${h(m.saat)}` : ''}</small></span>
+<span class="dk-orta">${takim(m.ev)}
+<span class="dk-merkez">${durum === 'once'
+    ? `<span class="dk-sayac" data-geri-sayim="${new Date(m.bas).toISOString()}">–</span><small>gün : saat : dk : sn</small>`
+    : m.skor ? `<span class="dk-skor">${h(e)} – ${h(d)}</span><small>${durum === 'canli' ? '● oynanıyor' : 'maç sonucu'}</small>` : `<span class="dk-skor">–</span><small>${durum === 'canli' ? '● oynanıyor' : 'skor birazdan'}</small>`}</span>
+${takim(m.dep)}</span>
+</a>`;
 }

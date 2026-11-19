@@ -1,5 +1,5 @@
 import { gundemimKarti } from './gundemim.js';
-import { sporYan, sporAnaIcerik, sporMu, macGunuKarti } from './spor.js';
+import { sporYan, sporAnaIcerik, sporMu, macGunuKarti, derbiKarti } from './spor.js';
 import { kategoriYan } from './kategoriYan.js';
 import { macGunuKutusu } from './servisParcalari.js';
 import { SITE, ILCELER, AYAR } from '../config.js';
@@ -314,6 +314,7 @@ ${piyasaSeridi(servis?.piyasa)}`;
 <div class="ana">
 ${mansetKaydirici(mansetler)}
 ${macGunuKarti(servis, hikayeler, simdi)}
+${derbiKarti(servis, simdi)}
 ${gundemimKarti()}
 ${ozetKarti(servis?.ozet)}
 ${gundem.length >= 2 ? `<section class="kutu gundem-kutu"><div class="kutu-bas"><h2>Çok konuşulanlar</h2><span class="kutu-alt">En çok sitenin yazdığı haberler</span></div>${gundemListesi(gundem)}</section>` : ''}

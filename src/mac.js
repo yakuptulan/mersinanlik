@@ -133,6 +133,7 @@ async function main() {
   }
   yeni += await macOnuYazilari({ servis, durum, veri, simdi });
   yeni += await haftalikBulten({ servis, durum, veri, simdi });
+  yeni += await haftasonuProgrami({ servis, durum, veri, simdi });
   durum.yazilan = durum.yazilan.slice(-200);
   // Eski kayıtları temizle (10 günden eski maç günleri)
   const sinir = new Date(simdi - 10 * 864e5).toISOString().slice(0, 10);
@@ -297,6 +298,73 @@ async function haftalikBulten({ servis, durum, veri, simdi }) {
   });
   durum.haftalik = { tarih: bugun, siralar: anlik, yazilan: bugun };
   console.log('Haftalık spor bülteni yazıldı:', yazi.baslik);
+  return 1;
+}
+
+// ---------- Cuma: "Bu hafta sonu Süper Lig'de" programı ----------
+export const BUYUKLER = ['Galatasaray', 'Fenerbahçe', 'Beşiktaş', 'Trabzonspor'];
+const PROGRAM_TALIMAT = `Sen Mersin'de yayın yapan yerel bir haber sitesinin spor editörüsün. Süper Lig'in bu haftaki maç programı için kısa bir giriş yazısı yaz.
+KURALLAR:
+- SADECE verilen bilgileri kullan (takımların sırası, puanı, maç günü ve saati). Kadro, sakatlık, teknik direktör, stat, yayın kanalı, hakem, skor tahmini YAZMA.
+- Tarafsız, sade haber dili; abartı yok.
+- baslik: en fazla 90 karakter (örnek kalıp: "Süper Lig'de haftanın programı: X–Y derbisi pazar akşamı").
+- ozet: 1-2 cümle.
+- giris: 2 kısa paragraf, aralarında boş satır: haftanın öne çıkan maçları (derbi ya da üst sıradaki takımların karşılaşmaları) ve liderin maçı.
+Yalnızca JSON döndür: {"baslik":"","ozet":"","giris":""}`;
+
+async function haftasonuProgrami({ servis, durum, veri, simdi }) {
+  const tr = new Date(new Date(simdi).toLocaleString('en-US', { timeZone: TZ }));
+  const bugun = new Date(simdi).toLocaleDateString('sv-SE', { timeZone: TZ });
+  if (tr.getDay() !== 5 || tr.getHours() < 10 || durum.program === bugun) return 0;
+  const sl = servis.spor?.ligler?.['super-lig'];
+  const sinir = new Date(simdi + 4 * 864e5).toLocaleDateString('sv-SE', { timeZone: TZ });
+  const maclar = (sl?.maclar || []).filter((m) => !m.skor && m.tarih >= bugun && m.tarih <= sinir).sort((a, b) => (a.tarih + (a.saat || '')).localeCompare(b.tarih + (b.saat || '')));
+  if (maclar.length < 3) return 0;
+  const sira = (ad) => (sl.puan || []).find((p) => p.takim === ad);
+  const etiket = (ad) => { const p = sira(ad); return p ? `${ad} (${p.sira}., ${p.p} puan)` : ad; };
+  const derbi = (m) => BUYUKLER.includes(m.ev) && BUYUKLER.includes(m.dep);
+  const girdi = maclar.map((m) => `${gunAdi(m.tarih)} ${m.saat || ''}: ${etiket(m.ev)} – ${etiket(m.dep)}${derbi(m) ? ' [DERBİ]' : ''}`).join('\n') + `\nLider: ${sl.puan?.[0]?.takim}`;
+  let yazi = null;
+  try {
+    const j = await jsonYaz(PROGRAM_TALIMAT, girdi, { sicaklik: 0.4, sadeceGemini: true });
+    if (j?.baslik && j?.giris) yazi = { baslik: String(j.baslik).trim().slice(0, 110), ozet: String(j.ozet || '').trim(), giris: String(j.giris).trim() };
+  } catch (e) {
+    console.log('Hafta sonu programı: yapay zekâ hatası, şablon kullanılıyor', e.message);
+  }
+  const d = maclar.find(derbi);
+  if (!yazi) {
+    const lider = sl.puan?.[0]?.takim;
+    const lm = maclar.find((m) => m.ev === lider || m.dep === lider);
+    yazi = {
+      baslik: d ? `Süper Lig'de haftanın programı: ${d.ev}–${d.dep} derbisi` : "Süper Lig'de bu hafta sonu oynanacak maçlar",
+      ozet: `Trendyol Süper Lig'de bu haftanın ${maclar.length} maçı ${gunAdi(maclar[0].tarih)} başlıyor.`,
+      giris: [d ? `Haftanın en dikkat çeken maçında ${etiket(d.ev)}, ${gunAdi(d.tarih)} saat ${d.saat} itibarıyla ${etiket(d.dep)} ile karşılaşacak.` : '', lm ? `Lider ${lider}, ${gunAdi(lm.tarih)} ${lm.ev === lider ? `sahasında ${lm.dep}` : `deplasmanda ${lm.ev}`} ile oynayacak.` : ''].filter(Boolean).join('\n\n'),
+    };
+  }
+  // Gün gün program: her gün bir paragraf
+  const gunler = [...new Set(maclar.map((m) => m.tarih))];
+  const program = gunler.map((g) => `${gunAdi(g)}: ${maclar.filter((m) => m.tarih === g).map((m) => `${m.saat ? `${m.saat} ` : ''}${m.ev} – ${m.dep}`).join(' · ')}`);
+  const zaman = new Date(simdi).toISOString();
+  veri.hikayeler.push({
+    id: 'p' + crypto.createHash('sha1').update(`program|${bugun}`).digest('hex').slice(0, 5),
+    baslik: yazi.baslik,
+    ozet: yazi.ozet,
+    metin: [yazi.giris, 'Haftanın programı:', ...program].join('\n\n'),
+    ilceler: [],
+    genel: true,
+    kategori: 'spor',
+    riskNedenleri: [],
+    durum: 'yayinda',
+    onaylandi: false,
+    ilkGorulme: zaman,
+    sonGuncelleme: zaman,
+    kaynaklar: [{ kaynakId: 'tff', ad: 'TFF', link: sl.kaynak || 'https://www.tff.org/', baslik: 'Trendyol Süper Lig fikstür', tarih: zaman }],
+    yaziKaynak: 'TFF',
+    metinDenemesi: 2,
+    macHaberi: true,
+  });
+  durum.program = bugun;
+  console.log('Hafta sonu Süper Lig programı yazıldı:', yazi.baslik);
   return 1;
 }
 
