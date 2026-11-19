@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-19T22:01:45.757Z",
+ "guncelleme": "2026-11-19T22:31:54.858Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 17,
@@ -39,7 +39,7 @@
   },
   "anamur": {
    "sicaklik": 16,
-   "durum": "Açık",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
@@ -110,8 +110,8 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 15,
-   "durum": "Sisli",
+   "sicaklik": 16,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
@@ -146,7 +146,7 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 8,
+   "sicaklik": 7,
    "durum": "Sisli",
    "gunler": [
     {
@@ -182,7 +182,7 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 16,
+   "sicaklik": 15,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -291,7 +291,7 @@
   },
   "mut": {
    "sicaklik": 13,
-   "durum": "Az bulutlu",
+   "durum": "Sisli",
    "gunler": [
     {
      "tarih": "2026-11-20",
@@ -326,8 +326,8 @@
    ]
   },
   "silifke": {
-   "sicaklik": 16,
-   "durum": "Açık",
+   "sicaklik": 15,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
@@ -363,7 +363,7 @@
   },
   "tarsus": {
    "sicaklik": 17,
-   "durum": "Parçalı bulutlu",
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-19T22:01:49.582Z",
+  "guncelleme": "2026-11-19T22:31:59.698Z",
   "liste": [
    {
     "ad": "Asel Aslan Eczanesi",
@@ -675,7 +675,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-19T22:01:50.583Z",
+  "guncelleme": "2026-11-19T22:32:00.783Z",
   "liste": []
  },
  "piyasa": {
@@ -850,7 +850,7 @@
   "kaynakSaati": "2026-11-20 01:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-19T22:01:57.188Z",
+  "guncelleme": "2026-11-19T22:32:05.246Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -1875,7 +1875,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-19T21:32:04.818Z",
+  "guncelleme": "2026-11-19T22:32:07.063Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8232,7 +8232,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-19T22:01:57.671Z",
+  "guncelleme": "2026-11-19T22:32:05.820Z",
   "liste": [
    {
     "yol": "/",
@@ -8353,7 +8353,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-19T22:01:59.149Z",
+  "guncelleme": "2026-11-19T22:32:52.778Z",
   "deniz": {
    "sicaklik": 21.5,
    "dalga": 0.84
@@ -8362,11 +8362,11 @@
    "aqi": 36,
    "pm25": 13,
    "pm10": 18.8,
-   "uvMax": 1.85
+   "uvMax": 1.95
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-19T22:02:01.097Z",
+  "guncelleme": "2026-11-19T22:32:54.958Z",
   "giden": [
    {
     "no": [
@@ -9497,11 +9497,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2096"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-20T22:05:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-19T22:02:01.097Z",
+  "guncelleme": "2026-11-19T22:32:54.958Z",
   "liste": [
    {
     "id": 6375,

@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-19T22:31:22.758Z"
   }
  },
  "gorsel": {
@@ -274,35 +278,39 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-19T22:01:45.285Z",
+  "guncelleme": "2026-11-19T22:31:54.482Z",
   "liste": [
+   {
+    "baslik": "güllü",
+    "trafik": 100
+   },
+   {
+    "baslik": "muhtemel aşk 22 bölüm izle",
+    "trafik": 1000
+   },
+   {
+    "baslik": "cyberleek",
+    "trafik": 100
+   },
    {
     "baslik": "euroleague puan durumu",
     "trafik": 200
-   },
-   {
-    "baslik": "sevdiğim sensin fragman",
-    "trafik": 1000
    },
    {
     "baslik": "güneşin doğduğu yer son bölüm",
     "trafik": 100
    },
    {
-    "baslik": "muhtemel aşk fragman",
-    "trafik": 1000
-   },
-   {
     "baslik": "20 kasım ne günü",
-    "trafik": 100
-   },
-   {
-    "baslik": "israil",
     "trafik": 200
    },
    {
+    "baslik": "israil",
+    "trafik": 500
+   },
+   {
     "baslik": "hunter schafer",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "the odyssey",
@@ -311,10 +319,6 @@
    {
     "baslik": "mustapha yatabaré",
     "trafik": 100
-   },
-   {
-    "baslik": "mustafa levent sungur",
-    "trafik": 200
    }
   ]
  },
