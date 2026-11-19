@@ -1,14 +1,14 @@
 {
- "guncelleme": "2026-11-19T17:02:48.663Z",
+ "guncelleme": "2026-11-19T17:33:56.095Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 19,
+   "sicaklik": 18,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
      "min": 17,
-     "max": 19,
+     "max": 18,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -472,7 +472,7 @@
  },
  "deprem": [],
  "eczane": {
-  "guncelleme": "2026-11-19T17:02:54.427Z",
+  "guncelleme": "2026-11-19T17:34:00.387Z",
   "liste": [
    {
     "ad": "Arıç Eczanesi",
@@ -741,7 +741,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-19T17:02:55.790Z",
+  "guncelleme": "2026-11-19T17:34:01.422Z",
   "liste": [
    {
     "tur": "su",
@@ -983,7 +983,7 @@
   "kaynakSaati": "2026-11-19 20:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-19T17:03:01.621Z",
+  "guncelleme": "2026-11-19T17:34:07.709Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -1706,7 +1706,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-19T16:33:13.036Z",
+  "guncelleme": "2026-11-19T17:34:10.010Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8063,46 +8063,54 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-19T17:03:02.154Z",
+  "guncelleme": "2026-11-19T17:34:08.432Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 23
+    "sayi": 27
    },
    {
     "yol": "/spor/",
-    "sayi": 8
+    "sayi": 9
+   },
+   {
+    "yol": "/kategori/belediye/",
+    "sayi": 5
+   },
+   {
+    "yol": "/spor/super-lig/",
+    "sayi": 5
    },
    {
     "yol": "/haber/mersin-de-kamyonet-ile-otomobilin-carpistigi-kazada-1-kisi-oldu-2-kisi-1bfosq4/",
     "sayi": 4
    },
    {
-    "yol": "/spor/super-lig/",
+    "yol": "/kategori/yasam/",
     "sayi": 4
    },
    {
-    "yol": "/kategori/yasam/",
-    "sayi": 3
-   },
-   {
-    "yol": "/kategori/belediye/",
-    "sayi": 3
-   },
-   {
     "yol": "/kategori/turkiye-dunya/",
-    "sayi": 3
+    "sayi": 4
    },
    {
     "yol": "/kategori/ekonomi/",
-    "sayi": 3
-   },
-   {
-    "yol": "/haber/mersin-yenisehir-de-20-cadde-trafige-kapatiliyor-iste-tarih-ve-saat-1729jhi/",
-    "sayi": 2
+    "sayi": 4
    },
    {
     "yol": "/piyasalar/",
+    "sayi": 3
+   },
+   {
+    "yol": "/kategori/asayis/",
+    "sayi": 3
+   },
+   {
+    "yol": "/bilgi/",
+    "sayi": 3
+   },
+   {
+    "yol": "/haber/mersin-sosyal-hizmetlerde-yeni-siddet-iddiasi-9xbft/",
     "sayi": 2
    },
    {
@@ -8110,19 +8118,11 @@
     "sayi": 2
    },
    {
-    "yol": "/kategori/asayis/",
-    "sayi": 2
-   },
-   {
-    "yol": "/bilgi/",
-    "sayi": 2
-   },
-   {
     "yol": "/haber/mersin-buyuksehir-den-cocuklara-dopdolu-ara-tatil-programi-ple3hp/",
     "sayi": 2
    },
    {
-    "yol": "/haber/mersin-sosyal-hizmetlerde-yeni-siddet-iddiasi-9xbft/",
+    "yol": "/haber/mersin-yenisehir-de-20-cadde-trafige-kapatiliyor-iste-tarih-ve-saat-1729jhi/",
     "sayi": 2
    },
    {
@@ -8130,11 +8130,11 @@
     "sayi": 1
    },
    {
-    "yol": "/spor/1-lig/",
+    "yol": "/haber/tarihi-kilikya-yolu-nda-uc-parkur-daha-yurundu-1fgfdln/",
     "sayi": 1
    },
    {
-    "yol": "/haber/tarihi-kilikya-yolu-nda-uc-parkur-daha-yurundu-1fgfdln/",
+    "yol": "/spor/1-lig/",
     "sayi": 1
    },
    {
@@ -8146,15 +8146,15 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/mersinli-tenisci-milli-takim-secmelerine-katilmaya-hak-kazandi-1w4hsnx/",
-    "sayi": 1
-   },
-   {
     "yol": "/haber/sayistaydan-toroslar-belediyesine-ihalesiz-avukatlik-hizmeti-alimi-uya-3newkh/",
     "sayi": 1
    },
    {
-    "yol": "/haber/tarsus-ta-kadinlara-uretim-ve-satis-imkani-qn5595/",
+    "yol": "/haber/mersinli-tenisci-milli-takim-secmelerine-katilmaya-hak-kazandi-1w4hsnx/",
+    "sayi": 1
+   },
+   {
+    "yol": "/trafik/",
     "sayi": 1
    },
    {
@@ -8162,7 +8162,19 @@
     "sayi": 1
    },
    {
+    "yol": "/piyasalar/ata-altin/",
+    "sayi": 1
+   },
+   {
     "yol": "/haber/mersin-valisi-atilla-toros-kktc-nin-43-kurulus-yil-donumu-resepsiyonun-1codpsk/",
+    "sayi": 1
+   },
+   {
+    "yol": "/piyasalar/gram-altin/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/mut-ta-su-kesintisi-bircok-mahalle-etkilenecek-s68b1d/",
     "sayi": 1
    },
    {
@@ -8172,7 +8184,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-19T17:03:04.820Z",
+  "guncelleme": "2026-11-19T17:34:52.691Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 1.04
@@ -8185,7 +8197,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-19T17:03:07.267Z",
+  "guncelleme": "2026-11-19T17:34:54.656Z",
   "giden": [
    {
     "no": [
@@ -8196,7 +8208,7 @@
     "planlanan": "2026-11-19T17:35:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -8208,7 +8220,7 @@
     "planlanan": "2026-11-19T18:05:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "KONTUAR AÇIK",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -8220,7 +8232,7 @@
     "planlanan": "2026-11-19T18:20:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8232,7 +8244,7 @@
     "planlanan": "2026-11-19T18:25:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8244,7 +8256,7 @@
     "planlanan": "2026-11-19T19:15:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8738,21 +8750,21 @@
     "kapi": "106",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "VF3145"
+    ],
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-20T17:15:00.000Z",
+    "tahmini": null,
+    "kapi": "107",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "PC1857"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Ercan",
-    "planlanan": "2026-11-19T17:20:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "dis"
-   },
    {
     "no": [
      "VF4090"
@@ -9280,11 +9292,35 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "VF4090"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ankara",
+    "planlanan": "2026-11-20T17:20:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1857"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-20T17:20:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "dis"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-19T17:03:07.267Z",
+  "guncelleme": "2026-11-19T17:34:54.655Z",
   "liste": [
    {
     "id": 6375,

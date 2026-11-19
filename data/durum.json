@@ -12,11 +12,15 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "toros-universitesi": {
+   "hata": "The operation was aborted due to timeout",
+   "zaman": "2026-11-19T17:31:53.174Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-19",
-  "adet": 30
+  "adet": 32
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -96,7 +100,8 @@
    "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/buyuksehirden-cocuklara-dopdolu-ara-tatil-progr-2984579",
    "https://www.dha.com.tr/yerel-haberler/mersin/tarsus/otomobille-kamyonun-carpistigi-kazada-olu-sayis-2984577",
    "https://www.dha.com.tr/yerel-haberler/mersin/erdemli/tarihi-kilikya-yoluna-ilgi-artiyor-2984576",
-   "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/5-sene-once-sahibi-olen-evden-bir-romork-guverc-2984604"
+   "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/5-sene-once-sahibi-olen-evden-bir-romork-guverc-2984604",
+   "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/mersinde-oto-tamirhanesinde-patlama-2-isci-ya-2985035"
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
@@ -226,7 +231,8 @@
    "https://mersingundem.com/haber/13661/cocuklar-ara-tatili-atolyelerde-degerlendiriyor.html",
    "https://mersingundem.com/haber/13662/kaybolan-76-yasindaki-kadin-araniyor.html",
    "https://mersingundem.com/haber/13663/akdeniz-belediyesi-ekiplerinden-firinlara-siki-denetim.html",
-   "https://mersingundem.com/haber/13664/emniyet-muduru-aktas-esnaf-ve-vatandaslarla-bir-araya-geldi.html"
+   "https://mersingundem.com/haber/13664/emniyet-muduru-aktas-esnaf-ve-vatandaslarla-bir-araya-geldi.html",
+   "https://mersingundem.com/haber/13665/dikkat-ceken-billboardlar-siyaset-arinacak-turkiye-arinacak.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -270,11 +276,15 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-19T17:01:47.373Z",
+  "guncelleme": "2026-11-19T17:32:06.080Z",
   "liste": [
    {
-    "baslik": "kızılelma",
-    "trafik": 100
+    "baslik": "yönetici",
+    "trafik": 200
+   },
+   {
+    "baslik": "vedat muriç",
+    "trafik": 500
    },
    {
     "baslik": "jude bellingham",
@@ -294,7 +304,7 @@
    },
    {
     "baslik": "aile ve sosyal hizmetler bakanlığı",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "trt spor yıldız canlı",
@@ -302,14 +312,10 @@
    },
    {
     "baslik": "murat ağırel",
-    "trafik": 1000
+    "trafik": 2000
    },
    {
     "baslik": "son yemek",
-    "trafik": 100
-   },
-   {
-    "baslik": "yıldız holding",
     "trafik": 200
    }
   ]
