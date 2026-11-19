@@ -12,7 +12,7 @@ import * as IS from './templates/ilceServis.js';
 import { ulasimSayfasi } from './templates/ulasim.js';
 import { gundemimSayfasi, akisVerisi } from './templates/gundemim.js';
 import { logolariAyarla } from './templates/servisParcalari.js';
-import { akaryakitIlSayfasi, akaryakitTurkiyeSayfasi, namazIlSayfasi, namazTurkiyeSayfasi, havaIlSayfasi, havaTurkiyeSayfasi, sonDepremlerSayfasi, ilDepremSayfasi, depremIli, depremIlYolu, PIYASA_KALEMLERI, piyasaKalemSayfasi, piyasaKalemYolu } from './templates/ulusal.js';
+import { akaryakitIlSayfasi, akaryakitTurkiyeSayfasi, namazIlSayfasi, namazTurkiyeSayfasi, havaIlSayfasi, havaTurkiyeSayfasi, sonDepremlerSayfasi, ilDepremSayfasi, okulIlSayfasi, karTatiliSayfasi, depremIli, depremIlYolu, PIYASA_KALEMLERI, piyasaKalemSayfasi, piyasaKalemYolu } from './templates/ulusal.js';
 import ILLER81 from './iller.json' with { type: 'json' };
 import { takimSayfasi, takimYolu } from './templates/spor.js';
 import { sayfa as sayfaYap } from './templates/layout.js';
@@ -175,6 +175,16 @@ export function insaEt({ simdi = Date.now() } = {}) {
     }
     for (const [il, liste] of ileGore) if (liste.length >= 2) ekle(depremIlYolu(il.slug), ilDepremSayfasi({ il, liste, simdi, guncelleme: ulusal.deprem.guncelleme }));
   }
+  // 81 il okullar tatil mi
+  let okul81 = { kararlar: [] };
+  try {
+    okul81 = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'okul81.json'), 'utf8'));
+  } catch {}
+  for (const il of ILLER81) {
+    if (il.slug === 'mersin') continue;
+    ekle(`/okullar-tatil-mi/${il.slug}/`, okulIlSayfasi({ il, kararlar: okul81.kararlar.filter((k) => k.il === il.slug), hava: ulusal.hava?.[il.slug], simdi }));
+  }
+  ekle('/kar-tatili/', karTatiliSayfasi({ kararlar: okul81.kararlar, simdi }));
   // 81 il hava durumu
   for (const il of ILLER81) {
     const hv = ulusal.hava?.[il.slug];

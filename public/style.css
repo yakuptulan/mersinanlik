@@ -1497,3 +1497,11 @@ a.cip.kat:hover { filter: brightness(.95); }
 .dp-kart span:last-child { display: flex; flex-direction: column; gap: 2px; }
 .dp-kart small { color: var(--ikincil); font-size: 13px; }
 @media (max-width: 560px) { .dp-tablo th:nth-child(3), .dp-tablo td:nth-child(3) { display: none; } .dp-tablo td, .dp-tablo th { padding-left: 10px; padding-right: 10px; } .dp-tablo td small { display: block; margin-left: 0; } }
+.okul-durum { display: flex; gap: 16px; align-items: flex-start; border-radius: 22px; padding: 20px 22px; margin-bottom: 18px; }
+.okul-durum > span { font-size: 38px; line-height: 1; }
+.okul-durum b { font-size: 24px; font-weight: 900; display: block; margin-bottom: 4px; }
+.okul-durum p { margin: 0 0 6px; }
+.okul-durum small { color: inherit; opacity: .8; }
+.okul-durum.acik { background: #ecfdf5; color: #064e3b; border: 1px solid #a7f3d0; }
+.okul-durum.tatil { background: linear-gradient(135deg, #1e3a8a, #2563eb); color: #fff; }
+.okul-durum.tatil a { color: #fff; }

@@ -82,6 +82,11 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
+      - name: 81 il okul tatili kararları
+        run: node src/okul81.js || true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
       - name: Veriden otomatik haberler (akaryakıt, deprem, su, hava, eczane, okul, yollar…)
         run: node src/otomatik.js
 

@@ -347,3 +347,67 @@ ${depremTablo(liste.slice(0, 200), simdi, false)}
 </div></main>`,
   });
 }
+
+// ---------- 81 il okullar tatil mi: /okullar-tatil-mi/<il>/ ve /kar-tatili/ ----------
+export const okulIlYolu = (slug) => (slug === 'mersin' ? '/okullar-tatil-mi/' : `/okullar-tatil-mi/${slug}/`);
+const KAR = /kar|karla|buz/i;
+const gunUzun = (g) => new Date(`${g}T12:00:00+03:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long', timeZone: TZ });
+const kararMetni = (k) => (k.kapsam === 'ilce' ? `${k.ilceler.length ? k.ilceler.join(', ') : 'bazı ilçelerde'}${k.ilceler.length ? ' ilçelerinde' : ''}` : 'ilin tamamında');
+
+export function okulIlSayfasi({ il, kararlar, hava, simdi }) {
+  const bugun = new Date(simdi).toLocaleDateString('sv-SE', { timeZone: TZ });
+  const yarin = new Date(simdi + 864e5).toLocaleDateString('sv-SE', { timeZone: TZ });
+  const b = kararlar.filter((k) => k.gunler.includes(bugun));
+  const y = kararlar.filter((k) => k.gunler.includes(yarin));
+  const gecmis = kararlar.filter((k) => k.gunler.at(-1) < bugun).slice(0, 10);
+  const bul = BULUNMA(il.ad);
+  const yh = hava?.gunler?.find((g) => g.tarih === yarin);
+  const karBekleniyor = yh && (KAR.test(yh.durum) || yh.min <= 0);
+  const durum = y.length ? `${bul} yarın (${gunUzun(yarin)}) okullar ${kararMetni(y[0])} tatil. Kararı ${y[0].kurum} açıkladı.` : b.length ? `${bul} bugün okullar ${kararMetni(b[0])} tatil. Yarın için henüz açıklanmış bir tatil kararı yok.` : `${il.ad} için bugün ve yarın açıklanmış bir okul tatili kararı yok; okullar açık.`;
+  const sss = [
+    { soru: `${bul} yarın okullar tatil mi?`, cevap: y.length ? `Evet. ${y[0].kurum}, ${gunUzun(yarin)} günü ${kararMetni(y[0])} eğitime ara verildiğini açıkladı.` : `Şu an ${il.ad} için ${gunUzun(yarin)} gününe ait bir tatil kararı yok. Karar genellikle akşam saatlerinde valilik tarafından duyurulur; bu sayfa yarım saatte bir güncellenir.` },
+    { soru: `${il.ad} kar tatili kararını kim verir?`, cevap: `Okulların hava koşulları nedeniyle tatil edilmesine il genelinde ${il.ad} Valiliği, ilçe bazında kaymakamlıklar karar verir. Resmî duyurular valiliğin internet sitesi ve sosyal medya hesaplarından yapılır.` },
+  ];
+  return sayfa({
+    baslik: `${bul} yarın okullar tatil mi? ${il.ad} kar tatili son dakika`,
+    aciklama: durum,
+    yol: okulIlYolu(il.slug),
+    aktif: '/okullar-tatil-mi/',
+    jsonLd: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: sss.map((s) => ({ '@type': 'Question', name: s.soru, acceptedAnswer: { '@type': 'Answer', text: s.cevap } })) },
+    ust: `<div class="su-an-bas"><div><div class="cipler"><a class="cip" href="/kar-tatili/">Tatil olan iller</a></div><h1>${h(bul)} okullar tatil mi?</h1><p style="margin-top:8px">Son kontrol: ${h(saatStr(simdi))} · yarım saatte bir güncellenir</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">
+<section class="okul-durum ${y.length || b.length ? 'tatil' : 'acik'}"><span>${y.length || b.length ? '🏫❄️' : '🏫'}</span><div><b>${y.length ? 'Yarın okullar tatil' : b.length ? 'Bugün okullar tatil' : 'Okullar açık'}</b><p>${h(durum)}</p>${[...y, ...b].slice(0, 1).map((k) => `<small>${h(k.not || '')} Kaynak: <a href="${h(k.link)}" rel="noopener" target="_blank">${h(k.kaynak)}</a></small>`).join('')}</div></section>
+${yh ? `<section class="ekonomi-bugun"><div class="eb-bas"><div><h2>Yarın ${h(il.ad)} hava durumu</h2><p>${h(gunUzun(yarin))}: ${h(yh.durum.toLocaleLowerCase('tr-TR'))}, en düşük ${yh.min}°, en yüksek ${yh.max}°.${karBekleniyor ? ' Kar ya da buzlanma riski var; valilik kararını bu akşam takip edin.' : ''}</p></div></div></section>` : ''}
+${gecmis.length ? `<div class="bolum-bas"><h2>Son tatil kararları</h2></div><div class="tablo-kap"><table class="tablo"><thead><tr><th>Gün</th><th>Kapsam</th><th>Açıklayan</th></tr></thead><tbody>${gecmis.map((k) => `<tr><th scope="row">${h(k.gunler.map(gunUzun).join(', '))}</th><td>${h(kararMetni(k))}</td><td>${h(k.kurum)}</td></tr>`).join('')}</tbody></table></div>` : ''}
+<section class="bilgi-sss"><h2>Sık sorulanlar</h2>${sss.map((s) => `<details><summary>${h(s.soru)}</summary><p>${h(s.cevap)}</p></details>`).join('')}</section>
+${ilSecici(okulIlYolu, il.slug)}
+<p style="color:var(--ikincil);font-size:14px">Kararlar valilik açıklamalarını aktaran Anadolu Ajansı ve TRT Haber haberlerinden otomatik derlenir. Kesin bilgi için ${h(il.ad)} Valiliği duyurularını esas alın. Hava tahmini: MET Norway (yr.no).</p>
+</div></main>`,
+  });
+}
+
+export function karTatiliSayfasi({ kararlar, simdi }) {
+  const bugun = new Date(simdi).toLocaleDateString('sv-SE', { timeZone: TZ });
+  const yarin = new Date(simdi + 864e5).toLocaleDateString('sv-SE', { timeZone: TZ });
+  const ilAd = (s) => ILLER.find((i) => i.slug === s)?.ad || s;
+  const liste = (g) => kararlar.filter((k) => k.gunler.includes(g));
+  const blok = (g, baslik) => {
+    const l = liste(g);
+    return `<div class="bolum-bas"><h2>${baslik}</h2><span>${h(gunUzun(g))}</span></div>${l.length ? `<div class="tablo-kap"><table class="tablo"><thead><tr><th>İl</th><th>Kapsam</th><th>Açıklayan</th></tr></thead><tbody>${l.map((k) => `<tr><th scope="row"><a href="${okulIlYolu(k.il)}">${h(ilAd(k.il))}</a></th><td>${h(kararMetni(k))}</td><td>${h(k.kurum)} · <a href="${h(k.link)}" rel="noopener" target="_blank">${h(k.kaynak)}</a></td></tr>`).join('')}</tbody></table></div>` : `<div class="bos">${g === yarin ? 'Yarın için şu ana kadar açıklanmış bir tatil kararı yok. Kararlar genellikle akşam saatlerinde gelir; sayfa yarım saatte bir güncellenir.' : 'Bugün okulların tatil olduğu il yok.'}</div>`}`;
+  };
+  const sayY = new Set(liste(yarin).map((k) => k.il)).size;
+  return sayfa({
+    baslik: `Yarın okullar tatil mi? Kar tatili olan iller (${new Date(simdi).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', timeZone: TZ })} güncel liste)`,
+    aciklama: sayY ? `Yarın ${sayY} ilde okullar tatil: ${[...new Set(liste(yarin).map((k) => ilAd(k.il)))].join(', ')}. Valiliklerin kar tatili kararları anlık liste.` : 'Valiliklerin açıkladığı kar tatili ve okul tatili kararları: bugün ve yarın okulların tatil olduğu iller, anlık liste.',
+    yol: '/kar-tatili/',
+    aktif: '/okullar-tatil-mi/',
+    ust: `<div class="su-an-bas"><div><h1>Okulların tatil olduğu iller</h1><p style="margin-top:8px">Kar tatili ve valilik kararları · son kontrol ${h(saatStr(simdi))}</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">
+${blok(yarin, 'Yarın tatil olan iller')}
+${blok(bugun, 'Bugün tatil olan iller')}
+<div class="bolum-bas"><h2>İlinizi seçin</h2></div>
+<div class="mh-liste">${ILLER.map((i) => `<a href="${okulIlYolu(i.slug)}">${h(i.ad)}</a>`).join('')}</div>
+<p style="color:var(--ikincil);font-size:14px">Kararlar valilik açıklamalarını aktaran Anadolu Ajansı ve TRT Haber haberlerinden otomatik derlenir. Kesin bilgi için ilinizin valiliğini esas alın.</p>
+</div></main>`,
+  });
+}

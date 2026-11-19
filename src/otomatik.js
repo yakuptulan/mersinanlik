@@ -15,6 +15,7 @@ import { KGM_SAYFA } from './lib/yollar.js';
 
 const TZ = 'Europe/Istanbul';
 import { ilBulunma } from './templates/ulusal.js';
+import ILLER81 from './iller.json' with { type: 'json' };
 const DOSYA = 'data/otomatik.json';
 const MERKEZ = { lat: 36.8, lon: 34.63 };
 const BULUNMA = { akdeniz: 'de', anamur: 'da', aydincik: 'ta', bozyazi: 'da', camliyayla: 'da', erdemli: 'de', gulnar: 'da', mezitli: 'de', mut: 'ta', silifke: 'de', tarsus: 'ta', toroslar: 'da', yenisehir: 'de' };
@@ -75,7 +76,19 @@ if (ak?.degisim && ak.onceki && ak.degisim !== durum.yakit) {
       const parcalar = [b ? ifade('benzine', b) : '', m ? ifade('motorine', m) : ''].filter(Boolean);
       const hepsiZam = [b, m].filter(Boolean).every((x) => x > 0);
       const hepsiIndirim = [b, m].filter(Boolean).every((x) => x < 0);
-      const baslik = parcalar.length === 2 && (hepsiZam || hepsiIndirim) ? `Mersin'de benzin ve motorine ${hepsiZam ? 'zam' : 'indirim'} geldi` : `Mersin'de ${parcalar.join(', ')}`;
+      // Ülke geneli: büyük şehirlerin bu turda alınmış güncel fiyatları
+      let ulusalY = {};
+      try {
+        ulusalY = JSON.parse(fs.readFileSync('data/ulusal.json', 'utf8')).akaryakit || {};
+      } catch {}
+      const medyan = (d) => { const x = d.filter((v) => v != null).sort((p, q) => p - q); return x.length ? x[Math.floor(x.length / 2)] : null; };
+      const sehirler = [['istanbul', 'İstanbul'], ['ankara', 'Ankara'], ['izmir', 'İzmir'], ['antalya', 'Antalya'], ['bursa', 'Bursa'], ['adana', 'Adana']]
+        .map(([sl, ad]) => ({ ad, k: ulusalY[sl] }))
+        .filter((x) => x.k && new Date(x.k.guncelleme) >= new Date(ak.degisim) - 30 * 60e3)
+        .map((x) => ({ ad: x.ad, benzin: medyan(Object.values(x.k.ilceler).map((i) => i.benzin)), motorin: medyan(Object.values(x.k.ilceler).map((i) => i.motorin)) }))
+        .filter((x) => x.benzin && x.motorin);
+      const turAdi = parcalar.length === 2 && (hepsiZam || hepsiIndirim) ? `Benzin ve motorine ${hepsiZam ? 'zam' : 'indirim'} geldi` : `${parcalar.join(', ').replace(/^./, (c) => c.toLocaleUpperCase('tr-TR'))} geldi`;
+      const baslik = sehirler.length >= 3 ? `${turAdi}: İstanbul, Ankara, İzmir ve Mersin'de güncel akaryakıt fiyatları` : `Mersin'de ${parcalar.join(', ')}`;
       const tum = Object.values(ak.ilceler || {});
       const aralik = (tur) => {
         const d = tum.map((x) => x[tur]).filter((x) => x != null);
@@ -84,12 +97,13 @@ if (ak?.degisim && ak.onceki && ak.degisim !== durum.yakit) {
       const ab = aralik('benzin');
       const am = aralik('motorin');
       const metin = [
-        `Mersin'de akaryakıt fiyatları değişti. Güncel pompa fiyatlarına göre ${parcalar.join(', ')} yapıldı.`,
+        sehirler.length >= 3 ? `Akaryakıt fiyatları değişti. Güncel pompa fiyatlarına göre ${parcalar.join(', ')} yapıldı; yeni fiyatlar İstanbul'dan Mersin'e tüm illerde pompaya yansıdı.` : `Mersin'de akaryakıt fiyatları değişti. Güncel pompa fiyatlarına göre ${parcalar.join(', ')} yapıldı.`,
         `Mersin merkezde benzinin litre fiyatı ${para(f.benzin)} TL${b ? ` (önceki ${para(ak.onceki.benzin)} TL)` : ''}, motorinin litre fiyatı ${para(f.motorin)} TL${m ? ` (önceki ${para(ak.onceki.motorin)} TL)` : ''} oldu.${f.lpg ? ` LPG'nin litresi ${para(f.lpg)} TL'den satılıyor.` : ''}`,
         ab && am ? `İlçelere göre fiyatlar küçük farklılık gösteriyor: benzin ${para(ab[0])}–${para(ab[1])} TL, motorin ${para(am[0])}–${para(am[1])} TL arasında.` : '',
-        'İlçe ilçe güncel fiyatlara Mersin Anlık akaryakıt sayfasından ulaşabilirsiniz. Fiyatlar istasyona göre değişebilir.',
+        sehirler.length >= 3 ? ['Büyük şehirlerde güncel litre fiyatları:', ...sehirler.map((x) => `${x.ad}: benzin ${para(x.benzin)} TL, motorin ${para(x.motorin)} TL`)].join('\n') : '',
+        sehirler.length >= 3 ? 'İlçe ilçe güncel fiyatlara Mersin Anlık akaryakıt sayfasından, 81 ilin fiyatlarına 81 il akaryakıt fiyatları sayfasından ulaşabilirsiniz. Fiyatlar istasyona ve markaya göre değişebilir.' : 'İlçe ilçe güncel fiyatlara Mersin Anlık akaryakıt sayfasından ulaşabilirsiniz. Fiyatlar istasyona göre değişebilir.',
       ].filter(Boolean).join('\n\n');
-      haber({ id: kimlik('y', ak.degisim), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'ekonomi', kaynak: { ad: 'Opet pompa fiyatları', link: 'https://www.opet.com.tr/akaryakit-fiyatlari' } , kapak: 'yakit' });
+      haber({ id: kimlik('y', ak.degisim), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'ekonomi', kaynak: { ad: 'Opet pompa fiyatları', link: 'https://www.opet.com.tr/akaryakit-fiyatlari' } , kapak: 'yakit', sonDakika: sehirler.length >= 3 });
     }
   }
   durum.yakit = ak.degisim;
@@ -331,6 +345,32 @@ if (pa?.altinlar?.length && haftaGunu >= 1 && haftaGunu <= 6 && trDakika >= 9 * 
       'Fiyatlar serbest piyasa verileridir; kuyumculardaki satış fiyatları işçilik ve makas farkı nedeniyle farklılık gösterebilir. Bu haber yatırım tavsiyesi değildir. Gün içindeki anlık fiyatlar ve altın hesaplama aracı Mersin Anlık gram altın sayfasında.',
     ].join('\n\n');
     haber({ id: kimlik('a', bugunISO), baslik: `Altın fiyatları bugün (${tarihMetni}): Gram altın ve çeyrek altın ne kadar?`, ozet: metin.split('\n\n')[0], metin, kategori: 'ekonomi', kaynak: { ad: 'Truncgil Finans', link: 'https://finans.truncgil.com/' }, kapak: 'piyasa' });
+  }
+}
+
+// ---------- 7c) 81 il okul tatili: gün başına tek, güncellenen "tatil olan iller" haberi ----------
+let okul81 = { kararlar: [] };
+try {
+  okul81 = JSON.parse(fs.readFileSync('data/okul81.json', 'utf8'));
+} catch {}
+{
+  const hedefGun = trSaat >= 14 ? new Date(simdi + 864e5).toLocaleDateString('sv-SE', { timeZone: TZ }) : bugunISO;
+  const yarinMi = hedefGun !== bugunISO;
+  const l = okul81.kararlar.filter((k) => k.gunler.includes(hedefGun));
+  const ilAd = (sl) => ILLER81.find((i) => i.slug === sl)?.ad || sl;
+  const iller = [...new Set(l.map((k) => k.il))];
+  if (iller.length && !ilkKurulum) {
+    const gunMetni = new Date(`${hedefGun}T12:00:00+03:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long', timeZone: TZ });
+    const zaman = yarinMi ? 'yarın' : 'bugün';
+    const baslik = iller.length === 1 ? `${ilBulunma(ilAd(iller[0]))} ${zaman} okullar tatil mi? Valilik kararı açıklandı` : `${zaman[0].toLocaleUpperCase('tr-TR') + zaman.slice(1)} okullar tatil mi? ${iller.length} ilde eğitime ara verildi (güncel liste)`;
+    const satir = (k) => `${ilAd(k.il)}: ${k.kapsam === 'ilce' ? `${k.ilceler.length ? k.ilceler.join(', ') + ' ilçelerinde' : 'bazı ilçelerde'}` : 'tüm ilde'} (${k.kurum})`;
+    const metin = [
+      `${gunMetni} günü ${iller.length === 1 ? `${ilAd(iller[0])} ilinde` : `${iller.length} ilde`} okullarda eğitime ara verildi. Kararlar ilgili valilikler tarafından açıklandı.`,
+      ['Tatil kararı açıklanan yerler:', ...l.map(satir)].join('\n'),
+      iller.length === 1 && l.find((k) => k.not) ? l.find((k) => k.not).not : '',
+      'Liste yeni kararlar geldikçe güncellenir. İlinize ait son durumu Mersin Anlık "okullar tatil mi" sayfalarından takip edebilirsiniz. Kesin bilgi için valilik duyurularını esas alın.',
+    ].filter(Boolean).join('\n\n');
+    haber({ id: kimlik('t', hedefGun), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'egitim', kaynak: { ad: l[0].kaynak, link: l[0].link }, guncelle: true, kapak: 'okul', sonDakika: true });
   }
 }
 

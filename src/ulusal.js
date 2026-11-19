@@ -25,7 +25,10 @@ veri.hava ||= {};
 // ---------- Akaryakıt: en eski güncellenen illerden başla ----------
 const yakitSira = [...ILLER].sort((a, b) => String(veri.akaryakit[a.slug]?.guncelleme || '').localeCompare(String(veri.akaryakit[b.slug]?.guncelleme || '')));
 let yakitTamam = 0;
-for (const il of yakitSira.slice(0, YAKIT_ADET)) {
+// Büyük şehirler her turda (zam/indirim haberinde güncel fiyat için), diğerleri döngüsel
+const BUYUK_SEHIR = ['istanbul', 'ankara', 'izmir', 'antalya', 'bursa', 'adana'];
+const yakitTur = [...ILLER.filter((i) => BUYUK_SEHIR.includes(i.slug)), ...yakitSira.filter((i) => !BUYUK_SEHIR.includes(i.slug)).slice(0, YAKIT_ADET)];
+for (const il of yakitTur) {
   try {
     const r = await fetch(OPET.replace('ProvinceCode=33', `ProvinceCode=${Number(il.kod)}`), { headers: { 'User-Agent': UA, Accept: 'application/json' }, signal: AbortSignal.timeout(20000) });
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
