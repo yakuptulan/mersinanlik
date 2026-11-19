@@ -1300,3 +1300,5 @@ a.cip.kat:hover { filter: brightness(.95); }
 .kc-bas { padding-right: 36px; }
 .kc-bas span { flex-basis: 100%; }
 .kc-bas button { position: absolute; top: 12px; right: 12px; }
+.gm-zil { padding: 10px 16px; border-radius: 999px; font: inherit; font-weight: 800; cursor: pointer; border: 1.5px solid #ffd7a8; background: #fff8ef; color: #9a4b00; }
+.gm-zil.acik { background: #e9f8ef; border-color: #a6e3bd; color: #146c3a; }

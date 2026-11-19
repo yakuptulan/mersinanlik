@@ -206,6 +206,48 @@
     dokunX = null;
   });
 
+  // ---------- Sabah bildirimi (her gün 08.00) ----------
+  var zil = kok.querySelector('[data-gm-zil]');
+  function b64(s) {
+    var p = '='.repeat((4 - (s.length % 4)) % 4);
+    var r = atob((s + p).replace(/-/g, '+').replace(/_/g, '/'));
+    var a = new Uint8Array(r.length);
+    for (var i = 0; i < r.length; i++) a[i] = r.charCodeAt(i);
+    return a;
+  }
+  function zilDurum(acik) {
+    zil.classList.toggle('acik', acik);
+    zil.textContent = acik ? '🔔 Sabah bildirimi açık' : '🔔 Her sabah 08.00\'de bildir';
+  }
+  function aboneGonder(abonelik) {
+    return fetch('/api/abone', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ abonelik: abonelik.toJSON(), tercih: { ilce: tercih.ilce, kategori: tercih.kategori } }) })
+      .then(function (r) { if (!r.ok) throw new Error('kayıt'); });
+  }
+  if (VERI.vapid && 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window) {
+    navigator.serviceWorker.register('/sw.js').then(function (kayit) {
+      zil.hidden = false;
+      kayit.pushManager.getSubscription().then(function (a) {
+        zilDurum(Boolean(a));
+        if (a && tercih) aboneGonder(a).catch(function () {}); // tercihler değiştiyse güncelle
+      });
+      zil.addEventListener('click', function () {
+        kayit.pushManager.getSubscription().then(function (a) {
+          if (a) {
+            if (!confirm('Sabah bildirimlerini kapatmak istiyor musun?')) return;
+            fetch('/api/abone', { method: 'DELETE', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ endpoint: a.endpoint }) }).catch(function () {});
+            return a.unsubscribe().then(function () { zilDurum(false); });
+          }
+          return Notification.requestPermission().then(function (izin) {
+            if (izin !== 'granted') { alert('Bildirim izni verilmedi. Tarayıcı ayarlarından açabilirsin.'); return; }
+            return kayit.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64(VERI.vapid) }).then(function (yeni) {
+              return aboneGonder(yeni).then(function () { zilDurum(true); });
+            });
+          });
+        }).catch(function () { alert('Bildirim şu an açılamadı, biraz sonra tekrar dene.'); });
+      });
+    }).catch(function () {});
+  }
+
   // ---------- Başlat ----------
   fetch('/akis.json', { cache: 'no-cache' })
     .then(function (r) { return r.json(); })

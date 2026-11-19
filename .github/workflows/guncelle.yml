@@ -60,6 +60,12 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
+      - name: Sabah bildirimleri (Benim Gündemim)
+        run: node src/bildirim.js
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
       - name: Kulüp logoları (TFF)
         run: node src/logolar.js || true
 
@@ -117,4 +123,7 @@ jobs:
         run: |
           # Proje yoksa ilk seferde oluştur (varsa hata verir, yok sayılır)
           npx --yes wrangler@4 pages project create mersinanlik --production-branch=main || true
+          # Bildirim aboneliği için KV bağlantısı (KV alanı kurulduysa)
+          KV=$(node -e 'try{process.stdout.write(require("./data/bildirim.json").kvId||"")}catch{}')
+          if [ -n "$KV" ]; then printf 'name = "mersinanlik"\npages_build_output_dir = "dist"\ncompatibility_date = "2026-11-01"\n\n[[kv_namespaces]]\nbinding = "ABONE"\nid = "%s"\n' "$KV" > wrangler.toml; fi
           npx --yes wrangler@4 pages deploy dist --project-name=mersinanlik --branch=main --commit-dirty=true

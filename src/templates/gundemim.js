@@ -6,6 +6,7 @@ import { sayfa } from './layout.js';
 import { sayfasiVar, haberYolu, kapakAdresi } from './parcalar.js';
 import { bugununMaclari } from './servisParcalari.js';
 import { KONULAR, konuBul } from '../konular.js';
+import fs from 'node:fs';
 
 // Özeti cümle sınırında kısaltır
 function kisalt(m, n) {
@@ -60,6 +61,13 @@ export function gundemimSayfasi({ servis, simdi }) {
     kategoriler,
     konular: KONULAR.map(({ slug, ad }) => ({ slug, ad })),
     servis: servisOzeti(servis, simdi),
+    vapid: (() => {
+      try {
+        return JSON.parse(fs.readFileSync(new URL('../../data/bildirim.json', import.meta.url), 'utf8')).publicKey || null;
+      } catch {
+        return null;
+      }
+    })(),
   };
   const icerik = `<main class="kap govde gundemim" data-gundemim>
 <section class="gm-kurulum" data-gm-kurulum hidden>
@@ -73,7 +81,7 @@ export function gundemimSayfasi({ servis, simdi }) {
 <section class="gm-akis" data-gm-akis hidden>
   <div class="gm-ust">
     <div><h2 data-gm-selam></h2><p data-gm-alt></p></div>
-    <div class="gm-ust-dugmeler"><button type="button" class="gm-hizli" data-gm-hizli>⚡ Hızlı oku</button><button type="button" class="gm-duzenle" data-gm-duzenle>Tercihlerim</button></div>
+    <div class="gm-ust-dugmeler"><button type="button" class="gm-zil" data-gm-zil hidden>🔔 Sabah bildirimi</button><button type="button" class="gm-hizli" data-gm-hizli>⚡ Hızlı oku</button><button type="button" class="gm-duzenle" data-gm-duzenle>Tercihlerim</button></div>
   </div>
   <div class="gm-kutular" data-gm-kutular></div>
   <div class="gm-liste" data-gm-liste></div>
