@@ -155,3 +155,47 @@ ${turkiye.length ? `<section class="spor-bolum"><div class="bolum-bas"><h2>Türk
 ${sp.milli?.maclar?.length ? `<section class="spor-bolum" id="milli"><div class="bolum-bas"><h2>A Milli Takım</h2><span>Son maçlar</span></div>${macListesi(sp.milli.maclar.map((m) => ({ ...m, mersin: false, saat: null })))}</section>` : ''}
 <p style="color:var(--ikincil);font-size:14.5px">Puan durumu ve fikstür: Türkiye Futbol Federasyonu (tff.org). Kulüp logoları: TheSportsDB. Skorlar maç günlerinde yarım saatte bir güncellenir.</p>`;
 }
+
+// ---------- Ana sayfa: maç günü kartı ----------
+// Mersin takımının maçı bugünse (ya da son 18 saatte bittiyse) büyük kart; yoksa bugün Süper Lig maçı varsa şerit.
+export function macGunuKarti(servis, hikayeler, simdi = Date.now()) {
+  const L = servis?.spor?.ligler || {};
+  const bugun = gunStr(simdi);
+  const dun = gunStr(simdi - 864e5);
+  const mersinMaclari = Object.entries(L).flatMap(([kod, l]) => (l.maclar || []).filter((m) => m.mersin && (m.tarih === bugun || m.tarih === dun)).map((m) => ({ ...m, kod, lig: l.kisa })));
+  const durumu = (m) => {
+    const bas = m.saat ? new Date(`${m.tarih}T${m.saat}:00+03:00`).getTime() : null;
+    if (!bas) return m.skor ? 'bitti' : 'baslamadi';
+    if (simdi < bas) return 'baslamadi';
+    if (simdi < bas + 115 * 60e3) return 'oynaniyor';
+    return 'bitti';
+  };
+  const secili = mersinMaclari
+    .map((m) => ({ ...m, durum: durumu(m), bas: new Date(`${m.tarih}T${m.saat || '12:00'}:00+03:00`).getTime() }))
+    .filter((m) => m.tarih === bugun || (m.durum === 'bitti' && m.skor && simdi - m.bas < 20 * 36e5))
+    .sort((a, b) => a.bas - b.bas)[0];
+  if (secili) {
+    const takim = [secili.ev, secili.dep].find((t) => (L[secili.kod]?.puan || []).some((p) => p.takim === t && p.mersin)) || secili.ev;
+    const ilgili = hikayeler.filter((x) => x.macHaberi && x.baslik.includes(takim.split(' ').slice(0, 2).join(' ')) && simdi - new Date(x.ilkGorulme).getTime() < 36 * 36e5);
+    const sonra = ilgili.find((x) => x.id.startsWith('m'));
+    const once = ilgili.find((x) => x.id.startsWith('o'));
+    const [e, d] = String(secili.skor || '').split('-');
+    const ust = secili.durum === 'oynaniyor' ? '<b class="canli">● Şu an oynanıyor</b>' : secili.durum === 'bitti' ? (secili.skor ? 'Maç sonucu' : 'Maç bitti · skor birazdan') : `Maç günü · bugün ${h(secili.saat || '')}`;
+    const link = sonra || once;
+    return `<a class="macgunu-kart ${secili.durum}" href="${link ? h(haberYolu(link)) : `/spor/${secili.kod}/`}">
+<span class="mk-ust"><span>⚽ ${ust}</span><small>${h(secili.lig)}</small></span>
+<span class="mk-orta"><span class="mk-takim">${takimRozeti(secili.ev, secili.ev === takim)}<b>${h(secili.ev)}</b></span>
+<span class="mk-skor">${secili.skor && secili.durum !== 'baslamadi' ? `<b>${h(e)}</b><i>–</i><b>${h(d)}</b>` : secili.durum === 'baslamadi' ? `<i>${h(secili.saat || 'v')}</i>` : '<i>–</i>'}</span>
+<span class="mk-takim">${takimRozeti(secili.dep, secili.dep === takim)}<b>${h(secili.dep)}</b></span></span>
+<span class="mk-alt">${sonra ? 'Maç sonu haberini oku →' : once ? 'Maç önü: ' + h(once.baslik) + ' →' : 'Puan durumu ve fikstür →'}</span>
+</a>`;
+  }
+  const sl = (L['super-lig']?.maclar || []).filter((m) => m.tarih === bugun);
+  if (!sl.length) return '';
+  return `<section class="sl-serit"><a class="sl-serit-bas" href="/spor/#super-lig">🏆 Bugün Süper Lig'de</a><div class="sl-serit-maclar">${sl
+    .map((m) => {
+      const durum = durumu(m);
+      return `<a class="sl-serit-mac ${durum}" href="/spor/#super-lig"><span>${takimRozeti(m.ev)}${h(m.ev)}</span><b>${m.skor && durum !== 'baslamadi' ? h(m.skor.replace('-', ' – ')) : durum === 'baslamadi' ? h(m.saat || '') : '–'}</b><span>${takimRozeti(m.dep)}${h(m.dep)}</span>${durum === 'oynaniyor' ? '<i>canlı</i>' : ''}</a>`;
+    })
+    .join('')}</div></section>`;
+}
