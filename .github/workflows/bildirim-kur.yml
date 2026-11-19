@@ -1,0 +1,21 @@
+name: Bildirim altyapısını kur (Cloudflare KV)
+
+# Sabah bildirimleri için abonelikleri tutan KV alanını oluşturur ve VAPID anahtarlarını üretip oraya yazar.
+# Bir kez çalıştırmak yeter; tekrar çalıştırmak zararsızdır (var olanı korur).
+on:
+  workflow_dispatch: {}
+
+jobs:
+  kur:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CF_HESAP: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: KV alanı ve anahtarlar
+        run: node scripts/bildirim-kur.js
