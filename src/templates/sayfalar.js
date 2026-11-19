@@ -1,4 +1,5 @@
 import { gundemimKarti } from './gundemim.js';
+import { sporYan, sporAnaIcerik, sporMu } from './spor.js';
 import { macGunuKutusu } from './servisParcalari.js';
 import { SITE, ILCELER, AYAR } from '../config.js';
 import { htmlKacis as h, ayrilmaEki } from '../lib/text.js';
@@ -437,7 +438,7 @@ ${reklamAlani('yazi-sonu')}
 ${ilgili.length >= 3 ? `<div class="bolum-bas"><h2>Bunlar da ilginizi çekebilir</h2></div><div class="ilgili-kareler">${ilgili.slice(0, 3).map((x) => kareKart(x)).join('')}</div>` : ''}
 ${ilgili.length > 3 ? `<div class="bolum-bas"><h2>${ilce ? `${h(ilce.ad)}'${ayrilmaEki(ilce.ad)} diğer haberler` : 'Diğer haberler'}</h2></div>\n${haberListesi(ilgili.slice(3))}` : ''}
 </div>
-${yanKutular(servis, ilce)}
+${kat.slug === 'spor' ? sporYan(servis, ilgili) : yanKutular(servis, ilce)}
 </main>`;
   return sayfa({
     baslik: hikaye.baslik,
@@ -472,7 +473,8 @@ export function kategoriSayfasi({ kategori, hikayeler, servis }) {
     yol: `/kategori/${kategori.slug}/`,
     ust: `<div class="su-an-bas"><div><h1>${h(kategori.ad)}</h1><p style="margin-top:8px">Son ${AYAR.saklamaGun} gün · ${liste.length} haber</p></div></div>
 <nav class="kat-menu" aria-label="Kategoriler">${diger.map((k) => `<a href="/kategori/${k.slug}/" style="--kat:${k.renk}">${h(k.ad)}</a>`).join('')}</nav>`,
-    icerik: `<main class="kap govde"><div class="ana">${haberListesi(liste, 'Bu kategoride son günlerde haber yok.')}</div>${yanKutular(servis)}</main>`,
+    tema: kategori.slug === 'spor' ? 'spor' : undefined,
+    icerik: `<main class="kap govde"><div class="ana">${kategori.slug === 'spor' ? `<p class="giris-metni"><a href="/spor/">⚽ Mersin takımlarının puan durumu, fikstürü ve maçları için spor sayfası →</a></p>` : ''}${haberListesi(kategori.slug === 'spor' ? liste.filter(sporMu) : liste, 'Bu kategoride son günlerde haber yok.')}</div>${kategori.slug === 'spor' ? sporYan(servis, hikayeler) : yanKutular(servis)}</main>`,
   });
 }
 
@@ -560,30 +562,20 @@ function ligMenusu(ligler, aktif) {
 }
 
 export function sporSayfasi({ servis, hikayeler }) {
-  const sp = servis?.spor || {};
-  const ligler = sp.ligler || {};
-  const sl = ligler['super-lig'] || (sp.superLig?.puan?.length ? { ...sp.superLig, kisa: 'Süper Lig' } : null);
-  const m3 = ligler['3-lig-3'] || (sp.ucuncuLig?.puan?.length ? sp.ucuncuLig : null);
-  const haberler = hikayeler.filter((x) => !x.genel && x.kategori === 'spor').slice(0, 8);
-  const bolum = (id, baslik, alt, ic) => `<section class="spor-bolum" id="${id}"><div class="bolum-bas"><h2>${baslik}</h2>${alt ? `<span>${alt}</span>` : ''}</div>${ic}</section>`;
   const icerik = `<main class="kap govde"><div class="ana">
-${ligMenusu(ligler, null)}
-${m3 ? bolum('mersin', 'Mersin takımları', h(m3.ad), `${m3.maclar?.length ? `<h3 class="ara-baslik">Bu haftanın maçları</h3>${macListesi(m3.maclar)}` : ''}<h3 class="ara-baslik">Puan durumu</h3>${ligTablosu(m3)}`) : ''}
-${sp.milli?.maclar?.length ? bolum('milli', 'A Milli Takım', 'Son maçlar', macListesi(sp.milli.maclar.map((m) => ({ ...m, mersin: false, saat: null })))) : ''}
-${sl ? bolum('super-lig', 'Trendyol Süper Lig', `<a href="/spor/super-lig/">Lig sayfası →</a>`, `${ligSerit(sl)}${sl.maclar?.length ? `<h3 class="ara-baslik">Haftanın maçları</h3>${macListesi(sl.maclar)}` : ''}<h3 class="ara-baslik">Puan durumu</h3>${ligTablosu(sl)}`) : ''}
-${haberler.length ? `<div class="bolum-bas"><h2>Mersin spor haberleri</h2><a class="bolum-link" href="/kategori/spor/">Tümü →</a></div>${haberListesi(haberler)}` : ''}
-<p style="color:var(--ikincil);font-size:15px">Kaynak: Türkiye Futbol Federasyonu (tff.org). Son güncelleme: ${sp.guncelleme ? saat(sp.guncelleme) : '–'}</p>
-</div>${yanKutular(servis)}</main>`;
+${sporAnaIcerik({ servis, hikayeler, ligMenusu: ligMenusu(servis?.spor?.ligler || {}, null) })}
+</div>${sporYan(servis, hikayeler)}</main>`;
   return sayfa({
-    baslik: 'Spor – Mersin takımları, Süper Lig puan durumu, Milli Takım',
-    aciklama: 'Yeni Mersin İdmanyurdu ve Mersin takımlarının puan durumu, haftanın maçları, Süper Lig, 1. Lig, 2. Lig ve 3. Lig puan tabloları, A Milli Takım sonuçları.',
+    baslik: 'Mersin spor – Mersin takımları, Süper Lig puan durumu, maçlar',
+    aciklama: 'Yeni Mersin İdmanyurdu ve Mersin takımlarının puan durumu, formu ve fikstürü; Mersin spor haberleri, Süper Lig maçları ve puan tablosu, A Milli Takım sonuçları.',
     yol: '/spor/',
-    ust: `<div class="su-an-bas"><div><h1>Spor</h1><p style="margin-top:8px">Mersin takımları · Süper Lig · 1., 2. ve 3. Lig · A Milli Takım</p></div></div>`,
+    tema: 'spor',
+    ust: `<div class="su-an-bas"><div><h1>Spor</h1><p style="margin-top:8px">Mersin takımları · Mersin spor gündemi · Süper Lig · A Milli Takım</p></div></div>`,
     icerik,
   });
 }
 
-export function ligSayfasi({ servis, kod }) {
+export function ligSayfasi({ servis, kod, hikayeler = [] }) {
   const sp = servis?.spor || {};
   const k = sp.ligler?.[kod];
   const lig = LIGLER.find((l) => l.kod === kod);
@@ -591,7 +583,7 @@ export function ligSayfasi({ servis, kod }) {
 ${ligMenusu(sp.ligler || {}, kod)}
 ${k ? `${ligSerit(k)}${k.maclar?.length ? `<h3 class="ara-baslik">Haftanın maçları</h3>${macListesi(k.maclar)}` : ''}<h3 class="ara-baslik">Puan durumu</h3>${ligTablosu(k)}` : '<div class="bos">Puan durumu şu an alınamadı.</div>'}
 <p style="color:var(--ikincil);font-size:15px">Kaynak: Türkiye Futbol Federasyonu (tff.org). Son güncelleme: ${sp.guncelleme ? saat(sp.guncelleme) : '–'}</p>
-</div>${yanKutular(servis)}</main>`;
+</div>${sporYan(servis, hikayeler)}</main>`;
   return sayfa({
     baslik: `${lig.ad} puan durumu ve fikstür`,
     aciklama: `${lig.ad} güncel puan durumu, son 5 maç formu ve haftanın maçları.`,

@@ -19,7 +19,27 @@ export function bayrak(ad) {
   if (kod && fs.existsSync(new URL(`../../public/bayrak/${kod}.png`, import.meta.url))) return `<img class="bayrak" src="/bayrak/${kod}.png" alt="" width="28" height="20" loading="lazy">`;
   return '';
 }
+// Kulüp logoları (TFF'den alınıp küçültülmüş): takım adı → dosya. Build sırasında doldurulur.
+let LOGOLAR = new Map();
+export function logolariAyarla(servis) {
+  LOGOLAR = new Map();
+  let kayit = {};
+  try {
+    kayit = JSON.parse(fs.readFileSync(new URL('../../data/logolar.json', import.meta.url), 'utf8'));
+  } catch {}
+  for (const lig of Object.values(servis?.spor?.ligler || {}))
+    for (const [ad, id] of Object.entries(lig.kulup || {})) if (kayit[id]?.dosya) LOGOLAR.set(sadeAd(ad), kayit[id].dosya);
+}
+const sadeAd = (ad) => String(ad).toLocaleLowerCase('tr-TR').replace(/[^a-zçğıöşü0-9]/g, '');
+export function takimLogosu(ad) {
+  const s = sadeAd(ad);
+  let d = LOGOLAR.get(s);
+  if (!d && s.length > 4) for (const [k, v] of LOGOLAR) if (k.startsWith(s) || s.startsWith(k)) { d = v; break; }
+  return d ? `<img class="takim-logo" src="/logo/${d}" alt="" width="28" height="28" loading="lazy">` : '';
+}
 export function takimRozeti(ad, mersin = false) {
+  const logo = takimLogosu(ad);
+  if (logo) return logo;
   const harf = String(ad).split(/\s+/).filter((k) => /^[A-ZÇĞİÖŞÜ0-9]/.test(k)).slice(0, 2).map((k) => k[0]).join('') || '?';
   let n = 0;
   for (const c of String(ad)) n = (n * 31 + c.charCodeAt(0)) >>> 0;
@@ -151,9 +171,9 @@ export function macGunuKutusu(servis, simdi = Date.now()) {
   if (!maclar.length) return '';
   const canli = maclar.some((m) => m.durum === 'oynaniyor');
   const satir = (m) => `<a class="macgunu-satir${m.mersin ? ' mersin' : ''}" href="/spor/${m.kod}/">
-<span class="macgunu-takim ev">${h(m.ev)}</span>
+<span class="macgunu-takim ev">${h(m.ev)}${takimLogosu(m.ev)}</span>
 <span class="macgunu-orta ${m.durum}">${m.durum === 'baslamadi' ? h(m.saat || '–') : h(String(m.skor || '0-0').replace('-', ' – '))}<small>${m.durum === 'oynaniyor' ? 'oynanıyor' : m.durum === 'bitti' ? 'MS' : m.lig}</small></span>
-<span class="macgunu-takim dep">${h(m.dep)}</span>
+<span class="macgunu-takim dep">${takimLogosu(m.dep)}${h(m.dep)}</span>
 </a>`;
   return `<section class="kutu kutu-macgunu">
 ${kutuBasligi({ ikon: '⚽', baslik: 'Bugünün maçları', link: canli ? null : '/spor/', alt: canli ? '<span class="macgunu-canli">● oynanıyor</span>' : null })}
@@ -170,7 +190,7 @@ export function puanTablosu(puan, { kisa = false } = {}) {
 
 export function macListesi(maclar) {
   return `<div class="mac-liste">${maclar
-    .map((m) => `<div class="mac${m.mersin ? ' mersin' : ''}"><span class="mac-zaman">${kisaTarih(m.tarih)}${m.saat ? ` · ${m.saat}` : ''}</span><span class="mac-ev">${h(m.ev)} ${bayrak(m.ev)}</span><span class="mac-skor${m.skor ? '' : ' bos'}">${m.skor ? h(m.skor.replace('-', ' - ')) : 'v'}</span><span class="mac-dep">${bayrak(m.dep)} ${h(m.dep)}</span></div>`)
+    .map((m) => `<div class="mac${m.mersin ? ' mersin' : ''}"><span class="mac-zaman">${kisaTarih(m.tarih)}${m.saat ? ` · ${m.saat}` : ''}</span><span class="mac-ev">${h(m.ev)} ${bayrak(m.ev) || takimLogosu(m.ev)}</span><span class="mac-skor${m.skor ? '' : ' bos'}">${m.skor ? h(m.skor.replace('-', ' - ')) : 'v'}</span><span class="mac-dep">${bayrak(m.dep) || takimLogosu(m.dep)} ${h(m.dep)}</span></div>`)
     .join('')}</div>`;
 }
 

@@ -84,7 +84,7 @@ export function milliCoz(html) {
     });
 }
 
-async function sayfa(url, ua) {
+export async function sayfa(url, ua) {
   const r = await fetch(url, { headers: { 'User-Agent': ua }, signal: AbortSignal.timeout(25000) });
   if (!r.ok) throw new Error(`HTTP ${r.status} ${url}`);
   const b = Buffer.from(await r.arrayBuffer());
@@ -105,6 +105,16 @@ export async function sporGetir(ua) {
     await new Promise((x) => setTimeout(x, 1500));
   }
   return sonuc;
+}
+
+// Sayfadaki takım bağlantılarından TFF kulüp numaraları: { "Yeni Mersin İdmanyurdu": "1484" }
+export function kulupKimlikleri(html) {
+  const harita = {};
+  for (const m of String(html).matchAll(/kulupI[dD]=(\d+)[^>]*>([\s\S]{0,400}?)<\/a>/g)) {
+    const ad = temizle(m[2]).replace(/^\d+\.\s*/, '');
+    if (ad && /[A-Za-zÇĞİÖŞÜçğıöşü]{2}/.test(ad)) harita[takimAdi(ad)] = m[1];
+  }
+  return harita;
 }
 
 // ---------- Ligler (puan durumu + son 5 maç formu) ----------
@@ -154,7 +164,7 @@ export async function liglerGetir(ua, eski = {}) {
       const html = await sayfa(lig.url, ua);
       const puan = puanCoz(html);
       if (!puan.length) throw new Error('puan tablosu okunamadı');
-      const kayit = { ad: lig.ad, kisa: lig.kisa, kaynak: lig.url, puan, maclar: haftaCoz(html), haftalar: eski[lig.kod]?.haftalar || {} };
+      const kayit = { ad: lig.ad, kisa: lig.kisa, kaynak: lig.url, puan, maclar: haftaCoz(html), haftalar: eski[lig.kod]?.haftalar || {}, kulup: kulupKimlikleri(html) };
       if (lig.form) {
         const oynanan = Math.max(...puan.map((x) => x.o));
         // Son 5 haftanın sonuçları; eski haftalar önbellekten, son 2 hafta her seferinde yenilenir

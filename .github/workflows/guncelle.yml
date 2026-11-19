@@ -60,6 +60,9 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
+      - name: Kulüp logoları (TFF)
+        run: node src/logolar.js || true
+
       - name: Maç sonu haberleri (Mersin takımları)
         run: node src/mac.js
         env:
@@ -100,7 +103,7 @@ jobs:
         run: |
           git config user.name "mersinanlik-bot"
           git config user.email "bot@mersinanlik.com"
-          git add -A data/ public/foto/ public/uretilen/ public/etkinlik/ public/bilgi/ public/gezi/ public/bayrak/
+          git add -A data/ public/foto/ public/uretilen/ public/etkinlik/ public/bilgi/ public/gezi/ public/logo/ public/bayrak/
           if git diff --cached --quiet; then
             echo "Değişiklik yok"
           else
