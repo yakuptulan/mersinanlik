@@ -1,9 +1,9 @@
 {
- "guncelleme": "2026-11-19T00:01:35.919Z",
+ "guncelleme": "2026-11-19T00:31:51.747Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 15,
-   "durum": "Bulutlu",
+   "sicaklik": 16,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
@@ -111,7 +111,7 @@
   },
   "bozyazi": {
    "sicaklik": 16,
-   "durum": "Hafif sağanak",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
@@ -147,7 +147,7 @@
   },
   "camliyayla": {
    "sicaklik": 10,
-   "durum": "Bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
@@ -183,7 +183,7 @@
   },
   "erdemli": {
    "sicaklik": 16,
-   "durum": "Bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
@@ -218,8 +218,8 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 11,
-   "durum": "Açık",
+   "sicaklik": 10,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
@@ -254,7 +254,7 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 15,
+   "sicaklik": 16,
    "durum": "Bulutlu",
    "gunler": [
     {
@@ -291,7 +291,7 @@
   },
   "mut": {
    "sicaklik": 14,
-   "durum": "Az bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
@@ -363,7 +363,7 @@
   },
   "tarsus": {
    "sicaklik": 15,
-   "durum": "Hafif yağmurlu",
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
@@ -398,8 +398,8 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 15,
-   "durum": "Bulutlu",
+   "sicaklik": 16,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
@@ -434,8 +434,8 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 15,
-   "durum": "Bulutlu",
+   "sicaklik": 16,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-19",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-19T00:01:39.844Z",
+  "guncelleme": "2026-11-19T00:31:57.385Z",
   "liste": [
    {
     "ad": "Anadolu Eczanesi",
@@ -674,7 +674,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-19T00:01:40.843Z",
+  "guncelleme": "2026-11-19T00:31:58.585Z",
   "liste": [
    {
     "tur": "su",
@@ -882,7 +882,7 @@
   "kaynakSaati": "2026-11-19 03:01:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-19T00:01:47.572Z",
+  "guncelleme": "2026-11-19T00:32:05.934Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -1487,7 +1487,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-18T21:31:59.985Z",
+  "guncelleme": "2026-11-19T00:32:09.966Z",
   "liste": [
    {
     "id": "48wy1j",
@@ -1591,7 +1591,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-18T23:32:28.310Z",
+  "guncelleme": "2026-11-19T00:32:09.967Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -7658,19 +7658,47 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-19T00:01:48.491Z",
+  "guncelleme": "2026-11-19T00:32:06.782Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 40
+    "sayi": 37
+   },
+   {
+    "yol": "/haber/mersin-yenisehir-de-20-cadde-trafige-kapatiliyor-iste-tarih-ve-saat-1729jhi/",
+    "sayi": 2
+   },
+   {
+    "yol": "/haber/mersin-de-kimler-yasiyor-iste-sanliurfali-diyarbakirli-adanali-ve-dige-11ff6hs/",
+    "sayi": 2
+   },
+   {
+    "yol": "/piyasalar/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/tarsus-ta-kadinlara-uretim-ve-satis-imkani-qn5595/",
+    "sayi": 1
+   },
+   {
+    "yol": "/trafik/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/mersin-buyuksehir-belediyesinde-olcay-tok-un-gorevden-resmen-ayrildi-611nvu/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/mersinli-tenisci-milli-takim-secmelerine-katilmaya-hak-kazandi-1w4hsnx/",
+    "sayi": 1
    }
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-19T00:01:49.837Z",
+  "guncelleme": "2026-11-19T00:32:54.595Z",
   "deniz": {
    "sicaklik": 21.9,
-   "dalga": 0.44
+   "dalga": 0.48
   },
   "hava": {
    "aqi": 44,
@@ -7680,7 +7708,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-18T23:33:15.481Z",
+  "guncelleme": "2026-11-19T00:32:55.799Z",
   "giden": [
    {
     "no": [
@@ -7691,7 +7719,7 @@
     "planlanan": "2026-11-19T01:30:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -7703,7 +7731,7 @@
     "planlanan": "2026-11-19T02:00:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -7715,7 +7743,7 @@
     "planlanan": "2026-11-19T02:30:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
