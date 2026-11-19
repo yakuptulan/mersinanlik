@@ -1412,3 +1412,14 @@ a.cip.kat:hover { filter: brightness(.95); }
 .uyari-bandi.sondakika { background: linear-gradient(90deg, #7f1d1d, #dc2626 60%, #b91c1c); }
 .uyari-bandi.sondakika .uyari-ikon { animation: sd-nabiz 1.4s ease-in-out infinite; }
 @keyframes sd-nabiz { 50% { opacity: .35; } }
+/* İlçe sayfası son dakika */
+.ilce-sondakika { display: grid; gap: 10px; margin: 0 0 18px; }
+.isd-kart { display: flex; align-items: center; gap: 14px; padding: 10px 16px 10px 10px; border-radius: 18px; background: #fff; border: 2px solid #fecaca; box-shadow: 0 12px 28px -20px rgba(220,38,38,.6); text-decoration: none; color: var(--metin); }
+.isd-kart:hover { border-color: #f87171; }
+.isd-kart img { width: 128px; height: 72px; object-fit: cover; border-radius: 12px; flex: none; }
+.isd-metin { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.isd-rozet { color: #dc2626; font-weight: 800; font-size: 12.5px; text-transform: uppercase; letter-spacing: .04em; }
+.isd-metin b { font-size: 16.5px; line-height: 1.3; }
+.isd-metin small { color: var(--ikincil); font-size: 13px; }
+.isd-ok { font-size: 20px; font-weight: 800; color: #dc2626; }
+@media (max-width: 520px) { .isd-kart img { width: 96px; height: 54px; } }

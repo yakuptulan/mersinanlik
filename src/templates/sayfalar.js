@@ -361,6 +361,18 @@ ${ilceDugmeleri()}
   });
 }
 
+// İlçeye ait otomatik haber (yol kapanması, su kesintisi, deprem, okul tatili…) 6 saat boyunca ilçe sayfasının en üstünde
+function ilceSonDakika(hikayeler, ilce, simdi) {
+  const liste = hikayeler
+    .filter((x) => (x.otomatik || x.macHaberi) && x.ilceler?.includes(ilce.slug) && simdi - new Date(x.ilkGorulme).getTime() < 6 * 36e5)
+    .sort((a, b) => new Date(b.ilkGorulme) - new Date(a.ilkGorulme))
+    .slice(0, 2);
+  if (!liste.length) return '';
+  return `<section class="ilce-sondakika">${liste
+    .map((x) => `<a class="isd-kart" href="${h(haberYolu(x))}">${x.kapak ? `<img src="/kapak/${h(x.kapak)}.webp" alt="" width="160" height="90">` : ''}<span class="isd-metin"><span class="isd-rozet">● Son dakika · ${h(ilce.ad)}</span><b>${h(x.baslik)}</b><small>${saat(x.ilkGorulme)} · ${h(x.kaynaklar[0]?.ad || '')}</small></span><span class="isd-ok" aria-hidden="true">→</span></a>`)
+    .join('')}</section>`;
+}
+
 export function ilceSayfasi({ ilce, hikayeler, servis, simdi, havuz = hikayeler }) {
   const liste = hikayeler.filter((x) => x.ilceler.includes(ilce.slug)).slice(0, AYAR.ilceHaberSayisi);
   // Son 7 günde ilçenin öne çıkanları: en çok kaynağın yazdığı haberler
@@ -381,6 +393,7 @@ ${hava ? `<div class="widgetlar widgetlar-gun">${hava.gunler
   const icerik = `<main class="kap govde">
 <div class="ana">
 ${ilceServisMenusu(ilce, 'haber')}
+${ilceSonDakika(hikayeler, ilce, simdi)}
 ${haftaninlari.length >= 3 ? `<section class="ilce-hafta"><div class="ih-bas"><span>📌</span><div><h2>Son 7 günde ${h(ilce.ad)}'${ayrilmaEki(ilce.ad)}</h2><small>Haftanın öne çıkan ${haftaninlari.length} gelişmesi</small></div></div>
 <ol>${haftaninlari.map((x) => `<li><a href="${h(haberYolu(x))}"><b>${h(x.baslik)}</b><small>${new Date(x.ilkGorulme).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long', timeZone: 'Europe/Istanbul' })}${kaynakSayisi(x) > 1 ? ` · ${kaynakSayisi(x)} kaynak yazdı` : ''}</small></a></li>`).join('')}</ol></section>` : ''}
 <div class="bolum-bas"><h2>${h(ilce.ad)}'${ayrilmaEki(ilce.ad)} son haberler</h2><span>${liste.length} haber</span></div>
