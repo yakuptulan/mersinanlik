@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-18T23:32:05.674Z",
+ "guncelleme": "2026-11-19T00:01:35.919Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 15,
@@ -326,7 +326,7 @@
    ]
   },
   "silifke": {
-   "sicaklik": 16,
+   "sicaklik": 15,
    "durum": "Az bulutlu",
    "gunler": [
     {
@@ -349,15 +349,15 @@
     },
     {
      "tarih": "2026-11-22",
-     "min": 15,
-     "max": 22,
+     "min": 14,
+     "max": 23,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-23",
-     "min": 14,
+     "min": 12,
      "max": 20,
-     "durum": "Az bulutlu"
+     "durum": "Açık"
     }
    ]
   },
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-18T23:32:11.658Z",
+  "guncelleme": "2026-11-19T00:01:39.844Z",
   "liste": [
    {
     "ad": "Anadolu Eczanesi",
@@ -674,7 +674,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-18T23:32:12.854Z",
+  "guncelleme": "2026-11-19T00:01:40.843Z",
   "liste": [
    {
     "tur": "su",
@@ -711,32 +711,32 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-18T23:32:15.662Z",
+  "guncelleme": "2026-11-19T00:01:45.164Z",
   "kalemler": {
    "gram": {
-    "alis": 6063.75,
-    "satis": 6064.58,
-    "degisim": 0.4
+    "alis": 6068.22,
+    "satis": 6069.01,
+    "degisim": 0.48
    },
    "ceyrek": {
-    "alis": 9985,
-    "satis": 10082,
-    "degisim": 0.4
+    "alis": 9992,
+    "satis": 10089,
+    "degisim": 0.47
    },
    "gumus": {
-    "alis": 73.67,
-    "satis": 73.79,
-    "degisim": 0.9
+    "alis": 73.76,
+    "satis": 73.85,
+    "degisim": 0.99
    },
    "usd": {
-    "alis": 50.4477,
-    "satis": 50.4797,
+    "alis": 50.4485,
+    "satis": 50.4795,
     "degisim": 0.06
    },
    "eur": {
-    "alis": 55.4898,
-    "satis": 55.5617,
-    "degisim": 0.22
+    "alis": 55.4767,
+    "satis": 55.5477,
+    "degisim": 0.2
    },
    "bist": {
     "alis": null,
@@ -744,132 +744,132 @@
     "degisim": -1.57
    },
    "btc": {
-    "satis": 3165385,
-    "usd": 62725,
-    "degisim": -3.32
+    "satis": 3177824,
+    "usd": 62969,
+    "degisim": -2.88
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 6063.75,
-    "satis": 6064.58,
-    "degisim": 0.4
+    "alis": 6068.22,
+    "satis": 6069.01,
+    "degisim": 0.48
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 9985,
-    "satis": 10082,
-    "degisim": 0.4
+    "alis": 9992,
+    "satis": 10089,
+    "degisim": 0.47
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 19995,
-    "satis": 20158,
-    "degisim": 0.4
+    "alis": 20009,
+    "satis": 20172,
+    "degisim": 0.47
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 39868,
-    "satis": 40168,
-    "degisim": 0.4
+    "alis": 39896,
+    "satis": 40196,
+    "degisim": 0.47
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40941,
-    "satis": 41241,
-    "degisim": 0.4
+    "alis": 40970,
+    "satis": 41270,
+    "degisim": 0.47
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40941,
-    "satis": 41241,
-    "degisim": 0.4
+    "alis": 40970,
+    "satis": 41270,
+    "degisim": 0.47
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40941,
-    "satis": 41241,
-    "degisim": 0.4
+    "alis": 40970,
+    "satis": 41270,
+    "degisim": 0.47
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5579.46,
-    "satis": 5777.12,
-    "degisim": 0.4
+    "alis": 5583.47,
+    "satis": 5781.2,
+    "degisim": 0.47
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4234,
+    "alis": 4235,
     "satis": 4945,
     "degisim": 0.41
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3344.74,
-    "satis": 4508.64,
-    "degisim": 0.35
+    "alis": 3347.22,
+    "satis": 4511.47,
+    "degisim": 0.42
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 6033.43,
-    "satis": 6034.25,
-    "degisim": 0.4
+    "alis": 6037.87,
+    "satis": 6038.67,
+    "degisim": 0.48
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 73.67,
-    "satis": 73.79,
-    "degisim": 0.9
+    "alis": 73.76,
+    "satis": 73.85,
+    "degisim": 0.99
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.4477,
-    "satis": 50.4797,
+    "alis": 50.4485,
+    "satis": 50.4795,
     "degisim": 0.06
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.4898,
-    "satis": 55.5617,
-    "degisim": 0.22
+    "alis": 55.4767,
+    "satis": 55.5477,
+    "degisim": 0.2
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.4847,
-    "satis": 66.5586,
-    "degisim": 0.21
+    "alis": 66.4786,
+    "satis": 66.5518,
+    "degisim": 0.2
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 59.8091,
-    "satis": 59.8661,
-    "degisim": 0.05
+    "alis": 59.8078,
+    "satis": 59.8423,
+    "degisim": 0.03
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.4468,
-    "satis": 13.4579,
-    "degisim": 0.07
+    "alis": 13.4462,
+    "satis": 13.4558,
+    "degisim": 0.06
    },
    {
     "k": "RUB",
@@ -879,10 +879,10 @@
     "degisim": 0.05
    }
   ],
-  "kaynakSaati": "2026-11-19 02:32:01"
+  "kaynakSaati": "2026-11-19 03:01:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-18T23:02:00.339Z",
+  "guncelleme": "2026-11-19T00:01:47.572Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -7658,52 +7658,24 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-18T23:32:26.017Z",
+  "guncelleme": "2026-11-19T00:01:48.491Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 34
-   },
-   {
-    "yol": "/haber/mersin-yenisehir-de-20-cadde-trafige-kapatiliyor-iste-tarih-ve-saat-1729jhi/",
-    "sayi": 2
-   },
-   {
-    "yol": "/haber/mersin-de-kimler-yasiyor-iste-sanliurfali-diyarbakirli-adanali-ve-dige-11ff6hs/",
-    "sayi": 2
-   },
-   {
-    "yol": "/piyasalar/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/tarsus-ta-kadinlara-uretim-ve-satis-imkani-qn5595/",
-    "sayi": 1
-   },
-   {
-    "yol": "/trafik/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/mersin-buyuksehir-belediyesinde-olcay-tok-un-gorevden-resmen-ayrildi-611nvu/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/mersinli-tenisci-milli-takim-secmelerine-katilmaya-hak-kazandi-1w4hsnx/",
-    "sayi": 1
+    "sayi": 40
    }
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-18T23:33:14.014Z",
+  "guncelleme": "2026-11-19T00:01:49.837Z",
   "deniz": {
    "sicaklik": 21.9,
-   "dalga": 0.42
+   "dalga": 0.44
   },
   "hava": {
    "aqi": 44,
    "pm25": 22.5,
-   "pm10": 26.9,
+   "pm10": 26.7,
    "uvMax": 2
   }
  },
