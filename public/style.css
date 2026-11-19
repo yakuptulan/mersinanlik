@@ -1264,3 +1264,13 @@ a.cip.kat:hover { filter: brightness(.95); }
 .takim-rozet, .takim-logo { flex: none; }
 .mini-tablo { table-layout: fixed; }
 .mini-tablo th { min-width: 0; overflow: hidden; }
+.gezi-hava { margin: 22px 0; padding: 18px 20px; border-radius: 18px; background: linear-gradient(135deg, #eef6ff, #f7fbff); border: 1px solid #dbe8fb; }
+.gezi-hava h2 { font-size: 19px; margin-bottom: 12px; }
+.gezi-hava-gunler { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
+.gh-gun { padding: 12px 14px; border-radius: 14px; background: #fff; border: 1px solid #e3e8f2; display: flex; flex-direction: column; gap: 2px; border-left: 4px solid #94a3b8; }
+.gh-gun.p3 { border-left-color: #16a34a; } .gh-gun.p2 { border-left-color: #0ea5e9; } .gh-gun.p1 { border-left-color: #f59e0b; } .gh-gun.p0 { border-left-color: #dc2626; }
+.gh-gun small { color: var(--ikincil); font-weight: 700; font-size: 12.5px; }
+.gh-gun b { font-size: 19px; }
+.gh-gun span { font-size: 14px; }
+.gh-gun em { font-style: normal; font-size: 13px; color: var(--ikincil); }
+.gezi-hava p { margin: 12px 0 0; font-size: 14.5px; color: var(--ikincil); }

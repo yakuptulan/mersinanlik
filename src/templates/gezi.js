@@ -56,6 +56,30 @@ const yon = (a, b) => {
   return ['kuzeyinde', 'kuzeydoğusunda', 'doğusunda', 'güneydoğusunda', 'güneyinde', 'güneybatısında', 'batısında', 'kuzeybatısında'][Math.round(((aci + 360) % 360) / 45) % 8];
 };
 
+// "Ne zaman gideyim?": ilçenin 5 günlük tahmininden hafta sonu (yoksa önümüzdeki günler) için kısa öneri
+const YAGIS = /yağmur|sağanak|kar|fırtına|gök gürültü|dolu/i;
+function gunNotu(tur, g) {
+  const yagis = YAGIS.test(g.durum);
+  if (tur === 'muze' || tur === 'magara') return yagis ? { p: 2, n: 'Yağmurlu gün için iyi bir kapalı mekân seçeneği' } : { p: 2, n: 'Gezmek için uygun' };
+  if (yagis) return { p: 0, n: 'Yağış bekleniyor, açık alan için uygun değil' };
+  if (g.max >= 33) return { p: 1, n: 'Çok sıcak; sabah erken ya da akşamüstü gidin' };
+  if (tur === 'deniz') return g.max >= 26 ? { p: 3, n: 'Deniz ve sahil için güzel bir gün' } : { p: 2, n: 'Deniz için serin, sahilde gezmek için güzel' };
+  if (g.max < 10) return { p: 1, n: 'Soğuk; kalın giyinin' };
+  return { p: 3, n: 'Gezmek için uygun' };
+}
+function havaOnerisi(tur, hv, ilce) {
+  const gunler = (hv?.gunler || []).filter((g) => g.tarih);
+  if (!gunler.length) return '';
+  const haftaSonu = gunler.filter((g) => [0, 6].includes(new Date(`${g.tarih}T12:00:00+03:00`).getUTCDay()));
+  const liste = haftaSonu.length ? haftaSonu : gunler.slice(0, 3);
+  const gunAd = (t) => new Date(`${t}T12:00:00+03:00`).toLocaleDateString('tr-TR', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/Istanbul' });
+  const notlar = liste.map((g) => ({ g, ...gunNotu(tur, g) }));
+  const en = [...notlar].sort((a, b) => b.p - a.p)[0];
+  return `<section class="gezi-hava"><h2>${haftaSonu.length ? 'Bu hafta sonu gidilir mi?' : 'Önümüzdeki günlerde hava'}</h2>
+<div class="gezi-hava-gunler">${notlar.map((x) => `<div class="gh-gun p${x.p}"><small>${h(gunAd(x.g.tarih))}</small><b>${x.g.max}° / ${x.g.min}°</b><span>${h(x.g.durum)}</span><em>${h(x.n)}</em></div>`).join('')}</div>
+<p>${en.p >= 2 ? `En uygun gün: <b>${h(gunAd(en.g.tarih))}</b>.` : 'Bu günler için hava pek elverişli görünmüyor.'} Tahmin ${h(ilce)} için, günde birkaç kez güncellenir.</p></section>`;
+}
+
 export function geziSayfasi({ yer: y, yerler, servis }) {
   const yol = geziYolu(y.slug);
   const t = TUR[y.tur] || TUR.antik;
@@ -110,6 +134,7 @@ ${y.spot ? `<p class="haber-spot">${h(y.spot)}</p>` : ''}
 <li><h2>Ne zaman gidilir?</h2><p>${h(t.zaman)}</p></li>
 <li><h2>Nasıl gidilir?</h2><p>${h(y.ad)}, Mersin'in ${h(ilceAd(y.ilce))} ilçesinde${km != null ? `, şehir merkezinin yaklaşık ${km} km ${yon(MERKEZ, y.koord)}` : ''} bulunuyor. En pratik yol özel araç; ilçe merkezine dolmuş ve otobüslerle de ulaşılabiliyor. Güncel yol durumu ve süre için <a href="${h(harita)}" rel="noopener" target="_blank">yol tarifini</a> kullanabilirsiniz.</p></li>
 </ol>
+${havaOnerisi(y.tur, hv, ilceAd(y.ilce))}
 ${osm ? `<figure class="gezi-harita"><iframe src="${h(osm)}" loading="lazy" title="${h(y.ad)} haritası" referrerpolicy="no-referrer"></iframe><figcaption>Harita: © <a href="https://www.openstreetmap.org/copyright" rel="noopener" target="_blank">OpenStreetMap</a> katkıcıları</figcaption></figure>` : ''}
 ${y.ipuclari?.length ? `<section class="gezi-ipucu"><h2>Gitmeden bilin</h2><ul>${y.ipuclari.map((x) => `<li>${h(x)}</li>`).join('')}</ul></section>` : ''}
 ${yakin.length ? `<section class="gezi-yakin"><h2>Yakında ne var?</h2><div class="gezi-yakin-liste">${yakin.map((x) => `<a href="${geziYolu(x.slug)}">${x.gorsel ? `<img src="/gezi/${h(x.gorsel.dosya)}" alt="" loading="lazy" width="160" height="90">` : ''}<span><b>${h(x.ad)}</b><small>~${Math.max(1, Math.round(x.km))} km</small></span></a>`).join('')}</div></section>` : ''}

@@ -46,7 +46,7 @@ function sablon(f) {
   const yer = ev ? 'sahasında' : 'deplasmanda';
   const fiil = { galibiyet: `${yer} ${rakip} karşısında ${biz}-${onlar} galip geldi`, mağlubiyet: `${yer} ${rakip} karşısında ${biz}-${onlar} mağlup oldu`, beraberlik: `${yer} ${rakip} ile ${biz}-${onlar} berabere kaldı` }[f.sonuc];
   const p = [];
-  p.push(`${f.lig}${f.hafta ? ` ${f.hafta}. haftasında` : "'de"} ${f.takim}, ${gunAdi(f.mac.tarih)} günü oynanan maçta ${fiil}.`);
+  p.push(`${f.takim}, ${f.lig}${f.hafta ? ` ${f.hafta}. hafta` : ''} maçında ${gunAdi(f.mac.tarih)} günü ${fiil}.`);
   if (f.tablo) p.push(`Bu sonucun ardından ${f.takim}, ${f.tablo.o} maçta topladığı ${f.tablo.p} puanla ligde ${f.tablo.sira}. sırada yer alıyor. Takım ${f.tablo.g} galibiyet, ${f.tablo.b} beraberlik ve ${f.tablo.m} mağlubiyet aldı; ${f.tablo.a} gol atıp ${f.tablo.y} gol yedi.`);
   if (f.siradaki) p.push(`${f.takim}, ligdeki bir sonraki maçında ${gunAdi(f.siradaki.tarih)}${f.siradaki.saat ? ` saat ${f.siradaki.saat}'da` : ''} ${f.siradaki.ev === f.takim ? `sahasında ${f.siradaki.dep}` : `deplasmanda ${f.siradaki.ev}`} ile karşılaşacak.`);
   return { baslik: `${f.takim} ${fiil}`, ozet: p[0], metin: p.join('\n\n') };
@@ -131,6 +131,7 @@ async function main() {
       }
     }
   }
+  yeni += await macOnuYazilari({ servis, durum, veri, simdi });
   durum.yazilan = durum.yazilan.slice(-200);
   // Eski kayıtları temizle (10 günden eski maç günleri)
   const sinir = new Date(simdi - 10 * 864e5).toISOString().slice(0, 10);
@@ -138,6 +139,84 @@ async function main() {
   fs.writeFileSync(DURUM, JSON.stringify(durum, null, 1));
   if (yeni) kaydet(veri);
   else console.log('Maç haberi: yeni biten Mersin maçı yok.');
+}
+
+// ---------- Maç önü: Mersin takımının maçından bir gün önce (maça 6–30 saat kala) kısa tanıtım ----------
+const ONCE_TALIMAT = `Sen Mersin'de yayın yapan yerel bir haber sitesinin spor muhabirisin. Bir Mersin takımının yaklaşan maçı için kısa bir "maç önü" haberi yaz.
+KURALLAR:
+- SADECE verilen bilgileri kullan. Sakat/cezalı oyuncu, kadro, teknik direktör açıklaması, stat adı, bilet, yayın kanalı, hakem UYDURMA. Skor tahmini yapma.
+- Tarafsız, sade haber dili; abartı ve ünlem yok.
+- baslik: en fazla 90 karakter (örnek kalıp: "Yeni Mersin İdmanyurdu, yarın sahasında Karaman'ı ağırlıyor").
+- ozet: 1-2 cümle (maçın günü, saati, ligi).
+- metin: 3 kısa paragraf, aralarında boş satır: 1) maçın künyesi, 2) Mersin takımının puan durumu ve son maçları, 3) rakibin puan durumu ve son maçları.
+Yalnızca JSON döndür: {"baslik":"","ozet":"","metin":""}`;
+
+async function macOnuYazilari({ servis, durum, veri, simdi }) {
+  let yeni = 0;
+  for (const [, l] of Object.entries(servis.spor?.ligler || {})) {
+    for (const m of l.maclar || []) {
+      if (!m.mersin || m.skor || !m.saat) continue;
+      const bas = new Date(`${m.tarih}T${m.saat}:00+03:00`).getTime();
+      const kalan = bas - simdi;
+      if (kalan < 6 * 36e5 || kalan > 30 * 36e5) continue;
+      const satir = (ad) => (l.puan || []).find((p) => p.takim === ad);
+      for (const takimSatir of (l.puan || []).filter((p) => p.mersin && (p.takim === m.ev || p.takim === m.dep))) {
+        const takim = takimSatir.takim;
+        const anahtar = `once|${m.tarih}|${m.ev}|${m.dep}|${takim}`;
+        if (durum.yazilan.includes(anahtar)) continue;
+        const rakipAd = m.ev === takim ? m.dep : m.ev;
+        const rakip = satir(rakipAd);
+        const tablo = (t) => (t ? `${t.sira}. sıra, ${t.o} maç, ${t.g}G ${t.b}B ${t.m}M, attığı ${t.a}, yediği ${t.y}, ${t.p} puan` : 'bilinmiyor');
+        const form = (ad) => (l.form?.[ad] || []).slice(-5).join(' ') || 'bilinmiyor';
+        const yarinMi = new Date(bas).toLocaleDateString('sv-SE', { timeZone: TZ }) !== new Date(simdi).toLocaleDateString('sv-SE', { timeZone: TZ });
+        const girdi = [
+          `Lig: ${l.ad}`,
+          `Maç: ${m.ev} (ev sahibi) – ${m.dep} (deplasman)`,
+          `Tarih: ${gunAdi(m.tarih)} (${yarinMi ? 'yarın' : 'bugün'}), saat ${m.saat}`,
+          `Haberin takımı: ${takim} (${m.ev === takim ? 'iç sahada' : 'deplasmanda'})`,
+          `${takim} puan durumu: ${tablo(takimSatir)}; son maçlar (eskiden yeniye): ${form(takim)}`,
+          `${rakipAd} puan durumu: ${tablo(rakip)}; son maçlar (eskiden yeniye): ${form(rakipAd)}`,
+        ].join('\n');
+        let yazi = null;
+        try {
+          const j = await jsonYaz(ONCE_TALIMAT, girdi, { sicaklik: 0.4, sadeceGemini: true });
+          if (j?.baslik && j?.metin && j.metin.includes(m.saat)) yazi = { baslik: String(j.baslik).trim().slice(0, 110), ozet: String(j.ozet || '').trim(), metin: String(j.metin).trim() };
+        } catch (e) {
+          console.log('Maç önü: yapay zekâ hatası, şablon kullanılıyor', e.message);
+        }
+        if (!yazi) {
+          const ic = m.ev === takim;
+          const p1 = `${takim}, ${l.ad} maçında ${gunAdi(m.tarih)} saat ${m.saat}'te ${ic ? 'sahasında' : 'deplasmanda'} ${rakipAd} ile karşılaşacak.`;
+          const p2 = `${takim}, ${takimSatir.o} maçta topladığı ${takimSatir.p} puanla ligde ${takimSatir.sira}. sırada bulunuyor; ${takimSatir.g} galibiyet, ${takimSatir.b} beraberlik ve ${takimSatir.m} mağlubiyeti var.`;
+          const p3 = rakip ? `Rakip ${rakipAd} ise ${rakip.o} maçta ${rakip.p} puan topladı ve ${rakip.sira}. sırada yer alıyor.` : '';
+          yazi = { baslik: `${takim}, ${yarinMi ? 'yarın' : 'bugün'} ${ic ? 'sahasında' : 'deplasmanda'} ${rakipAd} karşısında`, ozet: p1, metin: [p1, p2, p3].filter(Boolean).join('\n\n') };
+        }
+        const zaman = new Date(simdi).toISOString();
+        veri.hikayeler.push({
+          id: 'o' + crypto.createHash('sha1').update(anahtar).digest('hex').slice(0, 5),
+          baslik: yazi.baslik,
+          ozet: yazi.ozet,
+          metin: yazi.metin,
+          ilceler: ilceBul(takim),
+          genel: false,
+          kategori: 'spor',
+          riskNedenleri: [],
+          durum: 'yayinda',
+          onaylandi: false,
+          ilkGorulme: zaman,
+          sonGuncelleme: zaman,
+          kaynaklar: [{ kaynakId: 'tff', ad: 'TFF', link: l.kaynak || 'https://www.tff.org/', baslik: `${l.ad} fikstür ve puan durumu`, tarih: zaman }],
+          yaziKaynak: 'TFF',
+          metinDenemesi: 2,
+          macHaberi: true,
+        });
+        durum.yazilan.push(anahtar);
+        yeni++;
+        console.log('Maç önü yazıldı:', yazi.baslik);
+      }
+    }
+  }
+  return yeni;
 }
 
 // Haftalık sonuç listesinde bu maç skoru zaten varsa tablo da büyük ihtimalle bu maçı içeriyor
