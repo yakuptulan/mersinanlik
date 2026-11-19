@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-19T07:02:08.610Z",
+ "guncelleme": "2026-11-19T07:27:08.434Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 18,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-19T07:02:13.040Z",
+  "guncelleme": "2026-11-19T07:27:11.537Z",
   "liste": [
    {
     "ad": "Arıç Eczanesi",
@@ -762,7 +762,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-19T07:02:14.195Z",
+  "guncelleme": "2026-11-19T07:27:12.509Z",
   "liste": [
    {
     "tur": "su",
@@ -795,6 +795,24 @@
        "Hürriyet",
        "Kazanlı",
        "Toroslar"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Anamur ilçesi Bahçe Mahallesi'nde oluşan içme suyu arızası nedeniyle saat 13.00'e kadar su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-19T07:24:00.000Z",
+    "bitis": "2026-11-19T10:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "anamur",
+      "ad": "Anamur",
+      "mahalleler": [
+       "Bahçe",
+       "Bahçelievler",
+       "Sağlık"
       ]
      }
     ]
@@ -993,7 +1011,7 @@
   "kaynakSaati": "2026-11-19 09:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-19T07:02:21.590Z",
+  "guncelleme": "2026-11-19T07:27:18.817Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -1702,7 +1720,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-19T06:32:13.034Z",
+  "guncelleme": "2026-11-19T07:27:20.539Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -7769,23 +7787,55 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-19T07:02:22.170Z",
+  "guncelleme": "2026-11-19T07:27:19.160Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 30
+    "sayi": 27
    },
    {
     "yol": "/haber/mersin-de-kamyonet-ile-otomobilin-carpistigi-kazada-1-kisi-oldu-2-kisi-1bfosq4/",
     "sayi": 3
    },
    {
+    "yol": "/spor/super-lig/",
+    "sayi": 3
+   },
+   {
+    "yol": "/spor/",
+    "sayi": 3
+   },
+   {
+    "yol": "/kategori/ekonomi/",
+    "sayi": 2
+   },
+   {
+    "yol": "/kategori/yasam/",
+    "sayi": 2
+   },
+   {
     "yol": "/haber/mersin-yenisehir-de-20-cadde-trafige-kapatiliyor-iste-tarih-ve-saat-1729jhi/",
+    "sayi": 2
+   },
+   {
+    "yol": "/kategori/turkiye-dunya/",
+    "sayi": 2
+   },
+   {
+    "yol": "/haber/mersin-buyuksehir-den-cocuklara-dopdolu-ara-tatil-programi-ple3hp/",
     "sayi": 2
    },
    {
     "yol": "/haber/mersin-de-kimler-yasiyor-iste-sanliurfali-diyarbakirli-adanali-ve-dige-11ff6hs/",
     "sayi": 2
+   },
+   {
+    "yol": "/piyasalar/",
+    "sayi": 1
+   },
+   {
+    "yol": "/bilgi/",
+    "sayi": 1
    },
    {
     "yol": "/haber/tarsus-ta-kadinlara-uretim-ve-satis-imkani-qn5595/",
@@ -7800,15 +7850,39 @@
     "sayi": 1
    },
    {
+    "yol": "/akaryakit-fiyatlari/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/tarihi-kilikya-yolu-nda-uc-parkur-daha-yurundu-1fgfdln/",
+    "sayi": 1
+   },
+   {
+    "yol": "/gundemim/",
+    "sayi": 1
+   },
+   {
+    "yol": "/spor/1-lig/",
+    "sayi": 1
+   },
+   {
     "yol": "/haber/mersinli-tenisci-milli-takim-secmelerine-katilmaya-hak-kazandi-1w4hsnx/",
+    "sayi": 1
+   },
+   {
+    "yol": "/kategori/belediye/",
+    "sayi": 1
+   },
+   {
+    "yol": "/kategori/asayis/",
     "sayi": 1
    }
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-19T07:02:24.078Z",
+  "guncelleme": "2026-11-19T07:28:01.376Z",
   "deniz": {
-   "sicaklik": 21.8,
+   "sicaklik": 21.9,
    "dalga": 0.68
   },
   "hava": {
@@ -7819,7 +7893,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-19T07:02:25.096Z",
+  "guncelleme": "2026-11-19T07:28:02.206Z",
   "giden": [
    {
     "no": [
@@ -7830,7 +7904,7 @@
     "planlanan": "2026-11-19T07:35:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "BOARDING",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -7842,7 +7916,7 @@
     "planlanan": "2026-11-19T08:00:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "dis"
    },
    {
@@ -8327,18 +8401,6 @@
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "PC1851"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Ercan",
-    "planlanan": "2026-11-19T07:25:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "dis"
-   },
    {
     "no": [
      "TK2454"

@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-19T07:26:32.260Z"
   }
  },
  "gorsel": {
@@ -46,7 +50,8 @@
    "https://www.yenisehir.bel.tr/haber/yenisehir-belediyesi-atayi-andi-1",
    "https://www.yenisehir.bel.tr/haber/yenisehirde-egitim-yardimi-basvurulari-basladi",
    "https://yenisehir.bel.tr/haber/yenisehirde-egitim-yardimi-basvurulari-basladi",
-   "https://www.yenisehir.bel.tr/haber/guvercinler-evi-ele-gecirdi-bir-traktor-pislik-cikti"
+   "https://www.yenisehir.bel.tr/haber/guvercinler-evi-ele-gecirdi-bir-traktor-pislik-cikti",
+   "https://yenisehir.bel.tr/haber/guvercinler-evi-ele-gecirdi-bir-traktor-pislik-cikti"
   ],
   "tarsus-belediyesi": [],
   "erdemli-belediyesi": [
@@ -198,7 +203,8 @@
    "https://mersingundem.com/haber/13656/tarsusta-kamyon-ile-otomobil-carpisti-1-olu-2-yarali.html",
    "https://mersingundem.com/haber/13657/akdenizde-yollar-ve-kaldirimlar-yenileniyor.html",
    "https://mersingundem.com/haber/13655/mide-balonu-operasyonunda-olen-universitelinin-davasinda-iddianame-hazirlandi.html",
-   "https://mersingundem.com/haber/13654/iki-gun-agacta-mahsur-kalan-kedi-itfaiye-ekiplerini-gorunce-kacti.html"
+   "https://mersingundem.com/haber/13654/iki-gun-agacta-mahsur-kalan-kedi-itfaiye-ekiplerini-gorunce-kacti.html",
+   "https://mersingundem.com/haber/13661/cocuklar-ara-tatili-atolyelerde-degerlendiriyor.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -241,8 +247,12 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-19T07:01:53.944Z",
+  "guncelleme": "2026-11-19T07:27:01.879Z",
   "liste": [
+   {
+    "baslik": "demet özdemir",
+    "trafik": 200
+   },
    {
     "baslik": "neymar",
     "trafik": 100
@@ -264,24 +274,20 @@
     "trafik": 100
    },
    {
-    "baslik": "çağatay ulusoy",
-    "trafik": 200
+    "baslik": "ayça varlıer",
+    "trafik": 500
+   },
+   {
+    "baslik": "tazminat",
+    "trafik": 500
    },
    {
     "baslik": "aday işlemleri sistemi",
     "trafik": 500
    },
    {
-    "baslik": "tazminat",
-    "trafik": 200
-   },
-   {
     "baslik": "osman aşkın bak",
-    "trafik": 100
-   },
-   {
-    "baslik": "cavaliers - grizzlies",
-    "trafik": 100
+    "trafik": 200
    }
   ]
  },
