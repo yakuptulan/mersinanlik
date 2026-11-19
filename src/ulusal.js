@@ -8,7 +8,7 @@ import ILLER from './iller.json' with { type: 'json' };
 const UA = 'MersinAnlikBot/1.0 (+https://mersinanlik.com; iletisim@mersinanlik.com)';
 const DOSYA = 'data/ulusal.json';
 const YAKIT_ADET = Number(process.env.YAKIT_ADET || 14);
-const NAMAZ_ISTEK = Number(process.env.NAMAZ_ISTEK || 8);
+const NAMAZ_ISTEK = Number(process.env.NAMAZ_ISTEK || 14);
 const bekle = (ms) => new Promise((x) => setTimeout(x, ms));
 const sade = (s) => String(s).toLocaleUpperCase('tr-TR').replace(/[^A-ZÇĞİÖŞÜ]/g, '');
 const bugun = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Istanbul' });
@@ -60,17 +60,21 @@ ilAdlari.set(sade('AFYON'), 'afyonkarahisar');
 ilAdlari.set(sade('K.MARAS'), 'kahramanmaras');
 ilAdlari.set(sade('KAHRAMANMARAS'), 'kahramanmaras');
 // Türkiye'nin Diyanet şehir kodları 500–580 aralığında
+let ardisikHata = 0;
 for (let s = 500; s <= 580 && istek < NAMAZ_ISTEK && Object.keys(veri.diyanet.ilce).length < 81; s++) {
-  if (veri.diyanet.tarananSehir.includes(s)) continue;
+  veri.diyanet.hata ||= {};
+  if (veri.diyanet.tarananSehir.includes(s) || (veri.diyanet.hata[s] || 0) >= 3) continue;
   try {
     const ilceler = await ezan(`/ilceler/${s}`);
     if (!ilceler) break;
     const merkez = ilceler.find((x) => ilAdlari.has(sade(x.IlceAdi)));
     if (merkez) veri.diyanet.ilce[ilAdlari.get(sade(merkez.IlceAdi))] = merkez.IlceID;
     veri.diyanet.tarananSehir.push(s);
+    ardisikHata = 0;
   } catch (e) {
     console.warn(`! Diyanet şehir ${s}: ${e.message}`);
-    break; // engellendiyse sonraki çalışmaya bırak
+    veri.diyanet.hata[s] = (veri.diyanet.hata[s] || 0) + 1;
+    if (++ardisikHata >= 3) break; // art arda engellendiyse sonraki çalışmaya bırak; bu kod sonra yeniden denenir
   }
 }
 // Vakitler: elinde 10 günden az ileri tarih kalan iller
