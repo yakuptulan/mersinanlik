@@ -527,7 +527,7 @@ export function kategoriSayfasi({ kategori, hikayeler, servis }) {
   const diger = KATEGORI_SAYFALARI.filter((k) => k.slug !== kategori.slug && hikayeler.some(k.filtre));
   return sayfa({
     baslik: kategori.slug === 'turkiye-dunya' ? 'Türkiye ve dünyadan son dakika haberleri' : kategori.slug === 'tum-haberler' ? 'Mersin son dakika haberleri – tümü' : `Mersin ${kategori.ad.toLocaleLowerCase('tr-TR')} haberleri`,
-    aciklama: `Mersin ve ilçelerinden son ${kategori.ad.toLocaleLowerCase('tr-TR')} haberleri. Kaynakları belirtilerek derlenir.`,
+    aciklama: `Mersin ${kategori.ad.toLocaleLowerCase('tr-TR')} haberleri: Akdeniz, Yenişehir, Mezitli, Toroslar, Tarsus, Erdemli ve tüm ilçelerden son dakika gelişmeler. Kaynakları belirtilerek, gün boyu güncellenir.`,
     yol: `/kategori/${kategori.slug}/`,
     ust: `<div class="su-an-bas"><div><h1>${h(kategori.ad)}</h1><p style="margin-top:8px">Son ${AYAR.saklamaGun} gün · ${liste.length} haber</p></div></div>
 <nav class="kat-menu" aria-label="Kategoriler">${diger.map((k) => `<a href="/kategori/${k.slug}/" style="--kat:${k.renk}">${h(k.ad)}</a>`).join('')}</nav>`,
@@ -744,7 +744,7 @@ export function akaryakitSayfasi({ servis }) {
 export function ilcelerSayfasi() {
   return sayfa({
     baslik: 'Mersin ilçeleri',
-    aciklama: "Mersin'in 13 ilçesinden son haberler.",
+    aciklama: "Mersin'in 13 ilçesinden son haberler: Akdeniz, Yenişehir, Mezitli, Toroslar, Tarsus, Erdemli, Silifke, Anamur ve diğer ilçelerde bugün neler oluyor?",
     yol: '/ilceler/',
     ust: `<div class="su-an-bas"><div><h1>İlçeni seç</h1><p style="margin-top:8px">Seçtiğin ilçe ana sayfada öne çıkar.</p></div></div>`,
     icerik: `<main class="kap govde"><div class="ana">${ilceDugmeleri()}</div></main>`,
@@ -762,7 +762,7 @@ export function havaSayfasi({ servis }) {
   const gunAdlari = (servis?.hava?.yenisehir?.gunler || []).slice(1, 4).map((g) => new Date(g.tarih).toLocaleDateString('tr-TR', { weekday: 'long' }));
   return sayfa({
     baslik: 'Mersin hava durumu – 13 ilçe',
-    aciklama: "Mersin'in 13 ilçesi için güncel hava durumu ve 3 günlük tahmin.",
+    aciklama: "Mersin hava durumu: bugün, yarın ve 5 günlük tahmin. Yenişehir, Tarsus, Erdemli, Silifke, Anamur dahil 13 ilçenin sıcaklık ve yağış durumu, MGM uyarıları.",
     yol: '/hava-durumu/',
     ust: `${meteoBandi(servis)}<div class="su-an-bas"><div><h1>Hava durumu</h1></div></div>`,
     icerik: `<main class="kap govde"><div class="ana"><div class="tablo-kap"><table class="tablo"><thead><tr><th>İlçe</th><th>Şu an</th>${gunAdlari.map((g) => `<th>${g}</th>`).join('')}</tr></thead><tbody>${satirlar}</tbody></table></div>
@@ -774,7 +774,7 @@ export function depremSayfasi({ servis }) {
   const liste = servis?.deprem || [];
   return sayfa({
     baslik: 'Mersin ve çevresinde son depremler',
-    aciklama: 'Mersin ve çevresinde son 7 günde olan depremler (AFAD verisi).',
+    aciklama: 'Mersin ve çevresinde son depremler: son 7 günde Mersin, Adana, Antalya ve Akdeniz açıklarında olan depremlerin büyüklüğü, yeri ve derinliği (AFAD verisi).',
     yol: '/deprem/',
     ust: `<div class="su-an-bas"><div><h1>Son depremler</h1><p style="margin-top:8px">Mersin ve çevresi · son 7 gün</p></div></div>`,
     icerik: `<main class="kap govde"><div class="ana">${

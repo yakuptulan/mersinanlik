@@ -370,7 +370,7 @@ export function okulIlSayfasi({ il, kararlar, hava, simdi }) {
   ];
   return sayfa({
     baslik: `${bul} yarın okullar tatil mi? ${il.ad} kar tatili son dakika`,
-    aciklama: durum,
+    aciklama: `${durum} ${yh ? `Yarın ${il.ad} hava durumu: ${yh.durum.toLocaleLowerCase('tr-TR')}, ${yh.min}°/${yh.max}°.` : ''} Valilik kar tatili kararları anlık takipte.`.replace(/\s+/g, ' ').trim(),
     yol: okulIlYolu(il.slug),
     aktif: '/okullar-tatil-mi/',
     jsonLd: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: sss.map((s) => ({ '@type': 'Question', name: s.soru, acceptedAnswer: { '@type': 'Answer', text: s.cevap } })) },
