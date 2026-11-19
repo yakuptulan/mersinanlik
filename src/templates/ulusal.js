@@ -314,7 +314,7 @@ export function sonDepremlerSayfasi({ kayit, simdi }) {
     ust: `<div class="su-an-bas"><div><div class="cipler"><a class="cip" href="/deprem/">Mersin ve çevresi</a></div><h1>Son depremler</h1><p style="margin-top:8px">Türkiye geneli · AFAD · son güncelleme ${h(saatStr(kayit.guncelleme))}</p></div></div>`,
     icerik: `<main class="kap govde"><div class="ana">
 ${depremOzet(liste, simdi, 'Türkiye geneli')}
-${buyuk.length ? `<div class="bolum-bas"><h2>Son 30 günün 4 ve üzeri depremleri</h2></div><div class="dp-buyuk">${buyuk.map((d) => { const il = depremIli(d); return `<a class="dp-kart" href="${il ? depremIlYolu(il.slug) : '#'}"><span class="dp-b ${bSinif(d.b)}">${d.b.toFixed(1).replace('.', ',')}</span><span><b>${h([d.ilce, d.il].filter(Boolean).join(', ') || d.yer)}</b><small>${h(new Date(d.t).toLocaleString('tr-TR', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: TZ }))} · ${String(d.d).replace('.', ',')} km derinlik</small></span></a>`; }).join('')}</div>` : ''}
+${buyuk.length ? `<div class="bolum-bas"><h2>4 ve üzeri depremler</h2></div><div class="dp-buyuk">${buyuk.map((d) => { const il = depremIli(d); return `<a class="dp-kart" href="${il ? depremIlYolu(il.slug) : '#'}"><span class="dp-b ${bSinif(d.b)}">${d.b.toFixed(1).replace('.', ',')}</span><span><b>${h([d.ilce, d.il].filter(Boolean).join(', ') || d.yer)}</b><small>${h(new Date(d.t).toLocaleString('tr-TR', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: TZ }))} · ${String(d.d).replace('.', ',')} km derinlik</small></span></a>`; }).join('')}</div>` : ''}
 <div class="bolum-bas"><h2>Son 7 gün</h2><span>büyüklük 2 ve üzeri · en yeni üstte</span></div>
 ${depremTablo(son, simdi)}
 <div class="bolum-bas"><h2>İllere göre son depremler</h2></div>
@@ -329,15 +329,15 @@ export function ilDepremSayfasi({ il, liste, simdi, guncelleme }) {
   const enB = [...liste].sort((a, b) => b.b - a.b)[0];
   const sss = [
     { soru: `${bul} en son ne zaman deprem oldu?`, cevap: `${bul} kaydedilen son deprem ${new Date(liste[0].t).toLocaleString('tr-TR', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: TZ })} tarihinde ${liste[0].ilce || il.ad} merkezli, ${liste[0].b.toFixed(1).replace('.', ',')} büyüklüğündeydi.` },
-    { soru: `${bul} son 30 günde kaç deprem oldu?`, cevap: `AFAD verilerine göre ${bul} son 30 günde büyüklüğü 2 ve üzeri ${liste.length} deprem kaydedildi; en büyüğü ${enB.b.toFixed(1).replace('.', ',')} büyüklüğündeydi (${enB.ilce || il.ad}).` },
+    { soru: `${bul} son günlerde kaç deprem oldu?`, cevap: `AFAD verilerine göre ${bul} son ${Math.max(1, Math.ceil((Date.now() - new Date(liste.at(-1).t)) / 864e5))} günde büyüklüğü 2 ve üzeri ${liste.length} deprem kaydedildi; en büyüğü ${enB.b.toFixed(1).replace('.', ',')} büyüklüğündeydi (${enB.ilce || il.ad}).` },
   ];
   return sayfa({
-    baslik: `${il.ad} deprem: ${bul} son depremler (bugün ve son 30 gün)`,
-    aciklama: `${bul} son depremler: son deprem ${liste[0].ilce || il.ad} merkezli ${liste[0].b.toFixed(1).replace('.', ',')}. Son 30 günde ${liste.length} deprem. AFAD verisiyle liste.`,
+    baslik: `${il.ad} deprem: ${bul} son depremler (bugün ve son günler)`,
+    aciklama: `${bul} son depremler: son deprem ${liste[0].ilce || il.ad} merkezli ${liste[0].b.toFixed(1).replace('.', ',')}. Son günlerde ${liste.length} deprem. AFAD verisiyle liste.`,
     yol: depremIlYolu(il.slug),
     aktif: '/deprem/',
     jsonLd: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: sss.map((s) => ({ '@type': 'Question', name: s.soru, acceptedAnswer: { '@type': 'Answer', text: s.cevap } })) },
-    ust: `<div class="su-an-bas"><div><div class="cipler"><a class="cip" href="/son-depremler/">Türkiye geneli</a></div><h1>${h(il.ad)} son depremler</h1><p style="margin-top:8px">AFAD · son 30 gün · son güncelleme ${h(saatStr(guncelleme))}</p></div></div>`,
+    ust: `<div class="su-an-bas"><div><div class="cipler"><a class="cip" href="/son-depremler/">Türkiye geneli</a></div><h1>${h(il.ad)} son depremler</h1><p style="margin-top:8px">AFAD · son güncelleme ${h(saatStr(guncelleme))}</p></div></div>`,
     icerik: `<main class="kap govde"><div class="ana">
 ${depremOzet(liste, simdi, il.ad)}
 ${depremTablo(liste.slice(0, 200), simdi, false)}
