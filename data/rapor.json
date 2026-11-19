@@ -1,14 +1,15 @@
 {
  "gunler": {
   "2026-11-19": {
-   "guncelleme": "2026-11-19T13:33:36.747Z",
-   "mersinHaber": 36,
-   "kendiYazimiz": 36,
-   "turkiyeDunya": 210,
-   "otomatik": 4,
+   "guncelleme": "2026-11-19T14:03:57.376Z",
+   "mersinHaber": 39,
+   "kendiYazimiz": 39,
+   "turkiyeDunya": 225,
+   "otomatik": 5,
    "otomatikTurler": {
     "piyasa": 1,
-    "su": 3
+    "su": 3,
+    "eczane": 1
    },
    "otomatikBasliklar": [
     {
@@ -30,10 +31,15 @@
      "baslik": "Akdeniz'de su kesintisi: 8 saat sürecek",
      "tur": "su",
      "saat": "16:03"
+    },
+    {
+     "baslik": "Mersin nöbetçi eczaneler: 19 Kasım Perşembe",
+     "tur": "eczane",
+     "saat": "17:03"
     }
    ],
    "gorsel": 26,
-   "bilgi": 2,
+   "bilgi": 3,
    "gezi": 12,
    "kaynakHatalari": []
   }

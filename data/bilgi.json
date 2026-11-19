@@ -1,6 +1,70 @@
 {
  "yazilar": [
   {
+   "slug": "voleybol-nedir-kurallari-pozisyonlari-ve-tarihi",
+   "konu": "Voleybol",
+   "trend": "voleybol",
+   "tur": "gundem",
+   "baslik": "Voleybol nedir? Kuralları, pozisyonları ve tarihi",
+   "spot": "File ile ikiye bölünmüş sahada altışarlı iki takımla oynanan voleybolun tarihi, kuralları ve oyuncu pozisyonları.",
+   "aciklama": "Mersin'de merak edilenler köşesi için hazırlanan bu yazıda, voleybolun temel kuralları, tarihi, saha dizilimi ve pozisyonları yer almaktadır.",
+   "bolumler": [
+    {
+     "baslik": "Voleybol Nasıl Bir Spordur?",
+     "metin": "Voleybol, file ile ikiye bölünmüş bir oyun alanı üzerinde altı kişilik iki takım ile oynanan bir takım sporudur. Oyunun temel amacı, voleybol topunu en fazla üç pas yaparak rakip takımın sahasına göndermek ve yere çarpmasını sağlamaktır. Oyuncular sahanın kendi yarısında bulunur ve asla rakip alana geçmezler. Topa yalnızca eller ve kollarla değil, bütün vücutla dokunulabilir."
+    },
+    {
+     "baslik": "Temel Oyun Kuralları Nelerdir?",
+     "metin": "Oyuncular topu sabit olarak ellerinde tutamazlar, üst üste iki kez vuramazlar ve taşıyamazlar. Topa üç kereden fazla dokunmak, rakip sahaya basmak, fileyi tutmak veya temas etmek faul olarak kabul edilir ve bu durumlarda top karşı takıma geçer. Takımlardan biri topu rakip sahaya değdirmeyi başardığında 1 puan kazanır."
+    },
+    {
+     "baslik": "Set Sistemi Nasıl İşler?",
+     "metin": "Bir voleybol maçı toplam beş setten oluşur. İlk dört sette hedef, en az iki fark ile 25 puana ulaşmaktır. Son sette ise hedef yine en az iki farkla 15 puana ulaşmaktır. Bir takım üst üste 3 set kazanırsa maç sona erer."
+    },
+    {
+     "baslik": "Voleybolun Tarihçesi",
+     "metin": "Voleybol, ABD'nin Massachusetts eyaletinde beden eğitimi öğretmeni William G. Morgan tarafından 9 Şubat 1895'te tasarlandı. Morgan bu oyunu ilk olarak mintonette olarak adlandırmıştı, daha sonra topa yere değmeden vurma ilkesinden yola çıkılarak voleybol adı önerildi. 1947'de Paris'te Uluslararası Voleybol Federasyonu kuruldu ve ilk Dünya Şampiyonası 1949'da erkekler, 1952'de kadınlar arasında oynandı."
+    },
+    {
+     "baslik": "Olimpiyatlarda Voleybol",
+     "metin": "Tokyo'da oynanan 1964 Yaz Olimpiyatlarından bu yana voleybol bir olimpiyat oyunudur. Atlanta'da oynanan 1996 Yaz Olimpiyatları'ndan bu yana plaj voleybolu da olimpiyat oyunları arasındadır. Ayrıca erkekler oturarak voleybol 1980'de, kadınlar oturarak voleybol ise 2004 yılında Paralimpik Oyunlara dahil edilmiştir."
+    },
+    {
+     "baslik": "Sahadaki Oyuncu Pozisyonları",
+     "metin": "Sahada pasör, pasör çaprazı, smaçör, orta oyuncu ve libero gibi farklı görevler bulunur. Filenin önünde bulunan üç oyuncu ön hat oyuncusu olarak 4, 3 ve 2 numaralı alanlarda durur. Geri hat oyuncuları ise 5, 6 ve 1 numaralı alanlarda savunma yapar."
+    },
+    {
+     "baslik": "Libero Oyuncusunun Özellikleri",
+     "metin": "Libero, takımın savunma oyuncusudur ve diğer oyunculardan farklı renkte forma giyer. Arka alanda parmak pas ve manşet alabilirken, topu 3 metre içinde parmak pasla alamaz. Servis atamaz ve 3 metre içinden hücum yapamaz, ancak arka alandan zıplamadan hücum edebilir."
+    }
+   ],
+   "sss": [
+    {
+     "soru": "Voleybol maçı kaç set üzerinden oynanır?",
+     "cevap": "Bir voleybol maçı toplam beş setten oluşur."
+    },
+    {
+     "soru": "Voleybolu kim tasarlamıştır?",
+     "cevap": "William G. Morgan tarafından 1895 yılında tasarlanmıştır."
+    },
+    {
+     "soru": "Liberonun diğer oyunculardan farkı nedir?",
+     "cevap": "Farklı renkte forma giyer, servis atamaz ve libero oyuncusu olduğu adının yanındaki L ibaresiyle belirtilir."
+    }
+   ],
+   "kaynak": {
+    "ad": "Vikipedi: Voleybol",
+    "link": "https://tr.wikipedia.org/wiki/Voleybol"
+   },
+   "gorsel": {
+    "dosya": "voleybol-nedir-kurallari-pozisyonlari-ve-tarihi.webp",
+    "yazar": "Wikimedia Commons",
+    "lisans": "CC BY 2.0",
+    "sayfa": "https://commons.wikimedia.org/wiki/File:Europei_di_pallavolo_2005_-_Italia-Russia.jpg"
+   },
+   "tarih": "2026-11-19T14:03:55.256Z"
+  },
+  {
    "slug": "malatya-nin-tarihi-ve-adi-nereden-geliyor-kayisi-diyari-hakkinda-bilgi",
    "konu": "Malatya",
    "trend": "malatya",
@@ -807,6 +871,7 @@
   "osman aşkın bak",
   "alihan kuriş",
   "togg kadın kampanyası",
-  "malatya"
+  "malatya",
+  "voleybol"
  ]
 }
