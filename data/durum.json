@@ -12,15 +12,11 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "toros-universitesi": {
-   "hata": "The operation was aborted due to timeout",
-   "zaman": "2026-11-19T17:31:53.174Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-19",
-  "adet": 32
+  "adet": 34
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -276,8 +272,24 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-19T17:32:06.080Z",
+  "guncelleme": "2026-11-19T18:01:41.105Z",
   "liste": [
+   {
+    "baslik": "žalgiris - panathinaikos",
+    "trafik": 200
+   },
+   {
+    "baslik": "halef neden final yapıyor",
+    "trafik": 200
+   },
+   {
+    "baslik": "arnold schwarzenegger",
+    "trafik": 100
+   },
+   {
+    "baslik": "putin",
+    "trafik": 100
+   },
    {
     "baslik": "yönetici",
     "trafik": 200
@@ -287,8 +299,12 @@
     "trafik": 500
    },
    {
+    "baslik": "kızılelma",
+    "trafik": 2000
+   },
+   {
     "baslik": "jude bellingham",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "gs samsun",
@@ -297,26 +313,6 @@
    {
     "baslik": "indirim",
     "trafik": 5000
-   },
-   {
-    "baslik": "bist 30",
-    "trafik": 200
-   },
-   {
-    "baslik": "aile ve sosyal hizmetler bakanlığı",
-    "trafik": 500
-   },
-   {
-    "baslik": "trt spor yıldız canlı",
-    "trafik": 500
-   },
-   {
-    "baslik": "murat ağırel",
-    "trafik": 2000
-   },
-   {
-    "baslik": "son yemek",
-    "trafik": 200
    }
   ]
  },
