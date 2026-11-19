@@ -251,21 +251,33 @@ async function main() {
       h.yaziKaynak = parcalar[0].ad;
       if (parcalar[0].kurum) h.kurum = parcalar[0].ad;
     }
-    const bekleyen = veri.hikayeler.filter((h) => h.ozetIcinMetin && !h.metin && h.durum === 'yayinda' && (h.yazimDenemesi || 0) < 3).slice(0, 10);
+    const bekleyen = veri.hikayeler.filter((h) => h.ozetIcinMetin && !h.metin && h.durum === 'yayinda' && (h.yazimDenemesi || 0) < 5).slice(0, 10);
     for (const h of bekleyen) h.yazimDenemesi = (h.yazimDenemesi || 0) + 1;
-    try {
-      const sonuclar = await topluOzetle(bekleyen.map((h) => `${h.baslik}\n${h.ozetIcinMetin}`));
-      bekleyen.forEach((h, i) => {
+    const uygula = (liste, sonuclar) =>
+      liste.forEach((h, i) => {
         const r = sonuclar[i];
         if (!r) return;
         h.ozet = r.ozet;
         if (r.metin) h.metin = r.metin;
         delete h.ozetIcinMetin;
       });
-      if (bekleyen.length) console.log(`✍️  Özet: ${sonuclar.filter(Boolean).length}/${bekleyen.length}, haber yazısı: ${bekleyen.filter((h) => h.metin).length}`);
+    // Önce toplu, toplu yanıt bozuk gelirse (ör. JSON hatası) tek tek dene: biri yüzünden hepsi kalmasın
+    const toplu = bekleyen.filter((h) => (h.yazimDenemesi || 0) <= 1);
+    const tekli = bekleyen.filter((h) => (h.yazimDenemesi || 0) > 1);
+    try {
+      if (toplu.length) uygula(toplu, await topluOzetle(toplu.map((h) => `${h.baslik}\n${h.ozetIcinMetin}`)));
     } catch (e) {
-      console.warn(`! Gemini: ${e.message}`);
+      console.warn(`! Gemini toplu: ${e.message} → tek tek deneniyor`);
+      tekli.push(...toplu);
     }
+    for (const h of tekli) {
+      try {
+        uygula([h], await topluOzetle([`${h.baslik}\n${h.ozetIcinMetin}`]));
+      } catch (e) {
+        console.warn(`! Gemini (${h.baslik.slice(0, 40)}): ${e.message}`);
+      }
+    }
+    if (bekleyen.length) console.log(`✍️  Haber yazısı: ${bekleyen.filter((h) => h.metin).length}/${bekleyen.length}`);
   }
 
   // 4a) Kurum fotoğrafları

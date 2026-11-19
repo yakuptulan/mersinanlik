@@ -1192,3 +1192,8 @@ a.cip.kat:hover { filter: brightness(.95); }
 .gezi-yakin-liste b { display: block; font-size: 15px; }
 .gezi-yakin-liste small { color: var(--ikincil); }
 .gezi-uyari { font-size: 14.5px; color: var(--ikincil); margin: 18px 0; }
+/* Kısa haber (yazımız hazır değilken) */
+.kisa-haber { margin: 8px 0 18px; padding: 18px 20px; border-radius: 18px; background: #f5f8fd; border: 1px solid #e3e8f2; }
+.kisa-haber p { margin: 0 0 12px; color: var(--ikincil); font-size: 15.5px; line-height: 1.55; }
+.kisa-haber-dugme { display: inline-block; padding: 12px 20px; border-radius: 999px; background: var(--derin-mavi); color: #fff; font-weight: 800; text-decoration: none; }
+.kisa-haber-dugme:hover { filter: brightness(1.1); }

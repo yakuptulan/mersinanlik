@@ -7,8 +7,9 @@ import { saat, ilceAdi } from './layout.js';
 
 // Kendi yazımız olan hikâyeler (aramaya açık, site haritasında)
 export const kendiSayfasiVar = (hikaye) => Boolean(hikaye.metin);
-// Sitede sayfası olan hikâyeler: kendi yazımız ya da kendi özetimiz var. Kaynak sayfanın en altında.
-export const sayfasiVar = (hikaye) => Boolean(hikaye.metin || hikaye.ozet);
+// Her haberin sitede bir sayfası var. Yazımız henüz hazır değilse sayfa kısa haber olarak açılır,
+// ayrıntılar için kaynağa bağlantı verir (arama motorlarına kapalı tutulur).
+export const sayfasiVar = () => true;
 export const haberYolu = (hikaye) => `/haber/${slugify(hikaye.baslik).slice(0, 70).replace(/-+$/, '')}-${hikaye.id}/`;
 // Kart bağlantısı: kendi sayfası varsa oraya, yoksa kaynağa
 function baglanti(hikaye) {

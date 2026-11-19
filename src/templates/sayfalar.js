@@ -422,9 +422,13 @@ export function haberSayfasi({ hikaye, ilgili, servis }) {
 <div class="ana">
 <article class="haber-yazi" style="--kat:${kat.renk}">
 ${gorselUrl ? `<figure class="haber-gorsel"><img src="/uretilen/${h(hikaye.gorsel)}" alt="${kurumFoto ? h(hikaye.baslik) : 'Temsili görsel (yapay zekâ ile üretildi)'}" width="800" height="450" decoding="async"><figcaption>${kurumFoto ? `Fotoğraf: ${h(kurumFoto)}` : 'Temsili görsel · yapay zekâ ile üretilmiştir'}</figcaption></figure>` : ''}
-${dinleDugmesi()}
+${hikaye.metin || hikaye.ozet ? dinleDugmesi() : ''}
 ${hikaye.ozet ? `<p class="haber-spot">${h(hikaye.ozet)}</p>` : ''}
 ${paragraflar}
+${!hikaye.metin && !hikaye.ozet ? `<div class="kisa-haber">
+<p>${hikaye.ozetIcinMetin ? 'Bu haberi kendi cümlelerimizle hazırlıyoruz; sayfa kısa süre içinde güncellenecek.' : 'Bu haberin ayrıntıları şimdilik yalnızca kaynağında yer alıyor.'} Haberi ilk duyuran: <b>${h(kurumKayit.ad)}</b>${hikaye.kaynaklar.length > 1 ? ` (toplam ${new Set(hikaye.kaynaklar.map((k) => k.ad)).size} kaynak)` : ''}.</p>
+<a class="kisa-haber-dugme" href="${h(kurumKayit.link)}" rel="noopener nofollow" target="_blank">Haberin ayrıntılarını ${h(kurumKayit.ad)}'da oku →</a>
+</div>` : ''}
 <p class="haber-kaynak-kisa">Kaynak: ${[kurumKayit, ...digerleri.slice(0, 2)].map((k) => `<a href="${h(k.link)}" rel="noopener nofollow" target="_blank">${h(k.ad)}</a>`).join(', ')}</p>
 ${hikaye.konular?.length ? `<p class="haber-konular">Konu: ${hikaye.konular.map((k) => `<a href="/konu/${k.slug}/">${h(k.ad)}</a>`).join('')}</p>` : ''}
 ${paylasCubugu(SITE.url + yol, hikaye.baslik)}
