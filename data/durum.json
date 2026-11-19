@@ -16,7 +16,7 @@
  },
  "gorsel": {
   "gun": "2026-11-19",
-  "adet": 28
+  "adet": 30
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -169,7 +169,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-gelecegin-denizcileri-sektorlerine-uygulamali-egitimle-hazirlaniyor-119527073",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-oto-tamirhanesinde-lpgli-arac-tupu-patladi-2-yarali-is-yerinin-savas-alanina-119527077",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-gelecegin-denizcileri-simulator-ve-dalga-havuzunda-yetisiyor-meu-rektoru-prof-dr-119527107",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-oto-tamirhanesindeki-patlamada-2-isci-yaralandi-119527102"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-oto-tamirhanesindeki-patlamada-2-isci-yaralandi-119527102",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-oto-tamirhanesinde-patlama-2-isci-yaralandi-119527138"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -269,19 +270,39 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-19T16:31:54.075Z",
+  "guncelleme": "2026-11-19T17:01:47.373Z",
   "liste": [
+   {
+    "baslik": "kızılelma",
+    "trafik": 100
+   },
+   {
+    "baslik": "jude bellingham",
+    "trafik": 100
+   },
+   {
+    "baslik": "gs samsun",
+    "trafik": 100
+   },
+   {
+    "baslik": "indirim",
+    "trafik": 5000
+   },
+   {
+    "baslik": "bist 30",
+    "trafik": 200
+   },
    {
     "baslik": "aile ve sosyal hizmetler bakanlığı",
     "trafik": 200
    },
    {
     "baslik": "trt spor yıldız canlı",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "murat ağırel",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "son yemek",
@@ -290,26 +311,6 @@
    {
     "baslik": "yıldız holding",
     "trafik": 200
-   },
-   {
-    "baslik": "denizbank",
-    "trafik": 500
-   },
-   {
-    "baslik": "chibuike nwaiwu",
-    "trafik": 500
-   },
-   {
-    "baslik": "anthropic halka arz",
-    "trafik": 100
-   },
-   {
-    "baslik": "2028",
-    "trafik": 2000
-   },
-   {
-    "baslik": "anthropic",
-    "trafik": 1000
    }
   ]
  },
