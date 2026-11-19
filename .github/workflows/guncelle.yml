@@ -105,6 +105,9 @@ jobs:
       - name: Temsili fotoğrafları indir (sadece eksik olanlar)
         run: node scripts/foto-indir.js
 
+      - name: Ziyaretçi trafiği (Cloudflare, 3 saatte bir)
+        run: node src/trafik.js || true
+
       - name: Search Console verisi (6 saatte bir)
         run: node src/gsc.js || true
         env:

@@ -472,7 +472,8 @@ ${kat.slug === 'spor' ? sporYan(servis, tumHaberler || ilgili) : kategoriYan(kat
     aciklama: (hikaye.ozet || hikaye.metin || hikaye.baslik).slice(0, 160),
     yol,
     aktif: `/kategori/${kat.slug === 'genel' ? 'turkiye-dunya' : kat.slug}/`,
-    noindex: !tamYazi,
+    // Türkiye-dünya haberleri ulusal sitelerin konusu: Google'a kapalı, site Mersin odağını korusun
+    noindex: !tamYazi || (hikaye.genel && !hikaye.kalici),
     tema: kat.slug === 'genel' ? 'dunya' : kat.slug,
     ust,
     icerik,
@@ -1025,6 +1026,20 @@ ${arsiv.length > 1 ? `<div class="bolum-bas"><h2>Önceki günler</h2></div><div 
   });
 }
 
+// Ziyaretçi trafiği (Cloudflare Web Analytics)
+function trafikBolumu(t) {
+  if (!t) return `<div class="bolum-bas"><h2>Ziyaretçi trafiği</h2></div><div class="bos">Trafik verisi birkaç saat içinde gelir.</div>`;
+  const degisim = t.onceki ? Math.round(((t.toplam - t.onceki) / t.onceki) * 100) : null;
+  const enCok = Math.max(1, ...t.gunluk.map((x) => x.sayi));
+  const toplamKaynak = t.kaynaklar.reduce((a, b) => a + b.sayi, 0) || 1;
+  return `<div class="bolum-bas"><h2>Ziyaretçi trafiği</h2><span>Son 7 gün · Cloudflare</span></div>
+<div class="eb-kareler" style="margin-bottom:14px"><div class="eb-kare"><small>Sayfa görüntüleme (7 gün)</small><b>${t.toplam.toLocaleString('tr-TR')}</b><em>Önceki 7 gün: ${t.onceki.toLocaleString('tr-TR')}${degisim != null ? ` (${degisim >= 0 ? '+' : ''}${degisim}%)` : ''}</em></div>
+${t.kaynaklar.slice(0, 3).map((k) => `<div class="eb-kare"><small>${h(k.ad)}</small><b>${k.sayi.toLocaleString('tr-TR')}</b><em>%${Math.round((k.sayi / toplamKaynak) * 100)}</em></div>`).join('')}</div>
+${t.gunluk.length ? `<div class="gsc-grafik" title="Son 14 günün günlük görüntülemeleri">${t.gunluk.map((x) => `<span style="height:${Math.max(3, Math.round((x.sayi / enCok) * 100))}%" title="${h(x.tarih)}: ${x.sayi}"></span>`).join('')}</div>` : ''}
+<h3 class="ara-baslik">Google aramasından en çok gelinen sayfalar</h3>
+${t.googleSayfalar.length ? `<div class="ky-liste yol-liste">${t.googleSayfalar.map((x) => `<a class="ky-satir" href="${h(x.yol)}"><span>${h(x.yol)}</span><small>${x.sayi}</small></a>`).join('')}</div>` : '<div class="bos">Henüz Google\'dan gelen ziyaret yok. Yeni siteler için ilk haftalarda normaldir.</div>'}`;
+}
+
 // Search Console: Google aramasından gelen trafik
 function gscBolumu(g) {
   if (!g) return `<div class="bolum-bas"><h2>Google aramasından gelenler</h2></div><div class="bos">Search Console bağlantısı henüz kurulmadı.</div>`;
@@ -1040,7 +1055,7 @@ ${g.gunluk.length ? `<div class="gsc-grafik" title="Son 30 günün günlük tık
 
 // ---------- İşleyiş raporu (yönetim için, arama motorlarına kapalı) ----------
 const TUR_ADI = { yakit: 'Akaryakıt', deprem: 'Deprem', su: 'Su kesintisi', hava: 'Hava', eczane: 'Nöbetçi eczane', iftar: 'İftar', piyasa: 'Piyasa', ucus: 'Havalimanı', okul: 'Okul tatili', hafta: 'Haftanın özeti', etkinlik: 'Etkinlik', yol: 'Yol durumu', mac: 'Maç', superlig: 'Süper Lig programı', bulten: 'Spor bülteni', diger: 'Diğer' };
-export function durumSayfasi({ rapor, gsc = null }) {
+export function durumSayfasi({ rapor, gsc = null, trafik = null }) {
   const gunler = Object.keys(rapor?.gunler || {}).sort().reverse();
   const bugun = rapor?.gunler?.[gunler[0]];
   const dun = rapor?.gunler?.[gunler[1]];
@@ -1051,7 +1066,8 @@ ${bugun ? `<section class="ekonomi-bugun"><div class="eb-bas"><div><h2>Bugün ($
 <p class="eb-not">${bugun.kaynakHatalari.length ? `⚠️ Son 24 saatte erişilemeyen kaynaklar: ${h(bugun.kaynakHatalari.join(', '))}` : '✅ Son 24 saatte kaynak hatası yok.'}</p></section>
 <div class="bolum-bas"><h2>Bugünkü otomatik haberler</h2></div>
 ${bugun.otomatikBasliklar.length ? `<div class="ky-liste yol-liste">${bugun.otomatikBasliklar.map((x) => `<div class="ky-satir"><span><b class="yol-neden">${h(TUR_ADI[x.tur] || x.tur || 'Diğer')}</b> ${h(x.baslik)}</span><small>${h(x.saat)}</small></div>`).join('')}</div>` : '<div class="bos">Bugün henüz otomatik haber çıkmadı.</div>'}` : '<div class="bos">Rapor henüz oluşmadı.</div>'}
-${gscBolumu(gsc)}
+${trafikBolumu(trafik)}
+${gsc ? gscBolumu(gsc) : ''}
 <div class="bolum-bas"><h2>Son günler</h2></div>
 <div class="tablo-kap"><table class="tablo"><thead><tr><th>Gün</th><th>Mersin haberi</th><th>Kendi yazımız</th><th>Otomatik</th><th>Görsel</th><th>Türkiye/dünya</th></tr></thead><tbody>${gunler
     .slice(0, 14)

@@ -166,7 +166,11 @@ export function insaEt({ simdi = Date.now() } = {}) {
   try {
     gsc = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'gsc.json'), 'utf8'));
   } catch {}
-  yaz('/durum/', S.durumSayfasi({ rapor, gsc }));
+  let trafik = null;
+  try {
+    trafik = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'trafik.json'), 'utf8'));
+  } catch {}
+  yaz('/durum/', S.durumSayfasi({ rapor, gsc, trafik }));
   let geziVeri = null;
   try {
     geziVeri = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'gezi.json'), 'utf8'));
@@ -222,7 +226,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
   );
 
   const bugun = new Date(simdi).toISOString().slice(0, 10);
-  const haberUrlleri = tumKendi.map((x) => `<url><loc>${SITE.url}${x.yol}</loc><lastmod>${(x.sonGuncelleme || x.ilkGorulme).slice(0, 10)}</lastmod></url>`);
+  const haberUrlleri = tumKendi.filter((x) => !x.genel || x.kalici).map((x) => `<url><loc>${SITE.url}${x.yol}</loc><lastmod>${(x.sonGuncelleme || x.ilkGorulme).slice(0, 10)}</lastmod></url>`);
   yaz(
     '/sitemap.xml',
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[
@@ -231,7 +235,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
     ].join('\n')}\n</urlset>\n`
   );
   // Google Haberler site haritası: son 48 saatte yayımlanan kendi haberlerimiz
-  const son48 = kendiHaberler.filter((x) => simdi - new Date(x.ilkGorulme).getTime() < 48 * 3600e3);
+  const son48 = kendiHaberler.filter((x) => !x.genel || x.kalici).filter((x) => simdi - new Date(x.ilkGorulme).getTime() < 48 * 3600e3);
   yaz(
     '/haber-sitemap.xml',
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">\n${son48
