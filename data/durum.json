@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-19T12:36:22.405Z"
   }
  },
  "gorsel": {
@@ -260,7 +264,7 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-19T12:29:51.481Z",
+  "guncelleme": "2026-11-19T12:36:53.688Z",
   "liste": [
    {
     "baslik": "sefer karaahmetoğlu",
@@ -291,16 +295,16 @@
     "trafik": 200
    },
    {
+    "baslik": "saniye caran",
+    "trafik": 200
+   },
+   {
     "baslik": "ismail arı",
     "trafik": 100
    },
    {
     "baslik": "yunus akgün",
     "trafik": 500
-   },
-   {
-    "baslik": "zalazar",
-    "trafik": 100
    }
   ]
  },

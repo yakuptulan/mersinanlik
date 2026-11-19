@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-19T12:29:53.112Z",
+ "guncelleme": "2026-11-19T12:36:55.688Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 21,
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-19T12:29:57.850Z",
+  "guncelleme": "2026-11-19T12:36:59.172Z",
   "liste": [
    {
     "ad": "Arıç Eczanesi",
@@ -752,7 +752,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-19T12:29:58.943Z",
+  "guncelleme": "2026-11-19T12:37:00.174Z",
   "liste": [
    {
     "tur": "su",
@@ -1081,7 +1081,7 @@
   "kaynakSaati": "2026-11-19 15:22:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-19T12:30:05.903Z",
+  "guncelleme": "2026-11-19T12:37:07.528Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -8161,7 +8161,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-19T12:30:06.787Z",
+  "guncelleme": "2026-11-19T12:37:08.162Z",
   "liste": [
    {
     "yol": "/",
@@ -8180,15 +8180,7 @@
     "sayi": 4
    },
    {
-    "yol": "/kategori/ekonomi/",
-    "sayi": 3
-   },
-   {
     "yol": "/kategori/yasam/",
-    "sayi": 3
-   },
-   {
-    "yol": "/kategori/turkiye-dunya/",
     "sayi": 3
    },
    {
@@ -8196,23 +8188,19 @@
     "sayi": 3
    },
    {
-    "yol": "/piyasalar/",
-    "sayi": 2
+    "yol": "/kategori/ekonomi/",
+    "sayi": 3
    },
    {
-    "yol": "/bilgi/",
-    "sayi": 2
+    "yol": "/kategori/turkiye-dunya/",
+    "sayi": 3
    },
    {
     "yol": "/haber/mersin-yenisehir-de-20-cadde-trafige-kapatiliyor-iste-tarih-ve-saat-1729jhi/",
     "sayi": 2
    },
    {
-    "yol": "/haber/mersin-buyuksehir-den-cocuklara-dopdolu-ara-tatil-programi-ple3hp/",
-    "sayi": 2
-   },
-   {
-    "yol": "/kategori/asayis/",
+    "yol": "/piyasalar/",
     "sayi": 2
    },
    {
@@ -8220,24 +8208,16 @@
     "sayi": 2
    },
    {
-    "yol": "/haber/mersin-valisi-atilla-toros-kktc-nin-43-kurulus-yil-donumu-resepsiyonun-1codpsk/",
-    "sayi": 1
+    "yol": "/bilgi/",
+    "sayi": 2
    },
    {
-    "yol": "/haber/tarsus-ta-kadinlara-uretim-ve-satis-imkani-qn5595/",
-    "sayi": 1
+    "yol": "/kategori/asayis/",
+    "sayi": 2
    },
    {
-    "yol": "/haber/sayistaydan-toroslar-belediyesine-ihalesiz-avukatlik-hizmeti-alimi-uya-3newkh/",
-    "sayi": 1
-   },
-   {
-    "yol": "/akaryakit-fiyatlari/",
-    "sayi": 1
-   },
-   {
-    "yol": "/gundemim/",
-    "sayi": 1
+    "yol": "/haber/mersin-buyuksehir-den-cocuklara-dopdolu-ara-tatil-programi-ple3hp/",
+    "sayi": 2
    },
    {
     "yol": "/haber/tarihi-kilikya-yolu-nda-uc-parkur-daha-yurundu-1fgfdln/",
@@ -8248,7 +8228,31 @@
     "sayi": 1
    },
    {
+    "yol": "/gundemim/",
+    "sayi": 1
+   },
+   {
+    "yol": "/akaryakit-fiyatlari/",
+    "sayi": 1
+   },
+   {
     "yol": "/haber/mersinli-tenisci-milli-takim-secmelerine-katilmaya-hak-kazandi-1w4hsnx/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/mersin-de-kapali-yuzme-havuzu-gercekten-kapali-7flbwy/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/sayistaydan-toroslar-belediyesine-ihalesiz-avukatlik-hizmeti-alimi-uya-3newkh/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/tarsus-ta-kadinlara-uretim-ve-satis-imkani-qn5595/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/mersin-valisi-atilla-toros-kktc-nin-43-kurulus-yil-donumu-resepsiyonun-1codpsk/",
     "sayi": 1
    },
    {
@@ -8258,7 +8262,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-19T12:34:23.733Z",
+  "guncelleme": "2026-11-19T12:37:09.664Z",
   "deniz": {
    "sicaklik": 21.7,
    "dalga": 0.88
@@ -8271,7 +8275,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-19T12:34:25.801Z",
+  "guncelleme": "2026-11-19T12:37:11.619Z",
   "giden": [
    {
     "no": [
@@ -9330,11 +9334,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2086"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-20T12:35:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-19T12:34:25.801Z",
+  "guncelleme": "2026-11-19T12:37:11.619Z",
   "liste": [
    {
     "id": 6375,
