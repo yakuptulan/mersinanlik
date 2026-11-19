@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-19T05:01:18.516Z"
   }
  },
  "gorsel": {
@@ -228,11 +232,27 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-19T04:31:42.502Z",
+  "guncelleme": "2026-11-19T05:01:42.143Z",
   "liste": [
+   {
+    "baslik": "millî savunma bakanlığı",
+    "trafik": 500
+   },
+   {
+    "baslik": "e yaygın",
+    "trafik": 100
+   },
+   {
+    "baslik": "hava durumu mersin",
+    "trafik": 200
+   },
    {
     "baslik": "lakers - jazz",
     "trafik": 500
+   },
+   {
+    "baslik": "magic - 76ers",
+    "trafik": 100
    },
    {
     "baslik": "kocaeli hava durumu",
@@ -253,22 +273,6 @@
    {
     "baslik": "aleksey batrakov",
     "trafik": 5000
-   },
-   {
-    "baslik": "finans",
-    "trafik": 100
-   },
-   {
-    "baslik": "matvey kislyak",
-    "trafik": 200
-   },
-   {
-    "baslik": "mazot",
-    "trafik": 5000
-   },
-   {
-    "baslik": "ekmek",
-    "trafik": 200
    }
   ]
  },
