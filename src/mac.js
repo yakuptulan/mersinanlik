@@ -352,6 +352,7 @@ async function haftasonuProgrami({ servis, durum, veri, simdi }) {
     metin: [yazi.giris, 'Haftanın programı:', ...program].join('\n\n'),
     ilceler: [],
     genel: true,
+    kalici: true,
     kategori: 'spor',
     riskNedenleri: [],
     durum: 'yayinda',

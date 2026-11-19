@@ -132,6 +132,7 @@ export function hikayeyeEkle(veri, haber, kaynak) {
 export function onemliMi(h) {
   if (!h.genel) return true;
   if (h.trend) return true; // Google'da çok aranan konu
+  if (h.kalici) return true; // kendi ürettiğimiz Türkiye geneli yazılar (ör. Süper Lig programı)
   return new Set(h.kaynaklar.map((k) => k.ad)).size >= AYAR.genelKaynakEsigi;
 }
 
