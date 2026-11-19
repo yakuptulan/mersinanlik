@@ -12,7 +12,7 @@ import * as IS from './templates/ilceServis.js';
 import { ulasimSayfasi } from './templates/ulasim.js';
 import { gundemimSayfasi, akisVerisi } from './templates/gundemim.js';
 import { logolariAyarla } from './templates/servisParcalari.js';
-import { akaryakitIlSayfasi, akaryakitTurkiyeSayfasi, namazIlSayfasi, namazTurkiyeSayfasi, havaIlSayfasi, havaTurkiyeSayfasi, PIYASA_KALEMLERI, piyasaKalemSayfasi, piyasaKalemYolu } from './templates/ulusal.js';
+import { akaryakitIlSayfasi, akaryakitTurkiyeSayfasi, namazIlSayfasi, namazTurkiyeSayfasi, havaIlSayfasi, havaTurkiyeSayfasi, sonDepremlerSayfasi, ilDepremSayfasi, depremIli, depremIlYolu, PIYASA_KALEMLERI, piyasaKalemSayfasi, piyasaKalemYolu } from './templates/ulusal.js';
 import ILLER81 from './iller.json' with { type: 'json' };
 import { takimSayfasi, takimYolu } from './templates/spor.js';
 import { sayfa as sayfaYap } from './templates/layout.js';
@@ -164,6 +164,16 @@ export function insaEt({ simdi = Date.now() } = {}) {
   for (const t of slLig?.puan || []) {
     const ts = takimSayfasi({ takim: t.takim, lig: slLig, hikayeler, servis, simdi });
     ekle(takimYolu(t.takim), sayfaYap({ ...ts, yol: takimYolu(t.takim), tema: 'spor', aktif: '/spor/' }));
+  }
+  // Türkiye geneli son depremler
+  if (ulusal.deprem?.liste?.length) {
+    ekle('/son-depremler/', sonDepremlerSayfasi({ kayit: ulusal.deprem, simdi }));
+    const ileGore = new Map();
+    for (const d of ulusal.deprem.liste) {
+      const il = depremIli(d);
+      if (il) ileGore.set(il, [...(ileGore.get(il) || []), d]);
+    }
+    for (const [il, liste] of ileGore) if (liste.length >= 2) ekle(depremIlYolu(il.slug), ilDepremSayfasi({ il, liste, simdi, guncelleme: ulusal.deprem.guncelleme }));
   }
   // 81 il hava durumu
   for (const il of ILLER81) {

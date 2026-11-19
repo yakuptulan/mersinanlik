@@ -14,6 +14,7 @@ import { arsivYukle } from './lib/arsiv.js';
 import { KGM_SAYFA } from './lib/yollar.js';
 
 const TZ = 'Europe/Istanbul';
+import { ilBulunma } from './templates/ulusal.js';
 const DOSYA = 'data/otomatik.json';
 const MERKEZ = { lat: 36.8, lon: 34.63 };
 const BULUNMA = { akdeniz: 'de', anamur: 'da', aydincik: 'ta', bozyazi: 'da', camliyayla: 'da', erdemli: 'de', gulnar: 'da', mezitli: 'de', mut: 'ta', silifke: 'de', tarsus: 'ta', toroslar: 'da', yenisehir: 'de' };
@@ -117,6 +118,27 @@ for (const d of servis.deprem || []) {
     'Şu ana kadar resmî kurumlardan can ve mal kaybına ilişkin bir açıklama yapılmadı. Gelişmeler oldukça haber güncellenecek. Son depremlerin listesini Mersin Anlık deprem sayfasından takip edebilirsiniz.',
   ].join('\n\n');
   haber({ id: kimlik('d', anahtar), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'gundem', ilceler: ilce ? [ilce.slug] : [], kaynak: { ad: 'AFAD', link: 'https://deprem.afad.gov.tr/last-earthquakes.html' } , kapak: 'deprem', sonDakika: true });
+}
+// Türkiye genelinde M≥5 deprem (Mersin dışı da): herkesin aradığı haber
+let ulusal = {};
+try {
+  ulusal = JSON.parse(fs.readFileSync('data/ulusal.json', 'utf8'));
+} catch {}
+for (const d of ulusal.deprem?.liste || []) {
+  if (d.b < 5) continue;
+  const anahtar = `${d.t}|${d.lat}|${d.lon}`;
+  if (durum.deprem.includes(anahtar)) continue;
+  durum.deprem.push(anahtar);
+  if (ilkKurulum || simdi - new Date(d.t).getTime() > 3 * 36e5 || /mersin/i.test(d.il)) continue;
+  const b = d.b.toFixed(1).replace('.', ',');
+  const yer = d.ilce && d.il ? `${d.ilce} (${d.il})` : d.yer;
+  const km = Math.round(mesafeKm(MERKEZ, { lat: d.lat, lon: d.lon }));
+  const metin = [
+    `AFAD verilerine göre ${yer} merkezli ${b} büyüklüğünde deprem meydana geldi. Deprem ${gunStr(d.t)} saat ${saatStr(d.t)} itibarıyla kaydedildi ve yerin yaklaşık ${Math.round(d.d)} kilometre derinliğinde oluştu.`,
+    `Depremin merkez üssü Mersin'e kuş uçuşu yaklaşık ${km} kilometre uzaklıkta${km < 350 ? '; sarsıntının Mersin\'de de hissedilmiş olabileceği değerlendiriliyor' : ''}.`,
+    'Resmî kurumlardan hasar ve can kaybına ilişkin açıklama bekleniyor. Gelişmeler oldukça haber güncellenecek. Türkiye genelindeki son depremleri Mersin Anlık son depremler sayfasından anlık takip edebilirsiniz.',
+  ].join('\n\n');
+  haber({ id: kimlik('d', anahtar), baslik: `${d.il ? ilBulunma(d.il) : d.yer} ${b} büyüklüğünde deprem`, ozet: metin.split('\n\n')[0], metin, kategori: 'gundem', kaynak: { ad: 'AFAD', link: 'https://deprem.afad.gov.tr/last-earthquakes.html' }, kapak: 'deprem', sonDakika: true });
 }
 durum.deprem = durum.deprem.slice(-200);
 
@@ -274,6 +296,42 @@ if (pk && haftaGunu >= 1 && haftaGunu <= 5 && trDakika >= 18 * 60 + 15 && durum.
     'Kuyumcu ve bankalarda fiyatlar farklılık gösterebilir. Bu haber yatırım tavsiyesi değildir. Anlık fiyatlar Mersin Anlık piyasalar sayfasında.',
   ].join('\n\n');
   haber({ id: kimlik('k', bugunISO), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'ekonomi', kaynak: { ad: 'Truncgil Finans', link: 'https://finans.truncgil.com/' } , kapak: 'piyasa' });
+}
+
+// ---------- 7b) Her sabah (Pzt–Cmt, 09.45 sonrası): "Altın fiyatları bugün" ----------
+const pa = servis.piyasa;
+if (pa?.altinlar?.length && haftaGunu >= 1 && haftaGunu <= 6 && trDakika >= 9 * 60 + 45 && durum.altinSabah !== bugunISO && simdi - new Date(pa.guncelleme) < 3 * 36e5) {
+  durum.altinSabah = bugunISO;
+  let pg = { gunler: {} };
+  try {
+    pg = JSON.parse(fs.readFileSync('data/piyasa-gecmis.json', 'utf8'));
+  } catch {}
+  const dunKey = Object.keys(pg.gunler || {}).filter((g) => g < bugunISO).sort().at(-1);
+  const dun = dunKey ? pg.gunler[dunKey] : null;
+  const al = (k) => [...pa.altinlar, ...(pa.dovizler || [])].find((x) => x.k === k);
+  const tl = (n) => n.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const fark = (k) => {
+    const x = al(k);
+    if (!x) return '';
+    if (dun?.[k]) {
+      const d = x.satis - dun[k];
+      return Math.abs(d) < 0.01 ? ' (dünle aynı)' : ` (düne göre ${tl(Math.abs(d))} TL ${d > 0 ? 'artış' : 'düşüş'})`;
+    }
+    return x.degisim ? ` (günlük %${tl(Math.abs(x.degisim))} ${x.degisim > 0 ? 'artış' : 'düşüş'})` : '';
+  };
+  const g = al('GRA'), c = al('CEYREKALTIN');
+  if (g && c) {
+    const satir = (k, ad) => (al(k) ? `${ad}: alış ${tl(al(k).alis)} TL, satış ${tl(al(k).satis)} TL${fark(k)}` : null);
+    const yon = dun?.GRA ? (g.satis > dun.GRA ? 'yükselişle' : g.satis < dun.GRA ? 'düşüşle' : 'yatay') : (g.degisim || 0) > 0.05 ? 'yükselişle' : (g.degisim || 0) < -0.05 ? 'düşüşle' : 'yatay';
+    const tarihMetni = new Date(simdi).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: TZ });
+    const metin = [
+      `Altın fiyatları güne ${yon} başladı. Serbest piyasada gram altın ${tl(g.satis)} TL'den, çeyrek altın ${tl(c.satis)} TL'den satılıyor.`,
+      ['Güncel altın fiyatları şöyle:', satir('GRA', 'Gram altın'), satir('CEYREKALTIN', 'Çeyrek altın'), satir('YARIMALTIN', 'Yarım altın'), satir('TAMALTIN', 'Tam altın'), satir('CUMHURIYETALTINI', 'Cumhuriyet altını'), satir('YIA', '22 ayar bilezik (gram)'), satir('GUMUS', 'Gümüş (gram)')].filter(Boolean).join('\n'),
+      [al('USD') ? `Dolar ${tl(al('USD').satis)} TL` : '', al('EUR') ? `euro ${tl(al('EUR').satis)} TL` : ''].filter(Boolean).join(', ') + ' seviyesinde işlem görüyor.',
+      'Fiyatlar serbest piyasa verileridir; kuyumculardaki satış fiyatları işçilik ve makas farkı nedeniyle farklılık gösterebilir. Bu haber yatırım tavsiyesi değildir. Gün içindeki anlık fiyatlar ve altın hesaplama aracı Mersin Anlık gram altın sayfasında.',
+    ].join('\n\n');
+    haber({ id: kimlik('a', bugunISO), baslik: `Altın fiyatları bugün (${tarihMetni}): Gram altın ve çeyrek altın ne kadar?`, ozet: metin.split('\n\n')[0], metin, kategori: 'ekonomi', kaynak: { ad: 'Truncgil Finans', link: 'https://finans.truncgil.com/' }, kapak: 'piyasa' });
+  }
 }
 
 // ---------- 8) Çukurova Havalimanı: iptal ya da uzun rötar ----------

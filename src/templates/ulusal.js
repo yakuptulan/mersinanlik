@@ -271,3 +271,78 @@ ${noktalar.length >= 2 ? `<div class="bolum-bas"><h2>Son ${noktalar.length} gün
 </div></main>`,
   });
 }
+
+// ---------- Türkiye geneli son depremler: /son-depremler/ ve /son-depremler/<il>/ ----------
+
+export const depremIlYolu = (slug) => `/son-depremler/${slug}/`;
+const ILE_GORE = new Map(ILLER.map((i) => [i.ad.toLocaleLowerCase('tr-TR'), i]));
+export const depremIli = (d) => ILE_GORE.get(String(d.il || '').toLocaleLowerCase('tr-TR')) || null;
+const bSinif = (b) => (b >= 5 ? 'b5' : b >= 4 ? 'b4' : b >= 3 ? 'b3' : 'b2');
+const once = (t, simdi) => {
+  const dk = Math.round((simdi - new Date(t)) / 60e3);
+  if (dk < 60) return `${Math.max(dk, 1)} dk önce`;
+  if (dk < 24 * 60) return `${Math.floor(dk / 60)} saat önce`;
+  return new Date(t).toLocaleString('tr-TR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: TZ });
+};
+function depremTablo(liste, simdi, ilLink = true) {
+  return `<div class="dp-filtre" role="group" aria-label="Büyüklüğe göre süz"><button type="button" class="aktif" data-dp-min="0">Tümü</button><button type="button" data-dp-min="3">3 ve üzeri</button><button type="button" data-dp-min="4">4 ve üzeri</button></div>
+<div class="tablo-kap"><table class="tablo dp-tablo"><thead><tr><th>Büyüklük</th><th>Yer</th><th>Derinlik</th><th>Zaman</th></tr></thead><tbody>${liste
+    .map((d) => {
+      const il = depremIli(d);
+      return `<tr data-b="${d.b}"${/mersin/i.test(d.il) ? ' class="mersin"' : ''}><td><span class="dp-b ${bSinif(d.b)}">${d.b.toFixed(1).replace('.', ',')}</span></td><td><b>${h(d.ilce ? `${d.ilce}` : d.yer)}</b>${d.il ? ` <small>${ilLink && il ? `<a href="${depremIlYolu(il.slug)}">${h(d.il)}</a>` : h(d.il)}</small>` : ''}</td><td>${String(d.d).replace('.', ',')} km</td><td data-zaman="${d.t}">${h(once(d.t, simdi))}</td></tr>`;
+    })
+    .join('')}</tbody></table></div>`;
+}
+function depremOzet(liste, simdi, yerAdi) {
+  const g24 = liste.filter((d) => simdi - new Date(d.t) < 864e5);
+  const enB = [...liste].sort((a, b) => b.b - a.b)[0];
+  const enB24 = [...g24].sort((a, b) => b.b - a.b)[0];
+  return `<section class="ekonomi-bugun"><div class="eb-kareler"><div class="eb-kare"><small>Son 24 saat</small><b>${g24.length} deprem</b><em>${yerAdi}</em></div><div class="eb-kare"><small>24 saatin en büyüğü</small><b>${enB24 ? enB24.b.toFixed(1).replace('.', ',') : '–'}</b><em>${enB24 ? h(enB24.ilce || enB24.il || enB24.yer) : 'kayıt yok'}</em></div><div class="eb-kare"><small>30 günün en büyüğü</small><b>${enB ? enB.b.toFixed(1).replace('.', ',') : '–'}</b><em>${enB ? h([enB.ilce, enB.il].filter(Boolean).join(', ') || enB.yer) : ''}</em></div><div class="eb-kare"><small>Son deprem</small><b>${liste[0] ? h(once(liste[0].t, simdi)) : '–'}</b><em>${liste[0] ? h(liste[0].il || liste[0].yer) : ''}</em></div></div></section>`;
+}
+
+export function sonDepremlerSayfasi({ kayit, simdi }) {
+  const liste = kayit.liste;
+  const son = liste.filter((d) => simdi - new Date(d.t) < 7 * 864e5).slice(0, 300);
+  const iller = [...new Set(liste.map((d) => depremIli(d)).filter(Boolean))].sort((a, b) => a.ad.localeCompare(b.ad, 'tr'));
+  const buyuk = liste.filter((d) => d.b >= 4).slice(0, 10);
+  return sayfa({
+    baslik: 'Son depremler: Türkiye\'de bugün deprem nerede oldu? (AFAD, canlı liste)',
+    aciklama: `Türkiye'de son depremler listesi: son 24 saatte ${liste.filter((d) => simdi - new Date(d.t) < 864e5).length} deprem. ${liste[0] ? `Son deprem ${liste[0].il || liste[0].yer}, büyüklük ${liste[0].b}.` : ''} AFAD verisiyle büyüklük, yer ve derinlik.`,
+    yol: '/son-depremler/',
+    aktif: '/deprem/',
+    ust: `<div class="su-an-bas"><div><div class="cipler"><a class="cip" href="/deprem/">Mersin ve çevresi</a></div><h1>Son depremler</h1><p style="margin-top:8px">Türkiye geneli · AFAD · son güncelleme ${h(saatStr(kayit.guncelleme))}</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">
+${depremOzet(liste, simdi, 'Türkiye geneli')}
+${buyuk.length ? `<div class="bolum-bas"><h2>Son 30 günün 4 ve üzeri depremleri</h2></div><div class="dp-buyuk">${buyuk.map((d) => { const il = depremIli(d); return `<a class="dp-kart" href="${il ? depremIlYolu(il.slug) : '#'}"><span class="dp-b ${bSinif(d.b)}">${d.b.toFixed(1).replace('.', ',')}</span><span><b>${h([d.ilce, d.il].filter(Boolean).join(', ') || d.yer)}</b><small>${h(new Date(d.t).toLocaleString('tr-TR', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: TZ }))} · ${String(d.d).replace('.', ',')} km derinlik</small></span></a>`; }).join('')}</div>` : ''}
+<div class="bolum-bas"><h2>Son 7 gün</h2><span>büyüklük 2 ve üzeri · en yeni üstte</span></div>
+${depremTablo(son, simdi)}
+<div class="bolum-bas"><h2>İllere göre son depremler</h2></div>
+<div class="mh-liste">${iller.map((i) => `<a href="${depremIlYolu(i.slug)}">${h(i.ad)}</a>`).join('')}</div>
+<p style="color:var(--ikincil);font-size:14px">Veri: AFAD Deprem Dairesi Başkanlığı. Liste yaklaşık 30 dakikada bir güncellenir; ilk dakikalarda büyüklük ve yer bilgisi AFAD tarafından revize edilebilir. Resmî açıklamalar için AFAD'ı takip edin.</p>
+</div></main>`,
+  });
+}
+
+export function ilDepremSayfasi({ il, liste, simdi, guncelleme }) {
+  const bul = BULUNMA(il.ad);
+  const enB = [...liste].sort((a, b) => b.b - a.b)[0];
+  const sss = [
+    { soru: `${bul} en son ne zaman deprem oldu?`, cevap: `${bul} kaydedilen son deprem ${new Date(liste[0].t).toLocaleString('tr-TR', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: TZ })} tarihinde ${liste[0].ilce || il.ad} merkezli, ${liste[0].b.toFixed(1).replace('.', ',')} büyüklüğündeydi.` },
+    { soru: `${bul} son 30 günde kaç deprem oldu?`, cevap: `AFAD verilerine göre ${bul} son 30 günde büyüklüğü 2 ve üzeri ${liste.length} deprem kaydedildi; en büyüğü ${enB.b.toFixed(1).replace('.', ',')} büyüklüğündeydi (${enB.ilce || il.ad}).` },
+  ];
+  return sayfa({
+    baslik: `${il.ad} deprem: ${bul} son depremler (bugün ve son 30 gün)`,
+    aciklama: `${bul} son depremler: son deprem ${liste[0].ilce || il.ad} merkezli ${liste[0].b.toFixed(1).replace('.', ',')}. Son 30 günde ${liste.length} deprem. AFAD verisiyle liste.`,
+    yol: depremIlYolu(il.slug),
+    aktif: '/deprem/',
+    jsonLd: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: sss.map((s) => ({ '@type': 'Question', name: s.soru, acceptedAnswer: { '@type': 'Answer', text: s.cevap } })) },
+    ust: `<div class="su-an-bas"><div><div class="cipler"><a class="cip" href="/son-depremler/">Türkiye geneli</a></div><h1>${h(il.ad)} son depremler</h1><p style="margin-top:8px">AFAD · son 30 gün · son güncelleme ${h(saatStr(guncelleme))}</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">
+${depremOzet(liste, simdi, il.ad)}
+${depremTablo(liste.slice(0, 200), simdi, false)}
+<section class="bilgi-sss"><h2>Sık sorulanlar</h2>${sss.map((s) => `<details><summary>${h(s.soru)}</summary><p>${h(s.cevap)}</p></details>`).join('')}</section>
+<p><a class="bolum-link" href="/son-depremler/">Türkiye genelindeki son depremler →</a></p>
+<p style="color:var(--ikincil);font-size:14px">Veri: AFAD Deprem Dairesi Başkanlığı. Büyüklüğü 2 ve üzeri depremler listelenir.</p>
+</div></main>`,
+  });
+}

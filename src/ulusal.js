@@ -63,6 +63,18 @@ for (const il of havaSira.slice(0, HAVA_ADET)) {
   await bekle(400);
 }
 
+// ---------- Türkiye geneli depremler: AFAD, son 30 gün, M≥2 ----------
+try {
+  const f = (d) => d.toISOString().slice(0, 19);
+  const r = await fetch(`https://servisnet.afad.gov.tr/apigateway/deprem/apiv2/event/filter?start=${f(new Date(Date.now() - 30 * 864e5))}&end=${f(new Date())}&minlat=35.0&maxlat=43.0&minlon=25.0&maxlon=45.5&minmag=2&orderby=timedesc&limit=3000&format=json`, { headers: { 'User-Agent': UA, Accept: 'application/json' }, signal: AbortSignal.timeout(30000) });
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  const bas = (x) => String(x || '').toLocaleLowerCase('tr-TR').replace(/(^|[\s-])(\p{L})/gu, (m, a, c) => a + c.toLocaleUpperCase('tr-TR'));
+  const liste = (await r.json()).map((e) => ({ b: Math.round(Number(e.magnitude) * 10) / 10, yer: e.location, il: bas(e.province), ilce: bas(e.district), d: Math.round(Number(e.depth) * 10) / 10, lat: Number(e.latitude), lon: Number(e.longitude), t: new Date(`${e.date}Z`).toISOString() }));
+  if (liste.length) veri.deprem = { guncelleme: new Date().toISOString(), liste };
+} catch (e) {
+  console.warn('! Deprem (Türkiye):', e.message);
+}
+
 // ---------- Piyasa geçmişi: her gün için son görülen satış fiyatı (altın/döviz sayfalarındaki grafik) ----------
 const GECMIS = 'data/piyasa-gecmis.json';
 let gecmis = { gunler: {} };
@@ -138,4 +150,4 @@ for (const x of namazSira) {
 for (const n of Object.values(veri.namaz)) n.vakitler = (n.vakitler || []).filter((v) => v.tarih >= bugun);
 
 fs.writeFileSync(DOSYA, JSON.stringify(veri));
-console.log(`Ulusal: hava ${havaTamam} il (toplam ${Object.keys(veri.hava).length}/80), akaryakıt ${yakitTamam} il güncellendi (toplam ${Object.keys(veri.akaryakit).length}/81), Diyanet kodu ${Object.keys(veri.diyanet.ilce).length}/81, namaz ${namazTamam} il güncellendi (toplam ${Object.keys(veri.namaz).length})`);
+console.log(`Ulusal: deprem ${veri.deprem?.liste?.length || 0} kayıt, hava ${havaTamam} il (toplam ${Object.keys(veri.hava).length}/80), akaryakıt ${yakitTamam} il güncellendi (toplam ${Object.keys(veri.akaryakit).length}/81), Diyanet kodu ${Object.keys(veri.diyanet.ilce).length}/81, namaz ${namazTamam} il güncellendi (toplam ${Object.keys(veri.namaz).length})`);

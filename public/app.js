@@ -162,6 +162,27 @@
   document.querySelectorAll('[data-hesap]').forEach(function (hs) {
     hs.addEventListener('input', function () { hesapla(hs); });
   });
+  // ---------- Son depremler: büyüklük süzgeci ve "x dk önce" ----------
+  document.querySelectorAll('.dp-filtre').forEach(function (f) {
+    f.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-dp-min]');
+      if (!b) return;
+      f.querySelectorAll('button').forEach(function (x) { x.classList.toggle('aktif', x === b); });
+      var min = parseFloat(b.getAttribute('data-dp-min'));
+      var tablo = f.nextElementSibling;
+      tablo.querySelectorAll('tr[data-b]').forEach(function (tr) { tr.hidden = parseFloat(tr.getAttribute('data-b')) < min; });
+    });
+  });
+  function depremZaman() {
+    var n = Date.now();
+    document.querySelectorAll('[data-zaman]').forEach(function (td) {
+      var dk = Math.round((n - new Date(td.getAttribute('data-zaman'))) / 60000);
+      if (dk < 60) td.textContent = Math.max(dk, 1) + ' dk önce';
+      else if (dk < 1440) td.textContent = Math.floor(dk / 60) + ' saat önce';
+    });
+  }
+  depremZaman();
+  setInterval(depremZaman, 60000);
   piyasaTazele();
   setInterval(function () { if (!document.hidden) piyasaTazele(); }, 60000);
 

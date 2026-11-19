@@ -422,7 +422,7 @@ export function haberSayfasi({ hikaye, ilgili, servis, tumHaberler = null }) {
   const tamYazi = Boolean(hikaye.metin);
   const kurumFoto = hikaye.gorselKaynak && hikaye.gorselKaynak !== 'yz' ? hikaye.gorselKaynak : null;
   const gorselUrl = hikaye.gorsel ? `${SITE.url}/uretilen/${hikaye.gorsel}` : hikaye.kapak ? `${SITE.url}/kapak/${hikaye.kapak}.webp` : null;
-  const paragraflar = (hikaye.metin || '').split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean).map((p, i, a) => `<p>${h(p)}</p>${i === 1 && a.length > 3 ? reklamAlani('yazi-ici') : ''}`).join('\n');
+  const paragraflar = (hikaye.metin || '').split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean).map((p, i, a) => `<p>${h(p).replace(/\n/g, '<br>')}</p>${i === 1 && a.length > 3 ? reklamAlani('yazi-ici') : ''}`).join('\n');
   const ilce = ILCELER.find((i) => hikaye.ilceler.includes(i.slug)) || null;
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -753,7 +753,7 @@ export function depremSayfasi({ servis }) {
             .map((d) => `<tr><td><strong>${d.buyukluk.toFixed(1).replace('.', ',')}</strong></td><td>${h(depremYeri(d.yer).ad)}${depremYeri(d.yer).ek ? `<br><small>${h(depremYeri(d.yer).ek)}</small>` : ''}</td><td>${d.derinlik.toFixed(1)} km</td><td>${new Date(d.tarih).toLocaleString('tr-TR', { timeZone: SITE.timezone, day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}</td></tr>`)
             .join('')}</tbody></table></div>`
         : '<div class="bos">Son 7 günde bölgede kayıtlı deprem yok.</div>'
-    }<p style="color:var(--ikincil);font-size:15px">Veri: <a href="${RESMI.afad}" rel="noopener" target="_blank">AFAD</a>.</p></div></main>`,
+    }<p style="color:var(--ikincil);font-size:15px">Veri: <a href="${RESMI.afad}" rel="noopener" target="_blank">AFAD</a>.</p><p><a class="bolum-link" href="/son-depremler/">Türkiye genelinde son depremler →</a></p></div></main>`,
   });
 }
 
