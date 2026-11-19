@@ -8,6 +8,7 @@ import crypto from 'node:crypto';
 import { yukle, kaydet } from './lib/store.js';
 import { ILCELER } from './config.js';
 import { mesafeKm } from './lib/uyarilar.js';
+import { DIYANET_ILCE } from './lib/namaz.js';
 
 const TZ = 'Europe/Istanbul';
 const DOSYA = 'data/otomatik.json';
@@ -34,8 +35,16 @@ durum.hava ||= [];
 const veri = yukle();
 const yeniler = [];
 
-function haber({ id, baslik, ozet, metin, kategori, ilceler = [], kaynak }) {
-  if (veri.hikayeler.some((x) => x.id === id)) return;
+function haber({ id, baslik, ozet, metin, kategori, ilceler = [], kaynak, gecici = false, guncelle = false }) {
+  const var_ = veri.hikayeler.find((x) => x.id === id);
+  if (var_) {
+    // Aynı günün haberi (ör. uçuş aksaklığı) yeni bilgiyle güncellenir
+    if (guncelle && var_.metin !== metin) {
+      Object.assign(var_, { baslik, ozet, metin, sonGuncelleme: new Date(simdi).toISOString() });
+      yeniler.push(`(güncellendi) ${baslik}`);
+    }
+    return;
+  }
   const zaman = new Date(simdi).toISOString();
   yeniler.push(baslik);
   veri.hikayeler.push({
@@ -43,7 +52,7 @@ function haber({ id, baslik, ozet, metin, kategori, ilceler = [], kaynak }) {
     genel: false, riskNedenleri: [], durum: 'yayinda', onaylandi: false,
     ilkGorulme: zaman, sonGuncelleme: zaman,
     kaynaklar: [{ kaynakId: 'veri', ad: kaynak.ad, link: kaynak.link, baslik, tarih: zaman }],
-    yaziKaynak: kaynak.ad, metinDenemesi: 2, otomatik: true,
+    yaziKaynak: kaynak.ad, metinDenemesi: 2, otomatik: true, ...(gecici ? { gecici: true } : {}),
     gorselHatasi: 'otomatik haber: ilçe çizimi kullanılır',
   });
 }
@@ -175,6 +184,96 @@ if (!uyarilar.length && trSaat >= 9 && !durum.hava.includes(yarin)) {
   }
 }
 durum.hava = durum.hava.slice(-30);
+
+// ---------- 5) Akşam: bu gece nöbetçi eczaneler (17.00'den sonra, günde bir) ----------
+const bugunISO = new Date(simdi).toLocaleDateString('sv-SE', { timeZone: TZ });
+const [yy, aa, gg] = bugunISO.split('-');
+const bugunNokta = `${gg}.${aa}.${yy}`;
+const haftaGunu = new Date(`${bugunISO}T12:00:00+03:00`).getUTCDay();
+const ecz = servis.eczane?.liste || [];
+if (trSaat >= 17 && durum.eczane !== bugunISO && ecz.length >= 5 && ecz.some((e) => String(e.saat || '').includes(bugunNokta))) {
+  durum.eczane = bugunISO;
+  const tel = (t) => String(t || '').replace(/^0?(\d{3})(\d{3})(\d{2})(\d{2})$/, '0$1 $2 $3 $4');
+  const gruplar = ILCELER.map((i) => ({ i, l: ecz.filter((e) => e.ilce === i.slug) })).filter((x) => x.l.length);
+  const metin = [
+    `Mersin'de bugün (${gunStr(simdi)}) akşam saatlerinden itibaren ${ecz.length} eczane nöbet tutuyor. İlçe ilçe nöbetçi eczanelerin adları, adresleri ve telefonları aşağıda yer alıyor.`,
+    ...gruplar.map((x) => `${x.i.ad}: ${x.l.map((e) => `${e.ad.replace(/\s+Eczanesi$/i, '')} Eczanesi (${String(e.adres || '').toLocaleLowerCase('tr-TR').replace(/(^|\s)(\S)/g, (m, b, c) => b + c.toLocaleUpperCase('tr-TR'))}${e.telefon ? `, ${tel(e.telefon)}` : ''})`).join('; ')}.`),
+    "Nöbet süreleri eczaneye göre değişebilir; gitmeden önce telefonla teyit etmeniz önerilir. Konumlu liste ve yol tarifi için Mersin Anlık nöbetçi eczane sayfasını kullanabilirsiniz. Acil durumlarda 112'yi arayın.",
+  ].join('\n\n');
+  haber({ id: kimlik('e', bugunISO), baslik: `Mersin nöbetçi eczaneler: ${gunStr(simdi)}`, ozet: metin.split('\n\n')[0], metin, kategori: 'saglik', kaynak: { ad: 'Mersin Eczacı Odası', link: 'https://www.mersineczaciodasi.org.tr/nobetci-eczaneler' }, gecici: true });
+}
+
+// ---------- 6) Ramazan: iftar ve sahur vakitleri (sabah 08.00'den sonra, günde bir) ----------
+const vakitler = (kod) => servis.namaz?.bolgeler?.[kod] || [];
+const bugunVakit = (kod) => vakitler(kod).find((v) => v.tarih === bugunISO);
+const merkezKod = DIYANET_ILCE.yenisehir;
+const hicri = bugunVakit(merkezKod)?.hicri || '';
+if (/Ramazan/i.test(hicri) && trSaat >= 8 && durum.iftar !== bugunISO) {
+  durum.iftar = bugunISO;
+  const yarinISO = new Date(simdi + 864e5).toLocaleDateString('sv-SE', { timeZone: TZ });
+  const merkez = bugunVakit(merkezKod);
+  const yarinSahur = vakitler(merkezKod).find((v) => v.tarih === yarinISO)?.imsak;
+  const gun = hicri.split(' ')[0];
+  const satirlar = ILCELER.filter((i) => !['akdeniz', 'mezitli', 'toroslar'].includes(i.slug)).map((i) => {
+    const v = bugunVakit(DIYANET_ILCE[i.slug]);
+    return v ? `${i.slug === 'yenisehir' ? 'Mersin merkez (Akdeniz, Mezitli, Toroslar, Yenişehir)' : i.ad}: iftar ${v.aksam}, sahur (imsak) ${v.imsak}` : '';
+  }).filter(Boolean);
+  const metin = [
+    `Ramazan'ın ${gun}. gününde Mersin merkezde iftar vakti ${merkez.aksam}. Bugünkü sahur (imsak) vakti ${merkez.imsak} idi${yarinSahur ? `; yarın sahur için imsak vakti ${yarinSahur}` : ''}.`,
+    `İlçe ilçe bugünkü vakitler: ${satirlar.join('; ')}.`,
+    'Vakitler Diyanet İşleri Başkanlığı verilerinden alınmıştır. Tüm namaz vakitleri için Mersin Anlık namaz vakitleri sayfasına bakabilirsiniz.',
+  ].join('\n\n');
+  haber({ id: kimlik('i', bugunISO), baslik: `Mersin iftar vakti: ${gunStr(simdi)} iftar saat kaçta?`, ozet: metin.split('\n\n')[0], metin, kategori: 'kultur', kaynak: { ad: 'Diyanet İşleri Başkanlığı', link: 'https://namazvakitleri.diyanet.gov.tr/' }, gecici: true });
+}
+
+// ---------- 7) Hafta içi akşam: altın ve döviz günün kapanışı (18.15'ten sonra) ----------
+const pk = servis.piyasa?.kalemler;
+const trDakika = trSaat * 60 + Number(new Date(simdi).toLocaleString('en-GB', { minute: '2-digit', timeZone: TZ }));
+if (pk && haftaGunu >= 1 && haftaGunu <= 5 && trDakika >= 18 * 60 + 15 && durum.piyasa !== bugunISO) {
+  durum.piyasa = bugunISO;
+  const KUCUK = { 'Gram altın': 'gram altın', 'Çeyrek altın': 'çeyrek altın', Dolar: 'dolar', Euro: 'euro', 'BIST 100 endeksi': 'BIST 100 endeksi' };
+  const kalem = [
+    ['Gram altın', pk.gram, ' TL'],
+    ['Çeyrek altın', pk.ceyrek, ' TL'],
+    ['Dolar', pk.usd, ' TL'],
+    ['Euro', pk.eur, ' TL'],
+    ['BIST 100 endeksi', pk.bist, ' puan'],
+  ].filter(([, x]) => x?.satis);
+  const yuzde = (d) => `%${Math.abs(d).toLocaleString('tr-TR', { maximumFractionDigits: 2, minimumFractionDigits: 2 })}`;
+  const hareket = (d) => (Math.abs(d) < 0.05 ? 'yatay seyretti' : d > 0 ? `${yuzde(d)} yükseldi` : `${yuzde(d)} geriledi`);
+  const enCok = [...kalem].sort((a, b) => Math.abs(b[1].degisim || 0) - Math.abs(a[1].degisim || 0))[0];
+  const baslik = `Piyasalarda günün kapanışı: ${KUCUK[enCok[0]]} ${hareket(enCok[1].degisim || 0)}`;
+  const deger = (x, birim) => `${x.satis.toLocaleString('tr-TR', { minimumFractionDigits: birim === ' puan' ? 0 : 2, maximumFractionDigits: birim === ' puan' ? 0 : 2 })}${birim}`;
+  const metin = [
+    (() => {
+      const grup = (f) => kalem.filter(([, x]) => f(x.degisim || 0));
+      const liste = (g) => g.map(([ad, x]) => `${KUCUK[ad]} (${yuzde(x.degisim || 0)})`);
+      const ve = (a) => (a.length > 1 ? `${a.slice(0, -1).join(', ')} ve ${a.at(-1)}` : a[0]);
+      const yuk = grup((d) => d >= 0.05), dus = grup((d) => d <= -0.05), yat = grup((d) => Math.abs(d) < 0.05);
+      const c = [yuk.length ? `${ve(liste(yuk))} yükseldi` : '', dus.length ? `${ve(liste(dus))} geriledi` : '', yat.length ? `${ve(yat.map(([ad]) => KUCUK[ad]))} yatay seyretti` : ''].filter(Boolean);
+      return `Piyasalarda günün sonunda ${c.join('; ')}.`;
+    })(),
+    kalem.map(([ad, x, b]) => `${ad} ${deger(x, b)}`).join(', ') + ' seviyesinden işlem görüyor.',
+    'Kuyumcu ve bankalarda fiyatlar farklılık gösterebilir. Bu haber yatırım tavsiyesi değildir. Anlık fiyatlar Mersin Anlık piyasalar sayfasında.',
+  ].join('\n\n');
+  haber({ id: kimlik('k', bugunISO), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'ekonomi', kaynak: { ad: 'Truncgil Finans', link: 'https://finans.truncgil.com/' } });
+}
+
+// ---------- 8) Çukurova Havalimanı: iptal ya da uzun rötar ----------
+const ucuslar = [...(servis.ucus?.giden || []).map((x) => ({ ...x, yon: 'kalkış' })), ...(servis.ucus?.gelen || []).map((x) => ({ ...x, yon: 'varış' }))].filter((x) => new Date(x.planlanan).toLocaleDateString('sv-SE', { timeZone: TZ }) === bugunISO);
+const iptal = ucuslar.filter((x) => /iptal|cancel/.test(String(x.durum || '').toLocaleLowerCase('tr-TR')));
+const rotar = ucuslar.filter((x) => x.tahmini && new Date(x.tahmini) - new Date(x.planlanan) >= 90 * 60e3);
+if (iptal.length || rotar.length >= 2) {
+  const sefer = (x) => `${x.havayolu || ''} ${x.no?.[0] || ''} (${x.yon === 'kalkış' ? `${x.yer} seferi` : `${x.yer} kalkışlı sefer`}, planlanan ${saatStr(x.planlanan)}${x.tahmini ? `, tahmini ${saatStr(x.tahmini)}` : ''})`.trim();
+  const baslik = iptal.length ? `Çukurova Havalimanı'nda bugün ${iptal.length} sefer iptal edildi` : `Çukurova Havalimanı'nda ${rotar.length} seferde uzun rötar`;
+  const metin = [
+    `Çukurova Uluslararası Havalimanı'nın uçuş bilgi ekranına göre bugün ${[iptal.length ? `${iptal.length} sefer iptal edildi` : '', rotar.length ? `${rotar.length} sefer 1,5 saatten fazla rötarlı görünüyor` : ''].filter(Boolean).join(', ')}.`,
+    iptal.length ? `İptal edilen seferler: ${iptal.map(sefer).join('; ')}.` : '',
+    rotar.length ? `Rötarlı seferler: ${rotar.map(sefer).join('; ')}.` : '',
+    "Yolcuların havalimanına gitmeden önce havayolu şirketinden uçuş durumunu teyit etmesi öneriliyor. Havalimanı çağrı merkezi: 0324 503 00 00. Anlık kalkış ve varışlar Mersin Anlık ulaşım sayfasında.",
+  ].filter(Boolean).join('\n\n');
+  haber({ id: kimlik('u', bugunISO), baslik, ozet: metin.split('\n\n')[0], metin, kategori: 'ulasim', kaynak: { ad: 'Çukurova Havalimanı', link: 'https://www.cukurovaairport.aero/' }, gecici: true, guncelle: true });
+}
 
 durum.kuruldu = durum.kuruldu || new Date(simdi).toISOString();
 fs.writeFileSync(DOSYA, JSON.stringify(durum, null, 1));

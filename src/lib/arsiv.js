@@ -12,7 +12,7 @@ export const ARSIV_KLASORU = path.join(VERI_KLASORU, 'arsiv');
 // Arşive girmeyen çalışma alanları (sadece toplama sırasında gerekiyor)
 const ATILAN = new Set(['ozetIcinMetin', 'gorselPrompt', 'metinDenemesi', 'yazimDenemesi', 'metinDenendi', 'riskNedenleri', 'onaylandi']);
 
-export const arsivlenirMi = (h) => Boolean(h.metin) && h.durum === 'yayinda';
+export const arsivlenirMi = (h) => Boolean(h.metin) && h.durum === 'yayinda' && !h.gecici; // günlük liste haberleri (eczane, iftar) arşive girmez
 
 function sadelestir(h) {
   const o = {};
