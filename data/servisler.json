@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-19T07:38:07.788Z",
+ "guncelleme": "2026-11-19T07:39:39.305Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 19,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-19T07:38:13.402Z",
+  "guncelleme": "2026-11-19T07:39:42.244Z",
   "liste": [
    {
     "ad": "Arıç Eczanesi",
@@ -762,7 +762,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-19T07:38:14.535Z",
+  "guncelleme": "2026-11-19T07:39:43.348Z",
   "liste": [
    {
     "tur": "su",
@@ -820,6 +820,22 @@
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
+    "aciklama": "Tarsus ilçesi barbaros mah ana isale hattında meydana gelen arızadan kaynaklı su kesintisi yaşanmaktadır. Tahmini olarak saat 13,00 da su verilmesi planlanmaktadır",
+    "baslangic": "2026-11-19T07:45:00.000Z",
+    "bitis": "2026-11-19T10:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "tarsus",
+      "ad": "Tarsus",
+      "mahalleler": [
+       "Barbaros"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
     "aciklama": "Akdeniz ilçesi Toroslar, Kazanlı, Cumhuriyet, Hürriyet, Anadolu mahallerine Tedaş’ın bölgedeki elektrik kesintisine bağlı saat 19:00’a kadar içmesuyu kesintisi yaşanacaktır.",
     "baslangic": "2026-11-19T06:50:00.000Z",
     "bitis": "2026-11-19T16:00:00.000Z",
@@ -840,12 +856,12 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-19T07:38:18.692Z",
+  "guncelleme": "2026-11-19T07:39:47.945Z",
   "kalemler": {
    "gram": {
-    "alis": 6058.25,
-    "satis": 6059.15,
-    "degisim": 0.31
+    "alis": 6057.56,
+    "satis": 6058.56,
+    "degisim": 0.3
    },
    "ceyrek": {
     "alis": 9981,
@@ -853,38 +869,38 @@
     "degisim": 0.19
    },
    "gumus": {
-    "alis": 73.6,
+    "alis": 73.58,
     "satis": 73.68,
     "degisim": 0.76
    },
    "usd": {
-    "alis": 50.4616,
-    "satis": 50.473,
+    "alis": 50.4632,
+    "satis": 50.4719,
     "degisim": 0.07
    },
    "eur": {
-    "alis": 55.5137,
-    "satis": 55.5283,
-    "degisim": 0.21
+    "alis": 55.5175,
+    "satis": 55.5277,
+    "degisim": 0.22
    },
    "bist": {
     "alis": null,
-    "satis": 11548.87,
-    "degisim": 0.62
+    "satis": 11550.74,
+    "degisim": 0.64
    },
    "btc": {
-    "satis": 3207854,
-    "usd": 63556,
-    "degisim": -1.38
+    "satis": 3208568,
+    "usd": 63570,
+    "degisim": -1.4
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 6058.25,
-    "satis": 6059.15,
-    "degisim": 0.31
+    "alis": 6057.56,
+    "satis": 6058.56,
+    "degisim": 0.3
    },
    {
     "k": "CEYREKALTIN",
@@ -897,69 +913,69 @@
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
     "alis": 19962,
-    "satis": 20122,
-    "degisim": 0.22
+    "satis": 20121,
+    "degisim": 0.21
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 39802,
-    "satis": 40121,
+    "alis": 39801,
+    "satis": 40120,
     "degisim": 0.28
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40886,
-    "satis": 41166,
+    "alis": 40885,
+    "satis": 41165,
     "degisim": 0.21
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40886,
-    "satis": 41166,
+    "alis": 40885,
+    "satis": 41165,
     "degisim": 0.21
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40886,
-    "satis": 41166,
+    "alis": 40885,
+    "satis": 41165,
     "degisim": 0.21
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5570.35,
-    "satis": 5761.41,
-    "degisim": 0.13
+    "alis": 5570.18,
+    "satis": 5761.23,
+    "degisim": 0.12
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4224,
+    "alis": 4223,
     "satis": 4930,
     "degisim": 0.1
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3339.14,
-    "satis": 4497.78,
+    "alis": 3339.03,
+    "satis": 4497.66,
     "degisim": 0.11
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 6027.96,
-    "satis": 6028.85,
-    "degisim": 0.31
+    "alis": 6027.27,
+    "satis": 6028.27,
+    "degisim": 0.3
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 73.6,
+    "alis": 73.58,
     "satis": 73.68,
     "degisim": 0.76
    }
@@ -968,30 +984,30 @@
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.4616,
-    "satis": 50.473,
+    "alis": 50.4632,
+    "satis": 50.4719,
     "degisim": 0.07
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.5137,
-    "satis": 55.5283,
-    "degisim": 0.21
+    "alis": 55.5175,
+    "satis": 55.5277,
+    "degisim": 0.22
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.5455,
-    "satis": 66.5599,
-    "degisim": 0.26
+    "alis": 66.5345,
+    "satis": 66.5495,
+    "degisim": 0.24
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 59.8429,
-    "satis": 59.8621,
-    "degisim": 0.08
+    "alis": 59.8331,
+    "satis": 59.8576,
+    "degisim": 0.06
    },
    {
     "k": "SAR",
@@ -1008,10 +1024,10 @@
     "degisim": 0.52
    }
   ],
-  "kaynakSaati": "2026-11-19 10:38:01"
+  "kaynakSaati": "2026-11-19 10:39:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-19T07:38:21.287Z",
+  "guncelleme": "2026-11-19T07:39:50.328Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -7787,7 +7803,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-19T07:38:21.475Z",
+  "guncelleme": "2026-11-19T07:39:50.666Z",
   "liste": [
    {
     "yol": "/",
@@ -7854,11 +7870,11 @@
     "sayi": 1
    },
    {
-    "yol": "/gundemim/",
+    "yol": "/haber/tarihi-kilikya-yolu-nda-uc-parkur-daha-yurundu-1fgfdln/",
     "sayi": 1
    },
    {
-    "yol": "/haber/tarihi-kilikya-yolu-nda-uc-parkur-daha-yurundu-1fgfdln/",
+    "yol": "/gundemim/",
     "sayi": 1
    },
    {
@@ -7880,7 +7896,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-19T07:38:22.977Z",
+  "guncelleme": "2026-11-19T07:39:52.655Z",
   "deniz": {
    "sicaklik": 21.9,
    "dalga": 0.68
@@ -7893,7 +7909,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-19T07:38:24.202Z",
+  "guncelleme": "2026-11-19T07:39:53.666Z",
   "giden": [
    {
     "no": [
