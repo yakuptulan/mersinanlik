@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-19T05:31:19.004Z"
   }
  },
  "gorsel": {
@@ -232,14 +228,26 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-19T05:31:42.769Z",
+  "guncelleme": "2026-11-19T06:01:48.337Z",
   "liste": [
    {
-    "baslik": "tunç soyer",
+    "baslik": "fazıl say",
+    "trafik": 100
+   },
+   {
+    "baslik": "mısır",
     "trafik": 100
    },
    {
     "baslik": "masterchef kim potaya gitti",
+    "trafik": 200
+   },
+   {
+    "baslik": "güvenlik",
+    "trafik": 100
+   },
+   {
+    "baslik": "tunç soyer",
     "trafik": 100
    },
    {
@@ -247,8 +255,8 @@
     "trafik": 100
    },
    {
-    "baslik": "yaşar güler",
-    "trafik": 500
+    "baslik": "afyon hava durumu",
+    "trafik": 200
    },
    {
     "baslik": "heat - bucks",
@@ -260,18 +268,6 @@
    },
    {
     "baslik": "nuggets - celtics",
-    "trafik": 200
-   },
-   {
-    "baslik": "19.11.2026",
-    "trafik": 100
-   },
-   {
-    "baslik": "e yaygın",
-    "trafik": 100
-   },
-   {
-    "baslik": "hava durumu mersin",
     "trafik": 200
    }
   ]
