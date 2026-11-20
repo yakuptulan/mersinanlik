@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-20T05:01:49.817Z",
+ "guncelleme": "2026-11-20T05:32:02.039Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 17,
@@ -74,12 +74,12 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 16,
+   "sicaklik": 17,
    "durum": "Sisli",
    "gunler": [
     {
      "tarih": "2026-11-20",
-     "min": 16,
+     "min": 17,
      "max": 22,
      "durum": "Hafif sağanak"
     },
@@ -147,7 +147,7 @@
   },
   "camliyayla": {
    "sicaklik": 11,
-   "durum": "Bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
@@ -326,12 +326,12 @@
    ]
   },
   "silifke": {
-   "sicaklik": 15,
+   "sicaklik": 16,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
-     "min": 15,
+     "min": 16,
      "max": 22,
      "durum": "Yağmurlu"
     },
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-20T05:01:54.458Z",
+  "guncelleme": "2026-11-20T05:32:06.527Z",
   "liste": [
    {
     "ad": "Dila Bangiz Eczanesi",
@@ -752,8 +752,54 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-20T05:01:55.570Z",
+  "guncelleme": "2026-11-20T05:32:07.934Z",
   "liste": [
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Akdeniz İlçesi Bağlarbaşı, Toroslar, Kazanlı, Anadolu, Hürriyet, Cumhuriyet, Adanalıoğlu, Sarıibrahimli, Adanalıoğlu-Limonlu, Evci, Nacarlı mahallelerine içmesuyu ana ishale hattı arızası nedeni ile saat 17:00’a kadar içmesuyu kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-20T05:35:00.000Z",
+    "bitis": "2026-11-20T14:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "akdeniz",
+      "ad": "Akdeniz",
+      "mahalleler": [
+       "Adanalıoğlu",
+       "Adanalıoğlu Limonlu",
+       "Anadolu",
+       "Bağlarbaşı",
+       "Cumhuriyet",
+       "Evci",
+       "Hürriyet",
+       "Kazanlı",
+       "Nacarlı",
+       "Sarıibrahimli",
+       "Toroslar"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Akdeniz İlçesi Köselerli, Kulak, Adnan Menderes, Gazi, Bahşiş, Tarsus İlçesi Atalar, Köselerli mahallelerine içmesuyu ana ishale hattı arızası nedeni ile saat 17:00’a kadar içmesuyu kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-20T05:20:00.000Z",
+    "bitis": "2026-11-20T14:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "akdeniz",
+      "ad": "Akdeniz",
+      "mahalleler": [
+       "Adnan Menderes",
+       "Bahşiş",
+       "Gazi",
+       "Köselerli",
+       "Kulak"
+      ]
+     }
+    ]
+   },
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
@@ -767,6 +813,39 @@
       "mahalleler": [
        "Çavak",
        "Emirler"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "ANAMUR İLÇESİ HAT YENİLEME ÇALIŞMASI SEBEBİYLE; BOZDOĞAN MAHALLESİ AÇELYA SK, 2101 SK, 2103 SK VE 2109 SOKAKLARDA 20 KASIM (BUGÜN) SAAT 18:00'A KADAR ZORUNLU SU KESİNTİSİ YAPILMIŞTIR.",
+    "baslangic": "2026-11-20T05:07:00.000Z",
+    "bitis": "2026-11-20T15:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "anamur",
+      "ad": "Anamur",
+      "mahalleler": [
+       "Bozdoğan"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Tarsus İlçesi Atalar, Köselerli mahallelerine içmesuyu ana ishale hattı arızası nedeni ile saat 17:00’a kadar içmesuyu kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-20T05:20:00.000Z",
+    "bitis": "2026-11-20T14:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "tarsus",
+      "ad": "Tarsus",
+      "mahalleler": [
+       "Atalar",
+       "Köselerli"
       ]
      }
     ]
@@ -945,7 +1024,7 @@
   "kaynakSaati": "2026-11-20 08:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-20T05:02:02.597Z",
+  "guncelleme": "2026-11-20T05:32:13.992Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -1970,7 +2049,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-20T04:31:45.320Z",
+  "guncelleme": "2026-11-20T05:32:16.689Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8327,7 +8406,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T05:02:03.023Z",
+  "guncelleme": "2026-11-20T05:32:14.354Z",
   "liste": [
    {
     "yol": "/",
@@ -8350,16 +8429,12 @@
     "sayi": 4
    },
    {
-    "yol": "/kategori/yasam/",
-    "sayi": 4
-   },
-   {
     "yol": "/kategori/turkiye-dunya/",
     "sayi": 4
    },
    {
-    "yol": "/haber/mersin-de-kamyonet-ile-otomobilin-carpistigi-kazada-1-kisi-oldu-2-kisi-1bfosq4/",
-    "sayi": 3
+    "yol": "/kategori/yasam/",
+    "sayi": 4
    },
    {
     "yol": "/kategori/asayis/",
@@ -8374,7 +8449,7 @@
     "sayi": 3
    },
    {
-    "yol": "/haber/mersin-sosyal-hizmetlerde-yeni-siddet-iddiasi-9xbft/",
+    "yol": "/haber/mersin-de-kamyonet-ile-otomobilin-carpistigi-kazada-1-kisi-oldu-2-kisi-1bfosq4/",
     "sayi": 2
    },
    {
@@ -8382,8 +8457,16 @@
     "sayi": 2
    },
    {
+    "yol": "/haber/mersin-sosyal-hizmetlerde-yeni-siddet-iddiasi-9xbft/",
+    "sayi": 2
+   },
+   {
     "yol": "/haber/mersin-buyuksehir-den-cocuklara-dopdolu-ara-tatil-programi-ple3hp/",
     "sayi": 2
+   },
+   {
+    "yol": "/haber/sayistaydan-toroslar-belediyesine-ihalesiz-avukatlik-hizmeti-alimi-uya-3newkh/",
+    "sayi": 1
    },
    {
     "yol": "/haber/mersin-valisi-atilla-toros-kktc-nin-43-kurulus-yil-donumu-resepsiyonun-1codpsk/",
@@ -8399,10 +8482,6 @@
    },
    {
     "yol": "/haber/tarihi-kilikya-yolu-nda-uc-parkur-daha-yurundu-1fgfdln/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/sayistaydan-toroslar-belediyesine-ihalesiz-avukatlik-hizmeti-alimi-uya-3newkh/",
     "sayi": 1
    },
    {
@@ -8448,7 +8527,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T05:02:04.601Z",
+  "guncelleme": "2026-11-20T05:32:59.327Z",
   "deniz": {
    "sicaklik": 21.5,
    "dalga": 0.66
@@ -8461,32 +8540,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T05:02:06.692Z",
+  "guncelleme": "2026-11-20T05:33:02.147Z",
   "giden": [
-   {
-    "no": [
-     "XQ7631"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "Antalya",
-    "planlanan": "2026-11-20T05:10:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC2081"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-20T05:10:00.000Z",
-    "tahmini": null,
-    "kapi": "105",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
    {
     "no": [
      "XQ9007"
@@ -8496,7 +8551,7 @@
     "planlanan": "2026-11-20T05:50:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "BOARDING",
     "hat": "ic"
    },
    {
@@ -8508,7 +8563,7 @@
     "planlanan": "2026-11-20T06:05:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8520,7 +8575,7 @@
     "planlanan": "2026-11-20T06:25:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8532,7 +8587,7 @@
     "planlanan": "2026-11-20T06:25:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8580,7 +8635,7 @@
     "planlanan": "2026-11-20T08:25:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -9074,33 +9129,21 @@
     "kapi": "105",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ7631"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "Antalya",
+    "planlanan": "2026-11-21T05:10:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "XQ9006"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "İzmir",
-    "planlanan": "2026-11-20T05:10:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC3010"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "İzmir",
-    "planlanan": "2026-11-20T05:30:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "TK2452"
@@ -9676,11 +9719,59 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ9006"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "İzmir",
+    "planlanan": "2026-11-21T05:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC4284"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-21T05:15:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3600"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Antalya",
+    "planlanan": "2026-11-21T05:20:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3010"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-21T05:30:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T05:02:06.691Z",
+  "guncelleme": "2026-11-20T05:33:02.146Z",
   "liste": [
    {
     "id": 6375,
