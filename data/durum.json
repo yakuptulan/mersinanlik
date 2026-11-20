@@ -15,12 +15,12 @@
   },
   "haberturk-mersin": {
    "hata": "fetch failed",
-   "zaman": "2026-11-20T22:31:23.164Z"
+   "zaman": "2026-11-20T23:01:20.516Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-21",
-  "adet": 7
+  "adet": 8
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -336,15 +336,23 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-20T22:31:55.187Z",
+  "guncelleme": "2026-11-20T23:01:47.948Z",
   "liste": [
    {
-    "baslik": "advent calendar",
+    "baslik": "porto",
     "trafik": 200
+   },
+   {
+    "baslik": "advent calendar",
+    "trafik": 500
    },
    {
     "baslik": "atletico bilbao",
     "trafik": 200
+   },
+   {
+    "baslik": "taşacak bu deniz 40 bölüm fragmanı",
+    "trafik": 10000
    },
    {
     "baslik": "düşüş",
@@ -359,24 +367,16 @@
     "trafik": 1000
    },
    {
-    "baslik": "hazine",
+    "baslik": "nathaniel brown",
     "trafik": 200
    },
    {
-    "baslik": "nathaniel brown",
-    "trafik": 500
+    "baslik": "mikey moore",
+    "trafik": 200
    },
    {
     "baslik": "iran",
     "trafik": 1000
-   },
-   {
-    "baslik": "nasdaq",
-    "trafik": 200
-   },
-   {
-    "baslik": "donald trump",
-    "trafik": 100
    }
   ]
  },
