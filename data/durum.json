@@ -15,16 +15,12 @@
   },
   "mut-belediyesi": {
    "hata": "HTTP 500",
-   "zaman": "2026-11-20T06:01:25.535Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-20T06:01:18.911Z"
+   "zaman": "2026-11-20T06:31:27.116Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-20",
-  "adet": 7
+  "adet": 9
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -43,7 +39,9 @@
    "https://www.mersin.bel.tr/haber/mersin-sinema-ofisinin-destek-verdigi-danalar-ve-insanlar-filminin-cekimleri-tarsusta-suruyor-1794981427",
    "https://www.mersin.bel.tr/haber/buyuksehirin-kiyafet-evinde-kislik-kiyafetler-raflardaki-yerini-aldi-1794981255",
    "https://www.mersin.bel.tr/haber/mersin-buyuksehirin-tarihi-dogayi-ve-sporu-bir-araya-getiren-etkinligine-ilgi-her-gecen-gun-artiyor-1795068578",
-   "https://www.mersin.bel.tr/haber/mersin-buyuksehirden-cocuklara-dopdolu-ara-tatil-programi-1795068254"
+   "https://www.mersin.bel.tr/haber/mersin-buyuksehirden-cocuklara-dopdolu-ara-tatil-programi-1795068254",
+   "https://www.mersin.bel.tr/haber/buyuksehirden-mezitlinin-gelecegine-onemli-ulasim-yatirimi-1795155792",
+   "https://www.mersin.bel.tr/haber/mersinliler-buyuksehirin-ataturkun-sevdigi-sarkilar-konserinde-bir-araya-geldi-1795155331"
   ],
   "yenisehir-belediyesi": [
    "https://yenisehir.bel.tr/haber/yenisehirde-yesil-seferberlik-suru",
@@ -282,11 +280,31 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-20T06:01:43.853Z",
+  "guncelleme": "2026-11-20T06:31:51.687Z",
   "liste": [
    {
-    "baslik": "çivi",
+    "baslik": "faizsiz kredi veren bankalar",
     "trafik": 100
+   },
+   {
+    "baslik": "döviz kuru",
+    "trafik": 200
+   },
+   {
+    "baslik": "yeni şafak",
+    "trafik": 200
+   },
+   {
+    "baslik": "akın gürlek",
+    "trafik": 500
+   },
+   {
+    "baslik": "bim de bu hafta cuma",
+    "trafik": 100
+   },
+   {
+    "baslik": "çivi",
+    "trafik": 200
    },
    {
     "baslik": "belçim bilgin",
@@ -298,31 +316,11 @@
    },
    {
     "baslik": "tradingview",
-    "trafik": 200
-   },
-   {
-    "baslik": "timberwolves - knicks",
-    "trafik": 100
+    "trafik": 500
    },
    {
     "baslik": "black friday ne zaman",
     "trafik": 200
-   },
-   {
-    "baslik": "şehir hatları",
-    "trafik": 100
-   },
-   {
-    "baslik": "sermaye",
-    "trafik": 200
-   },
-   {
-    "baslik": "xauusd",
-    "trafik": 100
-   },
-   {
-    "baslik": "ilhan fakılı",
-    "trafik": 100
    }
   ]
  },

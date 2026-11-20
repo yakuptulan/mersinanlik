@@ -1,13 +1,13 @@
 {
- "guncelleme": "2026-11-20T06:02:28.318Z",
+ "guncelleme": "2026-11-20T06:32:10.456Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 17,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 19,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
-     "min": 17,
+     "min": 19,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
@@ -74,12 +74,12 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 17,
-   "durum": "Sisli",
+   "sicaklik": 19,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
-     "min": 17,
+     "min": 18,
      "max": 22,
      "durum": "Hafif sağanak"
     },
@@ -110,12 +110,12 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 15,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 17,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
-     "min": 15,
+     "min": 17,
      "max": 22,
      "durum": "Parçalı bulutlu"
     },
@@ -218,7 +218,7 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 12,
+   "sicaklik": 13,
    "durum": "Sisli",
    "gunler": [
     {
@@ -254,12 +254,12 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 17,
-   "durum": "Bulutlu",
+   "sicaklik": 19,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
-     "min": 17,
+     "min": 19,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
@@ -326,12 +326,12 @@
    ]
   },
   "silifke": {
-   "sicaklik": 16,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 18,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
-     "min": 16,
+     "min": 18,
      "max": 22,
      "durum": "Yağmurlu"
     },
@@ -362,12 +362,12 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 17,
+   "sicaklik": 18,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
-     "min": 17,
+     "min": 18,
      "max": 22,
      "durum": "Parçalı bulutlu"
     },
@@ -434,12 +434,12 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 17,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 19,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
-     "min": 17,
+     "min": 19,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-20T06:02:32.048Z",
+  "guncelleme": "2026-11-20T06:32:16.028Z",
   "liste": [
    {
     "ad": "Dila Bangiz Eczanesi",
@@ -752,7 +752,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-20T06:02:32.998Z",
+  "guncelleme": "2026-11-20T06:32:17.441Z",
   "liste": [
    {
     "tur": "su",
@@ -1024,7 +1024,7 @@
   "kaynakSaati": "2026-11-20 08:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-20T06:02:37.613Z",
+  "guncelleme": "2026-11-20T06:32:23.152Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -1945,7 +1945,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-20T03:31:52.817Z",
+  "guncelleme": "2026-11-20T06:32:27.106Z",
   "liste": [
    {
     "id": "gzi1bq",
@@ -2049,7 +2049,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-20T05:32:16.689Z",
+  "guncelleme": "2026-11-20T06:32:27.107Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8406,11 +8406,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T06:02:38.484Z",
+  "guncelleme": "2026-11-20T06:32:23.577Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 25
+    "sayi": 24
    },
    {
     "yol": "/spor/",
@@ -8527,7 +8527,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T06:02:39.797Z",
+  "guncelleme": "2026-11-20T06:33:09.956Z",
   "deniz": {
    "sicaklik": 21.5,
    "dalga": 0.64
@@ -8540,44 +8540,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T06:02:41.409Z",
+  "guncelleme": "2026-11-20T06:33:12.395Z",
   "giden": [
-   {
-    "no": [
-     "PC3011"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "İzmir",
-    "planlanan": "2026-11-20T06:05:00.000Z",
-    "tahmini": null,
-    "kapi": "107",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "TK2453"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-20T06:25:00.000Z",
-    "tahmini": null,
-    "kapi": "108",
-    "durum": "BOARDING",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC3620"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Milas Bodrum",
-    "planlanan": "2026-11-20T06:25:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "SON ÇAĞRI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC3640"
@@ -8587,7 +8551,7 @@
     "planlanan": "2026-11-20T06:35:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "BOARDING",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -8599,7 +8563,7 @@
     "planlanan": "2026-11-20T06:50:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8647,7 +8611,7 @@
     "planlanan": "2026-11-20T09:00:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -9165,21 +9129,33 @@
     "kapi": "104",
     "durum": "",
     "hat": "ic"
-   }
-  ],
-  "gelen": [
+   },
    {
     "no": [
-     "VF4086"
+     "PC3011"
     ],
-    "havayolu": "AJet",
-    "yer": "Ankara",
-    "planlanan": "2026-11-20T06:10:00.000Z",
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-21T06:05:00.000Z",
     "tahmini": null,
-    "kapi": "",
+    "kapi": "105",
     "durum": "",
     "hat": "ic"
    },
+   {
+    "no": [
+     "TK2453"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-21T06:25:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   }
+  ],
+  "gelen": [
    {
     "no": [
      "PC2082"
@@ -9767,11 +9743,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "VF4086"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ankara",
+    "planlanan": "2026-11-21T06:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T06:02:41.408Z",
+  "guncelleme": "2026-11-20T06:33:12.395Z",
   "liste": [
    {
     "id": 6375,
