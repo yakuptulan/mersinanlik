@@ -13,7 +13,7 @@ export const SITE = {
   defaultIlce: 'yenisehir',
   // Google AdSense yayıncı kimliği (ör. 'ca-pub-1234567890123456'). Boşken reklam kodu ve reklam alanları hiç basılmaz;
   // doldurulunca otomatik reklam kodu her sayfaya, ads.txt de site köküne eklenir.
-  adsense: '',
+  adsense: 'ca-pub-1594680476579282',
 };
 
 // "belirsiz: true" olan isimler başka illerde de geçebilir (ör. Bursa Yenişehir)
