@@ -335,7 +335,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
   // Cloudflare Pages: önbellek ayarları
   yaz(
     '/_headers',
-    `/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n/*.html\n  Cache-Control: public, max-age=0, must-revalidate\n/style.css\n  Cache-Control: public, max-age=31536000, immutable\n/app.js\n  Cache-Control: public, max-age=31536000, immutable\n`
+    `/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n/*.html\n  Cache-Control: public, max-age=0, must-revalidate\n/style.css\n  Cache-Control: public, max-age=31536000, immutable\n/app.js\n  Cache-Control: public, max-age=31536000, immutable\n/marka/*\n  Access-Control-Allow-Origin: *\n`
   );
 
   return { sayfaSayisi: sayfalar.length + 3, haberSayisi: hikayeler.length };
