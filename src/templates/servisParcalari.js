@@ -1,6 +1,7 @@
 // Piyasa şeridi, namaz vakti ve akaryakıt kutuları (ana sayfa, ilçe sayfaları, servis sayfaları)
 import { htmlKacis as h, slugify } from '../lib/text.js';
 import { KALEMLER } from '../lib/piyasa.js';
+import { piyasaIkon } from './piyasaIkon.js';
 import { DIYANET_ILCE, VAKITLER } from '../lib/namaz.js';
 import { ikon } from './ikonlar.js';
 import { SITE, ILCELER } from '../config.js';
@@ -66,7 +67,7 @@ export function piyasaSeridi(piyasa) {
   if (!ogeler.length) return '';
   return `<section class="piyasa-serit" aria-label="Piyasalar">
 ${ogeler
-  .map((x) => `<a class="piyasa" href="/piyasalar/#${x.kod}" data-piyasa="${x.kod}"><span class="p-ad">${h(x.ad)}</span><b class="p-deger" data-p-deger>${fmt(k[x.kod].satis, ONDALIK[x.kod])}${x.kod === 'bist' ? '' : ' ₺'}</b>${yon(k[x.kod].degisim)}</a>`)
+  .map((x) => `<a class="piyasa" href="/piyasalar/#${x.kod}" data-piyasa="${x.kod}"><span class="p-ad">${piyasaIkon(x.kod, 18)}${h(x.ad)}</span><b class="p-deger" data-p-deger>${fmt(k[x.kod].satis, ONDALIK[x.kod])}${x.kod === 'bist' ? '' : ' ₺'}</b>${yon(k[x.kod].degisim)}</a>`)
   .join('\n')}
 </section>`;
 }

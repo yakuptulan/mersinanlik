@@ -18,7 +18,6 @@ const JS_SURUM = surum('app.js');
 
 const MENU = [
   ['/', 'Gündem'],
-  ['/kategori/asayis/', 'Asayiş'],
   ['/kategori/belediye/', 'Belediye'],
   ['/kategori/ekonomi/', 'Ekonomi'],
   ['/kategori/yasam/', 'Yaşam'],

@@ -1525,3 +1525,18 @@ a.cip.kat:hover { filter: brightness(.95); }
 .ik-son:hover { text-decoration: underline; }
 .bos-yazi { color: var(--ikincil); font-weight: 500; }
 .ik-linkler { display: flex; gap: 12px; font-size: 13px; font-weight: 700; }
+.p-ikon { flex: none; display: inline-block; vertical-align: middle; }
+.p-ad-ikon { display: inline-flex; align-items: center; gap: 10px; }
+.piyasa .p-ad { display: inline-flex; align-items: center; gap: 6px; }
+.pk-ana { position: relative; overflow: hidden; }
+.pk-ikon { position: absolute; right: 18px; top: 50%; transform: translateY(-50%) rotate(-8deg); filter: drop-shadow(0 10px 18px rgba(0,0,0,.28)); }
+@media (max-width: 700px) { .pk-ikon { right: 10px; } .pk-ikon .p-ikon { width: 92px; height: 92px; } }
+.pk-baslik { display: flex; align-items: center; gap: 12px; }
+.pk-baslik .p-ikon { filter: drop-shadow(0 4px 10px rgba(0,0,0,.3)); }
+.pk-diger { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; margin-bottom: 18px; }
+.pk-diger a { display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid #e3e8f2; border-radius: 16px; padding: 10px 12px; font-weight: 700; font-size: 14px; text-decoration: none; color: inherit; }
+.pk-diger a:hover { border-color: #f5c542; }
+.pk-ikon { width: 168px; height: 168px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle, rgba(255,255,255,.28), rgba(255,255,255,.06) 62%, transparent 70%); right: 10px; }
+.eb-kare small.p-ad-ikon { gap: 6px; }
+.ky-satir .p-ad-ikon { gap: 8px; }
+.tablo .dusus { color: #b91c1c; } .tablo .artis { color: #15803d; }

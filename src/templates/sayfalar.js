@@ -1,3 +1,4 @@
+import { piyasaIkon } from './piyasaIkon.js';
 import { gundemimKarti } from './gundemim.js';
 import { sporYan, sporAnaIcerik, sporMu, macGunuKarti, derbiKarti } from './spor.js';
 import { kategoriYan, ekonomiBugunKarti } from './kategoriYan.js';
@@ -655,7 +656,7 @@ ${k ? `${ligSerit(k)}${k.maclar?.length ? `<h3 class="ara-baslik">Haftanın maç
 
 // ---------- Piyasalar ----------
 const KALEM_YOL = { GRA: 'gram-altin', CEYREKALTIN: 'ceyrek-altin', YARIMALTIN: 'yarim-altin', TAMALTIN: 'tam-altin', CUMHURIYETALTINI: 'cumhuriyet-altini', ATAALTIN: 'ata-altin', YIA: '22-ayar-bilezik', '18AYARALTIN': '18-ayar-altin', '14AYARALTIN': '14-ayar-altin', HAS: 'has-altin', GUMUS: 'gumus', USD: 'dolar', EUR: 'euro', GBP: 'sterlin', CHF: 'isvicre-frangi', SAR: 'riyal', RUB: 'ruble' };
-const tabloSatir = (x, kod = null) => `<tr${kod ? ` id="${kod}"` : ''}><th scope="row">${KALEM_YOL[x.k] ? `<a href="/piyasalar/${KALEM_YOL[x.k]}/">${h(x.ad)}</a>` : h(x.ad)}</th><td data-tg="${x.k}" data-alan="alis">${x.alis ? fmt(x.alis) : '–'}</td><td data-tg="${x.k}" data-alan="satis"><strong>${fmt(x.satis)}</strong></td><td data-tg="${x.k}" data-alan="degisim">${yon(x.degisim)}</td></tr>`;
+const tabloSatir = (x, kod = null) => `<tr${kod ? ` id="${kod}"` : ''}><th scope="row"><span class="p-ad-ikon">${piyasaIkon(x.k, 30)}${KALEM_YOL[x.k] ? `<a href="/piyasalar/${KALEM_YOL[x.k]}/">${h(x.ad)}</a>` : h(x.ad)}</span></th><td data-tg="${x.k}" data-alan="alis">${x.alis ? fmt(x.alis) : '–'}</td><td data-tg="${x.k}" data-alan="satis"><strong>${fmt(x.satis)}</strong></td><td data-tg="${x.k}" data-alan="degisim">${yon(x.degisim)}</td></tr>`;
 
 export function piyasaSayfasi({ servis }) {
   const p = servis?.piyasa;

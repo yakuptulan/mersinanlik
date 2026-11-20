@@ -4,6 +4,7 @@ import { sayfa } from './layout.js';
 import { SITE } from '../config.js';
 import ILLER from '../iller.json' with { type: 'json' };
 import { havaIkonu } from './havaIkon.js';
+import { piyasaIkon } from './piyasaIkon.js';
 
 const TZ = 'Europe/Istanbul';
 const tl = (n) => (n == null ? '–' : `${Number(n).toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} TL`);
@@ -259,10 +260,10 @@ export function piyasaKalemSayfasi({ kalem, servis, gecmis }) {
     yol: piyasaKalemYolu(kalem.slug),
     aktif: '/piyasalar/',
     jsonLd: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: sss.map((s) => ({ '@type': 'Question', name: s.soru, acceptedAnswer: { '@type': 'Answer', text: s.cevap } })) },
-    ust: `<div class="su-an-bas"><div><div class="cipler"><a class="cip" href="/piyasalar/">Piyasalar</a></div><h1>${h(baslikAd)}</h1><p style="margin-top:8px">Canlı · sayfa açıkken dakikada bir yenilenir · son güncelleme <span data-p-saat>${h(saatStr(p.guncelleme))}</span></p></div></div>`,
+    ust: `<div class="su-an-bas"><div><div class="cipler"><a class="cip" href="/piyasalar/">Piyasalar</a></div><h1 class="pk-baslik">${piyasaIkon(kalem.k, 46)}${h(baslikAd)}</h1><p style="margin-top:8px">Canlı · sayfa açıkken dakikada bir yenilenir · son güncelleme <span data-p-saat>${h(saatStr(p.guncelleme))}</span></p></div></div>`,
     icerik: `<main class="kap govde"><div class="ana">
 <section class="piyasa-kalem">
-<div class="pk-ana"><small>Satış</small><span data-tg="${kalem.k}" data-alan="satis"><strong>${para(x.satis, doviz ? 4 : 2)}</strong></span><em>₺${doviz ? ` / 1 ${h(kalem.isaret)}` : ` / ${kalem.birim}`}</em></div>
+<div class="pk-ana"><span class="pk-ikon">${piyasaIkon(kalem.k, 132)}</span><small>Satış</small><span data-tg="${kalem.k}" data-alan="satis"><strong>${para(x.satis, doviz ? 4 : 2)}</strong></span><em>₺${doviz ? ` / 1 ${h(kalem.isaret)}` : ` / ${kalem.birim}`}</em></div>
 <div class="pk-yan"><div><small>Alış</small><b data-tg="${kalem.k}" data-alan="alis">${x.alis ? para(x.alis, doviz ? 4 : 2) : '–'}</b></div><div><small>Günlük değişim</small><b data-tg="${kalem.k}" data-alan="degisim">${yonHtml(x.degisim)}</b></div></div>
 </section>
 <section class="hesap" data-hesap data-k="${kalem.k}" data-birim="${h(kalem.birim)}" data-fiyat="${x.satis}">
@@ -275,7 +276,7 @@ ${doviz ? `<div class="hesap-satir"><label><input type="number" inputmode="decim
 ${noktalar.length >= 2 ? `<div class="bolum-bas"><h2>Son ${noktalar.length} gün</h2><span>günlük kapanış (satış)</span></div>${cizgi(noktalar)}<div class="tablo-kap"><table class="tablo"><thead><tr><th>Tarih</th><th>Fiyat</th><th>Değişim</th></tr></thead><tbody>${son7.slice(1).reverse().map((n, i, arr) => { const o = son7[son7.length - 2 - i]; return `<tr><th scope="row">${h(new Date(`${n.g}T12:00:00+03:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'short' }))}</th><td>${para(n.v, doviz ? 4 : 2)} ₺</td><td>${yonHtml(((n.v - o.v) / o.v) * 100)}</td></tr>`; }).join('')}</tbody></table></div>` : ''}
 <section class="bilgi-sss"><h2>Sık sorulanlar</h2>${sss.map((s) => `<details><summary>${h(s.soru)}</summary><p>${h(s.cevap)}</p></details>`).join('')}</section>
 <div class="bolum-bas"><h2>${doviz ? 'Diğer kurlar' : 'Diğer altın fiyatları'}</h2><a class="bolum-link" href="/piyasalar/">Tüm piyasalar →</a></div>
-<div class="mh-liste">${digerleri.map((y) => `<a href="${piyasaKalemYolu(y.slug)}">${h(y.ad)}</a>`).join('')}</div>
+<div class="pk-diger">${digerleri.map((y) => `<a href="${piyasaKalemYolu(y.slug)}">${piyasaIkon(y.k, 34)}<span>${h(y.ad)}</span></a>`).join('')}</div>
 <p style="color:var(--ikincil);font-size:14px">Kaynak: Truncgil Finans (serbest piyasa). Kuyumcu ve bankalarda fiyatlar farklı olabilir. Bu sayfa yatırım tavsiyesi değildir.</p>
 </div></main>`,
   });

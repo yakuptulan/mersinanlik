@@ -1,3 +1,4 @@
+import { piyasaIkon } from './piyasaIkon.js';
 // Kategoriye özel yan sütun: her kategori kendi konusuna uygun kutularla açılır
 // (spor için spor.js'deki sporYan kullanılır; gündem ve tüm haberlerde genel yan sütun kalır).
 import { htmlKacis as h } from '../lib/text.js';
@@ -25,7 +26,7 @@ function cokKonusulan(baslik, liste, simdi) {
 function piyasaKutusu(servis) {
   const k = servis?.piyasa?.kalemler;
   if (!k) return '';
-  const satir = (ad, x, ondalik, kod) => (x ? `<div class="ky-satir"><span>${ad}</span><b data-tg="${kod}" data-alan="satis">${fmt(x.satis, ondalik)}</b><small>${yon(x.degisim)}</small></div>` : '');
+  const satir = (ad, x, ondalik, kod) => (x ? `<div class="ky-satir"><span class="p-ad-ikon">${piyasaIkon(kod, 22)}${ad}</span><b data-tg="${kod}" data-alan="satis">${fmt(x.satis, ondalik)}</b><small>${yon(x.degisim)}</small></div>` : '');
   return `<section class="kutu">${kutuBasligi({ ikon: '💰', baslik: 'Altın ve döviz', link: '/piyasalar/' })}<div class="ky-liste">
 ${satir('Gram altın', k.gram, 2, 'GRA')}${satir('Çeyrek altın', k.ceyrek, 0, 'CEYREKALTIN')}${satir('Dolar', k.usd, 2, 'USD')}${satir('Euro', k.eur, 2, 'EUR')}${satir('BIST 100', k.bist, 0, 'XU100')}
 </div></section>`;
@@ -166,7 +167,7 @@ export function ekonomiBugunKarti(servis) {
   const bf = yakitFark('benzin');
   const mf = yakitFark('motorin');
   const yakitCumle = degisimTarih && (bf || mf) ? ` Akaryakıtta son fiyat değişikliği ${degisimTarih}'${bulunmaEki(degisimTarih)} oldu: ${[bf ? `benzine ${Math.abs(bf)} kuruş ${bf > 0 ? 'zam' : 'indirim'}` : '', mf ? `motorine ${Math.abs(mf)} kuruş ${mf > 0 ? 'zam' : 'indirim'}` : ''].filter(Boolean).join(', ')}.` : '';
-  const kare = (ad, deger, alt, kod, alan = 'satis', degisim = null) => `<div class="eb-kare"><small>${ad}</small><b${kod ? ` data-tg="${kod}" data-alan="${alan}"` : ''}>${deger}</b>${degisim != null ? `<span${kod ? ` data-tg="${kod}" data-alan="degisim"` : ''}>${yon(degisim)}</span>` : ''}${alt ? `<em>${alt}</em>` : ''}</div>`;
+  const kare = (ad, deger, alt, kod, alan = 'satis', degisim = null) => `<div class="eb-kare"><small class="p-ad-ikon">${kod ? piyasaIkon(kod, 20) : alt?.startsWith('Son değişim') ? '⛽' : ''}${ad}</small><b${kod ? ` data-tg="${kod}" data-alan="${alan}"` : ''}>${deger}</b>${degisim != null ? `<span${kod ? ` data-tg="${kod}" data-alan="degisim"` : ''}>${yon(degisim)}</span>` : ''}${alt ? `<em>${alt}</em>` : ''}</div>`;
   const fark = (f) => (f ? `${f > 0 ? '+' : '−'}${fmt(Math.abs(f) / 100, 2)} ₺ (${degisimTarih})` : 'değişmedi');
   return `<section class="ekonomi-bugun">
 <div class="eb-bas"><div><h2>Mersin'de bugün</h2><p>${h(ozet.charAt(0).toUpperCase() + ozet.slice(1))}.${h(yakitCumle)}</p></div><a href="/piyasalar/">Tüm piyasalar →</a></div>

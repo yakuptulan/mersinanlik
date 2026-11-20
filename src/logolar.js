@@ -37,6 +37,7 @@ function eslestir(ad, adaylar) {
       const tk = new Set([...kelimeler(t.strTeam), ...kelimeler(t.strTeamAlternate || '')]);
       return { t, p: [...k].filter((x) => tk.has(x) && x.length >= 4).length };
     })
+    .filter((x) => x.p >= Math.min(2, [...k].filter((w) => w.length >= 4).length))
     .filter((x) => x.p > 0)
     .sort((a, b) => b.p - a.p);
   if (!puanli.length || (puanli[1] && puanli[1].p === puanli[0].p)) return null;
@@ -82,6 +83,29 @@ async function sor(url) {
     if (/429/.test(e.message)) durdu = true;
     console.warn(`! Logo isteği: ${e.message}`);
     return null;
+  }
+}
+
+// Elle doğrulanmış eşleşmeler (otomatik eşleştirme yanlış logo seçtiğinde)
+const ELLE = {
+  'Yeni Mersin İdmanyurdu': { idTeam: '147641', strBadge: 'https://r2.thesportsdb.com/images/media/team/badge/2834fk1764457130.png' },
+  // Yanlış kulübe eşleşmişti; doğru logo bulunana kadar logo yerine baş harf rozeti gösterilir
+  'Arkent Arnavutköy Belediyesi Futbol': null,
+  'Beyoğlu Yeni Çarşı Spor Faaliyetleri': null,
+};
+for (const [takim, aday] of Object.entries(ELLE)) {
+  if (aday === null) {
+    for (const k of Object.keys(logolar.takimlar)) if (k.startsWith(takim.slice(0, 18))) delete logolar.takimlar[k];
+    for (const k of Object.keys(logolar.denenen)) if (k.startsWith(takim.slice(0, 18))) logolar.denenen[k] = 99;
+    for (const l of Object.values(ligler)) for (const t of l.puan || []) if (t.takim.startsWith(takim.slice(0, 18))) logolar.denenen[t.takim] = 99;
+    continue;
+  }
+  if (logolar.takimlar[takim] === `${aday.idTeam}.webp` && fs.existsSync(path.join(KLASOR, `${aday.idTeam}.webp`))) continue;
+  try {
+    await indir(takim, aday);
+    console.log(`Logo düzeltildi: ${takim}`);
+  } catch (e) {
+    console.warn(`! Logo (${takim}): ${e.message}`);
   }
 }
 
