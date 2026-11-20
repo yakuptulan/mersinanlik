@@ -15,11 +15,7 @@
   },
   "mut-belediyesi": {
    "hata": "HTTP 500",
-   "zaman": "2026-11-20T03:01:26.856Z"
-  },
-  "erdemli-belediyesi": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-20T03:01:25.836Z"
+   "zaman": "2026-11-20T03:31:18.447Z"
   }
  },
  "gorsel": {
@@ -282,8 +278,12 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-20T03:01:41.187Z",
+  "guncelleme": "2026-11-20T03:31:38.170Z",
   "liste": [
+   {
+    "baslik": "real madrid cf",
+    "trafik": 100
+   },
    {
     "baslik": "köprü",
     "trafik": 100
@@ -319,10 +319,6 @@
    {
     "baslik": "güneşin doğduğu yer son bölüm",
     "trafik": 200
-   },
-   {
-    "baslik": "muhtemel aşk fragman",
-    "trafik": 1000
    }
   ]
  },
