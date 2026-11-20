@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-20T22:31:23.164Z"
   }
  },
  "gorsel": {
@@ -332,7 +336,7 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-20T22:20:54.886Z",
+  "guncelleme": "2026-11-20T22:31:55.187Z",
   "liste": [
    {
     "baslik": "advent calendar",
@@ -347,16 +351,12 @@
     "trafik": 500000
    },
    {
-    "baslik": "athletic bilbao",
-    "trafik": 500
-   },
-   {
     "baslik": "bitcoin usd",
     "trafik": 100
    },
    {
     "baslik": "espanyol",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "hazine",
@@ -373,6 +373,10 @@
    {
     "baslik": "nasdaq",
     "trafik": 200
+   },
+   {
+    "baslik": "donald trump",
+    "trafik": 100
    }
   ]
  },

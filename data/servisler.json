@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-20T22:20:55.669Z",
+ "guncelleme": "2026-11-20T22:31:55.578Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 18,
@@ -182,8 +182,8 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 18,
-   "durum": "Bulutlu",
+   "sicaklik": 17,
+   "durum": "Sisli",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -255,7 +255,7 @@
   },
   "mezitli": {
    "sicaklik": 19,
-   "durum": "Bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -363,7 +363,7 @@
   },
   "tarsus": {
    "sicaklik": 18,
-   "durum": "Parçalı bulutlu",
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -398,8 +398,8 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 19,
-   "durum": "Bulutlu",
+   "sicaklik": 18,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -434,8 +434,8 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 19,
-   "durum": "Bulutlu",
+   "sicaklik": 18,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-20T22:20:59.687Z",
+  "guncelleme": "2026-11-20T22:31:59.351Z",
   "liste": [
    {
     "ad": "Dila Bangiz Eczanesi",
@@ -686,11 +686,11 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-20T22:21:00.873Z",
+  "guncelleme": "2026-11-20T22:32:00.414Z",
   "liste": []
  },
  "piyasa": {
-  "guncelleme": "2026-11-20T22:21:04.719Z",
+  "guncelleme": "2026-11-20T22:32:02.290Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -723,9 +723,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2985366,
-    "usd": 59094,
-    "degisim": -4.49
+    "satis": 2982187,
+    "usd": 59031,
+    "degisim": -5.07
    }
   },
   "altinlar": [
@@ -858,10 +858,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 01:21:02"
+  "kaynakSaati": "2026-11-21 01:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-20T22:21:07.541Z",
+  "guncelleme": "2026-11-20T22:32:04.432Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1786,7 +1786,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-20T21:32:15.654Z",
+  "guncelleme": "2026-11-20T22:32:06.963Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8198,7 +8198,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T22:21:08.111Z",
+  "guncelleme": "2026-11-20T22:32:05.238Z",
   "liste": [
    {
     "yol": "/",
@@ -8295,7 +8295,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T22:21:10.467Z",
+  "guncelleme": "2026-11-20T22:32:48.331Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.5
@@ -8308,7 +8308,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T22:21:12.482Z",
+  "guncelleme": "2026-11-20T22:32:50.171Z",
   "giden": [
    {
     "no": [
@@ -8319,7 +8319,7 @@
     "planlanan": "2026-11-21T00:25:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9455,7 +9455,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T22:21:12.482Z",
+  "guncelleme": "2026-11-20T22:32:50.171Z",
   "liste": [
    {
     "id": 6375,
