@@ -12,15 +12,11 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "mut-belediyesi": {
-   "hata": "HTTP 500",
-   "zaman": "2026-11-20T06:31:27.116Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-20",
-  "adet": 9
+  "adet": 11
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -236,7 +232,12 @@
    "https://mersingundem.com/haber/13662/kaybolan-76-yasindaki-kadin-araniyor.html",
    "https://mersingundem.com/haber/13663/akdeniz-belediyesi-ekiplerinden-firinlara-siki-denetim.html",
    "https://mersingundem.com/haber/13664/emniyet-muduru-aktas-esnaf-ve-vatandaslarla-bir-araya-geldi.html",
-   "https://mersingundem.com/haber/13665/dikkat-ceken-billboardlar-siyaset-arinacak-turkiye-arinacak.html"
+   "https://mersingundem.com/haber/13665/dikkat-ceken-billboardlar-siyaset-arinacak-turkiye-arinacak.html",
+   "https://mersingundem.com/haber/13670/buyuksehirden-mezitlinin-gelecegine-onemli-ulasim-yatirimi.html",
+   "https://mersingundem.com/haber/13669/mersinliler-buyuksehirin-ataturkun-sevdigi-sarkilar-konserinde-bir-araya-geldi.html",
+   "https://mersingundem.com/haber/13667/oto-tamirhanesinde-lpgli-arac-tupu-patladi-2-yarali.html",
+   "https://mersingundem.com/haber/13668/gelecegin-denizcileri-simulator-ve-dalga-havuzunda-yetisiyor.html",
+   "https://mersingundem.com/haber/13666/tir-kanala-devrildi-surucu-kendi-imkanlari-ile-kurtuldu.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -280,15 +281,23 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-20T06:31:51.687Z",
+  "guncelleme": "2026-11-20T07:01:57.740Z",
   "liste": [
+   {
+    "baslik": "dünya çocuk hakları günü",
+    "trafik": 500
+   },
+   {
+    "baslik": "gümrük",
+    "trafik": 100
+   },
    {
     "baslik": "faizsiz kredi veren bankalar",
     "trafik": 100
    },
    {
-    "baslik": "döviz kuru",
-    "trafik": 200
+    "baslik": "dolar",
+    "trafik": 2000
    },
    {
     "baslik": "yeni şafak",
@@ -296,11 +305,11 @@
    },
    {
     "baslik": "akın gürlek",
-    "trafik": 500
+    "trafik": 100
    },
    {
     "baslik": "bim de bu hafta cuma",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "çivi",
@@ -308,18 +317,10 @@
    },
    {
     "baslik": "belçim bilgin",
-    "trafik": 100
-   },
-   {
-    "baslik": "bitcoin dolar",
     "trafik": 200
    },
    {
-    "baslik": "tradingview",
-    "trafik": 500
-   },
-   {
-    "baslik": "black friday ne zaman",
+    "baslik": "bitcoin dolar",
     "trafik": 200
    }
   ]

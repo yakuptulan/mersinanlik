@@ -54,14 +54,16 @@
    "kaynakHatalari": []
   },
   "2026-11-20": {
-   "guncelleme": "2026-11-20T06:34:15.385Z",
-   "mersinHaber": 16,
-   "kendiYazimiz": 16,
-   "turkiyeDunya": 35,
-   "otomatik": 6,
+   "guncelleme": "2026-11-20T07:03:13.849Z",
+   "mersinHaber": 17,
+   "kendiYazimiz": 17,
+   "turkiyeDunya": 53,
+   "otomatik": 8,
    "otomatikTurler": {
     "yakit": 1,
-    "su": 5
+    "su": 5,
+    "superlig": 1,
+    "piyasa": 1
    },
    "otomatikBasliklar": [
     {
@@ -93,14 +95,22 @@
      "baslik": "Tarsus'ta su kesintisi: 9 saat sürecek",
      "tur": "su",
      "saat": "08:33"
+    },
+    {
+     "baslik": "Süper Lig'de haftanın programı: Kocaelispor–Fenerbahçe maçı cumartesi akşamı",
+     "tur": "superlig",
+     "saat": "10:03"
+    },
+    {
+     "baslik": "Altın fiyatları bugün (20 Kasım 2026): Gram altın ve çeyrek altın ne kadar?",
+     "tur": "piyasa",
+     "saat": "10:03"
     }
    ],
-   "gorsel": 9,
+   "gorsel": 11,
    "bilgi": 1,
    "gezi": 12,
-   "kaynakHatalari": [
-    "mut-belediyesi (HTTP 500)"
-   ]
+   "kaynakHatalari": []
   }
  }
 }
