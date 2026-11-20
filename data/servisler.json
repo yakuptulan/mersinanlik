@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-20T10:32:04.489Z",
+ "guncelleme": "2026-11-20T11:03:13.863Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 21,
@@ -38,13 +38,13 @@
    ]
   },
   "anamur": {
-   "sicaklik": 23,
+   "sicaklik": 22,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
      "min": 18,
-     "max": 23,
+     "max": 22,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -74,8 +74,8 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 21,
-   "durum": "Yağmurlu",
+   "sicaklik": 22,
+   "durum": "Hafif yağmurlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
@@ -182,13 +182,13 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 20,
+   "sicaklik": 19,
    "durum": "Hafif yağmurlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
      "min": 18,
-     "max": 20,
+     "max": 19,
      "durum": "Hafif yağmurlu"
     },
     {
@@ -218,8 +218,8 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 15,
-   "durum": "Hafif sağanak",
+   "sicaklik": 16,
+   "durum": "Hafif yağmurlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
@@ -290,7 +290,7 @@
    ]
   },
   "mut": {
-   "sicaklik": 20,
+   "sicaklik": 21,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -326,13 +326,13 @@
    ]
   },
   "silifke": {
-   "sicaklik": 21,
+   "sicaklik": 20,
    "durum": "Yağmurlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
      "min": 17,
-     "max": 21,
+     "max": 20,
      "durum": "Hafif sağanak"
     },
     {
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-20T10:32:08.666Z",
+  "guncelleme": "2026-11-20T11:03:18.517Z",
   "liste": [
    {
     "ad": "Dila Bangiz Eczanesi",
@@ -752,7 +752,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-20T10:32:10.053Z",
+  "guncelleme": "2026-11-20T11:03:19.933Z",
   "liste": [
    {
     "tur": "su",
@@ -1076,7 +1076,7 @@
   "kaynakSaati": "2026-11-20 13:13:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-20T10:32:16.548Z",
+  "guncelleme": "2026-11-20T11:03:26.632Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -8458,7 +8458,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T10:32:17.006Z",
+  "guncelleme": "2026-11-20T11:03:26.999Z",
   "liste": [
    {
     "yol": "/",
@@ -8485,10 +8485,6 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-valisi-atilla-toros-kktc-nin-43-kurulus-yil-donumu-resepsiyonun-1codpsk/",
-    "sayi": 1
-   },
-   {
     "yol": "/haber/findikpinari-yolunda-kaya-dusmesi-ulasim-yeniden-saglandi-m49045/",
     "sayi": 1
    },
@@ -8501,15 +8497,11 @@
     "sayi": 1
    },
    {
-    "yol": "/trafik/",
-    "sayi": 1
-   },
-   {
     "yol": "/okullar-tatil-mi/diyarbakir/",
     "sayi": 1
    },
    {
-    "yol": "/haber/sayistaydan-toroslar-belediyesine-ihalesiz-avukatlik-hizmeti-alimi-uya-3newkh/",
+    "yol": "/trafik/",
     "sayi": 1
    },
    {
@@ -8567,45 +8559,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T10:33:01.795Z",
+  "guncelleme": "2026-11-20T11:03:29.178Z",
   "deniz": {
    "sicaklik": 21.6,
-   "dalga": 0.58
+   "dalga": 0.56
   },
   "hava": {
-   "aqi": 37,
-   "pm25": 9.1,
-   "pm10": 18.8,
+   "aqi": 34,
+   "pm25": 10.5,
+   "pm10": 17.8,
    "uvMax": 1.65
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T10:33:04.222Z",
+  "guncelleme": "2026-11-20T11:03:31.623Z",
   "giden": [
-   {
-    "no": [
-     "PC3601"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Antalya",
-    "planlanan": "2026-11-20T10:40:00.000Z",
-    "tahmini": null,
-    "kapi": "105",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC4989"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Dalaman",
-    "planlanan": "2026-11-20T10:45:00.000Z",
-    "tahmini": null,
-    "kapi": "109",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC1856"
@@ -8615,7 +8583,7 @@
     "planlanan": "2026-11-20T11:40:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "dis"
    },
    {
@@ -8627,7 +8595,7 @@
     "planlanan": "2026-11-20T11:50:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -9193,21 +9161,33 @@
     "kapi": "106",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2085"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-21T10:55:00.000Z",
+    "tahmini": null,
+    "kapi": "109",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3630"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Dalaman",
+    "planlanan": "2026-11-21T11:00:00.000Z",
+    "tahmini": null,
+    "kapi": "107",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "XQ1371"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "Düsseldorf",
-    "planlanan": "2026-11-20T10:40:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "dis"
-   },
    {
     "no": [
      "PC1855"
@@ -9799,7 +9779,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T10:33:04.222Z",
+  "guncelleme": "2026-11-20T11:03:31.622Z",
   "liste": [
    {
     "id": 6375,
