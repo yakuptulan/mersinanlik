@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-20T12:31:52.583Z",
+ "guncelleme": "2026-11-20T12:49:15.665Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 21,
@@ -752,7 +752,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-20T12:32:06.354Z",
+  "guncelleme": "2026-11-20T12:49:31.073Z",
   "liste": [
    {
     "tur": "su",
@@ -8442,11 +8442,39 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T12:32:29.794Z",
+  "guncelleme": "2026-11-20T12:49:54.496Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 14
+    "sayi": 30
+   },
+   {
+    "yol": "/kategori/belediye/",
+    "sayi": 7
+   },
+   {
+    "yol": "/kategori/asayis/",
+    "sayi": 5
+   },
+   {
+    "yol": "/spor/",
+    "sayi": 4
+   },
+   {
+    "yol": "/kategori/ekonomi/",
+    "sayi": 4
+   },
+   {
+    "yol": "/piyasalar/gram-altin/",
+    "sayi": 3
+   },
+   {
+    "yol": "/kategori/yasam/",
+    "sayi": 3
+   },
+   {
+    "yol": "/piyasalar/",
+    "sayi": 2
    },
    {
     "yol": "/haber/mersin-de-taksici-esnafindan-arac-kullanma-belgesi-tepkisi-178ax2s/",
@@ -8457,47 +8485,15 @@
     "sayi": 2
    },
    {
-    "yol": "/kategori/belediye/",
+    "yol": "/bilgi/",
     "sayi": 2
    },
    {
-    "yol": "/kategori/ekonomi/",
-    "sayi": 1
-   },
-   {
-    "yol": "/piyasalar/gram-altin/",
-    "sayi": 1
-   },
-   {
-    "yol": "/piyasalar/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/mersin-de-6-ilcede-planli-elektrik-kesintisi-20-kasim-1vorztq/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/mersin-de-kamyonet-ile-otomobilin-carpistigi-kazada-1-kisi-oldu-2-kisi-1bfosq4/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/findikpinari-yolunda-kaya-dusmesi-ulasim-yeniden-saglandi-m49045/",
-    "sayi": 1
-   },
-   {
-    "yol": "/kategori/yasam/",
-    "sayi": 1
-   },
-   {
-    "yol": "/bilgi/",
-    "sayi": 1
-   },
-   {
-    "yol": "/okullar-tatil-mi/diyarbakir/",
-    "sayi": 1
-   },
-   {
     "yol": "/trafik/",
+    "sayi": 2
+   },
+   {
+    "yol": "/kar-tatili/",
     "sayi": 1
    },
    {
@@ -8505,7 +8501,15 @@
     "sayi": 1
    },
    {
-    "yol": "/kar-tatili/",
+    "yol": "/okullar-tatil-mi/diyarbakir/",
+    "sayi": 1
+   },
+   {
+    "yol": "/gundemim/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/yenisehir-de-su-kesintisi-bircok-mahalle-etkilenecek-s494a3/",
     "sayi": 1
    },
    {
@@ -8513,7 +8517,23 @@
     "sayi": 1
    },
    {
-    "yol": "/spor/",
+    "yol": "/ara/",
+    "sayi": 1
+   },
+   {
+    "yol": "/ilce/yenisehir/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/findikpinari-yolunda-kaya-dusmesi-ulasim-yeniden-saglandi-m49045/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/mersin-de-kamyonet-ile-otomobilin-carpistigi-kazada-1-kisi-oldu-2-kisi-1bfosq4/",
+    "sayi": 1
+   },
+   {
+    "yol": "/gorsel-kaynaklari/",
     "sayi": 1
    },
    {
@@ -8521,11 +8541,15 @@
     "sayi": 1
    },
    {
+    "yol": "/haber/avrupa-ikincisi-gulizar-demirpolat-akdeniz-in-gururu-oldu-y9j1ye/",
+    "sayi": 1
+   },
+   {
     "yol": "/haber/mersin-de-101-dosyadan-aranan-supheli-polis-operasyonuyla-yakalandi-1o4insl/",
     "sayi": 1
    },
    {
-    "yol": "/kategori/asayis/",
+    "yol": "/haber/mersin-de-6-ilcede-planli-elektrik-kesintisi-20-kasim-1vorztq/",
     "sayi": 1
    },
    {
@@ -8535,7 +8559,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T12:33:11.674Z",
+  "guncelleme": "2026-11-20T12:49:56.807Z",
   "deniz": {
    "sicaklik": 21.7,
    "dalga": 0.6
@@ -8548,7 +8572,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T12:33:13.292Z",
+  "guncelleme": "2026-11-20T12:49:59.540Z",
   "giden": [
    {
     "no": [
@@ -8559,7 +8583,7 @@
     "planlanan": "2026-11-20T13:25:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -9154,18 +9178,6 @@
   "gelen": [
    {
     "no": [
-     "PC2086"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-20T12:35:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "ic"
-   },
-   {
-    "no": [
      "PC4060"
     ],
     "havayolu": "Pegasus",
@@ -9739,11 +9751,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2460"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-21T12:45:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T12:33:13.291Z",
+  "guncelleme": "2026-11-20T12:49:59.540Z",
   "liste": [
    {
     "id": 6375,
