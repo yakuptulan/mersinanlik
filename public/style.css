@@ -1540,3 +1540,8 @@ a.cip.kat:hover { filter: brightness(.95); }
 .eb-kare small.p-ad-ikon { gap: 6px; }
 .ky-satir .p-ad-ikon { gap: 8px; }
 .tablo .dusus { color: #b91c1c; } .tablo .artis { color: #15803d; }
+.alt-telif { border-top: 1px solid rgba(255,255,255,.1); }
+.alt-telif .kap { padding-top: 16px !important; padding-bottom: 20px !important; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font-size: 13px; color: var(--soluk); }
+.alt-telif a { color: var(--acik-yazi); font-weight: 700; text-decoration: none; }
+.alt-telif a:hover { text-decoration: underline; }
+@media (max-width: 760px) { .alt-telif .kap { padding-bottom: 96px !important; } }
