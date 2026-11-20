@@ -59,7 +59,7 @@ export function reklamSayfasi({ istatistik = {} } = {}) {
 <div><b>13</b><span>ilçede yerel haber</span></div>
 <div><b>${istatistik.gunlukHaber || '50+'}</b><span>günlük haber ve güncelleme</span></div>
 <div><b>${istatistik.sayfa ? istatistik.sayfa.toLocaleString('tr-TR') : '600+'}</b><span>sayfa (eczane, kesinti, hava, rehber…)</span></div>
-<div><b>7/24</b><span>otomatik güncel, Google Haberler'de</span></div>
+<div><b>7/24</b><span>saatte iki kez otomatik güncellenir</span></div>
 </section>
 <div class="bolum-bas"><h2>Neler yapabiliriz?</h2></div>
 <div class="rk-izgara">${HIZMETLER.map(kutu).join('')}</div>
