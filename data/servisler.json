@@ -1,16 +1,10 @@
 {
- "guncelleme": "2026-11-20T20:31:47.090Z",
+ "guncelleme": "2026-11-20T21:02:11.033Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 19,
    "durum": "Bulutlu",
    "gunler": [
-    {
-     "tarih": "2026-11-20",
-     "min": 19,
-     "max": 19,
-     "durum": "Parçalı bulutlu"
-    },
     {
      "tarih": "2026-11-21",
      "min": 17,
@@ -34,19 +28,19 @@
      "min": 14,
      "max": 20,
      "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-25",
+     "min": 13,
+     "max": 19,
+     "durum": "Az bulutlu"
     }
    ]
   },
   "anamur": {
    "sicaklik": 18,
-   "durum": "Parçalı bulutlu",
+   "durum": "Bulutlu",
    "gunler": [
-    {
-     "tarih": "2026-11-20",
-     "min": 18,
-     "max": 18,
-     "durum": "Bulutlu"
-    },
     {
      "tarih": "2026-11-21",
      "min": 16,
@@ -70,6 +64,12 @@
      "min": 14,
      "max": 19,
      "durum": "Açık"
+    },
+    {
+     "tarih": "2026-11-25",
+     "min": 12,
+     "max": 20,
+     "durum": "Açık"
     }
    ]
   },
@@ -77,12 +77,6 @@
    "sicaklik": 18,
    "durum": "Sisli",
    "gunler": [
-    {
-     "tarih": "2026-11-20",
-     "min": 18,
-     "max": 18,
-     "durum": "Sisli"
-    },
     {
      "tarih": "2026-11-21",
      "min": 14,
@@ -106,6 +100,12 @@
      "min": 13,
      "max": 18,
      "durum": "Bulutlu"
+    },
+    {
+     "tarih": "2026-11-25",
+     "min": 12,
+     "max": 21,
+     "durum": "Az bulutlu"
     }
    ]
   },
@@ -113,12 +113,6 @@
    "sicaklik": 17,
    "durum": "Bulutlu",
    "gunler": [
-    {
-     "tarih": "2026-11-20",
-     "min": 17,
-     "max": 17,
-     "durum": "Bulutlu"
-    },
     {
      "tarih": "2026-11-21",
      "min": 15,
@@ -142,6 +136,12 @@
      "min": 14,
      "max": 18,
      "durum": "Az bulutlu"
+    },
+    {
+     "tarih": "2026-11-25",
+     "min": 11,
+     "max": 20,
+     "durum": "Açık"
     }
    ]
   },
@@ -149,12 +149,6 @@
    "sicaklik": 12,
    "durum": "Hafif yağmurlu",
    "gunler": [
-    {
-     "tarih": "2026-11-20",
-     "min": 12,
-     "max": 12,
-     "durum": "Hafif yağmurlu"
-    },
     {
      "tarih": "2026-11-21",
      "min": 11,
@@ -178,6 +172,12 @@
      "min": 7,
      "max": 11,
      "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-25",
+     "min": 6,
+     "max": 11,
+     "durum": "Parçalı bulutlu"
     }
    ]
   },
@@ -185,12 +185,6 @@
    "sicaklik": 18,
    "durum": "Bulutlu",
    "gunler": [
-    {
-     "tarih": "2026-11-20",
-     "min": 18,
-     "max": 18,
-     "durum": "Sisli"
-    },
     {
      "tarih": "2026-11-21",
      "min": 16,
@@ -214,6 +208,12 @@
      "min": 14,
      "max": 18,
      "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-25",
+     "min": 14,
+     "max": 20,
+     "durum": "Parçalı bulutlu"
     }
    ]
   },
@@ -221,12 +221,6 @@
    "sicaklik": 13,
    "durum": "Sisli",
    "gunler": [
-    {
-     "tarih": "2026-11-20",
-     "min": 13,
-     "max": 13,
-     "durum": "Sisli"
-    },
     {
      "tarih": "2026-11-21",
      "min": 9,
@@ -250,6 +244,12 @@
      "min": 8,
      "max": 11,
      "durum": "Bulutlu"
+    },
+    {
+     "tarih": "2026-11-25",
+     "min": 7,
+     "max": 12,
+     "durum": "Az bulutlu"
     }
    ]
   },
@@ -257,12 +257,6 @@
    "sicaklik": 19,
    "durum": "Bulutlu",
    "gunler": [
-    {
-     "tarih": "2026-11-20",
-     "min": 19,
-     "max": 19,
-     "durum": "Parçalı bulutlu"
-    },
     {
      "tarih": "2026-11-21",
      "min": 17,
@@ -286,6 +280,12 @@
      "min": 14,
      "max": 19,
      "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-25",
+     "min": 13,
+     "max": 18,
+     "durum": "Az bulutlu"
     }
    ]
   },
@@ -294,12 +294,6 @@
    "durum": "Bulutlu",
    "gunler": [
     {
-     "tarih": "2026-11-20",
-     "min": 17,
-     "max": 17,
-     "durum": "Bulutlu"
-    },
-    {
      "tarih": "2026-11-21",
      "min": 15,
      "max": 23,
@@ -322,6 +316,12 @@
      "min": 11,
      "max": 17,
      "durum": "Az bulutlu"
+    },
+    {
+     "tarih": "2026-11-25",
+     "min": 9,
+     "max": 17,
+     "durum": "Parçalı bulutlu"
     }
    ]
   },
@@ -330,12 +330,6 @@
    "durum": "Bulutlu",
    "gunler": [
     {
-     "tarih": "2026-11-20",
-     "min": 17,
-     "max": 17,
-     "durum": "Bulutlu"
-    },
-    {
      "tarih": "2026-11-21",
      "min": 15,
      "max": 23,
@@ -358,19 +352,19 @@
      "min": 13,
      "max": 18,
      "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-25",
+     "min": 12,
+     "max": 20,
+     "durum": "Parçalı bulutlu"
     }
    ]
   },
   "tarsus": {
    "sicaklik": 18,
-   "durum": "Bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
-    {
-     "tarih": "2026-11-20",
-     "min": 18,
-     "max": 18,
-     "durum": "Parçalı bulutlu"
-    },
     {
      "tarih": "2026-11-21",
      "min": 16,
@@ -394,6 +388,12 @@
      "min": 14,
      "max": 21,
      "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-25",
+     "min": 14,
+     "max": 20,
+     "durum": "Bulutlu"
     }
    ]
   },
@@ -402,12 +402,6 @@
    "durum": "Bulutlu",
    "gunler": [
     {
-     "tarih": "2026-11-20",
-     "min": 19,
-     "max": 19,
-     "durum": "Parçalı bulutlu"
-    },
-    {
      "tarih": "2026-11-21",
      "min": 17,
      "max": 22,
@@ -430,6 +424,12 @@
      "min": 14,
      "max": 20,
      "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-25",
+     "min": 13,
+     "max": 19,
+     "durum": "Az bulutlu"
     }
    ]
   },
@@ -438,12 +438,6 @@
    "durum": "Bulutlu",
    "gunler": [
     {
-     "tarih": "2026-11-20",
-     "min": 19,
-     "max": 19,
-     "durum": "Parçalı bulutlu"
-    },
-    {
      "tarih": "2026-11-21",
      "min": 17,
      "max": 22,
@@ -466,6 +460,12 @@
      "min": 14,
      "max": 20,
      "durum": "Parçalı bulutlu"
+    },
+    {
+     "tarih": "2026-11-25",
+     "min": 13,
+     "max": 19,
+     "durum": "Az bulutlu"
     }
    ]
   }
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-20T20:31:50.540Z",
+  "guncelleme": "2026-11-20T21:02:14.772Z",
   "liste": [
    {
     "ad": "Dila Bangiz Eczanesi",
@@ -585,28 +585,6 @@
     "saat": "20.11.2026 18:00 / 21.11.2026 08:00 nöbetçidir."
    },
    {
-    "ad": "Sahil Eczanesi",
-    "bolge": "MEZİTLİ",
-    "ilce": "mezitli",
-    "adres": "MENDERES MH. GMK BULV. BEKO APT. ALTI NO:725/C",
-    "tarif": "KUYULUK KAVŞAĞI KARŞISI VAKIFBANK YANI MEZİTLİ/MEZİTLİ",
-    "telefon": "03243593233",
-    "lat": 36.746611,
-    "lon": 34.527013,
-    "saat": "20.11.2026 18:00 / 21.11.2026 00:00 nöbetçidir."
-   },
-   {
-    "ad": "Tece Plus Eczanesi",
-    "bolge": "MEZİTLİ",
-    "ilce": "mezitli",
-    "adres": "DENİZ MAH. GAZİPAŞA CAD.NO:81/A",
-    "tarif": "DENİZ MAH. MANGAL RETORANT KARŞI ÇAPRAZI ODİN APT. ALTI",
-    "telefon": "03245024477",
-    "lat": 36.695075,
-    "lon": 34.446509,
-    "saat": "20.11.2026 18:00 / 21.11.2026 00:00 nöbetçidir."
-   },
-   {
     "ad": "Anadolu Eczanesi",
     "bolge": "TARSUS",
     "ilce": "tarsus",
@@ -618,28 +596,6 @@
     "saat": "20.11.2026 18:00 / 21.11.2026 08:00 nöbetçidir."
    },
    {
-    "ad": "Nida Eczanesi",
-    "bolge": "TARSUS",
-    "ilce": "tarsus",
-    "adres": "ALTAYLILAR MAH.TURAN CAD.NO:45/A",
-    "tarif": "ALTAYLILAR MAH.TURAN CAD.NO:45/A ALTAYLILAR ASM YANI BAL SİTESİ CİVARI",
-    "telefon": "03246241212",
-    "lat": 36.923388,
-    "lon": 34.853848,
-    "saat": "20.11.2026 18:00 / 21.11.2026 00:00 nöbetçidir."
-   },
-   {
-    "ad": "Sema Can Eczanesi",
-    "bolge": "TARSUS",
-    "ilce": "tarsus",
-    "adres": "HÜRRİYET MH. 2215 SK. NO:13/1",
-    "tarif": "Hürriyet Mh. Yeşilyurt A.S.M karşısı. Aşiyan düğün salonu arkası",
-    "telefon": "03246138898",
-    "lat": 36.929197,
-    "lon": 34.88995,
-    "saat": "20.11.2026 18:00 / 21.11.2026 00:00 nöbetçidir."
-   },
-   {
     "ad": "Üçgençarşı Eczanesi",
     "bolge": "TARSUS",
     "ilce": "tarsus",
@@ -649,17 +605,6 @@
     "lat": 36.909522,
     "lon": 34.882067,
     "saat": "20.11.2026 18:00 / 21.11.2026 08:00 nöbetçidir."
-   },
-   {
-    "ad": "Mira Eczanesi",
-    "bolge": "SİLİFKE",
-    "ilce": "silifke",
-    "adres": "TAŞUCU MH. ATATÜRK_15 SK. NO:31/A",
-    "tarif": "TAŞUCU KAPALI PAZAR YERİ KARŞISI",
-    "telefon": "03247413020",
-    "lat": 36.322618,
-    "lon": 33.884339,
-    "saat": "20.11.2026 18:00 / 21.11.2026 00:00 nöbetçidir."
    },
    {
     "ad": "Türkmen Eczanesi",
@@ -706,17 +651,6 @@
     "saat": "20.11.2026 18:00 / 21.11.2026 08:00 nöbetçidir."
    },
    {
-    "ad": "Samet Eczanesi",
-    "bolge": "ERDEMLİ",
-    "ilce": "erdemli",
-    "adres": "MERKEZ MAH.A.SEVK CAD.NO:25/B",
-    "tarif": "MÜFTÜLÜK YANI /ERDEMLİ",
-    "telefon": "03245152280",
-    "lat": 36.604797,
-    "lon": 34.313913,
-    "saat": "20.11.2026 18:00 / 21.11.2026 00:00 nöbetçidir."
-   },
-   {
     "ad": "Sağlık Eczanesi",
     "bolge": "BOZYAZI",
     "ilce": "bozyazi",
@@ -752,53 +686,36 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-20T20:31:51.545Z",
-  "liste": [
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Yenişehir ilçesi Emirler mahallesi Çavak tepe restoran mevkide depoda çalışma yapılacağı için su kesintisi yaşanmaktadır. tahmini olarak saat 23.59 de suların verilmesi planlanmaktadır.",
-    "baslangic": "2026-11-20T14:05:00.000Z",
-    "bitis": "2026-11-20T20:59:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "yenisehir",
-      "ad": "Yenişehir",
-      "mahalleler": [
-       "Emirler"
-      ]
-     }
-    ]
-   }
-  ]
+  "guncelleme": "2026-11-20T21:02:15.926Z",
+  "liste": []
  },
  "piyasa": {
-  "guncelleme": "2026-11-20T20:31:55.741Z",
+  "guncelleme": "2026-11-20T21:02:20.337Z",
   "kalemler": {
    "gram": {
-    "alis": 5714.3,
-    "satis": 5715.36,
-    "degisim": -3.76
+    "alis": 5730.97,
+    "satis": 5731.95,
+    "degisim": -3.48
    },
    "ceyrek": {
-    "alis": 9672,
-    "satis": 9885,
-    "degisim": -0.91
+    "alis": 9698,
+    "satis": 9912,
+    "degisim": -0.64
    },
    "gumus": {
-    "alis": 66.68,
-    "satis": 66.76,
-    "degisim": -6.39
+    "alis": 66.57,
+    "satis": 66.65,
+    "degisim": -6.54
    },
    "usd": {
-    "alis": 50.5652,
-    "satis": 50.5756,
+    "alis": 50.562,
+    "satis": 50.5746,
     "degisim": 0.22
    },
    "eur": {
-    "alis": 55.4468,
-    "satis": 55.5963,
-    "degisim": -0.02
+    "alis": 55.4072,
+    "satis": 55.6153,
+    "degisim": -0.03
    },
    "bist": {
     "alis": null,
@@ -806,125 +723,125 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2966913,
-    "usd": 58669,
-    "degisim": -4.99
+    "satis": 2951314,
+    "usd": 58358,
+    "degisim": -5.63
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 5714.3,
-    "satis": 5715.36,
-    "degisim": -3.76
+    "alis": 5730.97,
+    "satis": 5731.95,
+    "degisim": -3.48
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 9672,
-    "satis": 9885,
-    "degisim": -0.91
+    "alis": 9698,
+    "satis": 9912,
+    "degisim": -0.64
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 19325,
-    "satis": 19758,
-    "degisim": -0.79
+    "alis": 19379,
+    "satis": 19812,
+    "degisim": -0.52
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 38527,
-    "satis": 39395,
-    "degisim": -0.87
+    "alis": 38633,
+    "satis": 39503,
+    "degisim": -0.6
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 39575,
-    "satis": 40476,
-    "degisim": -0.73
+    "alis": 39685,
+    "satis": 40586,
+    "degisim": -0.46
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 39575,
-    "satis": 40476,
-    "degisim": -0.73
+    "alis": 39685,
+    "satis": 40586,
+    "degisim": -0.46
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 39575,
-    "satis": 40476,
-    "degisim": -0.73
+    "alis": 39685,
+    "satis": 40586,
+    "degisim": -0.46
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5389.22,
-    "satis": 5622.18,
-    "degisim": -1.4
+    "alis": 5403.63,
+    "satis": 5637.03,
+    "degisim": -1.14
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4094,
-    "satis": 4820,
-    "degisim": -1.13
+    "alis": 4103,
+    "satis": 4825,
+    "degisim": -1.03
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3227.67,
-    "satis": 4401.51,
-    "degisim": -1.24
+    "alis": 3236.54,
+    "satis": 4411.77,
+    "degisim": -1.01
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 5685.73,
-    "satis": 5686.78,
-    "degisim": -3.76
+    "alis": 5702.32,
+    "satis": 5703.29,
+    "degisim": -3.48
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 66.68,
-    "satis": 66.76,
-    "degisim": -6.39
+    "alis": 66.57,
+    "satis": 66.65,
+    "degisim": -6.54
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.5652,
-    "satis": 50.5756,
+    "alis": 50.562,
+    "satis": 50.5746,
     "degisim": 0.22
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.4468,
-    "satis": 55.5963,
-    "degisim": -0.02
+    "alis": 55.4072,
+    "satis": 55.6153,
+    "degisim": -0.03
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.0699,
-    "satis": 66.4261,
-    "degisim": -0.04
+    "alis": 66.1082,
+    "satis": 66.3364,
+    "degisim": -0.08
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.2188,
-    "satis": 60.2587,
-    "degisim": 0.74
+    "alis": 60.1966,
+    "satis": 60.2426,
+    "degisim": 0.71
    },
    {
     "k": "SAR",
@@ -936,15 +853,15 @@
    {
     "k": "RUB",
     "ad": "Rus rublesi",
-    "alis": 0.6173,
-    "satis": 0.6201,
-    "degisim": 0.74
+    "alis": 0.6166,
+    "satis": 0.6181,
+    "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-20 23:31:01"
+  "kaynakSaati": "2026-11-21 00:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-20T20:31:58.105Z",
+  "guncelleme": "2026-11-20T21:02:26.455Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -1039,19 +956,9 @@
   "degisim": "2026-11-19T21:32:01.405Z"
  },
  "namaz": {
-  "guncelleme": "2026-11-19T21:02:50.720Z",
+  "guncelleme": "2026-11-20T21:02:20.337Z",
   "bolgeler": {
    "9731": [
-    {
-     "tarih": "2026-11-20",
-     "imsak": "06:01",
-     "gunes": "07:23",
-     "ogle": "12:39",
-     "ikindi": "15:23",
-     "aksam": "17:45",
-     "yatsi": "19:03",
-     "hicri": "11 Cemaziyelahir 1448"
-    },
     {
      "tarih": "2026-11-21",
      "imsak": "06:02",
@@ -1125,16 +1032,6 @@
    ],
    "9732": [
     {
-     "tarih": "2026-11-20",
-     "imsak": "05:59",
-     "gunes": "07:21",
-     "ogle": "12:37",
-     "ikindi": "15:21",
-     "aksam": "17:43",
-     "yatsi": "19:01",
-     "hicri": "11 Cemaziyelahir 1448"
-    },
-    {
      "tarih": "2026-11-21",
      "imsak": "06:00",
      "gunes": "07:22",
@@ -1206,16 +1103,6 @@
     }
    ],
    "9733": [
-    {
-     "tarih": "2026-11-20",
-     "imsak": "06:00",
-     "gunes": "07:22",
-     "ogle": "12:39",
-     "ikindi": "15:22",
-     "aksam": "17:45",
-     "yatsi": "19:02",
-     "hicri": "11 Cemaziyelahir 1448"
-    },
     {
      "tarih": "2026-11-21",
      "imsak": "06:01",
@@ -1289,16 +1176,6 @@
    ],
    "9734": [
     {
-     "tarih": "2026-11-20",
-     "imsak": "05:55",
-     "gunes": "07:18",
-     "ogle": "12:32",
-     "ikindi": "15:13",
-     "aksam": "17:36",
-     "yatsi": "18:55",
-     "hicri": "11 Cemaziyelahir 1448"
-    },
-    {
      "tarih": "2026-11-21",
      "imsak": "05:56",
      "gunes": "07:19",
@@ -1370,16 +1247,6 @@
     }
    ],
    "9735": [
-    {
-     "tarih": "2026-11-20",
-     "imsak": "05:55",
-     "gunes": "07:18",
-     "ogle": "12:33",
-     "ikindi": "15:16",
-     "aksam": "17:38",
-     "yatsi": "18:56",
-     "hicri": "11 Cemaziyelahir 1448"
-    },
     {
      "tarih": "2026-11-21",
      "imsak": "05:56",
@@ -1453,16 +1320,6 @@
    ],
    "9736": [
     {
-     "tarih": "2026-11-20",
-     "imsak": "05:59",
-     "gunes": "07:21",
-     "ogle": "12:37",
-     "ikindi": "15:20",
-     "aksam": "17:43",
-     "yatsi": "19:00",
-     "hicri": "11 Cemaziyelahir 1448"
-    },
-    {
      "tarih": "2026-11-21",
      "imsak": "06:00",
      "gunes": "07:22",
@@ -1534,16 +1391,6 @@
     }
    ],
    "9737": [
-    {
-     "tarih": "2026-11-20",
-     "imsak": "05:54",
-     "gunes": "07:17",
-     "ogle": "12:32",
-     "ikindi": "15:14",
-     "aksam": "17:37",
-     "yatsi": "18:55",
-     "hicri": "11 Cemaziyelahir 1448"
-    },
     {
      "tarih": "2026-11-21",
      "imsak": "05:55",
@@ -1617,16 +1464,6 @@
    ],
    "9738": [
     {
-     "tarih": "2026-11-20",
-     "imsak": "05:59",
-     "gunes": "07:22",
-     "ogle": "12:37",
-     "ikindi": "15:19",
-     "aksam": "17:42",
-     "yatsi": "19:00",
-     "hicri": "11 Cemaziyelahir 1448"
-    },
-    {
      "tarih": "2026-11-21",
      "imsak": "06:00",
      "gunes": "07:23",
@@ -1699,16 +1536,6 @@
    ],
    "9739": [
     {
-     "tarih": "2026-11-20",
-     "imsak": "05:57",
-     "gunes": "07:19",
-     "ogle": "12:35",
-     "ikindi": "15:18",
-     "aksam": "17:40",
-     "yatsi": "18:58",
-     "hicri": "11 Cemaziyelahir 1448"
-    },
-    {
      "tarih": "2026-11-21",
      "imsak": "05:57",
      "gunes": "07:20",
@@ -1780,16 +1607,6 @@
     }
    ],
    "9740": [
-    {
-     "tarih": "2026-11-20",
-     "imsak": "05:53",
-     "gunes": "07:17",
-     "ogle": "12:31",
-     "ikindi": "15:13",
-     "aksam": "17:35",
-     "yatsi": "18:54",
-     "hicri": "11 Cemaziyelahir 1448"
-    },
     {
      "tarih": "2026-11-21",
      "imsak": "05:54",
@@ -8363,24 +8180,24 @@
   }
  },
  "burc": {
-  "tarih": "2026-11-20",
+  "tarih": "2026-11-21",
   "yorumlar": {
-   "koc": "Sevgili Koç, bugün iş yerindeki yoğun tempoyu geride bırakıp yeni projelere zihninde yelken açabilirsin. Yaratıcı fikirlerin üstlerinin dikkatini çekebilir ve harika iş birliklerine kapı aralayabilir. Kendine inanmaktan vazgeçme.",
-   "boga": "Sevgili Boğa, evindeki küçük değişiklikler ruhuna çok iyi gelebilir. Yaşam alanını tazelemek, akşam saatlerinde huzurla dinlenmene zemin hazırlayacak. Sevdiğin bir bitkiyi sulamak bile günün stresini alıp götürebilir.",
-   "ikizler": "Sevgili İkizler, sosyal çevrenden alacağın tatlı bir haber günü neşeyle doldurabilir. Uzun süredir görüşmediğin bir arkadaşınla kahve içmek sana enerji verecek. Yeni insanlarla tanışmaya açık ol.",
-   "yengec": "Sevgili Yengeç, aile ilişkilerinde sıcak ve samimi rüzgarlar esiyor. Sevdiklerinle birlikte geçireceğin akşam yemeği tüm yorgunluğunu unutturabilir. Onlarla dertleşmek kalbini hafifletecek.",
-   "aslan": "Sevgili Aslan, bugün kişisel bakımına ve kendi isteklerine odaklanmak için harika bir gün. Kendini ödüllendirmek, öz güvenini tazeleyerek hafta sonuna harika bir başlangıç yapmanı sağlayacak. Işığınla etrafını aydınlatıyorsun.",
-   "basak": "Sevgili Başak, günlük rutinlerini gözden geçirmek ve zihnini sakinleştirmek adına doğada kısa bir yürüyüş yapabilirsin. Küçük detaylara takılmadan akışa bırakmak sana beklenmedik bir huzur getirebilir.",
-   "terazi": "Sevgili Terazi, sanatsal faaliyetlere vakit ayırmak ruhunu dinlendirecek. Uzun süredir denemek istediğin bir hobiye adım atmak için bugünü değerlendirebilirsin. Estetik zevkin çevrendekileri de büyüleyecek.",
-   "akrep": "Sevgili Akrep, iç sesini dinlemek ve kendi iç dünyana dönmek için harika bir gün. Meditasyon yapmak ya da gün tutmak zihnindeki karmaşayı dağıtabilir. Kendi merkezinde kalmak sana güç verecek.",
-   "yay": "Sevgili Yay, yeni kültürler keşfetmek ya da seyahat planları yapmak için sabırsızlanabilirsin. Uzaklardaki bir dosttan gelecek güzel bir mesaj yüzünü güldürecek. Hayal kurmak enerjini tazeleyebilir.",
-   "oglak": "Sevgili Oğlak, kariyerinde attığın sağlam adımların meyvesini toplama vakti yaklaşıyor. Çalışma arkadaşlarınla yapacağın keyifli bir sohbet motivasyonunu artırabilir. Başarılarını kutlamayı ihmal etme.",
-   "kova": "Sevgili Kova, yenilikçi fikirlerinle etrafındaki insanlara ilham oluyorsun. Bugün teknolojiyle ilgili yeni şeyler öğrenmek ya da ilginç bir belgesel izlemek zihnini açabilir. Özgür ruhunun tadını çıkar.",
-   "balik": "Sevgili Balık, hayal gücünün en yüksek olduğu günlerden birindesin. Müzikle ilgilenmek ya da ilham veren bir kitap okumak ruhunu besleyebilir. İçindeki şefkati etrafına yaymaktan çekinme."
+   "koc": "Sevgili Koç, bugün enerjini evindeki küçük düzenlemelere ve dekoratif değişikliklere yönlendirmek sana çok iyi gelebilir. Yaşam alanını tazelemek ruhuna da huzur katacaktır. Akşam saatlerinde sevdiğin bir müzik eşliğinde dinlenmeyi ihmal etme.",
+   "boga": "Sevgili Boğa, bugün kariyerinde atacağın yaratıcı adımlar takdir toplamanı sağlayabilir. Uzun zamandır ertelediğin bir projeye başlamak için harika bir gün. Kendine olan inancını yüksek tut, başarı seni bulacaktır.",
+   "ikizler": "Sevgili İkizler, iletişim becerilerinin zirvesinde olduğun bu gün, arkadaşlarla yapılacak keyifli sohbetler neşeni katlayacak. Yeni bir şeyler öğrenmek ve merakını besleyen konularla ilgilenmek gününü güzelleştirebilir.",
+   "yengec": "Sevgili Yengeç, bugün aile ilişkilerine ve sevdiklerinle vakit geçirmeye odaklanmak kalbini ısıtabilir. Birlikte hazırlayacağınız lezzetli bir akşam yemeği bağlarınızı güçlendirebilir ve tatlı anılar bırakabilir.",
+   "aslan": "Sevgili Aslan, içindeki sanatsal yetenekleri ortaya çıkarmak için harika bir gün seni bekliyor. Resim yapmak, yazı yazmak veya el işleriyle uğraşmak zihnini dinlendirirken sana keyifli anlar yaşatabilir.",
+   "basak": "Sevgili Başak, kişisel gelişimine zaman ayırmak ve yeni bir hobi edinmek için bugünü değerlendirebilirsin. Kitap okumak ya da ilham verici bir belgesel izlemek sana yepyeni ufuklar açabilir.",
+   "terazi": "Sevgili Terazi, sosyal çevrenle ilgili hareketli ve keyifli gelişmeler kapıda. Eski bir dosttan alınacak tatlı bir haber yüzünü güldürebilir, hafta sonunu neşeyle doldurabilir.",
+   "akrep": "Sevgili Akrep, bugün iç sesine kulak vermek ve kendi kabuğuna çekilmek sana harika bir huzur verebilir. Meditasyon yapmak ya da doğada sakin bir yürüyüş yapmak ruhunu tazelemeni sağlayacaktır.",
+   "yay": "Sevgili Yay, yeni yerler keşfetme arzun bugün seni kısa bir hafta sonu kaçamağına yönlendirebilir. Yakın çevredeki doğa yürüyüşleri enerjini yükseltebilir ve sana harika ilhamlar verebilir.",
+   "oglak": "Sevgili Oğlak, gününü tamamen dinlenmeye ve kendine vakit ayırmaya adamak en doğrusu olabilir. Sevdiğin filmleri izlemek veya uzun bir banyo yapmak haftanın yorgunluğunu üzerimden alacaktır.",
+   "kova": "Sevgili Kova, topluluklar ve sosyal projeler içinde yer almak ruhuna çok iyi gelebilir. Yeni insanlarla tanışmak ve fikir alışverişinde bulunmak gününe hareket ve renk katacaktır.",
+   "balik": "Sevgili Balık, hayal gücünün en üst düzeyde olduğu bu günü yaratıcı çalışmalara adayabilirsin. Müzikle ilgilenmek veya iç dünyanı kâğıda dökmek sana büyük bir rahatlama getirebilir."
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T20:31:58.466Z",
+  "guncelleme": "2026-11-20T21:02:26.863Z",
   "liste": [
    {
     "yol": "/",
@@ -8473,33 +8290,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T20:32:40.775Z",
+  "guncelleme": "2026-11-20T21:02:31.643Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.5
   },
   "hava": {
-   "aqi": 45,
-   "pm25": 24,
-   "pm10": 34.9,
-   "uvMax": 1.65
+   "aqi": 44,
+   "pm25": 21.5,
+   "pm10": 30.4,
+   "uvMax": 2.05
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T20:32:42.777Z",
+  "guncelleme": "2026-11-20T21:02:33.599Z",
   "giden": [
-   {
-    "no": [
-     "PC2093"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-20T20:55:00.000Z",
-    "tahmini": null,
-    "kapi": "107",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC2097"
@@ -9633,7 +9438,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T20:32:42.777Z",
+  "guncelleme": "2026-11-20T21:02:33.599Z",
   "liste": [
    {
     "id": 6375,

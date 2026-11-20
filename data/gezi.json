@@ -1368,6 +1368,58 @@
     "sayfa": "https://commons.wikimedia.org/wiki/File:Diocaesare_-zeus_tap%C4%B1na%C4%9F%C4%B1-temple_of_zeus-uzunca_bur%C3%A7_-_panoramio_-_HALUK_COMERTEL_(2).jpg"
    },
    "tarih": "2026-11-19T23:06:30.376Z"
+  },
+  {
+   "slug": "kelenderis",
+   "spot": "Mersin'in Aydıncık ilçesinde yer alan Kelenderis Antik Kenti, Akdeniz'in köklü geçmişe sahip önemli liman kentlerinden biridir.",
+   "aciklama": "Mersin Aydıncık'taki Kelenderis Antik Kenti gezi rehberi. Tarihçesi, Dörtayak anıt mezarı ve liman kalıntıları hakkında bilgiler.",
+   "bolumler": [
+    {
+     "baslik": "Burası neresi?",
+     "metin": "Kelenderis, Taşlık Kilikya bölgesinde, günümüzdeki Mersin'in Aydıncık ilçesinde yer alan antik bir şehirdir. Akdeniz'in doğusu ve batısı ile Kıbrıs arasında deniz yolu üzerinde kurulmuş olan kent, bölgenin en elverişli limanlarından birine sahiptir. Kentte ilk kazı çalışmaları 1987 yılında başlatılmıştır."
+    },
+    {
+     "baslik": "Kısa tarihçe",
+     "metin": "Antik kaynaklara göre kentin ilk halkı Luvilerdir ve kökeni MÖ 2. binyıla kadar uzanmaktadır. Önemli konumu nedeniyle MÖ 10. yüzyıldan itibaren Fenikeliler, MÖ 8. yüzyıl sonlarında ise İyonyalılar buraya yerleşerek koloni kurmuşlardır. Tarih boyunca Babil, Pers, Ptolemaios Hanedanı, Kommagene Krallığı, Roma, Part, Arap, Selçuklu, Karamanoğlu ve Osmanlı egemenliklerinde kalmıştır."
+    },
+    {
+     "baslik": "Neler görülür?",
+     "metin": "Kentin kesintisiz iskân edilmesi nedeniyle arkeolojik kalıntılar sınırlı kalmıştır. Liman çevresinde hamam kalıntıları, geniş ancak büyük ölçüde tahrip olmuş bir nekropol, henüz kazılmamış bir tiyatro, sarnıçlar ve sur duvarı kalıntıları bulunmaktadır. Doğu nekropolünde ise MS 2 ila 3. yüzyıla ait, piramit çatılı ve baldaken tipinde iyi korunmuş Dörtayak anıt mezarı yer almaktadır."
+    },
+    {
+     "baslik": "Dörtayak Anıtı",
+     "metin": "Roma İmparatorluğu dönemine ait bir kenotaf veya anıt mezar olan bu yapının esas adı bilinmemektedir. Bina dört kalın ayak üzerinde yükseldiği için yöre halkı tarafından 'Dört ayak' olarak adlandırılmaktadır. Günümüzde görülebilen en iyi korunmuş yapılardan biridir."
+    }
+   ],
+   "ipuclari": [
+    "Kazılarda ele geçen buluntular Anamur Müzesi ile Karaman Müzesi'nde sergilenmektedir.",
+    "Kentin liman çevresinde hamam ve sur kalıntıları görülebilmektedir."
+   ],
+   "sss": [
+    {
+     "soru": "Kelenderis Antik Kenti nerededir?",
+     "cevap": "Günümüzde Mersin'e bağlı Aydıncık ilçesinde yer almaktadır."
+    },
+    {
+     "soru": "Dörtayak nedir?",
+     "cevap": "Roma dönemine ait, dört kalın ayak üzerinde yükselen piramit çatılı bir anıt mezardır."
+    }
+   ],
+   "koord": {
+    "lat": 36.14416667,
+    "lon": 33.32277778
+   },
+   "kaynak": {
+    "ad": "Vikipedi: Kelenderis",
+    "link": "https://tr.wikipedia.org/wiki/Kelenderis"
+   },
+   "gorsel": {
+    "dosya": "kelenderis.webp",
+    "yazar": "Klaus-Peter Simon",
+    "lisans": "CC BY-SA 3.0",
+    "sayfa": "https://commons.wikimedia.org/wiki/File:Kelenderis1.jpg"
+   },
+   "tarih": "2026-11-20T21:03:31.308Z"
   }
  ],
  "denenen": {
@@ -1399,9 +1451,10 @@
   "akkum-plaji": 1,
   "anamur-plaji": 2,
   "susanoglu": 1,
-  "sebil-yayla": 1,
-  "gozne": 1,
-  "kirkkasik-bedesteni": 1,
-  "olba-diocaesarea": 1
+  "sebil-yayla": 2,
+  "gozne": 2,
+  "kirkkasik-bedesteni": 2,
+  "olba-diocaesarea": 1,
+  "kelenderis": 1
  }
 }
