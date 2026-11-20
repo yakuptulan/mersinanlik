@@ -13,13 +13,9 @@
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
   },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-20T02:01:29.976Z"
-  },
   "mut-belediyesi": {
    "hata": "HTTP 500",
-   "zaman": "2026-11-20T02:01:36.935Z"
+   "zaman": "2026-11-20T02:31:23.116Z"
   }
  },
  "gorsel": {
@@ -282,8 +278,12 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-20T02:02:01.572Z",
+  "guncelleme": "2026-11-20T02:31:49.254Z",
   "liste": [
+   {
+    "baslik": "togg kampanya",
+    "trafik": 200
+   },
    {
     "baslik": "grok",
     "trafik": 100
@@ -319,10 +319,6 @@
    {
     "baslik": "20 kasım ne günü",
     "trafik": 200
-   },
-   {
-    "baslik": "israil",
-    "trafik": 1000
    }
   ]
  },
