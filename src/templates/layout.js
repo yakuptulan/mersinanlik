@@ -98,6 +98,10 @@ function uyariBantlari() {
   ).join('') + '<script>document.querySelectorAll(".uyari-bandi[data-bitis]").forEach(function(b){if(Date.now()>+b.dataset.bitis)b.remove()})</script>';
 }
 
+// Reklam kodu yalnızca içeriği dolu, dizine açık sayfalarda yüklenir (ince/noindex ve kurumsal sayfalarda yok)
+const REKLAMSIZ = ['/ara/', '/menu/', '/durum/', '/404', '/gizlilik/', '/cerez-politikasi/', '/kunye/', '/iletisim/', '/duzeltme-politikasi/', '/yayin-ilkeleri/', '/yapay-zeka-ilkeleri/', '/hakkimizda/', '/kaynaklarimiz/', '/gundemim/'];
+const reklamliSayfa = (yol, noindex) => !noindex && !REKLAMSIZ.some((y) => yol.startsWith(y));
+
 export function sayfa({ baslik, aciklama = SITE.description, yol = '/', aktif = yol, ust = '', icerik, noindex = false, jsonLd = null, hava = null, ekVeri = null, gorsel = null, tur = 'website', tema = undefined }) {
   const t = temaSahnesi(tema === undefined ? temaBul(yol) : tema);
   const tamBaslik = baslik ? `${baslik} | ${SITE.name}` : `${SITE.name} – Mersin son dakika haberleri`;
@@ -109,7 +113,7 @@ export function sayfa({ baslik, aciklama = SITE.description, yol = '/', aktif = 
 <script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="msvalidate.01" content="73186F4C8804CE1EDD17B492A973910D">
-${SITE.adsense ? `<meta name="google-adsense-account" content="${SITE.adsense}">\n<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${SITE.adsense}" crossorigin="anonymous"></script>` : ''}
+${SITE.adsense ? `<meta name="google-adsense-account" content="${SITE.adsense}">${reklamliSayfa(yol, noindex) ? `\n<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${SITE.adsense}" crossorigin="anonymous"></script>` : ''}` : ''}
 <title>${h(tamBaslik)}</title>
 <meta name="description" content="${h(aciklama)}">
 <link rel="canonical" href="${kanonik}">
