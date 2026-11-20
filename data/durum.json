@@ -12,11 +12,15 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-20T08:31:21.024Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-20",
-  "adet": 13
+  "adet": 15
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -101,7 +105,9 @@
    "https://www.dha.com.tr/yerel-haberler/mersin/erdemli/tarihi-kilikya-yoluna-ilgi-artiyor-2984576",
    "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/5-sene-once-sahibi-olen-evden-bir-romork-guverc-2984604",
    "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/mersinde-oto-tamirhanesinde-patlama-2-isci-ya-2985035",
-   "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/mustakil-evden-2-kamyonet-cop-cikarildi-2985234"
+   "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/mustakil-evden-2-kamyonet-cop-cikarildi-2985234",
+   "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/cocuklar-ara-tatilde-buyuksehir-ile-eglencenin-2985298",
+   "https://www.dha.com.tr/yerel-haberler/mersin/mezitli/mezitliye-ulasim-yatirimi-2985301"
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
@@ -241,7 +247,8 @@
    "https://mersingundem.com/haber/13669/mersinliler-buyuksehirin-ataturkun-sevdigi-sarkilar-konserinde-bir-araya-geldi.html",
    "https://mersingundem.com/haber/13667/oto-tamirhanesinde-lpgli-arac-tupu-patladi-2-yarali.html",
    "https://mersingundem.com/haber/13668/gelecegin-denizcileri-simulator-ve-dalga-havuzunda-yetisiyor.html",
-   "https://mersingundem.com/haber/13666/tir-kanala-devrildi-surucu-kendi-imkanlari-ile-kurtuldu.html"
+   "https://mersingundem.com/haber/13666/tir-kanala-devrildi-surucu-kendi-imkanlari-ile-kurtuldu.html",
+   "https://mersingundem.com/haber/13671/akdenizde-cop-eve-donusen-mustakil-evden-2-kamyon-atik-cikti.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -287,19 +294,31 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-20T08:01:58.332Z",
+  "guncelleme": "2026-11-20T08:32:01.603Z",
   "liste": [
    {
-    "baslik": "defne samyeli",
+    "baslik": "tabela",
+    "trafik": 200
+   },
+   {
+    "baslik": "danıştay",
+    "trafik": 1000
+   },
+   {
+    "baslik": "luca banchi",
     "trafik": 100
+   },
+   {
+    "baslik": "tv dizisi",
+    "trafik": 2000
+   },
+   {
+    "baslik": "defne samyeli",
+    "trafik": 200
    },
    {
     "baslik": "müge anlı canlı",
     "trafik": 1000
-   },
-   {
-    "baslik": "black friday",
-    "trafik": 100
    },
    {
     "baslik": "toplu ulaşım",
@@ -307,27 +326,15 @@
    },
    {
     "baslik": "suriye",
-    "trafik": 100
+    "trafik": 200
+   },
+   {
+    "baslik": "dünya",
+    "trafik": 200
    },
    {
     "baslik": "masterchef potaya kim gitti",
-    "trafik": 1000
-   },
-   {
-    "baslik": "necmeddin bilal erdoğan",
-    "trafik": 200
-   },
-   {
-    "baslik": "sinem ünsal",
-    "trafik": 200
-   },
-   {
-    "baslik": "bucks - trail blazers",
     "trafik": 100
-   },
-   {
-    "baslik": "dünya çocuk hakları günü",
-    "trafik": 500
    }
   ]
  },
