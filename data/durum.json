@@ -12,15 +12,11 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-20T17:31:27.085Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-20",
-  "adet": 35
+  "adet": 36
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -212,7 +208,9 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/baskan-vekili-genc-cop31de-iklim-politikalarimizi-ulusal-ve-uluslararasi-katilimcilarla-119527987",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-komsular-arasinda-bicakli-kavga-1i-agir-2-yarali-119528040",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-76-yasindaki-kadin-2-gundur-kayip-119528066",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/dem-parti-es-genel-baskani-tuncer-bakirhan-mersinde-konustu-119528080"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/dem-parti-es-genel-baskani-tuncer-bakirhan-mersinde-konustu-119528080",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-bicakli-kavgada-bir-genc-hayatini-kaybetti-119528115",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-komsular-arasinda-bicakli-kavga-1-olu-1-yarali-2-119528110"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -334,15 +332,39 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-20T17:31:52.254Z",
+  "guncelleme": "2026-11-20T18:01:49.456Z",
   "liste": [
+   {
+    "baslik": "al nassr",
+    "trafik": 500
+   },
+   {
+    "baslik": "bugün kimin maçı var futbol",
+    "trafik": 2000
+   },
+   {
+    "baslik": "ht spor canlı",
+    "trafik": 200
+   },
+   {
+    "baslik": "olivia miles",
+    "trafik": 200
+   },
+   {
+    "baslik": "molde - bodø/glimt",
+    "trafik": 200
+   },
+   {
+    "baslik": "levent alpöge",
+    "trafik": 200
+   },
    {
     "baslik": "borç yapılandırması",
     "trafik": 1000
    },
    {
     "baslik": "buz devri 6",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "ayasofya",
@@ -350,31 +372,7 @@
    },
    {
     "baslik": "الأهلي ضد النصر",
-    "trafik": 500
-   },
-   {
-    "baslik": "bist 30",
-    "trafik": 200
-   },
-   {
-    "baslik": "riemann hypothesis",
-    "trafik": 100
-   },
-   {
-    "baslik": "tutuklama",
-    "trafik": 500
-   },
-   {
-    "baslik": "murat yıldırım",
-    "trafik": 200
-   },
-   {
-    "baslik": "pekgy",
-    "trafik": 100
-   },
-   {
-    "baslik": "iğdır fk - ümraniyespor",
-    "trafik": 5000
+    "trafik": 1000
    }
   ]
  },
