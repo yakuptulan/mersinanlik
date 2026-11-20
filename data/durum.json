@@ -15,7 +15,7 @@
   },
   "mut-belediyesi": {
    "hata": "HTTP 500",
-   "zaman": "2026-11-20T03:59:49.025Z"
+   "zaman": "2026-11-20T04:02:25.395Z"
   }
  },
  "gorsel": {
@@ -278,8 +278,16 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-20T04:00:08.498Z",
+  "guncelleme": "2026-11-20T04:02:45.265Z",
   "liste": [
+   {
+    "baslik": "погода",
+    "trafik": 1000
+   },
+   {
+    "baslik": "yakıt",
+    "trafik": 200
+   },
    {
     "baslik": "astroloji",
     "trafik": 100
@@ -311,14 +319,6 @@
    {
     "baslik": "tunç soyer tahliye",
     "trafik": 1000
-   },
-   {
-    "baslik": "güllü",
-    "trafik": 100
-   },
-   {
-    "baslik": "cyberleek",
-    "trafik": 200
    }
   ]
  },
