@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-20T20:01:23.132Z"
   }
  },
  "gorsel": {
@@ -336,11 +332,31 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-20T20:01:52.354Z",
+  "guncelleme": "2026-11-20T20:31:45.151Z",
   "liste": [
    {
-    "baslik": "bayern vs köln",
+    "baslik": "donald trump",
+    "trafik": 100
+   },
+   {
+    "baslik": "nasdaq",
+    "trafik": 100
+   },
+   {
+    "baslik": "bayern",
+    "trafik": 1000
+   },
+   {
+    "baslik": "kimin maçı var",
+    "trafik": 5000
+   },
+   {
+    "baslik": "ssportplus",
     "trafik": 200
+   },
+   {
+    "baslik": "neslihan yeldan",
+    "trafik": 500
    },
    {
     "baslik": "yaya fofana",
@@ -348,35 +364,15 @@
    },
    {
     "baslik": "serdar altınbaş",
-    "trafik": 500
+    "trafik": 2000
    },
    {
     "baslik": "athletic bilbao - espanyol",
-    "trafik": 500
-   },
-   {
-    "baslik": "salah",
-    "trafik": 500
-   },
-   {
-    "baslik": "marco asensio",
     "trafik": 1000
    },
    {
-    "baslik": "troyes - le havre",
-    "trafik": 200
-   },
-   {
-    "baslik": "yılmaz güney",
-    "trafik": 200
-   },
-   {
-    "baslik": "kaliforniya",
-    "trafik": 100
-   },
-   {
-    "baslik": "bodo glimt",
-    "trafik": 100
+    "baslik": "salah",
+    "trafik": 1000
    }
   ]
  },
