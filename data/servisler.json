@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-20T00:31:57.199Z",
+ "guncelleme": "2026-11-20T01:01:58.989Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-20T00:32:02.005Z",
+  "guncelleme": "2026-11-20T01:02:03.553Z",
   "liste": [
    {
     "ad": "Asel Aslan Eczanesi",
@@ -675,7 +675,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-20T00:32:03.382Z",
+  "guncelleme": "2026-11-20T01:02:04.733Z",
   "liste": []
  },
  "piyasa": {
@@ -8232,7 +8232,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T00:32:16.868Z",
+  "guncelleme": "2026-11-20T01:02:18.739Z",
   "liste": [
    {
     "yol": "/",
@@ -8295,11 +8295,11 @@
     "sayi": 1
    },
    {
-    "yol": "/okullar-tatil-mi/diyarbakir/",
+    "yol": "/trafik/",
     "sayi": 1
    },
    {
-    "yol": "/trafik/",
+    "yol": "/okullar-tatil-mi/diyarbakir/",
     "sayi": 1
    },
    {
@@ -8315,15 +8315,7 @@
     "sayi": 1
    },
    {
-    "yol": "/kar-tatili/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/tarihi-kilikya-yolu-nda-uc-parkur-daha-yurundu-1fgfdln/",
-    "sayi": 1
-   },
-   {
-    "yol": "/spor/1-lig/",
+    "yol": "/akaryakit-fiyatlari/",
     "sayi": 1
    },
    {
@@ -8331,7 +8323,15 @@
     "sayi": 1
    },
    {
-    "yol": "/akaryakit-fiyatlari/",
+    "yol": "/haber/tarihi-kilikya-yolu-nda-uc-parkur-daha-yurundu-1fgfdln/",
+    "sayi": 1
+   },
+   {
+    "yol": "/kar-tatili/",
+    "sayi": 1
+   },
+   {
+    "yol": "/spor/1-lig/",
     "sayi": 1
    },
    {
@@ -8353,20 +8353,20 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T00:33:03.421Z",
+  "guncelleme": "2026-11-20T01:02:20.922Z",
   "deniz": {
    "sicaklik": 21.5,
    "dalga": 0.72
   },
   "hava": {
-   "aqi": 31,
-   "pm25": 10.6,
-   "pm10": 16.7,
+   "aqi": 29,
+   "pm25": 9.4,
+   "pm10": 17.1,
    "uvMax": 1.95
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T00:33:06.165Z",
+  "guncelleme": "2026-11-20T01:02:23.651Z",
   "giden": [
    {
     "no": [
@@ -8377,7 +8377,7 @@
     "planlanan": "2026-11-20T01:10:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "BOARDING",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -8387,9 +8387,9 @@
     "havayolu": "THY",
     "yer": "İstanbul",
     "planlanan": "2026-11-20T01:30:00.000Z",
-    "tahmini": null,
+    "tahmini": "2026-11-20T01:40:00.000Z",
     "kapi": "108",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8413,7 +8413,7 @@
     "planlanan": "2026-11-20T02:30:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8943,21 +8943,21 @@
     "kapi": "109",
     "durum": "",
     "hat": "ic"
-   }
-  ],
-  "gelen": [
+   },
    {
     "no": [
-     "TK2474"
+     "FH7067"
     ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-20T00:45:00.000Z",
+    "havayolu": "Freebird Airlines",
+    "yer": "Medine",
+    "planlanan": "2026-11-21T00:50:00.000Z",
     "tahmini": null,
     "kapi": "",
     "durum": "",
-    "hat": "ic"
-   },
+    "hat": "dis"
+   }
+  ],
+  "gelen": [
    {
     "no": [
      "PC1849"
@@ -9545,11 +9545,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2474"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-21T00:45:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T00:33:06.164Z",
+  "guncelleme": "2026-11-20T01:02:23.650Z",
   "liste": [
    {
     "id": 6375,
