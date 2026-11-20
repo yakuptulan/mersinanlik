@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-20T22:04:31.843Z",
+ "guncelleme": "2026-11-20T22:09:44.371Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 19,
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-20T22:04:34.714Z",
+  "guncelleme": "2026-11-20T22:09:48.576Z",
   "liste": [
    {
     "ad": "Dila Bangiz Eczanesi",
@@ -686,11 +686,11 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-20T22:04:35.682Z",
+  "guncelleme": "2026-11-20T22:09:49.800Z",
   "liste": []
  },
  "piyasa": {
-  "guncelleme": "2026-11-20T22:02:02.174Z",
+  "guncelleme": "2026-11-20T22:09:52.121Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -723,9 +723,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2974205,
-    "usd": 58873,
-    "degisim": -4.27
+    "satis": 2980013,
+    "usd": 58988,
+    "degisim": -4.3
    }
   },
   "altinlar": [
@@ -858,7 +858,7 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 01:02:01"
+  "kaynakSaati": "2026-11-21 01:09:02"
  },
  "akaryakit": {
   "guncelleme": "2026-11-20T22:04:39.458Z",
@@ -8198,7 +8198,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T22:04:39.797Z",
+  "guncelleme": "2026-11-20T22:10:02.953Z",
   "liste": [
    {
     "yol": "/",
@@ -8295,7 +8295,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T22:04:41.210Z",
+  "guncelleme": "2026-11-20T22:10:05.598Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.5
@@ -8308,7 +8308,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T22:04:42.914Z",
+  "guncelleme": "2026-11-20T22:10:08.395Z",
   "giden": [
    {
     "no": [
@@ -8331,7 +8331,7 @@
     "planlanan": "2026-11-21T00:50:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -8890,18 +8890,6 @@
   "gelen": [
    {
     "no": [
-     "PC2096"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-20T22:05:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "ic"
-   },
-   {
-    "no": [
      "PC1592"
     ],
     "havayolu": "Pegasus",
@@ -9451,11 +9439,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ1703"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "Stuttgart",
+    "planlanan": "2026-11-21T22:05:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "dis"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T22:04:42.913Z",
+  "guncelleme": "2026-11-20T22:10:08.395Z",
   "liste": [
    {
     "id": 6375,
