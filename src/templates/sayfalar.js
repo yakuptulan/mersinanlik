@@ -8,7 +8,7 @@ import { SITE, ILCELER, AYAR } from '../config.js';
 import { htmlKacis as h, ayrilmaEki } from '../lib/text.js';
 import { sayfa, saat, tarihUzun, ilceAdi } from './layout.js';
 import { ikon } from './ikonlar.js';
-import { kareKart, kisaKart, sayfasiVar, haberListesi, mansetKarti, mansetKaydirici, bolumKartlari, reklamAlani, haberYolu, katBilgi, ilceCipleri, kutuKarti, gundemListesi, paylasCubugu, gorselMevcut } from './parcalar.js';
+import { kareKart, kisaKart, sayfasiVar, haberListesi, mansetKarti, mansetKaydirici, bolumKartlari, reklamAlani, haberYolu, katBilgi, ilceCipleri, kutuKarti, gundemListesi, paylasCubugu, gorselMevcut, yerFotosuKullan, fotoKunye } from './parcalar.js';
 import { KATEGORILER, GENEL, GUNDEM } from '../config.js';
 import { telefonGoster } from '../lib/eczane.js';
 import { havaIkonu, havaTuru } from './havaIkon.js';
@@ -161,7 +161,7 @@ function sonDakikaSec(hikayeler, simdi) {
 function sonDakikaBandi(liste) {
   if (!liste.length) return '';
   const link = (x) => (sayfasiVar(x) ? { href: haberYolu(x), dis: '' } : { href: x.kaynaklar[0].link, dis: ' rel="noopener nofollow" target="_blank"' });
-  return `<div class="son-dakika" data-son-dakika><span class="etiket">SON DAKİKA</span><span class="sd-akis">${liste
+  return `<div class="son-dakika" data-son-dakika><a class="etiket" href="/son-dakika/">SON DAKİKA</a><span class="sd-akis">${liste
     .map((x, i) => { const l = link(x); return `<a class="sd-oge${i ? '' : ' aktif'}" href="${h(l.href)}"${l.dis}${i ? ' tabindex="-1"' : ''}><span>${h(x.baslik)}</span><time datetime="${x.ilkGorulme}">${saat(x.ilkGorulme)}</time></a>`; })
     .join('')}</span>${liste.length > 1 ? `<span class="sd-sayac" aria-hidden="true"><b data-sd-no>1</b>/${liste.length}</span>` : ''}</div>`;
 }
@@ -350,7 +350,7 @@ ${ozetKarti(servis?.ozet)}
 <nav class="turkiye-serit" aria-label="Türkiye geneli"><b>Türkiye geneli</b><a href="/son-depremler/">🌍 Son depremler</a><a href="/kar-tatili/">🏫 Okullar tatil mi?</a><a href="/piyasalar/gram-altin/">🪙 Gram altın</a><a href="/piyasalar/dolar/">💵 Dolar</a><a href="/akaryakit/">⛽ 81 il akaryakıt</a><a href="/hava-durumu/iller/">🌤️ 81 il hava</a><a href="/namaz-vakti/">🕌 81 il namaz</a><a href="/spor/super-lig/">⚽ Süper Lig</a></nav>
 ${gundem.length >= 2 ? `<section class="kutu gundem-kutu"><div class="kutu-bas"><h2>Çok konuşulanlar</h2><span class="kutu-alt">En çok sitenin yazdığı haberler</span></div>${gundemListesi(gundem)}</section>` : ''}
 ${kacirma.length === 5 ? `<section class="kacirma-blok"><div class="bolum-bas"><h2><span class="kat-cizgi" style="--kat:var(--turuncu)"></span>Kaçırmayın</h2></div><div class="kare-izgara">${kacirma.map((x, i) => kareKart(x, i === 0)).join('')}</div></section>` : ''}
-<div class="bolum-bas" style="margin-top:14px"><h2>Mersin'den son haberler</h2><a class="bolum-link" href="/kategori/tum-haberler/">Tüm haberler →</a></div>
+<div class="bolum-bas" style="margin-top:14px"><h2>Mersin son dakika haberleri</h2><a class="bolum-link" href="/kategori/tum-haberler/">Tüm haberler →</a></div>
 ${haberListesi(liste.slice(0, 4))}
 ${reklamAlani('akis')}
 ${haberListesi(liste.slice(4))}
@@ -433,7 +433,7 @@ ${haberListesi(liste, `Son ${AYAR.saklamaGun} günde ${ilce.ad} ile ilgili haber
 ${yanKutular(servis, ilce)}
 </main>`;
   return sayfa({
-    baslik: `${ilce.ad} haberleri – son dakika ${ilce.ad} Mersin`,
+    baslik: `${ilce.ad} haber – son dakika ${ilce.ad} haberleri`,
     aciklama: `${ilce.ad} (Mersin) son dakika haberleri, hava durumu, nöbetçi eczaneler ve kesintiler.`,
     yol: `/ilce/${ilce.slug}/`,
     aktif: '/ilceler/',
@@ -451,8 +451,9 @@ export function haberSayfasi({ hikaye, ilgili, servis, tumHaberler = null }) {
   const digerleri = hikaye.kaynaklar.filter((k) => !goruldu.has(k.ad) && goruldu.add(k.ad));
   const tamYazi = Boolean(hikaye.metin);
   const kurumFoto = hikaye.gorselKaynak && hikaye.gorselKaynak !== 'yz' ? hikaye.gorselKaynak : null;
-  const gorselVar = gorselMevcut(hikaye);
-  const gorselUrl = gorselVar ? `${SITE.url}/uretilen/${hikaye.gorsel}` : hikaye.kapak ? `${SITE.url}/kapak/${hikaye.kapak}.webp` : null;
+  const yerFoto = yerFotosuKullan(hikaye);
+  const gorselVar = !yerFoto && gorselMevcut(hikaye);
+  const gorselUrl = yerFoto ? `${SITE.url}/foto/${yerFoto.id}-800.webp` : gorselVar ? `${SITE.url}/uretilen/${hikaye.gorsel}` : hikaye.kapak ? `${SITE.url}/kapak/${hikaye.kapak}.webp` : null;
   const paragraflar = (hikaye.metin || '').split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean).map((p, i, a) => `<p>${h(p).replace(/\n/g, '<br>')}</p>${i === 1 && a.length > 3 ? reklamAlani('yazi-ici') : ''}`).join('\n');
   const ilce = ILCELER.find((i) => hikaye.ilceler.includes(i.slug)) || null;
   const jsonLd = {
@@ -478,7 +479,8 @@ export function haberSayfasi({ hikaye, ilgili, servis, tumHaberler = null }) {
   const icerik = `<main class="kap govde">
 <div class="ana">
 <article class="haber-yazi" style="--kat:${kat.renk}">
-${!hikaye.gorsel && hikaye.kapak ? `<figure class="haber-gorsel"><img src="/kapak/${h(hikaye.kapak)}.webp" alt="${h(hikaye.baslik)}" width="1200" height="675" decoding="async"></figure>` : ''}
+${yerFoto ? `<figure class="haber-gorsel"><img src="/foto/${yerFoto.id}-800.webp" alt="${h(hikaye.baslik)}" width="800" height="500" decoding="async"><figcaption>Arşiv fotoğrafı · ${h(fotoKunye(yerFoto).replace(/^Foto: /, ''))}</figcaption></figure>` : ''}
+${!yerFoto && !hikaye.gorsel && hikaye.kapak ? `<figure class="haber-gorsel"><img src="/kapak/${h(hikaye.kapak)}.webp" alt="${h(hikaye.baslik)}" width="1200" height="675" decoding="async"></figure>` : ''}
 ${gorselVar ? `<figure class="haber-gorsel"><img src="/uretilen/${h(hikaye.gorsel)}" alt="${kurumFoto ? h(hikaye.baslik) : 'Temsili görsel (yapay zekâ ile üretildi)'}" width="800" height="450" decoding="async"><figcaption>${kurumFoto ? `Fotoğraf: ${h(kurumFoto)}` : 'Temsili görsel · yapay zekâ ile üretilmiştir'}</figcaption></figure>` : ''}
 ${hikaye.metin || hikaye.ozet ? dinleDugmesi() : ''}
 ${hikaye.ozet ? `<p class="haber-spot">${h(hikaye.ozet)}</p>` : ''}
@@ -526,6 +528,7 @@ export const KATEGORI_SAYFALARI = [
 
 export function kategoriSayfasi({ kategori, hikayeler, servis }) {
   const liste = hikayeler.filter(kategori.filtre).slice(0, 60);
+  if (kategori.slug === 'son-dakika') return sonDakikaSayfasi({ liste, hikayeler, servis });
   const diger = KATEGORI_SAYFALARI.filter((k) => k.slug !== kategori.slug && hikayeler.some(k.filtre));
   return sayfa({
     baslik: kategori.slug === 'turkiye-dunya' ? 'Türkiye ve dünyadan son dakika haberleri' : kategori.slug === 'tum-haberler' ? 'Mersin son dakika haberleri – tümü' : `Mersin ${kategori.ad.toLocaleLowerCase('tr-TR')} haberleri`,
@@ -535,6 +538,17 @@ export function kategoriSayfasi({ kategori, hikayeler, servis }) {
 <nav class="kat-menu" aria-label="Kategoriler">${diger.map((k) => `<a href="/kategori/${k.slug}/" style="--kat:${k.renk}">${h(k.ad)}</a>`).join('')}</nav>`,
     tema: kategori.slug === 'spor' ? 'spor' : undefined,
     icerik: `<main class="kap govde"><div class="ana">${kategori.slug === 'ekonomi' ? ekonomiBugunKarti(servis) : ''}${kategori.slug === 'spor' ? `<p class="giris-metni"><a href="/spor/">⚽ Mersin takımlarının puan durumu, fikstürü ve maçları için spor sayfası →</a></p>` : ''}${haberListesi(kategori.slug === 'spor' ? liste.filter(sporMu) : liste, 'Bu kategoride son günlerde haber yok.')}</div>${kategori.slug === 'spor' ? sporYan(servis, hikayeler) : kategoriYan(kategori.slug, { servis, hikayeler, okul: servis?.okul }) || yanKutular(servis)}</main>`,
+  });
+}
+
+// /son-dakika/: son 24 saatin Mersin haberleri ("mersin son dakika" aramaları için)
+function sonDakikaSayfasi({ liste, hikayeler, servis }) {
+  return sayfa({
+    baslik: 'Mersin son dakika haberleri – bugün',
+    aciklama: 'Mersin son dakika haberleri: son 24 saatte Mersin ve ilçelerinde yaşanan gelişmeler, kaza, asayiş, belediye ve gündem haberleri. Yarım saatte bir güncellenir.',
+    yol: '/son-dakika/',
+    ust: `<div class="su-an-bas"><div><h1>Mersin son dakika haberleri</h1><p style="margin-top:8px">Son 24 saat · ${liste.length} haber · yarım saatte bir güncellenir</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">${haberListesi(liste, 'Son 24 saatte haber yok; <a href="/kategori/tum-haberler/">tüm haberlere</a> göz atın.')}<p class="giris-metni"><a href="/kategori/tum-haberler/">Son ${AYAR.saklamaGun} günün tüm Mersin haberleri →</a></p></div>${yanKutular(servis)}</main>`,
   });
 }
 

@@ -11,6 +11,7 @@ import path from 'node:path';
 import sharp from 'sharp';
 import { ILCELER } from '../config.js';
 import { jsonYaz } from './gemini.js';
+import { yerFotosu } from '../fotolar.js';
 
 const MODEL = process.env.GEMINI_GORSEL_MODEL || 'gemini-2.5-flash-image';
 export const URETILEN_KLASOR = path.resolve('public/uretilen');
@@ -135,7 +136,7 @@ async function kaydet(hikaye, veri, prompt = '') {
 // Ücretsiz kota günde ~40 görsele yetiyor: öncelik birden çok sitenin yazdığı ya da kendi yazımız olan haberler
 export function gorselAdaylari(hikayeler, simdi = Date.now()) {
   return hikayeler
-    .filter((h) => h.durum === 'yayinda' && !h.gorsel && !h.gorselHatasi && !h.genel)
+    .filter((h) => h.durum === 'yayinda' && !h.gorsel && !h.gorselHatasi && !h.genel && !yerFotosu(h))
     .filter((h) => simdi - new Date(h.ilkGorulme).getTime() < 8 * 36e5)
     .filter((h) => new Set(h.kaynaklar.map((k) => k.ad)).size >= 2 || h.metin || h.trend)
     .sort((a, b) => b.kaynaklar.length - a.kaynaklar.length || new Date(b.ilkGorulme) - new Date(a.ilkGorulme));

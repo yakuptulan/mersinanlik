@@ -273,6 +273,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
   ekle('/bilgi/', B.bilgiListeSayfasi({ yazilar: bilgiYazilari, servis }));
   for (const yazi of bilgiYazilari) ekle(B.bilgiYolu(yazi), B.bilgiSayfasi({ yazi, yazilar: bilgiYazilari, servis }));
   for (const kategori of S.KATEGORI_SAYFALARI) ekle(`/kategori/${kategori.slug}/`, S.kategoriSayfasi({ kategori, hikayeler, servis }));
+  ekle('/son-dakika/', S.kategoriSayfasi({ kategori: { slug: 'son-dakika', filtre: (x) => !x.genel && Date.now() - new Date(x.ilkGorulme) < 864e5 }, hikayeler, servis }));
   ekle('/namaz-vakitleri/', S.namazSayfasi({ servis, simdi }));
   for (const ilce of ILCELER) ekle(`/namaz-vakitleri/${ilce.slug}/`, S.namazIlceSayfasi({ ilce, servis, simdi }));
   ekle('/akaryakit-fiyatlari/', S.akaryakitSayfasi({ servis }));

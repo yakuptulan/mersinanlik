@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import { htmlKacis as h, slugify } from '../lib/text.js';
-import { FOTOLAR } from '../fotolar.js';
+import { FOTOLAR, yerFotosu } from '../fotolar.js';
 import { KATEGORILER, GUNDEM, GENEL } from '../config.js';
 import { ikon, katIkon } from './ikonlar.js';
 import { saat, ilceAdi } from './layout.js';
@@ -62,22 +62,31 @@ export function fotoSec(hikaye) {
   return liste[sayiOzeti(hikaye.id) % liste.length];
 }
 
+const kurumFotosuYok = (hikaye) => !(hikaye.gorsel && hikaye.gorselKaynak && hikaye.gorselKaynak !== 'yz');
+// Yer fotoğrafı yalnızca dosyası indirilmişse kullanılır
+export function yerFotosuVar(hikaye) {
+  const f = yerFotosu(hikaye);
+  return f && fs.existsSync(new URL(`../../public/foto/${f.id}-800.webp`, import.meta.url)) ? f : null;
+}
+export const yerFotosuKullan = (hikaye) => (kurumFotosuYok(hikaye) ? yerFotosuVar(hikaye) : null);
+
 export function fotoKunye(f) {
   return `Foto: ${f.yazar} · ${f.lisans} · Wikimedia Commons`;
 }
 
 export function kapak(hikaye, kat, link, sinif = '', dis = ' rel="noopener nofollow" target="_blank"') {
   const buyukMu = sinif.includes('genis');
-  // 1) Habere özel yapay zekâ görseli
-  if (hikaye.gorsel && fs.existsSync(new URL(`../../public/uretilen/${hikaye.gorsel}`, import.meta.url))) {
+  const yer = kurumFotosuYok(hikaye) ? yerFotosuVar(hikaye) : null;
+  // 1) Habere özel yapay zekâ görseli ya da kurumun fotoğrafı (haberde geçen yerin gerçek fotoğrafı varsa YZ yerine o)
+  if (!yer && hikaye.gorsel && fs.existsSync(new URL(`../../public/uretilen/${hikaye.gorsel}`, import.meta.url))) {
     const kurum = hikaye.gorselKaynak && hikaye.gorselKaynak !== 'yz' ? hikaye.gorselKaynak : null;
     const etiket = kurum ? `Foto: ${h(kurum)}` : 'Temsili · YZ';
     return `<a class="kapak kapak-foto ${sinif}" href="${h(link)}"${dis} tabindex="-1" aria-hidden="true" title="${kurum ? `Fotoğraf: ${h(kurum)}` : 'Temsili görsel, yapay zekâ ile üretilmiştir'}">
 <img src="/uretilen/${h(hikaye.gorsel)}" alt="${kurum ? '' : 'Temsili görsel (yapay zekâ ile üretildi)'}" loading="${buyukMu ? 'eager' : 'lazy'}" decoding="async" width="800" height="450">
 <span class="kapak-rozet">${(katIkon[kat.slug] || katIkon.gundem)(buyukMu ? 26 : 20)}</span>${kurum ? `<span class="temsili kurum">${etiket}</span>` : ''}</a>`;
   }
-  // 2) Kütüphaneden temsili fotoğraf
-  const foto = fotoSec(hikaye);
+  // 2) Yerin arşiv fotoğrafı, yoksa kütüphaneden temsili fotoğraf
+  const foto = yer || fotoSec(hikaye);
   if (foto) {
     const buyuk = sinif.includes('genis');
     return `<a class="kapak kapak-foto ${sinif}" href="${h(link)}"${dis} tabindex="-1" aria-hidden="true" title="${h(fotoKunye(foto))}">
@@ -188,6 +197,8 @@ export const gorselMevcut = (hikaye) => Boolean(hikaye.gorsel && fs.existsSync(n
 
 export function kapakAdresi(hikaye) {
   if (hikaye.kapak && fs.existsSync(new URL(`../../public/kapak/${hikaye.kapak}.webp`, import.meta.url))) return { src: `/kapak/${hikaye.kapak}.webp`, kurum: null, kapak: true };
+  const yer = yerFotosuKullan(hikaye);
+  if (yer) return { src: `/foto/${yer.id}-800.webp`, kurum: null };
   if (hikaye.gorsel && fs.existsSync(new URL(`../../public/uretilen/${hikaye.gorsel}`, import.meta.url))) return { src: `/uretilen/${hikaye.gorsel}`, kurum: hikaye.gorselKaynak && hikaye.gorselKaynak !== 'yz' ? hikaye.gorselKaynak : null };
   const foto = fotoSec(hikaye);
   if (foto) return { src: `/foto/${foto.id}-800.webp`, kurum: null };

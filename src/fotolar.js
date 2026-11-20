@@ -92,6 +92,78 @@ const LISTE = [
   ['genel-1', '7/78/Sultanahmet_ferry_on_the_Bosphorus_in_Istanbul%2C_Turkey_001.jpg', 'Moonik', 'CC BY-SA 3.0'],
   ['genel-2', '2/21/20101106_Galata_Tower_Istanbul_Turkey_Panorama.jpg', 'Ggia', 'CC BY-SA 3.0'],
   ['genel-3', 'a/a7/Sultanahmet%2C_Istanbul_%28P1100256%29.jpg', 'Matti Blume', 'CC BY-SA 4.0'],
+  // --- Yerler (haber başlığında geçince yapay zekâ görseli yerine gerçek fotoğraf) ---
+  ['yer-marina-1', '7/77/Mersin_yeni%C5%9Fehir_Marina.jpg', 'Nedim Ardoğa', 'CC BY-SA 3.0'],
+  ['yer-kizkalesi-1', '2/2b/K%C4%B1zkalesi_-_Korykos%2C_Mersin_2016-11-20_01-1.jpg', 'Zeynel Cebeci', 'CC BY-SA 4.0'],
+  ['yer-kizkalesi-2', 'f/f1/K%C4%B1zkalesi_-_Korykos%2C_Mersin_2016-11-20_01-2.jpg', 'Zeynel Cebeci', 'CC BY-SA 4.0'],
+  ['yer-selale-1', 'b/bc/Mersin_Tarsus_%C5%9Eelalesi.jpg', 'Suatbezeng', 'CC BY-SA 4.0'],
+  ['yer-kleopatra-1', '3/39/Cleopatra%27s_Gate%2C_Tarsus%2C_Mersin_Province.jpg', 'Nedim Ardoğa', 'CC BY-SA 3.0'],
+  ['yer-kleopatra-2', '8/8d/Cleopatra%27s_Gate_in_Tarsus_%2802%29.jpg', 'Jwslubbock', 'CC BY-SA 3.0'],
+  ['yer-senpol-1', '5/54/Tarsus_at_St._Paul%27s_well_in_2014_4630.jpg', 'Dosseman', 'CC BY-SA 4.0'],
+  ['yer-meu-1', '5/59/Mersin_University.JPG', 'Nedim Ardoğa', 'CC BY-SA 3.0'],
+  ['yer-akkuyu-1', '4/4d/Akkuyu_Nuclear_Power_Plant.jpg', 'Rosatom Digital Press Office', 'CC BY 4.0'],
+  ['yer-havalimani-1', '0/0b/%C3%87ukurova_International_Airport%2C_Tarsus_district%2C_Turkey_Nov._2024-1.jpg', 'Uzunx44', 'CC BY-SA 4.0'],
+  ['yer-havalimani-2', '4/4d/%C3%87ukurova_International_Airport%2C_Tarsus_district%2C_Turkey_Nov._2024-2.jpg', 'Uzunx44', 'CC BY-SA 4.0'],
+  ['yer-stadyum-1', '2/26/Mersin_Olympic_Stadium.JPG', 'Nedim Ardoğa', 'CC BY-SA 3.0'],
+  ['yer-tevfiksirri-1', 'b/be/Tevfik_S%C4%B1rr%C4%B1_G%C3%BCr_Stadium.jpg', 'Nedim Ardoğa', 'CC BY-SA 3.0'],
+  ['yer-forum-1', '4/4f/Forum_Mersin_At%C4%B1f_Y%C4%B1lmaz_Meydan%C4%B1.JPG', 'Cobija', 'CC0'],
+  ['yer-ataturkpark-1', '0/02/Mersin_Atat%C3%BCrk_park.jpg', 'Nedim Ardoğa', 'CC BY-SA 3.0'],
+  ['yer-ataturkpark-2', 'a/a6/Mersin_Atat%C3%BCrk_park%C4%B1.jpg', 'Socrateskilikyada', 'CC BY-SA 4.0'],
+  ['yer-goksu-1', '9/92/Sunrise_in_G%C3%B6ksu_Delta%2C_Silifke_01.jpg', 'Zeynel Cebeci', 'CC BY-SA 4.0'],
+  ['yer-goksu-2', 'c/c0/Sunrise_in_G%C3%B6ksu_Delta%2C_Silifke_02.jpg', 'Zeynel Cebeci', 'CC BY-SA 4.0'],
+  ['yer-cennet-1', 'f/fc/Cennet_Cehennem_CEHENNEM_-_panoramio.jpg', 'Korkut Tas', 'CC BY-SA 3.0'],
+  ['yer-uzuncaburc-1', 'd/d7/Uzuncabur%C3%A7%2C_Mersin_Province.jpg', 'Nedim Ardoğa', 'CC BY-SA 3.0'],
+  ['yer-alahan-1', 'b/b9/Alahan_Monastery_General_view_4856.jpg', 'Dosseman', 'CC BY-SA 4.0'],
+  ['yer-tasucu-1', 'd/d4/Ta%C5%9Fucu_ve_liman_yukar%C4%B1dan.jpg', 'Cobija', 'CC BY-SA 3.0'],
+  ['yer-tasucu-2', '5/55/Ta%C5%9Fucu_Sahili.JPG', 'Cobija', 'CC BY-SA 3.0'],
+  ['yer-yumuktepe-1', '0/06/Y%C3%BCm%C3%BCktepe%2C_Mersin.JPG', 'Nedim Ardoğa', 'CC BY-SA 3.0'],
+  ['yer-gar-1', '0/0f/Mersin_Gar.jpg', 'Seyfettin33', 'CC BY-SA 4.0'],
+  ['yer-gar-2', '8/80/Mersin_gar_giri%C5%9F.jpg', 'Cobija', 'CC BY-SA 4.0'],
+  ['yer-mugdat-1', '3/32/Mersin_Idman_Yudru_Arch_and_Mugdat_Mosque_-_2015-10-17.jpg', 'Vassia Atanassova - Spiritia', 'CC BY-SA 4.0'],
+  ['yer-ataturkevi-1', 'd/d3/Mersin_Atat%C3%BCrk_Museum_in_2005_120.jpg', 'Dosseman', 'CC BY-SA 4.0'],
+  ['yer-denizmuzesi-1', 'e/eb/Mersin_Deniz_M%C3%BCzesi_%282%29.JPG', 'Cobija', 'CC0'],
+  ['yer-narlikuyu-1', '4/40/Narl%C4%B1kuyu_view_1431.jpg', 'Dosseman', 'CC BY-SA 4.0'],
+  ['yer-kanlidivane-1', '9/9a/Kanl%C4%B1divane_6850.jpg', 'Dosseman', 'CC BY-SA 4.0'],
+  ['yer-halkevi-1', 'a/a4/Mersin_Halkevi_building..jpg', 'Nedim Ardoğa', 'CC BY-SA 3.0'],
+  ['yer-ulucami-1', 'e/e4/Grand_Mosque_of_Mersin.jpg', 'Sayginer', 'CC BY-SA 4.0'],
+  ['yer-eskicami-1', 'e/e4/Tarsus_Old_Mosque.jpg', 'Nedim Ardoğa', 'CC BY-SA 4.0'],
+];
+
+// Haber başlığında bu yerlerden biri geçerse yapay zekâ görseli yerine yerin gerçek fotoğrafı kullanılır.
+// [düzenli ifade, fotoğraf kimlikleri]
+const YERLER = [
+  [/mersin marina/i, ['yer-marina-1', 'yenisehir-3']],
+  [/kızkalesi|korykos/i, ['yer-kizkalesi-1', 'yer-kizkalesi-2', 'erdemli-1', 'erdemli-2']],
+  [/tarsus şelale|şelalesi.*tarsus|berdan şelale/i, ['yer-selale-1', 'tarsus-3']],
+  [/kleopatra kapı/i, ['yer-kleopatra-1', 'yer-kleopatra-2', 'tarsus-1']],
+  [/sen pol|st\.? ?paul|aziz pavlus/i, ['yer-senpol-1']],
+  [/mersin üniversitesi|\bmeü\b/i, ['yer-meu-1']],
+  [/akkuyu|nükleer santral/i, ['yer-akkuyu-1']],
+  [/çukurova (uluslararası )?havaliman/i, ['yer-havalimani-1', 'yer-havalimani-2']],
+  [/mersin stad(ı|yumu)|mersin arena/i, ['yer-stadyum-1']],
+  [/tevfik sırrı gür/i, ['yer-tevfiksirri-1']],
+  [/forum mersin/i, ['yer-forum-1']],
+  [/atatürk park/i, ['yer-ataturkpark-1', 'yer-ataturkpark-2']],
+  [/göksu delta/i, ['yer-goksu-1', 'yer-goksu-2']],
+  [/cennet.?cehennem/i, ['yer-cennet-1']],
+  [/uzuncaburç/i, ['yer-uzuncaburc-1']],
+  [/alahan manastır/i, ['yer-alahan-1']],
+  [/taşucu/i, ['yer-tasucu-1', 'yer-tasucu-2']],
+  [/yumuktepe|yümüktepe/i, ['yer-yumuktepe-1']],
+  [/mersin gar|tren garı|hızlı tren|\byht\b/i, ['yer-gar-1', 'yer-gar-2']],
+  [/muğdat/i, ['yer-mugdat-1']],
+  [/atatürk evi/i, ['yer-ataturkevi-1']],
+  [/deniz müzesi/i, ['yer-denizmuzesi-1']],
+  [/narlıkuyu/i, ['yer-narlikuyu-1']],
+  [/kanlıdivane/i, ['yer-kanlidivane-1']],
+  [/halkevi/i, ['yer-halkevi-1']],
+  [/mersin ulu cami/i, ['yer-ulucami-1']],
+  [/tarsus eski cami/i, ['yer-eskicami-1']],
+  [/mersin limanı|mersin uluslararası liman|\bmip\b/i, ['akdeniz-1', 'akdeniz-4']],
+  [/mamure|anamur kalesi/i, ['anamur-1', 'anamur-2']],
+  [/silifke kalesi/i, ['silifke-1']],
+  [/taşköprü/i, ['silifke-2', 'silifke-3']],
+  [/soli pompeiopolis|soli antik/i, ['mezitli-1', 'mezitli-2']],
 ];
 
 export const FOTOLAR = LISTE.map(([id, yol, yazar, lisans]) => {
@@ -107,3 +179,17 @@ export const FOTOLAR = LISTE.map(([id, yol, yazar, lisans]) => {
 });
 
 export const FOTO_ETIKETLERI = [...new Set(FOTOLAR.map((f) => f.etiket))];
+
+const FOTO_ID = new Map(FOTOLAR.map((f) => [f.id, f]));
+const ozet = (x) => { let n = 0; for (const c of String(x)) n = (n * 31 + c.charCodeAt(0)) >>> 0; return n; };
+
+// Haberin başlığında bilinen bir yer geçiyorsa o yerin arşiv fotoğrafı (yoksa null)
+export function yerFotosu(hikaye) {
+  if (!hikaye?.baslik || hikaye.genel) return null;
+  for (const [re, idler] of YERLER) {
+    if (!re.test(hikaye.baslik)) continue;
+    const liste = idler.map((i) => FOTO_ID.get(i)).filter(Boolean);
+    if (liste.length) return liste[ozet(hikaye.id) % liste.length];
+  }
+  return null;
+}
