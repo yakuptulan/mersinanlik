@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-20T21:31:57.684Z",
+ "guncelleme": "2026-11-20T21:56:17.965Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 19,
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-20T21:32:01.866Z",
+  "guncelleme": "2026-11-20T21:56:21.970Z",
   "liste": [
    {
     "ad": "Dila Bangiz Eczanesi",
@@ -686,11 +686,11 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-20T21:02:15.926Z",
+  "guncelleme": "2026-11-20T21:56:23.261Z",
   "liste": []
  },
  "piyasa": {
-  "guncelleme": "2026-11-20T21:32:09.315Z",
+  "guncelleme": "2026-11-20T21:56:25.559Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -723,9 +723,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2964977,
-    "usd": 58627,
-    "degisim": -4.46
+    "satis": 2976745,
+    "usd": 58910,
+    "degisim": -4.09
    }
   },
   "altinlar": [
@@ -858,10 +858,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 00:32:02"
+  "kaynakSaati": "2026-11-21 00:56:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-20T21:32:11.963Z",
+  "guncelleme": "2026-11-20T21:56:28.034Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8198,11 +8198,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T21:32:12.438Z",
+  "guncelleme": "2026-11-20T21:56:28.330Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 26
+    "sayi": 30
    },
    {
     "yol": "/kategori/belediye/",
@@ -8218,6 +8218,10 @@
    },
    {
     "yol": "/piyasalar/",
+    "sayi": 5
+   },
+   {
+    "yol": "/okullar-tatil-mi/istanbul/",
     "sayi": 4
    },
    {
@@ -8226,10 +8230,6 @@
    },
    {
     "yol": "/kategori/yasam/",
-    "sayi": 3
-   },
-   {
-    "yol": "/okullar-tatil-mi/istanbul/",
     "sayi": 3
    },
    {
@@ -8295,7 +8295,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T21:32:58.935Z",
+  "guncelleme": "2026-11-20T21:56:30.362Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.5
@@ -8304,11 +8304,11 @@
    "aqi": 44,
    "pm25": 21.5,
    "pm10": 30.4,
-   "uvMax": 2.05
+   "uvMax": 2.15
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T21:33:00.800Z",
+  "guncelleme": "2026-11-20T21:56:32.708Z",
   "giden": [
    {
     "no": [
@@ -8330,7 +8330,7 @@
     "yer": "Medine",
     "planlanan": "2026-11-21T00:50:00.000Z",
     "tahmini": null,
-    "kapi": "",
+    "kapi": "103",
     "durum": "",
     "hat": "dis"
    },
@@ -8890,18 +8890,6 @@
   "gelen": [
    {
     "no": [
-     "PC3014"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "İzmir",
-    "planlanan": "2026-11-20T21:45:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
      "PC2096"
     ],
     "havayolu": "Pegasus",
@@ -8909,7 +8897,7 @@
     "planlanan": "2026-11-20T22:05:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "ic"
    },
    {
@@ -9455,7 +9443,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T21:33:00.799Z",
+  "guncelleme": "2026-11-20T21:56:32.707Z",
   "liste": [
    {
     "id": 6375,
