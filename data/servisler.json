@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-20T18:31:37.970Z",
+ "guncelleme": "2026-11-20T19:01:55.587Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 19,
@@ -147,7 +147,7 @@
   },
   "camliyayla": {
    "sicaklik": 12,
-   "durum": "Bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-20T18:31:41.318Z",
+  "guncelleme": "2026-11-20T19:01:59.883Z",
   "liste": [
    {
     "ad": "Dila Bangiz Eczanesi",
@@ -752,7 +752,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-20T18:31:42.183Z",
+  "guncelleme": "2026-11-20T19:02:01.088Z",
   "liste": [
    {
     "tur": "su",
@@ -766,22 +766,6 @@
       "ad": "Yenişehir",
       "mahalleler": [
        "Emirler"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Mut ilçesi Kelceköy mahallesi içme suyu arızası kaynaklı 22:00'ye kadar su kesintisi yaşanacaktır.",
-    "baslangic": "2026-11-20T17:43:00.000Z",
-    "bitis": "2026-11-20T19:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "mut",
-      "ad": "Mut",
-      "mahalleler": [
-       "Kelceköy"
       ]
      }
     ]
@@ -960,7 +944,7 @@
   "kaynakSaati": "2026-11-20 21:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-20T18:02:50.326Z",
+  "guncelleme": "2026-11-20T19:02:07.371Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -8344,7 +8328,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T18:31:55.104Z",
+  "guncelleme": "2026-11-20T19:02:08.127Z",
   "liste": [
    {
     "yol": "/",
@@ -8375,15 +8359,15 @@
     "sayi": 3
    },
    {
-    "yol": "/bilgi/",
-    "sayi": 2
-   },
-   {
     "yol": "/piyasalar/gram-altin/",
     "sayi": 2
    },
    {
-    "yol": "/haber/mersin-de-kamyonet-ile-otomobilin-carpistigi-kazada-1-kisi-oldu-2-kisi-1bfosq4/",
+    "yol": "/bilgi/",
+    "sayi": 2
+   },
+   {
+    "yol": "/haber/mersin-de-6-ilcede-planli-elektrik-kesintisi-20-kasim-1vorztq/",
     "sayi": 1
    },
    {
@@ -8399,11 +8383,11 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-de-6-ilcede-planli-elektrik-kesintisi-20-kasim-1vorztq/",
+    "yol": "/kar-tatili/",
     "sayi": 1
    },
    {
-    "yol": "/kar-tatili/",
+    "yol": "/akaryakit-fiyatlari/",
     "sayi": 1
    },
    {
@@ -8437,41 +8421,25 @@
    {
     "yol": "/haber/mersin-de-101-dosyadan-aranan-supheli-polis-operasyonuyla-yakalandi-1o4insl/",
     "sayi": 1
-   },
-   {
-    "yol": "/akaryakit-fiyatlari/",
-    "sayi": 1
    }
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T18:32:36.994Z",
+  "guncelleme": "2026-11-20T19:02:09.796Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.52
   },
   "hava": {
-   "aqi": 55,
-   "pm25": 33.2,
-   "pm10": 48.6,
+   "aqi": 48,
+   "pm25": 29.1,
+   "pm10": 43.1,
    "uvMax": 1.65
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T18:32:38.650Z",
+  "guncelleme": "2026-11-20T19:02:12.059Z",
   "giden": [
-   {
-    "no": [
-     "PC2091"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-20T18:35:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
    {
     "no": [
      "XQ7711"
@@ -8481,7 +8449,7 @@
     "planlanan": "2026-11-20T19:15:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8493,7 +8461,7 @@
     "planlanan": "2026-11-20T19:40:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8505,7 +8473,7 @@
     "planlanan": "2026-11-20T19:45:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "23 KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8553,7 +8521,7 @@
     "planlanan": "2026-11-20T20:55:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9035,33 +9003,21 @@
     "kapi": "105",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "2S5326"
+    ],
+    "havayolu": "Southwind Airlines",
+    "yer": "Medine",
+    "planlanan": "2026-11-21T18:35:00.000Z",
+    "tahmini": null,
+    "kapi": "103",
+    "durum": "",
+    "hat": "dis"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "XQ7710"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "Antalya",
-    "planlanan": "2026-11-20T18:40:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC1853"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Ercan",
-    "planlanan": "2026-11-20T18:45:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "dis"
-   },
    {
     "no": [
      "PC3602"
@@ -9071,7 +9027,7 @@
     "planlanan": "2026-11-20T19:05:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "ic"
    },
    {
@@ -9601,11 +9557,35 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC4060"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Antalya",
+    "planlanan": "2026-11-21T18:35:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ7710"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "Antalya",
+    "planlanan": "2026-11-21T18:40:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T18:32:38.650Z",
+  "guncelleme": "2026-11-20T19:02:12.059Z",
   "liste": [
    {
     "id": 6375,
