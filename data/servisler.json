@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-20T10:13:42.225Z",
+ "guncelleme": "2026-11-20T10:32:04.489Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 21,
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-20T10:13:45.996Z",
+  "guncelleme": "2026-11-20T10:32:08.666Z",
   "liste": [
    {
     "ad": "Dila Bangiz Eczanesi",
@@ -752,7 +752,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-20T10:13:47.087Z",
+  "guncelleme": "2026-11-20T10:32:10.053Z",
   "liste": [
    {
     "tur": "su",
@@ -1076,7 +1076,7 @@
   "kaynakSaati": "2026-11-20 13:13:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-20T10:13:52.943Z",
+  "guncelleme": "2026-11-20T10:32:16.548Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -2101,7 +2101,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-20T09:32:04.799Z",
+  "guncelleme": "2026-11-20T10:32:19.380Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -5897,22 +5897,22 @@
      "İskenderunspor": "4258",
      "Hatayspor": "121",
      "Güzide Gebze Spor": "746",
-     "Arkent Arnavutköy Belediyesi Futbol SK": "6039",
-     "Aliağa": "2720",
      "Menemen": "1120",
      "İnegöl Kafkas Spor": "3276",
      "Isbaş Isparta 32 Spor": "1484",
      "Adana Demirspor": "3603",
-     "Kızılkaya Tarım Şanlıurfaspor": "31",
-     "Ankaraspor": "4355",
      "Gmg Kastamonuspor": "4342",
      "Çorlu Spor 1947": "5044",
+     "Arkent Arnavutköy Belediyesi Futbol SK": "6039",
+     "Aliağa": "2720",
+     "Kızılkaya Tarım Şanlıurfaspor": "31",
+     "Ankaraspor": "4355",
+     "Seza Çimento Elazığspor": "37",
+     "Sebat Spor": "10300",
      "Somaspor": "497",
      "68 Aksaray Belediye Spor": "6496",
      "Efor Çay Erbaaspor": "3641",
-     "Muş Spor": "8722",
-     "Seza Çimento Elazığspor": "37",
-     "Sebat Spor": "10300"
+     "Muş Spor": "8722"
     },
     "form": {
      "52 Orduspor FK": [
@@ -7473,10 +7473,8 @@
      "Eskişehir Anadolu Spor Faaliyetleri": "4152",
      "Bucaspor 1928": "4274",
      "Karşıyaka": "3598",
-     "Orduspor 1967": "4929",
-     "Düzce Cam Düzcespor": "98",
-     "Beykoz Anadolu Spor": "2744",
-     "Küçükçekmece Sinop Spor": "1092",
+     "Kdz.ereğli 1980 Spor": "3690",
+     "Fatsa Belediyespor": "4933",
      "İnkılap": "1465",
      "Zonguldak Spor": "2434",
      "Amasyaspor FK": "2780",
@@ -7487,29 +7485,31 @@
      "Beykoz İshaklı Spor Faaliyetleri": "4485",
      "Karabük İdmanyurdu Spor": "10580",
      "Kartal Bulvar Kartalimen Spor": "4491",
-     "Kdz.ereğli 1980 Spor": "3690",
-     "Fatsa Belediyespor": "4933",
+     "Orduspor 1967": "4929",
+     "Düzce Cam Düzcespor": "98",
      "Yalova FK 77 Spor": "3087",
      "Tokat Belediye Spor": "11881",
+     "Beykoz Anadolu Spor": "2744",
+     "Küçükçekmece Sinop Spor": "1092",
      "Büyükçekmece Gücü FK Spor": "4485",
-     "Yeni Malatyaspor": "4879",
-     "Karaman": "165",
-     "Bitlis 1916": "3840",
-     "1964 Silifke Spor": "3666",
-     "Ağrı 1970 Spor": "7890",
-     "Açıkalın Erciyes 38": "4398",
+     "Diyarbekir Spor": "3196",
+     "Malatya Yeşilyurt Spor": "4844",
      "Yozgat Belediyesi Bozok Spor": "7787",
      "Ejderoğlu Kırşehir": "4499",
      "Kırıkkale FK Spor": "186",
      "Halil Bayram İnşaat Karaköprü Belediyespor": "4517",
-     "Diyarbekir Spor": "3196",
-     "Malatya Yeşilyurt Spor": "4844",
-     "Ayos Osmaniyespor": "3051",
-     "Adana Adaletgücü Spor": "8742",
+     "Ağrı 1970 Spor": "7890",
+     "Açıkalın Erciyes 38": "4398",
+     "Bitlis 1916": "3840",
+     "1964 Silifke Spor": "3666",
+     "Yeni Mersin İdmanyurdu": "4228",
+     "Eti Gübre Mazıdağı Fosfat Spor": "10337",
+     "Yeni Malatyaspor": "4879",
+     "Karaman": "165",
      "Adanaspor": "3605",
      "Niğde Belediyesi Spor": "9399",
-     "Yeni Mersin İdmanyurdu": "4228",
-     "Eti Gübre Mazıdağı Fosfat Spor": "10337"
+     "Ayos Osmaniyespor": "3051",
+     "Adana Adaletgücü Spor": "8742"
     },
     "form": {
      "Etimesgut Spor": [
@@ -8458,7 +8458,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T10:13:53.302Z",
+  "guncelleme": "2026-11-20T10:32:17.006Z",
   "liste": [
    {
     "yol": "/",
@@ -8501,11 +8501,11 @@
     "sayi": 1
    },
    {
-    "yol": "/okullar-tatil-mi/diyarbakir/",
+    "yol": "/trafik/",
     "sayi": 1
    },
    {
-    "yol": "/trafik/",
+    "yol": "/okullar-tatil-mi/diyarbakir/",
     "sayi": 1
    },
    {
@@ -8567,7 +8567,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T10:13:54.697Z",
+  "guncelleme": "2026-11-20T10:33:01.795Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.58
@@ -8580,32 +8580,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T10:13:56.672Z",
+  "guncelleme": "2026-11-20T10:33:04.222Z",
   "giden": [
-   {
-    "no": [
-     "PC2101"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-20T10:15:00.000Z",
-    "tahmini": null,
-    "kapi": "108",
-    "durum": "SON ÇAĞRI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "TK2457"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-20T10:30:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "BOARDING",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC3601"
@@ -8615,7 +8591,7 @@
     "planlanan": "2026-11-20T10:40:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "BOARDING",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -8627,7 +8603,7 @@
     "planlanan": "2026-11-20T10:45:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -8663,7 +8639,7 @@
     "planlanan": "2026-11-20T12:10:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8675,7 +8651,7 @@
     "planlanan": "2026-11-20T12:10:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9205,6 +9181,18 @@
     "kapi": "105",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2457"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-21T10:30:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
@@ -9217,7 +9205,7 @@
     "planlanan": "2026-11-20T10:40:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "dis"
    },
    {
@@ -9811,7 +9799,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T10:13:56.672Z",
+  "guncelleme": "2026-11-20T10:33:04.222Z",
   "liste": [
    {
     "id": 6375,
