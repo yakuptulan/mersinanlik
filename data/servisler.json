@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-20T23:02:00.685Z",
+ "guncelleme": "2026-11-20T23:32:07.600Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 18,
@@ -63,13 +63,13 @@
      "tarih": "2026-11-24",
      "min": 14,
      "max": 19,
-     "durum": "Açık"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-25",
-     "min": 12,
+     "min": 14,
      "max": 20,
-     "durum": "Açık"
+     "durum": "Parçalı bulutlu"
     }
    ]
   },
@@ -97,15 +97,15 @@
     },
     {
      "tarih": "2026-11-24",
-     "min": 13,
-     "max": 18,
+     "min": 14,
+     "max": 17,
      "durum": "Bulutlu"
     },
     {
      "tarih": "2026-11-25",
      "min": 12,
      "max": 21,
-     "durum": "Az bulutlu"
+     "durum": "Bulutlu"
     }
    ]
   },
@@ -133,21 +133,21 @@
     },
     {
      "tarih": "2026-11-24",
-     "min": 14,
+     "min": 13,
      "max": 18,
-     "durum": "Az bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-25",
-     "min": 11,
+     "min": 13,
      "max": 20,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     }
    ]
   },
   "camliyayla": {
    "sicaklik": 12,
-   "durum": "Hafif yağmurlu",
+   "durum": "Sisli",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -175,14 +175,14 @@
     },
     {
      "tarih": "2026-11-25",
-     "min": 6,
-     "max": 11,
+     "min": 7,
+     "max": 12,
      "durum": "Parçalı bulutlu"
     }
    ]
   },
   "erdemli": {
-   "sicaklik": 17,
+   "sicaklik": 18,
    "durum": "Sisli",
    "gunler": [
     {
@@ -206,14 +206,14 @@
     {
      "tarih": "2026-11-24",
      "min": 14,
-     "max": 18,
-     "durum": "Parçalı bulutlu"
+     "max": 19,
+     "durum": "Bulutlu"
     },
     {
      "tarih": "2026-11-25",
-     "min": 14,
+     "min": 13,
      "max": 20,
-     "durum": "Parçalı bulutlu"
+     "durum": "Az bulutlu"
     }
    ]
   },
@@ -241,7 +241,7 @@
     },
     {
      "tarih": "2026-11-24",
-     "min": 8,
+     "min": 9,
      "max": 11,
      "durum": "Bulutlu"
     },
@@ -249,7 +249,7 @@
      "tarih": "2026-11-25",
      "min": 7,
      "max": 12,
-     "durum": "Az bulutlu"
+     "durum": "Bulutlu"
     }
    ]
   },
@@ -278,20 +278,20 @@
     {
      "tarih": "2026-11-24",
      "min": 14,
-     "max": 19,
+     "max": 20,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-25",
-     "min": 13,
-     "max": 18,
-     "durum": "Az bulutlu"
+     "min": 14,
+     "max": 20,
+     "durum": "Parçalı bulutlu"
     }
    ]
   },
   "mut": {
    "sicaklik": 17,
-   "durum": "Bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -313,9 +313,9 @@
     },
     {
      "tarih": "2026-11-24",
-     "min": 11,
-     "max": 17,
-     "durum": "Az bulutlu"
+     "min": 12,
+     "max": 18,
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-25",
@@ -326,8 +326,8 @@
    ]
   },
   "silifke": {
-   "sicaklik": 17,
-   "durum": "Bulutlu",
+   "sicaklik": 16,
+   "durum": "Sisli",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -349,21 +349,21 @@
     },
     {
      "tarih": "2026-11-24",
-     "min": 13,
-     "max": 18,
-     "durum": "Parçalı bulutlu"
+     "min": 14,
+     "max": 20,
+     "durum": "Bulutlu"
     },
     {
      "tarih": "2026-11-25",
      "min": 12,
      "max": 20,
-     "durum": "Parçalı bulutlu"
+     "durum": "Az bulutlu"
     }
    ]
   },
   "tarsus": {
-   "sicaklik": 18,
-   "durum": "Bulutlu",
+   "sicaklik": 17,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -385,15 +385,15 @@
     },
     {
      "tarih": "2026-11-24",
-     "min": 14,
+     "min": 13,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-25",
      "min": 14,
-     "max": 20,
-     "durum": "Bulutlu"
+     "max": 21,
+     "durum": "Parçalı bulutlu"
     }
    ]
   },
@@ -427,9 +427,9 @@
     },
     {
      "tarih": "2026-11-25",
-     "min": 13,
-     "max": 19,
-     "durum": "Az bulutlu"
+     "min": 14,
+     "max": 20,
+     "durum": "Parçalı bulutlu"
     }
    ]
   },
@@ -463,9 +463,9 @@
     },
     {
      "tarih": "2026-11-25",
-     "min": 13,
-     "max": 19,
-     "durum": "Az bulutlu"
+     "min": 14,
+     "max": 20,
+     "durum": "Parçalı bulutlu"
     }
    ]
   }
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-20T23:02:05.286Z",
+  "guncelleme": "2026-11-20T23:32:12.485Z",
   "liste": [
    {
     "ad": "Dila Bangiz Eczanesi",
@@ -686,11 +686,11 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-20T23:02:06.354Z",
+  "guncelleme": "2026-11-20T23:32:13.720Z",
   "liste": []
  },
  "piyasa": {
-  "guncelleme": "2026-11-20T22:32:02.290Z",
+  "guncelleme": "2026-11-20T23:32:17.557Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -723,9 +723,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2982187,
-    "usd": 59031,
-    "degisim": -5.07
+    "satis": 2974398,
+    "usd": 58877,
+    "degisim": -4.89
    }
   },
   "altinlar": [
@@ -858,10 +858,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 01:32:01"
+  "kaynakSaati": "2026-11-21 02:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-20T23:02:11.833Z",
+  "guncelleme": "2026-11-20T23:32:20.536Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1786,7 +1786,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-20T22:32:06.963Z",
+  "guncelleme": "2026-11-20T23:32:23.105Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8198,7 +8198,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T23:02:12.195Z",
+  "guncelleme": "2026-11-20T23:32:20.960Z",
   "liste": [
    {
     "yol": "/",
@@ -8295,7 +8295,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T23:02:14.216Z",
+  "guncelleme": "2026-11-20T23:33:06.823Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.48
@@ -8308,7 +8308,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T23:02:15.982Z",
+  "guncelleme": "2026-11-20T23:33:08.940Z",
   "giden": [
    {
     "no": [
@@ -8343,7 +8343,7 @@
     "planlanan": "2026-11-21T01:10:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9467,7 +9467,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T23:02:15.982Z",
+  "guncelleme": "2026-11-20T23:33:08.940Z",
   "liste": [
    {
     "id": 6375,
