@@ -15,7 +15,11 @@
   },
   "mut-belediyesi": {
    "hata": "HTTP 500",
-   "zaman": "2026-11-20T02:31:23.116Z"
+   "zaman": "2026-11-20T03:01:26.856Z"
+  },
+  "erdemli-belediyesi": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-20T03:01:25.836Z"
   }
  },
  "gorsel": {
@@ -278,11 +282,15 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-20T02:31:49.254Z",
+  "guncelleme": "2026-11-20T03:01:41.187Z",
   "liste": [
    {
+    "baslik": "köprü",
+    "trafik": 100
+   },
+   {
     "baslik": "togg kampanya",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "grok",
@@ -315,10 +323,6 @@
    {
     "baslik": "muhtemel aşk fragman",
     "trafik": 1000
-   },
-   {
-    "baslik": "20 kasım ne günü",
-    "trafik": 200
    }
   ]
  },
