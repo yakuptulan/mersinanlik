@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-20T16:03:06.660Z",
+ "guncelleme": "2026-11-20T16:09:16.892Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -38,14 +38,14 @@
    ]
   },
   "anamur": {
-   "sicaklik": 20,
+   "sicaklik": 19,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
      "min": 18,
-     "max": 20,
-     "durum": "Parçalı bulutlu"
+     "max": 19,
+     "durum": "Bulutlu"
     },
     {
      "tarih": "2026-11-21",
@@ -74,13 +74,13 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 20,
+   "sicaklik": 19,
    "durum": "Sisli",
    "gunler": [
     {
      "tarih": "2026-11-20",
      "min": 19,
-     "max": 20,
+     "max": 19,
      "durum": "Sisli"
     },
     {
@@ -110,13 +110,13 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 20,
+   "sicaklik": 19,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
      "min": 17,
-     "max": 20,
+     "max": 19,
      "durum": "Bulutlu"
     },
     {
@@ -183,7 +183,7 @@
   },
   "erdemli": {
    "sicaklik": 19,
-   "durum": "Hafif yağmurlu",
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
@@ -326,13 +326,13 @@
    ]
   },
   "silifke": {
-   "sicaklik": 19,
+   "sicaklik": 18,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
      "min": 17,
-     "max": 19,
+     "max": 18,
      "durum": "Bulutlu"
     },
     {
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-20T16:03:10.976Z",
+  "guncelleme": "2026-11-20T16:09:20.176Z",
   "liste": [
    {
     "ad": "Dila Bangiz Eczanesi",
@@ -752,7 +752,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-20T16:03:12.387Z",
+  "guncelleme": "2026-11-20T16:09:21.174Z",
   "liste": [
    {
     "tur": "su",
@@ -961,7 +961,7 @@
   "kaynakSaati": "2026-11-20 18:59:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-20T16:00:05.251Z",
+  "guncelleme": "2026-11-20T16:09:28.242Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -8345,7 +8345,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T16:03:26.977Z",
+  "guncelleme": "2026-11-20T16:09:28.660Z",
   "liste": [
    {
     "yol": "/",
@@ -8470,7 +8470,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T16:03:29.208Z",
+  "guncelleme": "2026-11-20T16:09:30.176Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.54
@@ -8483,20 +8483,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T16:03:31.962Z",
+  "guncelleme": "2026-11-20T16:09:31.927Z",
   "giden": [
-   {
-    "no": [
-     "VF1053"
-    ],
-    "havayolu": "AJet",
-    "yer": "Ercan",
-    "planlanan": "2026-11-20T16:05:00.000Z",
-    "tahmini": null,
-    "kapi": "103",
-    "durum": "SON ÇAĞRI",
-    "hat": "dis"
-   },
    {
     "no": [
      "PC1854"
@@ -8542,7 +8530,7 @@
     "planlanan": "2026-11-20T18:00:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9048,6 +9036,30 @@
     "kapi": "106",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2089"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-21T16:05:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF1053"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ercan",
+    "planlanan": "2026-11-21T16:05:00.000Z",
+    "tahmini": null,
+    "kapi": "103",
+    "durum": "",
+    "hat": "dis"
    }
   ],
   "gelen": [
@@ -9606,7 +9618,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T16:03:31.961Z",
+  "guncelleme": "2026-11-20T16:09:31.926Z",
   "liste": [
    {
     "id": 6375,
