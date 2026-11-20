@@ -1545,3 +1545,32 @@ a.cip.kat:hover { filter: brightness(.95); }
 .alt-telif a { color: var(--acik-yazi); font-weight: 700; text-decoration: none; }
 .alt-telif a:hover { text-decoration: underline; }
 @media (max-width: 760px) { .alt-telif .kap { padding-bottom: 96px !important; } }
+.rk-sayilar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 26px; }
+.rk-sayilar div { background: #fff; border: 1px solid #e3e8f2; border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 4px; }
+.rk-sayilar b { font-size: 28px; font-weight: 900; color: var(--lacivert); }
+.rk-sayilar span { color: var(--ikincil); font-size: 13px; font-weight: 600; }
+@media (max-width: 760px) { .rk-sayilar { grid-template-columns: repeat(2, 1fr); } }
+.rk-izgara { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 28px; }
+@media (max-width: 760px) { .rk-izgara { grid-template-columns: 1fr; } }
+.rk-kart { background: #fff; border: 1px solid #e3e8f2; border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 8px; }
+.rk-kart.one { border: 2px solid #f97316; box-shadow: 0 10px 30px rgba(249,115,22,.12); }
+.rk-ikon { font-size: 30px; }
+.rk-kart h3 { margin: 0; font-size: 20px; }
+.rk-kart p { margin: 0; color: var(--govde); }
+.rk-kart ul { margin: 4px 0 8px; padding-left: 18px; color: var(--govde); font-size: 14px; }
+.rk-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #16a34a; color: #fff; font: inherit; font-weight: 800; border: 0; border-radius: 14px; padding: 13px 20px; cursor: pointer; text-decoration: none; }
+.rk-btn:hover { background: #15803d; }
+.rk-btn.ikincil { margin-top: auto; align-self: flex-start; background: #f1f5ff; color: #1d4ed8; padding: 10px 16px; }
+.rk-form { display: grid; grid-template-columns: 1fr 1.2fr; gap: 24px; background: linear-gradient(135deg, var(--lacivert), #1e3a8a); color: #fff; border-radius: 26px; padding: 28px; margin-bottom: 28px; }
+@media (max-width: 760px) { .rk-form { grid-template-columns: 1fr; } }
+.rk-form h2 { margin: 0 0 8px; }
+.rk-form p { color: #cbd5e1; }
+.rk-iletisim { display: flex; flex-direction: column; gap: 8px; }
+.rk-iletisim a { color: #fff; font-weight: 700; text-decoration: none; }
+.rk-form form { display: grid; gap: 12px; }
+.rk-form label { display: grid; gap: 6px; font-size: 13px; font-weight: 700; color: #e2e8f0; }
+.rk-form input, .rk-form select, .rk-form textarea { font: inherit; font-size: 15px; padding: 11px 13px; border-radius: 12px; border: 0; background: #fff; color: #0f172a; }
+.rk-ilke { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 20px; padding: 18px 22px; margin-bottom: 24px; }
+.rk-ilke h2 { margin: 0 0 8px; font-size: 18px; }
+.rk-ilke ul { margin: 0; padding-left: 18px; color: var(--govde); }
+.rk-yurutucu { color: var(--ikincil); font-size: 14px; }

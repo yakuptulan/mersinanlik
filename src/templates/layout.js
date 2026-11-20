@@ -98,7 +98,7 @@ function uyariBantlari() {
 }
 
 // Reklam kodu yalnızca içeriği dolu, dizine açık sayfalarda yüklenir (ince/noindex ve kurumsal sayfalarda yok)
-const REKLAMSIZ = ['/ara/', '/menu/', '/durum/', '/404', '/gizlilik/', '/cerez-politikasi/', '/kunye/', '/iletisim/', '/duzeltme-politikasi/', '/yayin-ilkeleri/', '/yapay-zeka-ilkeleri/', '/hakkimizda/', '/kaynaklarimiz/', '/gundemim/'];
+const REKLAMSIZ = ['/ara/', '/menu/', '/durum/', '/404', '/gizlilik/', '/cerez-politikasi/', '/kunye/', '/iletisim/', '/duzeltme-politikasi/', '/yayin-ilkeleri/', '/yapay-zeka-ilkeleri/', '/hakkimizda/', '/kaynaklarimiz/', '/gundemim/', '/reklam/'];
 const reklamliSayfa = (yol, noindex) => !noindex && !REKLAMSIZ.some((y) => yol.startsWith(y));
 
 export function sayfa({ baslik, aciklama = SITE.description, yol = '/', aktif = yol, ust = '', icerik, noindex = false, jsonLd = null, hava = null, ekVeri = null, gorsel = null, tur = 'website', tema = undefined }) {
@@ -160,7 +160,7 @@ ${icerik}
 </div>
 <nav class="alt-menu" aria-label="Alt menü">
 <a href="/gundemim/">Benim Gündemim</a><a href="/nobetci-eczane/">Nöbetçi eczane</a><a href="/kesintiler/">Kesintiler</a><a href="/hava-durumu/">Hava durumu</a><a href="/deprem/">Deprem</a><a href="/trafik/">Trafik haritası</a><a href="/ilceler/">İlçeler</a><a href="/bilgi/">Merak edilenler</a><a href="/rehber/">Mersin rehberi</a><a href="/gezi/">Gezi rehberi</a><a href="/etkinlikler/">Etkinlikler</a><a href="/spor/">Spor</a><a href="/burclar/">Burçlar</a><a href="/tatil-takvimi/">Tatil takvimi</a><a href="/piyasalar/">Altın ve döviz</a><a href="/namaz-vakitleri/">Namaz vakitleri</a><a href="/akaryakit-fiyatlari/">Akaryakıt</a><a href="/akaryakit/">81 il akaryakıt</a><a href="/namaz-vakti/">81 il namaz vakitleri</a><a href="/hava-durumu/iller/">81 il hava durumu</a><a href="/son-depremler/">Son depremler</a><a href="/kar-tatili/">Okullar tatil mi?</a><a href="/piyasalar/gram-altin/">Gram altın</a><a href="/piyasalar/dolar/">Dolar kuru</a>
-<a href="/hakkimizda/">Hakkımızda</a><a href="/kunye/">Künye</a><a href="/iletisim/">İletişim</a><a href="/yayin-ilkeleri/">Yayın ilkeleri</a><a href="/duzeltme-politikasi/">Düzeltme politikası</a><a href="/yapay-zeka-ilkeleri/">Yapay zekâ kullanımı</a><a href="/kaynaklarimiz/">Kaynaklarımız</a><a href="/arsiv/">Haber arşivi</a>
+<a href="/reklam/">Reklam ve iş birliği</a><a href="/hakkimizda/">Hakkımızda</a><a href="/kunye/">Künye</a><a href="/iletisim/">İletişim</a><a href="/yayin-ilkeleri/">Yayın ilkeleri</a><a href="/duzeltme-politikasi/">Düzeltme politikası</a><a href="/yapay-zeka-ilkeleri/">Yapay zekâ kullanımı</a><a href="/kaynaklarimiz/">Kaynaklarımız</a><a href="/arsiv/">Haber arşivi</a>
 <a href="/gizlilik/">Gizlilik</a><a href="/cerez-politikasi/">Çerez politikası</a><a href="/gorsel-kaynaklari/">Görsel kaynakları</a>
 </nav>
 </div>

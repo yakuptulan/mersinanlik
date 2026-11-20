@@ -14,6 +14,7 @@ import { gundemimSayfasi, akisVerisi } from './templates/gundemim.js';
 import { logolariAyarla } from './templates/servisParcalari.js';
 import { akaryakitIlSayfasi, akaryakitTurkiyeSayfasi, namazIlSayfasi, namazTurkiyeSayfasi, havaIlSayfasi, havaTurkiyeSayfasi, sonDepremlerSayfasi, ilDepremSayfasi, okulIlSayfasi, karTatiliSayfasi, depremIli, depremIlYolu, ulusalMevcutAyarla, mersinDepremSayfasi, PIYASA_KALEMLERI, piyasaKalemSayfasi, piyasaKalemYolu } from './templates/ulusal.js';
 import ILLER81 from './iller.json' with { type: 'json' };
+import { reklamSayfasi } from './templates/reklam.js';
 import { vakitListesi } from './lib/vakitHesap.js';
 import { takimSayfasi, takimYolu } from './templates/spor.js';
 import { sayfa as sayfaYap } from './templates/layout.js';
@@ -283,6 +284,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
     ekle(`/akaryakit-fiyatlari/${ilce.slug}/`, IS.akaryakitIlceSayfasi({ ilce, servis, simdi }));
   }
   for (const { yol, html } of S.bilgiSayfalari()) ekle(yol, html);
+  ekle('/reklam/', reklamSayfasi({ istatistik: { gunlukHaber: hikayeler.filter((x) => !x.genel && Date.now() - new Date(x.ilkGorulme) < 864e5).length, sayfa: 650 } }));
   ekle('/menu/', S.menuSayfasi(), false);
   ekle('/ara/', S.araSayfasi(), false);
   yaz('/404.html', S.bulunamadiSayfasi());

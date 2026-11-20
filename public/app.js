@@ -183,6 +183,15 @@
   }
   depremZaman();
   setInterval(depremZaman, 60000);
+  // ---------- Reklam formu → WhatsApp ----------
+  document.querySelectorAll('[data-reklam-form]').forEach(function (f) {
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var d = new FormData(f);
+      var metin = 'Merhaba, Mersin Anlık üzerinden yazıyorum.\n\nİşletme: ' + (d.get('isletme') || '') + '\nSektör/ilçe: ' + (d.get('sektor') || '-') + '\nİlgilendiğim hizmet: ' + (d.get('hizmet') || '-') + '\nNot: ' + (d.get('not') || '-');
+      window.open('https://wa.me/' + f.getAttribute('data-wa') + '?text=' + encodeURIComponent(metin), '_blank', 'noopener');
+    });
+  });
   piyasaTazele();
   setInterval(function () { if (!document.hidden) piyasaTazele(); }, 60000);
 

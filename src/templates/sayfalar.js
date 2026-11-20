@@ -922,13 +922,16 @@ export function bilgiSayfalari() {
 <p><strong>Adres:</strong> Mersin, Türkiye</p>
 <p><strong>E-posta:</strong> <a href="mailto:${SITE.email}">${SITE.email}</a></p>
 <p><strong>Yer sağlayıcı:</strong> Cloudflare, Inc.</p>
+<p><strong>Reklam ve iş birliği:</strong> Step Digital · <a href="/reklam/">ayrıntılar</a></p>
+<p><strong>Tasarım ve yazılım:</strong> <a href="https://stepdigital.org" rel="noopener" target="_blank">Step Digital</a></p>
 <p>Sitede yer alan haberler kaynak gösterilerek derlenir; haberlerin hukuki sorumluluğu kaynağına aittir. Düzeltme ve cevap hakkı talepleri için yukarıdaki e-posta adresine yazabilirsiniz.</p>`,
     }),
     ({
       yol: '/iletisim/',
       baslik: 'İletişim',
       aciklama: `${SITE.name} ile iletişime geçin.`,
-      govde: `<p>Haber ihbarı, düzeltme talebi ve reklam için: <a href="mailto:${SITE.email}">${SITE.email}</a></p>
+      govde: `<p>Haber ihbarı ve düzeltme talepleri için: <a href="mailto:${SITE.email}">${SITE.email}</a></p>
+<p>Reklam ve iş birliği için: <a href="/reklam/">Reklam ve iş birliği sayfası</a> · WhatsApp ve telefon: 0505 065 71 87 (Step Digital)</p>
 <p>Bir haberde hata ya da düzeltme talebiniz varsa haberin bağlantısıyla birlikte yazın; en kısa sürede inceleriz.</p>`,
     }),
     ({
