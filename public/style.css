@@ -1587,3 +1587,30 @@ a.cip.kat:hover { filter: brightness(.95); }
 .kutu-macgunu .macgunu-liste { padding: 10px 14px 14px; }
 .mg-ad { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .son-dakika a.etiket { text-decoration: none; }
+/* Manşet: 20 haber */
+.mk-noktalar { grid-template-columns: repeat(20, 1fr); gap: 4px; }
+.mk-noktalar button { height: 30px; font-size: 12px; border-radius: 9px; }
+@media (max-width: 760px) {
+  .mk-noktalar { grid-template-columns: repeat(20, 1fr); gap: 3px; }
+  .mk-noktalar button { font-size: 0; height: 6px; padding: 0; border-radius: 99px; background: #d5dcea; border: 0; }
+  .mk-noktalar button[aria-current="true"] { background: var(--lacivert); transform: none; box-shadow: none; }
+}
+/* Çok konuşulanlar: görselli sıralı kartlar */
+.gundem-blok .bolum-bas { align-items: baseline; gap: 12px; }
+.gundem-blok .kutu-alt { font-size: 14px; color: var(--ikincil); }
+.gundem-blok .kare-izgara + .kare-izgara { margin-top: 10px; }
+.kare-izgara.ters { grid-template-columns: 1fr 1fr 1.15fr; }
+.kare-izgara.ters .kare-kart.buyuk { grid-column: 3; grid-row: 1 / 3; }
+.kare-izgara.ters .kare-kart:not(.buyuk):nth-child(2) { grid-column: 1; grid-row: 1; }
+.kare-izgara.ters .kare-kart:not(.buyuk):nth-child(3) { grid-column: 2; grid-row: 1; }
+.kare-izgara.ters .kare-kart:not(.buyuk):nth-child(4) { grid-column: 1; grid-row: 2; }
+.kare-izgara.ters .kare-kart:not(.buyuk):nth-child(5) { grid-column: 2; grid-row: 2; }
+.kk-no { position: absolute; right: 12px; top: 10px; z-index: 1; font-size: 30px; font-weight: 900; line-height: 1; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,.55); font-variant-numeric: tabular-nums; }
+.kare-kart.buyuk .kk-no { font-size: 46px; }
+.kk-rozet { z-index: 1; }
+@media (max-width: 900px) {
+  .kare-izgara.ters { grid-template-columns: 1fr 1fr; }
+  .kare-izgara.ters .kare-kart.buyuk, .kare-izgara.ters .kare-kart:not(.buyuk):nth-child(n) { grid-column: auto; grid-row: auto; }
+  .kare-izgara.ters .kare-kart.buyuk { grid-column: 1 / -1; }
+}
+.son-dakika a.etiket { flex: none; min-width: auto; overflow: visible; color: var(--lacivert); font-weight: 800; font-size: 14px; white-space: nowrap; flex-basis: auto; }

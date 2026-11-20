@@ -246,16 +246,16 @@ ${b.son ? `<span class="bk-son">${h(b.son)}</span>` : ''}
     .join('')}</div>`;
 }
 
-// Görselin üstüne yazılı kare kart (Kaçırmayın bölümü)
-export function kareKart(x, buyuk = false) {
+// Görselin üstüne yazılı kare kart (Çok konuşulanlar bölümü; sira verilirse sıra numarası ve kaynak sayısı)
+export function kareKart(x, buyuk = false, sira = 0) {
   const kat = katBilgi(x);
   const b = baglanti(x);
   const g = kapakAdresi(x);
   return `<a class="kare-kart${buyuk ? ' buyuk' : ''}" href="${h(b.href)}"${b.dis} style="--kat:${kat.renk}">
 <img class="${g.cizim ? 'cizim' : ''}" src="${h(g.src)}" alt="" loading="lazy" decoding="async" width="800" height="450">
 <span class="kk-golge"></span>
-<span class="kk-rozet">${h(kat.ad)}</span>
-<span class="kk-ic"><b>${h(x.baslik)}</b><small><span data-once="${x.ilkGorulme}">${saat(x.ilkGorulme)}</span></small></span>
+${sira ? `<span class="kk-no">${sira}</span>` : ''}<span class="kk-rozet">${h(kat.ad)}</span>
+<span class="kk-ic"><b>${h(x.baslik)}</b><small>${sira ? `${new Set(x.kaynaklar.map((k) => k.ad)).size} kaynak · ` : ''}<span data-once="${x.ilkGorulme}">${saat(x.ilkGorulme)}</span></small></span>
 </a>`;
 }
 

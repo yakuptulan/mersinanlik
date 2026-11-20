@@ -166,15 +166,15 @@ function sonDakikaBandi(liste) {
     .join('')}</span>${liste.length > 1 ? `<span class="sd-sayac" aria-hidden="true"><b data-sd-no>1</b>/${liste.length}</span>` : ''}</div>`;
 }
 
-// Manşet kaydırıcısı: son 24 saatin en önemli 10 haberi (kaynak sayısı, kendi yazımız, görsel, çok aranan, yenilik)
+// Manşet kaydırıcısı: son 24 saatin en önemli 20 haberi (kaynak sayısı, kendi yazımız, görsel, çok aranan, yenilik)
 function mansetleriSec(hikayeler, simdi) {
   const puan = (x) => {
     const yas = (simdi - new Date(x.ilkGorulme).getTime()) / 36e5;
     return new Set(x.kaynaklar.map((k) => k.ad)).size * 3 + (x.metin ? 2 : 0) + (x.gorsel ? 1.5 : 0) + (x.trend ? 2 : 0) + Math.max(0, 8 - yas) * 0.5;
   };
   let aday = hikayeler.filter((x) => simdi - new Date(x.ilkGorulme).getTime() < 24 * 36e5);
-  if (aday.length < 10) aday = hikayeler.slice(0, 40);
-  return [...aday].sort((a, b) => puan(b) - puan(a)).slice(0, 10);
+  if (aday.length < 20) aday = hikayeler.slice(0, 60);
+  return [...aday].sort((a, b) => puan(b) - puan(a)).slice(0, 20);
 }
 
 // Bölümler: son 24 saatte haberi olan kategoriler, çoktan aza
@@ -278,13 +278,13 @@ function kategoriBloklari(mersin, haric) {
     .join('\n');
 }
 
-// Çok konuşulanlar: en çok sitenin yazdığı haberler (en az 6; yetmezse son 48 saatin öne çıkanlarıyla tamamlanır)
-function gundemdekilerSec(hikayeler, simdi, haric) {
+// Çok konuşulanlar: en çok sitenin yazdığı 10 haber (yetmezse son 48 saatin öne çıkanlarıyla tamamlanır)
+function gundemdekilerSec(hikayeler, simdi, haric, adet = 10) {
   const sayi = (x) => new Set(x.kaynaklar.map((k) => k.ad)).size;
   const yeni = (x, saat) => simdi - new Date(x.ilkGorulme).getTime() < saat * 36e5;
   const sirala = (l) => l.sort((a, b) => sayi(b) - sayi(a) || new Date(b.ilkGorulme) - new Date(a.ilkGorulme));
-  const secilen = sirala(hikayeler.filter((x) => !haric.has(x) && yeni(x, 24) && sayi(x) >= 2)).slice(0, 6);
-  if (secilen.length < 6) secilen.push(...sirala(hikayeler.filter((x) => !haric.has(x) && !secilen.includes(x) && yeni(x, 48) && !x.genel)).slice(0, 6 - secilen.length));
+  const secilen = sirala(hikayeler.filter((x) => !haric.has(x) && yeni(x, 24) && sayi(x) >= 2)).slice(0, adet);
+  if (secilen.length < adet) secilen.push(...sirala(hikayeler.filter((x) => !haric.has(x) && !secilen.includes(x) && yeni(x, 48) && !x.genel)).slice(0, adet - secilen.length));
   return secilen;
 }
 
@@ -322,11 +322,10 @@ export function anaSayfa({ hikayeler, servis, simdi }) {
   const mansetler = mansetleriSec(mersin, simdi);
   const manset = mansetler[0];
   const mansetSet = new Set(mansetler);
-  // Kaçırmayın: manşet dışındaki önemli haberler; Son haberler: gerçekten en yeni haberler (kronolojik)
-  const kacirma = mersin.filter((x) => !mansetSet.has(x) && (x.gorsel || x.metin)).sort((a, b) => b.kaynaklar.length - a.kaynaklar.length).slice(0, 5);
-  const ustteOlan = new Set([...mansetler, ...kacirma]);
+  // Son haberler: gerçekten en yeni haberler (kronolojik)
   const liste = [...mersin].sort((a, b) => new Date(b.ilkGorulme) - new Date(a.ilkGorulme)).slice(0, 8);
   const gundem = gundemdekilerSec(hikayeler, simdi, mansetSet);
+  const ustteOlan = new Set([...mansetler, ...gundem]);
   const gosterilen = new Set([...ustteOlan, ...liste]);
   const ust = `${meteoBandi(servis)}${sonDakikaBandi(sonDakikaSec(hikayeler.filter((x) => x !== manset), simdi))}
 <div class="su-an-bas su-an-kompakt">
@@ -348,8 +347,7 @@ ${derbiKarti(servis, simdi)}
 ${gundemimKarti()}
 ${ozetKarti(servis?.ozet)}
 <nav class="turkiye-serit" aria-label="Türkiye geneli"><b>Türkiye geneli</b><a href="/son-depremler/">🌍 Son depremler</a><a href="/kar-tatili/">🏫 Okullar tatil mi?</a><a href="/piyasalar/gram-altin/">🪙 Gram altın</a><a href="/piyasalar/dolar/">💵 Dolar</a><a href="/akaryakit/">⛽ 81 il akaryakıt</a><a href="/hava-durumu/iller/">🌤️ 81 il hava</a><a href="/namaz-vakti/">🕌 81 il namaz</a><a href="/spor/super-lig/">⚽ Süper Lig</a></nav>
-${gundem.length >= 2 ? `<section class="kutu gundem-kutu"><div class="kutu-bas"><h2>Çok konuşulanlar</h2><span class="kutu-alt">En çok sitenin yazdığı haberler</span></div>${gundemListesi(gundem)}</section>` : ''}
-${kacirma.length === 5 ? `<section class="kacirma-blok"><div class="bolum-bas"><h2><span class="kat-cizgi" style="--kat:var(--turuncu)"></span>Kaçırmayın</h2></div><div class="kare-izgara">${kacirma.map((x, i) => kareKart(x, i === 0)).join('')}</div></section>` : ''}
+${gundem.length >= 5 ? `<section class="kacirma-blok gundem-blok"><div class="bolum-bas"><h2><span class="kat-cizgi" style="--kat:var(--turuncu)"></span>Çok konuşulanlar</h2><span class="kutu-alt">En çok sitenin yazdığı haberler</span></div>${[0, 5].filter((b) => gundem.length >= b + 5).map((b) => `<div class="kare-izgara">${gundem.slice(b, b + 5).map((x, i) => kareKart(x, i === 0, b + i + 1)).join('')}</div>`).join('')}</section>` : ''}
 <div class="bolum-bas" style="margin-top:14px"><h2>Mersin son dakika haberleri</h2><a class="bolum-link" href="/kategori/tum-haberler/">Tüm haberler →</a></div>
 ${haberListesi(liste.slice(0, 4))}
 ${reklamAlani('akis')}
