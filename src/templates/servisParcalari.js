@@ -165,19 +165,24 @@ export function bugununMaclari(servis, simdi = Date.now()) {
     .sort((a, b) => (b.mersin ? 1 : 0) - (a.mersin ? 1 : 0) || (a.bas || 0) - (b.bas || 0));
 }
 
+// Dar kutuda tek satıra sığmayan uzun resmî adlar
+export const KISA_TAKIM = { 'Amed Sportif Faaliyetler': 'Amedspor', 'Beyoğlu Yeni Çarşı Spor Faaliyetleri': 'Beyoğlu Yeni Çarşı', 'Arkent Arnavutköy Belediyesi Futbol': 'Arnavutköy Belediyespor' };
+
 export function macGunuKutusu(servis, simdi = Date.now()) {
   const maclar = bugununMaclari(servis, simdi);
   if (!maclar.length) return '';
   const canli = maclar.some((m) => m.durum === 'oynaniyor');
-  const satir = (m) => `<a class="macgunu-satir${m.mersin ? ' mersin' : ''}" href="/spor/${m.kod}/">
-<span class="macgunu-takim ev">${h(m.ev)}${takimLogosu(m.ev)}</span>
-<span class="macgunu-orta ${m.durum}">${m.durum === 'baslamadi' ? h(m.saat || '–') : h(String(m.skor || '0-0').replace('-', ' – '))}<small>${m.durum === 'oynaniyor' ? 'oynanıyor' : m.durum === 'bitti' ? 'MS' : m.lig}</small></span>
-<span class="macgunu-takim dep">${takimLogosu(m.dep)}${h(m.dep)}</span>
+  const satir = (m) => {
+    const [se, sd] = m.durum === 'baslamadi' ? ['', ''] : String(m.skor || '0-0').split('-').map((x) => x.trim());
+    const takim = (ad, sk) => `<span class="mg-takim">${takimLogosu(ad)}<span class="mg-ad">${h(KISA_TAKIM[ad] || ad)}</span>${m.durum === 'baslamadi' ? '' : `<b class="mg-skor">${h(sk ?? '')}</b>`}</span>`;
+    return `<a class="macgunu-satir${m.mersin ? ' mersin' : ''}" href="/spor/${m.kod}/">
+<span class="mg-takimlar">${takim(m.ev, se)}${takim(m.dep, sd)}</span>
+<span class="macgunu-orta ${m.durum}">${m.durum === 'baslamadi' ? h(m.saat || '–') : m.durum === 'oynaniyor' ? '<i class="mg-nokta"></i>' : ''}<small>${m.durum === 'oynaniyor' ? 'canlı' : m.durum === 'bitti' ? 'MS' : m.lig}</small></span>
 </a>`;
+  };
   return `<section class="kutu kutu-macgunu">
 ${kutuBasligi({ ikon: '⚽', baslik: 'Bugünün maçları', link: canli ? null : '/spor/', alt: canli ? '<span class="macgunu-canli">● oynanıyor</span>' : null })}
 <div class="macgunu-liste">${maclar.slice(0, 10).map(satir).join('')}</div>
-<p class="macgunu-not">Skorlar TFF verisinden yarım saatte bir güncellenir.</p>
 </section>`;
 }
 

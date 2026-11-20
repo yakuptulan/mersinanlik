@@ -1,7 +1,7 @@
 // Spor sayfaları: /spor/ ana sayfası ve spor sayfalarına özel yan sütun
 import { htmlKacis as h, slugify as _slug } from '../lib/text.js';
 import { kareKart, haberListesi, reklamAlani, haberYolu, kapakAdresi } from './parcalar.js';
-import { kutuBasligi, takimRozeti, takimLogosu, ligTablosu, ligSerit, macListesi, bugununMaclari } from './servisParcalari.js';
+import { kutuBasligi, takimRozeti, takimLogosu, ligTablosu, ligSerit, macListesi, bugununMaclari, KISA_TAKIM } from './servisParcalari.js';
 import { LIGLER } from '../lib/spor.js';
 
 const TZ = 'Europe/Istanbul';
@@ -196,7 +196,7 @@ export function macGunuKarti(servis, hikayeler, simdi = Date.now()) {
   return `<section class="sl-serit"><a class="sl-serit-bas" href="/spor/#super-lig">🏆 Bugün Süper Lig'de</a><div class="sl-serit-maclar">${sl
     .map((m) => {
       const durum = durumu(m);
-      return `<a class="sl-serit-mac ${durum}" href="/spor/#super-lig"><span>${takimRozeti(m.ev)}${h(m.ev)}</span><b>${m.skor && durum !== 'baslamadi' ? h(m.skor.replace('-', ' – ')) : durum === 'baslamadi' ? h(m.saat || '') : '–'}</b><span>${takimRozeti(m.dep)}${h(m.dep)}</span>${durum === 'oynaniyor' ? '<i>canlı</i>' : ''}</a>`;
+      return `<a class="sl-serit-mac ${durum}" href="/spor/#super-lig"><span>${takimRozeti(m.ev)}${h(KISA_TAKIM[m.ev] || m.ev)}</span><b>${m.skor && durum !== 'baslamadi' ? h(m.skor.replace('-', ' – ')) : durum === 'baslamadi' ? h(m.saat || '') : '–'}</b><span>${takimRozeti(m.dep)}${h(KISA_TAKIM[m.dep] || m.dep)}</span>${durum === 'oynaniyor' ? '<i>canlı</i>' : ''}</a>`;
     })
     .join('')}</div></section>`;
 }
