@@ -182,6 +182,8 @@ ${googleKaynak()}`;
 }
 
 // Haberin kapak görselinin adresi (manşet kaydırıcısı için)
+export const gorselMevcut = (hikaye) => Boolean(hikaye.gorsel && fs.existsSync(new URL(`../../public/uretilen/${hikaye.gorsel}`, import.meta.url)));
+
 export function kapakAdresi(hikaye) {
   if (hikaye.kapak && fs.existsSync(new URL(`../../public/kapak/${hikaye.kapak}.webp`, import.meta.url))) return { src: `/kapak/${hikaye.kapak}.webp`, kurum: null, kapak: true };
   if (hikaye.gorsel && fs.existsSync(new URL(`../../public/uretilen/${hikaye.gorsel}`, import.meta.url))) return { src: `/uretilen/${hikaye.gorsel}`, kurum: hikaye.gorselKaynak && hikaye.gorselKaynak !== 'yz' ? hikaye.gorselKaynak : null };

@@ -22,7 +22,16 @@ const medyan = (d) => {
   const s = d.filter((x) => x != null).sort((a, b) => a - b);
   return s.length ? s[Math.floor(s.length / 2)] : null;
 };
-const ilSecici = (yolu, aktif) => `<details class="mh-diger"><summary>Diğer iller (81)</summary><div class="mh-liste">${ILLER.map((i) => `<a href="${yolu(i.slug)}"${i.slug === aktif ? ' style="background:#dbeafe"' : ''}>${h(i.ad)}</a>`).join('')}</div></details>`;
+// Hangi il sayfalarının üretildiği (kırık bağlantı vermemek için); build.js doldurur
+const MEVCUT = {};
+export function ulusalMevcutAyarla(tur, kume) {
+  MEVCUT[tur] = kume;
+}
+const sayfaVarMi = (tur, slug) => slug === 'mersin' || !MEVCUT[tur] || MEVCUT[tur].has(slug);
+const ilSecici = (yolu, aktif, tur) => {
+  const l = ILLER.filter((i) => !tur || sayfaVarMi(tur, i.slug));
+  return `<details class="mh-diger"><summary>Diğer iller (${l.length})</summary><div class="mh-liste">${l.map((i) => `<a href="${yolu(i.slug)}"${i.slug === aktif ? ' style="background:#dbeafe"' : ''}>${h(i.ad)}</a>`).join('')}</div></details>`;
+};
 
 // ---------- Akaryakıt ----------
 export const akaryakitYolu = (slug) => (slug === 'mersin' ? '/akaryakit-fiyatlari/' : `/akaryakit/${slug}/`);
@@ -60,7 +69,7 @@ export function akaryakitIlSayfasi({ il, kayit, mersin }) {
 <div class="tablo-kap"><table class="tablo"><thead><tr><th>İlçe</th><th>Benzin</th><th>Motorin</th></tr></thead><tbody>${ilceler.map((x) => `<tr><th scope="row">${h(x.ad || '')}</th><td>${tl(x.benzin)}</td><td>${tl(x.motorin)}</td></tr>`).join('')}</tbody></table></div>
 ${mo && il.slug !== 'mersin' ? `<p class="giris-metni">Karşılaştırma: Mersin'de benzin ${tl(mo.benzin)}, motorin ${tl(mo.motorin)}. <a href="/akaryakit-fiyatlari/">Mersin akaryakıt fiyatları →</a></p>` : ''}
 <section class="bilgi-sss"><h2>Sık sorulanlar</h2>${sss.map((s) => `<details><summary>${h(s.soru)}</summary><p>${h(s.cevap)}</p></details>`).join('')}</section>
-${ilSecici(akaryakitYolu, il.slug)}
+${ilSecici(akaryakitYolu, il.slug, 'akaryakit')}
 <p style="color:var(--ikincil);font-size:14px">Fiyatlar Opet'in ilçe bazlı pompa fiyatlarıdır; istasyona ve markaya göre küçük farklar olabilir. Kaynak: opet.com.tr</p>
 </div></main>`,
   });
@@ -79,7 +88,7 @@ export function akaryakitTurkiyeSayfasi({ veri, mersin }) {
     ust: `<div class="su-an-bas"><div><h1>81 il akaryakıt fiyatları</h1><p style="margin-top:8px">${satirlar.length} il · il genelinde en sık görülen pompa fiyatı</p></div></div>`,
     icerik: `<main class="kap govde"><div class="ana">
 ${sirali.length >= 2 ? `<section class="ekonomi-bugun"><div class="eb-kareler"><div class="eb-kare"><small>En ucuz benzin</small><b>${h(sirali[0].il.ad)}</b><em>${tl(sirali[0].o.benzin)}</em></div><div class="eb-kare"><small>En pahalı benzin</small><b>${h(sirali.at(-1).il.ad)}</b><em>${tl(sirali.at(-1).o.benzin)}</em></div></div></section>` : ''}
-<div class="tablo-kap"><table class="tablo"><thead><tr><th>İl</th><th>Benzin</th><th>Motorin</th></tr></thead><tbody>${satirlar.map(({ il, o }) => `<tr${il.slug === 'mersin' ? ' class="mersin"' : ''}><th scope="row"><a href="${akaryakitYolu(il.slug)}">${h(il.ad)}</a></th><td>${tl(o.benzin)}</td><td>${tl(o.motorin)}</td></tr>`).join('')}</tbody></table></div>
+<div class="tablo-kap"><table class="tablo"><thead><tr><th>İl</th><th>Benzin</th><th>Motorin</th></tr></thead><tbody>${satirlar.map(({ il, o }) => `<tr${il.slug === 'mersin' ? ' class="mersin"' : ''}><th scope="row">${sayfaVarMi('akaryakit', il.slug) ? `<a href="${akaryakitYolu(il.slug)}">${h(il.ad)}</a>` : h(il.ad)}</th><td>${tl(o.benzin)}</td><td>${tl(o.motorin)}</td></tr>`).join('')}</tbody></table></div>
 <p style="color:var(--ikincil);font-size:14px">Kaynak: Opet ilçe bazlı pompa fiyatları. Liste gün içinde birkaç kez güncellenir.</p>
 </div></main>`,
   });
@@ -103,7 +112,7 @@ export function namazIlSayfasi({ il, kayit, simdi }) {
   ];
   return sayfa({
     baslik,
-    aciklama: `${BULUNMA(il.ad)} bugün imsak ${v.imsak}, öğle ${v.ogle}, akşam (iftar) ${v.aksam}. Diyanet verisiyle ${il.ad} namaz vakitleri${ramazan ? ' ve Ramazan imsakiyesi' : ''}.`,
+    aciklama: `${BULUNMA(il.ad)} bugün imsak ${v.imsak}, öğle ${v.ogle}, akşam (iftar) ${v.aksam}. ${kayit.hesap ? "Diyanet yöntemiyle" : "Diyanet verisiyle"} ${il.ad} namaz vakitleri${ramazan ? ' ve Ramazan imsakiyesi' : ''}.`,
     yol: namazYolu(il.slug),
     aktif: '/namaz-vakti/',
     jsonLd: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: sss.map((s) => ({ '@type': 'Question', name: s.soru, acceptedAnswer: { '@type': 'Answer', text: s.cevap } })) },
@@ -114,8 +123,8 @@ ${bugunRamazan ? `<section class="derbi-kart" style="display:block"><span class=
 <div class="bolum-bas"><h2>${ramazan ? 'İmsakiye' : 'Önümüzdeki günler'}</h2><span>Diyanet</span></div>
 <div class="tablo-kap"><table class="tablo"><thead><tr><th>Tarih</th>${VAKIT.map(([, ad]) => `<th>${ad}</th>`).join('')}</tr></thead><tbody>${liste.slice(0, ramazan ? 31 : 7).map((x) => `<tr${/ramazan/i.test(x.hicri || '') ? ' class="mersin"' : ''}><th scope="row">${h(new Date(`${x.tarih}T12:00:00+03:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', weekday: 'short', timeZone: TZ }))}</th>${VAKIT.map(([k]) => `<td>${h(x[k])}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
 <section class="bilgi-sss"><h2>Sık sorulanlar</h2>${sss.map((s) => `<details><summary>${h(s.soru)}</summary><p>${h(s.cevap)}</p></details>`).join('')}</section>
-${ilSecici(namazYolu, il.slug)}
-<p style="color:var(--ikincil);font-size:14px">Vakitler Diyanet İşleri Başkanlığı'nın ${h(il.ad)} il merkezi için yayımladığı verilerdir; ilçelerde birkaç dakika fark olabilir.</p>
+${ilSecici(namazYolu, il.slug, 'namaz')}
+<p style="color:var(--ikincil);font-size:14px">${kayit.hesap ? `Vakitler, Diyanet İşleri Başkanlığı'nın kullandığı yöntem ve temkinlerle ${h(il.ad)} il merkezi için hesaplanmıştır (Diyanet takvimiyle en fazla 1 dakika fark olabilir); Diyanet verisi alındığında otomatik olarak güncellenir.` : `Vakitler Diyanet İşleri Başkanlığı'nın ${h(il.ad)} il merkezi için yayımladığı verilerdir; ilçelerde birkaç dakika fark olabilir.`}</p>
 </div></main>`,
   });
 }
@@ -130,7 +139,7 @@ export function namazTurkiyeSayfasi({ veri, simdi }) {
     ust: `<div class="su-an-bas"><div><h1>81 il namaz vakitleri</h1><p style="margin-top:8px">${h(gunAdi(bugun))} · Diyanet</p></div></div>`,
     icerik: `<main class="kap govde"><div class="ana">
 <div class="tablo-kap"><table class="tablo"><thead><tr><th>İl</th><th>İmsak</th><th>Öğle</th><th>İkindi</th><th>Akşam</th><th>Yatsı</th></tr></thead><tbody>${satirlar
-      .map(({ il, v }) => `<tr${il.slug === 'mersin' ? ' class="mersin"' : ''}><th scope="row"><a href="${namazYolu(il.slug)}">${h(il.ad)}</a></th>${v ? ['imsak', 'ogle', 'ikindi', 'aksam', 'yatsi'].map((k) => `<td>${h(v[k])}</td>`).join('') : '<td colspan="5" style="color:var(--ikincil)">güncelleniyor</td>'}</tr>`)
+      .map(({ il, v }) => `<tr${il.slug === 'mersin' ? ' class="mersin"' : ''}><th scope="row">${sayfaVarMi('namaz', il.slug) ? `<a href="${namazYolu(il.slug)}">${h(il.ad)}</a>` : h(il.ad)}</th>${v ? ['imsak', 'ogle', 'ikindi', 'aksam', 'yatsi'].map((k) => `<td>${h(v[k])}</td>`).join('') : '<td colspan="5" style="color:var(--ikincil)">güncelleniyor</td>'}</tr>`)
       .join('')}</tbody></table></div>
 </div></main>`,
   });
@@ -164,7 +173,7 @@ ${hv.saatlik?.length ? `<div class="bolum-bas"><h2>Saatlik tahmin</h2><span>ön�
 <div class="bolum-bas"><h2>${hv.gunler.length} günlük tahmin</h2></div>
 <div class="tablo-kap"><table class="tablo"><thead><tr><th>Gün</th><th>Durum</th><th>En yüksek</th><th>En düşük</th><th>Yağış</th><th>Rüzgâr</th></tr></thead><tbody>${hv.gunler.map((g, i) => `<tr><th scope="row">${gunEtiket(g.tarih, i)}</th><td>${h(g.durum)}</td><td><strong>${g.max}°</strong></td><td>${g.min}°</td><td>${g.yagis ? `${g.yagis} mm` : '–'}</td><td>${g.ruzgar} km/sa</td></tr>`).join('')}</tbody></table></div>
 <section class="bilgi-sss"><h2>Sık sorulanlar</h2>${sss.map((s) => `<details><summary>${h(s.soru)}</summary><p>${h(s.cevap)}</p></details>`).join('')}</section>
-${ilSecici(ilHavaYolu, il.slug)}
+${ilSecici(ilHavaYolu, il.slug, 'hava')}
 <p style="color:var(--ikincil);font-size:14px">Veri: MET Norway (yr.no), CC BY 4.0 · ${h(il.ad)} il merkezi için tahmin. Son güncelleme: ${h(saatStr(hv.guncelleme))}. Resmî uyarılar için MGM'yi takip edin.</p>
 </div></main>`,
   });
@@ -181,7 +190,7 @@ export function havaTurkiyeSayfasi({ veri, mersin }) {
     ust: `<div class="su-an-bas"><div><h1>81 il hava durumu</h1><p style="margin-top:8px">${satirlar.length} il · bugün</p></div></div>`,
     icerik: `<main class="kap govde"><div class="ana">
 ${sirali.length > 2 ? `<section class="ekonomi-bugun"><div class="eb-kareler"><div class="eb-kare"><small>Bugün en sıcak</small><b>${h(sirali[0].il.ad)}</b><em>${sirali[0].hv.gunler[0].max}°</em></div><div class="eb-kare"><small>Bugün en serin</small><b>${h(sirali.at(-1).il.ad)}</b><em>${sirali.at(-1).hv.gunler[0].max}°</em></div></div></section>` : ''}
-<div class="tablo-kap"><table class="tablo"><thead><tr><th>İl</th><th>Şu an</th><th>Bugün</th><th>En yüksek</th><th>En düşük</th></tr></thead><tbody>${satirlar.map(({ il, hv }) => `<tr${il.slug === 'mersin' ? ' class="mersin"' : ''}><th scope="row"><a href="${ilHavaYolu(il.slug)}">${h(il.ad)}</a></th><td>${hv.sicaklik}°</td><td>${h(hv.gunler?.[0]?.durum || hv.durum)}</td><td><strong>${hv.gunler?.[0]?.max ?? '–'}°</strong></td><td>${hv.gunler?.[0]?.min ?? '–'}°</td></tr>`).join('')}</tbody></table></div>
+<div class="tablo-kap"><table class="tablo"><thead><tr><th>İl</th><th>Şu an</th><th>Bugün</th><th>En yüksek</th><th>En düşük</th></tr></thead><tbody>${satirlar.map(({ il, hv }) => `<tr${il.slug === 'mersin' ? ' class="mersin"' : ''}><th scope="row">${sayfaVarMi('hava', il.slug) ? `<a href="${ilHavaYolu(il.slug)}">${h(il.ad)}</a>` : h(il.ad)}</th><td>${hv.sicaklik}°</td><td>${h(hv.gunler?.[0]?.durum || hv.durum)}</td><td><strong>${hv.gunler?.[0]?.max ?? '–'}°</strong></td><td>${hv.gunler?.[0]?.min ?? '–'}°</td></tr>`).join('')}</tbody></table></div>
 <p style="color:var(--ikincil);font-size:14px">Veri: MET Norway (yr.no), CC BY 4.0.</p>
 </div></main>`,
   });
@@ -284,12 +293,12 @@ const once = (t, simdi) => {
   if (dk < 24 * 60) return `${Math.floor(dk / 60)} saat önce`;
   return new Date(t).toLocaleString('tr-TR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: TZ });
 };
-function depremTablo(liste, simdi, ilLink = true) {
+function depremTablo(liste, simdi, ilLink = () => false) {
   return `<div class="dp-filtre" role="group" aria-label="Büyüklüğe göre süz"><button type="button" class="aktif" data-dp-min="0">Tümü</button><button type="button" data-dp-min="3">3 ve üzeri</button><button type="button" data-dp-min="4">4 ve üzeri</button></div>
 <div class="tablo-kap"><table class="tablo dp-tablo"><thead><tr><th>Büyüklük</th><th>Yer</th><th>Derinlik</th><th>Zaman</th></tr></thead><tbody>${liste
     .map((d) => {
       const il = depremIli(d);
-      return `<tr data-b="${d.b}"${/mersin/i.test(d.il) ? ' class="mersin"' : ''}><td><span class="dp-b ${bSinif(d.b)}">${d.b.toFixed(1).replace('.', ',')}</span></td><td><b>${h(d.ilce ? `${d.ilce}` : d.yer)}</b>${d.il ? ` <small>${ilLink && il ? `<a href="${depremIlYolu(il.slug)}">${h(d.il)}</a>` : h(d.il)}</small>` : ''}</td><td>${String(d.d).replace('.', ',')} km</td><td data-zaman="${d.t}">${h(once(d.t, simdi))}</td></tr>`;
+      return `<tr data-b="${d.b}"${/mersin/i.test(d.il) ? ' class="mersin"' : ''}><td><span class="dp-b ${bSinif(d.b)}">${d.b.toFixed(1).replace('.', ',')}</span></td><td><b>${h(d.ilce ? `${d.ilce}` : d.yer)}</b>${d.il ? ` <small>${il && ilLink(il) ? `<a href="${depremIlYolu(il.slug)}">${h(d.il)}</a>` : h(d.il)}</small>` : ''}</td><td>${String(d.d).replace('.', ',')} km</td><td data-zaman="${d.t}">${h(once(d.t, simdi))}</td></tr>`;
     })
     .join('')}</tbody></table></div>`;
 }
@@ -304,7 +313,13 @@ function depremOzet(liste, simdi, yerAdi) {
 export function sonDepremlerSayfasi({ kayit, simdi }) {
   const liste = kayit.liste;
   const son = liste.filter((d) => simdi - new Date(d.t) < 7 * 864e5).slice(0, 300);
-  const iller = [...new Set(liste.map((d) => depremIli(d)).filter(Boolean))].sort((a, b) => a.ad.localeCompare(b.ad, 'tr'));
+  const ilSay = new Map();
+  for (const d of liste) {
+    const i = depremIli(d);
+    if (i) ilSay.set(i.slug, (ilSay.get(i.slug) || 0) + 1);
+  }
+  const ilSayfasiVar = (i) => i && (ilSay.get(i.slug) || 0) >= 2;
+  const iller = [...new Set(liste.map((d) => depremIli(d)).filter(ilSayfasiVar))].sort((a, b) => a.ad.localeCompare(b.ad, 'tr'));
   const buyuk = liste.filter((d) => d.b >= 4).slice(0, 10);
   return sayfa({
     baslik: 'Son depremler: Türkiye\'de bugün deprem nerede oldu? (AFAD, canlı liste)',
@@ -314,9 +329,9 @@ export function sonDepremlerSayfasi({ kayit, simdi }) {
     ust: `<div class="su-an-bas"><div><div class="cipler"><a class="cip" href="/deprem/">Mersin ve çevresi</a></div><h1>Son depremler</h1><p style="margin-top:8px">Türkiye geneli · AFAD · son güncelleme ${h(saatStr(kayit.guncelleme))}</p></div></div>`,
     icerik: `<main class="kap govde"><div class="ana">
 ${depremOzet(liste, simdi, 'Türkiye geneli')}
-${buyuk.length ? `<div class="bolum-bas"><h2>4 ve üzeri depremler</h2></div><div class="dp-buyuk">${buyuk.map((d) => { const il = depremIli(d); return `<a class="dp-kart" href="${il ? depremIlYolu(il.slug) : '#'}"><span class="dp-b ${bSinif(d.b)}">${d.b.toFixed(1).replace('.', ',')}</span><span><b>${h([d.ilce, d.il].filter(Boolean).join(', ') || d.yer)}</b><small>${h(new Date(d.t).toLocaleString('tr-TR', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: TZ }))} · ${String(d.d).replace('.', ',')} km derinlik</small></span></a>`; }).join('')}</div>` : ''}
-<div class="bolum-bas"><h2>Son 7 gün</h2><span>büyüklük 2 ve üzeri · en yeni üstte</span></div>
-${depremTablo(son, simdi)}
+${buyuk.length ? `<div class="bolum-bas"><h2>4 ve üzeri depremler</h2></div><div class="dp-buyuk">${buyuk.map((d) => { const il = depremIli(d); return `<a class="dp-kart" href="${ilSayfasiVar(il) ? depremIlYolu(il.slug) : '#son-7-gun'}"><span class="dp-b ${bSinif(d.b)}">${d.b.toFixed(1).replace('.', ',')}</span><span><b>${h([d.ilce, d.il].filter(Boolean).join(', ') || d.yer)}</b><small>${h(new Date(d.t).toLocaleString('tr-TR', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: TZ }))} · ${String(d.d).replace('.', ',')} km derinlik</small></span></a>`; }).join('')}</div>` : ''}
+<div class="bolum-bas" id="son-7-gun"><h2>Son 7 gün</h2><span>büyüklük 2 ve üzeri · en yeni üstte</span></div>
+${depremTablo(son, simdi, ilSayfasiVar)}
 <div class="bolum-bas"><h2>İllere göre son depremler</h2></div>
 <div class="mh-liste">${iller.map((i) => `<a href="${depremIlYolu(i.slug)}">${h(i.ad)}</a>`).join('')}</div>
 <p style="color:var(--ikincil);font-size:14px">Veri: AFAD Deprem Dairesi Başkanlığı. Liste yaklaşık 30 dakikada bir güncellenir; ilk dakikalarda büyüklük ve yer bilgisi AFAD tarafından revize edilebilir. Resmî açıklamalar için AFAD'ı takip edin.</p>
@@ -340,7 +355,7 @@ export function ilDepremSayfasi({ il, liste, simdi, guncelleme }) {
     ust: `<div class="su-an-bas"><div><div class="cipler"><a class="cip" href="/son-depremler/">Türkiye geneli</a></div><h1>${h(il.ad)} son depremler</h1><p style="margin-top:8px">AFAD · son güncelleme ${h(saatStr(guncelleme))}</p></div></div>`,
     icerik: `<main class="kap govde"><div class="ana">
 ${depremOzet(liste, simdi, il.ad)}
-${depremTablo(liste.slice(0, 200), simdi, false)}
+${depremTablo(liste.slice(0, 200), simdi)}
 <section class="bilgi-sss"><h2>Sık sorulanlar</h2>${sss.map((s) => `<details><summary>${h(s.soru)}</summary><p>${h(s.cevap)}</p></details>`).join('')}</section>
 <p><a class="bolum-link" href="/son-depremler/">Türkiye genelindeki son depremler →</a></p>
 <p style="color:var(--ikincil);font-size:14px">Veri: AFAD Deprem Dairesi Başkanlığı. Büyüklüğü 2 ve üzeri depremler listelenir.</p>
@@ -408,6 +423,50 @@ ${blok(bugun, 'Bugün tatil olan iller')}
 <div class="bolum-bas"><h2>İlinizi seçin</h2></div>
 <div class="mh-liste">${ILLER.map((i) => `<a href="${okulIlYolu(i.slug)}">${h(i.ad)}</a>`).join('')}</div>
 <p style="color:var(--ikincil);font-size:14px">Kararlar valilik açıklamalarını aktaran Anadolu Ajansı ve TRT Haber haberlerinden otomatik derlenir. Kesin bilgi için ilinizin valiliğini esas alın.</p>
+</div></main>`,
+  });
+}
+
+// ---------- Mersin ve çevresi depremler: /deprem/ ----------
+const CEVRE_ILLER = new Set(['mersin', 'adana', 'antalya', 'karaman', 'konya', 'nigde', 'hatay', 'osmaniye', 'kahramanmaras']);
+const MERSIN_MERKEZ = { lat: 36.8, lon: 34.63 };
+const km = (a, b) => {
+  const r = (x) => (x * Math.PI) / 180;
+  const d = Math.sin(r(b.lat - a.lat) / 2) ** 2 + Math.cos(r(a.lat)) * Math.cos(r(b.lat)) * Math.sin(r(b.lon - a.lon) / 2) ** 2;
+  return 6371 * 2 * Math.asin(Math.sqrt(d));
+};
+export function mersinDepremSayfasi({ kayit, yerel, simdi }) {
+  const tum = kayit?.liste || [];
+  const cevre = tum.filter((d) => (depremIli(d) && CEVRE_ILLER.has(depremIli(d).slug)) || (!d.il && km(MERSIN_MERKEZ, d) < 200));
+  // AFAD bölge listesindeki küçük (M<2) Mersin depremlerini de ekle
+  for (const d of yerel || []) {
+    const t = new Date(d.tarih).toISOString();
+    if (!cevre.some((x) => Math.abs(new Date(x.t) - new Date(t)) < 60e3)) cevre.push({ b: d.buyukluk, yer: d.yer, il: d.il || '', ilce: d.ilce || '', d: d.derinlik, lat: d.lat, lon: d.lon, t });
+  }
+  cevre.sort((a, b) => b.t.localeCompare(a.t));
+  const mersin = cevre.filter((d) => /mersin/i.test(d.il) || /mersin/i.test(d.yer));
+  const enB = [...mersin].sort((a, b) => b.b - a.b)[0];
+  const gun = Math.max(1, Math.ceil((simdi - new Date(cevre.at(-1)?.t || simdi)) / 864e5));
+  const son = mersin[0];
+  const tarihStr = (t) => new Date(t).toLocaleString('tr-TR', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', timeZone: TZ });
+  const sss = [
+    { soru: "Mersin'de en son ne zaman deprem oldu?", cevap: son ? `Mersin'de kaydedilen son deprem ${tarihStr(son.t)} tarihinde ${son.ilce || 'Mersin'} merkezli, ${son.b.toFixed(1).replace('.', ',')} büyüklüğündeydi (AFAD).` : `Son ${gun} günde Mersin merkezli kayıtlı deprem yok.` },
+    { soru: "Mersin'de bugün deprem oldu mu?", cevap: (() => { const b = mersin.filter((d) => simdi - new Date(d.t) < 864e5); return b.length ? `Son 24 saatte Mersin'de ${b.length} deprem kaydedildi; en büyüğü ${Math.max(...b.map((d) => d.b)).toFixed(1).replace('.', ',')} büyüklüğündeydi.` : "Son 24 saatte Mersin merkezli kayıtlı bir deprem yok."; })() },
+    { soru: "Mersin deprem bölgesi mi?", cevap: "Mersin, Türkiye Deprem Tehlike Haritası'na göre ağırlıklı olarak orta ve düşük tehlike bölgesindedir; ancak çevresindeki Doğu Anadolu ve Ölü Deniz fay sistemleri ile Kıbrıs yayı nedeniyle bölgedeki depremler Mersin'de hissedilebilir." },
+  ];
+  return sayfa({
+    baslik: "Mersin deprem: Mersin ve çevresinde son depremler (AFAD, canlı liste)",
+    aciklama: `Mersin'de son depremler: ${son ? `son deprem ${tarihStr(son.t)}, ${son.ilce || 'Mersin'} merkezli ${son.b.toFixed(1).replace('.', ',')}.` : ''} Mersin, Adana, Antalya, Karaman ve Akdeniz'de son ${gun} günün depremleri, büyüklük ve derinlik.`,
+    yol: '/deprem/',
+    jsonLd: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: sss.map((s) => ({ '@type': 'Question', name: s.soru, acceptedAnswer: { '@type': 'Answer', text: s.cevap } })) },
+    ust: `<div class="su-an-bas"><div><div class="cipler"><a class="cip" href="/son-depremler/">Türkiye geneli</a></div><h1>Mersin ve çevresinde son depremler</h1><p style="margin-top:8px">AFAD · son güncelleme ${h(saatStr(kayit?.guncelleme || simdi))}</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana">
+<section class="ekonomi-bugun"><div class="eb-kareler"><div class="eb-kare"><small>Mersin · son ${gun} gün</small><b>${mersin.length} deprem</b><em>AFAD kayıtları*</em></div><div class="eb-kare"><small>Mersin'de en büyüğü</small><b>${enB ? enB.b.toFixed(1).replace('.', ',') : '–'}</b><em>${enB ? h(enB.ilce || enB.yer) : 'kayıt yok'}</em></div><div class="eb-kare"><small>Mersin'de son deprem</small><b>${son ? h(once(son.t, simdi)) : '–'}</b><em>${son ? h(son.ilce || son.yer) : ''}</em></div><div class="eb-kare"><small>Çevre illerle birlikte</small><b>${cevre.length} deprem</b><em>Adana, Antalya, Karaman, Hatay…</em></div></div></section>
+<div class="bolum-bas"><h2>Mersin ve çevre illerde son depremler</h2><span>en yeni üstte</span></div>
+${cevre.length ? depremTablo(cevre.slice(0, 150), simdi) : '<div class="bos">Bölgede kayıtlı deprem yok.</div>'}
+<section class="bilgi-sss"><h2>Sık sorulanlar</h2>${sss.map((s) => `<details><summary>${h(s.soru)}</summary><p>${h(s.cevap)}</p></details>`).join('')}</section>
+<p><a class="bolum-link" href="/son-depremler/">Türkiye genelinde son depremler →</a></p>
+<p style="color:var(--ikincil);font-size:14px">Veri: AFAD Deprem Dairesi Başkanlığı. *Mersin'e ait 2'den küçük depremler son 7 gün için listelenir. Acil durumda: <a href="/rehber/acil-telefonlar/">Mersin acil telefon numaraları</a>.</p>
 </div></main>`,
   });
 }

@@ -1513,3 +1513,15 @@ a.cip.kat:hover { filter: brightness(.95); }
 .turkiye-serit b { flex: none; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--ikincil); margin-right: 4px; }
 .turkiye-serit a { flex: none; background: #fff; border: 1px solid #e3e8f2; border-radius: 999px; padding: 8px 14px; font-weight: 700; font-size: 14px; text-decoration: none; color: inherit; white-space: nowrap; }
 .turkiye-serit a:hover { border-color: #93c5fd; }
+.ilce-izgara { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; margin-bottom: 24px; }
+.ilce-kart { background: #fff; border: 1px solid #e3e8f2; border-radius: 18px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+.ik-bas { display: flex; justify-content: space-between; align-items: baseline; text-decoration: none; color: inherit; }
+.ik-bas b { font-size: 20px; font-weight: 900; }
+.ik-bas span { color: var(--ikincil); font-size: 14px; font-weight: 600; }
+.ik-sayilar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.ik-sayilar a { background: #f5f7fb; border-radius: 12px; padding: 8px; text-decoration: none; color: var(--ikincil); font-size: 12px; font-weight: 600; display: flex; flex-direction: column; }
+.ik-sayilar b { color: #0f172a; font-size: 18px; }
+.ik-son { font-weight: 700; font-size: 14px; line-height: 1.35; color: inherit; text-decoration: none; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.ik-son:hover { text-decoration: underline; }
+.bos-yazi { color: var(--ikincil); font-weight: 500; }
+.ik-linkler { display: flex; gap: 12px; font-size: 13px; font-weight: 700; }

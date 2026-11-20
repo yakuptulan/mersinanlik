@@ -183,7 +183,8 @@ for (const k of servis.suKesintisi?.liste || []) {
   const ilceler = (k.ilceler || []).map((i) => i.ilce).filter((s) => BULUNMA[s]);
   if (!ilceler.length) continue;
   const yer = ilceler.length === 1 ? yerde(ilceler[0]) : `${ilceler.slice(0, -1).map(ilceAd).join(', ')} ve ${yerde(ilceler.at(-1))}`;
-  const baslik = `${yer} su kesintisi${mahalleler.length >= 3 ? ': birçok mahalle etkilenecek' : sure >= 5 ? `: ${Math.round(sure)} saat sürecek` : ''}`;
+  const mAd = [...new Set(mahalleler.map((m) => String(m).replace(/\s*mahallesi$/i, '').trim()))].filter(Boolean);
+  const baslik = `${yer} su kesintisi${mAd.length >= 3 ? `: ${mAd.slice(0, 2).join(', ')} ve ${mAd.length - 2} mahalle daha` : mAd.length ? `: ${mAd.join(' ve ')}` : ''}${sure >= 5 ? ` (${Math.round(sure)} saat)` : ''}`;
   const metin = [
     `Mersin Büyükşehir Belediyesi Su ve Kanalizasyon İdaresi (MESKİ), ${yer} su kesintisi yaşanacağını duyurdu.`,
     `MESKİ'nin duyurusu şöyle: "${String(k.aciklama).trim()}"`,

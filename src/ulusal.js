@@ -142,8 +142,10 @@ for (let s = 500; s <= 580 && istek < NAMAZ_ISTEK - 6 && Object.keys(veri.diyane
 const namazSira = Object.entries(veri.diyanet.ilce)
   .map(([slug, id]) => ({ slug, id, kalan: (veri.namaz[slug]?.vakitler || []).filter((v) => v.tarih >= bugun).length }))
   .filter((x) => x.kalan < 10)
+  .filter((x) => !(veri.diyanet.atla?.[x.slug] > new Date().toISOString()))
   .sort((a, b) => a.kalan - b.kalan);
 let namazTamam = 0;
+let namazArdisik = 0;
 for (const x of namazSira) {
   if (istek >= NAMAZ_ISTEK) break;
   try {
@@ -151,10 +153,22 @@ for (const x of namazSira) {
     if (!liste) break;
     veri.namaz[x.slug] = { guncelleme: new Date().toISOString(), vakitler: liste.map(vakitCoz).filter((v) => v && v.tarih >= bugun).slice(0, 31) };
     namazTamam++;
+    if (veri.diyanet.namazHata) delete veri.diyanet.namazHata[x.slug];
   } catch (e) {
     console.warn(`! Namaz ${x.slug}: ${e.message}`);
-    break;
+    // Tek ilin hatası diğerlerini durdurmasın; 3 kez üst üste hata veren ilin kodu yeniden aranır
+    veri.diyanet.namazHata ||= {};
+    veri.diyanet.namazHata[x.slug] = (veri.diyanet.namazHata[x.slug] || 0) + 1;
+    if (veri.diyanet.namazHata[x.slug] >= 3) {
+      veri.diyanet.atla ||= {};
+      veri.diyanet.atla[x.slug] = new Date(Date.now() + 7 * 864e5).toISOString();
+      delete veri.diyanet.namazHata[x.slug];
+      console.warn(`  → ${x.slug} 7 gün atlanacak`);
+    }
+    if (++namazArdisik >= 3) break;
+    continue;
   }
+  namazArdisik = 0;
 }
 // Eski günleri at
 for (const n of Object.values(veri.namaz)) n.vakitler = (n.vakitler || []).filter((v) => v.tarih >= bugun);

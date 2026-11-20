@@ -7,7 +7,7 @@ import { SITE, ILCELER, AYAR } from '../config.js';
 import { htmlKacis as h, ayrilmaEki } from '../lib/text.js';
 import { sayfa, saat, tarihUzun, ilceAdi } from './layout.js';
 import { ikon } from './ikonlar.js';
-import { kareKart, kisaKart, sayfasiVar, haberListesi, mansetKarti, mansetKaydirici, bolumKartlari, reklamAlani, haberYolu, katBilgi, ilceCipleri, kutuKarti, gundemListesi, paylasCubugu } from './parcalar.js';
+import { kareKart, kisaKart, sayfasiVar, haberListesi, mansetKarti, mansetKaydirici, bolumKartlari, reklamAlani, haberYolu, katBilgi, ilceCipleri, kutuKarti, gundemListesi, paylasCubugu, gorselMevcut } from './parcalar.js';
 import { KATEGORILER, GENEL, GUNDEM } from '../config.js';
 import { telefonGoster } from '../lib/eczane.js';
 import { havaIkonu, havaTuru } from './havaIkon.js';
@@ -450,7 +450,8 @@ export function haberSayfasi({ hikaye, ilgili, servis, tumHaberler = null }) {
   const digerleri = hikaye.kaynaklar.filter((k) => !goruldu.has(k.ad) && goruldu.add(k.ad));
   const tamYazi = Boolean(hikaye.metin);
   const kurumFoto = hikaye.gorselKaynak && hikaye.gorselKaynak !== 'yz' ? hikaye.gorselKaynak : null;
-  const gorselUrl = hikaye.gorsel ? `${SITE.url}/uretilen/${hikaye.gorsel}` : hikaye.kapak ? `${SITE.url}/kapak/${hikaye.kapak}.webp` : null;
+  const gorselVar = gorselMevcut(hikaye);
+  const gorselUrl = gorselVar ? `${SITE.url}/uretilen/${hikaye.gorsel}` : hikaye.kapak ? `${SITE.url}/kapak/${hikaye.kapak}.webp` : null;
   const paragraflar = (hikaye.metin || '').split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean).map((p, i, a) => `<p>${h(p).replace(/\n/g, '<br>')}</p>${i === 1 && a.length > 3 ? reklamAlani('yazi-ici') : ''}`).join('\n');
   const ilce = ILCELER.find((i) => hikaye.ilceler.includes(i.slug)) || null;
   const jsonLd = {
@@ -477,7 +478,7 @@ export function haberSayfasi({ hikaye, ilgili, servis, tumHaberler = null }) {
 <div class="ana">
 <article class="haber-yazi" style="--kat:${kat.renk}">
 ${!hikaye.gorsel && hikaye.kapak ? `<figure class="haber-gorsel"><img src="/kapak/${h(hikaye.kapak)}.webp" alt="${h(hikaye.baslik)}" width="1200" height="675" decoding="async"></figure>` : ''}
-${hikaye.gorsel ? `<figure class="haber-gorsel"><img src="/uretilen/${h(hikaye.gorsel)}" alt="${kurumFoto ? h(hikaye.baslik) : 'Temsili görsel (yapay zekâ ile üretildi)'}" width="800" height="450" decoding="async"><figcaption>${kurumFoto ? `Fotoğraf: ${h(kurumFoto)}` : 'Temsili görsel · yapay zekâ ile üretilmiştir'}</figcaption></figure>` : ''}
+${gorselVar ? `<figure class="haber-gorsel"><img src="/uretilen/${h(hikaye.gorsel)}" alt="${kurumFoto ? h(hikaye.baslik) : 'Temsili görsel (yapay zekâ ile üretildi)'}" width="800" height="450" decoding="async"><figcaption>${kurumFoto ? `Fotoğraf: ${h(kurumFoto)}` : 'Temsili görsel · yapay zekâ ile üretilmiştir'}</figcaption></figure>` : ''}
 ${hikaye.metin || hikaye.ozet ? dinleDugmesi() : ''}
 ${hikaye.ozet ? `<p class="haber-spot">${h(hikaye.ozet)}</p>` : ''}
 ${paragraflar}
@@ -741,13 +742,24 @@ export function akaryakitSayfasi({ servis }) {
   });
 }
 
-export function ilcelerSayfasi() {
+export function ilcelerSayfasi({ hikayeler = [], servis = {}, simdi = Date.now() } = {}) {
+  const satir = (i) => {
+    const hv = servis?.hava?.[i.slug];
+    const ecz = (servis?.eczane?.liste || []).filter((e) => e.ilce === i.slug).length;
+    const kes = (servis?.suKesintisi?.liste || []).filter((k) => (k.ilceler || []).some((x) => x.ilce === i.slug)).length;
+    const hab = hikayeler.filter((x) => x.ilceler?.includes(i.slug) && simdi - new Date(x.ilkGorulme) < 864e5);
+    const son = hab[0];
+    return `<article class="ilce-kart"><a class="ik-bas" href="/ilce/${i.slug}/"><b>${h(i.ad)}</b>${hv ? `<span>${hv.sicaklik}° · ${h(hv.durum)}</span>` : ''}</a>
+<div class="ik-sayilar"><a href="/ilce/${i.slug}/"><b>${hab.length}</b>haber (24 saat)</a><a href="/nobetci-eczane/${i.slug}/"><b>${ecz}</b>nöbetçi eczane</a><a href="/kesintiler/"><b>${kes}</b>su kesintisi</a></div>
+${son ? `<a class="ik-son" href="${haberYolu(son)}">${h(son.baslik)}</a>` : `<span class="ik-son bos-yazi">Son 24 saatte haber yok</span>`}
+<div class="ik-linkler"><a href="/hava-durumu/${i.slug}/">Hava</a><a href="/mahalleler/${i.slug}/">Mahalleler</a></div></article>`;
+  };
   return sayfa({
-    baslik: 'Mersin ilçeleri',
-    aciklama: "Mersin'in 13 ilçesinden son haberler: Akdeniz, Yenişehir, Mezitli, Toroslar, Tarsus, Erdemli, Silifke, Anamur ve diğer ilçelerde bugün neler oluyor?",
+    baslik: "Mersin ilçeleri: 13 ilçeden son haberler, hava, nöbetçi eczane ve kesintiler",
+    aciklama: "Mersin'in 13 ilçesinden son haberler: Akdeniz, Yenişehir, Mezitli, Toroslar, Tarsus, Erdemli, Silifke, Anamur ve diğer ilçelerde bugün neler oluyor? Hava, nöbetçi eczane ve su kesintileri tek sayfada.",
     yol: '/ilceler/',
-    ust: `<div class="su-an-bas"><div><h1>İlçeni seç</h1><p style="margin-top:8px">Seçtiğin ilçe ana sayfada öne çıkar.</p></div></div>`,
-    icerik: `<main class="kap govde"><div class="ana">${ilceDugmeleri()}</div></main>`,
+    ust: `<div class="su-an-bas"><div><h1>Mersin ilçeleri</h1><p style="margin-top:8px">13 ilçede bugün: haberler, hava, nöbetçi eczane ve kesintiler</p></div></div>`,
+    icerik: `<main class="kap govde"><div class="ana"><div class="ilce-izgara">${ILCELER.map(satir).join('')}</div><div class="bolum-bas"><h2>İlçeni seç</h2><span>seçtiğin ilçe ana sayfada öne çıkar</span></div>${ilceDugmeleri()}</div></main>`,
   });
 }
 

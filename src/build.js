@@ -12,8 +12,9 @@ import * as IS from './templates/ilceServis.js';
 import { ulasimSayfasi } from './templates/ulasim.js';
 import { gundemimSayfasi, akisVerisi } from './templates/gundemim.js';
 import { logolariAyarla } from './templates/servisParcalari.js';
-import { akaryakitIlSayfasi, akaryakitTurkiyeSayfasi, namazIlSayfasi, namazTurkiyeSayfasi, havaIlSayfasi, havaTurkiyeSayfasi, sonDepremlerSayfasi, ilDepremSayfasi, okulIlSayfasi, karTatiliSayfasi, depremIli, depremIlYolu, PIYASA_KALEMLERI, piyasaKalemSayfasi, piyasaKalemYolu } from './templates/ulusal.js';
+import { akaryakitIlSayfasi, akaryakitTurkiyeSayfasi, namazIlSayfasi, namazTurkiyeSayfasi, havaIlSayfasi, havaTurkiyeSayfasi, sonDepremlerSayfasi, ilDepremSayfasi, okulIlSayfasi, karTatiliSayfasi, depremIli, depremIlYolu, ulusalMevcutAyarla, mersinDepremSayfasi, PIYASA_KALEMLERI, piyasaKalemSayfasi, piyasaKalemYolu } from './templates/ulusal.js';
 import ILLER81 from './iller.json' with { type: 'json' };
+import { vakitListesi } from './lib/vakitHesap.js';
 import { takimSayfasi, takimYolu } from './templates/spor.js';
 import { sayfa as sayfaYap } from './templates/layout.js';
 import { mahalleVerisi, mahalleSayfasi, mahallelerSayfasi, mahalleYolu } from './templates/mahalle.js';
@@ -113,7 +114,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
   };
 
   ekle('/', S.anaSayfa({ hikayeler, servis, simdi }));
-  ekle('/ilceler/', S.ilcelerSayfasi());
+  ekle('/ilceler/', S.ilcelerSayfasi({ hikayeler, servis, simdi }));
   // Kendi haber sayfaları (kurum duyurularından kendi cümlelerimizle yazılanlar)
   const kendiHaberler = hikayeler.filter(kendiSayfasiVar);
   // Konu sayfaları: canlı Mersin haberleri + arşiv; en az 3 haberi olan konular açılır
@@ -152,6 +153,16 @@ export function insaEt({ simdi = Date.now() } = {}) {
   } catch {}
   ulusal.namaz ||= {};
   if (servis.namaz?.bolgeler?.['9737']) ulusal.namaz.mersin = { vakitler: servis.namaz.bolgeler['9737'] };
+  const bugunTR = new Date(simdi).toLocaleDateString('sv-SE', { timeZone: 'Europe/Istanbul' });
+  ulusalMevcutAyarla('akaryakit', new Set(ILLER81.filter((i) => Object.keys(ulusal.akaryakit?.[i.slug]?.ilceler || {}).length).map((i) => i.slug)));
+  // Diyanet verisi alınamayan iller için Diyanet yöntemiyle hesaplanan vakitler (±1 dk)
+  ulusal.namaz ||= {};
+  for (const il of ILLER81) {
+    if (il.slug === 'mersin') continue;
+    if (!ulusal.namaz[il.slug]?.vakitler?.some((v) => v.tarih >= bugunTR)) ulusal.namaz[il.slug] = { hesap: true, vakitler: vakitListesi(il.lat, il.lon, 31, simdi) };
+  }
+  ulusalMevcutAyarla('namaz', new Set(ILLER81.filter((i) => ulusal.namaz?.[i.slug]?.vakitler?.some((v) => v.tarih >= bugunTR)).map((i) => i.slug)));
+  ulusalMevcutAyarla('hava', new Set(ILLER81.filter((i) => ulusal.hava?.[i.slug]?.gunler?.length && Date.now() - new Date(ulusal.hava[i.slug].guncelleme) < 2 * 864e5).map((i) => i.slug)));
   for (const il of ILLER81) {
     if (il.slug === 'mersin') continue;
     const y = ulusal.akaryakit?.[il.slug];
@@ -210,7 +221,13 @@ export function insaEt({ simdi = Date.now() } = {}) {
   for (const ilce of ILCELER) ekle(`/mahalleler/${ilce.slug}/`, mahallelerSayfasi({ ilce, liste: mahalleler.filter((m) => m.ilce === ilce.slug) }));
   for (const ilce of ILCELER) ekle(`/ilce/${ilce.slug}/`, S.ilceSayfasi({ ilce, hikayeler, servis, simdi, havuz: ilceHavuzu }));
   ekle('/hava-durumu/', S.havaSayfasi({ servis }));
-  ekle('/deprem/', S.depremSayfasi({ servis }));
+  {
+    let ud = {};
+    try {
+      ud = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'ulusal.json'), 'utf8')).deprem;
+    } catch {}
+    ekle('/deprem/', ud?.liste?.length ? mersinDepremSayfasi({ kayit: ud, yerel: servis.deprem, simdi }) : S.depremSayfasi({ servis }));
+  }
   ekle('/nobetci-eczane/', S.eczaneSayfasi({ servis }));
   ekle('/kesintiler/', S.kesintiSayfasi({ servis }));
   ekle('/trafik/', S.trafikSayfasi({ servis }));
