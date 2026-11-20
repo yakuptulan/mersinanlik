@@ -1,9 +1,9 @@
 {
- "guncelleme": "2026-11-20T17:04:51.511Z",
+ "guncelleme": "2026-11-20T17:32:28.761Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
-   "durum": "Bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-20T17:04:55.875Z",
+  "guncelleme": "2026-11-20T17:32:31.263Z",
   "liste": [
    {
     "ad": "Dila Bangiz Eczanesi",
@@ -752,7 +752,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-20T17:04:57.050Z",
+  "guncelleme": "2026-11-20T17:32:32.253Z",
   "liste": [
    {
     "tur": "su",
@@ -961,7 +961,7 @@
   "kaynakSaati": "2026-11-20 20:04:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-20T17:05:01.995Z",
+  "guncelleme": "2026-11-20T17:32:37.123Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -1986,7 +1986,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-20T16:33:28.965Z",
+  "guncelleme": "2026-11-20T17:32:39.264Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -5007,22 +5007,22 @@
      "Sebat Spor": "10300",
      "Kızılkaya Tarım Şanlıurfaspor": "31",
      "Efor Çay Erbaaspor": "3641",
-     "Fethiyespor": "58",
-     "52 Orduspor FK": "4910",
-     "Sultan Su İnegölspor": "131",
-     "12 Bingöl Spor": "7632",
-     "Kütahyaspor": "133",
-     "İskenderunspor": "4258",
-     "Kct 1461 Trabzon FK": "2375",
-     "Sakaryaspor": "3594",
      "Karacabey Belediye Spor": "3292",
      "Serik Spor": "4167",
+     "Sultan Su İnegölspor": "131",
+     "12 Bingöl Spor": "7632",
      "Mke Ankaragücü": "3595",
      "Ankara Demirspor": "11",
-     "Akedaş Kahramanmaraş İstiklal Spor": "9908",
-     "Beyoğlu Yeni Çarşı Spor Faaliyetleri": "3096",
+     "Fethiyespor": "58",
+     "52 Orduspor FK": "4910",
+     "Kct 1461 Trabzon FK": "2375",
+     "Sakaryaspor": "3594",
      "Adana 01 Futbol Kulübü SK": "9498",
      "Erzincan Futbol Yatırımları": "2035",
+     "Akedaş Kahramanmaraş İstiklal Spor": "9908",
+     "Beyoğlu Yeni Çarşı Spor Faaliyetleri": "3096",
+     "Kütahyaspor": "133",
+     "İskenderunspor": "4258",
      "Ekinciler İskenderunspor": "4258",
      "Kırklarelispor": "50"
     },
@@ -5780,24 +5780,24 @@
      "Beyoğlu Yeni Çarşı Spor Faaliyetleri": "3096",
      "Adana 01 Futbol Kulübü SK": "9498",
      "İskenderunspor": "4258",
-     "Kızılkaya Tarım Şanlıurfaspor": "31",
-     "Ankaraspor": "4355",
-     "Seza Çimento Elazığspor": "37",
-     "Sebat Spor": "10300",
-     "Hatayspor": "121",
-     "Güzide Gebze Spor": "746",
      "Somaspor": "497",
      "68 Aksaray Belediye Spor": "6496",
-     "Menemen": "1120",
-     "İnegöl Kafkas Spor": "3276",
-     "Isbaş Isparta 32 Spor": "1484",
-     "Adana Demirspor": "3603",
      "Efor Çay Erbaaspor": "3641",
      "Muş Spor": "8722",
-     "Gmg Kastamonuspor": "4342",
-     "Çorlu Spor 1947": "5044",
+     "Kızılkaya Tarım Şanlıurfaspor": "31",
+     "Ankaraspor": "4355",
+     "Menemen": "1120",
+     "İnegöl Kafkas Spor": "3276",
+     "Seza Çimento Elazığspor": "37",
+     "Sebat Spor": "10300",
+     "Isbaş Isparta 32 Spor": "1484",
+     "Adana Demirspor": "3603",
      "Arkent Arnavutköy Belediyesi Futbol SK": "6039",
-     "Aliağa": "2720"
+     "Aliağa": "2720",
+     "Hatayspor": "121",
+     "Güzide Gebze Spor": "746",
+     "Gmg Kastamonuspor": "4342",
+     "Çorlu Spor 1947": "5044"
     },
     "form": {
      "52 Orduspor FK": [
@@ -7358,41 +7358,41 @@
      "Eskişehir Anadolu Spor Faaliyetleri": "4152",
      "Bucaspor 1928": "4274",
      "Karşıyaka": "3598",
-     "Galata Spor": "42",
-     "Pazarspor": "3662",
-     "Silivrispor": "44",
-     "Beykoz İshaklı Spor Faaliyetleri": "4485",
      "İnkılap": "1465",
      "Zonguldak Spor": "2434",
      "Beykoz Anadolu Spor": "2744",
      "Küçükçekmece Sinop Spor": "1092",
-     "Amasyaspor FK": "2780",
-     "Gölcükspor": "3640",
-     "Yalova FK 77 Spor": "3087",
-     "Tokat Belediye Spor": "11881",
-     "Kdz.ereğli 1980 Spor": "3690",
-     "Fatsa Belediyespor": "4933",
      "Orduspor 1967": "4929",
      "Düzce Cam Düzcespor": "98",
+     "Galata Spor": "42",
+     "Pazarspor": "3662",
+     "Yalova FK 77 Spor": "3087",
+     "Tokat Belediye Spor": "11881",
+     "Silivrispor": "44",
+     "Beykoz İshaklı Spor Faaliyetleri": "4485",
+     "Amasyaspor FK": "2780",
+     "Gölcükspor": "3640",
+     "Kdz.ereğli 1980 Spor": "3690",
+     "Fatsa Belediyespor": "4933",
      "Karabük İdmanyurdu Spor": "10580",
      "Kartal Bulvar Kartalimen Spor": "4491",
      "Büyükçekmece Gücü FK Spor": "4485",
-     "Kırıkkale FK Spor": "186",
-     "Halil Bayram İnşaat Karaköprü Belediyespor": "4517",
-     "Ayos Osmaniyespor": "3051",
-     "Adana Adaletgücü Spor": "8742",
-     "Diyarbekir Spor": "3196",
-     "Malatya Yeşilyurt Spor": "4844",
-     "Adanaspor": "3605",
-     "Niğde Belediyesi Spor": "9399",
      "Bitlis 1916": "3840",
      "1964 Silifke Spor": "3666",
-     "Yeni Mersin İdmanyurdu": "4228",
-     "Eti Gübre Mazıdağı Fosfat Spor": "10337",
-     "Yeni Malatyaspor": "4879",
-     "Karaman": "165",
      "Yozgat Belediyesi Bozok Spor": "7787",
      "Ejderoğlu Kırşehir": "4499",
+     "Adanaspor": "3605",
+     "Niğde Belediyesi Spor": "9399",
+     "Yeni Malatyaspor": "4879",
+     "Karaman": "165",
+     "Ayos Osmaniyespor": "3051",
+     "Adana Adaletgücü Spor": "8742",
+     "Kırıkkale FK Spor": "186",
+     "Halil Bayram İnşaat Karaköprü Belediyespor": "4517",
+     "Diyarbekir Spor": "3196",
+     "Malatya Yeşilyurt Spor": "4844",
+     "Yeni Mersin İdmanyurdu": "4228",
+     "Eti Gübre Mazıdağı Fosfat Spor": "10337",
      "Ağrı 1970 Spor": "7890",
      "Açıkalın Erciyes 38": "4398"
     },
@@ -8160,43 +8160,43 @@
      "Adana Adaletgücü Spor": "8742",
      "Yeni Mersin İdmanyurdu": "4228",
      "Karaman": "165",
-     "Galata Spor": "42",
-     "Pazarspor": "3662",
-     "Silivrispor": "44",
-     "Beykoz İshaklı Spor Faaliyetleri": "4485",
      "İnkılap": "1465",
      "Zonguldak Spor": "2434",
      "Beykoz Anadolu Spor": "2744",
      "Küçükçekmece Sinop Spor": "1092",
-     "Amasyaspor FK": "2780",
-     "Gölcükspor": "3640",
-     "Yalova FK 77 Spor": "3087",
-     "Tokat Belediye Spor": "11881",
-     "Kdz.ereğli 1980 Spor": "3690",
-     "Fatsa Belediyespor": "4933",
      "Orduspor 1967": "4929",
      "Düzce Cam Düzcespor": "98",
+     "Galata Spor": "42",
+     "Pazarspor": "3662",
+     "Yalova FK 77 Spor": "3087",
+     "Tokat Belediye Spor": "11881",
+     "Silivrispor": "44",
+     "Beykoz İshaklı Spor Faaliyetleri": "4485",
+     "Amasyaspor FK": "2780",
+     "Gölcükspor": "3640",
+     "Kdz.ereğli 1980 Spor": "3690",
+     "Fatsa Belediyespor": "4933",
      "Karabük İdmanyurdu Spor": "10580",
      "Kartal Bulvar Kartalimen Spor": "4491",
      "Büyükçekmece Gücü FK Spor": "4485",
      "Bursa Yıldırım Spor": "8550",
      "Söke 1970 Spor": "6176",
-     "Eskişehirspor": "3",
-     "Alanya 1221": "3808",
-     "Balıkesirspor": "135",
-     "Bucaspor 1928": "4274",
-     "Bigaspor": "136",
-     "Uşak Spor": "5155",
-     "Kepez Spor": "1841",
-     "Eskişehir Anadolu Spor Faaliyetleri": "4152",
-     "Gaziemir G.o.g. Spor Yat.": "3095",
-     "Ayvalıkgücü Belediyespor": "105",
      "Altay": "3591",
      "Denizli İdmanyurdu 1959 Spor": "384",
+     "Gaziemir G.o.g. Spor Yat.": "3095",
+     "Ayvalıkgücü Belediyespor": "105",
      "Etimesgut Spor": "4212",
      "Karşıyaka": "3598",
      "1922 Akşehir Spor": "6835",
-     "Gemlik Sümerbey Futbol Spor": "8486"
+     "Gemlik Sümerbey Futbol Spor": "8486",
+     "Balıkesirspor": "135",
+     "Bucaspor 1928": "4274",
+     "Eskişehirspor": "3",
+     "Alanya 1221": "3808",
+     "Bigaspor": "136",
+     "Uşak Spor": "5155",
+     "Kepez Spor": "1841",
+     "Eskişehir Anadolu Spor Faaliyetleri": "4152"
     },
     "form": {
      "Malatya Yeşilyurt Spor": [
@@ -8345,66 +8345,70 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T17:05:02.949Z",
+  "guncelleme": "2026-11-20T17:32:37.653Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 29
+    "sayi": 25
    },
    {
     "yol": "/kategori/belediye/",
-    "sayi": 9
-   },
-   {
-    "yol": "/kategori/asayis/",
     "sayi": 7
    },
    {
-    "yol": "/kategori/ekonomi/",
+    "yol": "/kategori/asayis/",
     "sayi": 6
    },
    {
+    "yol": "/kategori/ekonomi/",
+    "sayi": 5
+   },
+   {
     "yol": "/piyasalar/",
-    "sayi": 5
-   },
-   {
-    "yol": "/spor/",
-    "sayi": 5
-   },
-   {
-    "yol": "/kategori/yasam/",
     "sayi": 4
    },
    {
-    "yol": "/piyasalar/gram-altin/",
+    "yol": "/spor/",
+    "sayi": 4
+   },
+   {
+    "yol": "/kategori/yasam/",
     "sayi": 3
    },
    {
     "yol": "/bilgi/",
-    "sayi": 3
+    "sayi": 2
    },
    {
     "yol": "/haber/mersin-de-taksici-esnafindan-arac-kullanma-belgesi-tepkisi-178ax2s/",
     "sayi": 2
    },
    {
-    "yol": "/trafik/",
+    "yol": "/piyasalar/gram-altin/",
     "sayi": 2
    },
    {
-    "yol": "/kategori/turkiye-dunya/",
-    "sayi": 2
+    "yol": "/haber/mersin-de-6-ilcede-planli-elektrik-kesintisi-20-kasim-1vorztq/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/mersin-de-kamyonet-ile-otomobilin-carpistigi-kazada-1-kisi-oldu-2-kisi-1bfosq4/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/yenisehir-de-su-kesintisi-bircok-mahalle-etkilenecek-s494a3/",
+    "sayi": 1
+   },
+   {
+    "yol": "/trafik/",
+    "sayi": 1
+   },
+   {
+    "yol": "/okullar-tatil-mi/diyarbakir/",
+    "sayi": 1
    },
    {
     "yol": "/gundemim/",
-    "sayi": 1
-   },
-   {
-    "yol": "/kar-tatili/",
-    "sayi": 1
-   },
-   {
-    "yol": "/spor/super-lig/",
     "sayi": 1
    },
    {
@@ -8412,7 +8416,7 @@
     "sayi": 1
    },
    {
-    "yol": "/okullar-tatil-mi/diyarbakir/",
+    "yol": "/kategori/turkiye-dunya/",
     "sayi": 1
    },
    {
@@ -8424,19 +8428,7 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/yenisehir-de-su-kesintisi-bircok-mahalle-etkilenecek-s494a3/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/mersin-de-kamyonet-ile-otomobilin-carpistigi-kazada-1-kisi-oldu-2-kisi-1bfosq4/",
-    "sayi": 1
-   },
-   {
     "yol": "/gorsel-kaynaklari/",
-    "sayi": 1
-   },
-   {
-    "yol": "/piyasalar/ata-altin/",
     "sayi": 1
    },
    {
@@ -8452,20 +8444,16 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-de-6-ilcede-planli-elektrik-kesintisi-20-kasim-1vorztq/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/mut-ta-su-kesintisi-bircok-mahalle-etkilenecek-s68b1d/",
+    "yol": "/kar-tatili/",
     "sayi": 1
    }
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T17:05:04.604Z",
+  "guncelleme": "2026-11-20T17:33:19.049Z",
   "deniz": {
    "sicaklik": 21.6,
-   "dalga": 0.54
+   "dalga": 0.52
   },
   "hava": {
    "aqi": 60,
@@ -8475,20 +8463,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T17:05:07.161Z",
+  "guncelleme": "2026-11-20T17:33:20.580Z",
   "giden": [
-   {
-    "no": [
-     "VF3145"
-    ],
-    "havayolu": "AJet",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-20T17:15:00.000Z",
-    "tahmini": null,
-    "kapi": "107",
-    "durum": "BOARDING",
-    "hat": "ic"
-   },
    {
     "no": [
      "VF4091"
@@ -8498,7 +8474,7 @@
     "planlanan": "2026-11-20T18:00:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8510,7 +8486,7 @@
     "planlanan": "2026-11-20T18:20:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8522,7 +8498,7 @@
     "planlanan": "2026-11-20T18:20:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8546,7 +8522,7 @@
     "planlanan": "2026-11-20T19:15:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8606,7 +8582,7 @@
     "planlanan": "2026-11-20T20:20:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -9043,30 +9019,6 @@
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "VF4090"
-    ],
-    "havayolu": "AJet",
-    "yer": "Ankara",
-    "planlanan": "2026-11-20T17:20:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC1857"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Ercan",
-    "planlanan": "2026-11-20T17:20:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "dis"
-   },
    {
     "no": [
      "TK2466"
@@ -9618,11 +9570,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "VF3144"
+    ],
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-21T17:30:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T17:05:07.161Z",
+  "guncelleme": "2026-11-20T17:33:20.580Z",
   "liste": [
    {
     "id": 6375,

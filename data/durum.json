@@ -12,11 +12,15 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-20T17:31:27.085Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-20",
-  "adet": 33
+  "adet": 35
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -330,8 +334,28 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-20T17:01:42.760Z",
+  "guncelleme": "2026-11-20T17:31:52.254Z",
   "liste": [
+   {
+    "baslik": "borç yapılandırması",
+    "trafik": 1000
+   },
+   {
+    "baslik": "buz devri 6",
+    "trafik": 500
+   },
+   {
+    "baslik": "ayasofya",
+    "trafik": 100
+   },
+   {
+    "baslik": "الأهلي ضد النصر",
+    "trafik": 500
+   },
+   {
+    "baslik": "bist 30",
+    "trafik": 200
+   },
    {
     "baslik": "riemann hypothesis",
     "trafik": 100
@@ -341,36 +365,16 @@
     "trafik": 500
    },
    {
+    "baslik": "murat yıldırım",
+    "trafik": 200
+   },
+   {
     "baslik": "pekgy",
     "trafik": 100
    },
    {
-    "baslik": "murat yıldırım",
-    "trafik": 100
-   },
-   {
     "baslik": "iğdır fk - ümraniyespor",
-    "trafik": 2000
-   },
-   {
-    "baslik": "gta vi",
-    "trafik": 200
-   },
-   {
-    "baslik": "hunger games",
-    "trafik": 200
-   },
-   {
-    "baslik": "galatasaray - samsunspor",
-    "trafik": 200
-   },
-   {
-    "baslik": "idil fırat",
-    "trafik": 100
-   },
-   {
-    "baslik": "serdar dursun",
-    "trafik": 100
+    "trafik": 5000
    }
   ]
  },
