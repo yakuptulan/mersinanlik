@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-20T16:09:16.892Z",
+ "guncelleme": "2026-11-20T16:33:17.861Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -362,13 +362,13 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 20,
+   "sicaklik": 19,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
      "min": 17,
-     "max": 20,
+     "max": 19,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-20T16:09:20.176Z",
+  "guncelleme": "2026-11-20T16:33:21.127Z",
   "liste": [
    {
     "ad": "Dila Bangiz Eczanesi",
@@ -752,7 +752,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-20T16:09:21.174Z",
+  "guncelleme": "2026-11-20T16:33:22.121Z",
   "liste": [
    {
     "tur": "su",
@@ -961,7 +961,7 @@
   "kaynakSaati": "2026-11-20 18:59:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-20T16:09:28.242Z",
+  "guncelleme": "2026-11-20T16:33:26.719Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -1986,7 +1986,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-20T15:37:17.445Z",
+  "guncelleme": "2026-11-20T16:33:28.965Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8345,7 +8345,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T16:09:28.660Z",
+  "guncelleme": "2026-11-20T16:33:27.206Z",
   "liste": [
    {
     "yol": "/",
@@ -8388,19 +8388,15 @@
     "sayi": 2
    },
    {
-    "yol": "/kategori/turkiye-dunya/",
-    "sayi": 2
-   },
-   {
     "yol": "/trafik/",
     "sayi": 2
    },
    {
-    "yol": "/akaryakit-fiyatlari/",
-    "sayi": 1
+    "yol": "/kategori/turkiye-dunya/",
+    "sayi": 2
    },
    {
-    "yol": "/spor/super-lig/",
+    "yol": "/gundemim/",
     "sayi": 1
    },
    {
@@ -8408,19 +8404,15 @@
     "sayi": 1
    },
    {
+    "yol": "/spor/super-lig/",
+    "sayi": 1
+   },
+   {
+    "yol": "/akaryakit-fiyatlari/",
+    "sayi": 1
+   },
+   {
     "yol": "/okullar-tatil-mi/diyarbakir/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/mersin-sosyal-hizmetlerde-yeni-siddet-iddiasi-9xbft/",
-    "sayi": 1
-   },
-   {
-    "yol": "/gundemim/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/yenisehir-de-su-kesintisi-bircok-mahalle-etkilenecek-s494a3/",
     "sayi": 1
    },
    {
@@ -8432,7 +8424,7 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/findikpinari-yolunda-kaya-dusmesi-ulasim-yeniden-saglandi-m49045/",
+    "yol": "/haber/yenisehir-de-su-kesintisi-bircok-mahalle-etkilenecek-s494a3/",
     "sayi": 1
    },
    {
@@ -8470,7 +8462,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T16:09:30.176Z",
+  "guncelleme": "2026-11-20T16:34:09.208Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.54
@@ -8483,20 +8475,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T16:09:31.927Z",
+  "guncelleme": "2026-11-20T16:34:11.140Z",
   "giden": [
-   {
-    "no": [
-     "PC1854"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Ercan",
-    "planlanan": "2026-11-20T16:10:00.000Z",
-    "tahmini": null,
-    "kapi": "104",
-    "durum": "KAPI KAPANDI",
-    "hat": "dis"
-   },
    {
     "no": [
      "TK2465"
@@ -8506,7 +8486,7 @@
     "planlanan": "2026-11-20T16:55:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8518,7 +8498,7 @@
     "planlanan": "2026-11-20T17:15:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -9065,30 +9045,6 @@
   "gelen": [
    {
     "no": [
-     "TK2464"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-20T16:10:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "VF3144"
-    ],
-    "havayolu": "AJet",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-20T16:30:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
      "VF4090"
     ],
     "havayolu": "AJet",
@@ -9614,11 +9570,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2464"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-21T16:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T16:09:31.926Z",
+  "guncelleme": "2026-11-20T16:34:11.140Z",
   "liste": [
    {
     "id": 6375,
