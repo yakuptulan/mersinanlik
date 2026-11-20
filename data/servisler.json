@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-20T21:02:11.033Z",
+ "guncelleme": "2026-11-20T21:31:57.684Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 19,
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-20T21:02:14.772Z",
+  "guncelleme": "2026-11-20T21:32:01.866Z",
   "liste": [
    {
     "ad": "Dila Bangiz Eczanesi",
@@ -690,7 +690,7 @@
   "liste": []
  },
  "piyasa": {
-  "guncelleme": "2026-11-20T21:02:20.337Z",
+  "guncelleme": "2026-11-20T21:32:09.315Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -708,13 +708,13 @@
     "degisim": -6.54
    },
    "usd": {
-    "alis": 50.562,
-    "satis": 50.5746,
+    "alis": 50.5643,
+    "satis": 50.5752,
     "degisim": 0.22
    },
    "eur": {
-    "alis": 55.4072,
-    "satis": 55.6153,
+    "alis": 55.4175,
+    "satis": 55.6072,
     "degisim": -0.03
    },
    "bist": {
@@ -723,9 +723,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2951314,
-    "usd": 58358,
-    "degisim": -5.63
+    "satis": 2964977,
+    "usd": 58627,
+    "degisim": -4.46
    }
   },
   "altinlar": [
@@ -818,30 +818,30 @@
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.562,
-    "satis": 50.5746,
+    "alis": 50.5643,
+    "satis": 50.5752,
     "degisim": 0.22
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.4072,
-    "satis": 55.6153,
+    "alis": 55.4175,
+    "satis": 55.6072,
     "degisim": -0.03
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.1082,
-    "satis": 66.3364,
+    "alis": 66.1029,
+    "satis": 66.3417,
     "degisim": -0.08
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.1966,
-    "satis": 60.2426,
-    "degisim": 0.71
+    "alis": 60.2137,
+    "satis": 60.2432,
+    "degisim": 0.72
    },
    {
     "k": "SAR",
@@ -858,90 +858,90 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 00:02:01"
+  "kaynakSaati": "2026-11-21 00:32:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-20T21:02:26.455Z",
+  "guncelleme": "2026-11-20T21:32:11.963Z",
   "ilceler": {
    "akdeniz": {
-    "benzin": 73.07,
+    "benzin": 70.14,
     "motorin": 90.66,
     "ad": "Akdeniz",
     "lpg": 51.41
    },
    "anamur": {
-    "benzin": 73.1,
+    "benzin": 70.17,
     "motorin": 90.69,
     "ad": "Anamur",
     "lpg": 51.41
    },
    "aydincik": {
-    "benzin": 73.09,
+    "benzin": 70.16,
     "motorin": 90.68,
     "ad": "Aydıncık",
     "lpg": 51.41
    },
    "bozyazi": {
-    "benzin": 73.1,
+    "benzin": 70.17,
     "motorin": 90.67,
     "ad": "Bozyazı",
     "lpg": 51.41
    },
    "camliyayla": {
-    "benzin": 73.09,
+    "benzin": 70.16,
     "motorin": 90.69,
     "ad": "Çamlıyayla",
     "lpg": 51.41
    },
    "erdemli": {
-    "benzin": 73.07,
+    "benzin": 70.14,
     "motorin": 90.66,
     "ad": "Erdemli",
     "lpg": 51.41
    },
    "gulnar": {
-    "benzin": 73.09,
+    "benzin": 70.16,
     "motorin": 90.67,
     "ad": "Gülnar",
     "lpg": 51.41
    },
    "merkez": {
-    "benzin": 73.07,
+    "benzin": 70.14,
     "motorin": 90.66,
     "ad": "Merkez"
    },
    "mezitli": {
-    "benzin": 73.07,
+    "benzin": 70.14,
     "motorin": 90.66,
     "ad": "Mezitli",
     "lpg": 51.41
    },
    "mut": {
-    "benzin": 73.08,
+    "benzin": 70.15,
     "motorin": 90.68,
     "ad": "Mut",
     "lpg": 51.41
    },
    "silifke": {
-    "benzin": 73.08,
+    "benzin": 70.15,
     "motorin": 90.67,
     "ad": "Silifke",
     "lpg": 51.41
    },
    "tarsus": {
-    "benzin": 73.07,
+    "benzin": 70.14,
     "motorin": 90.66,
     "ad": "Tarsus",
     "lpg": 51.41
    },
    "toroslar": {
-    "benzin": 73.07,
+    "benzin": 70.14,
     "motorin": 90.66,
     "ad": "Toroslar",
     "lpg": 51.41
    },
    "yenisehir": {
-    "benzin": 73.07,
+    "benzin": 70.14,
     "motorin": 90.66,
     "ad": "Yenişehir",
     "lpg": 51.41
@@ -949,11 +949,11 @@
   },
   "onceki": {
    "benzin": 73.07,
-   "motorin": 97.2,
+   "motorin": 90.66,
    "ad": "Akdeniz",
    "lpg": 51.41
   },
-  "degisim": "2026-11-19T21:32:01.405Z"
+  "degisim": "2026-11-20T21:32:11.963Z"
  },
  "namaz": {
   "guncelleme": "2026-11-20T21:02:20.337Z",
@@ -1682,7 +1682,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-20T18:31:57.885Z",
+  "guncelleme": "2026-11-20T21:32:15.653Z",
   "liste": [
    {
     "id": "gzi1bq",
@@ -1786,7 +1786,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-20T20:32:00.291Z",
+  "guncelleme": "2026-11-20T21:32:15.654Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -3912,7 +3912,7 @@
       {
        "ev": "Alagöz Holding Iğdır",
        "dep": "Eminevim Ümraniyespor",
-       "skor": null
+       "skor": "2-2"
       },
       {
        "ev": "İstanbulspor",
@@ -4052,9 +4052,9 @@
       "M"
      ],
      "Alagöz Holding Iğdır": [
+      "G",
+      "G",
       "B",
-      "G",
-      "G",
       "B",
       "B"
      ],
@@ -4104,7 +4104,8 @@
       "G",
       "G",
       "B",
-      "G"
+      "G",
+      "B"
      ],
      "Turka Esenler Erokspor": [
       "B",
@@ -8197,7 +8198,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T21:02:26.863Z",
+  "guncelleme": "2026-11-20T21:32:12.438Z",
   "liste": [
    {
     "yol": "/",
@@ -8225,6 +8226,10 @@
    },
    {
     "yol": "/kategori/yasam/",
+    "sayi": 3
+   },
+   {
+    "yol": "/okullar-tatil-mi/istanbul/",
     "sayi": 3
    },
    {
@@ -8290,7 +8295,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T21:02:31.643Z",
+  "guncelleme": "2026-11-20T21:32:58.935Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.5
@@ -8303,7 +8308,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T21:02:33.599Z",
+  "guncelleme": "2026-11-20T21:33:00.800Z",
   "giden": [
    {
     "no": [
@@ -9434,11 +9439,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3014"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-21T21:20:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T21:02:33.599Z",
+  "guncelleme": "2026-11-20T21:33:00.799Z",
   "liste": [
    {
     "id": 6375,

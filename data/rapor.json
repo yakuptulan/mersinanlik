@@ -149,19 +149,25 @@
    "kaynakHatalari": []
   },
   "2026-11-21": {
-   "guncelleme": "2026-11-20T21:03:31.539Z",
-   "mersinHaber": 0,
-   "kendiYazimiz": 0,
-   "turkiyeDunya": 0,
-   "otomatik": 0,
-   "otomatikTurler": {},
-   "otomatikBasliklar": [],
-   "gorsel": 2,
+   "guncelleme": "2026-11-20T21:33:52.346Z",
+   "mersinHaber": 1,
+   "kendiYazimiz": 1,
+   "turkiyeDunya": 3,
+   "otomatik": 1,
+   "otomatikTurler": {
+    "yakit": 1
+   },
+   "otomatikBasliklar": [
+    {
+     "baslik": "Benzine 293 kuruş indirim geldi: İstanbul, Ankara, İzmir ve Mersin'de güncel akaryakıt fiyatları",
+     "tur": "yakit",
+     "saat": "00:33"
+    }
+   ],
+   "gorsel": 4,
    "bilgi": 0,
    "gezi": 1,
-   "kaynakHatalari": [
-    "toros-universitesi (terminated)"
-   ]
+   "kaynakHatalari": []
   }
  }
 }
