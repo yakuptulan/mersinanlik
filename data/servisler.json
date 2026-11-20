@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-20T19:07:19.030Z",
+ "guncelleme": "2026-11-20T19:31:47.323Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 19,
@@ -15,7 +15,7 @@
      "tarih": "2026-11-21",
      "min": 17,
      "max": 22,
-     "durum": "Az bulutlu"
+     "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-22",
@@ -25,7 +25,7 @@
     },
     {
      "tarih": "2026-11-23",
-     "min": 13,
+     "min": 12,
      "max": 21,
      "durum": "Az bulutlu"
     },
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-20T19:07:22.618Z",
+  "guncelleme": "2026-11-20T19:31:52.085Z",
   "liste": [
    {
     "ad": "Dila Bangiz Eczanesi",
@@ -752,7 +752,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-20T19:07:23.640Z",
+  "guncelleme": "2026-11-20T19:31:53.337Z",
   "liste": [
    {
     "tur": "su",
@@ -773,32 +773,32 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-20T18:31:44.088Z",
+  "guncelleme": "2026-11-20T19:31:55.744Z",
   "kalemler": {
    "gram": {
-    "alis": 5713.43,
-    "satis": 5714.44,
-    "degisim": -3.77
+    "alis": 5710.39,
+    "satis": 5711.43,
+    "degisim": -3.83
    },
    "ceyrek": {
-    "alis": 9668,
-    "satis": 9881,
-    "degisim": -0.95
+    "alis": 9663,
+    "satis": 9876,
+    "degisim": -1
    },
    "gumus": {
-    "alis": 66.62,
-    "satis": 66.71,
-    "degisim": -6.45
+    "alis": 66.69,
+    "satis": 66.77,
+    "degisim": -6.37
    },
    "usd": {
-    "alis": 50.5712,
-    "satis": 50.5779,
-    "degisim": 0.23
+    "alis": 50.5533,
+    "satis": 50.5628,
+    "degisim": 0.2
    },
    "eur": {
-    "alis": 55.5384,
-    "satis": 55.5531,
-    "degisim": 0.03
+    "alis": 55.3971,
+    "satis": 55.5937,
+    "degisim": -0.06
    },
    "bist": {
     "alis": null,
@@ -806,125 +806,125 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2983218,
-    "usd": 58977,
-    "degisim": -6.43
+    "satis": 2938675,
+    "usd": 58107,
+    "degisim": -7.18
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 5713.43,
-    "satis": 5714.44,
-    "degisim": -3.77
+    "alis": 5710.39,
+    "satis": 5711.43,
+    "degisim": -3.83
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 9668,
-    "satis": 9881,
-    "degisim": -0.95
+    "alis": 9663,
+    "satis": 9876,
+    "degisim": -1
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 19319,
-    "satis": 19749,
-    "degisim": -0.84
+    "alis": 19308,
+    "satis": 19739,
+    "degisim": -0.89
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 38513,
-    "satis": 39378,
-    "degisim": -0.91
+    "alis": 38491,
+    "satis": 39358,
+    "degisim": -0.96
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 39561,
-    "satis": 40458,
-    "degisim": -0.78
+    "alis": 39539,
+    "satis": 40438,
+    "degisim": -0.83
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 39561,
-    "satis": 40458,
-    "degisim": -0.78
+    "alis": 39539,
+    "satis": 40438,
+    "degisim": -0.83
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 39561,
-    "satis": 40458,
-    "degisim": -0.78
+    "alis": 39539,
+    "satis": 40438,
+    "degisim": -0.83
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5387.59,
-    "satis": 5620.09,
-    "degisim": -1.44
+    "alis": 5384.29,
+    "satis": 5616.88,
+    "degisim": -1.49
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4094,
-    "satis": 4820,
-    "degisim": -1.13
+    "alis": 4092,
+    "satis": 4815,
+    "degisim": -1.23
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3226.67,
-    "satis": 4400.06,
-    "degisim": -1.27
+    "alis": 3224.64,
+    "satis": 4397.84,
+    "degisim": -1.32
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 5684.86,
-    "satis": 5685.87,
-    "degisim": -3.77
+    "alis": 5681.83,
+    "satis": 5682.87,
+    "degisim": -3.83
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 66.62,
-    "satis": 66.71,
-    "degisim": -6.45
+    "alis": 66.69,
+    "satis": 66.77,
+    "degisim": -6.37
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.5712,
-    "satis": 50.5779,
-    "degisim": 0.23
+    "alis": 50.5533,
+    "satis": 50.5628,
+    "degisim": 0.2
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.5384,
-    "satis": 55.5531,
-    "degisim": 0.03
+    "alis": 55.3971,
+    "satis": 55.5937,
+    "degisim": -0.06
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.2976,
-    "satis": 66.3169,
-    "degisim": 0.05
+    "alis": 66.147,
+    "satis": 66.3269,
+    "degisim": -0.05
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.1969,
-    "satis": 60.226,
-    "degisim": 0.69
+    "alis": 60.2027,
+    "satis": 60.2445,
+    "degisim": 0.71
    },
    {
     "k": "SAR",
@@ -941,10 +941,10 @@
     "degisim": 0.74
    }
   ],
-  "kaynakSaati": "2026-11-20 21:31:01"
+  "kaynakSaati": "2026-11-20 22:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-20T19:07:27.949Z",
+  "guncelleme": "2026-11-20T19:31:58.038Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -1969,7 +1969,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-20T18:31:57.886Z",
+  "guncelleme": "2026-11-20T19:32:00.632Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -3499,14 +3499,14 @@
       "sira": 3,
       "takim": "Alagöz Holding Iğdır",
       "ham": "ALAGÖZ HOLDİNG IĞDIR FUTBOL KULÜBÜ",
-      "o": 14,
+      "o": 15,
       "g": 8,
-      "b": 4,
+      "b": 5,
       "m": 2,
-      "a": 19,
-      "y": 11,
+      "a": 21,
+      "y": 13,
       "av": 8,
-      "p": 28,
+      "p": 29,
       "mersin": false
      },
      {
@@ -3595,6 +3595,20 @@
      },
      {
       "sira": 10,
+      "takim": "Eminevim Ümraniyespor",
+      "ham": "EMİNEVİM ÜMRANİYESPOR",
+      "o": 14,
+      "g": 4,
+      "b": 6,
+      "m": 4,
+      "a": 18,
+      "y": 14,
+      "av": 4,
+      "p": 18,
+      "mersin": false
+     },
+     {
+      "sira": 11,
       "takim": "Turka Esenler Erokspor",
       "ham": "TURKA ESENLER EROKSPOR",
       "o": 14,
@@ -3608,7 +3622,7 @@
       "mersin": false
      },
      {
-      "sira": 11,
+      "sira": 12,
       "takim": "Muğlaspor",
       "ham": "MUĞLASPOR KULÜBÜ",
       "o": 14,
@@ -3619,20 +3633,6 @@
       "y": 25,
       "av": -7,
       "p": 18,
-      "mersin": false
-     },
-     {
-      "sira": 12,
-      "takim": "Eminevim Ümraniyespor",
-      "ham": "EMİNEVİM ÜMRANİYESPOR",
-      "o": 13,
-      "g": 4,
-      "b": 5,
-      "m": 4,
-      "a": 16,
-      "y": 12,
-      "av": 4,
-      "p": 17,
       "mersin": false
      },
      {
@@ -3753,7 +3753,7 @@
       "tarih": "2026-11-20",
       "saat": "20:00",
       "ev": "Alagöz Holding Iğdır",
-      "skor": null,
+      "skor": "2-2",
       "dep": "Eminevim Ümraniyespor",
       "mersin": false
      },
@@ -4095,7 +4095,7 @@
       {
        "ev": "Alagöz Holding Iğdır",
        "dep": "Eminevim Ümraniyespor",
-       "skor": null
+       "skor": "2-2"
       },
       {
        "ev": "İstanbulspor",
@@ -4142,6 +4142,58 @@
        "dep": "Artı Değer Van Spor",
        "skor": null
       }
+     ],
+     "16": [
+      {
+       "ev": "Sms Grup Sarıyer",
+       "dep": "İstanbulspor",
+       "skor": null
+      },
+      {
+       "ev": "Eminevim Ümraniyespor",
+       "dep": "Manisa",
+       "skor": null
+      },
+      {
+       "ev": "Bandırma Spor",
+       "dep": "Batman Petrol Spor",
+       "skor": null
+      },
+      {
+       "ev": "Ekenler Beton Sivasspor",
+       "dep": "Bodrum FK",
+       "skor": null
+      },
+      {
+       "ev": "Artı Değer Van Spor",
+       "dep": "Bursaspor",
+       "skor": null
+      },
+      {
+       "ev": "Muğlaspor",
+       "dep": "Mardin 1969 Spor",
+       "skor": null
+      },
+      {
+       "ev": "Orfa Yapı Pendikspor",
+       "dep": "Alagöz Holding Iğdır",
+       "skor": null
+      },
+      {
+       "ev": "Antalyaspor",
+       "dep": "Mısırlıcomtr Fatih Karagümrük",
+       "skor": null
+      },
+      {
+       "ev": "Boluspor",
+       "dep": "Turka Esenler Erokspor",
+       "skor": null
+      },
+      {
+       "ev": "Keçtaş Ankara Keçiörengücü",
+       "dep": "Metro Holding Kayserispor",
+       "skor": null
+      }
      ]
     },
     "kulup": {
@@ -4183,9 +4235,9 @@
       "M"
      ],
      "Alagöz Holding Iğdır": [
+      "G",
+      "G",
       "B",
-      "G",
-      "G",
       "B",
       "B"
      ],
@@ -4231,6 +4283,13 @@
       "M",
       "G"
      ],
+     "Eminevim Ümraniyespor": [
+      "G",
+      "G",
+      "B",
+      "G",
+      "B"
+     ],
      "Turka Esenler Erokspor": [
       "B",
       "G",
@@ -4244,12 +4303,6 @@
       "G",
       "M",
       "M"
-     ],
-     "Eminevim Ümraniyespor": [
-      "G",
-      "G",
-      "B",
-      "G"
      ],
      "Sms Grup Sarıyer": [
       "M",
@@ -8328,11 +8381,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T19:07:28.359Z",
+  "guncelleme": "2026-11-20T19:31:58.429Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 24
+    "sayi": 27
    },
    {
     "yol": "/kategori/belediye/",
@@ -8375,23 +8428,19 @@
     "sayi": 1
    },
    {
+    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
+    "sayi": 1
+   },
+   {
     "yol": "/trafik/",
     "sayi": 1
    },
    {
-    "yol": "/okullar-tatil-mi/diyarbakir/",
-    "sayi": 1
-   },
-   {
-    "yol": "/kar-tatili/",
+    "yol": "/akaryakit-fiyatlari/",
     "sayi": 1
    },
    {
     "yol": "/gundemim/",
-    "sayi": 1
-   },
-   {
-    "yol": "/akaryakit-fiyatlari/",
     "sayi": 1
    },
    {
@@ -8425,7 +8474,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T19:07:30.575Z",
+  "guncelleme": "2026-11-20T19:32:45.399Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.52
@@ -8438,20 +8487,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T19:07:32.530Z",
+  "guncelleme": "2026-11-20T19:32:47.642Z",
   "giden": [
-   {
-    "no": [
-     "XQ7711"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "Antalya",
-    "planlanan": "2026-11-20T19:15:00.000Z",
-    "tahmini": null,
-    "kapi": "107",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC3603"
@@ -8461,7 +8498,7 @@
     "planlanan": "2026-11-20T19:40:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -8473,7 +8510,7 @@
     "planlanan": "2026-11-20T19:45:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8485,7 +8522,7 @@
     "planlanan": "2026-11-20T20:00:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8497,7 +8534,7 @@
     "planlanan": "2026-11-20T20:05:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8509,7 +8546,7 @@
     "planlanan": "2026-11-20T20:20:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "dis"
    },
    {
@@ -9015,45 +9052,45 @@
     "kapi": "103",
     "durum": "",
     "hat": "dis"
-   }
-  ],
-  "gelen": [
-   {
-    "no": [
-     "XQ9306"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "İzmir",
-    "planlanan": "2026-11-20T19:10:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "ic"
    },
    {
     "no": [
-     "TK2470"
+     "PC4061"
     ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-20T19:15:00.000Z",
+    "havayolu": "Pegasus",
+    "yer": "Antalya",
+    "planlanan": "2026-11-21T19:10:00.000Z",
     "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "VF3146"
-    ],
-    "havayolu": "AJet",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-20T19:20:00.000Z",
-    "tahmini": null,
-    "kapi": "",
+    "kapi": "107",
     "durum": "",
     "hat": "ic"
    },
+   {
+    "no": [
+     "XQ7711"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "Antalya",
+    "planlanan": "2026-11-21T19:15:00.000Z",
+    "tahmini": null,
+    "kapi": "104",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2093"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-21T19:15:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   }
+  ],
+  "gelen": [
    {
     "no": [
      "PC1859"
@@ -9569,11 +9606,47 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ9306"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "İzmir",
+    "planlanan": "2026-11-21T19:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2470"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-21T19:15:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF3146"
+    ],
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-21T19:20:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T19:07:32.529Z",
+  "guncelleme": "2026-11-20T19:32:47.642Z",
   "liste": [
    {
     "id": 6375,

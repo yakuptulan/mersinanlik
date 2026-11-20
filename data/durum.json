@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-20T19:06:51.907Z"
   }
  },
  "gorsel": {
@@ -336,11 +332,27 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-20T19:07:18.587Z",
+  "guncelleme": "2026-11-20T19:31:46.761Z",
   "liste": [
    {
-    "baslik": "partizan - beşiktaş",
+    "baslik": "yılmaz güney",
     "trafik": 200
+   },
+   {
+    "baslik": "bodo glimt",
+    "trafik": 100
+   },
+   {
+    "baslik": "kaliforniya",
+    "trafik": 100
+   },
+   {
+    "baslik": "nasdaq 100",
+    "trafik": 200
+   },
+   {
+    "baslik": "partizan - beşiktaş",
+    "trafik": 5000
    },
    {
     "baslik": "البايرن ضد كولن",
@@ -356,26 +368,10 @@
    },
    {
     "baslik": "bayern münih - köln",
-    "trafik": 2000
-   },
-   {
-    "baslik": "trt 1 canlı izle",
-    "trafik": 2000
-   },
-   {
-    "baslik": "özcan deniz",
-    "trafik": 500
-   },
-   {
-    "baslik": "emeklilik sistemi",
-    "trafik": 2000
-   },
-   {
-    "baslik": "anadolu efes",
     "trafik": 5000
    },
    {
-    "baslik": "kızılcık şerbeti canlı yayın",
+    "baslik": "özcan deniz",
     "trafik": 500
    }
   ]
