@@ -11,6 +11,9 @@ export const SITE = {
   timezone: 'Europe/Istanbul',
   email: 'iletisim@mersinanlik.com',
   defaultIlce: 'yenisehir',
+  // Google AdSense yayıncı kimliği (ör. 'ca-pub-1234567890123456'). Boşken reklam kodu ve reklam alanları hiç basılmaz;
+  // doldurulunca otomatik reklam kodu her sayfaya, ads.txt de site köküne eklenir.
+  adsense: '',
 };
 
 // "belirsiz: true" olan isimler başka illerde de geçebilir (ör. Bursa Yenişehir)

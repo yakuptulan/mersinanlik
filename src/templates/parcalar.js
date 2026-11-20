@@ -162,7 +162,9 @@ export function haberListesi(hikayeler, bosMesaj = 'Şu an gösterilecek haber y
   return hikayeler.length ? hikayeler.map(haberKarti).join('\n') : `<div class="bos">${h(bosMesaj)}</div>`;
 }
 
-export const reklamAlani = (ad = 'yan') => `<div class="reklam" data-reklam="${ad}" aria-hidden="true">REKLAM</div>`;
+// Reklam alanları: AdSense kimliği girilene kadar boş kutu göstermeyiz (okura da AdSense incelemesine de kötü görünür).
+// Kimlik girildiğinde Google otomatik reklamları yerleşimi kendisi yapar.
+export const reklamAlani = () => '';
 
 // Google'da "tercih edilen kaynak" yapma bağlantısı (Google'ın resmî bağlantı biçimi)
 export const googleKaynak = () => `<a class="google-kaynak" href="https://www.google.com/preferences/source?q=mersinanlik.com" rel="noopener" target="_blank"><span class="g-harf" aria-hidden="true">G</span><span><b>Google'da Mersin Anlık'ı tercih edilen kaynağın yap</b><small>Haberlerimiz Google aramalarında sana daha çok çıksın</small></span></a>`;

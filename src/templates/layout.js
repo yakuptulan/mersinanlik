@@ -109,6 +109,7 @@ export function sayfa({ baslik, aciklama = SITE.description, yol = '/', aktif = 
 <script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="msvalidate.01" content="73186F4C8804CE1EDD17B492A973910D">
+${SITE.adsense ? `<meta name="google-adsense-account" content="${SITE.adsense}">\n<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${SITE.adsense}" crossorigin="anonymous"></script>` : ''}
 <title>${h(tamBaslik)}</title>
 <meta name="description" content="${h(aciklama)}">
 <link rel="canonical" href="${kanonik}">

@@ -991,17 +991,53 @@ export function bilgiSayfalari() {
     }),
     ({
       yol: '/gizlilik/',
-      baslik: 'Gizlilik politikası',
-      aciklama: `${SITE.name} gizlilik politikası.`,
-      govde: `<p>Sitemizde üyelik yoktur ve sizden kişisel bilgi istemeyiz. Seçtiğiniz ilçe yalnızca kendi tarayıcınızda saklanır.</p>
-<p>Reklam gösterimi için Google AdSense kullanılabilir. Google ve iş ortakları, reklamları kişiselleştirmek için çerez kullanabilir. Ayrıntılar için <a href="https://policies.google.com/technologies/ads?hl=tr" rel="noopener" target="_blank">Google reklam politikalarına</a> bakabilirsiniz.</p>
-<p>Sorularınız için: <a href="mailto:${SITE.email}">${SITE.email}</a></p>`,
+      baslik: 'Gizlilik politikası ve KVKK aydınlatma metni',
+      aciklama: `${SITE.name} gizlilik politikası: hangi verilerin işlendiği, çerezler, Google reklamları, analiz araçları ve 6698 sayılı KVKK kapsamındaki haklarınız.`,
+      govde: `<p><em>Son güncelleme: 20 Kasım 2026</em></p>
+<p>Bu metin, ${SITE.name} (${SITE.url.replace('https://', '')}) internet sitesini ziyaret ettiğinizde hangi verilerin nasıl işlendiğini, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında açıklamak için hazırlanmıştır.</p>
+<h2>Veri sorumlusu</h2>
+<p>Veri sorumlusu: Yakup Tulan (${SITE.name} imtiyaz sahibi), Mersin, Türkiye · E-posta: <a href="mailto:${SITE.email}">${SITE.email}</a></p>
+<h2>Hangi verileri işliyoruz?</h2>
+<ul>
+<li><strong>Üyelik ve form verisi:</strong> Sitemizde üyelik yoktur; adınızı, telefonunuzu ya da e-postanızı istemeyiz. Bize e-posta gönderirseniz yalnızca yanıt vermek için kullanırız.</li>
+<li><strong>Tarayıcınızda saklananlar:</strong> Seçtiğiniz ilçe, ilgi alanlarınız ("Benim Gündemim") ve okuma tercihleriniz yalnızca kendi cihazınızın tarayıcı deposunda tutulur; sunucularımıza gönderilmez.</li>
+<li><strong>Ziyaret istatistikleri:</strong> Sitenin performansını ölçmek için Cloudflare Web Analytics kullanırız. Bu araç çerez kullanmaz, sizi siteler arasında izlemez ve IP adresinizi saklamaz; yalnızca toplu sayfa görüntüleme sayıları üretir.</li>
+<li><strong>Sunucu kayıtları:</strong> Sitemiz Cloudflare altyapısında barındırılır. Güvenlik ve hizmetin sürekliliği için Cloudflare, IP adresi ve tarayıcı bilgisi gibi teknik verileri kısa süreli olarak işleyebilir.</li>
+</ul>
+<h2>Reklamlar ve Google AdSense</h2>
+<p>Sitemizde Google AdSense aracılığıyla reklam gösterilebilir. Bu durumda:</p>
+<ul>
+<li>Google dahil üçüncü taraf sağlayıcılar, sitemize ve diğer sitelere yaptığınız önceki ziyaretlere dayalı reklamlar göstermek için çerez kullanır.</li>
+<li>Google'ın reklam çerezlerini kullanması, Google ve iş ortaklarının size sitemize ve/veya internetteki diğer sitelere yaptığınız ziyaretlere göre reklam göstermesini sağlar.</li>
+<li>Kişiselleştirilmiş reklamları <a href="https://adssettings.google.com" rel="noopener" target="_blank">Google Reklam Ayarları</a> sayfasından kapatabilirsiniz. Üçüncü taraf sağlayıcıların kişiselleştirilmiş reklam çerezlerini <a href="https://www.aboutads.info/choices/" rel="noopener" target="_blank">www.aboutads.info</a> adresinden devre dışı bırakabilirsiniz.</li>
+<li>Google'ın verileri nasıl kullandığı hakkında: <a href="https://policies.google.com/technologies/partner-sites?hl=tr" rel="noopener" target="_blank">Google, iş ortaklarının sitelerindeki bilgileri nasıl kullanır</a>.</li>
+</ul>
+<h2>Verilerin aktarılması</h2>
+<p>Yukarıda sayılan hizmet sağlayıcılar (Cloudflare, Google) verileri yurt dışındaki sunucularında işleyebilir. Bu aktarım, sitenin çalışması ve reklam gösterimi amacıyla, KVKK'nın 9. maddesi çerçevesinde gerçekleşir.</p>
+<h2>Haklarınız</h2>
+<p>KVKK'nın 11. maddesi uyarınca kişisel verilerinizin işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltilmesini veya silinmesini isteme ve işlemeye itiraz etme haklarına sahipsiniz. Taleplerinizi <a href="mailto:${SITE.email}">${SITE.email}</a> adresine iletebilirsiniz; en geç 30 gün içinde yanıtlarız.</p>
+<h2>Haberlerde kişisel veriler</h2>
+<p>Haberlerimizde masumiyet karinesine ve kişilik haklarına uyarız; şüpheli, mağdur ve çocukların kimliğini açıklamayız. Bir haberde hakkınızda yer alan bilginin düzeltilmesini ya da kaldırılmasını isterseniz <a href="/duzeltme-politikasi/">düzeltme politikamız</a> kapsamında başvurabilirsiniz.</p>
+<p>Ayrıntılı çerez bilgisi için <a href="/cerez-politikasi/">çerez politikamıza</a> bakabilirsiniz.</p>`,
     }),
     ({
       yol: '/cerez-politikasi/',
       baslik: 'Çerez politikası',
-      aciklama: `${SITE.name} çerez politikası.`,
-      govde: `<p>Sitemiz, seçtiğiniz ilçeyi hatırlamak için tarayıcınızın yerel depolamasını kullanır. Reklam ortaklarımız (Google AdSense) kendi çerezlerini kullanabilir. Tarayıcı ayarlarınızdan çerezleri dilediğiniz zaman silebilirsiniz.</p>`,
+      aciklama: `${SITE.name} çerez politikası: sitede kullanılan çerez ve yerel depolama türleri, Google reklam çerezleri ve çerezleri nasıl yönetebileceğiniz.`,
+      govde: `<p><em>Son güncelleme: 20 Kasım 2026</em></p>
+<p>Çerezler, ziyaret ettiğiniz sitelerin tarayıcınıza kaydettiği küçük metin dosyalarıdır. ${SITE.name} kendi işleyişi için çerez kullanmaz; kullandığımız ve kullanılabilecek teknolojiler şunlardır:</p>
+<div class="tablo-kap"><table class="tablo"><thead><tr><th>Tür</th><th>Kim tarafından</th><th>Amaç</th><th>Süre</th></tr></thead><tbody>
+<tr><th scope="row">Yerel depolama (localStorage)</th><td>${SITE.name}</td><td>Seçtiğiniz ilçe, Benim Gündemim tercihleri, okunan haberler</td><td>Siz silene kadar, yalnızca cihazınızda</td></tr>
+<tr><th scope="row">Analiz (çerezsiz)</th><td>Cloudflare Web Analytics</td><td>Toplu ziyaret sayıları; çerez kullanmaz</td><td>—</td></tr>
+<tr><th scope="row">Reklam çerezleri</th><td>Google AdSense ve iş ortakları</td><td>Reklam gösterimi, ölçümü ve (izin verdiyseniz) kişiselleştirme</td><td>Google'ın belirlediği süreler</td></tr>
+</tbody></table></div>
+<h2>Çerezleri nasıl yönetirsiniz?</h2>
+<ul>
+<li>Tarayıcınızın ayarlarından çerezleri ve site verilerini dilediğiniz zaman silebilir ya da engelleyebilirsiniz.</li>
+<li>Kişiselleştirilmiş Google reklamlarını <a href="https://adssettings.google.com" rel="noopener" target="_blank">Google Reklam Ayarları</a>'ndan kapatabilirsiniz.</li>
+<li>Üçüncü taraf reklam çerezlerinden <a href="https://www.aboutads.info/choices/" rel="noopener" target="_blank">www.aboutads.info</a> üzerinden çıkabilirsiniz.</li>
+</ul>
+<p>Çerezleri engellemeniz siteyi okumanıza engel olmaz; yalnızca ilçe seçimi gibi tercihleriniz hatırlanmaz. Sorularınız için: <a href="mailto:${SITE.email}">${SITE.email}</a> · <a href="/gizlilik/">Gizlilik politikası</a></p>`,
     }),
   ].map((o) => ({ yol: o.yol, html: bilgiSayfasi(o) }));
 }

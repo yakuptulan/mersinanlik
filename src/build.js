@@ -330,6 +330,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
   // Canlı yenileme için son haberler listesi (sayfa açıkken 2 dakikada bir okunur)
   yaz('/akis.json', JSON.stringify(akisVerisi(hikayeler, simdi)));
   yaz('/son.json', JSON.stringify(hikayeler.filter((x) => !x.genel).sort((a, b) => new Date(b.ilkGorulme) - new Date(a.ilkGorulme)).slice(0, 20).map((x) => ({ id: x.id, b: x.baslik, z: x.ilkGorulme }))));
+  if (SITE.adsense) yaz('/ads.txt', `google.com, ${SITE.adsense.replace('ca-', '')}, DIRECT, f08c47fec0942fa0\n`);
   yaz('/robots.txt', `User-agent: *\nAllow: /\nDisallow: /ara/\nDisallow: /menu/\nDisallow: /durum/\n\nSitemap: ${SITE.url}/sitemap.xml\nSitemap: ${SITE.url}/haber-sitemap.xml\n`);
   // Cloudflare Pages: önbellek ayarları
   yaz(
