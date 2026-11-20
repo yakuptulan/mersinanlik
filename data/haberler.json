@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-20T10:03:13.825Z",
+ "guncelleme": "2026-11-20T10:13:42.146Z",
  "hikayeler": [
   {
    "id": "2r80dh",
@@ -6219,7 +6219,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-18T13:52:00.000Z",
-   "sonGuncelleme": "2026-11-20T10:01:38.727Z",
+   "sonGuncelleme": "2026-11-20T10:13:23.156Z",
    "kaynaklar": [
     {
      "kaynakId": "cukurova",
@@ -6586,7 +6586,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-19T06:04:14.000Z",
-   "sonGuncelleme": "2026-11-20T10:01:39.948Z",
+   "sonGuncelleme": "2026-11-20T10:13:25.006Z",
    "kaynaklar": [
     {
      "kaynakId": "mersin-buyuksehir",
@@ -6872,7 +6872,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-19T06:56:00.000Z",
-   "sonGuncelleme": "2026-11-20T10:01:47.140Z",
+   "sonGuncelleme": "2026-11-20T10:13:25.000Z",
    "kaynaklar": [
     {
      "kaynakId": "tarsus-universitesi",
@@ -6901,6 +6901,13 @@
      "link": "https://www.mersintime.com/mersin-universitesi-cop31de-11-projeyle-yer-aldi",
      "baslik": "Mersin Üniversitesi, COP31'de 11 projeyle yer aldı",
      "tarih": "2026-11-20T09:33:36.000Z"
+    },
+    {
+     "kaynakId": "mersinhabermerkezi",
+     "ad": "Mersin Haber Merkezi",
+     "link": "https://www.mersinhabermerkezi.com/mersin-universitesi-cop31de-11-projeyle-yer-aldi",
+     "baslik": "Mersin Üniversitesi, COP31'de 11 projeyle yer aldı",
+     "tarih": "2026-11-20T09:33:00.000Z"
     }
    ],
    "yazimDenemesi": 3,
@@ -7273,7 +7280,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-19T12:04:00+03:00",
-   "sonGuncelleme": "2026-11-20T10:01:39.954Z",
+   "sonGuncelleme": "2026-11-20T10:13:25.010Z",
    "kaynaklar": [
     {
      "kaynakId": "haberturk-mersin",
@@ -7591,52 +7598,6 @@
    "gorselKaynak": "yz",
    "gorselPrompt": "A modern theater building exterior with a welcoming entrance, warm lights illuminating the glass facade, and a subtle banner-free poster stand on the stone walkway, during the late afternoon.. Realistic editorial news photograph, natural daylight, wide shot, sharp focus, no text, no letters, no watermark.",
    "gorsel": "1nebyyr.webp"
-  },
-  {
-   "id": "ejb4a8",
-   "baslik": "TSK’dan Bulgaristan’da NATO tatbikatı",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "gundem",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-19T10:08:00.000Z",
-   "sonGuncelleme": "2026-11-19T10:16:39.544Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "cukurova",
-     "ad": "Çukurova Gazetesi",
-     "link": "https://cukurovagazetesi.com/tskdan-bulgaristanda-nato-tatbikati",
-     "baslik": "TSK’dan Bulgaristan’da NATO tatbikatı",
-     "tarih": "2026-11-19T10:08:00.000Z"
-    }
-   ]
-  },
-  {
-   "id": "1y9iycc",
-   "baslik": "AB Komisyonuna düzenlenen siber saldırıda çalışanların kişisel verilerinin ele geçirilmiş olabileceği bildirildi",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "gundem",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-19T10:08:41.000Z",
-   "sonGuncelleme": "2026-11-19T10:16:42.539Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "aa-guncel",
-     "ad": "Anadolu Ajansı",
-     "link": "https://www.aa.com.tr/tr/dunya/ab-komisyonuna-duzenlenen-siber-saldirida-calisanlarin-kisisel-verilerinin-ele-gecirilmis-olabilecegi-bildirildi/4130462",
-     "baslik": "AB Komisyonuna düzenlenen siber saldırıda çalışanların kişisel verilerinin ele geçirilmiş olabileceği bildirildi",
-     "tarih": "2026-11-19T10:08:41.000Z"
-    }
-   ]
   },
   {
    "id": "15mwr8m",
@@ -16856,6 +16817,135 @@
    "otomatik": true,
    "kapak": "su",
    "gorselHatasi": "otomatik haber: ilçe çizimi kullanılır"
+  },
+  {
+   "id": "jyordk",
+   "baslik": "Mersin'de Sanata Teşvik ve Sanatla Yaşam Programı kapsamında sergi açıldı",
+   "ozet": "Mersin'de, Aile ve Sosyal Hizmetler Bakanlığının programı kapsamında şehit aileleri ve gazilerin yaptığı tablolardan oluşan bir sergi açıldı. Bir alışveriş merkezindeki serginin açılışı protokol üyeleri ve katılımcıların ilgisiyle gerçekleştirildi.",
+   "ilceler": [],
+   "genel": false,
+   "kategori": "kultur",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-20T12:57:34+03:00",
+   "sonGuncelleme": "2026-11-20T10:12:53.421Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "haberturk-mersin",
+     "ad": "Habertürk",
+     "link": "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-sanata-tesvik-ve-sanatla-yasam-programi-kapsaminda-sergi-acildi-119527687",
+     "baslik": "Mersin'de Sanata Teşvik ve Sanatla Yaşam Programı kapsamında sergi açıldı",
+     "tarih": "2026-11-20T12:57:34+03:00"
+    }
+   ],
+   "metinDenemesi": 1,
+   "yaziKaynak": "Habertürk",
+   "yazimDenemesi": 1,
+   "metin": "Mersin'de Aile ve Sosyal Hizmetler Bakanlığı Şehit Yakınları ve Gaziler Genel Müdürlüğü tarafından yürütülen Sanata Teşvik ve Sanatla Yaşam Programı çerçevesinde bir sergi düzenlendi. Şehit aileleri ile gazilerin el emeğiyle hazırladığı tablolar, kentteki bir alışveriş merkezinde izlenime sunuldu.\n\nAçılış törenine Mersin Vali Yardımcısı İrfan Demiröz, Aile ve Sosyal Hizmetler Bakanlığı Şehit ve Gaziler Genel Müdürlüğü Daire Başkanı Fatma Ayşe Güngör, Aile ve Sosyal Hizmetler İl Müdürü Tolga Nacar ile kamu kurum ve kuruluşlarının temsilcileri katıldı.\n\nTörende konuşma yapan Vali Yardımcısı İrfan Demiröz, sergide şehit yakınları ve gazilerin hayalleri ile umutlarının yer aldığını ifade ederek her zaman yanlarında olacaklarını belirtti ve emeği geçenlere teşekkür etti. Kurdele kesiminin ardından protokol üyeleri, şehit aileleri, gaziler ve vatandaşlar sergideki eserleri inceledi.",
+   "gorselKaynak": "yz",
+   "gorselPrompt": "An indoor art gallery featuring framed landscape and abstract paintings on white display walls, soft directional track lighting illuminating the canvas artworks, with a polished marble floor reflecting the ambient light, and distant blurred visitors walking quietly.. Realistic editorial news photograph, natural daylight, wide shot, sharp focus, no text, no letters, no watermark.",
+   "gorsel": "jyordk.webp"
+  },
+  {
+   "id": "oklcj6",
+   "baslik": "Engelli bireyler ile din görevlileri bir araya geldi",
+   "ozet": "Mersin'in Tarsus ilçesinde engelli bireylerin sosyal ve manevi yaşama katılımını artırmak amacıyla bir buluşma programı organize edildi. Tarsus Müftülüğü ve Türkiye Sakatlar Derneği Tarsus Şubesi işbirliğindeki etkinlikte namaz kılındı ve dernek binası ziyaret edildi.",
+   "ilceler": [
+    "tarsus"
+   ],
+   "genel": false,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-20T10:10:00.000Z",
+   "sonGuncelleme": "2026-11-20T10:13:24.741Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "cukurova",
+     "ad": "Çukurova Gazetesi",
+     "link": "https://cukurovagazetesi.com/engelli-bireyler-ile-din-gorevlileri-bir-araya-geldi",
+     "baslik": "Engelli bireyler ile din görevlileri bir araya geldi",
+     "tarih": "2026-11-20T10:10:00.000Z"
+    }
+   ],
+   "metinDenemesi": 1,
+   "yaziKaynak": "Çukurova Gazetesi",
+   "yazimDenemesi": 1,
+   "metin": "Mersin'in Tarsus ilçesinde, engelli bireylerin sosyal hayata ve dini faaliyetlere katılımını desteklemek maksadıyla ortak bir etkinlik gerçekleştirildi. Tarsus Müftülüğü ile Türkiye Sakatlar Derneği (TSD) Tarsus Şubesinin işbirliğiyle düzenlenen program, Molla Kerim Mescidi'nde kılınan öğle namazıyla başladı.\n\nNamazın ardından katılımcılar, Türkiye Sakatlar Derneği Tarsus Şubesi binasını ziyaret etti. Gerçekleştirilen ziyarette müftülük yetkilileri dernek üyeleriyle bir araya gelerek sohbet etti ve yakından ilgilendi.\n\nBuluşmaya Tarsus İlçe Müftüsü Murat Akçay, TSD Tarsus Şube Başkanı Ali Çelik ve Tarsus Müftülüğü Engelli Koordinatörü Yusuf Gök katıldı. Programda yapılan konuşmalarda engelli vatandaşların sosyal ve dini hayata aktif katılımının önemine değinilerek birlik, beraberlik ve yardımlaşma vurgusu yapıldı.",
+   "gorselKaynak": "yz",
+   "gorselPrompt": "A quiet and bright interior of a local community center in Tarsus, featuring a wooden table with ceramic tea cups, a few chairs, and soft daylight coming through a large window with a view of green trees outside.. Realistic editorial news photograph, natural daylight, wide shot, sharp focus, no text, no letters, no watermark.",
+   "gorsel": "oklcj6.webp"
+  },
+  {
+   "id": "aqjel8",
+   "baslik": "Elazığ'da tehlikeli yolculuk: İnşaat malzemesini aracın camından sarkıtarak ilerledi",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "ulasim",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-20T10:10:00.000Z",
+   "sonGuncelleme": "2026-11-20T10:13:24.992Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "mersinhabermerkezi",
+     "ad": "Mersin Haber Merkezi",
+     "link": "https://www.mersinhabermerkezi.com/elazigda-tehlikeli-yolculuk-insaat-malzemesini-aracin-camindan-sarkitarak-ilerledi",
+     "baslik": "Elazığ'da tehlikeli yolculuk: İnşaat malzemesini aracın camından sarkıtarak ilerledi",
+     "tarih": "2026-11-20T10:10:00.000Z"
+    }
+   ]
+  },
+  {
+   "id": "iemo0c",
+   "baslik": "Meksika'da kalkış sırasında pistten çıkan küçük uçak otoyola daldı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "ulasim",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-20T10:03:00.000Z",
+   "sonGuncelleme": "2026-11-20T10:13:24.996Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "mersinhabermerkezi",
+     "ad": "Mersin Haber Merkezi",
+     "link": "https://www.mersinhabermerkezi.com/meksikada-kalkis-sirasinda-pistten-cikan-kucuk-ucak-otoyola-daldi",
+     "baslik": "Meksika'da kalkış sırasında pistten çıkan küçük uçak otoyola daldı",
+     "tarih": "2026-11-20T10:03:00.000Z"
+    }
+   ]
+  },
+  {
+   "id": "kowos8",
+   "baslik": "Sigorta, reasürans ve emeklilik şirketleri yasal defterlerini elektronik ortamda günlük sunacak",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-20T10:00:53.000Z",
+   "sonGuncelleme": "2026-11-20T10:13:27.788Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/ekonomi/sigorta-reasurans-ve-emeklilik-sirketleri-yasal-defterlerini-elektronik-ortamda-gunluk-sunacak/4131986",
+     "baslik": "Sigorta, reasürans ve emeklilik şirketleri yasal defterlerini elektronik ortamda günlük sunacak",
+     "tarih": "2026-11-20T10:00:53.000Z"
+    }
+   ]
   }
  ]
 }
