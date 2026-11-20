@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-20T04:02:46.009Z",
+ "guncelleme": "2026-11-20T04:31:32.934Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 17,
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-20T04:02:49.255Z",
+  "guncelleme": "2026-11-20T04:31:36.648Z",
   "liste": [
    {
     "ad": "Asel Aslan Eczanesi",
@@ -675,36 +675,54 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-20T04:02:50.220Z",
-  "liste": []
+  "guncelleme": "2026-11-20T04:31:37.607Z",
+  "liste": [
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Yenişehir ilçesi Emirler mahallesi Çavak tepe restoran mevkide depoda çalışma yapılacağı için su kesintisi yaşanmaktadır. tahmini olarak saat 17.00 de suların verilmesi planlanmaktadır.",
+    "baslangic": "2026-11-20T04:12:00.000Z",
+    "bitis": "2026-11-20T14:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "yenisehir",
+      "ad": "Yenişehir",
+      "mahalleler": [
+       "Çavak",
+       "Emirler"
+      ]
+     }
+    ]
+   }
+  ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-20T04:02:53.772Z",
+  "guncelleme": "2026-11-20T04:31:39.596Z",
   "kalemler": {
    "gram": {
-    "alis": 5765.85,
-    "satis": 5766.89,
-    "degisim": -2.89
+    "alis": 5740.04,
+    "satis": 5741,
+    "degisim": -3.33
    },
    "ceyrek": {
-    "alis": 9564,
-    "satis": 9693,
-    "degisim": -2.84
+    "alis": 9522,
+    "satis": 9653,
+    "degisim": -3.24
    },
    "gumus": {
-    "alis": 67.97,
-    "satis": 68.07,
-    "degisim": -4.56
+    "alis": 67.46,
+    "satis": 67.54,
+    "degisim": -5.29
    },
    "usd": {
-    "alis": 50.5722,
-    "satis": 50.5811,
+    "alis": 50.5669,
+    "satis": 50.5831,
     "degisim": 0.23
    },
    "eur": {
-    "alis": 55.5137,
-    "satis": 55.605,
-    "degisim": 0.06
+    "alis": 55.5502,
+    "satis": 55.5924,
+    "degisim": 0.08
    },
    "bist": {
     "alis": null,
@@ -712,131 +730,131 @@
     "degisim": -0.67
    },
    "btc": {
-    "satis": 3134818,
-    "usd": 61985,
-    "degisim": -1.93
+    "satis": 3115088,
+    "usd": 61592,
+    "degisim": -2.51
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 5765.85,
-    "satis": 5766.89,
-    "degisim": -2.89
+    "alis": 5740.04,
+    "satis": 5741,
+    "degisim": -3.33
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 9564,
-    "satis": 9693,
-    "degisim": -2.84
+    "alis": 9522,
+    "satis": 9653,
+    "degisim": -3.24
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 19127,
-    "satis": 19351,
-    "degisim": -2.84
+    "alis": 19044,
+    "satis": 19270,
+    "degisim": -3.24
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 38138,
-    "satis": 38613,
-    "degisim": -2.84
+    "alis": 37970,
+    "satis": 38452,
+    "degisim": -3.24
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 39176,
-    "satis": 39619,
-    "degisim": -2.84
+    "alis": 39004,
+    "satis": 39453,
+    "degisim": -3.24
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 39176,
-    "satis": 39619,
-    "degisim": -2.84
+    "alis": 39004,
+    "satis": 39453,
+    "degisim": -3.24
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 39176,
-    "satis": 39619,
-    "degisim": -2.84
+    "alis": 39004,
+    "satis": 39453,
+    "degisim": -3.24
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5337.49,
-    "satis": 5540.03,
-    "degisim": -2.84
+    "alis": 5313.85,
+    "satis": 5516.5,
+    "degisim": -3.25
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4042,
-    "satis": 4740,
-    "degisim": -2.77
+    "alis": 4020,
+    "satis": 4715,
+    "degisim": -3.28
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3195.84,
-    "satis": 4344.7,
-    "degisim": -2.51
+    "alis": 3181.29,
+    "satis": 4328.43,
+    "degisim": -2.88
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 5737.02,
-    "satis": 5738.06,
-    "degisim": -2.89
+    "alis": 5711.34,
+    "satis": 5712.3,
+    "degisim": -3.33
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 67.97,
-    "satis": 68.07,
-    "degisim": -4.56
+    "alis": 67.46,
+    "satis": 67.54,
+    "degisim": -5.29
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.5722,
-    "satis": 50.5811,
+    "alis": 50.5669,
+    "satis": 50.5831,
     "degisim": 0.23
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.5137,
-    "satis": 55.605,
-    "degisim": 0.06
+    "alis": 55.5502,
+    "satis": 55.5924,
+    "degisim": 0.08
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.3226,
-    "satis": 66.3307,
-    "degisim": 0.08
+    "alis": 66.3393,
+    "satis": 66.3474,
+    "degisim": 0.11
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 59.9979,
-    "satis": 60.0298,
-    "degisim": 0.36
+    "alis": 60.0272,
+    "satis": 60.0678,
+    "degisim": 0.42
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.4806,
-    "satis": 13.4842,
+    "alis": 13.4796,
+    "satis": 13.4853,
     "degisim": 0.23
    },
    {
@@ -847,10 +865,10 @@
     "degisim": 0.23
    }
   ],
-  "kaynakSaati": "2026-11-20 07:02:01"
+  "kaynakSaati": "2026-11-20 07:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-20T04:02:56.263Z",
+  "guncelleme": "2026-11-20T04:31:42.950Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 73.07,
@@ -1875,7 +1893,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-20T03:31:52.818Z",
+  "guncelleme": "2026-11-20T04:31:45.320Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8232,7 +8250,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T04:02:56.582Z",
+  "guncelleme": "2026-11-20T04:31:43.418Z",
   "liste": [
    {
     "yol": "/",
@@ -8241,10 +8259,6 @@
    {
     "yol": "/spor/",
     "sayi": 9
-   },
-   {
-    "yol": "/haber/mersin-de-kamyonet-ile-otomobilin-carpistigi-kazada-1-kisi-oldu-2-kisi-1bfosq4/",
-    "sayi": 5
    },
    {
     "yol": "/kategori/belediye/",
@@ -8259,12 +8273,20 @@
     "sayi": 4
    },
    {
+    "yol": "/haber/mersin-de-kamyonet-ile-otomobilin-carpistigi-kazada-1-kisi-oldu-2-kisi-1bfosq4/",
+    "sayi": 4
+   },
+   {
     "yol": "/kategori/yasam/",
     "sayi": 4
    },
    {
     "yol": "/kategori/turkiye-dunya/",
     "sayi": 4
+   },
+   {
+    "yol": "/kategori/asayis/",
+    "sayi": 3
    },
    {
     "yol": "/bilgi/",
@@ -8275,36 +8297,16 @@
     "sayi": 3
    },
    {
-    "yol": "/kategori/asayis/",
-    "sayi": 3
+    "yol": "/haber/mersin-sosyal-hizmetlerde-yeni-siddet-iddiasi-9xbft/",
+    "sayi": 2
    },
    {
     "yol": "/haber/mersin-de-taksici-esnafindan-arac-kullanma-belgesi-tepkisi-178ax2s/",
     "sayi": 2
    },
    {
-    "yol": "/haber/mersin-sosyal-hizmetlerde-yeni-siddet-iddiasi-9xbft/",
-    "sayi": 2
-   },
-   {
     "yol": "/haber/mersin-buyuksehir-den-cocuklara-dopdolu-ara-tatil-programi-ple3hp/",
     "sayi": 2
-   },
-   {
-    "yol": "/haber/findikpinari-yolunda-kaya-dusmesi-ulasim-yeniden-saglandi-m49045/",
-    "sayi": 1
-   },
-   {
-    "yol": "/okullar-tatil-mi/diyarbakir/",
-    "sayi": 1
-   },
-   {
-    "yol": "/trafik/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/sayistaydan-toroslar-belediyesine-ihalesiz-avukatlik-hizmeti-alimi-uya-3newkh/",
-    "sayi": 1
    },
    {
     "yol": "/haber/mersin-valisi-atilla-toros-kktc-nin-43-kurulus-yil-donumu-resepsiyonun-1codpsk/",
@@ -8323,6 +8325,10 @@
     "sayi": 1
    },
    {
+    "yol": "/haber/sayistaydan-toroslar-belediyesine-ihalesiz-avukatlik-hizmeti-alimi-uya-3newkh/",
+    "sayi": 1
+   },
+   {
     "yol": "/spor/1-lig/",
     "sayi": 1
    },
@@ -8335,11 +8341,23 @@
     "sayi": 1
    },
    {
+    "yol": "/trafik/",
+    "sayi": 1
+   },
+   {
+    "yol": "/okullar-tatil-mi/diyarbakir/",
+    "sayi": 1
+   },
+   {
     "yol": "/piyasalar/gram-altin/",
     "sayi": 1
    },
    {
     "yol": "/piyasalar/ata-altin/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/findikpinari-yolunda-kaya-dusmesi-ulasim-yeniden-saglandi-m49045/",
     "sayi": 1
    },
    {
@@ -8353,10 +8371,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T04:02:57.893Z",
+  "guncelleme": "2026-11-20T04:32:25.188Z",
   "deniz": {
    "sicaklik": 21.5,
-   "dalga": 0.68
+   "dalga": 0.66
   },
   "hava": {
    "aqi": 31,
@@ -8366,20 +8384,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T04:00:32.232Z",
+  "guncelleme": "2026-11-20T04:32:26.827Z",
   "giden": [
-   {
-    "no": [
-     "PC1850"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Ercan",
-    "planlanan": "2026-11-20T04:30:00.000Z",
-    "tahmini": null,
-    "kapi": "102",
-    "durum": "KONTUAR AÇIK",
-    "hat": "dis"
-   },
    {
     "no": [
      "XQ7631"
@@ -8389,7 +8395,7 @@
     "planlanan": "2026-11-20T05:10:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8401,7 +8407,7 @@
     "planlanan": "2026-11-20T05:10:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8967,21 +8973,21 @@
     "kapi": "106",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1850"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-21T04:05:00.000Z",
+    "tahmini": null,
+    "kapi": "102",
+    "durum": "",
+    "hat": "dis"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "PC2080"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-20T04:20:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "XQ7630"
@@ -9585,7 +9591,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T04:02:59.458Z",
+  "guncelleme": "2026-11-20T04:32:26.826Z",
   "liste": [
    {
     "id": 6375,
