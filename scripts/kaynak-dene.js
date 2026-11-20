@@ -19,6 +19,23 @@ async function al(url) {
     return { durum: 'HATA ' + (e.cause?.code || e.message).toString().slice(0, 40), metin: '' };
   }
 }
+if (process.env.ARA === 'COMMONS') {
+  // Adresler: arama terimleri (boşluk yerine _). Ticari kullanıma açık lisanslı fotoğrafları listeler.
+  for (const terim of ADAYLAR) {
+    const q = new URLSearchParams({ action: 'query', format: 'json', generator: 'search', gsrsearch: terim.replace(/_/g, ' ') + ' filetype:bitmap', gsrnamespace: '6', gsrlimit: '12', prop: 'imageinfo', iiprop: 'url|size|extmetadata', iiextmetadatafilter: 'LicenseShortName|Artist', iiurlwidth: '960' });
+    const r = await fetch('https://commons.wikimedia.org/w/api.php?' + q, { headers: { 'User-Agent': UA } }).then((x) => x.json()).catch(() => ({}));
+    console.log(`\n### ${terim}`);
+    for (const p of Object.values(r.query?.pages || {}).sort((a, b) => a.index - b.index)) {
+      const ii = p.imageinfo?.[0]; if (!ii) continue;
+      const lis = ii.extmetadata?.LicenseShortName?.value || '?';
+      if (!/CC BY|CC0|Public domain|Kamu/i.test(lis) || /NC|ND/.test(lis)) continue;
+      const yazar = (ii.extmetadata?.Artist?.value || '').replace(/<[^>]+>/g, '').trim().slice(0, 40);
+      console.log(`${ii.width}x${ii.height} | ${lis} | ${yazar} | ${ii.url.split('/commons/')[1]}`);
+    }
+    await new Promise((r) => setTimeout(r, 400));
+  }
+  process.exit(0);
+}
 if (process.env.ARA === 'UCUS') {
   const { ucuslariGetir } = await import('../src/lib/ucus.js');
   const v = await ucuslariGetir(UA);
