@@ -1614,3 +1614,22 @@ a.cip.kat:hover { filter: brightness(.95); }
   .kare-izgara.ters .kare-kart.buyuk { grid-column: 1 / -1; }
 }
 .son-dakika a.etiket { flex: none; min-width: auto; overflow: visible; color: var(--lacivert); font-weight: 800; font-size: 14px; white-space: nowrap; flex-basis: auto; }
+/* En sıcak haberler: saat */
+.ok-ic { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.ok-ic .ok-zaman { font-size: 12px; font-weight: 600; color: var(--ikincil); }
+.ok-ic .ok-zaman time { color: #e5484d; font-weight: 800; }
+/* Son dakika bandı: parıltı + yanıp sönen canlı nokta */
+.uyari-bandi.sondakika { overflow: hidden; background: linear-gradient(90deg, #7f1d1d, #dc2626 55%, #b91c1c); }
+.uyari-bandi.sondakika::after { content: ''; position: absolute; top: 0; bottom: 0; left: -35%; width: 28%; background: linear-gradient(100deg, transparent, rgba(255,255,255,.32), transparent); transform: skewX(-20deg); animation: sd-parilti 3.6s ease-in-out infinite; pointer-events: none; }
+@keyframes sd-parilti { 0% { left: -35%; } 55%, 100% { left: 135%; } }
+.sd-canli { position: relative; width: 12px; height: 12px; flex: none; margin: 0 2px 0 4px; }
+.sd-canli i, .sd-canli::before, .sd-canli::after { position: absolute; inset: 0; border-radius: 50%; }
+.sd-canli i { background: #fff; box-shadow: 0 0 10px 2px rgba(255,255,255,.8); animation: sd-nokta 1.2s ease-in-out infinite; }
+.sd-canli::before, .sd-canli::after { content: ''; border: 2px solid rgba(255,255,255,.9); animation: sd-halka 1.8s ease-out infinite; }
+.sd-canli::after { animation-delay: .9s; }
+@keyframes sd-nokta { 50% { transform: scale(.7); opacity: .55; } }
+@keyframes sd-halka { 0% { transform: scale(1); opacity: .9; } 100% { transform: scale(3); opacity: 0; } }
+.sd-etiket { flex: none; background: #fff; color: #b91c1c; font-weight: 900; font-size: 12.5px; letter-spacing: .08em; padding: 4px 10px; border-radius: 999px; box-shadow: 0 4px 14px rgba(0,0,0,.18); }
+.uyari-bandi.sondakika .uyari-metin { font-weight: 700; }
+@media (max-width: 640px) { .sd-etiket { font-size: 11px; padding: 3px 8px; } }
+@media (prefers-reduced-motion: reduce) { .uyari-bandi.sondakika::after, .sd-canli i, .sd-canli::before, .sd-canli::after { animation: none; } }

@@ -220,10 +220,10 @@ export function yanKutular(servis, ilce = null, { anaSayfa = false } = {}) {
   const eczaneler = ilce ? ilceEczaneleri(servis, ilce.slug) : [];
   const okunan = servis?.enCokOkunan || [];
   return `<aside class="yan">
+${okunan.length >= 3 ? `<section class="kutu kutu-okunan">${kutuBasligi({ ikon: ikon.alev(18), baslik: 'En sıcak haberler', alt: '<span class="canli-nokta"></span> canlı' })}
+<ol class="okunan-liste">${okunan.map((o, i) => `<li><a href="${h(o.yol)}"><span class="ok-no">${i + 1}</span>${o.gorsel ? `<img src="${h(o.gorsel)}" alt="" width="64" height="48" loading="lazy">` : `<span class="ok-ikon">${(ikon[o.ikon] || ikon.ok)(20)}</span>`}<span class="ok-ic"><span class="ok-baslik">${h(o.baslik)}</span>${o.zaman ? `<small class="ok-zaman"><time datetime="${o.zaman}">${saat(o.zaman)}</time> · <span data-once="${o.zaman}">${saat(o.zaman)}</span></small>` : ''}</span></a></li>`).join('')}</ol></section>` : ''}
 ${macGunuKutusu(servis)}
 ${reklamAlani('yan-ust')}
-${okunan.length >= 3 ? `<section class="kutu kutu-okunan">${kutuBasligi({ ikon: ikon.alev(18), baslik: 'En sıcak haberler', alt: '<span class="canli-nokta"></span> canlı' })}
-<ol class="okunan-liste">${okunan.map((o, i) => `<li><a href="${h(o.yol)}"><span class="ok-no">${i + 1}</span>${o.gorsel ? `<img src="${h(o.gorsel)}" alt="" width="64" height="48" loading="lazy">` : `<span class="ok-ikon">${(ikon[o.ikon] || ikon.ok)(20)}</span>`}<span class="ok-baslik">${h(o.baslik)}${o.zaman ? `<small data-once="${o.zaman}">${saat(o.zaman)}</small>` : ''}</span></a></li>`).join('')}</ol></section>` : ''}
 ${ilce ? `<section class="kutu kutu-eczane">
 ${kutuBasligi({ ikon: ikon.eczane(18), baslik: `${h(ilce.ad)} nöbetçi eczaneler`, link: `/nobetci-eczane/${ilce.slug}/` })}
 ${eczaneler.map((e) => `<a class="satir" href="tel:${h(e.telefon)}"><span>${ikon.eczane(20)} ${h(e.ad)}</span><small>${h(telefonGoster(e.telefon))}</small></a>`).join('') || `<a class="satir" href="/nobetci-eczane/"><span>Bugünün listesi</span><small>→</small></a>`}
@@ -233,7 +233,6 @@ ${kutuBasligi({ ikon: ikon.damla(18), baslik: ilce ? `${h(ilce.ad)} kesintileri`
 <div class="yan-liste" data-sekme-kap>${kesintiSekmeleri(servis, su, { adet: 4 })}</div>
 </section>
 ${anaSayfa ? '' : namazKutusu(servis, ilce)}
-${sporKutusu(servis)}
 ${anaSayfa ? '' : akaryakitKutusu(servis, ilce)}
 ${burcKutusu(servis)}
 <section class="kutu kutu-deprem">

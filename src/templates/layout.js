@@ -93,7 +93,7 @@ export function uyarilariAyarla(liste = []) {
 function uyariBantlari() {
   if (!UYARILAR.length) return '';
   return UYARILAR.map(
-    (u) => `<a class="uyari-bandi ${u.tur}" href="${u.link}" data-bitis="${u.bitis}"><span class="kap"><span class="uyari-ikon" aria-hidden="true">${u.ikon}</span><span class="uyari-metin"><strong>${h(u.baslik)}</strong> ${h(u.metin)}</span><span class="uyari-ok" aria-hidden="true">→</span></span></a>`
+    (u) => `<a class="uyari-bandi ${u.tur}" href="${u.link}" data-bitis="${u.bitis}"><span class="kap">${u.tur === 'sondakika' ? '<span class="sd-canli" aria-hidden="true"><i></i></span><strong class="sd-etiket">SON DAKİKA</strong><span class="uyari-metin">' + h(u.metin) + '</span>' : `<span class="uyari-ikon" aria-hidden="true">${u.ikon}</span><span class="uyari-metin"><strong>${h(u.baslik)}</strong> ${h(u.metin)}</span>`}<span class="uyari-ok" aria-hidden="true">→</span></span></a>`
   ).join('') + '<script>document.querySelectorAll(".uyari-bandi[data-bitis]").forEach(function(b){if(Date.now()>+b.dataset.bitis)b.remove()})</script>';
 }
 

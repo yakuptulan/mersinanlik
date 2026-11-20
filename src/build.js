@@ -81,11 +81,11 @@ export function insaEt({ simdi = Date.now() } = {}) {
     .filter((x) => !x.genel && simdi - new Date(x.ilkGorulme).getTime() < 48 * 36e5 && /elektrik(ler)? kesinti|elektrik(ler)?\s.{0,20}kesil|elektriksiz kal/i.test(x.baslik))
     .slice(0, 3)
     .map((x) => ({ baslik: x.baslik, yol: sayfasiVar(x) ? haberYolu(x) : x.kaynaklar[0].link, ilkGorulme: x.ilkGorulme }));
-  // En sıcak haberler: Mersin'den en son gelen 5 haber, yeniden eskiye
+  // En sıcak haberler: Mersin'den en son gelen 10 haber, yeniden eskiye
   servis.enCokOkunan = hikayeler
     .filter((x) => !x.genel)
     .sort((a, b) => new Date(b.ilkGorulme) - new Date(a.ilkGorulme))
-    .slice(0, 5)
+    .slice(0, 10)
     .map((x) => ({ yol: sayfasiVar(x) ? haberYolu(x) : x.kaynaklar[0].link, baslik: x.baslik, gorsel: kapakAdresi(x).src, zaman: x.ilkGorulme }));
 
   // Okul tatili kararları (haber bağlantısı canlı listeden ya da arşivden)

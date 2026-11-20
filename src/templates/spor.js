@@ -191,14 +191,8 @@ export function macGunuKarti(servis, hikayeler, simdi = Date.now()) {
 <span class="mk-alt">${sonra ? 'Maç sonu haberini oku →' : once ? 'Maç önü: ' + h(once.baslik) + ' →' : 'Puan durumu ve fikstür →'}</span>
 </a>`;
   }
-  const sl = (L['super-lig']?.maclar || []).filter((m) => m.tarih === bugun);
-  if (!sl.length) return '';
-  return `<section class="sl-serit"><a class="sl-serit-bas" href="/spor/#super-lig">🏆 Bugün Süper Lig'de</a><div class="sl-serit-maclar">${sl
-    .map((m) => {
-      const durum = durumu(m);
-      return `<a class="sl-serit-mac ${durum}" href="/spor/#super-lig"><span>${takimRozeti(m.ev)}${h(KISA_TAKIM[m.ev] || m.ev)}</span><b>${m.skor && durum !== 'baslamadi' ? h(m.skor.replace('-', ' – ')) : durum === 'baslamadi' ? h(m.saat || '') : '–'}</b><span>${takimRozeti(m.dep)}${h(KISA_TAKIM[m.dep] || m.dep)}</span>${durum === 'oynaniyor' ? '<i>canlı</i>' : ''}</a>`;
-    })
-    .join('')}</div></section>`;
+  // Süper Lig maçları yan kutudaki "Bugünün maçları"nda gösteriliyor; ana sayfada ayrıca şerit yok
+  return '';
 }
 
 // ---------- Derbi geri sayımı (Süper Lig) ----------
