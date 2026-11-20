@@ -1,8 +1,8 @@
 {
- "guncelleme": "2026-11-20T00:01:45.359Z",
+ "guncelleme": "2026-11-20T00:31:57.199Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 17,
+   "sicaklik": 16,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -39,7 +39,7 @@
   },
   "anamur": {
    "sicaklik": 16,
-   "durum": "Açık",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
@@ -74,8 +74,8 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 16,
-   "durum": "Az bulutlu",
+   "sicaklik": 15,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-20",
@@ -110,7 +110,7 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 16,
+   "sicaklik": 15,
    "durum": "Az bulutlu",
    "gunler": [
     {
@@ -254,7 +254,7 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 16,
+   "sicaklik": 15,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -398,7 +398,7 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 17,
+   "sicaklik": 16,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -434,7 +434,7 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 17,
+   "sicaklik": 16,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-20T00:01:50.283Z",
+  "guncelleme": "2026-11-20T00:32:02.005Z",
   "liste": [
    {
     "ad": "Asel Aslan Eczanesi",
@@ -675,7 +675,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-20T00:01:51.369Z",
+  "guncelleme": "2026-11-20T00:32:03.382Z",
   "liste": []
  },
  "piyasa": {
@@ -1771,7 +1771,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-19T21:32:04.818Z",
+  "guncelleme": "2026-11-20T00:32:20.570Z",
   "liste": [
    {
     "id": "gzi1bq",
@@ -1875,7 +1875,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-19T23:32:11.528Z",
+  "guncelleme": "2026-11-20T00:32:20.571Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8232,11 +8232,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-20T00:02:00.548Z",
+  "guncelleme": "2026-11-20T00:32:16.868Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 25
+    "sayi": 22
    },
    {
     "yol": "/spor/",
@@ -8353,10 +8353,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-20T00:02:02.196Z",
+  "guncelleme": "2026-11-20T00:33:03.421Z",
   "deniz": {
    "sicaklik": 21.5,
-   "dalga": 0.78
+   "dalga": 0.72
   },
   "hava": {
    "aqi": 31,
@@ -8366,7 +8366,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-20T00:02:04.167Z",
+  "guncelleme": "2026-11-20T00:33:06.165Z",
   "giden": [
    {
     "no": [
@@ -8377,7 +8377,7 @@
     "planlanan": "2026-11-20T01:10:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KONTUAR AÇIK",
+    "durum": "BOARDING",
     "hat": "ic"
    },
    {
@@ -8401,7 +8401,7 @@
     "planlanan": "2026-11-20T02:00:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8929,6 +8929,18 @@
     "planlanan": "2026-11-20T20:55:00.000Z",
     "tahmini": null,
     "kapi": "107",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2097"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-21T00:25:00.000Z",
+    "tahmini": null,
+    "kapi": "109",
     "durum": "",
     "hat": "ic"
    }
@@ -9537,7 +9549,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-20T00:02:04.167Z",
+  "guncelleme": "2026-11-20T00:33:06.164Z",
   "liste": [
    {
     "id": 6375,
