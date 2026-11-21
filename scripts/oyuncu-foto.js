@@ -14,6 +14,7 @@ const VERI = path.resolve('data/oyuncu-foto.json');
 const KLASOR = path.resolve('public/oyuncu');
 const TEKRAR_GUN = 14; // bulunamayanlar bu kadar gün sonra yeniden denenir
 const FUTBOLCU = 'Q937857';
+const SURUM = 2; // eşleştirme kuralları değişince bulunamayanlar yeniden denenir
 
 fs.mkdirSync(KLASOR, { recursive: true });
 const kayit = (() => { try { return JSON.parse(fs.readFileSync(VERI, 'utf8')); } catch { return {}; } })();
@@ -41,7 +42,7 @@ const kulupEsle = (a, b) => { const x = sozcukler(a), y = sozcukler(b); return x
 const etiket = (e) => e?.labels?.tr?.value || e?.labels?.en?.value || '';
 const iddia = (e, p) => (e?.claims?.[p] || []).map((c) => c.mainsnak?.datavalue?.value).filter(Boolean);
 
-async function bul(o) {
+async function bul(o, gevsek) {
   for (const q of aramalar(o.ad)) {
     const s = await wd({ action: 'wbsearchentities', search: q, language: 'en', type: 'item', limit: '7' });
     const idler = (s.search || []).map((x) => x.id);
@@ -54,6 +55,14 @@ async function bul(o) {
     const kulupler = kulupIdler.length ? (await wd({ action: 'wbgetentities', ids: kulupIdler.join('|'), props: 'labels', languages: 'tr|en' })).entities || {} : {};
     const uygun = adaylar.find((e) => iddia(e, 'P54').some((v) => kulupEsle(o.kulup, etiket(kulupler[v.id]))));
     if (uygun) return { qid: uygun.id, dosya: iddia(uygun, 'P18')[0] };
+    // Wikidata'da yeni kulübü henüz yazılmamış olabilir: adı birebir aynı, tek, yaşayan ve aktif yaşta (1986 sonrası doğumlu) futbolcu varsa kabul.
+    // Bu gevşek kural yalnızca üst liglerde (Süper Lig, 1. Lig) uygulanır; alt liglerde aynı adlı başka biri olma ihtimali yüksek.
+    if (gevsek) {
+      const sade = (x) => x.toLocaleLowerCase('en').normalize('NFD').replace(/[^a-z ]/g, '').replace(/\s+/g, ' ').trim();
+      const birebir = adaylar.filter((e) => sade(etiket(e)) === sade(q) || Object.values(e.labels || {}).some((l) => sade(l.value) === sade(q)));
+      const yasayan = birebir.filter((e) => !iddia(e, 'P570').length && iddia(e, 'P569').some((d) => Number(String(d.time).slice(1, 5)) >= 1986));
+      if (yasayan.length === 1 && adaylar.length <= 2) return { qid: yasayan[0].id, dosya: iddia(yasayan[0], 'P18')[0], gevsek: true };
+    }
     await bekle(300);
   }
   return null;
@@ -73,21 +82,21 @@ async function indir(qid, dosya) {
   return { yazar, lisans, kaynak: ii.descriptionurl || `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(dosya)}` };
 }
 
-const oyuncular = Object.values(servis.spor?.golKralligi || {}).flatMap((g) => g.liste || []);
+const oyuncular = Object.entries(servis.spor?.golKralligi || {}).flatMap(([kod, g]) => (g.liste || []).map((o) => ({ ...o, gevsek: kod !== '3-lig-3' })));
 let yeni = 0, deneme = 0;
 for (const o of oyuncular) {
   const anahtar = `${o.ad}|${o.kulup}`;
   const k = kayit[anahtar];
   if (k?.qid && fs.existsSync(path.join(KLASOR, `${k.qid}.webp`))) continue;
-  if (k?.yok && Date.now() - new Date(k.tarih).getTime() < TEKRAR_GUN * 864e5) continue;
-  if (++deneme > 25) break; // her çalışmada en fazla 25 oyuncu (Wikimedia'yı yormamak için)
+  if (k?.yok && k.surum === SURUM && Date.now() - new Date(k.tarih).getTime() < TEKRAR_GUN * 864e5) continue;
+  if (++deneme > 40) break; // her çalışmada en fazla 25 oyuncu (Wikimedia'yı yormamak için)
   try {
-    const b = await bul(o);
+    const b = await bul(o, o.gevsek);
     const f = b && (await indir(b.qid, b.dosya));
     if (f && !f.red) {
-      kayit[anahtar] = { qid: b.qid, ...f, tarih: new Date().toISOString() };
+      kayit[anahtar] = { qid: b.qid, ...f, ...(b.gevsek ? { gevsek: true } : {}), tarih: new Date().toISOString() };
       yeni++;
-    } else kayit[anahtar] = { yok: true, neden: f?.red ? `lisans: ${f.red}` : 'bulunamadı', tarih: new Date().toISOString() };
+    } else kayit[anahtar] = { yok: true, surum: SURUM, neden: f?.red ? `lisans: ${f.red}` : 'bulunamadı', tarih: new Date().toISOString() };
   } catch (e) {
     console.warn(`! ${o.ad}: ${e.message}`);
   }
