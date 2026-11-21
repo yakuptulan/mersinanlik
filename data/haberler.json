@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-21T05:01:38.258Z",
+ "guncelleme": "2026-11-21T05:32:12.102Z",
  "hikayeler": [
   {
    "id": "2r80dh",
@@ -6219,7 +6219,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-18T13:52:00.000Z",
-   "sonGuncelleme": "2026-11-21T05:01:32.748Z",
+   "sonGuncelleme": "2026-11-21T05:31:45.030Z",
    "kaynaklar": [
     {
      "kaynakId": "cukurova",
@@ -7287,7 +7287,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-19T12:04:00+03:00",
-   "sonGuncelleme": "2026-11-21T05:01:32.945Z",
+   "sonGuncelleme": "2026-11-21T05:31:45.368Z",
    "kaynaklar": [
     {
      "kaynakId": "haberturk-mersin",
@@ -8512,29 +8512,6 @@
    "otomatik": true,
    "kapak": "su",
    "gorselHatasi": "otomatik haber: ilçe çizimi kullanılır"
-  },
-  {
-   "id": "1c6mxx0",
-   "baslik": "Belediye Meclislerinde Seçim Kuralları Değişti:",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "belediye",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-20T05:26:00.000Z",
-   "sonGuncelleme": "2026-11-20T05:31:48.035Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "mersinportal",
-     "ad": "Mersin Portal",
-     "link": "https://www.mersinportal.com/belediye-meclislerinde-secim-kurallari-degisti-artik-tercih-muhru-kullanilacak",
-     "baslik": "Belediye Meclislerinde Seçim Kuralları Değişti:",
-     "tarih": "2026-11-20T05:26:00.000Z"
-    }
-   ]
   },
   {
    "id": "1ci2phq",
@@ -16203,7 +16180,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-20T19:22:23.000Z",
-   "sonGuncelleme": "2026-11-21T05:01:36.559Z",
+   "sonGuncelleme": "2026-11-21T05:31:47.540Z",
    "kaynaklar": [
     {
      "kaynakId": "aa-guncel",
@@ -16965,6 +16942,55 @@
      "link": "https://www.aa.com.tr/tr/dunya/iran-devrim-muhafizlari-hurmuz-bogazinda-abdye-ait-iha-dusuruldu/4132444",
      "baslik": "İran Devrim Muhafızları: Hürmüz Boğazı'nda ABD'ye ait İHA düşürüldü",
      "tarih": "2026-11-20T16:39:09.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1dj0jce",
+   "baslik": "Mersin Pazarcılar Odası tek tip iş yeleği sistemine geçiyor",
+   "ozet": null,
+   "ozetIcinMetin": "Mersin Pazarcılar Esnaf Odası Başkanı Abdülhalim Batur imzasıyla oda üyelerine yönelik bir duyuru yayımlandı. Duyuruda, oda tarafından pazarcı esnafının kullanımına sunulmak üzere yaptırılması planlanan yeleklerin renginin üyelerin tercihleri doğrultusunda belirleneceği bildirildi.\nEsnafın fikirlerinin kendileri için önemli olduğunu ifade eden Başkan Abdülhalim Batur, üyelerden tercih ettikleri yelek renklerini odanın sosyal medya paylaşımlarının yorum bölümlerine veya durum paylaşımlarına yazarak iletmelerini istedi. Batur, ortak karar alma vurgusu yaptığı açıklamasında, “Unutmayalım ki biz büyük bir aileyiz. Birlikte karar alıyor, birlikte güçleniyoruz. Şimdiden tüm esnaf kardeşlerime teşekkür ediyorum” ifadelerine yer verdi.\nBu bağlantı sizi https://cukurovagazetesi.com dışındaki bir siteye yönlendiriyor.",
+   "ilceler": [],
+   "genel": false,
+   "kategori": "siyaset",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-21T05:28:00.000Z",
+   "sonGuncelleme": "2026-11-21T05:31:45.998Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "cukurova",
+     "ad": "Çukurova Gazetesi",
+     "link": "https://cukurovagazetesi.com/mersin-pazarcilar-odasi-tek-tip-is-yelegi-sistemine-geciyor",
+     "baslik": "Mersin Pazarcılar Odası tek tip iş yeleği sistemine geçiyor",
+     "tarih": "2026-11-21T05:28:00.000Z"
+    }
+   ],
+   "metinDenemesi": 1,
+   "yaziKaynak": "Çukurova Gazetesi",
+   "yazimDenemesi": 1
+  },
+  {
+   "id": "1fefm0q",
+   "baslik": "İBB'nin 2027 mali yılı bütçesi kabul edildi",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "belediye",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-21T05:21:00.000Z",
+   "sonGuncelleme": "2026-11-21T05:31:46.004Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "cukurova",
+     "ad": "Çukurova Gazetesi",
+     "link": "https://cukurovagazetesi.com/atama-ve-gorevden-alma-kararlari-resmi-gazetede-yayimlandi",
+     "baslik": "İBB'nin 2027 mali yılı bütçesi kabul edildi",
+     "tarih": "2026-11-21T05:21:00.000Z"
     }
    ]
   }
