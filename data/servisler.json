@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-21T09:59:45.424Z",
+ "guncelleme": "2026-11-21T10:02:44.437Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 21,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T09:59:49.069Z",
+  "guncelleme": "2026-11-21T10:02:47.893Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T09:59:50.066Z",
+  "guncelleme": "2026-11-21T10:02:48.843Z",
   "liste": [
    {
     "tur": "su",
@@ -865,31 +865,11 @@
       ]
      }
     ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Toroslar ilçesi Kaşlı Mahallesi 108039 Sokak'ta oluşan arıza nedeniyle Kaşlı, Buluklu, Resulköy, Düğdüören ve Çamlıdere mahallelerinde saat 13:00'e kadar su kesintisi yaşanacaktır.",
-    "baslangic": "2026-11-21T07:15:00.000Z",
-    "bitis": "2026-11-21T10:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "toroslar",
-      "ad": "Toroslar",
-      "mahalleler": [
-       "Buluklu",
-       "Çamlıdere",
-       "Düğdüören",
-       "Kaşlı",
-       "Resulköy"
-      ]
-     }
-    ]
    }
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T09:59:52.075Z",
+  "guncelleme": "2026-11-21T10:02:50.914Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -922,9 +902,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2927141,
-    "usd": 57919,
-    "degisim": -6.08
+    "satis": 2926651,
+    "usd": 57909,
+    "degisim": -6.13
    }
   },
   "altinlar": [
@@ -1057,10 +1037,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 12:59:01"
+  "kaynakSaati": "2026-11-21 13:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T09:59:54.461Z",
+  "guncelleme": "2026-11-21T10:02:52.683Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8397,7 +8377,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T09:59:54.795Z",
+  "guncelleme": "2026-11-21T10:02:53.004Z",
   "liste": [
    {
     "yol": "/",
@@ -8514,33 +8494,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T09:59:56.508Z",
+  "guncelleme": "2026-11-21T10:02:54.430Z",
   "deniz": {
    "sicaklik": 21.7,
-   "dalga": 0.48
+   "dalga": 0.5
   },
   "hava": {
-   "aqi": 43,
-   "pm25": 14.8,
-   "pm10": 23.6,
+   "aqi": 34,
+   "pm25": 11.4,
+   "pm10": 16.6,
    "uvMax": 2.15
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T09:59:58.415Z",
+  "guncelleme": "2026-11-21T10:02:55.995Z",
   "giden": [
-   {
-    "no": [
-     "PC3601"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Antalya",
-    "planlanan": "2026-11-21T10:00:00.000Z",
-    "tahmini": "2026-11-21T10:30:00.000Z",
-    "kapi": "108",
-    "durum": "BOARDING",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC4285"
@@ -9682,11 +9650,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3621"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Milas Bodrum",
+    "planlanan": "2026-11-22T10:00:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T09:59:58.414Z",
+  "guncelleme": "2026-11-21T10:02:55.995Z",
   "liste": [
    {
     "id": 6386,
