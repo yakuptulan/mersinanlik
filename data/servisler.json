@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-21T10:02:44.437Z",
+ "guncelleme": "2026-11-21T10:15:18.275Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 21,
@@ -147,7 +147,7 @@
   },
   "camliyayla": {
    "sicaklik": 14,
-   "durum": "Bulutlu",
+   "durum": "Hafif yağmurlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -290,7 +290,7 @@
    ]
   },
   "mut": {
-   "sicaklik": 22,
+   "sicaklik": 23,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T10:02:47.893Z",
+  "guncelleme": "2026-11-21T10:15:23.045Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T10:02:48.843Z",
+  "guncelleme": "2026-11-21T10:15:24.448Z",
   "liste": [
    {
     "tur": "su",
@@ -865,11 +865,28 @@
       ]
      }
     ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Tarsus ilçesi Çağlayan Mahallesi ana isale hattında meydana gelen arızadan kaynaklı olarak Çağlayan ve Fatih mahallelerinde su kesintisi yaşanmaktadır. Tahmini olarak saat 15.00'te su verilmesi planlanmaktadır.",
+    "baslangic": "2026-11-21T10:10:00.000Z",
+    "bitis": "2026-11-21T12:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "tarsus",
+      "ad": "Tarsus",
+      "mahalleler": [
+       "Çağlayan",
+       "Fatih"
+      ]
+     }
+    ]
    }
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T10:02:50.914Z",
+  "guncelleme": "2026-11-21T10:15:29.706Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -902,9 +919,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2926651,
-    "usd": 57909,
-    "degisim": -6.13
+    "satis": 2927346,
+    "usd": 57923,
+    "degisim": -6.24
    }
   },
   "altinlar": [
@@ -1037,10 +1054,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 13:02:01"
+  "kaynakSaati": "2026-11-21 13:15:03"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T10:02:52.683Z",
+  "guncelleme": "2026-11-21T10:15:32.445Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1965,7 +1982,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-21T09:32:18.216Z",
+  "guncelleme": "2026-11-21T10:15:34.535Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8357,6 +8374,254 @@
      ]
     }
    }
+  },
+  "golKralligi": {
+   "super-lig": {
+    "ad": "Süper Lig",
+    "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
+    "guncelleme": "2026-11-21T10:16:17.407Z",
+    "liste": [
+     {
+      "ad": "GIFT EMMANUEL ORBAN",
+      "kulup": "Amed Sportif Faaliyetler",
+      "gol": 10
+     },
+     {
+      "ad": "DUSAN VLAHOVIC",
+      "kulup": "Beşiktaş",
+      "gol": 9
+     },
+     {
+      "ad": "MOHAMED SALAH HAMED MAHROUS GHALY",
+      "kulup": "Trabzonspor",
+      "gol": 9
+     },
+     {
+      "ad": "VICTOR JAMES OSIMHEN",
+      "kulup": "Galatasaray",
+      "gol": 9
+     },
+     {
+      "ad": "ELDOR SHOMURODOV",
+      "kulup": "İstanbul Başakşehir FK",
+      "gol": 8
+     },
+     {
+      "ad": "ADRIAN DAWID BENEDYCZAK",
+      "kulup": "Kasımpaşa",
+      "gol": 7
+     },
+     {
+      "ad": "JUAN SANTOS DA SILVA",
+      "kulup": "Göztepe",
+      "gol": 7
+     },
+     {
+      "ad": "VEDAT MURIÇ",
+      "kulup": "Fenerbahçe",
+      "gol": 7
+     },
+     {
+      "ad": "DIAA SABI'A",
+      "kulup": "Amed Sportif Faaliyetler",
+      "gol": 6
+     },
+     {
+      "ad": "JESUS ANDRES RAMIREZ DIAZ",
+      "kulup": "Arca Çorum FK",
+      "gol": 6
+     },
+     {
+      "ad": "MASON WILL JOHN GREENWOOD",
+      "kulup": "Fenerbahçe",
+      "gol": 6
+     },
+     {
+      "ad": "BERKAN İSMAİL KUTLU",
+      "kulup": "Kocaelispor",
+      "gol": 5
+     },
+     {
+      "ad": "İRFAN CAN KAHVECİ",
+      "kulup": "Fenerbahçe",
+      "gol": 5
+     },
+     {
+      "ad": "ALEXANDROS KYZIRIDIS",
+      "kulup": "Arca Çorum FK",
+      "gol": 4
+     },
+     {
+      "ad": "ALI SOWE",
+      "kulup": "Çaykur Rizespor",
+      "gol": 4
+     }
+    ]
+   },
+   "1-lig": {
+    "ad": "1. Lig",
+    "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
+    "guncelleme": "2026-11-21T10:16:18.936Z",
+    "liste": [
+     {
+      "ad": "KELECHI PROMISE IHEANACHO",
+      "kulup": "Bursaspor",
+      "gol": 17
+     },
+     {
+      "ad": "DANİEL MORENO MOSQUERA",
+      "kulup": "Metro Holding Kayserispor",
+      "gol": 11
+     },
+     {
+      "ad": "REI MANAJ",
+      "kulup": "Ekenler Beton Sivasspor",
+      "gol": 10
+     },
+     {
+      "ad": "TAULAN SULEJMANOV",
+      "kulup": "Metro Holding Kayserispor",
+      "gol": 10
+     },
+     {
+      "ad": "JULIEN FRANCOIS MARC ANZIANI",
+      "kulup": "Manisa",
+      "gol": 8
+     },
+     {
+      "ad": "MAME BIRAM DIOUF",
+      "kulup": "Keçtaş Ankara Keçiörengücü",
+      "gol": 8
+     },
+     {
+      "ad": "CHEICKNE SYLLA",
+      "kulup": "Manisa",
+      "gol": 7
+     },
+     {
+      "ad": "ALEKSANDAR PESIC",
+      "kulup": "Mısırlıcomtr Fatih Karagümrük",
+      "gol": 5
+     },
+     {
+      "ad": "FLORENT HASANİ",
+      "kulup": "Metro Holding Kayserispor",
+      "gol": 5
+     },
+     {
+      "ad": "GIANNI SALVATORE P. BRUNO",
+      "kulup": "Bandırma Spor",
+      "gol": 5
+     },
+     {
+      "ad": "GUELOR KANGA KAKU",
+      "kulup": "Turka Esenler Erokspor",
+      "gol": 5
+     },
+     {
+      "ad": "OLARENWAJU AYOBAMI KAYODE",
+      "kulup": "Mardin 1969 Spor",
+      "gol": 5
+     },
+     {
+      "ad": "PEDRO HENRIQUE OLIVEIRA DOS SANTOS",
+      "kulup": "Batman Petrol Spor",
+      "gol": 5
+     },
+     {
+      "ad": "VINCENT ABOUBAKAR",
+      "kulup": "Bodrum FK",
+      "gol": 5
+     },
+     {
+      "ad": "ALEXANDER GERARD VAN DE STREEK",
+      "kulup": "Antalyaspor",
+      "gol": 4
+     }
+    ]
+   },
+   "3-lig-3": {
+    "ad": "3. Lig 3. Grup",
+    "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
+    "guncelleme": "2026-11-21T10:16:20.233Z",
+    "liste": [
+     {
+      "ad": "CHRİSTOPHER JAKOB AYDEMİR",
+      "kulup": "Kırıkkale FK Spor",
+      "gol": 13
+     },
+     {
+      "ad": "İBRAHİM KOCA",
+      "kulup": "Niğde Belediyesi Spor",
+      "gol": 13
+     },
+     {
+      "ad": "ENES NALBANTOĞLU",
+      "kulup": "Malatya Yeşilyurt Spor",
+      "gol": 10
+     },
+     {
+      "ad": "OZAN CAN DURSUN",
+      "kulup": "Ejderoğlu Kırşehir",
+      "gol": 9
+     },
+     {
+      "ad": "ÖMER HASAN ŞİŞMANOĞLU",
+      "kulup": "Ayos Osmaniyespor",
+      "gol": 8
+     },
+     {
+      "ad": "AYKUT SARIDOĞAN",
+      "kulup": "Malatya Yeşilyurt Spor",
+      "gol": 7
+     },
+     {
+      "ad": "MUHAMMED ENES YILMAZ",
+      "kulup": "Malatya Yeşilyurt Spor",
+      "gol": 6
+     },
+     {
+      "ad": "MUHAMMED MUSTAFA PINARCI",
+      "kulup": "Ejderoğlu Kırşehir",
+      "gol": 6
+     },
+     {
+      "ad": "TAYYİB KANARYA",
+      "kulup": "Malatya Yeşilyurt Spor",
+      "gol": 6
+     },
+     {
+      "ad": "AHMET TEKER",
+      "kulup": "Eti Gübre Mazıdağı Fosfat Spor",
+      "gol": 5
+     },
+     {
+      "ad": "ARTUN AKÇAKIN",
+      "kulup": "Açıkalın Erciyes 38",
+      "gol": 5
+     },
+     {
+      "ad": "BEKİRCAN ÇOBAN",
+      "kulup": "1964 Silifke Spor",
+      "gol": 5
+     },
+     {
+      "ad": "KEREM YAŞA",
+      "kulup": "Yeni Mersin İdmanyurdu",
+      "gol": 5
+     },
+     {
+      "ad": "MUHAMMET FURKAN KILIÇ",
+      "kulup": "Halil Bayram İnşaat Karaköprü Belediyespor",
+      "gol": 5
+     },
+     {
+      "ad": "YAKUP ALKAN",
+      "kulup": "Ayos Osmaniyespor",
+      "gol": 5
+     }
+    ]
+   }
   }
  },
  "burc": {
@@ -8377,11 +8642,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T10:02:53.004Z",
+  "guncelleme": "2026-11-21T10:15:32.787Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 33
+    "sayi": 34
    },
    {
     "yol": "/kategori/belediye/",
@@ -8400,11 +8665,11 @@
     "sayi": 5
    },
    {
-    "yol": "/okullar-tatil-mi/istanbul/",
-    "sayi": 4
+    "yol": "/spor/",
+    "sayi": 5
    },
    {
-    "yol": "/spor/",
+    "yol": "/okullar-tatil-mi/istanbul/",
     "sayi": 4
    },
    {
@@ -8494,10 +8759,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T10:02:54.430Z",
+  "guncelleme": "2026-11-21T10:16:21.434Z",
   "deniz": {
    "sicaklik": 21.7,
-   "dalga": 0.5
+   "dalga": 0.54
   },
   "hava": {
    "aqi": 34,
@@ -8507,20 +8772,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T10:02:55.995Z",
+  "guncelleme": "2026-11-21T10:16:23.525Z",
   "giden": [
-   {
-    "no": [
-     "PC4285"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-21T10:05:00.000Z",
-    "tahmini": "2026-11-21T10:10:00.000Z",
-    "kapi": "105",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
    {
     "no": [
      "TK2457"
@@ -8530,7 +8783,7 @@
     "planlanan": "2026-11-21T10:30:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "BOARDING",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -8554,7 +8807,7 @@
     "planlanan": "2026-11-21T11:00:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -9099,18 +9352,6 @@
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "PC2084"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-21T10:05:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC1855"
@@ -9666,7 +9907,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T10:02:55.995Z",
+  "guncelleme": "2026-11-21T10:16:23.524Z",
   "liste": [
    {
     "id": 6386,
