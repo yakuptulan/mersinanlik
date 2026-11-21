@@ -1,9 +1,9 @@
 {
- "guncelleme": "2026-11-21T03:01:49.708Z",
+ "guncelleme": "2026-11-21T03:31:49.562Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 18,
-   "durum": "Bulutlu",
+   "sicaklik": 17,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T03:01:53.954Z",
+  "guncelleme": "2026-11-21T03:31:53.070Z",
   "liste": [
    {
     "ad": "Dila Bangiz Eczanesi",
@@ -686,11 +686,11 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T03:01:55.190Z",
+  "guncelleme": "2026-11-21T03:31:54.215Z",
   "liste": []
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T03:01:57.333Z",
+  "guncelleme": "2026-11-21T03:31:58.894Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -723,9 +723,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2955520,
-    "usd": 58503,
-    "degisim": -6.02
+    "satis": 2941495,
+    "usd": 58225,
+    "degisim": -6.3
    }
   },
   "altinlar": [
@@ -858,10 +858,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 06:01:01"
+  "kaynakSaati": "2026-11-21 06:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T03:01:59.820Z",
+  "guncelleme": "2026-11-21T03:32:02.067Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1682,7 +1682,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-21T00:32:09.033Z",
+  "guncelleme": "2026-11-21T03:32:05.633Z",
   "liste": [
    {
     "id": "gzi1bq",
@@ -1786,7 +1786,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-21T02:32:04.516Z",
+  "guncelleme": "2026-11-21T03:32:05.633Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -5633,24 +5633,24 @@
      "Beyoğlu Yeni Çarşı Spor Faaliyetleri": "3096",
      "Adana 01 Futbol Kulübü SK": "9498",
      "İskenderunspor": "4258",
-     "Hatayspor": "121",
-     "Güzide Gebze Spor": "746",
-     "Menemen": "1120",
-     "İnegöl Kafkas Spor": "3276",
-     "Isbaş Isparta 32 Spor": "1484",
-     "Adana Demirspor": "3603",
-     "Gmg Kastamonuspor": "4342",
-     "Çorlu Spor 1947": "5044",
-     "Arkent Arnavutköy Belediyesi Futbol SK": "6039",
-     "Aliağa": "2720",
-     "Kızılkaya Tarım Şanlıurfaspor": "31",
-     "Ankaraspor": "4355",
-     "Seza Çimento Elazığspor": "37",
-     "Sebat Spor": "10300",
      "Somaspor": "497",
      "68 Aksaray Belediye Spor": "6496",
      "Efor Çay Erbaaspor": "3641",
-     "Muş Spor": "8722"
+     "Muş Spor": "8722",
+     "Kızılkaya Tarım Şanlıurfaspor": "31",
+     "Ankaraspor": "4355",
+     "Menemen": "1120",
+     "İnegöl Kafkas Spor": "3276",
+     "Seza Çimento Elazığspor": "37",
+     "Sebat Spor": "10300",
+     "Isbaş Isparta 32 Spor": "1484",
+     "Adana Demirspor": "3603",
+     "Arkent Arnavutköy Belediyesi Futbol SK": "6039",
+     "Aliağa": "2720",
+     "Hatayspor": "121",
+     "Güzide Gebze Spor": "746",
+     "Gmg Kastamonuspor": "4342",
+     "Çorlu Spor 1947": "5044"
     },
     "form": {
      "52 Orduspor FK": [
@@ -8198,7 +8198,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T03:02:00.531Z",
+  "guncelleme": "2026-11-21T03:32:02.552Z",
   "liste": [
    {
     "yol": "/",
@@ -8315,7 +8315,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T03:02:02.181Z",
+  "guncelleme": "2026-11-21T03:32:46.486Z",
   "deniz": {
    "sicaklik": 21.5,
    "dalga": 0.42
@@ -8328,7 +8328,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T03:02:04.382Z",
+  "guncelleme": "2026-11-21T03:32:48.563Z",
   "giden": [
    {
     "no": [
@@ -8363,7 +8363,7 @@
     "planlanan": "2026-11-21T05:10:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8380,18 +8380,6 @@
    },
    {
     "no": [
-     "PC3640"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Van",
-    "planlanan": "2026-11-21T05:55:00.000Z",
-    "tahmini": null,
-    "kapi": "108",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
      "PC4945"
     ],
     "havayolu": "Pegasus",
@@ -8399,6 +8387,18 @@
     "planlanan": "2026-11-21T05:55:00.000Z",
     "tahmini": null,
     "kapi": "104",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3640"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Van",
+    "planlanan": "2026-11-21T05:55:00.000Z",
+    "tahmini": "2026-11-21T06:05:00.000Z",
+    "kapi": "108",
     "durum": "",
     "hat": "ic"
    },
@@ -8433,7 +8433,7 @@
     "havayolu": "Pegasus",
     "yer": "Sabiha Gökçen",
     "planlanan": "2026-11-21T06:35:00.000Z",
-    "tahmini": null,
+    "tahmini": "2026-11-21T06:40:00.000Z",
     "kapi": "109",
     "durum": "",
     "hat": "ic"
@@ -8881,21 +8881,21 @@
     "kapi": "108",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC4565"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-22T03:05:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "PC1849"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Ercan",
-    "planlanan": "2026-11-21T03:30:00.000Z",
-    "tahmini": "2026-11-21T05:25:00.000Z",
-    "kapi": "",
-    "durum": "GECİKME",
-    "hat": "dis"
-   },
    {
     "no": [
      "PC2080"
@@ -8939,9 +8939,9 @@
     "havayolu": "Pegasus",
     "yer": "Sabiha Gökçen",
     "planlanan": "2026-11-21T05:15:00.000Z",
-    "tahmini": null,
+    "tahmini": "2026-11-21T05:50:00.000Z",
     "kapi": "",
-    "durum": "",
+    "durum": "GECİKME",
     "hat": "ic"
    },
    {
@@ -9451,7 +9451,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T03:02:04.381Z",
+  "guncelleme": "2026-11-21T03:32:48.562Z",
   "liste": [
    {
     "id": 6375,
