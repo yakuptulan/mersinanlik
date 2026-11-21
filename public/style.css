@@ -1633,3 +1633,36 @@ a.cip.kat:hover { filter: brightness(.95); }
 .uyari-bandi.sondakika .uyari-metin { font-weight: 700; }
 @media (max-width: 640px) { .sd-etiket { font-size: 11px; padding: 3px 8px; } }
 @media (prefers-reduced-motion: reduce) { .uyari-bandi.sondakika::after, .sd-canli i, .sd-canli::before, .sd-canli::after { animation: none; } }
+/* ---------- Gol krallığı ---------- */
+.krallik { background: #111827; color: #fff; border-radius: 24px; padding: 20px 0 6px; margin: 22px 0; overflow: hidden; }
+.kr-bas { display: flex; justify-content: space-between; align-items: baseline; padding: 0 22px 12px; }
+.kr-bas h2 { margin: 0; font-size: 22px; color: #fff; }
+.kr-bas span { color: #94a3b8; font-size: 14px; }
+.kr-radyo { position: absolute; opacity: 0; pointer-events: none; }
+.kr-sekmeler { display: flex; gap: 4px; padding: 0 14px; border-bottom: 1px solid #263042; overflow-x: auto; scrollbar-width: none; }
+.kr-sekmeler label { padding: 12px 14px; font-weight: 800; font-size: 15px; color: #94a3b8; cursor: pointer; white-space: nowrap; border-bottom: 3px solid transparent; }
+.kr-sekmeler label small { font-size: 11px; color: #f87171; }
+.kr-panel { display: none; }
+.kr-panel.tek { display: block; }
+.kr-radyo:nth-of-type(1):checked ~ .kr-panel:nth-of-type(1),
+.kr-radyo:nth-of-type(2):checked ~ .kr-panel:nth-of-type(2),
+.kr-radyo:nth-of-type(3):checked ~ .kr-panel:nth-of-type(3) { display: block; }
+.kr-radyo:nth-of-type(1):checked ~ .kr-sekmeler label:nth-child(1),
+.kr-radyo:nth-of-type(2):checked ~ .kr-sekmeler label:nth-child(2),
+.kr-radyo:nth-of-type(3):checked ~ .kr-sekmeler label:nth-child(3) { color: #fff; border-bottom-color: #f43f5e; }
+.kr-radyo:focus-visible ~ .kr-sekmeler { outline: 2px solid #60a5fa; }
+.kr-liste { list-style: none; margin: 0; padding: 0; }
+.kr-satir { display: grid; grid-template-columns: 26px 52px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 12px 22px; border-bottom: 1px solid #1f2937; }
+.kr-satir.mersin { background: linear-gradient(90deg, rgba(200,16,46,.18), transparent); }
+.kr-sira { color: #94a3b8; font-weight: 700; text-align: center; }
+.kr-satir:first-child .kr-sira { color: #fbbf24; }
+.kr-avatar { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: var(--c); font-weight: 900; font-size: 16px; letter-spacing: .02em; box-shadow: inset 0 0 0 2px rgba(255,255,255,.15); }
+.kr-ad { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.kr-ad b { font-size: 15.5px; letter-spacing: .01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kr-ad small { display: flex; align-items: center; gap: 6px; color: #94a3b8; font-size: 13.5px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kr-ad .takim-logo { width: 20px; height: 20px; margin: 0; flex: none; }
+.kr-gol { display: flex; flex-direction: column; align-items: center; min-width: 44px; }
+.kr-gol b { font-size: 28px; font-weight: 900; line-height: 1; }
+.kr-gol small { color: #94a3b8; font-size: 12px; margin-top: 2px; }
+.kr-alt { display: block; text-align: center; padding: 14px; color: #f87171; font-weight: 700; font-size: 14px; text-decoration: none; }
+@media (max-width: 640px) { .kr-satir { grid-template-columns: 20px 42px minmax(0,1fr) auto; gap: 10px; padding: 11px 16px; } .kr-avatar { width: 42px; height: 42px; font-size: 14px; } .kr-gol b { font-size: 24px; } }

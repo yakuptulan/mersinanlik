@@ -190,3 +190,34 @@ export async function liglerGetir(ua, eski = {}) {
   }
   return sonuc;
 }
+
+// ---------- Gol krallığı (TFF) ----------
+export const GOL_KRALLIGI = [
+  { kod: 'super-lig', url: `${TFF}821`, ad: 'Süper Lig' },
+  { kod: '1-lig', url: `${TFF}822`, ad: '1. Lig' },
+  { kod: '3-lig-3', url: `${TFF}824`, ad: '3. Lig 3. Grup', mersinGrubu: true },
+];
+// Sayfadaki her gol krallığı listesi (3. Lig'de grup başına bir liste): [[{ ad, kulup, gol }]]
+export function golKralligiCoz(html) {
+  const listeler = new Map();
+  const re = /m_(\d+_\d+)_ctnr_m_\d+_\d+_rptGolKralligi_ctl\d+_lblOyuncu"[^>]*>([\s\S]*?)<\/a>[\s\S]*?_lblKulup"[^>]*>([\s\S]*?)<\/a>[\s\S]*?_lblGolSayisi">\s*(\d+)/g;
+  for (const m of String(html).matchAll(re)) {
+    if (!listeler.has(m[1])) listeler.set(m[1], []);
+    listeler.get(m[1]).push({ ad: temizle(m[2]), kulup: takimAdi(temizle(m[3])), gol: Number(m[4]) });
+  }
+  return [...listeler.values()].filter((l) => l.length);
+}
+export async function golKralligiGetir(ua, eski = {}) {
+  const sonuc = { ...eski };
+  for (const g of GOL_KRALLIGI) {
+    try {
+      const listeler = golKralligiCoz(await sayfa(g.url, ua));
+      const liste = g.mersinGrubu ? listeler.find((l) => l.some((o) => mersinMi(o.kulup))) : listeler[0];
+      if (liste?.length >= 3) sonuc[g.kod] = { ad: g.ad, kaynak: g.url, guncelleme: new Date().toISOString(), liste: liste.slice(0, 15) };
+    } catch (e) {
+      console.warn(`! Gol krallığı (${g.ad}): ${e.message}`);
+    }
+    await new Promise((x) => setTimeout(x, 1200));
+  }
+  return sonuc;
+}

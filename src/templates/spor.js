@@ -2,7 +2,7 @@
 import { htmlKacis as h, slugify as _slug } from '../lib/text.js';
 import { kareKart, haberListesi, reklamAlani, haberYolu, kapakAdresi } from './parcalar.js';
 import { kutuBasligi, takimRozeti, takimLogosu, ligTablosu, ligSerit, macListesi, bugununMaclari, KISA_TAKIM } from './servisParcalari.js';
-import { LIGLER } from '../lib/spor.js';
+import { LIGLER, mersinMi } from '../lib/spor.js';
 
 const TZ = 'Europe/Istanbul';
 const gunStr = (t) => new Date(t).toLocaleDateString('sv-SE', { timeZone: TZ });
@@ -148,6 +148,7 @@ ${hafta.length ? `<h3 class="ara-baslik">Haftanın maçları</h3><div class="sl-
 ${slHaber.length ? `<h3 class="ara-baslik">Süper Lig'den haberler</h3>${haberListesi(slHaber)}` : ''}
 </section>` : ''}
 ${takimlar.length ? `<section class="spor-bolum" id="mersin"><div class="bolum-bas"><h2>Mersin takımları</h2><span>Puan durumu, form ve fikstür</span></div><div class="mt-izgara">${takimlar.map((t) => takimKarti(t, simdi)).join('')}</div></section>` : ''}
+${krallikKarti(servis)}
 ${buyuk ? `<section class="spor-bolum"><div class="bolum-bas"><h2>Mersin spor gündemi</h2><a class="bolum-link" href="/kategori/spor/">Tümü →</a></div>
 <div class="kare-izgara spor-izgara">${kareKart(buyuk, true)}${kalan.slice(0, 2).map((x) => kareKart(x)).join('')}</div>
 ${kalan.length > 2 ? haberListesi(kalan.slice(2, 10)) : ''}</section>` : ''}
@@ -269,4 +270,30 @@ ${ligTablosu(lig)}
 <p style="color:var(--ikincil);font-size:14px">Puan durumu ve fikstür: Türkiye Futbol Federasyonu (tff.org). Logolar: TheSportsDB.</p>
 </div>${sporYan(servis, hikayeler, simdi)}</main>`,
   };
+}
+
+// ---------- Gol krallığı ----------
+// TFF adları büyük harfle geldiği için büyük harfle gösterilir (yabancı adlarda I/İ belirsizliği olmasın)
+const kisaOyuncu = (ad) => { const k = String(ad).split(/\s+/).filter(Boolean); return k.length > 2 ? `${k[0]} ${k[k.length - 1]}` : k.join(' '); };
+const basHarf = (ad) => kisaOyuncu(ad).split(' ').map((k) => k[0]).join('').slice(0, 2);
+function krallikListesi(g, adet) {
+  let sira = 0;
+  return `<ol class="kr-liste">${g.liste.slice(0, adet).map((o, i, l) => {
+    if (i === 0 || o.gol !== l[i - 1].gol) sira = i + 1;
+    let n = 0; for (const c of o.kulup) n = (n * 31 + c.charCodeAt(0)) >>> 0;
+    const mersin = mersinMi(o.kulup);
+    return `<li class="kr-satir${mersin ? ' mersin' : ''}"><span class="kr-sira">${sira}</span><span class="kr-avatar" style="--c:${mersin ? '#C8102E' : `hsl(${n % 360} 60% 42%)`}">${h(basHarf(o.ad))}</span><span class="kr-ad"><b>${h(kisaOyuncu(o.ad))}</b><small>${takimLogosu(o.kulup)}${h(KISA_TAKIM[o.kulup] || o.kulup)}</small></span><span class="kr-gol"><b>${o.gol}</b><small>gol</small></span></li>`;
+  }).join('')}</ol>`;
+}
+// Sekmeli gol krallığı kartı. kodlar: gösterilecek ligler (ilki açık gelir)
+export function krallikKarti(servis, kodlar = ['super-lig', '3-lig-3', '1-lig'], adet = 10) {
+  const G = servis?.spor?.golKralligi || {};
+  const var_ = kodlar.filter((k) => G[k]?.liste?.length);
+  if (!var_.length) return '';
+  const ad = `kr${var_.join('').replace(/[^a-z0-9]/g, '')}`;
+  return `<section class="krallik" id="gol-kralligi"><header class="kr-bas"><h2>Gol krallığı</h2><span>${var_.length === 1 ? h(G[var_[0]].ad) : 'TFF resmî verisi'}</span></header>
+${var_.length > 1 ? var_.map((k, i) => `<input type="radio" name="${ad}" id="${ad}-${k}" class="kr-radyo"${i ? '' : ' checked'}>`).join('') : ''}
+${var_.length > 1 ? `<nav class="kr-sekmeler" aria-label="Ligler">${var_.map((k) => `<label for="${ad}-${k}">${h(G[k].ad)}${k === '3-lig-3' ? ' <small>Mersin</small>' : ''}</label>`).join('')}</nav>` : ''}
+${var_.map((k) => `<div class="kr-panel${var_.length === 1 ? ' tek' : ''}">${krallikListesi(G[k], adet)}</div>`).join('')}
+<a class="kr-alt" href="${h(G[var_[0]].kaynak)}" rel="noopener" target="_blank">Kaynak: TFF · ${new Date(G[var_[0]].guncelleme).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', timeZone: TZ })}</a></section>`;
 }

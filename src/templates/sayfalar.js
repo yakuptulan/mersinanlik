@@ -1,6 +1,6 @@
 import { piyasaIkon } from './piyasaIkon.js';
 import { gundemimKarti } from './gundemim.js';
-import { sporYan, sporAnaIcerik, sporMu, macGunuKarti, derbiKarti } from './spor.js';
+import { sporYan, sporAnaIcerik, sporMu, macGunuKarti, derbiKarti, krallikKarti } from './spor.js';
 import { kategoriYan, ekonomiBugunKarti } from './kategoriYan.js';
 import { mahalleListesi, mahalleYolu, sade as mahalleSade } from './mahalle.js';
 import { macGunuKutusu } from './servisParcalari.js';
@@ -657,6 +657,7 @@ export function ligSayfasi({ servis, kod, hikayeler = [] }) {
   const icerik = `<main class="kap govde"><div class="ana">
 ${ligMenusu(sp.ligler || {}, kod)}
 ${k ? `${ligSerit(k)}${k.maclar?.length ? `<h3 class="ara-baslik">Haftanın maçları</h3>${macListesi(k.maclar)}` : ''}<h3 class="ara-baslik">Puan durumu</h3>${ligTablosu(k)}` : '<div class="bos">Puan durumu şu an alınamadı.</div>'}
+${krallikKarti(servis, [kod], 15)}
 <p style="color:var(--ikincil);font-size:15px">Kaynak: Türkiye Futbol Federasyonu (tff.org). Son güncelleme: ${sp.guncelleme ? saat(sp.guncelleme) : '–'}</p>
 </div>${sporYan(servis, hikayeler)}</main>`;
   return sayfa({

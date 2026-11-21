@@ -16,7 +16,7 @@ import { suKesintileriniGetir } from './lib/kesinti.js';
 import { piyasaGetir } from './lib/piyasa.js';
 import { namazGetir } from './lib/namaz.js';
 import { akaryakitGetir } from './lib/akaryakit.js';
-import { sporGetir, liglerGetir } from './lib/spor.js';
+import { sporGetir, liglerGetir, golKralligiGetir } from './lib/spor.js';
 import { etkinlikGetir } from './lib/etkinlik.js';
 import { meteoGetir } from './lib/meteo.js';
 import { yollariGetir } from './lib/yollar.js';
@@ -194,6 +194,7 @@ async function main() {
       const spor = await sporGetir(UA);
       yeni.spor = { ...eski.spor, ...spor };
       yeni.spor.ligler = await liglerGetir(UA, eski.spor?.ligler || {});
+      yeni.spor.golKralligi = await golKralligiGetir(UA, eski.spor?.golKralligi || {});
       console.log(`Spor: Süper Lig ${spor.superLig?.puan?.length || 0} takım, 3. Lig ${spor.ucuncuLig?.puan?.length || 0}, milli ${spor.milli?.maclar?.length || 0} maç, ${Object.keys(yeni.spor.ligler).length} lig`);
     } catch (e) {
       console.warn('! Spor:', e.message);
