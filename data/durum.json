@@ -12,11 +12,15 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-21T08:01:19.839Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-21",
-  "adet": 14
+  "adet": 16
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -337,47 +341,47 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-21T07:31:37.255Z",
+  "guncelleme": "2026-11-21T08:01:48.541Z",
   "liste": [
    {
-    "baslik": "elektrik kesintisi",
+    "baslik": "izmit hava durumu",
     "trafik": 1000
    },
    {
-    "baslik": "aboubakary koita",
-    "trafik": 100
-   },
-   {
-    "baslik": "tbb",
-    "trafik": 100
-   },
-   {
-    "baslik": "danilo zanna",
+    "baslik": "müge anlı",
     "trafik": 200
    },
    {
-    "baslik": "murat ünalmış",
+    "baslik": "üniversite",
     "trafik": 100
    },
    {
-    "baslik": "ankara metrosu",
-    "trafik": 1000
+    "baslik": "galatasaray - samsunspor",
+    "trafik": 200
    },
    {
-    "baslik": "kb5132057",
-    "trafik": 100
+    "baslik": "meral ağalar",
+    "trafik": 200
    },
    {
-    "baslik": "cavaliers - pacers",
-    "trafik": 100
+    "baslik": "banu ilıcalı",
+    "trafik": 200
    },
    {
-    "baslik": "danıştay",
-    "trafik": 1000
+    "baslik": "gökhan günaydın",
+    "trafik": 200
    },
    {
-    "baslik": "thunder - pelicans",
-    "trafik": 100
+    "baslik": "elektrik kesintisi",
+    "trafik": 2000
+   },
+   {
+    "baslik": "sözleşme",
+    "trafik": 200
+   },
+   {
+    "baslik": "aboubakary koita",
+    "trafik": 200
    }
   ]
  },
