@@ -12,15 +12,11 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-21T07:01:18.091Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-21",
-  "adet": 11
+  "adet": 12
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -340,8 +336,24 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-21T07:01:46.595Z",
+  "guncelleme": "2026-11-21T07:17:21.775Z",
   "liste": [
+   {
+    "baslik": "danilo zanna",
+    "trafik": 200
+   },
+   {
+    "baslik": "bitcoin",
+    "trafik": 2000
+   },
+   {
+    "baslik": "murat ünalmış",
+    "trafik": 100
+   },
+   {
+    "baslik": "ankara metrosu",
+    "trafik": 1000
+   },
    {
     "baslik": "kb5132057",
     "trafik": 100
@@ -359,27 +371,11 @@
     "trafik": 100
    },
    {
+    "baslik": "nuri aslan",
+    "trafik": 100
+   },
+   {
     "baslik": "pazar",
-    "trafik": 100
-   },
-   {
-    "baslik": "burdur hava durumu",
-    "trafik": 100
-   },
-   {
-    "baslik": "27 kasım bim kataloğu 2026",
-    "trafik": 100
-   },
-   {
-    "baslik": "işten çıkarma",
-    "trafik": 200
-   },
-   {
-    "baslik": "şeniz doğan",
-    "trafik": 200
-   },
-   {
-    "baslik": "manisa hava durumu",
     "trafik": 200
    }
   ]

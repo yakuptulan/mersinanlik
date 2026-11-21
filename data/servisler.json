@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-21T07:01:52.559Z",
+ "guncelleme": "2026-11-21T07:17:26.555Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -38,8 +38,8 @@
    ]
   },
   "anamur": {
-   "sicaklik": 19,
-   "durum": "Sisli",
+   "sicaklik": 21,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -74,7 +74,7 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 19,
+   "sicaklik": 20,
    "durum": "Hafif yağmurlu",
    "gunler": [
     {
@@ -110,8 +110,8 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 18,
-   "durum": "Sisli",
+   "sicaklik": 20,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -146,8 +146,8 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 12,
-   "durum": "Bulutlu",
+   "sicaklik": 13,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -182,8 +182,8 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 18,
-   "durum": "Sisli",
+   "sicaklik": 20,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -254,8 +254,8 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 19,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 20,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -290,8 +290,8 @@
    ]
   },
   "mut": {
-   "sicaklik": 17,
-   "durum": "Bulutlu",
+   "sicaklik": 19,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -326,7 +326,7 @@
    ]
   },
   "silifke": {
-   "sicaklik": 17,
+   "sicaklik": 20,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -362,8 +362,8 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 18,
-   "durum": "Sisli",
+   "sicaklik": 19,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -398,7 +398,7 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 19,
+   "sicaklik": 20,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -434,7 +434,7 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 19,
+   "sicaklik": 20,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T07:01:55.902Z",
+  "guncelleme": "2026-11-21T07:17:32.293Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -774,7 +774,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T07:01:56.844Z",
+  "guncelleme": "2026-11-21T07:17:33.472Z",
   "liste": [
    {
     "tur": "su",
@@ -807,11 +807,31 @@
       ]
      }
     ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Toroslar ilçesi Kaşlı Mahallesi 108039 Sokak'ta oluşan arıza nedeniyle Kaşlı, Buluklu, Resulköy, Düğdüören ve Çamlıdere mahallelerinde saat 13:00'e kadar su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-21T07:15:00.000Z",
+    "bitis": "2026-11-21T10:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "toroslar",
+      "ad": "Toroslar",
+      "mahalleler": [
+       "Buluklu",
+       "Çamlıdere",
+       "Düğdüören",
+       "Kaşlı",
+       "Resulköy"
+      ]
+     }
+    ]
    }
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T07:01:58.864Z",
+  "guncelleme": "2026-11-21T07:17:36.164Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -844,9 +864,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2925903,
-    "usd": 57894,
-    "degisim": -6.67
+    "satis": 2937579,
+    "usd": 58125,
+    "degisim": -6.25
    }
   },
   "altinlar": [
@@ -979,7 +999,7 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 10:01:01"
+  "kaynakSaati": "2026-11-21 10:17:01"
  },
  "akaryakit": {
   "guncelleme": "2026-11-21T07:02:01.048Z",
@@ -8319,7 +8339,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T07:02:01.643Z",
+  "guncelleme": "2026-11-21T07:17:46.608Z",
   "liste": [
    {
     "yol": "/",
@@ -8330,6 +8350,10 @@
     "sayi": 7
    },
    {
+    "yol": "/piyasalar/",
+    "sayi": 6
+   },
+   {
     "yol": "/kategori/asayis/",
     "sayi": 6
    },
@@ -8338,24 +8362,16 @@
     "sayi": 5
    },
    {
-    "yol": "/piyasalar/",
-    "sayi": 5
+    "yol": "/okullar-tatil-mi/istanbul/",
+    "sayi": 4
    },
    {
     "yol": "/spor/",
     "sayi": 4
    },
    {
-    "yol": "/okullar-tatil-mi/istanbul/",
-    "sayi": 4
-   },
-   {
     "yol": "/kategori/yasam/",
     "sayi": 3
-   },
-   {
-    "yol": "/haber/akdeniz-de-su-kesintisi-8-saat-surecek-sb2149/",
-    "sayi": 2
    },
    {
     "yol": "/bilgi/",
@@ -8366,7 +8382,27 @@
     "sayi": 2
    },
    {
+    "yol": "/haber/akdeniz-de-su-kesintisi-8-saat-surecek-sb2149/",
+    "sayi": 2
+   },
+   {
+    "yol": "/haber/yenisehir-de-su-kesintisi-bircok-mahalle-etkilenecek-s494a3/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
+    "sayi": 1
+   },
+   {
+    "yol": "/trafik/",
+    "sayi": 1
+   },
+   {
     "yol": "/piyasalar/gram-altin/&ss=tw&rt=Gram+alt%C4%B1n+ne+kadar%3F+Bug%C3%BCn+canl%C4%B1+gram+alt%C4%B1n+fiyat%C4%B1+-+Mersin+Anl%C4%B1k&cd=KhQxNDk2OTU4MTgyNTIxMDIwMzk0OTIdZjcwZjUzYWU5MTM2ZWRkYzpjb20udHI6dHI6VFI&ssp=AMJHsmWqlNtj-Lx0EeQMFnU5botX4UoECw/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/mersin-de-kapali-yuzme-havuzu-gercekten-kapali-7flbwy/",
     "sayi": 1
    },
    {
@@ -8378,7 +8414,7 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-de-kapali-yuzme-havuzu-gercekten-kapali-7flbwy/",
+    "yol": "/haber/mersin-de-6-ilcede-planli-elektrik-kesintisi-20-kasim-1vorztq/",
     "sayi": 1
    },
    {
@@ -8390,10 +8426,6 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-de-6-ilcede-planli-elektrik-kesintisi-20-kasim-1vorztq/",
-    "sayi": 1
-   },
-   {
     "yol": "/ara/",
     "sayi": 1
    },
@@ -8402,23 +8434,11 @@
     "sayi": 1
    },
    {
-    "yol": "/trafik/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
-    "sayi": 1
-   },
-   {
     "yol": "/gorsel-kaynaklari/",
     "sayi": 1
    },
    {
     "yol": "/haber/avrupa-ikincisi-gulizar-demirpolat-akdeniz-in-gururu-oldu-y9j1ye/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/yenisehir-de-su-kesintisi-bircok-mahalle-etkilenecek-s494a3/",
     "sayi": 1
    },
    {
@@ -8436,9 +8456,9 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T07:02:02.918Z",
+  "guncelleme": "2026-11-21T07:17:48.798Z",
   "deniz": {
-   "sicaklik": 21.5,
+   "sicaklik": 21.6,
    "dalga": 0.38
   },
   "hava": {
@@ -8449,7 +8469,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T07:02:04.511Z",
+  "guncelleme": "2026-11-21T07:17:51.636Z",
   "giden": [
    {
     "no": [
@@ -8460,7 +8480,7 @@
     "planlanan": "2026-11-21T07:35:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "KONTUAR KAPALI",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -9608,7 +9628,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T07:02:04.511Z",
+  "guncelleme": "2026-11-21T07:17:51.636Z",
   "liste": [
    {
     "id": 6386,

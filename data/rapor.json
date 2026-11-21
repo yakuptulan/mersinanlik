@@ -149,15 +149,16 @@
    "kaynakHatalari": []
   },
   "2026-11-21": {
-   "guncelleme": "2026-11-21T07:02:49.354Z",
-   "mersinHaber": 8,
-   "kendiYazimiz": 8,
-   "turkiyeDunya": 37,
-   "otomatik": 3,
+   "guncelleme": "2026-11-21T07:22:05.271Z",
+   "mersinHaber": 10,
+   "kendiYazimiz": 10,
+   "turkiyeDunya": 43,
+   "otomatik": 4,
    "otomatikTurler": {
     "yakit": 1,
     "ucus": 1,
-    "piyasa": 1
+    "piyasa": 1,
+    "su": 1
    },
    "otomatikBasliklar": [
     {
@@ -174,14 +175,17 @@
      "baslik": "Altın fiyatları bugün (21 Kasım 2026): Gram altın ve çeyrek altın ne kadar?",
      "tur": "piyasa",
      "saat": "10:02"
+    },
+    {
+     "baslik": "Toroslar'da su kesintisi: Buluklu, Çamlıdere ve 3 mahalle daha",
+     "tur": "su",
+     "saat": "10:22"
     }
    ],
-   "gorsel": 11,
+   "gorsel": 12,
    "bilgi": 1,
    "gezi": 1,
-   "kaynakHatalari": [
-    "haberturk-mersin (fetch failed)"
-   ]
+   "kaynakHatalari": []
   }
  }
 }
