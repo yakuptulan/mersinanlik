@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-21T10:46:24.679Z",
+ "guncelleme": "2026-11-21T11:01:48.851Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 22,
@@ -146,13 +146,13 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 14,
+   "sicaklik": 13,
    "durum": "Hafif yağmurlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
      "min": 11,
-     "max": 14,
+     "max": 13,
      "durum": "Yağmurlu"
     },
     {
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T10:42:43.432Z",
+  "guncelleme": "2026-11-21T11:01:51.703Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T10:46:38.978Z",
+  "guncelleme": "2026-11-21T11:01:52.624Z",
   "liste": [
    {
     "tur": "su",
@@ -814,38 +814,6 @@
       "ad": "Mezitli",
       "mahalleler": [
        "Seymenli"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Erdemli İlçesi Alata Mahallesine bağlı D 400 Karayolu alt (Güney) kısmında elektrik alt yapı çalışmasından dolayı oluşan içme suyu arızası nedeniyle saat 14:00 kadar su kesintisi uygulanacaktır.",
-    "baslangic": "2026-11-21T08:45:00.000Z",
-    "bitis": "2026-11-21T11:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "erdemli",
-      "ad": "Erdemli",
-      "mahalleler": [
-       "Alata"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Erdemli İlçesi Alata Mahallesi'ne bağlı D-400 karayolunun alt (güney) kısmında yürütülen elektrik altyapı çalışması nedeniyle oluşacak içme suyu arızası sebebiyle, saat 14:00'e kadar su kesintisi yapılacaktır.",
-    "baslangic": "2026-11-21T08:47:00.000Z",
-    "bitis": "2026-11-21T11:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "erdemli",
-      "ad": "Erdemli",
-      "mahalleler": [
-       "Alata"
       ]
      }
     ]
@@ -886,7 +854,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T10:46:42.410Z",
+  "guncelleme": "2026-11-21T11:01:56.550Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -919,9 +887,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2922252,
-    "usd": 57822,
-    "degisim": -7.14
+    "satis": 2923772,
+    "usd": 57852,
+    "degisim": -6.8
    }
   },
   "altinlar": [
@@ -1054,10 +1022,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 13:46:01"
+  "kaynakSaati": "2026-11-21 14:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T10:46:44.878Z",
+  "guncelleme": "2026-11-21T11:01:58.700Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1982,7 +1950,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-21T10:46:47.133Z",
+  "guncelleme": "2026-11-21T11:02:00.379Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8379,7 +8347,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-21T10:47:32.315Z",
+    "guncelleme": "2026-11-21T11:02:40.994Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8461,7 +8429,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-21T10:47:33.922Z",
+    "guncelleme": "2026-11-21T11:02:42.224Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8543,7 +8511,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-21T10:47:35.142Z",
+    "guncelleme": "2026-11-21T11:02:43.476Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8642,7 +8610,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T10:46:45.164Z",
+  "guncelleme": "2026-11-21T11:01:59.155Z",
   "liste": [
    {
     "yol": "/",
@@ -8763,45 +8731,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T10:47:36.343Z",
+  "guncelleme": "2026-11-21T11:02:44.677Z",
   "deniz": {
    "sicaklik": 21.7,
-   "dalga": 0.58
+   "dalga": 0.62
   },
   "hava": {
-   "aqi": 34,
-   "pm25": 11.4,
-   "pm10": 16.6,
+   "aqi": 32,
+   "pm25": 8.6,
+   "pm10": 14.8,
    "uvMax": 2.2
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T10:47:38.281Z",
+  "guncelleme": "2026-11-21T11:02:46.466Z",
   "giden": [
-   {
-    "no": [
-     "PC2085"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-21T10:55:00.000Z",
-    "tahmini": null,
-    "kapi": "109",
-    "durum": "SON ÇAĞRI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC3630"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Dalaman",
-    "planlanan": "2026-11-21T11:00:00.000Z",
-    "tahmini": null,
-    "kapi": "107",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC1856"
@@ -9923,7 +9867,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T10:47:38.281Z",
+  "guncelleme": "2026-11-21T11:02:46.466Z",
   "liste": [
    {
     "id": 6386,
