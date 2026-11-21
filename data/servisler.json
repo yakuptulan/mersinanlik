@@ -1,16 +1,10 @@
 {
- "guncelleme": "2026-11-21T21:11:51.479Z",
+ "guncelleme": "2026-11-21T21:25:05.479Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 17,
    "durum": "Parçalı bulutlu",
    "gunler": [
-    {
-     "tarih": "2026-11-21",
-     "min": 17,
-     "max": 17,
-     "durum": "Parçalı bulutlu"
-    },
     {
      "tarih": "2026-11-22",
      "min": 14,
@@ -34,6 +28,12 @@
      "min": 12,
      "max": 19,
      "durum": "Açık"
+    },
+    {
+     "tarih": "2026-11-26",
+     "min": 10,
+     "max": 17,
+     "durum": "Az bulutlu"
     }
    ]
   },
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T21:11:54.978Z",
+  "guncelleme": "2026-11-21T21:25:09.799Z",
   "liste": [
    {
     "ad": "Asuman Eczanesi",
@@ -707,7 +707,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T21:11:55.924Z",
+  "guncelleme": "2026-11-21T21:25:11.397Z",
   "liste": [
    {
     "tur": "su",
@@ -745,7 +745,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T21:11:57.914Z",
+  "guncelleme": "2026-11-21T21:25:14.103Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -778,9 +778,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3051128,
-    "usd": 60372,
-    "degisim": 3.62
+    "satis": 3051348,
+    "usd": 60376,
+    "degisim": 3.09
    }
   },
   "altinlar": [
@@ -913,7 +913,7 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 00:11:01"
+  "kaynakSaati": "2026-11-22 00:25:02"
  },
  "akaryakit": {
   "guncelleme": "2026-11-21T21:11:59.921Z",
@@ -1637,7 +1637,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-21T18:32:09.515Z",
+  "guncelleme": "2026-11-21T21:25:28.643Z",
   "liste": [
    {
     "id": "gzi1bq",
@@ -8590,19 +8590,15 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T21:12:00.316Z",
+  "guncelleme": "2026-11-21T21:25:24.505Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 19
+    "sayi": 20
    },
    {
     "yol": "/spor/",
     "sayi": 5
-   },
-   {
-    "yol": "/okullar-tatil-mi/istanbul/",
-    "sayi": 3
    },
    {
     "yol": "/piyasalar/",
@@ -8610,6 +8606,10 @@
    },
    {
     "yol": "/haber/msk-da-dagilma-tehlikesi-kadro-dagildi-gelecek-belirsizlesti-fmcfmt/",
+    "sayi": 2
+   },
+   {
+    "yol": "/okullar-tatil-mi/istanbul/",
     "sayi": 2
    },
    {
@@ -8687,7 +8687,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T21:12:01.694Z",
+  "guncelleme": "2026-11-21T21:25:28.643Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.94
@@ -8700,7 +8700,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T21:12:03.299Z",
+  "guncelleme": "2026-11-21T21:25:31.531Z",
   "giden": [
    {
     "no": [
@@ -9318,18 +9318,6 @@
   "gelen": [
    {
     "no": [
-     "PC3014"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "İzmir",
-    "planlanan": "2026-11-21T21:20:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
      "PC2096"
     ],
     "havayolu": "Pegasus",
@@ -9931,7 +9919,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T21:12:03.298Z",
+  "guncelleme": "2026-11-21T21:25:31.530Z",
   "liste": [
    {
     "id": 6386,
