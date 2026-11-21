@@ -1,9 +1,9 @@
 {
- "guncelleme": "2026-11-21T09:02:21.981Z",
+ "guncelleme": "2026-11-21T09:31:59.947Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 21,
-   "durum": "Az bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -146,8 +146,8 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 13,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 14,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -182,7 +182,7 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 21,
+   "sicaklik": 22,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -290,7 +290,7 @@
    ]
   },
   "mut": {
-   "sicaklik": 20,
+   "sicaklik": 22,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T09:02:25.287Z",
+  "guncelleme": "2026-11-21T09:32:04.068Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -889,7 +889,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T09:02:30.132Z",
+  "guncelleme": "2026-11-21T09:32:12.133Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -922,9 +922,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2916673,
-    "usd": 57712,
-    "degisim": -6.65
+    "satis": 2928314,
+    "usd": 57942,
+    "degisim": -5.98
    }
   },
   "altinlar": [
@@ -1057,10 +1057,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 12:02:01"
+  "kaynakSaati": "2026-11-21 12:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T09:02:32.603Z",
+  "guncelleme": "2026-11-21T09:32:14.795Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1881,7 +1881,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-21T06:32:25.562Z",
+  "guncelleme": "2026-11-21T09:32:18.215Z",
   "liste": [
    {
     "id": "gzi1bq",
@@ -1985,7 +1985,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-21T08:32:43.929Z",
+  "guncelleme": "2026-11-21T09:32:18.216Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8397,7 +8397,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T09:02:32.930Z",
+  "guncelleme": "2026-11-21T09:32:15.173Z",
   "liste": [
    {
     "yol": "/",
@@ -8518,10 +8518,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T09:02:34.705Z",
+  "guncelleme": "2026-11-21T09:32:59.950Z",
   "deniz": {
-   "sicaklik": 21.6,
-   "dalga": 0.4
+   "sicaklik": 21.7,
+   "dalga": 0.46
   },
   "hava": {
    "aqi": 43,
@@ -8531,7 +8531,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T09:02:36.307Z",
+  "guncelleme": "2026-11-21T09:33:02.266Z",
   "giden": [
    {
     "no": [
@@ -8542,7 +8542,7 @@
     "planlanan": "2026-11-21T10:00:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8552,9 +8552,9 @@
     "havayolu": "Pegasus",
     "yer": "Sabiha Gökçen",
     "planlanan": "2026-11-21T10:05:00.000Z",
-    "tahmini": null,
+    "tahmini": "2026-11-21T10:10:00.000Z",
     "kapi": "105",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8590,7 +8590,7 @@
     "planlanan": "2026-11-21T11:00:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9125,42 +9125,6 @@
   "gelen": [
    {
     "no": [
-     "PC4946"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Milas Bodrum",
-    "planlanan": "2026-11-21T09:15:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC3707"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Trabzon",
-    "planlanan": "2026-11-21T09:20:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC3641"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Van",
-    "planlanan": "2026-11-21T09:25:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
      "TK2456"
     ],
     "havayolu": "THY",
@@ -9168,7 +9132,7 @@
     "planlanan": "2026-11-21T09:45:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "ic"
    },
    {
@@ -9714,7 +9678,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T09:02:36.307Z",
+  "guncelleme": "2026-11-21T09:33:02.265Z",
   "liste": [
    {
     "id": 6386,

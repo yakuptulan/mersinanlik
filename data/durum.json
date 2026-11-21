@@ -12,11 +12,15 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-21T09:31:21.098Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-21",
-  "adet": 20
+  "adet": 22
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -349,19 +353,23 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-21T09:01:48.632Z",
+  "guncelleme": "2026-11-21T09:31:51.824Z",
   "liste": [
    {
-    "baslik": "aslıhan malbora",
+    "baslik": "yds ne zaman",
     "trafik": 100
+   },
+   {
+    "baslik": "aslıhan malbora",
+    "trafik": 200
    },
    {
     "baslik": "sakarya",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "tazminat",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "yozgat hava durumu",
@@ -373,23 +381,19 @@
    },
    {
     "baslik": "gedson fernandes",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "hazar ergüçlü",
-    "trafik": 100
-   },
-   {
-    "baslik": "izmit hava durumu",
-    "trafik": 2000
+    "trafik": 200
    },
    {
     "baslik": "müge anlı",
     "trafik": 500
    },
    {
-    "baslik": "üniversite",
-    "trafik": 200
+    "baslik": "izmit hava durumu",
+    "trafik": 2000
    }
   ]
  },
