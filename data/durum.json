@@ -12,11 +12,15 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-21T21:11:16.456Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-22",
-  "adet": 2
+  "adet": 4
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -361,14 +365,22 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-21T21:01:47.810Z",
+  "guncelleme": "2026-11-21T21:11:43.173Z",
   "liste": [
+   {
+    "baslik": "yan diomande",
+    "trafik": 100
+   },
+   {
+    "baslik": "başkalarının hayatı 8 bölüm",
+    "trafik": 500
+   },
    {
     "baslik": "21 kasım çılgın sayısal loto sonuçları",
     "trafik": 1000
    },
    {
-    "baslik": "aljamain sterling",
+    "baslik": "realmadrid",
     "trafik": 100
    },
    {
@@ -376,31 +388,23 @@
     "trafik": 100
    },
    {
-    "baslik": "s sport",
-    "trafik": 1000
-   },
-   {
-    "baslik": "celta vigo",
-    "trafik": 500
-   },
-   {
-    "baslik": "s sport plus",
-    "trafik": 2000
+    "baslik": "aljamain sterling",
+    "trafik": 100
    },
    {
     "baslik": "navajo stirling",
     "trafik": 500
    },
    {
-    "baslik": "monaco",
-    "trafik": 200
+    "baslik": "celta vigo",
+    "trafik": 500
    },
    {
-    "baslik": "kevin vallejos",
-    "trafik": 200
+    "baslik": "s sport",
+    "trafik": 1000
    },
    {
-    "baslik": "de miguel",
+    "baslik": "s sport plus",
     "trafik": 2000
    }
   ]
