@@ -12,15 +12,11 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-21T09:31:21.098Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-21",
-  "adet": 22
+  "adet": 24
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -226,7 +222,9 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/meskinin-2027-yili-butcesi-oy-birligiyle-kabul-edildi-119528374",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-500-farkli-deniz-canlisi-turu-muzede-sergileniyor-prof-dr-deniz-ayas-muzemiz-119528372",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinin-yesil-donusum-projeleri-cop31de-tanitildi-119528370",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-su-urunleri-denetimlerinde-445-kilogram-urune-el-konuldu-119528502"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-su-urunleri-denetimlerinde-445-kilogram-urune-el-konuldu-119528502",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinin-akdeniz-ilcesinde-yollar-yenileniyor-119528549",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersin-universitesi-hastanesinde-tani-suresini-dakikalara-indiren-teknoloji-119528522"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -353,8 +351,16 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-21T09:31:51.824Z",
+  "guncelleme": "2026-11-21T09:55:17.109Z",
   "liste": [
+   {
+    "baslik": "istanbulspor - keçiörengücü",
+    "trafik": 500
+   },
+   {
+    "baslik": "gençlerbirliği - gaziantep fk",
+    "trafik": 200
+   },
    {
     "baslik": "yds ne zaman",
     "trafik": 100
@@ -369,7 +375,7 @@
    },
    {
     "baslik": "tazminat",
-    "trafik": 1000
+    "trafik": 500
    },
    {
     "baslik": "yozgat hava durumu",
@@ -386,14 +392,6 @@
    {
     "baslik": "hazar ergüçlü",
     "trafik": 200
-   },
-   {
-    "baslik": "müge anlı",
-    "trafik": 500
-   },
-   {
-    "baslik": "izmit hava durumu",
-    "trafik": 2000
    }
   ]
  },

@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-21T09:31:59.947Z",
+ "guncelleme": "2026-11-21T09:56:10.080Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 21,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T09:32:04.068Z",
+  "guncelleme": "2026-11-21T09:56:13.698Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T09:02:26.260Z",
+  "guncelleme": "2026-11-21T09:56:14.680Z",
   "liste": [
    {
     "tur": "su",
@@ -853,15 +853,15 @@
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
-    "aciklama": "Silifke ilçesi Atayurt mahallesi bakanlıklar caddesi arızadan kaynaklı saat 12:30 a kadar su kesintisi yaşanacaktır.",
-    "baslangic": "2026-11-21T06:35:40.000Z",
-    "bitis": "2026-11-21T09:30:00.000Z",
+    "aciklama": "Mezitli merkez mahallesi Kuyuluk vatan katlı kavşak proje kapsamında oluşan şebeke arızası nedeniyle merkez mahallesi'nin bir kısmında 15:30 a kadar su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-21T09:35:54.000Z",
+    "bitis": "2026-11-21T12:31:01.000Z",
     "ilceler": [
      {
-      "ilce": "silifke",
-      "ad": "Silifke",
+      "ilce": "mezitli",
+      "ad": "Mezitli",
       "mahalleler": [
-       "Atayurt"
+       "Merkez"
       ]
      }
     ]
@@ -889,7 +889,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T09:32:12.133Z",
+  "guncelleme": "2026-11-21T09:56:16.880Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -922,9 +922,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2928314,
-    "usd": 57942,
-    "degisim": -5.98
+    "satis": 2923149,
+    "usd": 57840,
+    "degisim": -6.26
    }
   },
   "altinlar": [
@@ -1057,10 +1057,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 12:32:01"
+  "kaynakSaati": "2026-11-21 12:56:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T09:32:14.795Z",
+  "guncelleme": "2026-11-21T09:56:19.320Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8397,11 +8397,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T09:32:15.173Z",
+  "guncelleme": "2026-11-21T09:56:19.792Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 31
+    "sayi": 32
    },
    {
     "yol": "/kategori/belediye/",
@@ -8518,10 +8518,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T09:32:59.950Z",
+  "guncelleme": "2026-11-21T09:56:21.270Z",
   "deniz": {
    "sicaklik": 21.7,
-   "dalga": 0.46
+   "dalga": 0.48
   },
   "hava": {
    "aqi": 43,
@@ -8531,7 +8531,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T09:33:02.266Z",
+  "guncelleme": "2026-11-21T09:56:23.364Z",
   "giden": [
    {
     "no": [
@@ -8566,7 +8566,7 @@
     "planlanan": "2026-11-21T10:30:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -9120,21 +9120,21 @@
     "kapi": "104",
     "durum": "",
     "hat": "dis"
+   },
+   {
+    "no": [
+     "PC2085"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-22T09:40:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "TK2456"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-21T09:45:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC2084"
@@ -9674,11 +9674,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2456"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-22T09:45:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T09:33:02.265Z",
+  "guncelleme": "2026-11-21T09:56:23.363Z",
   "liste": [
    {
     "id": 6386,
