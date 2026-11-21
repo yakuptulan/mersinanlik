@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-21T15:53:44.217Z",
+ "guncelleme": "2026-11-21T16:02:03.113Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T15:53:49.359Z",
+  "guncelleme": "2026-11-21T16:02:06.429Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -661,17 +661,6 @@
     "saat": "21.11.2026 08:00 / 22.11.2026 00:00 nöbetçidir."
    },
    {
-    "ad": "Derman Eczanesi",
-    "bolge": "SİLİFKE",
-    "ilce": "silifke",
-    "adres": "ATAKENT MH. 5010 SK. NO:6AA",
-    "tarif": "ATAKENT ASM KARŞISI",
-    "telefon": "03247223334",
-    "lat": 36.404495,
-    "lon": 34.07069,
-    "saat": "21.11.2026 08:00 / 21.11.2026 19:00 nöbetçidir."
-   },
-   {
     "ad": "Sağlık Eczanesi",
     "bolge": "SİLİFKE",
     "ilce": "silifke",
@@ -784,7 +773,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T15:53:50.740Z",
+  "guncelleme": "2026-11-21T16:02:07.562Z",
   "liste": [
    {
     "tur": "su",
@@ -821,7 +810,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T15:53:54.433Z",
+  "guncelleme": "2026-11-21T16:02:09.636Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -854,9 +843,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3026400,
-    "usd": 59883,
-    "degisim": 0.45
+    "satis": 3024435,
+    "usd": 59844,
+    "degisim": 0.86
    }
   },
   "altinlar": [
@@ -989,10 +978,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 18:53:01"
+  "kaynakSaati": "2026-11-21 19:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T15:53:57.463Z",
+  "guncelleme": "2026-11-21T16:02:12.590Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1917,7 +1906,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-21T15:53:59.710Z",
+  "guncelleme": "2026-11-21T16:02:16.088Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -6822,6 +6811,20 @@
      },
      {
       "sira": 2,
+      "takim": "Gemlik Sümerbey Futbol Spor",
+      "ham": "GEMLİK SÜMERBEY FUTBOL SPOR A.Ş.",
+      "o": 13,
+      "g": 8,
+      "b": 4,
+      "m": 1,
+      "a": 30,
+      "y": 6,
+      "av": 24,
+      "p": 28,
+      "mersin": false
+     },
+     {
+      "sira": 3,
       "takim": "Eskişehirspor",
       "ham": "ESKİŞEHİRSPOR KULÜBÜ",
       "o": 12,
@@ -6831,20 +6834,6 @@
       "a": 33,
       "y": 12,
       "av": 21,
-      "p": 25,
-      "mersin": false
-     },
-     {
-      "sira": 3,
-      "takim": "Gemlik Sümerbey Futbol Spor",
-      "ham": "GEMLİK SÜMERBEY FUTBOL SPOR A.Ş.",
-      "o": 12,
-      "g": 7,
-      "b": 4,
-      "m": 1,
-      "a": 22,
-      "y": 6,
-      "av": 16,
       "p": 25,
       "mersin": false
      },
@@ -7020,13 +7009,13 @@
       "sira": 16,
       "takim": "Bucaspor 1928",
       "ham": "BUCASPOR 1928",
-      "o": 12,
+      "o": 13,
       "g": 2,
       "b": 2,
-      "m": 8,
+      "m": 9,
       "a": 10,
-      "y": 18,
-      "av": -8,
+      "y": 26,
+      "av": -16,
       "p": 8,
       "mersin": false
      },
@@ -7529,19 +7518,19 @@
       "G",
       "G"
      ],
-     "Eskişehirspor": [
-      "B",
-      "G",
-      "G",
-      "G",
-      "B"
-     ],
      "Gemlik Sümerbey Futbol Spor": [
       "B",
       "G",
       "B",
       "M",
       "G"
+     ],
+     "Eskişehirspor": [
+      "B",
+      "G",
+      "G",
+      "G",
+      "B"
      ],
      "Balıkesirspor": [
       "G",
@@ -8502,7 +8491,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-21T15:54:43.113Z",
+    "guncelleme": "2026-11-21T16:02:56.846Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8584,7 +8573,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-21T15:54:44.402Z",
+    "guncelleme": "2026-11-21T16:02:58.083Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8666,7 +8655,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-21T15:54:45.704Z",
+    "guncelleme": "2026-11-21T16:02:59.328Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8765,7 +8754,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T15:53:57.797Z",
+  "guncelleme": "2026-11-21T16:02:14.239Z",
   "liste": [
    {
     "yol": "/",
@@ -8838,20 +8827,20 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T15:54:46.905Z",
+  "guncelleme": "2026-11-21T16:03:00.529Z",
   "deniz": {
    "sicaklik": 21.7,
    "dalga": 0.96
   },
   "hava": {
-   "aqi": 30,
-   "pm25": 10.2,
-   "pm10": 20.5,
+   "aqi": 34,
+   "pm25": 12.1,
+   "pm10": 23.1,
    "uvMax": 2.2
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T15:54:49.087Z",
+  "guncelleme": "2026-11-21T16:03:02.309Z",
   "giden": [
    {
     "no": [
@@ -8862,7 +8851,7 @@
     "planlanan": "2026-11-21T16:05:00.000Z",
     "tahmini": "2026-11-21T16:30:00.000Z",
     "kapi": "105",
-    "durum": "KONTUAR KAPALI",
+    "durum": "BOARDING",
     "hat": "ic"
    },
    {
@@ -8872,9 +8861,9 @@
     "havayolu": "AJet",
     "yer": "Ercan",
     "planlanan": "2026-11-21T16:05:00.000Z",
-    "tahmini": null,
+    "tahmini": "2026-11-21T16:15:00.000Z",
     "kapi": "103",
-    "durum": "KONTUAR KAPALI",
+    "durum": "BOARDING",
     "hat": "dis"
    },
    {
@@ -8886,7 +8875,7 @@
     "planlanan": "2026-11-21T16:55:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8910,7 +8899,7 @@
     "planlanan": "2026-11-21T17:55:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9431,18 +9420,6 @@
    },
    {
     "no": [
-     "XQ9207"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "İzmir",
-    "planlanan": "2026-11-22T15:25:00.000Z",
-    "tahmini": null,
-    "kapi": "107",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
      "TK2463"
     ],
     "havayolu": "THY",
@@ -9450,6 +9427,18 @@
     "planlanan": "2026-11-22T15:25:00.000Z",
     "tahmini": null,
     "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ9207"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "İzmir",
+    "planlanan": "2026-11-22T15:25:00.000Z",
+    "tahmini": null,
+    "kapi": "107",
     "durum": "",
     "hat": "ic"
    },
@@ -9476,7 +9465,7 @@
     "planlanan": "2026-11-21T16:10:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "ic"
    },
    {
@@ -10070,7 +10059,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T15:54:49.086Z",
+  "guncelleme": "2026-11-21T16:03:02.309Z",
   "liste": [
    {
     "id": 6386,
