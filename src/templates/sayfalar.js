@@ -843,6 +843,10 @@ ${e.lat ? `<a class="dugme-cizgi" href="https://www.google.com/maps/search/?api=
 </div>
 </article>`;
 
+const gunUzun = (t = Date.now()) => new Date(t).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long', timeZone: SITE.timezone });
+const gunKisaTarih = (t = Date.now()) => new Date(t).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', timeZone: SITE.timezone });
+const sssLd = (l) => ({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: l.map(([soru, cevap]) => ({ '@type': 'Question', name: soru, acceptedAnswer: { '@type': 'Answer', text: cevap } })) });
+
 export function eczaneSayfasi({ servis } = {}) {
   const liste = servis?.eczane?.liste || [];
   const gruplar = ILCELER.map((i) => ({ ilce: i, eczaneler: liste.filter((e) => e.ilce === i.slug) })).filter((g) => g.eczaneler.length);
@@ -852,12 +856,18 @@ export function eczaneSayfasi({ servis } = {}) {
 ${gruplar.map((g) => `<section class="eczane-grup" id="${g.ilce.slug}"><div class="bolum-bas"><h2><a href="/nobetci-eczane/${g.ilce.slug}/">${h(g.ilce.ad)}</a></h2><span>${g.eczaneler.length} eczane</span></div><div class="eczane-liste">${g.eczaneler.map(kart).join('')}</div></section>`).join('')}
 ${guncellemeNotu(servis.eczane, 'Mersin Eczacı Odası', RESMI.eczane)}`
     : `<div class="bos">Liste şu an alınamadı. <a href="${RESMI.eczane}" rel="noopener" target="_blank">Eczacı Odası'nın sayfasına bakın →</a></div>`;
+  const gun = gunUzun(), kisa = gunKisaTarih();
+  const giris = liste.length ? `<p class="giris-metni">Bugün (${gun}) Mersin'in ${gruplar.length} ilçesinde toplam <strong>${liste.length} eczane</strong> nöbetçi. İlçenizi seçin; her eczanenin adresi, telefonu ve yol tarifi kartında yazıyor. Gitmeden önce telefonla teyit etmenizi öneririz.</p>` : '';
   return sayfa({
-    baslik: 'Mersin nöbetçi eczaneler – bugün açık eczaneler',
-    aciklama: "Mersin'in ilçelerinde bugün nöbetçi olan eczaneler: adres, telefon ve yol tarifi.",
+    baslik: `Mersin nöbetçi eczaneler (${kisa}) – bugün açık eczaneler`,
+    aciklama: liste.length ? `Mersin'de bugün (${kisa}) ${gruplar.length} ilçede ${liste.length} nöbetçi eczane: ${gruplar.slice(0, 4).map((g) => `${g.ilce.ad} ${g.eczaneler.length}`).join(', ')}… Adres, telefon ve yol tarifi.` : "Mersin'in ilçelerinde bugün nöbetçi olan eczaneler: adres, telefon ve yol tarifi.",
     yol: '/nobetci-eczane/',
-    ust: `<div class="su-an-bas"><div><h1>Nöbetçi eczaneler</h1><p style="margin-top:8px">Bugün Mersin'de açık olan eczaneler</p></div></div>`,
-    icerik: `<main class="kap govde"><div class="ana">${govde}</div></main>`,
+    ust: `<div class="su-an-bas"><div><h1>Mersin nöbetçi eczaneler</h1><p style="margin-top:8px">${h(gun)} · bugün açık olan eczaneler</p></div></div>`,
+    jsonLd: sssLd([
+      ["Mersin'de bugün hangi eczaneler nöbetçi?", liste.length ? `${gun} günü Mersin'de ${liste.length} eczane nöbetçi. ${gruplar.map((g) => `${g.ilce.ad}: ${g.eczaneler.map((e) => e.ad).join(', ')}`).join('. ')}.` : "Güncel liste için Mersin Eczacı Odası'nın sayfasına bakabilirsiniz."],
+      ['Nöbetçi eczanenin açık olduğundan nasıl emin olurum?', 'Nöbet saatleri eczaneye göre değişebilir. Listedeki telefon numarasını arayarak gitmeden önce teyit edebilirsiniz. Liste Mersin Eczacı Odası verisinden düzenli olarak güncellenir.'],
+    ]),
+    icerik: `<main class="kap govde"><div class="ana">${giris}${govde}</div>${yanKutular(servis)}</main>`,
   });
 }
 
@@ -877,12 +887,21 @@ ${servis?.suKesintisi ? guncellemeNotu(servis.suKesintisi, 'MESKİ', RESMI.meski
 ${(servis?.elektrikHaber || []).length ? `<div class="yan-liste" style="margin-bottom:14px">${servis.elektrikHaber.map((x) => `<a class="yan-satir" href="${h(x.yol)}"><span class="yan-rozet elektrik">${ikon.simsek(18)}</span><span class="yan-metin"><b>${h(x.baslik)}</b><small>${saat(x.ilkGorulme)}</small></span></a>`).join('')}</div>` : ''}
 <p style="color:var(--govde)">Toroslar EDAŞ, kesintileri adres seçerek sorgulatıyor. Kendi adresinizi buradan seçebilirsiniz:</p>
 <p><a class="hap" href="${RESMI.edas}" rel="noopener" target="_blank">Elektrik kesintisi sorgula<span class="daire">${ikon.ok(18)}</span></a></p>`;
+  const gun = gunUzun(), kisa = gunKisaTarih();
+  const yerler = su.flatMap((k) => k.ilceler.map((i) => `${i.ad}${i.mahalleler?.length ? ` (${i.mahalleler.slice(0, 3).join(', ')})` : ''}`));
+  const ozetMetin = su.length ? `Bugün (${gun}) Mersin'de ${su.length} su kesintisi duyuruldu: ${yerler.slice(0, 6).join('; ')}${yerler.length > 6 ? '…' : '.'}` : `Bugün (${gun}) Mersin'de MESKİ'nin duyurduğu aktif bir su kesintisi yok.`;
   return sayfa({
-    baslik: 'Mersin su ve elektrik kesintileri – bugün',
-    aciklama: "Mersin'de bugünkü su kesintileri (MESKİ) ve elektrik kesintisi sorgulama.",
+    baslik: `Mersin su kesintisi ve elektrik kesintisi (${kisa}) – bugün`,
+    aciklama: `${ozetMetin} Elektrik kesintisi haberleri ve Toroslar EDAŞ sorgulama.`.slice(0, 300),
     yol: '/kesintiler/',
-    ust: `<div class="su-an-bas"><div><h1>Kesintiler</h1><p style="margin-top:8px">Su ve elektrik</p></div></div>`,
-    icerik: `<main class="kap govde"><div class="ana">${govde}</div></main>`,
+    ust: `<div class="su-an-bas"><div><h1>Mersin su ve elektrik kesintileri</h1><p style="margin-top:8px">${h(gun)} · MESKİ ve Toroslar EDAŞ</p></div></div>`,
+    jsonLd: sssLd([
+      ["Mersin'de bugün su kesintisi var mı?", ozetMetin + ' Liste MESKİ duyurularından yarım saatte bir güncellenir.'],
+      ['Mersin elektrik kesintisi nasıl sorgulanır?', "Planlı elektrik kesintileri Toroslar EDAŞ'ın internet sitesinden ilçe ve mahalle seçilerek sorgulanabilir. Elektrik arızaları için 186, su arızaları için 185 aranabilir."],
+    ]),
+    icerik: `<main class="kap govde"><div class="ana"><p class="giris-metni">${h(ozetMetin)} İlçenizin sayfasından yalnızca kendi bölgenizdeki kesintileri görebilirsiniz.</p>
+<div class="ilce-cipleri">${ILCELER.map((i) => `<a class="cip" href="/kesintiler/${i.slug}/">${h(i.ad)}</a>`).join('')}</div>
+${govde}</div>${yanKutular(servis)}</main>`,
   });
 }
 

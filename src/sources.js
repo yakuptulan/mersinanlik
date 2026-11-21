@@ -155,6 +155,8 @@ export const KAYNAKLAR = [
     tur: 'html',
     liste: 'https://www.akdeniz.bel.tr/',
     linkDesen: 'akdeniz\\.bel\\.tr/Default/HaberDetay/\\d+$',
+    baslikEtiket: 'h3',
+    gorselDesen: '/Upload/haberimg/',
     enFazla: 6,
     kapsam: 'kurum',
     yapayZekaOzeti: true,

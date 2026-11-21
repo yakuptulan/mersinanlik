@@ -35,6 +35,7 @@ function digerIlceler(tur, ilce) {
 <div class="ilce-cipleri">${ILCELER.filter((i) => i.slug !== ilce.slug).map((i) => `<a class="cip" href="${servis.yol(i.slug)}">${h(i.ad)}</a>`).join('')}</div>`;
 }
 
+const gunKisa = (simdi) => new Date(simdi).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', timeZone: SITE.timezone });
 const bugunMetni = (simdi) => new Date(simdi).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long', timeZone: SITE.timezone });
 const ust = (baslik, alt) => `<div class="su-an-bas"><div><h1>${h(baslik)}</h1><p style="margin-top:8px">${alt}</p></div></div>`;
 const sss = (sorular) => ({
@@ -55,7 +56,7 @@ export function eczaneIlceSayfasi({ ilce, servis, simdi }) {
     : `<div class="bos">${h(ilce.ad)} için bugünün nöbet listesi şu an alınamadı. <a href="/nobetci-eczane/">Tüm Mersin listesine bakın</a> ya da <a href="${RESMI.eczane}" rel="noopener" target="_blank">Eczacı Odası'nın sayfasına gidin →</a></div>`;
   const ilk = liste[0];
   return sayfa({
-    baslik: `${ilce.ad} nöbetçi eczane – bugün açık eczaneler`,
+    baslik: `${ilce.ad} nöbetçi eczane (${gunKisa(simdi)}) – bugün açık eczaneler`,
     aciklama: `${bulunma(ilce.ad)} bugün nöbetçi eczaneler${ilk ? `: ${liste.map((e) => e.ad).slice(0, 3).join(', ')}` : ''}. Adres, telefon ve yol tarifi.`,
     yol: `/nobetci-eczane/${ilce.slug}/`,
     aktif: '/nobetci-eczane/',
@@ -115,7 +116,7 @@ ${k.aciklama ? `<p>${h(cumleDuzen(k.aciklama))}</p>` : ''}
   const adRe = new RegExp(ilce.ad, 'i');
   const elektrik = (servis?.elektrikHaber || []).filter((x) => adRe.test(x.baslik));
   return sayfa({
-    baslik: `${ilce.ad} su kesintisi ve elektrik kesintisi – bugün`,
+    baslik: `${ilce.ad} su kesintisi ve elektrik kesintisi (${gunKisa(simdi)})`,
     aciklama: `${bulunma(ilce.ad)} bugünkü su kesintileri (MESKİ) ve elektrik kesintisi sorgulama. ${su.length ? `${su.length} aktif su kesintisi var.` : 'Şu an duyurulmuş su kesintisi yok.'}`,
     yol: `/kesintiler/${ilce.slug}/`,
     aktif: '/kesintiler/',
