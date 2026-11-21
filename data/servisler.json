@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-21T08:32:29.265Z",
+ "guncelleme": "2026-11-21T09:02:21.981Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 21,
@@ -38,7 +38,7 @@
    ]
   },
   "anamur": {
-   "sicaklik": 22,
+   "sicaklik": 23,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -74,8 +74,8 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 21,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 22,
+   "durum": "Hafif sağanak",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -110,7 +110,7 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 21,
+   "sicaklik": 22,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -218,7 +218,7 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 15,
+   "sicaklik": 16,
    "durum": "Hafif sağanak",
    "gunler": [
     {
@@ -255,7 +255,7 @@
   },
   "mezitli": {
    "sicaklik": 21,
-   "durum": "Parçalı bulutlu",
+   "durum": "Hafif sağanak",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -326,7 +326,7 @@
    ]
   },
   "silifke": {
-   "sicaklik": 21,
+   "sicaklik": 23,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -362,8 +362,8 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 21,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 22,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -399,7 +399,7 @@
   },
   "toroslar": {
    "sicaklik": 21,
-   "durum": "Az bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -435,7 +435,7 @@
   },
   "yenisehir": {
    "sicaklik": 21,
-   "durum": "Az bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -472,6 +472,16 @@
  },
  "deprem": [
   {
+   "buyukluk": 1.2,
+   "yer": "Pozantı (Adana)",
+   "il": "Adana",
+   "ilce": "Pozantı",
+   "derinlik": 7,
+   "lat": 37.48983,
+   "lon": 35.0985,
+   "tarih": "2026-11-21T08:25:22.000Z"
+  },
+  {
    "buyukluk": 1.3,
    "yer": "Mut (Mersin)",
    "il": "Mersin",
@@ -483,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T08:32:34.401Z",
+  "guncelleme": "2026-11-21T09:02:25.287Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -774,8 +784,72 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T08:32:35.798Z",
+  "guncelleme": "2026-11-21T09:02:26.260Z",
   "liste": [
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Mut ilçesi Yatırtaş Mahallesi'nde doğalgaz altyapı çalışması kaynaklı içme suyu arızası meydana gelmiş olup sular kesilmiştir. Arızanın giderilip suların verilmesi saat 15:00 olarak planlanmaktadır.",
+    "baslangic": "2026-11-21T08:41:00.000Z",
+    "bitis": "2026-11-21T12:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "mut",
+      "ad": "Mut",
+      "mahalleler": [
+       "Yatırtaş"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Mezitli Seymenli Mahallesi'nde oluşan şebeke arızası nedeniyle Seymenli Mahallesi'nin bir kısmında ve Doğulu Caddesi'nde su kesintisi yaşanmaktadır. Suların 14.30'da verilmesi planlanmaktadır.",
+    "baslangic": "2026-11-21T08:41:00.000Z",
+    "bitis": "2026-11-21T11:30:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "mezitli",
+      "ad": "Mezitli",
+      "mahalleler": [
+       "Seymenli"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Erdemli İlçesi Alata Mahallesine bağlı D 400 Karayolu alt (Güney) kısmında elektrik alt yapı çalışmasından dolayı oluşan içme suyu arızası nedeniyle saat 14:00 kadar su kesintisi uygulanacaktır.",
+    "baslangic": "2026-11-21T08:45:00.000Z",
+    "bitis": "2026-11-21T11:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "erdemli",
+      "ad": "Erdemli",
+      "mahalleler": [
+       "Alata"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Erdemli İlçesi Alata Mahallesi'ne bağlı D-400 karayolunun alt (güney) kısmında yürütülen elektrik altyapı çalışması nedeniyle oluşacak içme suyu arızası sebebiyle, saat 14:00'e kadar su kesintisi yapılacaktır.",
+    "baslangic": "2026-11-21T08:47:00.000Z",
+    "bitis": "2026-11-21T11:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "erdemli",
+      "ad": "Erdemli",
+      "mahalleler": [
+       "Alata"
+      ]
+     }
+    ]
+   },
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
@@ -788,22 +862,6 @@
       "ad": "Silifke",
       "mahalleler": [
        "Atayurt"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Çamlıyayla ilçesi Kale Mahallesi'nde, şebeke hattında oluşan arıza sebebiyle su kesintisi yaşanmaktadır. Suyun tahminen saat 12.00'de verilmesi planlanmaktadır.",
-    "baslangic": "2026-11-21T06:57:00.000Z",
-    "bitis": "2026-11-21T09:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "camliyayla",
-      "ad": "Çamlıyayla",
-      "mahalleler": [
-       "Kale"
       ]
      }
     ]
@@ -831,7 +889,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T08:32:38.602Z",
+  "guncelleme": "2026-11-21T09:02:30.132Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -864,9 +922,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2911019,
-    "usd": 57600,
-    "degisim": -7.03
+    "satis": 2916673,
+    "usd": 57712,
+    "degisim": -6.65
    }
   },
   "altinlar": [
@@ -999,10 +1057,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 11:32:01"
+  "kaynakSaati": "2026-11-21 12:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T08:32:40.967Z",
+  "guncelleme": "2026-11-21T09:02:32.603Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8339,11 +8397,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T08:32:41.216Z",
+  "guncelleme": "2026-11-21T09:02:32.930Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 32
+    "sayi": 31
    },
    {
     "yol": "/kategori/belediye/",
@@ -8460,45 +8518,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T08:33:27.449Z",
+  "guncelleme": "2026-11-21T09:02:34.705Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.4
   },
   "hava": {
-   "aqi": 45,
-   "pm25": 18,
-   "pm10": 28.4,
+   "aqi": 43,
+   "pm25": 14.8,
+   "pm10": 23.6,
    "uvMax": 2.15
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T08:33:29.892Z",
+  "guncelleme": "2026-11-21T09:02:36.307Z",
   "giden": [
-   {
-    "no": [
-     "TK2455"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-21T08:45:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "VF1051"
-    ],
-    "havayolu": "AJet",
-    "yer": "Ercan",
-    "planlanan": "2026-11-21T09:00:00.000Z",
-    "tahmini": null,
-    "kapi": "103",
-    "durum": "SON ÇAĞRI",
-    "hat": "dis"
-   },
    {
     "no": [
      "PC3601"
@@ -8532,7 +8566,7 @@
     "planlanan": "2026-11-21T10:30:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8544,7 +8578,7 @@
     "planlanan": "2026-11-21T10:55:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8568,7 +8602,7 @@
     "planlanan": "2026-11-21T11:55:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -9060,6 +9094,30 @@
     "planlanan": "2026-11-22T08:25:00.000Z",
     "tahmini": null,
     "kapi": "102",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "TK2455"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-22T08:45:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF1051"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ercan",
+    "planlanan": "2026-11-22T09:00:00.000Z",
+    "tahmini": null,
+    "kapi": "104",
     "durum": "",
     "hat": "dis"
    }
@@ -9656,7 +9714,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T08:33:29.892Z",
+  "guncelleme": "2026-11-21T09:02:36.307Z",
   "liste": [
    {
     "id": 6386,

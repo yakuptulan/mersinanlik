@@ -16,7 +16,7 @@
  },
  "gorsel": {
   "gun": "2026-11-21",
-  "adet": 18
+  "adet": 20
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -113,7 +113,8 @@
    "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/genc-cop31-onemli-bir-firsat-oldu-2985603",
    "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/mersinde-komsular-arasinda-bicakli-kavga-1i-2985664",
    "https://www.dha.com.tr/yerel-haberler/mersin/erdemli/mersinde-76-yasindaki-kadin-2-gundur-kayip-2985682",
-   "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/mersinde-ara-tatil-bilimin-eglence-dolu-dunyas-2985805"
+   "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/mersinde-ara-tatil-bilimin-eglence-dolu-dunyas-2985805",
+   "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/akdenizde-asfalt-calismasi-devam-ediyor-2985916"
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
@@ -220,7 +221,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-cocuklar-ara-tatilde-bilim-ve-eglenceyle-bulustu-119528384",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/meskinin-2027-yili-butcesi-oy-birligiyle-kabul-edildi-119528374",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-500-farkli-deniz-canlisi-turu-muzede-sergileniyor-prof-dr-deniz-ayas-muzemiz-119528372",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinin-yesil-donusum-projeleri-cop31de-tanitildi-119528370"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinin-yesil-donusum-projeleri-cop31de-tanitildi-119528370",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-su-urunleri-denetimlerinde-445-kilogram-urune-el-konuldu-119528502"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -292,7 +294,10 @@
    "https://mersingundem.com/haber/13676/mersin-buyuksehir-meclisinin-2026-yili-kasim-ayi-2-birlesimi-baskan-vekili-genc-baskanliginda-gerceklestirildi.html",
    "https://mersingundem.com/haber/13678/bir-haftada-duzenlenen-uyusturucu-operasyonlarinda-24-kisi-tutuklandi.html",
    "https://mersingundem.com/haber/13679/mersin-buyuksehir-belediyesi-cop31de-cevre-ve-iklim-odakli-calismalariyla-one-cikti.html",
-   "https://mersingundem.com/haber/13680/cocuklar-guz-ara-tatilinde-mercan-bilim-merkezinin-farkini-yasadi.html"
+   "https://mersingundem.com/haber/13680/cocuklar-guz-ara-tatilinde-mercan-bilim-merkezinin-farkini-yasadi.html",
+   "https://mersingundem.com/haber/13683/akdeniz-belediyesinden-cocuk-haklari-paneli.html",
+   "https://mersingundem.com/haber/13682/meskinin-2027-yili-butcesi-oy-birligiyle-kabul-edildi.html",
+   "https://mersingundem.com/haber/13681/500-farkli-deniz-canlisi-turu-muzede-sergileniyor.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -344,11 +349,19 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-21T08:32:06.083Z",
+  "guncelleme": "2026-11-21T09:01:48.632Z",
   "liste": [
+   {
+    "baslik": "aslıhan malbora",
+    "trafik": 100
+   },
    {
     "baslik": "sakarya",
     "trafik": 100
+   },
+   {
+    "baslik": "tazminat",
+    "trafik": 500
    },
    {
     "baslik": "yozgat hava durumu",
@@ -363,10 +376,6 @@
     "trafik": 200
    },
    {
-    "baslik": "yargıtay",
-    "trafik": 500
-   },
-   {
     "baslik": "hazar ergüçlü",
     "trafik": 100
    },
@@ -376,14 +385,10 @@
    },
    {
     "baslik": "müge anlı",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "üniversite",
-    "trafik": 100
-   },
-   {
-    "baslik": "galatasaray - samsunspor",
     "trafik": 200
    }
   ]
