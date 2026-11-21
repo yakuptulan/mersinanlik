@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-21T18:31:54.146Z",
+ "guncelleme": "2026-11-21T18:56:26.020Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 19,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T18:31:58.215Z",
+  "guncelleme": "2026-11-21T18:56:30.450Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -773,7 +773,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T18:31:59.349Z",
+  "guncelleme": "2026-11-21T18:56:31.863Z",
   "liste": [
    {
     "tur": "su",
@@ -843,7 +843,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T18:32:03.819Z",
+  "guncelleme": "2026-11-21T18:56:34.919Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -876,9 +876,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3038239,
-    "usd": 60117,
-    "degisim": 2
+    "satis": 3034286,
+    "usd": 60039,
+    "degisim": 2.45
    }
   },
   "altinlar": [
@@ -1011,7 +1011,7 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 21:32:01"
+  "kaynakSaati": "2026-11-21 21:56:01"
  },
  "akaryakit": {
   "guncelleme": "2026-11-21T18:32:05.911Z",
@@ -8787,7 +8787,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T18:32:06.511Z",
+  "guncelleme": "2026-11-21T18:56:45.209Z",
   "liste": [
    {
     "yol": "/",
@@ -8822,6 +8822,10 @@
     "sayi": 1
    },
    {
+    "yol": "/hava-durumu/bozyazi/",
+    "sayi": 1
+   },
+   {
     "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
     "sayi": 1
    },
@@ -8839,6 +8843,10 @@
    },
    {
     "yol": "/haber/msk-da-dagilma-tehlikesi-kadro-dagildi-gelecek-belirsizlesti-fmcfmt/",
+    "sayi": 1
+   },
+   {
+    "yol": "/hava-durumu/anamur/",
     "sayi": 1
    },
    {
@@ -8872,7 +8880,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T18:32:09.516Z",
+  "guncelleme": "2026-11-21T18:56:47.564Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.96
@@ -8885,20 +8893,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T18:32:11.610Z",
+  "guncelleme": "2026-11-21T18:56:50.391Z",
   "giden": [
-   {
-    "no": [
-     "2S5326"
-    ],
-    "havayolu": "Southwind Airlines",
-    "yer": "Medine",
-    "planlanan": "2026-11-21T18:35:00.000Z",
-    "tahmini": null,
-    "kapi": "103",
-    "durum": "KALKTI",
-    "hat": "dis"
-   },
    {
     "no": [
      "PC4061"
@@ -8920,7 +8916,7 @@
     "planlanan": "2026-11-21T19:15:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "BOARDING",
     "hat": "ic"
    },
    {
@@ -8932,7 +8928,7 @@
     "planlanan": "2026-11-21T19:15:00.000Z",
     "tahmini": "2026-11-21T19:40:00.000Z",
     "kapi": "106",
-    "durum": "GECİKME",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8944,7 +8940,7 @@
     "planlanan": "2026-11-21T19:45:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -9503,30 +9499,6 @@
   "gelen": [
    {
     "no": [
-     "PC4060"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Antalya",
-    "planlanan": "2026-11-21T18:35:00.000Z",
-    "tahmini": "2026-11-21T20:00:00.000Z",
-    "kapi": "",
-    "durum": "GECİKME",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "XQ7710"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "Antalya",
-    "planlanan": "2026-11-21T18:40:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "ic"
-   },
-   {
-    "no": [
      "XQ9306"
     ],
     "havayolu": "SunExpress",
@@ -9534,7 +9506,7 @@
     "planlanan": "2026-11-21T19:10:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "ic"
    },
    {
@@ -10128,7 +10100,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T18:32:11.609Z",
+  "guncelleme": "2026-11-21T18:56:50.391Z",
   "liste": [
    {
     "id": 6386,
