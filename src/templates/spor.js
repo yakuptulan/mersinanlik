@@ -1,4 +1,5 @@
 // Spor sayfaları: /spor/ ana sayfası ve spor sayfalarına özel yan sütun
+import fs from 'node:fs';
 import { htmlKacis as h, slugify as _slug } from '../lib/text.js';
 import { kareKart, haberListesi, reklamAlani, haberYolu, kapakAdresi } from './parcalar.js';
 import { kutuBasligi, takimRozeti, takimLogosu, ligTablosu, ligSerit, macListesi, bugununMaclari, KISA_TAKIM } from './servisParcalari.js';
@@ -78,7 +79,7 @@ function miniTablo(l, adet = 8) {
 }
 
 // Spor sayfalarının yan sütunu: genel kutular yerine spora dair her şey
-export function sporYan(servis, hikayeler = [], simdi = Date.now()) {
+export function sporYan(servis, hikayeler = [], simdi = Date.now(), oncelik = null) {
   const L = servis?.spor?.ligler || {};
   const bugun = bugununMaclari(servis, simdi);
   const sl = L['super-lig'];
@@ -94,9 +95,9 @@ ${bugun.length ? `<section class="kutu kutu-spor">${kutuBasligi({ ikon: '⚽', b
 <div class="sy-maclar">${bugun.slice(0, 8).map((m) => `<a class="sy-mac${m.mersin ? ' mersin' : ''}" href="/spor/${m.kod}/"><span class="sy-takim"><span class="sy-ad">${h(m.ev)}</span>${takimRozeti(m.ev, m.mersin)}</span><span class="sy-orta ${m.durum}">${m.durum === 'baslamadi' ? h(m.saat || '–') : h(String(m.skor || '0-0').replace('-', ' – '))}<small>${m.durum === 'oynaniyor' ? 'oynanıyor' : m.durum === 'bitti' ? 'MS' : h(m.lig)}</small></span><span class="sy-takim dep">${takimRozeti(m.dep, m.mersin)}<span class="sy-ad">${h(m.dep)}</span></span></a>`).join('')}</div></section>`
     : yakin.length ? `<section class="kutu kutu-spor">${kutuBasligi({ ikon: '⚽', baslik: 'Süper Lig: yaklaşan maçlar', link: '/spor/super-lig/' })}
 <div class="sy-maclar">${yakin.map((m) => `<a class="sy-mac" href="/spor/super-lig/"><span class="sy-takim"><span class="sy-ad">${h(m.ev)}</span>${takimRozeti(m.ev)}</span><span class="sy-orta baslamadi">${h(m.saat || '–')}<small>${h(kisaGun(m.tarih))}</small></span><span class="sy-takim dep">${takimRozeti(m.dep)}<span class="sy-ad">${h(m.dep)}</span></span></a>`).join('')}</div></section>` : ''}
+${krallikKarti(servis, oncelik ? [oncelik, ...['super-lig', '3-lig-3', '1-lig'].filter((k) => k !== oncelik)] : undefined)}
 ${m3 ? `<section class="kutu kutu-spor">${kutuBasligi({ ikon: '🏆', baslik: '3. Lig 3. Grup', link: '/spor/3-lig-3/' })}${miniTablo(m3, 18)}</section>` : ''}
 ${cokKonusulan.length >= 3 ? `<section class="kutu kutu-spor">${kutuBasligi({ ikon: '🔥', baslik: 'Sporda çok konuşulanlar' })}<ol class="sy-haberler">${cokKonusulan.map((x, i) => `<li><a href="${h(haberYolu(x))}"><span class="ok-no">${i + 1}</span><img src="${h(kapakAdresi(x).src)}" alt="" width="64" height="48" loading="lazy"><span>${h(x.baslik)}</span></a></li>`).join('')}</ol></section>` : ''}
-<section class="kutu kutu-spor">${kutuBasligi({ ikon: '📋', baslik: 'Ligler' })}<div class="sy-ligler">${LIGLER.filter((l) => L[l.kod]).map((l) => `<a href="/spor/${l.kod}/">${h(l.kisa)}${l.mersin ? ' <small>Mersin</small>' : ''}</a>`).join('')}</div></section>
 ${reklamAlani('yan-alt')}
 </aside>`;
 }
@@ -148,7 +149,6 @@ ${hafta.length ? `<h3 class="ara-baslik">Haftanın maçları</h3><div class="sl-
 ${slHaber.length ? `<h3 class="ara-baslik">Süper Lig'den haberler</h3>${haberListesi(slHaber)}` : ''}
 </section>` : ''}
 ${takimlar.length ? `<section class="spor-bolum" id="mersin"><div class="bolum-bas"><h2>Mersin takımları</h2><span>Puan durumu, form ve fikstür</span></div><div class="mt-izgara">${takimlar.map((t) => takimKarti(t, simdi)).join('')}</div></section>` : ''}
-${krallikKarti(servis)}
 ${buyuk ? `<section class="spor-bolum"><div class="bolum-bas"><h2>Mersin spor gündemi</h2><a class="bolum-link" href="/kategori/spor/">Tümü →</a></div>
 <div class="kare-izgara spor-izgara">${kareKart(buyuk, true)}${kalan.slice(0, 2).map((x) => kareKart(x)).join('')}</div>
 ${kalan.length > 2 ? haberListesi(kalan.slice(2, 10)) : ''}</section>` : ''}
@@ -276,13 +276,22 @@ ${ligTablosu(lig)}
 // TFF adları büyük harfle geldiği için büyük harfle gösterilir (yabancı adlarda I/İ belirsizliği olmasın)
 const kisaOyuncu = (ad) => { const k = String(ad).split(/\s+/).filter(Boolean); return k.length > 3 ? `${k[0]} ${k[1]}` : k.length > 2 ? `${k[0]} ${k[k.length - 1]}` : k.join(' '); };
 const basHarf = (ad) => kisaOyuncu(ad).split(' ').map((k) => k[0]).join('').slice(0, 2);
+// Oyuncu fotoğrafları (scripts/oyuncu-foto.js: Wikimedia Commons, özgür lisanslı)
+let _foto = null;
+export function oyuncuFotolari() {
+  if (_foto) return _foto;
+  try { _foto = JSON.parse(fs.readFileSync(new URL('../../data/oyuncu-foto.json', import.meta.url), 'utf8')); } catch { _foto = {}; }
+  for (const [k, v] of Object.entries(_foto)) if (!v.qid || !fs.existsSync(new URL(`../../public/oyuncu/${v.qid}.webp`, import.meta.url))) delete _foto[k];
+  return _foto;
+}
 function krallikListesi(g, adet) {
+  const F = oyuncuFotolari();
   let sira = 0;
   return `<ol class="kr-liste">${g.liste.slice(0, adet).map((o, i, l) => {
     if (i === 0 || o.gol !== l[i - 1].gol) sira = i + 1;
     let n = 0; for (const c of o.kulup) n = (n * 31 + c.charCodeAt(0)) >>> 0;
     const mersin = mersinMi(o.kulup);
-    return `<li class="kr-satir${mersin ? ' mersin' : ''}"><span class="kr-sira">${sira}</span><span class="kr-avatar" style="--c:${mersin ? '#C8102E' : `hsl(${n % 360} 60% 42%)`}">${h(basHarf(o.ad))}</span><span class="kr-ad"><b>${h(kisaOyuncu(o.ad))}</b><small>${takimLogosu(o.kulup)}${h(KISA_TAKIM[o.kulup] || o.kulup)}</small></span><span class="kr-gol"><b>${o.gol}</b><small>gol</small></span></li>`;
+    return `<li class="kr-satir${mersin ? ' mersin' : ''}"><span class="kr-sira">${sira}</span>${F[`${o.ad}|${o.kulup}`] ? `<img class="kr-avatar kr-foto" src="/oyuncu/${F[`${o.ad}|${o.kulup}`].qid}.webp" alt="${h(kisaOyuncu(o.ad))}" width="52" height="52" loading="lazy" title="Fotoğraf: ${h(F[`${o.ad}|${o.kulup}`].yazar)} · ${h(F[`${o.ad}|${o.kulup}`].lisans)} · Wikimedia Commons">` : `<span class="kr-avatar" style="--c:${mersin ? '#C8102E' : `hsl(${n % 360} 60% 42%)`}">${h(basHarf(o.ad))}</span>`}<span class="kr-ad"><b>${h(kisaOyuncu(o.ad))}</b><small>${takimLogosu(o.kulup)}${h(KISA_TAKIM[o.kulup] || o.kulup)}</small></span><span class="kr-gol"><b>${o.gol}</b><small>gol</small></span></li>`;
   }).join('')}</ol>`;
 }
 // Sekmeli gol krallığı kartı. kodlar: gösterilecek ligler (ilki açık gelir)
@@ -295,5 +304,5 @@ export function krallikKarti(servis, kodlar = ['super-lig', '3-lig-3', '1-lig'],
 ${var_.length > 1 ? var_.map((k, i) => `<input type="radio" name="${ad}" id="${ad}-${k}" class="kr-radyo"${i ? '' : ' checked'}>`).join('') : ''}
 ${var_.length > 1 ? `<nav class="kr-sekmeler" aria-label="Ligler">${var_.map((k) => `<label for="${ad}-${k}">${h(G[k].ad)}${k === '3-lig-3' ? ' <small>Mersin</small>' : ''}</label>`).join('')}</nav>` : ''}
 ${var_.map((k) => `<div class="kr-panel${var_.length === 1 ? ' tek' : ''}">${krallikListesi(G[k], adet)}</div>`).join('')}
-<a class="kr-alt" href="${h(G[var_[0]].kaynak)}" rel="noopener" target="_blank">Kaynak: TFF · ${new Date(G[var_[0]].guncelleme).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', timeZone: TZ })}</a></section>`;
+<p class="kr-alt"><a href="${h(G[var_[0]].kaynak)}" rel="noopener" target="_blank">Kaynak: TFF</a> · ${new Date(G[var_[0]].guncelleme).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', timeZone: TZ })}${Object.keys(oyuncuFotolari()).length ? ' · <a href="/gorsel-kaynaklari/#oyuncu">Fotoğraflar: Wikimedia Commons</a>' : ''}</p></section>`;
 }

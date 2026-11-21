@@ -113,6 +113,9 @@ jobs:
       - name: Temsili fotoğrafları indir (sadece eksik olanlar)
         run: node scripts/foto-indir.js
 
+      - name: Futbolcu fotoğrafları (Wikimedia Commons, özgür lisans)
+        run: node scripts/oyuncu-foto.js || true
+
       - name: Ziyaretçi trafiği (Cloudflare, 3 saatte bir)
         run: node src/trafik.js || true
 
@@ -134,7 +137,7 @@ jobs:
         run: |
           git config user.name "mersinanlik-bot"
           git config user.email "bot@mersinanlik.com"
-          git add -A data/ public/foto/ public/uretilen/ public/etkinlik/ public/bilgi/ public/gezi/ public/logo/ public/bayrak/
+          git add -A data/ public/foto/ public/uretilen/ public/etkinlik/ public/bilgi/ public/gezi/ public/logo/ public/bayrak/ public/oyuncu/
           if git diff --cached --quiet; then
             echo "Değişiklik yok"
           else

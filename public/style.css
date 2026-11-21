@@ -1666,3 +1666,20 @@ a.cip.kat:hover { filter: brightness(.95); }
 .kr-gol small { color: #94a3b8; font-size: 12px; margin-top: 2px; }
 .kr-alt { display: block; text-align: center; padding: 14px; color: #f87171; font-weight: 700; font-size: 14px; text-decoration: none; }
 @media (max-width: 640px) { .kr-satir { grid-template-columns: 20px 42px minmax(0,1fr) auto; gap: 10px; padding: 11px 16px; } .kr-avatar { width: 42px; height: 42px; font-size: 14px; } .kr-gol b { font-size: 24px; } }
+img.kr-foto { object-fit: cover; background: #1f2937; padding: 0; }
+.kr-alt a { color: #f87171; text-decoration: none; }
+.kr-alt { color: #94a3b8; font-weight: 600; font-size: 13px; margin: 0; }
+/* Yan sütunda gol krallığı */
+.yan .krallik { margin: 0; border-radius: 22px; padding-top: 16px; }
+.yan .kr-bas { padding: 0 18px 8px; }
+.yan .kr-bas h2 { font-size: 18px; }
+.yan .kr-bas span { font-size: 12px; }
+.yan .kr-sekmeler { padding: 0 8px; }
+.yan .kr-sekmeler label { padding: 10px 9px; font-size: 13px; }
+.yan .kr-satir { grid-template-columns: 18px 40px minmax(0, 1fr) auto; gap: 10px; padding: 9px 16px; }
+.yan .kr-avatar { width: 40px; height: 40px; font-size: 13px; }
+.yan .kr-ad b { font-size: 13.5px; }
+.yan .kr-ad small { font-size: 12px; }
+.yan .kr-ad .takim-logo { width: 16px; height: 16px; }
+.yan .kr-gol b { font-size: 22px; }
+.yan .kr-gol small { font-size: 11px; }

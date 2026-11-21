@@ -1,6 +1,6 @@
 import { piyasaIkon } from './piyasaIkon.js';
 import { gundemimKarti } from './gundemim.js';
-import { sporYan, sporAnaIcerik, sporMu, macGunuKarti, derbiKarti, krallikKarti } from './spor.js';
+import { sporYan, sporAnaIcerik, sporMu, macGunuKarti, derbiKarti, oyuncuFotolari } from './spor.js';
 import { kategoriYan, ekonomiBugunKarti } from './kategoriYan.js';
 import { mahalleListesi, mahalleYolu, sade as mahalleSade } from './mahalle.js';
 import { macGunuKutusu } from './servisParcalari.js';
@@ -657,9 +657,8 @@ export function ligSayfasi({ servis, kod, hikayeler = [] }) {
   const icerik = `<main class="kap govde"><div class="ana">
 ${ligMenusu(sp.ligler || {}, kod)}
 ${k ? `${ligSerit(k)}${k.maclar?.length ? `<h3 class="ara-baslik">Haftanın maçları</h3>${macListesi(k.maclar)}` : ''}<h3 class="ara-baslik">Puan durumu</h3>${ligTablosu(k)}` : '<div class="bos">Puan durumu şu an alınamadı.</div>'}
-${krallikKarti(servis, [kod], 15)}
 <p style="color:var(--ikincil);font-size:15px">Kaynak: Türkiye Futbol Federasyonu (tff.org). Son güncelleme: ${sp.guncelleme ? saat(sp.guncelleme) : '–'}</p>
-</div>${sporYan(servis, hikayeler)}</main>`;
+</div>${sporYan(servis, hikayeler, Date.now(), { 'super-lig': 'super-lig', '1-lig': '1-lig', '3-lig-3': '3-lig-3' }[kod] || null)}</main>`;
   return sayfa({
     baslik: `${lig.ad} puan durumu ve fikstür`,
     aciklama: `${lig.ad} güncel puan durumu, son 5 maç formu ve haftanın maçları.`,
@@ -925,6 +924,7 @@ export function bilgiSayfalari() {
       govde: `<p>Üzerinde kaynak yazmayan haber görsellerinin bir kısmı yapay zekâ ile, haberin konusunu anlatmak için üretilmiştir; gerçek bir fotoğraf değildir ve olaydaki kişileri göstermez. Haber sayfalarında bu görsellerin altında "yapay zekâ ile üretilmiştir" notu bulunur. Üzerinde "Foto: …" yazan görseller ise ilgili kurumun (ör. belediye) kendi paylaştığı fotoğraflardır.</p>
 <p>Haber kartlarındaki diğer fotoğraflar <strong>temsilidir</strong>; haberdeki olayın fotoğrafı değildir. Mersin'in ilçelerini ve haberin konusunu gösterir. Fotoğrafların tamamı Wikimedia Commons'tan, ticari kullanıma izin veren lisanslarla alınmıştır. Fotoğrafçılara teşekkür ederiz.</p>
 <ul>${FOTOLAR.map((f) => `<li><a href="${h(f.sayfa)}" rel="noopener" target="_blank">${h(f.sayfa.split('File:')[1])}</a> — ${h(f.yazar)} · ${h(f.lisans)}</li>`).join('')}</ul>
+${(() => { const F = Object.entries(oyuncuFotolari()); return F.length ? `<h2 id="oyuncu">Futbolcu fotoğrafları</h2><p>Gol krallığı listelerindeki futbolcu fotoğrafları Wikimedia Commons'tan, özgür lisanslarla alınmıştır.</p><ul>${F.map(([k, v]) => `<li>${h(k.split('|')[0])} — <a href="${h(v.kaynak)}" rel="noopener" target="_blank">${h(v.yazar)}</a> · ${h(v.lisans)}</li>`).join('')}</ul>` : ''; })()}
 <p>Lisanslar: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.tr" rel="noopener" target="_blank">CC BY-SA</a>, <a href="https://creativecommons.org/licenses/by/4.0/deed.tr" rel="noopener" target="_blank">CC BY</a>, CC0 ve kamu malı. Fotoğraflar sitede küçültülüp kırpılmıştır.</p>`,
     }),
     ({
