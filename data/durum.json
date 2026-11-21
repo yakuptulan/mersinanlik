@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-21T10:31:22.073Z"
   }
  },
  "gorsel": {
@@ -302,7 +306,8 @@
    "https://mersingundem.com/haber/13682/meskinin-2027-yili-butcesi-oy-birligiyle-kabul-edildi.html",
    "https://mersingundem.com/haber/13681/500-farkli-deniz-canlisi-turu-muzede-sergileniyor.html",
    "https://mersingundem.com/haber/13685/mersin-universitesi-hastanesinde-tani-suresini-dakikalara-indiren-teknoloji.html",
-   "https://mersingundem.com/haber/13684/su-urunleri-denetimlerinde-445-kilogram-urune-el-konuldu.html"
+   "https://mersingundem.com/haber/13684/su-urunleri-denetimlerinde-445-kilogram-urune-el-konuldu.html",
+   "https://mersingundem.com/haber/13686/baskan-yildiz-sabah-yuruyusunde-vatandaslarla-bulustu.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -354,7 +359,7 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-21T10:22:36.014Z",
+  "guncelleme": "2026-11-21T10:31:55.989Z",
   "liste": [
    {
     "baslik": "avrupa birliği",
@@ -366,11 +371,15 @@
    },
    {
     "baslik": "gençlerbirliği - gaziantep fk",
-    "trafik": 5000
+    "trafik": 10000
    },
    {
     "baslik": "istanbulspor - keçiörengücü",
     "trafik": 1000
+   },
+   {
+    "baslik": "21 kasım 2026 altın fiyatları",
+    "trafik": 10000
    },
    {
     "baslik": "yds ne zaman",
@@ -391,10 +400,6 @@
    {
     "baslik": "yozgat hava durumu",
     "trafik": 200
-   },
-   {
-    "baslik": "anne",
-    "trafik": 100
    }
   ]
  },

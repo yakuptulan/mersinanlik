@@ -1,8 +1,8 @@
 {
- "guncelleme": "2026-11-21T10:22:37.365Z",
+ "guncelleme": "2026-11-21T10:31:58.996Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 21,
+   "sicaklik": 22,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -39,7 +39,7 @@
   },
   "anamur": {
    "sicaklik": 23,
-   "durum": "Parçalı bulutlu",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -75,7 +75,7 @@
   },
   "aydincik": {
    "sicaklik": 22,
-   "durum": "Hafif sağanak",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -219,7 +219,7 @@
   },
   "gulnar": {
    "sicaklik": 16,
-   "durum": "Hafif sağanak",
+   "durum": "Hafif yağmurlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -363,7 +363,7 @@
   },
   "tarsus": {
    "sicaklik": 22,
-   "durum": "Az bulutlu",
+   "durum": "Hafif sağanak",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -398,7 +398,7 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 21,
+   "sicaklik": 22,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -434,7 +434,7 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 21,
+   "sicaklik": 22,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T10:22:41.293Z",
+  "guncelleme": "2026-11-21T10:32:03.889Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T10:22:42.364Z",
+  "guncelleme": "2026-11-21T10:32:05.138Z",
   "liste": [
    {
     "tur": "su",
@@ -886,7 +886,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T10:22:46.551Z",
+  "guncelleme": "2026-11-21T10:32:09.659Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -919,9 +919,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2923566,
-    "usd": 57848,
-    "degisim": -6.27
+    "satis": 2933825,
+    "usd": 58051,
+    "degisim": -6.29
    }
   },
   "altinlar": [
@@ -1054,10 +1054,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 13:22:01"
+  "kaynakSaati": "2026-11-21 13:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T10:22:48.842Z",
+  "guncelleme": "2026-11-21T10:32:12.604Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1982,7 +1982,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-21T10:22:50.634Z",
+  "guncelleme": "2026-11-21T10:32:14.176Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8379,7 +8379,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-21T10:23:31.922Z",
+    "guncelleme": "2026-11-21T10:32:58.098Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8461,7 +8461,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-21T10:23:33.145Z",
+    "guncelleme": "2026-11-21T10:32:59.354Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8543,7 +8543,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-21T10:23:34.376Z",
+    "guncelleme": "2026-11-21T10:33:00.620Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8642,7 +8642,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T10:22:49.102Z",
+  "guncelleme": "2026-11-21T10:32:12.929Z",
   "liste": [
    {
     "yol": "/",
@@ -8677,6 +8677,10 @@
     "sayi": 3
    },
    {
+    "yol": "/haber/akdeniz-de-su-kesintisi-8-saat-surecek-sb2149/",
+    "sayi": 2
+   },
+   {
     "yol": "/bilgi/",
     "sayi": 2
    },
@@ -8685,27 +8689,7 @@
     "sayi": 2
    },
    {
-    "yol": "/haber/akdeniz-de-su-kesintisi-8-saat-surecek-sb2149/",
-    "sayi": 2
-   },
-   {
-    "yol": "/haber/yenisehir-de-su-kesintisi-bircok-mahalle-etkilenecek-s494a3/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
-    "sayi": 1
-   },
-   {
-    "yol": "/trafik/",
-    "sayi": 1
-   },
-   {
-    "yol": "/piyasalar/gram-altin/&ss=tw&rt=Gram+alt%C4%B1n+ne+kadar%3F+Bug%C3%BCn+canl%C4%B1+gram+alt%C4%B1n+fiyat%C4%B1+-+Mersin+Anl%C4%B1k&cd=KhQxNDk2OTU4MTgyNTIxMDIwMzk0OTIdZjcwZjUzYWU5MTM2ZWRkYzpjb20udHI6dHI6VFI&ssp=AMJHsmWqlNtj-Lx0EeQMFnU5botX4UoECw/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/mersin-de-kapali-yuzme-havuzu-gercekten-kapali-7flbwy/",
+    "yol": "/haber/mersin-yenisehir-de-20-cadde-trafige-kapatiliyor-iste-tarih-ve-saat-1729jhi/",
     "sayi": 1
    },
    {
@@ -8721,15 +8705,23 @@
     "sayi": 1
    },
    {
+    "yol": "/akaryakit-fiyatlari/",
+    "sayi": 1
+   },
+   {
     "yol": "/gundemim/",
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-yenisehir-de-20-cadde-trafige-kapatiliyor-iste-tarih-ve-saat-1729jhi/",
+    "yol": "/haber/mersin-de-kapali-yuzme-havuzu-gercekten-kapali-7flbwy/",
     "sayi": 1
    },
    {
     "yol": "/kategori/turkiye-dunya/",
+    "sayi": 1
+   },
+   {
+    "yol": "/piyasalar/gram-altin/&ss=tw&rt=Gram+alt%C4%B1n+ne+kadar%3F+Bug%C3%BCn+canl%C4%B1+gram+alt%C4%B1n+fiyat%C4%B1+-+Mersin+Anl%C4%B1k&cd=KhQxNDk2OTU4MTgyNTIxMDIwMzk0OTIdZjcwZjUzYWU5MTM2ZWRkYzpjb20udHI6dHI6VFI&ssp=AMJHsmWqlNtj-Lx0EeQMFnU5botX4UoECw/",
     "sayi": 1
    },
    {
@@ -8741,6 +8733,14 @@
     "sayi": 1
    },
    {
+    "yol": "/trafik/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
+    "sayi": 1
+   },
+   {
     "yol": "/gorsel-kaynaklari/",
     "sayi": 1
    },
@@ -8749,43 +8749,35 @@
     "sayi": 1
    },
    {
+    "yol": "/haber/yenisehir-de-su-kesintisi-bircok-mahalle-etkilenecek-s494a3/",
+    "sayi": 1
+   },
+   {
     "yol": "/piyasalar/gram-altin/&ct=ga&cd=CAEYASoUMTQ5Njk1ODE4MjUyMTAyMDM5NDkyHWY3MGY1M2FlOTEzNmVkZGM6Y29tLnRyOnRyOlRS&usg=AOvVaw0_ep_8Mlalwp_B363tUYiW/",
     "sayi": 1
    },
    {
-    "yol": "/akaryakit-fiyatlari/",
+    "yol": "/haber/msk-da-dagilma-tehlikesi-kadro-dagildi-gelecek-belirsizlesti-fmcfmt/",
     "sayi": 1
    }
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T10:23:35.577Z",
+  "guncelleme": "2026-11-21T10:33:01.821Z",
   "deniz": {
    "sicaklik": 21.7,
-   "dalga": 0.54
+   "dalga": 0.56
   },
   "hava": {
    "aqi": 34,
    "pm25": 11.4,
    "pm10": 16.6,
-   "uvMax": 2.15
+   "uvMax": 2.2
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T10:23:37.213Z",
+  "guncelleme": "2026-11-21T10:33:04.008Z",
   "giden": [
-   {
-    "no": [
-     "TK2457"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-21T10:30:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC2085"
@@ -8807,7 +8799,7 @@
     "planlanan": "2026-11-21T11:00:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KONTUAR KAPALI",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -9347,6 +9339,18 @@
     "planlanan": "2026-11-22T09:40:00.000Z",
     "tahmini": null,
     "kapi": "105",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2457"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-22T10:30:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
     "durum": "",
     "hat": "ic"
    }
@@ -9907,7 +9911,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T10:23:37.213Z",
+  "guncelleme": "2026-11-21T10:33:04.007Z",
   "liste": [
    {
     "id": 6386,
