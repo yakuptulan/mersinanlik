@@ -274,7 +274,7 @@ ${ligTablosu(lig)}
 
 // ---------- Gol krallığı ----------
 // TFF adları büyük harfle geldiği için büyük harfle gösterilir (yabancı adlarda I/İ belirsizliği olmasın)
-const kisaOyuncu = (ad) => { const k = String(ad).split(/\s+/).filter(Boolean); return k.length > 2 ? `${k[0]} ${k[k.length - 1]}` : k.join(' '); };
+const kisaOyuncu = (ad) => { const k = String(ad).split(/\s+/).filter(Boolean); return k.length > 3 ? `${k[0]} ${k[1]}` : k.length > 2 ? `${k[0]} ${k[k.length - 1]}` : k.join(' '); };
 const basHarf = (ad) => kisaOyuncu(ad).split(' ').map((k) => k[0]).join('').slice(0, 2);
 function krallikListesi(g, adet) {
   let sira = 0;
