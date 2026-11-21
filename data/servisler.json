@@ -1,9 +1,9 @@
 {
- "guncelleme": "2026-11-21T21:50:01.912Z",
+ "guncelleme": "2026-11-21T22:01:33.722Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 17,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 16,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T21:50:06.648Z",
+  "guncelleme": "2026-11-21T22:01:36.374Z",
   "liste": [
    {
     "ad": "Asuman Eczanesi",
@@ -707,25 +707,8 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T21:50:08.135Z",
+  "guncelleme": "2026-11-21T22:01:37.154Z",
   "liste": [
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Toroslar ilçesi Mithat Toroğlu mahallesi Rıfat uslu caddesi üzerindeki ana boru arızasından dolayı saat 01.00'e kadar su kesintisi yaşanacaktır.",
-    "baslangic": "2026-11-21T20:12:00.000Z",
-    "bitis": "2026-11-21T22:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "toroslar",
-      "ad": "Toroslar",
-      "mahalleler": [
-       "Mithat Toroğlu",
-       "Toroslar"
-      ]
-     }
-    ]
-   },
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
@@ -745,7 +728,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T21:50:11.964Z",
+  "guncelleme": "2026-11-21T22:01:39.477Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -778,9 +761,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3049420,
-    "usd": 60338,
-    "degisim": 2.17
+    "satis": 3051138,
+    "usd": 60372,
+    "degisim": 2.48
    }
   },
   "altinlar": [
@@ -913,7 +896,7 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 00:50:01"
+  "kaynakSaati": "2026-11-22 01:01:01"
  },
  "akaryakit": {
   "guncelleme": "2026-11-21T21:34:03.119Z",
@@ -1741,7 +1724,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-21T21:02:13.578Z",
+  "guncelleme": "2026-11-21T22:01:51.727Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8327,7 +8310,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-21T21:02:58.761Z",
+    "guncelleme": "2026-11-21T22:02:31.342Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8409,7 +8392,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-21T21:03:00.052Z",
+    "guncelleme": "2026-11-21T22:02:32.551Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8491,7 +8474,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-21T21:03:01.354Z",
+    "guncelleme": "2026-11-21T22:02:33.764Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8590,11 +8573,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T21:50:22.412Z",
+  "guncelleme": "2026-11-21T22:01:50.244Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 21
+    "sayi": 19
    },
    {
     "yol": "/spor/",
@@ -8699,20 +8682,20 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T21:50:24.678Z",
+  "guncelleme": "2026-11-21T22:02:34.964Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.92
   },
   "hava": {
-   "aqi": 39,
-   "pm25": 14.4,
-   "pm10": 20.1,
+   "aqi": 34,
+   "pm25": 11.8,
+   "pm10": 18.1,
    "uvMax": 2.25
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T21:50:27.514Z",
+  "guncelleme": "2026-11-21T22:02:36.585Z",
   "giden": [
    {
     "no": [
@@ -9328,18 +9311,6 @@
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "PC2096"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-21T22:00:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "XQ1703"
@@ -9967,7 +9938,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T21:50:27.513Z",
+  "guncelleme": "2026-11-21T22:02:36.585Z",
   "liste": [
    {
     "id": 6386,
