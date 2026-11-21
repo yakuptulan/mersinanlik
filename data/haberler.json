@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-21T15:32:56.023Z",
+ "guncelleme": "2026-11-21T15:53:44.114Z",
  "hikayeler": [
   {
    "id": "2r80dh",
@@ -9086,7 +9086,8 @@
    "metinDenemesi": 2,
    "macHaberi": true,
    "kapak": "superlig",
-   "gorselHatasi": "kapak var"
+   "gorselHatasi": "kapak var",
+   "trend": "kocaelispor vs fenerbahçe"
   },
   {
    "id": "a7f2ed",
@@ -9258,7 +9259,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-20T07:32:11.000Z",
-   "sonGuncelleme": "2026-11-21T15:31:40.625Z",
+   "sonGuncelleme": "2026-11-21T15:53:25.871Z",
    "kaynaklar": [
     {
      "kaynakId": "aa-guncel",
@@ -10340,7 +10341,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-20T16:08:00+03:00",
-   "sonGuncelleme": "2026-11-21T15:31:37.906Z",
+   "sonGuncelleme": "2026-11-21T15:53:22.587Z",
    "kaynaklar": [
     {
      "kaynakId": "haberturk-mersin",
@@ -10910,52 +10911,6 @@
    "gorselKaynak": "yz",
    "gorselPrompt": "A modern university hospital microbiology laboratory in Mersin under bright daytime lighting, featuring advanced medical diagnostic equipment on a clean stainless steel counter, with blurred laboratory shelves and soft indoor illumination in the background.. Realistic editorial news photograph, natural daylight, wide shot, sharp focus, no text, no letters, no watermark.",
    "gorsel": "ln02sx.webp"
-  },
-  {
-   "id": "1fp7fpo",
-   "baslik": "Bu hafta yatırım araçlarının performansı",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "ekonomi",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-20T15:51:28.000Z",
-   "sonGuncelleme": "2026-11-20T15:59:35.095Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "aa-guncel",
-     "ad": "Anadolu Ajansı",
-     "link": "https://www.aa.com.tr/tr/ekonomi/bu-hafta-yatirim-araclarinin-performansi/4132415",
-     "baslik": "Bu hafta yatırım araçlarının performansı",
-     "tarih": "2026-11-20T15:51:28.000Z"
-    }
-   ]
-  },
-  {
-   "id": "1vssw0f",
-   "baslik": "Türkiye, FIBA'nın Dünya Kupası Avrupa Elemeleri \"güç sıralamasında\" zirvede",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "spor",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-20T15:41:13.000Z",
-   "sonGuncelleme": "2026-11-20T15:59:35.119Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "aa-guncel",
-     "ad": "Anadolu Ajansı",
-     "link": "https://www.aa.com.tr/tr/spor/turkiye-fibanin-dunya-kupasi-avrupa-elemeleri-guc-siralamasinda-zirvede/4132405",
-     "baslik": "Türkiye, FIBA'nın Dünya Kupası Avrupa Elemeleri \"güç sıralamasında\" zirvede",
-     "tarih": "2026-11-20T15:41:13.000Z"
-    }
-   ]
   },
   {
    "id": "dp684z",
@@ -13055,7 +13010,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-21T07:02:00.000Z",
-   "sonGuncelleme": "2026-11-21T07:16:59.620Z",
+   "sonGuncelleme": "2026-11-21T15:53:22.567Z",
    "kaynaklar": [
     {
      "kaynakId": "mersinhabermerkezi",
@@ -13063,6 +13018,13 @@
      "link": "https://www.mersinhabermerkezi.com/yeni-mersin-idman-yurdu-kirsehir-deplasmaninda-3-puan-arayacak",
      "baslik": "Yeni Mersin İdman Yurdu, Kırşehir deplasmanında 3 puan arayacak",
      "tarih": "2026-11-21T07:02:00.000Z"
+    },
+    {
+     "kaynakId": "cukurova",
+     "ad": "Çukurova Gazetesi",
+     "link": "https://cukurovagazetesi.com/yeni-mersin-idman-yurdu-kirsehir-fk-deplasmaninda-puan-arayacak",
+     "baslik": "Yeni Mersin İdman Yurdu, Kırşehir FK deplasmanında puan arayacak",
+     "tarih": "2026-11-21T15:48:00.000Z"
     }
    ],
    "metinDenemesi": 1,
@@ -17670,6 +17632,102 @@
    "otomatik": true,
    "kapak": "su",
    "gorselHatasi": "otomatik haber: ilçe çizimi kullanılır"
+  },
+  {
+   "id": "1ndk663",
+   "baslik": "Mersin İdman Yurdu’nun gençleri iki galibiyet aldı",
+   "ozet": "Mersin İdman Yurdu altyapı takımları, Niğde Belediye Spor ile oynadıkları iki farklı yaş kategorisi maçında da galibiyete ulaştı. U16 takımı karşılaşmayı 3-1 kazanırken, U17 ekibi sahadan 2-0'lık üstünlükle ayrıldı.",
+   "ilceler": [],
+   "genel": false,
+   "kategori": "spor",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-21T15:36:00.000Z",
+   "sonGuncelleme": "2026-11-21T15:53:22.575Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "cukurova",
+     "ad": "Çukurova Gazetesi",
+     "link": "https://cukurovagazetesi.com/mersin-idman-yurdunun-gencleri-iki-galibiyet-aldi",
+     "baslik": "Mersin İdman Yurdu’nun gençleri iki galibiyet aldı",
+     "tarih": "2026-11-21T15:36:00.000Z"
+    }
+   ],
+   "metinDenemesi": 1,
+   "yaziKaynak": "Çukurova Gazetesi",
+   "yazimDenemesi": 1,
+   "metin": "Mersin İdman Yurdu genç ekipleri, altyapı kategorilerinde Niğde Belediye Spor karşısında iki ayrı galibiyete imza attı. Mersin temsilcisinin altyapı kadroları, hafta sonu oynanan müsabakalarda rakiplerini mağlup ederek haftayı başarılı sonuçlarla kapattı.\n\nU16 kategorisinde gerçekleştirilen mücadelede Mersin İdman Yurdu, Niğde Belediye Spor'u 3-1'lik skorla geçti. Kırmızı-lacivertli ekibin bu yaş grubundaki gollerini Ahmet Mert İlhan iki kez ve Fatih Sami Ertuğrul bir kez kaydetti.\n\nU17 kategorisindeki diğer karşılaşmada ise Mersin temsilcisi, rakibini 2-0 mağlup etmeyi başardı. Bu maçta Mersin İdman Yurdu adına fileleri havalandıran oyuncular Rüzgar Yüztaş ile Ali Kaan Can oldu.",
+   "gorselKaynak": "yz"
+  },
+  {
+   "id": "qugya5",
+   "baslik": "Bursa'da '2. Kumla Balık Festivali'nde 4 bin palamut ücretsiz dağıtıldı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "kultur",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-21T15:21:29.000Z",
+   "sonGuncelleme": "2026-11-21T15:53:22.893Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "mersinhabermerkezi",
+     "ad": "Mersin Haber Merkezi",
+     "link": "https://www.mersinhabermerkezi.com/bursada-2-kumla-balik-festivalinde-4-bin-palamut-ucretsiz-dagitildi",
+     "baslik": "Bursa'da '2. Kumla Balık Festivali'nde 4 bin palamut ücretsiz dağıtıldı",
+     "tarih": "2026-11-21T15:21:29.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1c85esh",
+   "baslik": "Japon ustalar, Kastamonu'daki bir köy okulunun yerden ısıtma sistemini yaptı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "egitim",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-21T15:47:18.000Z",
+   "sonGuncelleme": "2026-11-21T15:53:25.857Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/yasam/japon-ustalar-kastamonudaki-bir-koy-okulunun-yerden-isitma-sistemini-yapti/4133074",
+     "baslik": "Japon ustalar, Kastamonu'daki bir köy okulunun yerden ısıtma sistemini yaptı",
+     "tarih": "2026-11-21T15:47:18.000Z"
+    }
+   ]
+  },
+  {
+   "id": "13q49xz",
+   "baslik": "Çin'in Çinghay eyaletinde 5,6 büyüklüğünde deprem",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-21T15:37:19.000Z",
+   "sonGuncelleme": "2026-11-21T15:53:25.865Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/dunya/cinin-cinghay-eyaletinde-5-6-buyuklugunde-deprem/4133069",
+     "baslik": "Çin'in Çinghay eyaletinde 5,6 büyüklüğünde deprem",
+     "tarih": "2026-11-21T15:37:19.000Z"
+    }
+   ]
   }
  ]
 }

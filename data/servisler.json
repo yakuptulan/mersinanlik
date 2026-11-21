@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-21T15:31:46.624Z",
+ "guncelleme": "2026-11-21T15:53:44.217Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T15:31:50.448Z",
+  "guncelleme": "2026-11-21T15:53:49.359Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T15:31:51.629Z",
+  "guncelleme": "2026-11-21T15:53:50.740Z",
   "liste": [
    {
     "tur": "su",
@@ -821,7 +821,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T15:31:56.503Z",
+  "guncelleme": "2026-11-21T15:53:54.433Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -854,9 +854,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3026995,
-    "usd": 59894,
-    "degisim": -0.66
+    "satis": 3026400,
+    "usd": 59883,
+    "degisim": 0.45
    }
   },
   "altinlar": [
@@ -989,10 +989,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 18:31:01"
+  "kaynakSaati": "2026-11-21 18:53:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T15:31:59.314Z",
+  "guncelleme": "2026-11-21T15:53:57.463Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1917,7 +1917,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-21T15:02:20.320Z",
+  "guncelleme": "2026-11-21T15:53:59.710Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -1926,14 +1926,14 @@
      "sira": 1,
      "takim": "Galatasaray",
      "ham": "GALATASARAY A.Ş.",
-     "o": 11,
-     "g": 9,
+     "o": 12,
+     "g": 10,
      "b": 1,
      "m": 1,
-     "a": 27,
-     "y": 15,
-     "av": 12,
-     "p": 28,
+     "a": 29,
+     "y": 16,
+     "av": 13,
+     "p": 31,
      "mersin": false
     },
     {
@@ -1954,13 +1954,13 @@
      "sira": 3,
      "takim": "Amed Sportif Faaliyetler",
      "ham": "AMED SPORTİF FAALİYETLER",
-     "o": 11,
+     "o": 12,
      "g": 7,
      "b": 2,
-     "m": 2,
+     "m": 3,
      "a": 28,
-     "y": 15,
-     "av": 13,
+     "y": 17,
+     "av": 11,
      "p": 23,
      "mersin": false
     },
@@ -2036,6 +2036,20 @@
     },
     {
      "sira": 9,
+     "takim": "Çaykur Rizespor",
+     "ham": "ÇAYKUR RİZESPOR A.Ş.",
+     "o": 12,
+     "g": 5,
+     "b": 2,
+     "m": 5,
+     "a": 15,
+     "y": 16,
+     "av": -1,
+     "p": 17,
+     "mersin": false
+    },
+    {
+     "sira": 10,
      "takim": "Arca Çorum FK",
      "ham": "ARCA ÇORUM FK",
      "o": 11,
@@ -2049,7 +2063,7 @@
      "mersin": false
     },
     {
-     "sira": 10,
+     "sira": 11,
      "takim": "Göztepe",
      "ham": "GÖZTEPE A.Ş.",
      "o": 11,
@@ -2060,20 +2074,6 @@
      "y": 19,
      "av": 3,
      "p": 15,
-     "mersin": false
-    },
-    {
-     "sira": 11,
-     "takim": "Çaykur Rizespor",
-     "ham": "ÇAYKUR RİZESPOR A.Ş.",
-     "o": 11,
-     "g": 4,
-     "b": 2,
-     "m": 5,
-     "a": 13,
-     "y": 16,
-     "av": -3,
-     "p": 14,
      "mersin": false
     },
     {
@@ -2150,13 +2150,13 @@
      "sira": 17,
      "takim": "Samsunspor",
      "ham": "SAMSUNSPOR A.Ş.",
-     "o": 11,
+     "o": 12,
      "g": 2,
      "b": 1,
-     "m": 8,
-     "a": 11,
-     "y": 26,
-     "av": -15,
+     "m": 9,
+     "a": 12,
+     "y": 28,
+     "av": -16,
      "p": 7,
      "mersin": false
     },
@@ -2188,7 +2188,7 @@
      "tarih": "2026-11-21",
      "saat": "16:00",
      "ev": "Amed Sportif Faaliyetler",
-     "skor": null,
+     "skor": "0-2",
      "dep": "Çaykur Rizespor",
      "mersin": false
     },
@@ -2196,7 +2196,7 @@
      "tarih": "2026-11-21",
      "saat": "16:00",
      "ev": "Galatasaray",
-     "skor": null,
+     "skor": "2-1",
      "dep": "Samsunspor",
      "mersin": false
     },
@@ -4105,7 +4105,7 @@
       {
        "ev": "Metro Holding Kayserispor",
        "dep": "Sms Grup Sarıyer",
-       "skor": null
+       "skor": "3-1"
       },
       {
        "ev": "Mısırlıcomtr Fatih Karagümrük",
@@ -4216,11 +4216,11 @@
     },
     "form": {
      "Metro Holding Kayserispor": [
-      "G",
       "B",
       "B",
       "G",
-      "M"
+      "M",
+      "G"
      ],
      "Bursaspor": [
       "G",
@@ -4307,11 +4307,11 @@
       "G"
      ],
      "Sms Grup Sarıyer": [
-      "M",
       "B",
       "M",
       "M",
-      "B"
+      "B",
+      "M"
      ],
      "Artı Değer Van Spor": [
       "G",
@@ -6539,7 +6539,7 @@
       {
        "ev": "Karabük İdmanyurdu Spor",
        "dep": "Beykoz Anadolu Spor",
-       "skor": null
+       "skor": "3-1"
       },
       {
        "ev": "Pazarspor",
@@ -6696,9 +6696,9 @@
      ],
      "Karabük İdmanyurdu Spor": [
       "M",
-      "M",
       "B",
       "B",
+      "G",
       "G"
      ],
      "İnkılap": [
@@ -6779,9 +6779,9 @@
       "M"
      ],
      "Beykoz Anadolu Spor": [
-      "G",
       "B",
       "B",
+      "M",
       "M",
       "M"
      ],
@@ -8502,7 +8502,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-21T15:03:03.562Z",
+    "guncelleme": "2026-11-21T15:54:43.113Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8584,7 +8584,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-21T15:03:04.847Z",
+    "guncelleme": "2026-11-21T15:54:44.402Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8666,7 +8666,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-21T15:03:06.141Z",
+    "guncelleme": "2026-11-21T15:54:45.704Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8765,7 +8765,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T15:31:59.863Z",
+  "guncelleme": "2026-11-21T15:53:57.797Z",
   "liste": [
    {
     "yol": "/",
@@ -8781,7 +8781,7 @@
    },
    {
     "yol": "/piyasalar/",
-    "sayi": 3
+    "sayi": 2
    },
    {
     "yol": "/haber/yenisehir-belediyesi-artik-cebinizde-1g8kwxn/",
@@ -8838,7 +8838,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T15:32:03.437Z",
+  "guncelleme": "2026-11-21T15:54:46.905Z",
   "deniz": {
    "sicaklik": 21.7,
    "dalga": 0.96
@@ -8851,7 +8851,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T15:32:05.799Z",
+  "guncelleme": "2026-11-21T15:54:49.087Z",
   "giden": [
    {
     "no": [
@@ -8862,7 +8862,7 @@
     "planlanan": "2026-11-21T16:05:00.000Z",
     "tahmini": "2026-11-21T16:30:00.000Z",
     "kapi": "105",
-    "durum": "GECİKME",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8898,7 +8898,7 @@
     "planlanan": "2026-11-21T17:35:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8958,7 +8958,7 @@
     "planlanan": "2026-11-21T18:35:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "",
+    "durum": "KONTUAR KAPALI",
     "hat": "dis"
    },
    {
@@ -9450,6 +9450,18 @@
     "planlanan": "2026-11-22T15:25:00.000Z",
     "tahmini": null,
     "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF4089"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ankara",
+    "planlanan": "2026-11-22T15:45:00.000Z",
+    "tahmini": null,
+    "kapi": "108",
     "durum": "",
     "hat": "ic"
    }
@@ -10058,7 +10070,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T15:32:05.798Z",
+  "guncelleme": "2026-11-21T15:54:49.086Z",
   "liste": [
    {
     "id": 6386,
