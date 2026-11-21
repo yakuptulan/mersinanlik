@@ -609,6 +609,10 @@ export function etkinlikSayfasi({ servis, simdi }) {
               '@type': 'Event',
               name: e.baslik,
               startDate: e.saat ? `${e.tarih}T${e.saat}:00+03:00` : e.tarih,
+              // Bitiş saati duyurulmadığı için: saatliyse 2 saat sonrası, değilse aynı gün
+              endDate: e.saat ? new Date(new Date(`${e.tarih}T${e.saat}:00+03:00`).getTime() + 2 * 36e5).toISOString().replace('.000Z', 'Z') : e.tarih,
+              description: `${e.baslik}. ${new Date(`${e.tarih}T12:00:00+03:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long', timeZone: 'Europe/Istanbul' })}${e.saat ? ` saat ${e.saat}` : ''}, ${e.yer || 'Mersin'}. Mersin Büyükşehir Belediyesi etkinliği.`,
+              performer: { '@type': 'Organization', name: 'Mersin Büyükşehir Belediyesi' },
               eventStatus: 'https://schema.org/EventScheduled',
               eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
               location: { '@type': 'Place', name: e.yer || 'Mersin', address: { '@type': 'PostalAddress', addressLocality: 'Mersin', addressCountry: 'TR' } },
