@@ -1,19 +1,19 @@
 {
- "guncelleme": "2026-11-21T19:02:33.769Z",
+ "guncelleme": "2026-11-21T19:31:47.014Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 19,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 17,
+   "durum": "Sisli",
    "gunler": [
     {
      "tarih": "2026-11-21",
      "min": 17,
-     "max": 19,
+     "max": 17,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-22",
-     "min": 15,
+     "min": 14,
      "max": 22,
      "durum": "Az bulutlu"
     },
@@ -21,13 +21,13 @@
      "tarih": "2026-11-23",
      "min": 11,
      "max": 21,
-     "durum": "Parçalı bulutlu"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-24",
      "min": 13,
-     "max": 19,
-     "durum": "Parçalı bulutlu"
+     "max": 20,
+     "durum": "Bulutlu"
     },
     {
      "tarih": "2026-11-25",
@@ -38,13 +38,13 @@
    ]
   },
   "anamur": {
-   "sicaklik": 17,
+   "sicaklik": 16,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
      "min": 16,
-     "max": 17,
+     "max": 16,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -57,13 +57,13 @@
      "tarih": "2026-11-23",
      "min": 13,
      "max": 21,
-     "durum": "Az bulutlu"
+     "durum": "Açık"
     },
     {
      "tarih": "2026-11-24",
      "min": 14,
-     "max": 20,
-     "durum": "Parçalı bulutlu"
+     "max": 19,
+     "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-25",
@@ -74,13 +74,13 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 18,
+   "sicaklik": 16,
    "durum": "Sisli",
    "gunler": [
     {
      "tarih": "2026-11-21",
-     "min": 16,
-     "max": 18,
+     "min": 15,
+     "max": 16,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -97,9 +97,9 @@
     },
     {
      "tarih": "2026-11-24",
-     "min": 14,
+     "min": 13,
      "max": 18,
-     "durum": "Sisli"
+     "durum": "Yağmurlu"
     },
     {
      "tarih": "2026-11-25",
@@ -110,32 +110,32 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 17,
+   "sicaklik": 16,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
      "min": 15,
-     "max": 17,
+     "max": 16,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-22",
-     "min": 13,
-     "max": 23,
+     "min": 14,
+     "max": 22,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-23",
      "min": 12,
      "max": 21,
-     "durum": "Az bulutlu"
+     "durum": "Açık"
     },
     {
      "tarih": "2026-11-24",
-     "min": 14,
+     "min": 13,
      "max": 19,
-     "durum": "Parçalı bulutlu"
+     "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-25",
@@ -151,13 +151,13 @@
    "gunler": [
     {
      "tarih": "2026-11-21",
-     "min": 11,
+     "min": 12,
      "max": 12,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-22",
-     "min": 5,
+     "min": 6,
      "max": 14,
      "durum": "Hafif sağanak"
     },
@@ -170,8 +170,8 @@
     {
      "tarih": "2026-11-24",
      "min": 6,
-     "max": 9,
-     "durum": "Parçalı bulutlu"
+     "max": 11,
+     "durum": "Yağmurlu"
     },
     {
      "tarih": "2026-11-25",
@@ -183,7 +183,7 @@
   },
   "erdemli": {
    "sicaklik": 16,
-   "durum": "Parçalı bulutlu",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -199,15 +199,15 @@
     },
     {
      "tarih": "2026-11-23",
-     "min": 11,
+     "min": 12,
      "max": 20,
      "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-24",
-     "min": 14,
-     "max": 17,
-     "durum": "Parçalı bulutlu"
+     "min": 13,
+     "max": 18,
+     "durum": "Yağmurlu"
     },
     {
      "tarih": "2026-11-25",
@@ -218,18 +218,18 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 12,
+   "sicaklik": 11,
    "durum": "Sisli",
    "gunler": [
     {
      "tarih": "2026-11-21",
-     "min": 11,
-     "max": 12,
+     "min": 10,
+     "max": 11,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-22",
-     "min": 9,
+     "min": 8,
      "max": 17,
      "durum": "Parçalı bulutlu"
     },
@@ -241,9 +241,9 @@
     },
     {
      "tarih": "2026-11-24",
-     "min": 9,
+     "min": 8,
      "max": 11,
-     "durum": "Sisli"
+     "durum": "Yağmurlu"
     },
     {
      "tarih": "2026-11-25",
@@ -254,13 +254,13 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 18,
+   "sicaklik": 17,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
      "min": 16,
-     "max": 18,
+     "max": 17,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -331,7 +331,7 @@
    "gunler": [
     {
      "tarih": "2026-11-21",
-     "min": 15,
+     "min": 16,
      "max": 16,
      "durum": "Parçalı bulutlu"
     },
@@ -351,7 +351,7 @@
      "tarih": "2026-11-24",
      "min": 12,
      "max": 17,
-     "durum": "Parçalı bulutlu"
+     "durum": "Yağmurlu"
     },
     {
      "tarih": "2026-11-25",
@@ -362,13 +362,13 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 20,
+   "sicaklik": 19,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
      "min": 18,
-     "max": 20,
+     "max": 19,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -379,14 +379,14 @@
     },
     {
      "tarih": "2026-11-23",
-     "min": 9,
-     "max": 22,
+     "min": 10,
+     "max": 21,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-24",
      "min": 13,
-     "max": 20,
+     "max": 21,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -398,13 +398,13 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 19,
+   "sicaklik": 18,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
      "min": 17,
-     "max": 19,
+     "max": 18,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -434,18 +434,18 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 19,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 17,
+   "durum": "Sisli",
    "gunler": [
     {
      "tarih": "2026-11-21",
      "min": 17,
-     "max": 19,
+     "max": 17,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-22",
-     "min": 15,
+     "min": 14,
      "max": 22,
      "durum": "Az bulutlu"
     },
@@ -453,13 +453,13 @@
      "tarih": "2026-11-23",
      "min": 11,
      "max": 21,
-     "durum": "Parçalı bulutlu"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-24",
      "min": 13,
-     "max": 19,
-     "durum": "Parçalı bulutlu"
+     "max": 20,
+     "durum": "Bulutlu"
     },
     {
      "tarih": "2026-11-25",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T19:02:39.228Z",
+  "guncelleme": "2026-11-21T19:31:50.563Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -773,7 +773,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T19:02:40.614Z",
+  "guncelleme": "2026-11-21T19:31:51.570Z",
   "liste": [
    {
     "tur": "su",
@@ -794,7 +794,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T19:02:43.271Z",
+  "guncelleme": "2026-11-21T19:31:55.767Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -827,9 +827,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3033986,
-    "usd": 60033,
-    "degisim": 2.89
+    "satis": 3042505,
+    "usd": 60201,
+    "degisim": 3.61
    }
   },
   "altinlar": [
@@ -962,10 +962,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 22:02:02"
+  "kaynakSaati": "2026-11-21 22:31:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T19:02:46.034Z",
+  "guncelleme": "2026-11-21T19:31:58.694Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8739,11 +8739,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T19:02:46.494Z",
+  "guncelleme": "2026-11-21T19:31:59.044Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 22
+    "sayi": 19
    },
    {
     "yol": "/okullar-tatil-mi/istanbul/",
@@ -8778,10 +8778,6 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
-    "sayi": 1
-   },
-   {
     "yol": "/haber/mersin-de-kapali-yuzme-havuzu-gercekten-kapali-7flbwy/",
     "sayi": 1
    },
@@ -8810,11 +8806,19 @@
     "sayi": 1
    },
    {
+    "yol": "/haber/musa-yilmaz-dan-buyuksehir-in-tarimsal-desteklerine-ovgu-vm58gj/",
+    "sayi": 1
+   },
+   {
     "yol": "/haber/mersin-de-ogretmenler-gunu-nde-ucretsiz-etkinlik-firsatlari-18d3dcj/",
     "sayi": 1
    },
    {
     "yol": "/kategori/belediye/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/mersin-devlet-klasik-turk-muzigi-korosu-naz-makami-ile-sahnede-50e6tf/",
     "sayi": 1
    },
    {
@@ -8832,7 +8836,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T19:03:36.203Z",
+  "guncelleme": "2026-11-21T19:32:01.050Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.96
@@ -8845,44 +8849,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T19:03:38.705Z",
+  "guncelleme": "2026-11-21T19:32:02.993Z",
   "giden": [
-   {
-    "no": [
-     "PC4061"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Antalya",
-    "planlanan": "2026-11-21T19:10:00.000Z",
-    "tahmini": "2026-11-21T20:35:00.000Z",
-    "kapi": "104",
-    "durum": "GECİKME",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "XQ7711"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "Antalya",
-    "planlanan": "2026-11-21T19:15:00.000Z",
-    "tahmini": null,
-    "kapi": "104",
-    "durum": "SON ÇAĞRI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC2093"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-21T19:15:00.000Z",
-    "tahmini": "2026-11-21T19:40:00.000Z",
-    "kapi": "106",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
    {
     "no": [
      "XQ9307"
@@ -8892,7 +8860,7 @@
     "planlanan": "2026-11-21T19:45:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -8904,7 +8872,7 @@
     "planlanan": "2026-11-21T20:00:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8916,7 +8884,7 @@
     "planlanan": "2026-11-21T20:05:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8928,7 +8896,7 @@
     "planlanan": "2026-11-21T20:20:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "dis"
    },
    {
@@ -9446,45 +9414,45 @@
     "kapi": "109",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3603"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Antalya",
+    "planlanan": "2026-11-22T19:05:00.000Z",
+    "tahmini": null,
+    "kapi": "107",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2093"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-22T19:15:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC4073"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Milas Bodrum",
+    "planlanan": "2026-11-22T19:20:00.000Z",
+    "tahmini": null,
+    "kapi": "108",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "XQ9306"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "İzmir",
-    "planlanan": "2026-11-21T19:10:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "TK2470"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-21T19:15:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "VF3146"
-    ],
-    "havayolu": "AJet",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-21T19:20:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC1859"
@@ -10048,11 +10016,47 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "VF3146"
+    ],
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-22T19:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ9306"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "İzmir",
+    "planlanan": "2026-11-22T19:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2470"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-22T19:15:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T19:03:38.705Z",
+  "guncelleme": "2026-11-21T19:32:02.993Z",
   "liste": [
    {
     "id": 6386,
