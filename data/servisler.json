@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-21T17:31:59.794Z",
+ "guncelleme": "2026-11-21T18:01:55.199Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T17:32:03.342Z",
+  "guncelleme": "2026-11-21T18:01:58.922Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -773,20 +773,37 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T17:32:04.346Z",
+  "guncelleme": "2026-11-21T18:01:59.873Z",
   "liste": [
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
     "aciklama": "Tarsus İlçesi ; Takbaş Mahallemizde, Kartal Tepesi mevkiinde meydana gelen ana isale hattı arızası nedeniyle saat 21.00'a kadar su kesintisi yaşanacaktır.",
     "baslangic": "2026-11-21T16:05:00.000Z",
-    "bitis": "2026-11-21T18:00:00.000Z",
+    "bitis": "2026-11-21T19:00:00.000Z",
     "ilceler": [
      {
       "ilce": "tarsus",
       "ad": "Tarsus",
       "mahalleler": [
        "Takbaş"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Mut İlçesi ; Yatırtaş ve Elbeyli Mahallelerimizde, bölgede meydana gelen içme suyu arızası nedeniyle saat 22.00'a kadar su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-21T17:50:00.000Z",
+    "bitis": "2026-11-21T19:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "mut",
+      "ad": "Mut",
+      "mahalleler": [
+       "Elbeyli",
+       "Yatırtaş"
       ]
      }
     ]
@@ -826,7 +843,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T17:32:08.258Z",
+  "guncelleme": "2026-11-21T18:02:03.775Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -859,9 +876,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3041782,
-    "usd": 60187,
-    "degisim": 1.52
+    "satis": 3031597,
+    "usd": 59986,
+    "degisim": 1.5
    }
   },
   "altinlar": [
@@ -994,10 +1011,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 20:32:01"
+  "kaynakSaati": "2026-11-21 21:02:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T17:32:10.311Z",
+  "guncelleme": "2026-11-21T18:02:06.007Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1922,7 +1939,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-21T17:32:11.950Z",
+  "guncelleme": "2026-11-21T18:02:08.402Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -1985,6 +2002,20 @@
     },
     {
      "sira": 5,
+     "takim": "Fenerbahçe",
+     "ham": "FENERBAHÇE A.Ş.",
+     "o": 12,
+     "g": 6,
+     "b": 2,
+     "m": 4,
+     "a": 31,
+     "y": 12,
+     "av": 19,
+     "p": 20,
+     "mersin": false
+    },
+    {
+     "sira": 6,
      "takim": "Kasımpaşa",
      "ham": "KASIMPAŞA A.Ş.",
      "o": 11,
@@ -1998,31 +2029,17 @@
      "mersin": false
     },
     {
-     "sira": 6,
-     "takim": "Fenerbahçe",
-     "ham": "FENERBAHÇE A.Ş.",
-     "o": 11,
-     "g": 6,
-     "b": 1,
-     "m": 4,
-     "a": 29,
-     "y": 10,
-     "av": 19,
-     "p": 19,
-     "mersin": false
-    },
-    {
      "sira": 7,
      "takim": "Kocaelispor",
      "ham": "KOCAELİSPOR",
-     "o": 11,
+     "o": 12,
      "g": 6,
-     "b": 1,
+     "b": 2,
      "m": 4,
-     "a": 13,
-     "y": 9,
+     "a": 15,
+     "y": 11,
      "av": 4,
-     "p": 19,
+     "p": 20,
      "mersin": false
     },
     {
@@ -2209,7 +2226,7 @@
      "tarih": "2026-11-21",
      "saat": "19:00",
      "ev": "Kocaelispor",
-     "skor": null,
+     "skor": "2-2",
      "dep": "Fenerbahçe",
      "mersin": false
     },
@@ -2713,6 +2730,20 @@
      },
      {
       "sira": 5,
+      "takim": "Fenerbahçe",
+      "ham": "FENERBAHÇE A.Ş.",
+      "o": 12,
+      "g": 6,
+      "b": 2,
+      "m": 4,
+      "a": 31,
+      "y": 12,
+      "av": 19,
+      "p": 20,
+      "mersin": false
+     },
+     {
+      "sira": 6,
       "takim": "Kasımpaşa",
       "ham": "KASIMPAŞA A.Ş.",
       "o": 11,
@@ -2726,31 +2757,17 @@
       "mersin": false
      },
      {
-      "sira": 6,
-      "takim": "Fenerbahçe",
-      "ham": "FENERBAHÇE A.Ş.",
-      "o": 11,
-      "g": 6,
-      "b": 1,
-      "m": 4,
-      "a": 29,
-      "y": 10,
-      "av": 19,
-      "p": 19,
-      "mersin": false
-     },
-     {
       "sira": 7,
       "takim": "Kocaelispor",
       "ham": "KOCAELİSPOR",
-      "o": 11,
+      "o": 12,
       "g": 6,
-      "b": 1,
+      "b": 2,
       "m": 4,
-      "a": 13,
-      "y": 9,
+      "a": 15,
+      "y": 11,
       "av": 4,
-      "p": 19,
+      "p": 20,
       "mersin": false
      },
      {
@@ -2937,7 +2954,7 @@
       "tarih": "2026-11-21",
       "saat": "19:00",
       "ev": "Kocaelispor",
-      "skor": null,
+      "skor": "2-2",
       "dep": "Fenerbahçe",
       "mersin": false
      },
@@ -3237,7 +3254,7 @@
       {
        "ev": "Kocaelispor",
        "dep": "Fenerbahçe",
-       "skor": null
+       "skor": "2-2"
       },
       {
        "ev": "Erzurumspor FK",
@@ -3362,6 +3379,13 @@
       "B",
       "G"
      ],
+     "Fenerbahçe": [
+      "G",
+      "M",
+      "M",
+      "G",
+      "B"
+     ],
      "Kasımpaşa": [
       "M",
       "G",
@@ -3369,19 +3393,12 @@
       "B",
       "G"
      ],
-     "Fenerbahçe": [
-      "G",
-      "G",
-      "M",
-      "M",
-      "G"
-     ],
      "Kocaelispor": [
-      "M",
       "M",
       "G",
       "B",
-      "G"
+      "G",
+      "B"
      ],
      "İstanbul Başakşehir FK": [
       "B",
@@ -3567,6 +3584,20 @@
      },
      {
       "sira": 8,
+      "takim": "Mısırlıcomtr Fatih Karagümrük",
+      "ham": "MISIRLICOMTR FATİH KARAGÜMRÜK A.Ş.",
+      "o": 15,
+      "g": 5,
+      "b": 5,
+      "m": 5,
+      "a": 20,
+      "y": 16,
+      "av": 4,
+      "p": 20,
+      "mersin": false
+     },
+     {
+      "sira": 9,
       "takim": "Antalyaspor",
       "ham": "ANTALYASPOR A.Ş.",
       "o": 14,
@@ -3577,20 +3608,6 @@
       "y": 21,
       "av": -1,
       "p": 20,
-      "mersin": false
-     },
-     {
-      "sira": 9,
-      "takim": "Mısırlıcomtr Fatih Karagümrük",
-      "ham": "MISIRLICOMTR FATİH KARAGÜMRÜK A.Ş.",
-      "o": 14,
-      "g": 5,
-      "b": 4,
-      "m": 5,
-      "a": 20,
-      "y": 16,
-      "av": 4,
-      "p": 19,
       "mersin": false
      },
      {
@@ -3737,14 +3754,14 @@
       "sira": 20,
       "takim": "Boluspor",
       "ham": "BOLUSPOR",
-      "o": 13,
+      "o": 14,
       "g": 1,
-      "b": 1,
+      "b": 2,
       "m": 11,
       "a": 6,
       "y": 28,
       "av": -22,
-      "p": 4,
+      "p": 5,
       "mersin": false
      }
     ],
@@ -3785,7 +3802,7 @@
       "tarih": "2026-11-21",
       "saat": "19:00",
       "ev": "Mısırlıcomtr Fatih Karagümrük",
-      "skor": null,
+      "skor": "0-0",
       "dep": "Boluspor",
       "mersin": false
      },
@@ -4269,19 +4286,19 @@
       "B",
       "G"
      ],
-     "Antalyaspor": [
-      "M",
-      "G",
-      "M",
-      "B",
-      "B"
-     ],
      "Mısırlıcomtr Fatih Karagümrük": [
       "M",
       "M",
       "G",
       "M",
       "G"
+     ],
+     "Antalyaspor": [
+      "M",
+      "G",
+      "M",
+      "B",
+      "B"
      ],
      "Eminevim Ümraniyespor": [
       "G",
@@ -8507,7 +8524,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-21T17:32:52.861Z",
+    "guncelleme": "2026-11-21T18:02:49.182Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8589,7 +8606,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-21T17:32:54.087Z",
+    "guncelleme": "2026-11-21T18:02:50.393Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8671,7 +8688,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-21T17:32:55.322Z",
+    "guncelleme": "2026-11-21T18:02:51.610Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8770,7 +8787,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T17:32:10.690Z",
+  "guncelleme": "2026-11-21T18:02:06.503Z",
   "liste": [
    {
     "yol": "/",
@@ -8855,45 +8872,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T17:32:56.523Z",
+  "guncelleme": "2026-11-21T18:02:52.811Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.96
   },
   "hava": {
-   "aqi": 38,
-   "pm25": 13.4,
-   "pm10": 24.1,
+   "aqi": 43,
+   "pm25": 20.5,
+   "pm10": 26.1,
    "uvMax": 2.2
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T17:32:58.180Z",
+  "guncelleme": "2026-11-21T18:02:54.400Z",
   "giden": [
-   {
-    "no": [
-     "PC2091"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-21T17:35:00.000Z",
-    "tahmini": null,
-    "kapi": "107",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC3015"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "İzmir",
-    "planlanan": "2026-11-21T17:55:00.000Z",
-    "tahmini": null,
-    "kapi": "104",
-    "durum": "SON ÇAĞRI",
-    "hat": "ic"
-   },
    {
     "no": [
      "VF3145"
@@ -8903,7 +8896,7 @@
     "planlanan": "2026-11-21T18:15:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8915,7 +8908,7 @@
     "planlanan": "2026-11-21T18:20:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8927,7 +8920,7 @@
     "planlanan": "2026-11-21T18:25:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -8939,7 +8932,7 @@
     "planlanan": "2026-11-21T18:35:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPI KAPANDI",
     "hat": "dis"
    },
    {
@@ -8963,7 +8956,7 @@
     "planlanan": "2026-11-21T19:15:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8987,7 +8980,7 @@
     "planlanan": "2026-11-21T19:45:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9493,21 +9486,33 @@
     "kapi": "104",
     "durum": "",
     "hat": "ic"
-   }
-  ],
-  "gelen": [
+   },
    {
     "no": [
-     "VF4088"
+     "PC2091"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-22T17:35:00.000Z",
+    "tahmini": null,
+    "kapi": "107",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF4091"
     ],
     "havayolu": "AJet",
     "yer": "Ankara",
-    "planlanan": "2026-11-21T17:45:00.000Z",
+    "planlanan": "2026-11-22T18:00:00.000Z",
     "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
+    "kapi": "108",
+    "durum": "",
     "hat": "ic"
-   },
+   }
+  ],
+  "gelen": [
    {
     "no": [
      "PC2092"
@@ -10111,7 +10116,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T17:32:58.180Z",
+  "guncelleme": "2026-11-21T18:02:54.399Z",
   "liste": [
    {
     "id": 6386,
