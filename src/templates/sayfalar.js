@@ -1107,7 +1107,7 @@ export function ozetSayfasi({ ozet: o, arsiv, hikayeler, servis, son = false }) 
   const yol = son ? '/gunun-ozeti/' : `/gunun-ozeti/${o.tarih}/`;
   const bul = (id) => hikayeler.find((x) => x.id === id);
   return sayfa({
-    baslik: `Mersin günün özeti: ${o.baslik}`,
+    baslik: son ? `Mersin günün özeti – bugün Mersin'de neler oldu` : `Mersin günün özeti (${ozetTarih(o.tarih)}): ${o.baslik}`,
     aciklama: `${ozetTarih(o.tarih)} Mersin gündemi. ${o.giris}`.slice(0, 160),
     yol,
     tema: 'gundem',
