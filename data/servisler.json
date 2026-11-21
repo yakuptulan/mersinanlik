@@ -1,15 +1,15 @@
 {
- "guncelleme": "2026-11-21T14:01:57.689Z",
+ "guncelleme": "2026-11-21T14:31:56.029Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 21,
-   "durum": "Sağanak",
+   "durum": "Hafif sağanak",
    "gunler": [
     {
      "tarih": "2026-11-21",
      "min": 17,
      "max": 21,
-     "durum": "Hafif sağanak"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-22",
@@ -75,7 +75,7 @@
   },
   "aydincik": {
    "sicaklik": 21,
-   "durum": "Hafif sağanak",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T14:02:03.432Z",
+  "guncelleme": "2026-11-21T14:31:59.315Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T14:02:04.620Z",
+  "guncelleme": "2026-11-21T14:32:00.268Z",
   "liste": [
    {
     "tur": "su",
@@ -841,7 +841,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T14:02:06.933Z",
+  "guncelleme": "2026-11-21T14:32:02.411Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -872,6 +872,11 @@
     "alis": null,
     "satis": 11131.32,
     "degisim": -2.36
+   },
+   "btc": {
+    "satis": 3047530,
+    "usd": 60301,
+    "degisim": -2.87
    }
   },
   "altinlar": [
@@ -1004,10 +1009,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 17:02:01"
+  "kaynakSaati": "2026-11-21 17:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T13:07:05.179Z",
+  "guncelleme": "2026-11-21T14:32:04.950Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1932,7 +1937,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-21T14:02:19.916Z",
+  "guncelleme": "2026-11-21T14:32:07.636Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -4110,12 +4115,12 @@
       {
        "ev": "İstanbulspor",
        "dep": "Keçtaş Ankara Keçiörengücü",
-       "skor": "0-1"
+       "skor": null
       },
       {
        "ev": "Mardin 1969 Spor",
        "dep": "Bandırma Spor",
-       "skor": "1-2"
+       "skor": null
       },
       {
        "ev": "Metro Holding Kayserispor",
@@ -4252,18 +4257,18 @@
       "B"
      ],
      "Keçtaş Ankara Keçiörengücü": [
+      "B",
       "G",
       "M",
       "M",
-      "G",
       "G"
      ],
      "Mardin 1969 Spor": [
+      "G",
       "M",
       "G",
       "G",
-      "B",
-      "M"
+      "B"
      ],
      "Batman Petrol Spor": [
       "G",
@@ -4315,11 +4320,11 @@
       "M"
      ],
      "Bandırma Spor": [
+      "B",
       "M",
       "M",
       "M",
-      "M",
-      "G"
+      "M"
      ],
      "Sms Grup Sarıyer": [
       "M",
@@ -4360,8 +4365,8 @@
       "M",
       "M",
       "M",
-      "G",
-      "M"
+      "M",
+      "G"
      ],
      "Boluspor": [
       "M",
@@ -6539,17 +6544,17 @@
       {
        "ev": "İnkılap",
        "dep": "Yalova FK 77 Spor",
-       "skor": "1-0"
+       "skor": null
       },
       {
        "ev": "Büyükçekmece Gücü FK Spor",
        "dep": "Gölcükspor",
-       "skor": "2-3"
+       "skor": null
       },
       {
        "ev": "Küçükçekmece Sinop Spor",
        "dep": "Kdz.ereğli 1980 Spor",
-       "skor": "4-1"
+       "skor": null
       },
       {
        "ev": "Karabük İdmanyurdu Spor",
@@ -6696,11 +6701,11 @@
       "M"
      ],
      "Küçükçekmece Sinop Spor": [
+      "G",
       "B",
       "B",
       "G",
-      "B",
-      "G"
+      "B"
      ],
      "Pazarspor": [
       "B",
@@ -6717,11 +6722,11 @@
       "G"
      ],
      "İnkılap": [
+      "M",
       "G",
       "B",
       "G",
-      "M",
-      "G"
+      "M"
      ],
      "Kartal Bulvar Kartalimen Spor": [
       "M",
@@ -6759,23 +6764,23 @@
       "B"
      ],
      "Yalova FK 77 Spor": [
+      "M",
       "G",
       "B",
       "G",
-      "G",
-      "M"
+      "G"
      ],
      "Gölcükspor": [
       "B",
       "B",
+      "B",
       "M",
-      "G",
       "G"
      ],
      "Kdz.ereğli 1980 Spor": [
-      "B",
-      "B",
       "M",
+      "B",
+      "B",
       "M",
       "M"
      ],
@@ -6810,7 +6815,7 @@
      "Büyükçekmece Gücü FK Spor": [
       "B",
       "B",
-      "M",
+      "B",
       "M",
       "M"
      ]
@@ -7388,7 +7393,7 @@
       {
        "ev": "Kepez Spor",
        "dep": "Etimesgut Spor",
-       "skor": "1-3"
+       "skor": null
       },
       {
        "ev": "Gemlik Sümerbey Futbol Spor",
@@ -7538,8 +7543,8 @@
     },
     "form": {
      "Etimesgut Spor": [
-      "M",
       "G",
+      "M",
       "G",
       "G",
       "G"
@@ -7609,10 +7614,10 @@
      ],
      "Kepez Spor": [
       "G",
-      "M",
-      "M",
       "G",
-      "M"
+      "M",
+      "M",
+      "G"
      ],
      "Alanya 1221": [
       "M",
@@ -8517,7 +8522,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-21T14:03:02.324Z",
+    "guncelleme": "2026-11-21T14:32:48.528Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8599,7 +8604,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-21T14:03:03.609Z",
+    "guncelleme": "2026-11-21T14:32:49.738Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8681,7 +8686,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-21T14:03:04.904Z",
+    "guncelleme": "2026-11-21T14:32:50.953Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8780,11 +8785,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T14:02:17.742Z",
+  "guncelleme": "2026-11-21T14:32:05.469Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 20
+    "sayi": 21
    },
    {
     "yol": "/piyasalar/",
@@ -8804,10 +8809,6 @@
    },
    {
     "yol": "/kategori/ekonomi/",
-    "sayi": 2
-   },
-   {
-    "yol": "/haber/akdeniz-de-su-kesintisi-8-saat-surecek-sb2149/",
     "sayi": 2
    },
    {
@@ -8871,16 +8872,20 @@
     "sayi": 1
    },
    {
+    "yol": "/haber/akdeniz-de-su-kesintisi-8-saat-surecek-sb2149/",
+    "sayi": 1
+   },
+   {
     "yol": "/piyasalar/gram-altin/&ct=ga&cd=CAEYASoUMTQ5Njk1ODE4MjUyMTAyMDM5NDkyHWY3MGY1M2FlOTEzNmVkZGM6Y29tLnRyOnRyOlRS&usg=AOvVaw0_ep_8Mlalwp_B363tUYiW/",
     "sayi": 1
    }
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T14:03:06.104Z",
+  "guncelleme": "2026-11-21T14:32:52.154Z",
   "deniz": {
    "sicaklik": 21.7,
-   "dalga": 0.88
+   "dalga": 0.92
   },
   "hava": {
    "aqi": 28,
@@ -8890,7 +8895,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T14:03:08.985Z",
+  "guncelleme": "2026-11-21T14:32:53.756Z",
   "giden": [
    {
     "no": [
@@ -8901,7 +8906,7 @@
     "planlanan": "2026-11-21T14:35:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPI KAPANDI",
     "hat": "dis"
    },
    {
@@ -8913,7 +8918,7 @@
     "planlanan": "2026-11-21T15:25:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8925,7 +8930,7 @@
     "planlanan": "2026-11-21T16:05:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9455,6 +9460,18 @@
     "kapi": "107",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1890"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-22T14:05:00.000Z",
+    "tahmini": null,
+    "kapi": "102",
+    "durum": "",
+    "hat": "dis"
    }
   ],
   "gelen": [
@@ -10009,11 +10026,35 @@
     "kapi": "",
     "durum": "",
     "hat": "dis"
+   },
+   {
+    "no": [
+     "XQ7710"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "Antalya",
+    "planlanan": "2026-11-22T14:20:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2086"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-22T14:20:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T14:03:08.984Z",
+  "guncelleme": "2026-11-21T14:32:53.756Z",
   "liste": [
    {
     "id": 6386,
