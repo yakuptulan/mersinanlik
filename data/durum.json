@@ -16,7 +16,7 @@
  },
  "gorsel": {
   "gun": "2026-11-21",
-  "adet": 30
+  "adet": 32
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -355,8 +355,20 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-21T11:01:41.712Z",
+  "guncelleme": "2026-11-21T11:31:59.060Z",
   "liste": [
+   {
+    "baslik": "mardin spor",
+    "trafik": 1000
+   },
+   {
+    "baslik": "rahmi koç",
+    "trafik": 100
+   },
+   {
+    "baslik": "benzin indirim",
+    "trafik": 10000
+   },
    {
     "baslik": "aek",
     "trafik": 200
@@ -384,18 +396,6 @@
    {
     "baslik": "esat yontunç",
     "trafik": 100
-   },
-   {
-    "baslik": "gençlerbirliği - gaziantep fk",
-    "trafik": 20000
-   },
-   {
-    "baslik": "istanbulspor - keçiörengücü",
-    "trafik": 2000
-   },
-   {
-    "baslik": "junior olaitan",
-    "trafik": 1000
    }
   ]
  },
