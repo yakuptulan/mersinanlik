@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-21T10:31:58.996Z",
+ "guncelleme": "2026-11-21T10:42:39.629Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 22,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T10:32:03.889Z",
+  "guncelleme": "2026-11-21T10:42:43.432Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T10:32:05.138Z",
+  "guncelleme": "2026-11-21T10:42:44.524Z",
   "liste": [
    {
     "tur": "su",
@@ -886,7 +886,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T10:32:09.659Z",
+  "guncelleme": "2026-11-21T10:42:48.727Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -919,9 +919,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2933825,
-    "usd": 58051,
-    "degisim": -6.29
+    "satis": 2922752,
+    "usd": 57832,
+    "degisim": -7.1
    }
   },
   "altinlar": [
@@ -1054,10 +1054,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 13:32:01"
+  "kaynakSaati": "2026-11-21 13:42:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T10:32:12.604Z",
+  "guncelleme": "2026-11-21T10:42:51.336Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1982,7 +1982,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-21T10:32:14.176Z",
+  "guncelleme": "2026-11-21T10:42:53.127Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8379,7 +8379,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-21T10:32:58.098Z",
+    "guncelleme": "2026-11-21T10:43:34.420Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8461,7 +8461,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-21T10:32:59.354Z",
+    "guncelleme": "2026-11-21T10:43:35.651Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8543,7 +8543,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-21T10:33:00.620Z",
+    "guncelleme": "2026-11-21T10:43:36.889Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8642,11 +8642,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T10:32:12.929Z",
+  "guncelleme": "2026-11-21T10:42:51.689Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 34
+    "sayi": 35
    },
    {
     "yol": "/kategori/belediye/",
@@ -8654,6 +8654,10 @@
    },
    {
     "yol": "/piyasalar/",
+    "sayi": 6
+   },
+   {
+    "yol": "/spor/",
     "sayi": 6
    },
    {
@@ -8665,20 +8669,12 @@
     "sayi": 5
    },
    {
-    "yol": "/spor/",
-    "sayi": 5
-   },
-   {
     "yol": "/okullar-tatil-mi/istanbul/",
     "sayi": 4
    },
    {
     "yol": "/kategori/yasam/",
     "sayi": 3
-   },
-   {
-    "yol": "/haber/akdeniz-de-su-kesintisi-8-saat-surecek-sb2149/",
-    "sayi": 2
    },
    {
     "yol": "/bilgi/",
@@ -8689,7 +8685,23 @@
     "sayi": 2
    },
    {
-    "yol": "/haber/mersin-yenisehir-de-20-cadde-trafige-kapatiliyor-iste-tarih-ve-saat-1729jhi/",
+    "yol": "/haber/akdeniz-de-su-kesintisi-8-saat-surecek-sb2149/",
+    "sayi": 2
+   },
+   {
+    "yol": "/haber/yenisehir-de-su-kesintisi-bircok-mahalle-etkilenecek-s494a3/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
+    "sayi": 1
+   },
+   {
+    "yol": "/trafik/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/mersin-de-kapali-yuzme-havuzu-gercekten-kapali-7flbwy/",
     "sayi": 1
    },
    {
@@ -8701,7 +8713,7 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/yenisehir-belediyesi-artik-cebinizde-1g8kwxn/",
+    "yol": "/piyasalar/gram-altin/&ss=tw&rt=Gram+alt%C4%B1n+ne+kadar%3F+Bug%C3%BCn+canl%C4%B1+gram+alt%C4%B1n+fiyat%C4%B1+-+Mersin+Anl%C4%B1k&cd=KhQxNDk2OTU4MTgyNTIxMDIwMzk0OTIdZjcwZjUzYWU5MTM2ZWRkYzpjb20udHI6dHI6VFI&ssp=AMJHsmWqlNtj-Lx0EeQMFnU5botX4UoECw/",
     "sayi": 1
    },
    {
@@ -8713,15 +8725,11 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-de-kapali-yuzme-havuzu-gercekten-kapali-7flbwy/",
+    "yol": "/haber/mersin-yenisehir-de-20-cadde-trafige-kapatiliyor-iste-tarih-ve-saat-1729jhi/",
     "sayi": 1
    },
    {
     "yol": "/kategori/turkiye-dunya/",
-    "sayi": 1
-   },
-   {
-    "yol": "/piyasalar/gram-altin/&ss=tw&rt=Gram+alt%C4%B1n+ne+kadar%3F+Bug%C3%BCn+canl%C4%B1+gram+alt%C4%B1n+fiyat%C4%B1+-+Mersin+Anl%C4%B1k&cd=KhQxNDk2OTU4MTgyNTIxMDIwMzk0OTIdZjcwZjUzYWU5MTM2ZWRkYzpjb20udHI6dHI6VFI&ssp=AMJHsmWqlNtj-Lx0EeQMFnU5botX4UoECw/",
     "sayi": 1
    },
    {
@@ -8733,11 +8741,7 @@
     "sayi": 1
    },
    {
-    "yol": "/trafik/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
+    "yol": "/haber/yenisehir-belediyesi-artik-cebinizde-1g8kwxn/",
     "sayi": 1
    },
    {
@@ -8746,10 +8750,6 @@
    },
    {
     "yol": "/haber/avrupa-ikincisi-gulizar-demirpolat-akdeniz-in-gururu-oldu-y9j1ye/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/yenisehir-de-su-kesintisi-bircok-mahalle-etkilenecek-s494a3/",
     "sayi": 1
    },
    {
@@ -8763,7 +8763,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T10:33:01.821Z",
+  "guncelleme": "2026-11-21T10:43:38.090Z",
   "deniz": {
    "sicaklik": 21.7,
    "dalga": 0.56
@@ -8776,7 +8776,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T10:33:04.008Z",
+  "guncelleme": "2026-11-21T10:43:40.318Z",
   "giden": [
    {
     "no": [
@@ -8787,7 +8787,7 @@
     "planlanan": "2026-11-21T10:55:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "KONTUAR KAPALI",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -8799,7 +8799,7 @@
     "planlanan": "2026-11-21T11:00:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "SON ÇAĞRI",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -9351,6 +9351,18 @@
     "planlanan": "2026-11-22T10:30:00.000Z",
     "tahmini": null,
     "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2087"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-22T10:35:00.000Z",
+    "tahmini": null,
+    "kapi": "107",
     "durum": "",
     "hat": "ic"
    }
@@ -9911,7 +9923,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T10:33:04.007Z",
+  "guncelleme": "2026-11-21T10:43:40.318Z",
   "liste": [
    {
     "id": 6386,

@@ -12,15 +12,11 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-21T10:31:22.073Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-21",
-  "adet": 26
+  "adet": 28
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -359,8 +355,12 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-21T10:31:55.989Z",
+  "guncelleme": "2026-11-21T10:42:34.018Z",
   "liste": [
+   {
+    "baslik": "amed rize maçı",
+    "trafik": 200
+   },
    {
     "baslik": "avrupa birliği",
     "trafik": 100
@@ -371,18 +371,22 @@
    },
    {
     "baslik": "gençlerbirliği - gaziantep fk",
-    "trafik": 10000
+    "trafik": 20000
    },
    {
     "baslik": "istanbulspor - keçiörengücü",
     "trafik": 1000
    },
    {
-    "baslik": "21 kasım 2026 altın fiyatları",
-    "trafik": 10000
+    "baslik": "junior olaitan",
+    "trafik": 1000
    },
    {
     "baslik": "yds ne zaman",
+    "trafik": 100
+   },
+   {
+    "baslik": "bitlis",
     "trafik": 100
    },
    {
@@ -391,14 +395,6 @@
    },
    {
     "baslik": "sakarya",
-    "trafik": 200
-   },
-   {
-    "baslik": "tazminat",
-    "trafik": 1000
-   },
-   {
-    "baslik": "yozgat hava durumu",
     "trafik": 200
    }
   ]
