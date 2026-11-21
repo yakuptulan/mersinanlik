@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-21T09:56:10.080Z",
+ "guncelleme": "2026-11-21T09:59:45.424Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 21,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T09:56:13.698Z",
+  "guncelleme": "2026-11-21T09:59:49.069Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T09:56:14.680Z",
+  "guncelleme": "2026-11-21T09:59:50.066Z",
   "liste": [
    {
     "tur": "su",
@@ -889,7 +889,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T09:56:16.880Z",
+  "guncelleme": "2026-11-21T09:59:52.075Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -922,9 +922,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2923149,
-    "usd": 57840,
-    "degisim": -6.26
+    "satis": 2927141,
+    "usd": 57919,
+    "degisim": -6.08
    }
   },
   "altinlar": [
@@ -1057,10 +1057,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 12:56:01"
+  "kaynakSaati": "2026-11-21 12:59:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T09:56:19.320Z",
+  "guncelleme": "2026-11-21T09:59:54.461Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8397,15 +8397,15 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T09:56:19.792Z",
+  "guncelleme": "2026-11-21T09:59:54.795Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 32
+    "sayi": 33
    },
    {
     "yol": "/kategori/belediye/",
-    "sayi": 7
+    "sayi": 8
    },
    {
     "yol": "/piyasalar/",
@@ -8420,20 +8420,16 @@
     "sayi": 5
    },
    {
-    "yol": "/spor/",
+    "yol": "/okullar-tatil-mi/istanbul/",
     "sayi": 4
    },
    {
-    "yol": "/okullar-tatil-mi/istanbul/",
+    "yol": "/spor/",
     "sayi": 4
    },
    {
     "yol": "/kategori/yasam/",
     "sayi": 3
-   },
-   {
-    "yol": "/haber/akdeniz-de-su-kesintisi-8-saat-surecek-sb2149/",
-    "sayi": 2
    },
    {
     "yol": "/bilgi/",
@@ -8444,7 +8440,27 @@
     "sayi": 2
    },
    {
-    "yol": "/kategori/turkiye-dunya/",
+    "yol": "/haber/akdeniz-de-su-kesintisi-8-saat-surecek-sb2149/",
+    "sayi": 2
+   },
+   {
+    "yol": "/haber/yenisehir-de-su-kesintisi-bircok-mahalle-etkilenecek-s494a3/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
+    "sayi": 1
+   },
+   {
+    "yol": "/trafik/",
+    "sayi": 1
+   },
+   {
+    "yol": "/piyasalar/gram-altin/&ss=tw&rt=Gram+alt%C4%B1n+ne+kadar%3F+Bug%C3%BCn+canl%C4%B1+gram+alt%C4%B1n+fiyat%C4%B1+-+Mersin+Anl%C4%B1k&cd=KhQxNDk2OTU4MTgyNTIxMDIwMzk0OTIdZjcwZjUzYWU5MTM2ZWRkYzpjb20udHI6dHI6VFI&ssp=AMJHsmWqlNtj-Lx0EeQMFnU5botX4UoECw/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/mersin-de-kapali-yuzme-havuzu-gercekten-kapali-7flbwy/",
     "sayi": 1
    },
    {
@@ -8468,11 +8484,7 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-de-kapali-yuzme-havuzu-gercekten-kapali-7flbwy/",
-    "sayi": 1
-   },
-   {
-    "yol": "/piyasalar/gram-altin/&ss=tw&rt=Gram+alt%C4%B1n+ne+kadar%3F+Bug%C3%BCn+canl%C4%B1+gram+alt%C4%B1n+fiyat%C4%B1+-+Mersin+Anl%C4%B1k&cd=KhQxNDk2OTU4MTgyNTIxMDIwMzk0OTIdZjcwZjUzYWU5MTM2ZWRkYzpjb20udHI6dHI6VFI&ssp=AMJHsmWqlNtj-Lx0EeQMFnU5botX4UoECw/",
+    "yol": "/kategori/turkiye-dunya/",
     "sayi": 1
    },
    {
@@ -8484,27 +8496,11 @@
     "sayi": 1
    },
    {
-    "yol": "/trafik/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
-    "sayi": 1
-   },
-   {
     "yol": "/gorsel-kaynaklari/",
     "sayi": 1
    },
    {
     "yol": "/haber/avrupa-ikincisi-gulizar-demirpolat-akdeniz-in-gururu-oldu-y9j1ye/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/yenisehir-de-su-kesintisi-bircok-mahalle-etkilenecek-s494a3/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/mersin-de-101-dosyadan-aranan-supheli-polis-operasyonuyla-yakalandi-1o4insl/",
     "sayi": 1
    },
    {
@@ -8518,7 +8514,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T09:56:21.270Z",
+  "guncelleme": "2026-11-21T09:59:56.508Z",
   "deniz": {
    "sicaklik": 21.7,
    "dalga": 0.48
@@ -8531,7 +8527,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T09:56:23.364Z",
+  "guncelleme": "2026-11-21T09:59:58.415Z",
   "giden": [
    {
     "no": [
@@ -8540,9 +8536,9 @@
     "havayolu": "Pegasus",
     "yer": "Antalya",
     "planlanan": "2026-11-21T10:00:00.000Z",
-    "tahmini": null,
+    "tahmini": "2026-11-21T10:30:00.000Z",
     "kapi": "108",
-    "durum": "KONTUAR KAPALI",
+    "durum": "BOARDING",
     "hat": "ic"
    },
    {
@@ -8566,7 +8562,7 @@
     "planlanan": "2026-11-21T10:30:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KONTUAR KAPALI",
+    "durum": "BOARDING",
     "hat": "ic"
    },
    {
@@ -8578,7 +8574,7 @@
     "planlanan": "2026-11-21T10:55:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -9690,7 +9686,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T09:56:23.363Z",
+  "guncelleme": "2026-11-21T09:59:58.414Z",
   "liste": [
    {
     "id": 6386,
