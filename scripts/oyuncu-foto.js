@@ -14,7 +14,7 @@ const VERI = path.resolve('data/oyuncu-foto.json');
 const KLASOR = path.resolve('public/oyuncu');
 const TEKRAR_GUN = 14; // bulunamayanlar bu kadar gün sonra yeniden denenir
 const FUTBOLCU = 'Q937857';
-const SURUM = 2; // eşleştirme kuralları değişince bulunamayanlar yeniden denenir
+const SURUM = 3; // eşleştirme kuralları değişince bulunamayanlar yeniden denenir
 
 fs.mkdirSync(KLASOR, { recursive: true });
 const kayit = (() => { try { return JSON.parse(fs.readFileSync(VERI, 'utf8')); } catch { return {}; } })();
@@ -47,7 +47,7 @@ async function bul(o, gevsek) {
     const s = await wd({ action: 'wbsearchentities', search: q, language: 'en', type: 'item', limit: '7' });
     const idler = (s.search || []).map((x) => x.id);
     if (!idler.length) continue;
-    const ent = (await wd({ action: 'wbgetentities', ids: idler.join('|'), props: 'claims|labels', languages: 'tr|en' })).entities || {};
+    const ent = (await wd({ action: 'wbgetentities', ids: idler.join('|'), props: 'claims|labels' })).entities || {};
     const adaylar = idler.map((id) => ent[id]).filter((e) => iddia(e, 'P106').some((v) => v.id === FUTBOLCU) && iddia(e, 'P18').length);
     if (!adaylar.length) continue;
     // Kulüp doğrulaması: oyuncunun kulüplerinden biri TFF'deki kulüple eşleşmeli
@@ -60,7 +60,10 @@ async function bul(o, gevsek) {
     if (gevsek) {
       const sade = (x) => x.toLocaleLowerCase('en').normalize('NFD').replace(/[^a-z ]/g, '').replace(/\s+/g, ' ').trim();
       const birebir = adaylar.filter((e) => sade(etiket(e)) === sade(q) || Object.values(e.labels || {}).some((l) => sade(l.value) === sade(q)));
-      const yasayan = birebir.filter((e) => !iddia(e, 'P570').length && iddia(e, 'P569').some((d) => Number(String(d.time).slice(1, 5)) >= 1986));
+      // Adayın Latin harfli tüm adlarındaki sözcükler TFF'deki tam adda geçmeli (ör. "Pedro Miguel Martins Santos" ≠ "Pedro Henrique Oliveira dos Santos")
+      const tffSoz = new Set(sade(o.ad.replace(/İ/g, 'I')).split(' '));
+      const adlarUygun = (e) => Object.values(e.labels || {}).map((l) => l.value).filter((v) => /^[\p{Script=Latin}\s.'’-]+$/u.test(v)).every((v) => sade(v).split(' ').filter((w) => w.length >= 3).every((w) => tffSoz.has(w)));
+      const yasayan = birebir.filter((e) => adlarUygun(e) && !iddia(e, 'P570').length && iddia(e, 'P569').some((d) => Number(String(d.time).slice(1, 5)) >= 1986));
       if (yasayan.length === 1 && adaylar.length <= 2) return { qid: yasayan[0].id, dosya: iddia(yasayan[0], 'P18')[0], gevsek: true };
     }
     await bekle(300);
@@ -87,14 +90,14 @@ let yeni = 0, deneme = 0;
 for (const o of oyuncular) {
   const anahtar = `${o.ad}|${o.kulup}`;
   const k = kayit[anahtar];
-  if (k?.qid && fs.existsSync(path.join(KLASOR, `${k.qid}.webp`))) continue;
+  if (k?.qid && fs.existsSync(path.join(KLASOR, `${k.qid}.webp`)) && (!k.gevsek || k.surum === SURUM)) continue;
   if (k?.yok && k.surum === SURUM && Date.now() - new Date(k.tarih).getTime() < TEKRAR_GUN * 864e5) continue;
   if (++deneme > 40) break; // her çalışmada en fazla 25 oyuncu (Wikimedia'yı yormamak için)
   try {
     const b = await bul(o, o.gevsek);
     const f = b && (await indir(b.qid, b.dosya));
     if (f && !f.red) {
-      kayit[anahtar] = { qid: b.qid, ...f, ...(b.gevsek ? { gevsek: true } : {}), tarih: new Date().toISOString() };
+      kayit[anahtar] = { qid: b.qid, ...f, ...(b.gevsek ? { gevsek: true, surum: SURUM } : {}), tarih: new Date().toISOString() };
       yeni++;
     } else kayit[anahtar] = { yok: true, surum: SURUM, neden: f?.red ? `lisans: ${f.red}` : 'bulunamadı', tarih: new Date().toISOString() };
   } catch (e) {
