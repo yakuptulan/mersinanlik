@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-21T11:32:48.468Z",
+ "guncelleme": "2026-11-21T11:40:01.132Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 22,
@@ -170,13 +170,13 @@
     {
      "tarih": "2026-11-24",
      "min": 6,
-     "max": 11,
+     "max": 9,
      "durum": "Sisli"
     },
     {
      "tarih": "2026-11-25",
-     "min": 7,
-     "max": 12,
+     "min": 3,
+     "max": 11,
      "durum": "Parçalı bulutlu"
     }
    ]
@@ -319,9 +319,9 @@
     },
     {
      "tarih": "2026-11-25",
-     "min": 9,
+     "min": 8,
      "max": 17,
-     "durum": "Parçalı bulutlu"
+     "durum": "Az bulutlu"
     }
    ]
   },
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T11:32:53.899Z",
+  "guncelleme": "2026-11-21T11:40:04.832Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T11:32:55.288Z",
+  "guncelleme": "2026-11-21T11:40:05.755Z",
   "liste": [
    {
     "tur": "su",
@@ -838,7 +838,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T11:32:58.239Z",
+  "guncelleme": "2026-11-21T11:40:09.325Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -871,9 +871,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2926096,
-    "usd": 57898,
-    "degisim": -6.3
+    "satis": 2936575,
+    "usd": 58105,
+    "degisim": -5.96
    }
   },
   "altinlar": [
@@ -1006,10 +1006,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 14:32:01"
+  "kaynakSaati": "2026-11-21 14:40:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T11:01:58.700Z",
+  "guncelleme": "2026-11-21T11:40:11.610Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1934,7 +1934,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-21T11:33:10.877Z",
+  "guncelleme": "2026-11-21T11:40:14.065Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8331,7 +8331,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-21T11:33:54.326Z",
+    "guncelleme": "2026-11-21T11:40:57.747Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8413,7 +8413,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-21T11:33:55.611Z",
+    "guncelleme": "2026-11-21T11:40:58.956Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8495,7 +8495,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-21T11:33:56.906Z",
+    "guncelleme": "2026-11-21T11:41:00.172Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8594,11 +8594,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T11:33:08.580Z",
+  "guncelleme": "2026-11-21T11:40:12.136Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 35
+    "sayi": 36
    },
    {
     "yol": "/kategori/belediye/",
@@ -8719,7 +8719,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T11:33:58.108Z",
+  "guncelleme": "2026-11-21T11:41:01.373Z",
   "deniz": {
    "sicaklik": 21.7,
    "dalga": 0.66
@@ -8732,7 +8732,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T11:34:00.980Z",
+  "guncelleme": "2026-11-21T11:41:03.012Z",
   "giden": [
    {
     "no": [
@@ -8743,7 +8743,7 @@
     "planlanan": "2026-11-21T11:55:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "KONTUAR KAPALI",
+    "durum": "SON ÇAĞRI",
     "hat": "dis"
    },
    {
@@ -8767,7 +8767,7 @@
     "planlanan": "2026-11-21T12:15:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8779,7 +8779,7 @@
     "planlanan": "2026-11-21T13:30:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8791,7 +8791,7 @@
     "planlanan": "2026-11-21T14:35:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -9843,7 +9843,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T11:34:00.980Z",
+  "guncelleme": "2026-11-21T11:41:03.012Z",
   "liste": [
    {
     "id": 6386,
