@@ -16,7 +16,7 @@
  },
  "gorsel": {
   "gun": "2026-11-21",
-  "adet": 8
+  "adet": 9
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -332,22 +332,38 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-21T05:31:49.674Z",
+  "guncelleme": "2026-11-21T06:01:37.212Z",
   "liste": [
+   {
+    "baslik": "işten çıkarma",
+    "trafik": 100
+   },
+   {
+    "baslik": "şeniz doğan",
+    "trafik": 100
+   },
+   {
+    "baslik": "manisa hava durumu",
+    "trafik": 200
+   },
    {
     "baslik": "sabah gazetesi",
     "trafik": 500
    },
    {
-    "baslik": "karar gazetesi",
-    "trafik": 20000
+    "baslik": "eskişehir",
+    "trafik": 200
+   },
+   {
+    "baslik": "peru",
+    "trafik": 100
    },
    {
     "baslik": "aşı",
     "trafik": 100
    },
    {
-    "baslik": "peru",
+    "baslik": "karar gazetesi",
     "trafik": 100
    },
    {
@@ -357,22 +373,6 @@
    {
     "baslik": "denizli hava durumu",
     "trafik": 500
-   },
-   {
-    "baslik": "mersin hava durumu",
-    "trafik": 500
-   },
-   {
-    "baslik": "eurohoops türkiye",
-    "trafik": 1000
-   },
-   {
-    "baslik": "suriye",
-    "trafik": 200
-   },
-   {
-    "baslik": "edirne hava durumu",
-    "trafik": 100
    }
   ]
  },
