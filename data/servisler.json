@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-21T22:31:50.911Z",
+ "guncelleme": "2026-11-21T23:01:48.045Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T22:31:56.459Z",
+  "guncelleme": "2026-11-21T23:01:51.699Z",
   "liste": [
    {
     "ad": "Asuman Eczanesi",
@@ -707,7 +707,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T22:31:57.589Z",
+  "guncelleme": "2026-11-21T23:01:52.851Z",
   "liste": [
    {
     "tur": "su",
@@ -728,7 +728,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T22:31:59.937Z",
+  "guncelleme": "2026-11-21T23:01:56.639Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -761,9 +761,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3043836,
-    "usd": 60228,
-    "degisim": 2.18
+    "satis": 3034849,
+    "usd": 60050,
+    "degisim": 1.68
    }
   },
   "altinlar": [
@@ -896,10 +896,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 01:31:01"
+  "kaynakSaati": "2026-11-22 02:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T22:32:02.445Z",
+  "guncelleme": "2026-11-21T23:01:59.175Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1724,7 +1724,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-21T22:01:51.727Z",
+  "guncelleme": "2026-11-21T23:02:04.078Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8310,7 +8310,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-21T22:02:31.342Z",
+    "guncelleme": "2026-11-21T23:02:47.349Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8392,7 +8392,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-21T22:02:32.551Z",
+    "guncelleme": "2026-11-21T23:02:48.638Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8474,7 +8474,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-21T22:02:33.764Z",
+    "guncelleme": "2026-11-21T23:02:49.940Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8573,7 +8573,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T22:32:02.874Z",
+  "guncelleme": "2026-11-21T23:02:02.611Z",
   "liste": [
    {
     "yol": "/",
@@ -8682,20 +8682,20 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T22:32:04.412Z",
+  "guncelleme": "2026-11-21T23:02:51.141Z",
   "deniz": {
    "sicaklik": 21.6,
-   "dalga": 0.92
+   "dalga": 0.9
   },
   "hava": {
-   "aqi": 34,
-   "pm25": 11.8,
-   "pm10": 18.1,
+   "aqi": 31,
+   "pm25": 10.5,
+   "pm10": 15.8,
    "uvMax": 2.25
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T22:32:06.519Z",
+  "guncelleme": "2026-11-21T23:02:53.271Z",
   "giden": [
    {
     "no": [
@@ -8706,7 +8706,7 @@
     "planlanan": "2026-11-22T01:20:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -9308,33 +9308,21 @@
     "kapi": "107",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "VF5249"
+    ],
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-22T22:45:00.000Z",
+    "tahmini": null,
+    "kapi": "104",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "XQ1611"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "Frankfurt",
-    "planlanan": "2026-11-21T22:35:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "dis"
-   },
-   {
-    "no": [
-     "PC4996"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-21T22:40:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "VF3148"
@@ -9817,10 +9805,10 @@
    },
    {
     "no": [
-     "VF3146"
+     "XQ9306"
     ],
-    "havayolu": "AJet",
-    "yer": "Sabiha Gökçen",
+    "havayolu": "SunExpress",
+    "yer": "İzmir",
     "planlanan": "2026-11-22T19:10:00.000Z",
     "tahmini": null,
     "kapi": "",
@@ -9829,10 +9817,10 @@
    },
    {
     "no": [
-     "XQ9306"
+     "VF3146"
     ],
-    "havayolu": "SunExpress",
-    "yer": "İzmir",
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
     "planlanan": "2026-11-22T19:10:00.000Z",
     "tahmini": null,
     "kapi": "",
@@ -9934,11 +9922,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "VF3148"
+    ],
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-22T23:00:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T22:32:06.519Z",
+  "guncelleme": "2026-11-21T23:02:53.271Z",
   "liste": [
    {
     "id": 6386,
