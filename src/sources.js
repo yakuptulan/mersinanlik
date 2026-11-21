@@ -175,7 +175,7 @@ export const KAYNAKLAR = [
     kapsam: 'kurum',
     yapayZekaOzeti: true,
     fotoKullan: true,
-    aktif: false,
+    aktif: false, // haber başlığı sayfada etiketsiz (JSF), okunamıyor; kesintiler zaten ayrı alınıyor
   },
   {
     id: 'camliyayla-belediyesi',
@@ -187,7 +187,7 @@ export const KAYNAKLAR = [
     kapsam: 'kurum',
     yapayZekaOzeti: true,
     fotoKullan: true,
-    aktif: false,
+    aktif: false, // haberler 2024'ten, tarih yok: eski haber yeni diye yayınlanır
   },
   {
     id: 'bozyazi-belediyesi',
@@ -199,7 +199,7 @@ export const KAYNAKLAR = [
     kapsam: 'kurum',
     yapayZekaOzeti: true,
     fotoKullan: true,
-    aktif: false,
+    aktif: false, // çoğu kutlama mesajı, tarih yok
   },
   {
     id: 'ktb-mersin',
@@ -212,9 +212,9 @@ export const KAYNAKLAR = [
     kapsam: 'kurum',
     yapayZekaOzeti: true,
     fotoKullan: true,
-    aktif: false,
+    aktif: false, // haber listesi sunucudan okunamıyor (0 link)
   },
-  { id: 'anamur-belediyesi', ad: 'Anamur Belediyesi', url: 'https://anamur.bel.tr/feed/', tur: 'rss', kapsam: 'kurum', yapayZekaOzeti: true, aktif: false },
+  { id: 'anamur-belediyesi', ad: 'Anamur Belediyesi', url: 'https://anamur.bel.tr/feed/', tur: 'rss', kapsam: 'kurum', yapayZekaOzeti: true, aktif: false }, // akışın çoğu vefat ilanı ve imar duyurusu
   {
     id: 'mersin-universitesi',
     ad: 'Mersin Üniversitesi',
