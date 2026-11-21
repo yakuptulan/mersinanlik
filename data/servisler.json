@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-21T22:01:33.722Z",
+ "guncelleme": "2026-11-21T22:31:50.911Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -146,7 +146,7 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 12,
+   "sicaklik": 11,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -218,7 +218,7 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 9,
+   "sicaklik": 8,
    "durum": "Sisli",
    "gunler": [
     {
@@ -254,8 +254,8 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 16,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 15,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -362,7 +362,7 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 18,
+   "sicaklik": 17,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -398,8 +398,8 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 17,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 16,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -434,8 +434,8 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 17,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 16,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T22:01:36.374Z",
+  "guncelleme": "2026-11-21T22:31:56.459Z",
   "liste": [
    {
     "ad": "Asuman Eczanesi",
@@ -707,7 +707,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T22:01:37.154Z",
+  "guncelleme": "2026-11-21T22:31:57.589Z",
   "liste": [
    {
     "tur": "su",
@@ -728,7 +728,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T22:01:39.477Z",
+  "guncelleme": "2026-11-21T22:31:59.937Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -761,9 +761,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3051138,
-    "usd": 60372,
-    "degisim": 2.48
+    "satis": 3043836,
+    "usd": 60228,
+    "degisim": 2.18
    }
   },
   "altinlar": [
@@ -896,10 +896,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 01:01:01"
+  "kaynakSaati": "2026-11-22 01:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T21:34:03.119Z",
+  "guncelleme": "2026-11-21T22:32:02.445Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8573,11 +8573,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T22:01:50.244Z",
+  "guncelleme": "2026-11-21T22:32:02.874Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 19
+    "sayi": 18
    },
    {
     "yol": "/spor/",
@@ -8682,7 +8682,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T22:02:34.964Z",
+  "guncelleme": "2026-11-21T22:32:04.412Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.92
@@ -8695,7 +8695,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T22:02:36.585Z",
+  "guncelleme": "2026-11-21T22:32:06.519Z",
   "giden": [
    {
     "no": [
@@ -9313,18 +9313,6 @@
   "gelen": [
    {
     "no": [
-     "XQ1703"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "Stuttgart",
-    "planlanan": "2026-11-21T22:05:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "dis"
-   },
-   {
-    "no": [
      "XQ1611"
     ],
     "havayolu": "SunExpress",
@@ -9901,7 +9889,7 @@
    },
    {
     "no": [
-     "VF5896"
+     "VF5902"
     ],
     "havayolu": "AJet",
     "yer": "Cairo International Airport",
@@ -9913,7 +9901,7 @@
    },
    {
     "no": [
-     "VF5902"
+     "VF5896"
     ],
     "havayolu": "AJet",
     "yer": "Cairo International Airport",
@@ -9934,11 +9922,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2096"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-22T22:05:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T22:02:36.585Z",
+  "guncelleme": "2026-11-21T22:32:06.519Z",
   "liste": [
    {
     "id": 6386,
