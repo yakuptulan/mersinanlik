@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-21T15:01:58.213Z",
+ "guncelleme": "2026-11-21T15:31:46.624Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -74,13 +74,13 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 21,
+   "sicaklik": 20,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-21",
      "min": 16,
-     "max": 21,
+     "max": 20,
      "durum": "Sisli"
     },
     {
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T15:02:02.738Z",
+  "guncelleme": "2026-11-21T15:31:50.448Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -784,56 +784,36 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T15:02:04.449Z",
+  "guncelleme": "2026-11-21T15:31:51.629Z",
   "liste": [
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
-    "aciklama": "Tarsus İlçesi ; Anıt, Mithatpaşa ve Gazipaşa Mahallelerimizde, bölgede meydana gelen ana isale hattı arızası nedeniyle saat 19.00'a kadar su kesintisi yaşanacaktır.",
-    "baslangic": "2026-11-21T12:15:00.000Z",
-    "bitis": "2026-11-21T16:00:00.000Z",
+    "aciklama": "Silifke İlçesi ; Mukaddem Mahallemizde, Çolakkadir mevkiinde meydana gelen içme suyu arızası nedeniyle saat 22.00'a kadar su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-21T15:10:00.000Z",
+    "bitis": "2026-11-21T19:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "silifke",
+      "ad": "Silifke",
+      "mahalleler": [
+       "Mukaddem"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Tarsus İlçesi ; Beylice Mahallemizde, Enerjisa'nın bölgedeki çalışması sırasında içme suyu şebeke hattının zarar görmesinden dolayı yarın(22.11.2026), saat 10.00'a kadar su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-21T15:05:00.000Z",
+    "bitis": "2026-11-22T07:00:00.000Z",
     "ilceler": [
      {
       "ilce": "tarsus",
       "ad": "Tarsus",
       "mahalleler": [
-       "Anıt",
-       "Gazipaşa",
-       "Mithatpaşa"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Erdemli İlçesi Kargıcak ve Alata Mahallesi sınırları içerisindeki sanayi sitesinde oluşan arızadan kaynaklı saat 19:00 kadar su kesintisi uygulanacaktır.",
-    "baslangic": "2026-11-21T12:30:00.000Z",
-    "bitis": "2026-11-21T16:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "erdemli",
-      "ad": "Erdemli",
-      "mahalleler": [
-       "Alata",
-       "Kargıcak"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Mut ilçesi Meydan Mahallesinde yaşanan içme suyu arızası kaynaklı Meydan ve Karşıyaka Mahallelerinde su kesintisi yaşanmaktadır. Arızanın giderilip suların verilmesi 20:00 olarak planlanmaktadır.",
-    "baslangic": "2026-11-21T13:30:00.000Z",
-    "bitis": "2026-11-21T17:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "mut",
-      "ad": "Mut",
-      "mahalleler": [
-       "Karşıyaka",
-       "Meydan"
+       "Beylice"
       ]
      }
     ]
@@ -841,7 +821,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T15:02:07.298Z",
+  "guncelleme": "2026-11-21T15:31:56.503Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -874,9 +854,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3044603,
-    "usd": 60243,
-    "degisim": -2.4
+    "satis": 3026995,
+    "usd": 59894,
+    "degisim": -0.66
    }
   },
   "altinlar": [
@@ -1009,10 +989,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 18:02:02"
+  "kaynakSaati": "2026-11-21 18:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T14:32:04.950Z",
+  "guncelleme": "2026-11-21T15:31:59.314Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1833,7 +1813,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-21T12:32:17.537Z",
+  "guncelleme": "2026-11-21T15:32:03.436Z",
   "liste": [
    {
     "id": "gzi1bq",
@@ -8785,15 +8765,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T15:02:18.046Z",
+  "guncelleme": "2026-11-21T15:31:59.863Z",
   "liste": [
    {
     "yol": "/",
     "sayi": 21
-   },
-   {
-    "yol": "/piyasalar/",
-    "sayi": 5
    },
    {
     "yol": "/spor/",
@@ -8804,16 +8780,8 @@
     "sayi": 4
    },
    {
-    "yol": "/kategori/belediye/",
+    "yol": "/piyasalar/",
     "sayi": 3
-   },
-   {
-    "yol": "/kategori/ekonomi/",
-    "sayi": 2
-   },
-   {
-    "yol": "/kategori/asayis/",
-    "sayi": 2
    },
    {
     "yol": "/haber/yenisehir-belediyesi-artik-cebinizde-1g8kwxn/",
@@ -8825,14 +8793,6 @@
    },
    {
     "yol": "/piyasalar/gram-altin/&ss=tw&rt=Gram+alt%C4%B1n+ne+kadar%3F+Bug%C3%BCn+canl%C4%B1+gram+alt%C4%B1n+fiyat%C4%B1+-+Mersin+Anl%C4%B1k&cd=KhQxNDk2OTU4MTgyNTIxMDIwMzk0OTIdZjcwZjUzYWU5MTM2ZWRkYzpjb20udHI6dHI6VFI&ssp=AMJHsmWqlNtj-Lx0EeQMFnU5botX4UoECw/",
-    "sayi": 1
-   },
-   {
-    "yol": "/kategori/yasam/",
-    "sayi": 1
-   },
-   {
-    "yol": "/bilgi/",
     "sayi": 1
    },
    {
@@ -8856,10 +8816,6 @@
     "sayi": 1
    },
    {
-    "yol": "/akaryakit-fiyatlari/",
-    "sayi": 1
-   },
-   {
     "yol": "/haber/mersin-yenisehir-de-20-cadde-trafige-kapatiliyor-iste-tarih-ve-saat-1729jhi/",
     "sayi": 1
    },
@@ -8868,7 +8824,7 @@
     "sayi": 1
    },
    {
-    "yol": "/kategori/turkiye-dunya/",
+    "yol": "/kategori/belediye/",
     "sayi": 1
    },
    {
@@ -8882,7 +8838,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T15:03:07.342Z",
+  "guncelleme": "2026-11-21T15:32:03.437Z",
   "deniz": {
    "sicaklik": 21.7,
    "dalga": 0.96
@@ -8895,20 +8851,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T15:03:10.227Z",
+  "guncelleme": "2026-11-21T15:32:05.799Z",
   "giden": [
-   {
-    "no": [
-     "TK2463"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-21T15:25:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC2089"
@@ -8930,7 +8874,7 @@
     "planlanan": "2026-11-21T16:05:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "dis"
    },
    {
@@ -9472,33 +9416,45 @@
     "kapi": "109",
     "durum": "",
     "hat": "ic"
-   }
-  ],
-  "gelen": [
+   },
    {
     "no": [
-     "VF1054"
+     "PC1858"
     ],
-    "havayolu": "AJet",
+    "havayolu": "Pegasus",
     "yer": "Ercan",
-    "planlanan": "2026-11-21T15:10:00.000Z",
+    "planlanan": "2026-11-22T15:05:00.000Z",
     "tahmini": null,
-    "kapi": "",
+    "kapi": "104",
     "durum": "",
     "hat": "dis"
    },
    {
     "no": [
-     "PC2088"
+     "XQ9207"
     ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-21T15:15:00.000Z",
-    "tahmini": "2026-11-21T15:40:00.000Z",
-    "kapi": "",
-    "durum": "GECİKME",
+    "havayolu": "SunExpress",
+    "yer": "İzmir",
+    "planlanan": "2026-11-22T15:25:00.000Z",
+    "tahmini": null,
+    "kapi": "107",
+    "durum": "",
     "hat": "ic"
    },
+   {
+    "no": [
+     "TK2463"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-22T15:25:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   }
+  ],
+  "gelen": [
    {
     "no": [
      "TK2464"
@@ -10062,11 +10018,47 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "VF4088"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ankara",
+    "planlanan": "2026-11-22T15:05:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF1054"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ercan",
+    "planlanan": "2026-11-22T15:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "PC2088"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-22T15:30:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T15:03:10.226Z",
+  "guncelleme": "2026-11-21T15:32:05.798Z",
   "liste": [
    {
     "id": 6386,
