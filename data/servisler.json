@@ -1,8 +1,8 @@
 {
- "guncelleme": "2026-11-21T08:02:03.170Z",
+ "guncelleme": "2026-11-21T08:32:29.265Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 20,
+   "sicaklik": 21,
    "durum": "Az bulutlu",
    "gunler": [
     {
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-21T08:02:07.311Z",
+  "guncelleme": "2026-11-21T08:32:34.401Z",
   "liste": [
    {
     "ad": "Akdeniz Güneş Eczanesi",
@@ -774,7 +774,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-21T08:02:08.296Z",
+  "guncelleme": "2026-11-21T08:32:35.798Z",
   "liste": [
    {
     "tur": "su",
@@ -831,7 +831,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-21T08:02:12.596Z",
+  "guncelleme": "2026-11-21T08:32:38.602Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -864,9 +864,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2926167,
-    "usd": 57899,
-    "degisim": -6.35
+    "satis": 2911019,
+    "usd": 57600,
+    "degisim": -7.03
    }
   },
   "altinlar": [
@@ -999,10 +999,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-21 11:02:01"
+  "kaynakSaati": "2026-11-21 11:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-21T08:02:15.109Z",
+  "guncelleme": "2026-11-21T08:32:40.967Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1927,7 +1927,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-21T07:32:18.155Z",
+  "guncelleme": "2026-11-21T08:32:43.929Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8339,7 +8339,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-21T08:02:15.916Z",
+  "guncelleme": "2026-11-21T08:32:41.216Z",
   "liste": [
    {
     "yol": "/",
@@ -8460,7 +8460,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-21T08:02:17.177Z",
+  "guncelleme": "2026-11-21T08:33:27.449Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.4
@@ -8473,20 +8473,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-21T08:02:18.835Z",
+  "guncelleme": "2026-11-21T08:33:29.892Z",
   "giden": [
-   {
-    "no": [
-     "PC1852"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Ercan",
-    "planlanan": "2026-11-21T08:25:00.000Z",
-    "tahmini": null,
-    "kapi": "102",
-    "durum": "SON ÇAĞRI",
-    "hat": "dis"
-   },
    {
     "no": [
      "TK2455"
@@ -8496,7 +8484,7 @@
     "planlanan": "2026-11-21T08:45:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -8508,7 +8496,7 @@
     "planlanan": "2026-11-21T09:00:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "KONTUAR AÇIK",
+    "durum": "SON ÇAĞRI",
     "hat": "dis"
    },
    {
@@ -8520,7 +8508,7 @@
     "planlanan": "2026-11-21T10:00:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8532,7 +8520,7 @@
     "planlanan": "2026-11-21T10:05:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9060,6 +9048,18 @@
     "planlanan": "2026-11-22T07:45:00.000Z",
     "tahmini": null,
     "kapi": "103",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "PC1852"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-22T08:25:00.000Z",
+    "tahmini": null,
+    "kapi": "102",
     "durum": "",
     "hat": "dis"
    }
@@ -9640,11 +9640,23 @@
     "kapi": "",
     "durum": "",
     "hat": "dis"
+   },
+   {
+    "no": [
+     "PC2084"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-22T08:30:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-21T08:02:18.834Z",
+  "guncelleme": "2026-11-21T08:33:29.892Z",
   "liste": [
    {
     "id": 6386,

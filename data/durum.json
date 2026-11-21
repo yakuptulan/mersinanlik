@@ -12,15 +12,11 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-21T08:01:19.839Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-21",
-  "adet": 16
+  "adet": 18
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -217,7 +213,14 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-76-yasindaki-kadin-2-gundur-kayip-119528066",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/dem-parti-es-genel-baskani-tuncer-bakirhan-mersinde-konustu-119528080",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-bicakli-kavgada-bir-genc-hayatini-kaybetti-119528115",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-komsular-arasinda-bicakli-kavga-1-olu-1-yarali-2-119528110"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-komsular-arasinda-bicakli-kavga-1-olu-1-yarali-2-119528110",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/ak-parti-mersin-milletvekili-hasan-ufuk-cakir-muhtarlarla-bulustu-119528456",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/akdenizde-3-sokak-sicak-asfaltla-yenileniyor-119528438",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/akdeniz-belediyesinden-cocuk-haklari-paneli-119528417",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-cocuklar-ara-tatilde-bilim-ve-eglenceyle-bulustu-119528384",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/meskinin-2027-yili-butcesi-oy-birligiyle-kabul-edildi-119528374",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-500-farkli-deniz-canlisi-turu-muzede-sergileniyor-prof-dr-deniz-ayas-muzemiz-119528372",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinin-yesil-donusum-projeleri-cop31de-tanitildi-119528370"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -341,11 +344,35 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-21T08:01:48.541Z",
+  "guncelleme": "2026-11-21T08:32:06.083Z",
   "liste": [
    {
+    "baslik": "sakarya",
+    "trafik": 100
+   },
+   {
+    "baslik": "yozgat hava durumu",
+    "trafik": 200
+   },
+   {
+    "baslik": "anne",
+    "trafik": 100
+   },
+   {
+    "baslik": "gedson fernandes",
+    "trafik": 200
+   },
+   {
+    "baslik": "yargıtay",
+    "trafik": 500
+   },
+   {
+    "baslik": "hazar ergüçlü",
+    "trafik": 100
+   },
+   {
     "baslik": "izmit hava durumu",
-    "trafik": 1000
+    "trafik": 2000
    },
    {
     "baslik": "müge anlı",
@@ -357,30 +384,6 @@
    },
    {
     "baslik": "galatasaray - samsunspor",
-    "trafik": 200
-   },
-   {
-    "baslik": "meral ağalar",
-    "trafik": 200
-   },
-   {
-    "baslik": "banu ilıcalı",
-    "trafik": 200
-   },
-   {
-    "baslik": "gökhan günaydın",
-    "trafik": 200
-   },
-   {
-    "baslik": "elektrik kesintisi",
-    "trafik": 2000
-   },
-   {
-    "baslik": "sözleşme",
-    "trafik": 200
-   },
-   {
-    "baslik": "aboubakary koita",
     "trafik": 200
    }
   ]
