@@ -12,6 +12,18 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "mersin-buyuksehir": {
+   "hata": "The operation was aborted due to timeout",
+   "zaman": "2026-11-22T21:14:07.185Z"
+  },
+  "mersinportal": {
+   "hata": "This operation was aborted",
+   "zaman": "2026-11-22T21:14:43.603Z"
+  },
+  "mersinhabermerkezi": {
+   "hata": "This operation was aborted",
+   "zaman": "2026-11-22T21:14:59.572Z"
   }
  },
  "gorsel": {
@@ -383,8 +395,16 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T21:11:21.256Z",
+  "guncelleme": "2026-11-22T21:15:05.030Z",
   "liste": [
+   {
+    "baslik": "hawks - pistons",
+    "trafik": 200
+   },
+   {
+    "baslik": "tv 8",
+    "trafik": 200
+   },
    {
     "baslik": "tv8 canlı",
     "trafik": 10000
@@ -416,14 +436,6 @@
    {
     "baslik": "tv8 canlı yayın",
     "trafik": 500
-   },
-   {
-    "baslik": "erman toroğlu",
-    "trafik": 200
-   },
-   {
-    "baslik": "أتالانتا ضد الإنتر",
-    "trafik": 100
    }
   ]
  },
