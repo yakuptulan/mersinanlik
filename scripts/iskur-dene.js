@@ -26,6 +26,11 @@ if (process.env.GONDER) {
   const d = t.replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ');
   const i = d.search(/VENEZUE/);
   console.log(d.slice(i + 200, i + 5200));
+  const fn = r.metin.match(/function PopupJobDetails[\s\S]{0,900}/)?.[0] || (await al('https://esube.iskur.gov.tr' + (r.metin.match(/src="([^"]*AcikIs[^"]*\.js[^"]*)"/i)?.[1] || '/x'))).metin.match(/PopupJobDetails[\s\S]{0,900}/)?.[0];
+  console.log('\nPOPUP', fn);
+  console.log('\nJSLER', [...r.metin.matchAll(/<script[^>]+src="([^"]+)"/g)].map((m) => m[1]).join(' '));
+  const ilanTarihi = r.metin.match(/<select name="ctl04\$ctlIlanTarihi"[\s\S]*?<\/select>/)?.[0]?.replace(/\s+/g, ' ');
+  console.log('\nILANTARIHI', ilanTarihi);
   const satir = [...r.metin.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/gi)].slice(0, 6).map((m) => m[1].replace(/\s+/g, ' ').slice(0, 700));
   console.log('\nSATIRLAR\n' + satir.join('\n---\n'));
 }
