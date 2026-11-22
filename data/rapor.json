@@ -210,27 +210,30 @@
    "kaynakHatalari": []
   },
   "2026-11-22": {
-   "guncelleme": "2026-11-22T10:12:40.373Z",
-   "mersinHaber": 17,
-   "kendiYazimiz": 17,
-   "turkiyeDunya": 100,
-   "otomatik": 1,
+   "guncelleme": "2026-11-22T10:33:55.671Z",
+   "mersinHaber": 18,
+   "kendiYazimiz": 18,
+   "turkiyeDunya": 106,
+   "otomatik": 2,
    "otomatikTurler": {
-    "su": 1
+    "su": 2
    },
    "otomatikBasliklar": [
     {
      "baslik": "Tarsus'ta su kesintisi: Avadan, Kütüklü ve 3 mahalle daha",
      "tur": "su",
      "saat": "10:19"
+    },
+    {
+     "baslik": "Tarsus'ta su kesintisi: Bahşiş, Kulak ve 1 mahalle daha (5 saat)",
+     "tur": "su",
+     "saat": "13:33"
     }
    ],
    "gorsel": 19,
    "bilgi": 2,
    "gezi": 0,
-   "kaynakHatalari": [
-    "haberturk-mersin (fetch failed)"
-   ]
+   "kaynakHatalari": []
   }
  }
 }

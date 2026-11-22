@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T10:10:33.409Z",
+ "guncelleme": "2026-11-22T10:32:08.242Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 22,
@@ -38,7 +38,7 @@
    ]
   },
   "anamur": {
-   "sicaklik": 22,
+   "sicaklik": 23,
    "durum": "Açık",
    "gunler": [
     {
@@ -147,7 +147,7 @@
   },
   "camliyayla": {
    "sicaklik": 14,
-   "durum": "Az bulutlu",
+   "durum": "Sağanak",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -183,7 +183,7 @@
   },
   "erdemli": {
    "sicaklik": 21,
-   "durum": "Açık",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -254,7 +254,7 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 21,
+   "sicaklik": 22,
    "durum": "Az bulutlu",
    "gunler": [
     {
@@ -290,7 +290,7 @@
    ]
   },
   "mut": {
-   "sicaklik": 20,
+   "sicaklik": 21,
    "durum": "Açık",
    "gunler": [
     {
@@ -362,7 +362,7 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 22,
+   "sicaklik": 23,
    "durum": "Açık",
    "gunler": [
     {
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T10:10:39.327Z",
+  "guncelleme": "2026-11-22T10:32:12.305Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T10:10:40.644Z",
+  "guncelleme": "2026-11-22T10:32:13.205Z",
   "liste": [
    {
     "tur": "su",
@@ -838,11 +838,29 @@
       ]
      }
     ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Tarsus Yeşiltepe yeşilkuyu bahşiş kulak elektrik kesintisine bağlı su kesintisi yaşanacaktır tahmini Verilme süresi 19:00'dır",
+    "baslangic": "2026-11-22T10:32:00.000Z",
+    "bitis": "2026-11-22T16:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "tarsus",
+      "ad": "Tarsus",
+      "mahalleler": [
+       "Bahşiş",
+       "Kulak",
+       "Yeşiltepe"
+      ]
+     }
+    ]
    }
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T10:10:45.427Z",
+  "guncelleme": "2026-11-22T10:32:17.278Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -875,9 +893,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3089908,
-    "usd": 61139,
-    "degisim": 5.46
+    "satis": 3072952,
+    "usd": 60804,
+    "degisim": 4.81
    }
   },
   "altinlar": [
@@ -1010,10 +1028,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 13:10:01"
+  "kaynakSaati": "2026-11-22 13:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T10:10:51.113Z",
+  "guncelleme": "2026-11-22T10:32:19.549Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1838,7 +1856,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-22T10:10:55.924Z",
+  "guncelleme": "2026-11-22T10:32:21.016Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8424,7 +8442,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-22T10:11:43.407Z",
+    "guncelleme": "2026-11-22T10:33:03.771Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8462,11 +8480,6 @@
       "gol": 7
      },
      {
-      "ad": "MASON WILL JOHN GREENWOOD",
-      "kulup": "Fenerbahçe",
-      "gol": 7
-     },
-     {
       "ad": "VEDAT MURIÇ",
       "kulup": "Fenerbahçe",
       "gol": 7
@@ -8474,11 +8487,6 @@
      {
       "ad": "ALI SOWE",
       "kulup": "Çaykur Rizespor",
-      "gol": 6
-     },
-     {
-      "ad": "BERKAN İSMAİL KUTLU",
-      "kulup": "Kocaelispor",
       "gol": 6
      },
      {
@@ -8490,6 +8498,16 @@
       "ad": "JESUS ANDRES RAMIREZ DIAZ",
       "kulup": "Arca Çorum FK",
       "gol": 6
+     },
+     {
+      "ad": "MASON WILL JOHN GREENWOOD",
+      "kulup": "Fenerbahçe",
+      "gol": 6
+     },
+     {
+      "ad": "BERKAN İSMAİL KUTLU",
+      "kulup": "Kocaelispor",
+      "gol": 5
      },
      {
       "ad": "İRFAN CAN KAHVECİ",
@@ -8506,7 +8524,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-22T10:11:44.664Z",
+    "guncelleme": "2026-11-22T10:33:04.980Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8588,7 +8606,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-22T10:11:45.931Z",
+    "guncelleme": "2026-11-22T10:33:06.196Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8687,7 +8705,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T10:10:51.415Z",
+  "guncelleme": "2026-11-22T10:32:19.792Z",
   "liste": [
    {
     "yol": "/",
@@ -8699,7 +8717,7 @@
    },
    {
     "yol": "/haber/msk-da-dagilma-tehlikesi-kadro-dagildi-gelecek-belirsizlesti-fmcfmt/",
-    "sayi": 3
+    "sayi": 2
    },
    {
     "yol": "/ilceler/",
@@ -8722,11 +8740,11 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
+    "yol": "/haber/mersin-osb-nin-5-ve-6-bolge-projeleri-ankara-da-gorusuldu-i4fy92/",
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-osb-nin-5-ve-6-bolge-projeleri-ankara-da-gorusuldu-i4fy92/",
+    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
     "sayi": 1
    },
    {
@@ -8764,10 +8782,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T10:11:47.133Z",
+  "guncelleme": "2026-11-22T10:33:07.397Z",
   "deniz": {
-   "sicaklik": 21.8,
-   "dalga": 0.54
+   "sicaklik": 21.9,
+   "dalga": 0.52
   },
   "hava": {
    "aqi": 28,
@@ -8777,20 +8795,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T10:11:49.552Z",
+  "guncelleme": "2026-11-22T10:33:09.044Z",
   "giden": [
-   {
-    "no": [
-     "TK2457"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-22T10:30:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "BOARDING",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC2087"
@@ -8824,7 +8830,7 @@
     "planlanan": "2026-11-22T12:10:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9376,6 +9382,18 @@
     "planlanan": "2026-11-23T09:20:00.000Z",
     "tahmini": null,
     "kapi": "105",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2457"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-23T10:30:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
     "durum": "",
     "hat": "ic"
    }
@@ -10008,7 +10026,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T10:11:49.551Z",
+  "guncelleme": "2026-11-22T10:33:09.044Z",
   "liste": [
    {
     "id": 6386,

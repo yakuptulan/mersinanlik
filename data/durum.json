@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-22T10:09:52.345Z"
   }
  },
  "gorsel": {
@@ -125,7 +121,8 @@
    "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/akdenizde-asfalt-calismasi-devam-ediyor-2985916",
    "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/meskinin-2027-yili-butcesi-kabul-edildi-2986077",
    "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/akdeniz-belediyesinden-cocuk-haklari-paneli-2986083",
-   "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/mersin-sehir-tiyatrosu-perdelerini-acti-2986448"
+   "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/mersin-sehir-tiyatrosu-perdelerini-acti-2986448",
+   "https://www.dha.com.tr/yerel-haberler/mersin/mezitli/mersinli-uretici-kadinlar-e-ticaret-egitimi-ald-2986460"
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
@@ -377,11 +374,27 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T10:10:31.493Z",
+  "guncelleme": "2026-11-22T10:32:07.869Z",
   "liste": [
    {
+    "baslik": "gümüş",
+    "trafik": 1000
+   },
+   {
+    "baslik": "el salvador",
+    "trafik": 100
+   },
+   {
+    "baslik": "tivibu spor",
+    "trafik": 200
+   },
+   {
+    "baslik": "çağatay ulusoy",
+    "trafik": 200
+   },
+   {
     "baslik": "erzurumspor - göztepe",
-    "trafik": 5000
+    "trafik": 10000
    },
    {
     "baslik": "charles leclerc",
@@ -396,28 +409,12 @@
     "trafik": 100
    },
    {
+    "baslik": "kepez belediyesi operasyon",
+    "trafik": 1000
+   },
+   {
     "baslik": "öğle namazı",
     "trafik": 1000
-   },
-   {
-    "baslik": "ayşe vural kimdir",
-    "trafik": 200
-   },
-   {
-    "baslik": "tahliye",
-    "trafik": 1000
-   },
-   {
-    "baslik": "emre altuğ",
-    "trafik": 200
-   },
-   {
-    "baslik": "sinek",
-    "trafik": 200
-   },
-   {
-    "baslik": "levent tahmiscioğlu kimdir",
-    "trafik": 200
    }
   ]
  },
