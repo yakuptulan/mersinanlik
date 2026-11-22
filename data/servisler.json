@@ -1,14 +1,14 @@
 {
- "guncelleme": "2026-11-22T16:01:49.664Z",
+ "guncelleme": "2026-11-22T16:32:12.768Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 18,
+   "sicaklik": 17,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 15,
-     "max": 18,
+     "max": 17,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -39,7 +39,7 @@
   },
   "anamur": {
    "sicaklik": 17,
-   "durum": "Az bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -146,13 +146,13 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 10,
-   "durum": "Az bulutlu",
+   "sicaklik": 9,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 5,
-     "max": 10,
+     "max": 9,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -219,7 +219,7 @@
   },
   "gulnar": {
    "sicaklik": 13,
-   "durum": "Az bulutlu",
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -290,13 +290,13 @@
    ]
   },
   "mut": {
-   "sicaklik": 16,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 15,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 11,
-     "max": 16,
+     "max": 15,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -326,13 +326,13 @@
    ]
   },
   "silifke": {
-   "sicaklik": 17,
+   "sicaklik": 15,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 13,
-     "max": 17,
+     "max": 15,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -362,13 +362,13 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 19,
+   "sicaklik": 18,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 15,
-     "max": 19,
+     "max": 18,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -398,13 +398,13 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 18,
+   "sicaklik": 17,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 15,
-     "max": 18,
+     "max": 17,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -434,13 +434,13 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 18,
+   "sicaklik": 17,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 15,
-     "max": 18,
+     "max": 17,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T16:01:54.029Z",
+  "guncelleme": "2026-11-22T16:32:17.419Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -773,7 +773,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T16:01:55.410Z",
+  "guncelleme": "2026-11-22T16:32:18.873Z",
   "liste": [
    {
     "tur": "su",
@@ -810,7 +810,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T16:01:57.950Z",
+  "guncelleme": "2026-11-22T16:32:21.915Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -843,9 +843,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3073794,
-    "usd": 60820,
-    "degisim": 1.64
+    "satis": 3092063,
+    "usd": 61182,
+    "degisim": 2.02
    }
   },
   "altinlar": [
@@ -978,7 +978,7 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 19:01:01"
+  "kaynakSaati": "2026-11-22 19:32:01"
  },
  "akaryakit": {
   "guncelleme": "2026-11-22T16:02:00.654Z",
@@ -1806,7 +1806,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-22T16:02:02.859Z",
+  "guncelleme": "2026-11-22T16:32:34.551Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8483,7 +8483,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-22T16:02:47.079Z",
+    "guncelleme": "2026-11-22T16:33:18.783Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8565,7 +8565,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-22T16:02:48.354Z",
+    "guncelleme": "2026-11-22T16:33:20.083Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8647,7 +8647,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-22T16:02:49.640Z",
+    "guncelleme": "2026-11-22T16:33:21.394Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8746,7 +8746,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T16:02:00.984Z",
+  "guncelleme": "2026-11-22T16:32:32.320Z",
   "liste": [
    {
     "yol": "/",
@@ -8773,19 +8773,15 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-1-amator-b-grubu-nda-zirve-kizisti-7sethw/",
-    "sayi": 1
-   },
-   {
     "yol": "/hava-durumu/bozyazi/",
     "sayi": 1
    },
    {
-    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
+    "yol": "/haber/mersin-osb-nin-5-ve-6-bolge-projeleri-ankara-da-gorusuldu-i4fy92/",
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-osb-nin-5-ve-6-bolge-projeleri-ankara-da-gorusuldu-i4fy92/",
+    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
     "sayi": 1
    },
    {
@@ -8821,6 +8817,10 @@
     "sayi": 1
    },
    {
+    "yol": "/spor/",
+    "sayi": 1
+   },
+   {
     "yol": "/kategori/belediye/",
     "sayi": 1
    },
@@ -8835,9 +8835,9 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T16:02:50.841Z",
+  "guncelleme": "2026-11-22T16:33:22.596Z",
   "deniz": {
-   "sicaklik": 21.8,
+   "sicaklik": 21.7,
    "dalga": 0.38
   },
   "hava": {
@@ -8848,32 +8848,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T16:02:53.645Z",
+  "guncelleme": "2026-11-22T16:33:25.265Z",
   "giden": [
-   {
-    "no": [
-     "VF1053"
-    ],
-    "havayolu": "AJet",
-    "yer": "Ercan",
-    "planlanan": "2026-11-22T16:05:00.000Z",
-    "tahmini": null,
-    "kapi": "103",
-    "durum": "KAPI KAPANDI",
-    "hat": "dis"
-   },
-   {
-    "no": [
-     "PC3017"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "İzmir",
-    "planlanan": "2026-11-22T16:20:00.000Z",
-    "tahmini": null,
-    "kapi": "105",
-    "durum": "BOARDING",
-    "hat": "ic"
-   },
    {
     "no": [
      "TK2465"
@@ -8883,7 +8859,7 @@
     "planlanan": "2026-11-22T16:55:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KONTUAR AÇIK",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -8919,7 +8895,7 @@
     "planlanan": "2026-11-22T18:00:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8931,7 +8907,7 @@
     "planlanan": "2026-11-22T18:25:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9437,33 +9413,21 @@
     "kapi": "105",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "VF1053"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ercan",
+    "planlanan": "2026-11-23T16:05:00.000Z",
+    "tahmini": null,
+    "kapi": "103",
+    "durum": "",
+    "hat": "dis"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "TK2464"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-22T16:10:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "XQ1611"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "Frankfurt",
-    "planlanan": "2026-11-22T16:20:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "dis"
-   },
    {
     "no": [
      "PC2090"
@@ -10027,11 +9991,23 @@
     "kapi": "",
     "durum": "",
     "hat": "dis"
+   },
+   {
+    "no": [
+     "TK2464"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-23T16:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T16:02:53.644Z",
+  "guncelleme": "2026-11-22T16:33:25.265Z",
   "liste": [
    {
     "id": 6386,
