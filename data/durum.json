@@ -16,7 +16,7 @@
  },
  "gorsel": {
   "gun": "2026-11-22",
-  "adet": 6
+  "adet": 7
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -370,8 +370,24 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T06:31:57.655Z",
+  "guncelleme": "2026-11-22T07:01:55.624Z",
   "liste": [
+   {
+    "baslik": "semahat arsel",
+    "trafik": 1000
+   },
+   {
+    "baslik": "meteoroloji",
+    "trafik": 20000
+   },
+   {
+    "baslik": "sakarya",
+    "trafik": 1000
+   },
+   {
+    "baslik": "cyberleek",
+    "trafik": 100
+   },
    {
     "baslik": "hakem",
     "trafik": 5000
@@ -381,36 +397,20 @@
     "trafik": 100
    },
    {
-    "baslik": "atina",
-    "trafik": 200
-   },
-   {
-    "baslik": "netflix",
-    "trafik": 500
-   },
-   {
-    "baslik": "honda",
-    "trafik": 100
-   },
-   {
-    "baslik": "f1",
-    "trafik": 500
-   },
-   {
-    "baslik": "pasaport",
-    "trafik": 500
-   },
-   {
-    "baslik": "kredi",
+    "baslik": "havacılık",
     "trafik": 2000
    },
    {
-    "baslik": "kings - celtics",
-    "trafik": 100
+    "baslik": "atina",
+    "trafik": 500
    },
    {
-    "baslik": "sultanlar ligi",
-    "trafik": 100
+    "baslik": "netflix",
+    "trafik": 1000
+   },
+   {
+    "baslik": "honda",
+    "trafik": 200
    }
   ]
  },

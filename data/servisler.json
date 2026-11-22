@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T06:32:01.497Z",
+ "guncelleme": "2026-11-22T07:02:09.707Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 18,
@@ -182,8 +182,8 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 19,
-   "durum": "Az bulutlu",
+   "sicaklik": 21,
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -254,7 +254,7 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 18,
+   "sicaklik": 20,
    "durum": "Açık",
    "gunler": [
     {
@@ -326,8 +326,8 @@
    ]
   },
   "silifke": {
-   "sicaklik": 17,
-   "durum": "Az bulutlu",
+   "sicaklik": 21,
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -434,7 +434,7 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 18,
+   "sicaklik": 20,
    "durum": "Az bulutlu",
    "gunler": [
     {
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T06:32:04.757Z",
+  "guncelleme": "2026-11-22T07:02:13.346Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T06:32:05.802Z",
+  "guncelleme": "2026-11-22T07:02:14.469Z",
   "liste": [
    {
     "tur": "su",
@@ -819,27 +819,11 @@
       ]
      }
     ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Tarsus İlçesi ; Beylice Mahallemizde, Enerjisa'nın bölgedeki çalışması sırasında içme suyu şebeke hattının zarar görmesinden dolayı yarın(22.11.2026), saat 10.00'a kadar su kesintisi yaşanacaktır.",
-    "baslangic": "2026-11-21T15:05:00.000Z",
-    "bitis": "2026-11-22T07:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "tarsus",
-      "ad": "Tarsus",
-      "mahalleler": [
-       "Beylice"
-      ]
-     }
-    ]
    }
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T06:32:08.049Z",
+  "guncelleme": "2026-11-22T07:02:16.862Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -872,9 +856,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2978865,
-    "usd": 58942,
-    "degisim": 5.15
+    "satis": 2984202,
+    "usd": 59048,
+    "degisim": 2.23
    }
   },
   "altinlar": [
@@ -1007,10 +991,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 09:32:02"
+  "kaynakSaati": "2026-11-22 10:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T06:32:19.560Z",
+  "guncelleme": "2026-11-22T07:02:27.957Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1835,7 +1819,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-22T06:02:39.546Z",
+  "guncelleme": "2026-11-22T07:02:29.862Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8421,7 +8405,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-22T06:03:23.171Z",
+    "guncelleme": "2026-11-22T07:03:12.686Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8503,7 +8487,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-22T06:03:24.450Z",
+    "guncelleme": "2026-11-22T07:03:13.973Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8585,7 +8569,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-22T06:03:25.742Z",
+    "guncelleme": "2026-11-22T07:03:15.274Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8684,7 +8668,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T06:32:19.893Z",
+  "guncelleme": "2026-11-22T07:02:28.306Z",
   "liste": [
    {
     "yol": "/",
@@ -8701,10 +8685,6 @@
    {
     "yol": "/ilceler/",
     "sayi": 2
-   },
-   {
-    "yol": "/piyasalar/",
-    "sayi": 1
    },
    {
     "yol": "/haber/yenisehir-belediyesi-artik-cebinizde-1g8kwxn/",
@@ -8777,57 +8757,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T06:32:22.817Z",
+  "guncelleme": "2026-11-22T07:03:16.475Z",
   "deniz": {
    "sicaklik": 21.6,
-   "dalga": 0.66
+   "dalga": 0.64
   },
   "hava": {
-   "aqi": 29,
-   "pm25": 8,
-   "pm10": 11.5,
+   "aqi": 35,
+   "pm25": 8.8,
+   "pm10": 13.7,
    "uvMax": 2.25
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T06:32:24.722Z",
+  "guncelleme": "2026-11-22T07:03:18.587Z",
   "giden": [
-   {
-    "no": [
-     "PC3620"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Milas Bodrum",
-    "planlanan": "2026-11-22T06:45:00.000Z",
-    "tahmini": null,
-    "kapi": "107",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "VF4087"
-    ],
-    "havayolu": "AJet",
-    "yer": "Ankara",
-    "planlanan": "2026-11-22T06:50:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "XQ1610"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "Frankfurt",
-    "planlanan": "2026-11-22T06:50:00.000Z",
-    "tahmini": null,
-    "kapi": "104",
-    "durum": "SON ÇAĞRI",
-    "hat": "dis"
-   },
    {
     "no": [
      "PC2083"
@@ -8837,7 +8781,7 @@
     "planlanan": "2026-11-22T07:35:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8849,7 +8793,7 @@
     "planlanan": "2026-11-22T07:45:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "dis"
    },
    {
@@ -8873,7 +8817,7 @@
     "planlanan": "2026-11-22T08:45:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9403,33 +9347,45 @@
     "kapi": "108",
     "durum": "",
     "hat": "ic"
-   }
-  ],
-  "gelen": [
-   {
-    "no": [
-     "A49173"
-    ],
-    "havayolu": "Jsc Azimuth Airlines",
-    "yer": "Moskova (Vko)",
-    "planlanan": "2026-11-22T06:45:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "dis"
    },
    {
     "no": [
-     "PC2082"
+     "PC3640"
     ],
     "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-22T07:00:00.000Z",
+    "yer": "Van",
+    "planlanan": "2026-11-23T06:35:00.000Z",
     "tahmini": null,
-    "kapi": "",
+    "kapi": "109",
     "durum": "",
     "hat": "ic"
    },
+   {
+    "no": [
+     "PC3620"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Milas Bodrum",
+    "planlanan": "2026-11-23T06:45:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF4087"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ankara",
+    "planlanan": "2026-11-23T06:50:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
+   }
+  ],
+  "gelen": [
    {
     "no": [
      "PC1851"
@@ -10029,11 +9985,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2082"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-23T06:45:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T06:32:24.721Z",
+  "guncelleme": "2026-11-22T07:03:18.586Z",
   "liste": [
    {
     "id": 6386,
