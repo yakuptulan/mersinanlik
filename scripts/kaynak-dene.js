@@ -19,6 +19,12 @@ async function al(url) {
     return { durum: 'HATA ' + (e.cause?.code || e.message).toString().slice(0, 40), metin: '' };
   }
 }
+if (process.env.ARA?.startsWith('ISKUR')) {
+  const g = process.env.ARA.slice(6);
+  if (g) process.env.GONDER = g;
+  await import('./iskur-dene.js');
+  process.exit(0);
+}
 if (process.env.ARA === 'COMMONS') {
   // Adresler: arama terimleri (boşluk yerine _). Ticari kullanıma açık lisanslı fotoğrafları listeler.
   for (const terim of ADAYLAR) {
