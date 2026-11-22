@@ -87,6 +87,9 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
+
+      - name: Mersin iş ilanları (İŞKUR, 3 saatte bir)
+        run: node src/isIlanlari.js || true
       - name: Veriden otomatik haberler (akaryakıt, deprem, su, hava, eczane, okul, yollar…)
         run: node src/otomatik.js
 
