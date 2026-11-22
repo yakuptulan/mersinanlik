@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T12:35:27.733Z",
+ "guncelleme": "2026-11-22T12:59:45.729Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 22,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T12:35:31.360Z",
+  "guncelleme": "2026-11-22T12:59:49.545Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T12:35:32.292Z",
+  "guncelleme": "2026-11-22T12:59:50.953Z",
   "liste": [
    {
     "tur": "su",
@@ -892,7 +892,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T12:35:35.565Z",
+  "guncelleme": "2026-11-22T12:59:53.838Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -925,9 +925,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3064655,
-    "usd": 60640,
-    "degisim": 3.74
+    "satis": 3069762,
+    "usd": 60741,
+    "degisim": 3.31
    }
   },
   "altinlar": [
@@ -1060,10 +1060,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 15:35:01"
+  "kaynakSaati": "2026-11-22 15:59:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T12:35:37.563Z",
+  "guncelleme": "2026-11-22T12:59:56.374Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1888,7 +1888,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-22T12:35:39.191Z",
+  "guncelleme": "2026-11-22T12:59:59.035Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -2313,13 +2313,13 @@
      "sira": 7,
      "takim": "Ejderoğlu Kırşehir",
      "ham": "EJDEROĞLU KIRŞEHİR FUTBOL SPOR KULÜBÜ",
-     "o": 12,
+     "o": 13,
      "g": 7,
      "b": 3,
-     "m": 2,
-     "a": 32,
-     "y": 15,
-     "av": 17,
+     "m": 3,
+     "a": 34,
+     "y": 18,
+     "av": 16,
      "p": 24,
      "mersin": false
     },
@@ -2341,14 +2341,14 @@
      "sira": 9,
      "takim": "Yeni Mersin İdmanyurdu",
      "ham": "YENİ MERSİN İDMANYURDU FUTBOL A.Ş.",
-     "o": 11,
-     "g": 7,
+     "o": 12,
+     "g": 8,
      "b": 0,
      "m": 4,
-     "a": 16,
-     "y": 10,
-     "av": 6,
-     "p": 21,
+     "a": 19,
+     "y": 12,
+     "av": 7,
+     "p": 24,
      "mersin": true
     },
     {
@@ -2499,7 +2499,7 @@
      "tarih": "2026-11-22",
      "saat": "13:00",
      "ev": "Ejderoğlu Kırşehir",
-     "skor": null,
+     "skor": "2-3",
      "dep": "Yeni Mersin İdmanyurdu",
      "mersin": true
     },
@@ -7804,13 +7804,13 @@
       "sira": 7,
       "takim": "Ejderoğlu Kırşehir",
       "ham": "EJDEROĞLU KIRŞEHİR FUTBOL SPOR KULÜBÜ",
-      "o": 12,
+      "o": 13,
       "g": 7,
       "b": 3,
-      "m": 2,
-      "a": 32,
-      "y": 15,
-      "av": 17,
+      "m": 3,
+      "a": 34,
+      "y": 18,
+      "av": 16,
       "p": 24,
       "mersin": false
      },
@@ -7832,14 +7832,14 @@
       "sira": 9,
       "takim": "Yeni Mersin İdmanyurdu",
       "ham": "YENİ MERSİN İDMANYURDU FUTBOL A.Ş.",
-      "o": 11,
-      "g": 7,
+      "o": 12,
+      "g": 8,
       "b": 0,
       "m": 4,
-      "a": 16,
-      "y": 10,
-      "av": 6,
-      "p": 21,
+      "a": 19,
+      "y": 12,
+      "av": 7,
+      "p": 24,
       "mersin": true
      },
      {
@@ -7990,7 +7990,7 @@
       "tarih": "2026-11-22",
       "saat": "13:00",
       "ev": "Ejderoğlu Kırşehir",
-      "skor": null,
+      "skor": "2-3",
       "dep": "Yeni Mersin İdmanyurdu",
       "mersin": true
      },
@@ -8318,7 +8318,7 @@
       {
        "ev": "Ağrı 1970 Spor",
        "dep": "Yozgat Belediyesi Bozok Spor",
-       "skor": null
+       "skor": "0-1"
       },
       {
        "ev": "Niğde Belediyesi Spor",
@@ -8516,17 +8516,17 @@
       "M"
      ],
      "Yozgat Belediyesi Bozok Spor": [
-      "M",
       "G",
       "M",
       "B",
-      "M"
+      "M",
+      "G"
      ],
      "Ağrı 1970 Spor": [
       "M",
       "M",
-      "M",
       "G",
+      "M",
       "M"
      ],
      "1964 Silifke Spor": [
@@ -8564,7 +8564,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-22T12:36:21.548Z",
+    "guncelleme": "2026-11-22T13:00:46.780Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8646,7 +8646,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-22T12:36:22.758Z",
+    "guncelleme": "2026-11-22T13:00:48.057Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8728,7 +8728,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-22T12:36:23.974Z",
+    "guncelleme": "2026-11-22T13:00:49.346Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8827,11 +8827,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T12:35:37.841Z",
+  "guncelleme": "2026-11-22T12:59:56.821Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 11
+    "sayi": 10
    },
    {
     "yol": "/haber/msk-da-dagilma-tehlikesi-kadro-dagildi-gelecek-belirsizlesti-fmcfmt/",
@@ -8850,10 +8850,6 @@
     "sayi": 2
    },
    {
-    "yol": "/nobetci-eczane/",
-    "sayi": 1
-   },
-   {
     "yol": "/haber/mersin-1-amator-b-grubu-nda-zirve-kizisti-7sethw/",
     "sayi": 1
    },
@@ -8862,11 +8858,11 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-osb-nin-5-ve-6-bolge-projeleri-ankara-da-gorusuldu-i4fy92/",
+    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
     "sayi": 1
    },
    {
-    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
+    "yol": "/haber/mersin-osb-nin-5-ve-6-bolge-projeleri-ankara-da-gorusuldu-i4fy92/",
     "sayi": 1
    },
    {
@@ -8908,20 +8904,20 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T12:36:25.175Z",
+  "guncelleme": "2026-11-22T13:00:50.547Z",
   "deniz": {
    "sicaklik": 21.9,
    "dalga": 0.46
   },
   "hava": {
-   "aqi": 28,
-   "pm25": 8.5,
-   "pm10": 11.7,
+   "aqi": 35,
+   "pm25": 9.9,
+   "pm10": 12.8,
    "uvMax": 2.15
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T12:36:26.981Z",
+  "guncelleme": "2026-11-22T13:00:52.966Z",
   "giden": [
    {
     "no": [
@@ -8932,7 +8928,7 @@
     "planlanan": "2026-11-22T13:50:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -10160,11 +10156,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2460"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-23T12:45:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T12:36:26.981Z",
+  "guncelleme": "2026-11-22T13:00:52.965Z",
   "liste": [
    {
     "id": 6386,
