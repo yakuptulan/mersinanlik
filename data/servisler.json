@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T19:16:58.059Z",
+ "guncelleme": "2026-11-22T19:23:29.253Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T19:01:52.186Z",
+  "guncelleme": "2026-11-22T19:23:34.340Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -773,7 +773,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T19:17:11.304Z",
+  "guncelleme": "2026-11-22T19:23:35.565Z",
   "liste": [
    {
     "tur": "su",
@@ -810,7 +810,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T19:17:15.872Z",
+  "guncelleme": "2026-11-22T19:23:39.672Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -843,9 +843,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3065879,
-    "usd": 60664,
-    "degisim": 0.75
+    "satis": 3062439,
+    "usd": 60596,
+    "degisim": 0.68
    }
   },
   "altinlar": [
@@ -978,10 +978,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 22:17:01"
+  "kaynakSaati": "2026-11-22 22:23:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T19:17:18.294Z",
+  "guncelleme": "2026-11-22T19:23:42.092Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8746,7 +8746,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T19:17:18.939Z",
+  "guncelleme": "2026-11-22T19:23:42.570Z",
   "liste": [
    {
     "yol": "/",
@@ -8773,11 +8773,11 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
+    "yol": "/haber/mersin-osb-nin-5-ve-6-bolge-projeleri-ankara-da-gorusuldu-i4fy92/",
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-osb-nin-5-ve-6-bolge-projeleri-ankara-da-gorusuldu-i4fy92/",
+    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
     "sayi": 1
    },
    {
@@ -8793,11 +8793,11 @@
     "sayi": 1
    },
    {
-    "yol": "/kar-tatili/",
+    "yol": "/hava-durumu/anamur/",
     "sayi": 1
    },
    {
-    "yol": "/hava-durumu/anamur/",
+    "yol": "/kar-tatili/",
     "sayi": 1
    },
    {
@@ -8827,7 +8827,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T19:17:20.344Z",
+  "guncelleme": "2026-11-22T19:23:44.194Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.36
@@ -8840,20 +8840,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T19:17:21.979Z",
+  "guncelleme": "2026-11-22T19:23:46.449Z",
   "giden": [
-   {
-    "no": [
-     "PC4073"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Milas Bodrum",
-    "planlanan": "2026-11-22T19:20:00.000Z",
-    "tahmini": null,
-    "kapi": "108",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
    {
     "no": [
      "XQ9307"
@@ -8875,7 +8863,7 @@
     "planlanan": "2026-11-22T19:55:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KONTUAR KAPALI",
+    "durum": "BOARDING",
     "hat": "ic"
    },
    {
@@ -9971,11 +9959,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "VF3146"
+    ],
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-23T19:20:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T19:17:21.979Z",
+  "guncelleme": "2026-11-22T19:23:46.449Z",
   "liste": [
    {
     "id": 6386,
