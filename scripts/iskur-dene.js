@@ -23,6 +23,9 @@ if (process.env.GONDER) {
   const r = await al(URL_, { method: 'POST', body: govde, headers: { 'Content-Type': 'application/x-www-form-urlencoded', Referer: URL_ } });
   console.log('POST', r.durum, r.yer, r.metin.length);
   const t = r.metin.replace(/<(script|style|head)\b[\s\S]*?<\/\1>/gi, ' ');
-  const i = t.search(/ilan|sonuç|kayıt/i);
-  console.log(t.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(Math.max(0, i - 200), i + 3500));
+  const d = t.replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ');
+  const i = d.search(/VENEZUE/);
+  console.log(d.slice(i + 200, i + 5200));
+  const satir = [...r.metin.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/gi)].slice(0, 6).map((m) => m[1].replace(/\s+/g, ' ').slice(0, 700));
+  console.log('\nSATIRLAR\n' + satir.join('\n---\n'));
 }
