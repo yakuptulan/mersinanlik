@@ -25,6 +25,7 @@ const MENU = [
   ['/kategori/turkiye-dunya/', 'Dünya'],
   ['/bilgi/', 'Merak edilenler'],
   ['/piyasalar/', 'Piyasalar'],
+  ['/is-ilanlari/', 'İş ilanları'],
 ];
 
 export function saat(iso) {
@@ -170,7 +171,7 @@ ${icerik}
 </footer>
 <nav class="mobil-menu" aria-label="Alt gezinme">
 <a href="/"${aktif === '/' ? ' aria-current="page"' : ''}>${ikon.ev(26)}Ana sayfa</a>
-<a href="/ilceler/" data-ilcem>${ikon.konum(26)}İlçem</a>
+<a href="/is-ilanlari/"${aktif === '/is-ilanlari/' ? ' aria-current="page"' : ''}>${ikon.canta(26)}İş ilanı</a>
 <a href="/nobetci-eczane/"${aktif === '/nobetci-eczane/' ? ' aria-current="page"' : ''}>${ikon.eczane(26)}Eczane</a>
 <a href="/kesintiler/"${aktif === '/kesintiler/' ? ' aria-current="page"' : ''}>${ikon.damla(26)}Kesinti</a>
 <a href="/menu/">${ikon.menu(26)}Menü</a>

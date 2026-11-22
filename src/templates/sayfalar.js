@@ -1,6 +1,6 @@
 import { piyasaIkon } from './piyasaIkon.js';
 import { gundemimKarti } from './gundemim.js';
-import { isIlanlariKutusu, isIlanlariBandi } from './isIlanlari.js';
+import { isIlanlariKutusu, isIlanlariBandi, isIlanlariWidget, haberIsKutusu } from './isIlanlari.js';
 import { sporYan, sporAnaIcerik, sporMu, macGunuKarti, derbiKarti, oyuncuFotolari } from './spor.js';
 import { kategoriYan, ekonomiBugunKarti } from './kategoriYan.js';
 import { mahalleListesi, mahalleYolu, sade as mahalleSade } from './mahalle.js';
@@ -121,6 +121,7 @@ function suAnKartlari(servis, ilceSlug = SITE.defaultIlce, simdi = Date.now()) {
   const yakit = servis?.akaryakit?.ilceler?.akdeniz;
   return `<div class="widgetlar">
 ${havaWidget(hava, ilceSlug)}
+${isIlanlariWidget(servis?.isIlanlari)}
 <a class="widget widget-yesil" href="/nobetci-eczane/" data-eczane-kart>
 <div class="widget-bas"><span class="widget-rozet">${ikon.eczane(18)}</span><span class="widget-etiket">Eczane</span></div>
 <span class="widget-deger">${eczaneler.length || '–'}<small>${eczaneler.length ? ' açık' : ''}</small></span>
@@ -495,6 +496,7 @@ ${hikaye.konular?.length ? `<p class="haber-konular">Konu: ${hikaye.konular.map(
 ${ilgiliSayfalar(hikaye)}
 ${paylasCubugu(SITE.url + yol, hikaye.baslik)}
 </article>
+${haberIsKutusu(servis?.isIlanlari, ilce)}
 ${reklamAlani('yazi-sonu')}
 ${ilgili.length >= 3 ? `<div class="bolum-bas"><h2>Bunlar da ilginizi çekebilir</h2></div><div class="ilgili-kareler">${ilgili.slice(0, 3).map((x) => kareKart(x)).join('')}</div>` : ''}
 ${ilgili.length > 3 ? `<div class="bolum-bas"><h2>${ilce ? `${h(ilce.ad)}'${ayrilmaEki(ilce.ad)} diğer haberler` : 'Diğer haberler'}</h2></div>\n${haberListesi(ilgili.slice(3))}` : ''}

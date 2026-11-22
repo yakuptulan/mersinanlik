@@ -185,6 +185,11 @@ export function ayrilmaEki(ad = '') {
   return `${sert ? 't' : 'd'}${kalin ? 'an' : 'en'}`;
 }
 
+// Türkçe bulunma hâli eki: Tarsus'ta, Erdemli'de, Mut'ta
+export function bulunmaEkiAd(ad = '') {
+  return ayrilmaEki(ad).slice(0, 2);
+}
+
 // "ABAY ECZANESİ" → "Abay Eczanesi"
 export function basHarfler(s = '') {
   return kucuk(s).replace(/(^|[\s(\-/.])([a-zçğıöşü])/g, (_, a, b) => a + b.toLocaleUpperCase('tr-TR'));

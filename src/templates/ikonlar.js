@@ -17,6 +17,7 @@ export const ikon = {
   hilal: (b) => svg('<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>', b),
   yakit: (b) => svg('<path d="M4 21V5a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16"/><path d="M3 21h13"/><path d="M7 7h5v4H7z"/><path d="M15 9h2a2 2 0 0 1 2 2v6a1.5 1.5 0 0 0 3 0V8l-3-3"/>', b),
   altin: (b) => svg('<path d="M3 18l3-7h6l3 7z"/><path d="M9 11l2-5h6l3 7"/><path d="M15 18h6"/>', b),
+  canta: (b) => svg('<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/><path d="M3 13h18"/>', b),
   menu: (b) => svg('<path d="M4 7h16M4 12h16M4 17h16"/>', b),
 };
 

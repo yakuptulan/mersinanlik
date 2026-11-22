@@ -5,11 +5,12 @@
 
 import { SITE, ILCELER } from '../config.js';
 import { sayfa } from './layout.js';
-import { htmlKacis as h, slugify } from '../lib/text.js';
+import { htmlKacis as h, slugify, bulunmaEkiAd } from '../lib/text.js';
 import { ilanLinki, kursAramaLinki, KURS_TURLERI } from '../lib/iskur.js';
 import { kutuBasligi } from './servisParcalari.js';
 
 export const IS_YOL = '/is-ilanlari/';
+const CANTA = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/><path d="M3 13h18"/></svg>';
 const MESLEK_ESIK = 5;
 
 const gunUzun = (t = Date.now()) => new Date(t).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long', timeZone: SITE.timezone });
@@ -157,6 +158,35 @@ ${kaynakNotu(veri)}
 }
 
 // Yan kutu (ana sayfa ve diğer sayfalar): en yeni 5 ilan
+// "Mersin'de şu an" kartlarına iş ilanları kartı
+export function isIlanlariWidget(veri) {
+  const ilanlar = acikIlanlar(veri);
+  if (!ilanlar.length) return '';
+  const son = ilanlar.slice(0, 2);
+  return `<a class="widget widget-is" href="${IS_YOL}">
+<div class="widget-bas"><span class="widget-rozet">${CANTA}</span><span class="widget-etiket">İş ilanları</span></div>
+<span class="widget-deger">${ilanlar.length}<small> açık</small></span>
+<div class="widget-liste">${son.map((i) => `<span>${h(i.pozisyon)}</span>`).join('')}</div>
+<span class="widget-alt">İŞKUR · tümünü gör →</span>
+</a>`;
+}
+
+// Haber sayfalarının sonunda: okuyucunun ilçesindeki güncel iş ilanları
+export function haberIsKutusu(veri, ilce = null) {
+  const tum = acikIlanlar(veri);
+  if (!tum.length) return '';
+  const yerel = ilce ? tum.filter((i) => i.ilce === ilce.slug) : [];
+  const liste = (yerel.length >= 3 ? yerel : tum).slice(0, 3);
+  const yer = yerel.length >= 3 ? ilce.ad : 'Mersin';
+  const sayi = yerel.length >= 3 ? yerel.length : tum.length;
+  const yol = yerel.length >= 3 ? `${IS_YOL}${ilce.slug}/` : IS_YOL;
+  return `<aside class="haber-is">
+<div class="haber-is-bas"><span class="haber-is-ikon">${CANTA}</span><div><b>${h(yer)}'${bulunmaEkiAd(yer)} bugün ${sayi} açık iş ilanı</b><small>İŞKUR'daki güncel ilanlar, her gün yenilenir</small></div></div>
+<div class="haber-is-liste">${liste.map((i) => `<a href="${h(ilanLinki(i.no, i.tur))}" rel="noopener nofollow" target="_blank"><b>${h(i.pozisyon)}</b><small>${h(i.ilceAd || 'Mersin')}${i.acik > 1 ? ` · ${i.acik} kişi` : ''}${i.sonBasvuru ? ` · son başvuru ${tarihTr(i.sonBasvuru)}` : ''}</small></a>`).join('')}</div>
+<a class="haber-is-tum" href="${yol}">Tüm ${h(yer)} ilanlarını gör →</a>
+</aside>`;
+}
+
 // Ana sayfanın üstündeki dikkat çekici iş ilanları bandı
 export function isIlanlariBandi(veri) {
   const ilanlar = acikIlanlar(veri);
