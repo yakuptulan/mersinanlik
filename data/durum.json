@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-22T10:09:52.345Z"
   }
  },
  "gorsel": {
@@ -59,7 +63,8 @@
    "https://www.yenisehir.bel.tr/haber/guvercinler-evi-ele-gecirdi-bir-traktor-pislik-cikti",
    "https://yenisehir.bel.tr/haber/guvercinler-evi-ele-gecirdi-bir-traktor-pislik-cikti",
    "https://yenisehir.bel.tr/haber/yenisehir-belediyesi-artik-cebinizde",
-   "https://www.yenisehir.bel.tr/haber/yenisehir-belediyesi-artik-cebinizde"
+   "https://www.yenisehir.bel.tr/haber/yenisehir-belediyesi-artik-cebinizde",
+   "https://www.yenisehir.bel.tr/haber/yenisehirde-firinlar-mercek-altinda"
   ],
   "tarsus-belediyesi": [],
   "erdemli-belediyesi": [
@@ -372,7 +377,7 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T10:02:29.141Z",
+  "guncelleme": "2026-11-22T10:10:31.493Z",
   "liste": [
    {
     "baslik": "erzurumspor - göztepe",
@@ -381,10 +386,6 @@
    {
     "baslik": "charles leclerc",
     "trafik": 100
-   },
-   {
-    "baslik": "daniel siebert",
-    "trafik": 200
    },
    {
     "baslik": "patlama",
@@ -412,6 +413,10 @@
    },
    {
     "baslik": "sinek",
+    "trafik": 200
+   },
+   {
+    "baslik": "levent tahmiscioğlu kimdir",
     "trafik": 200
    }
   ]
