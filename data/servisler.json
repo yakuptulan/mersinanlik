@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T08:56:13.142Z",
+ "guncelleme": "2026-11-22T09:01:48.939Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 21,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T08:56:17.225Z",
+  "guncelleme": "2026-11-22T09:01:52.140Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -784,25 +784,8 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T08:56:18.586Z",
+  "guncelleme": "2026-11-22T09:01:53.234Z",
   "liste": [
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Erdemli İlçesine bağlı Fatih ve Kargıcak Mahallesi genelinde içme suyu arızası nedeniyle saat 12:00 kadar su kesintisi uygulanacaktır.",
-    "baslangic": "2026-11-22T06:00:00.000Z",
-    "bitis": "2026-11-22T09:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "erdemli",
-      "ad": "Erdemli",
-      "mahalleler": [
-       "Fatih",
-       "Kargıcak"
-      ]
-     }
-    ]
-   },
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
@@ -842,7 +825,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T08:56:21.215Z",
+  "guncelleme": "2026-11-22T09:01:57.389Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -875,9 +858,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3014563,
-    "usd": 59648,
-    "degisim": 3.01
+    "satis": 3018586,
+    "usd": 59728,
+    "degisim": 3.51
    }
   },
   "altinlar": [
@@ -1010,10 +993,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 11:56:01"
+  "kaynakSaati": "2026-11-22 12:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T08:56:24.461Z",
+  "guncelleme": "2026-11-22T09:02:00.042Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1838,7 +1821,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-22T08:02:19.589Z",
+  "guncelleme": "2026-11-22T09:02:02.017Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8424,7 +8407,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-22T08:03:00.610Z",
+    "guncelleme": "2026-11-22T09:02:44.717Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8506,7 +8489,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-22T08:03:01.841Z",
+    "guncelleme": "2026-11-22T09:02:45.961Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8588,7 +8571,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-22T08:03:03.080Z",
+    "guncelleme": "2026-11-22T09:02:47.213Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8687,7 +8670,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T08:56:24.800Z",
+  "guncelleme": "2026-11-22T09:02:00.309Z",
   "liste": [
    {
     "yol": "/",
@@ -8722,11 +8705,11 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-osb-nin-5-ve-6-bolge-projeleri-ankara-da-gorusuldu-i4fy92/",
+    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
     "sayi": 1
    },
    {
-    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
+    "yol": "/haber/mersin-osb-nin-5-ve-6-bolge-projeleri-ankara-da-gorusuldu-i4fy92/",
     "sayi": 1
    },
    {
@@ -8768,33 +8751,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T08:56:27.163Z",
+  "guncelleme": "2026-11-22T09:02:48.414Z",
   "deniz": {
-   "sicaklik": 21.7,
+   "sicaklik": 21.8,
    "dalga": 0.58
   },
   "hava": {
-   "aqi": 34,
-   "pm25": 8.7,
-   "pm10": 12.2,
+   "aqi": 28,
+   "pm25": 8.2,
+   "pm10": 12.8,
    "uvMax": 2.25
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T08:56:29.540Z",
+  "guncelleme": "2026-11-22T09:02:59.956Z",
   "giden": [
-   {
-    "no": [
-     "VF1051"
-    ],
-    "havayolu": "AJet",
-    "yer": "Ercan",
-    "planlanan": "2026-11-22T09:00:00.000Z",
-    "tahmini": null,
-    "kapi": "104",
-    "durum": "KAPI KAPANDI",
-    "hat": "dis"
-   },
    {
     "no": [
      "PC2085"
@@ -9382,6 +9353,18 @@
     "kapi": "106",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "VF1051"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ercan",
+    "planlanan": "2026-11-23T09:00:00.000Z",
+    "tahmini": null,
+    "kapi": "103",
+    "durum": "",
+    "hat": "dis"
    }
   ],
   "gelen": [
