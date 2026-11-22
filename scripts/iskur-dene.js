@@ -11,6 +11,7 @@ async function al(url, opt = {}) {
   if (sc.length) cerez = [...new Map([...cerez.split('; ').filter(Boolean), ...sc.map((c) => c.split(';')[0])].map((c) => [c.split('=')[0], c])).values()].join('; ');
   return { durum: r.status, yer: r.headers.get('location'), metin: await r.text() };
 }
+if (_g._once) { await al(_g._once); delete _g._once; }
 const sayfa = await al(URL_);
 const html = sayfa.metin;
 const gizli = Object.fromEntries([...html.matchAll(/<input[^>]+type="hidden"[^>]*>/gi)].map((m) => [m[0].match(/name="([^"]+)"/)?.[1], (m[0].match(/value="([^"]*)"/)?.[1] || '').replace(/&amp;/g, '&')]).filter(([k]) => k));
