@@ -112,9 +112,20 @@ function siraGeldi(platform, d, simdi = Date.now()) {
   return null;
 }
 
+// Aynı olayı anlatan iki ayrı haber (farklı siteler, farklı başlık) iki kez paylaşılmasın
+const kelimeler = (h) => new Set(`${h.baslik} ${h.ozet || ''}`.toLocaleLowerCase('tr').replace(/[^a-zçğıöşü0-9 ]/g, ' ').split(/\s+/).filter((w) => w.length > 3));
+export function benzerMi(a, b) {
+  const x = kelimeler(a), y = kelimeler(b);
+  let ortak = 0;
+  for (const w of x) if (y.has(w)) ortak++;
+  return ortak / Math.max(1, Math.min(x.size, y.size)) >= 0.5;
+}
+
 function aday(platform, d, haric = new Set()) {
   const paylasilan = new Set((d[platform] || []).map((x) => x.id));
-  const liste = haberler().filter((h) => uygun(h) && !paylasilan.has(h.id) && !haric.has(h.id));
+  const tum = haberler();
+  const sonPaylasilan = (d[platform] || []).filter((x) => Date.now() - Date.parse(x.zaman) < 24 * 36e5).map((x) => tum.find((h) => h.id === x.id)).filter(Boolean);
+  const liste = tum.filter((h) => uygun(h) && !paylasilan.has(h.id) && !haric.has(h.id) && !sonPaylasilan.some((p) => benzerMi(h, p)));
   if (platform === 'instagram') {
     // Instagram'da görsel şart
     return liste.filter((h) => { const k = kapakAdresi(h); return k?.src && !k.cizim; }).sort((a, b) => puan(b) - puan(a))[0] || null;
