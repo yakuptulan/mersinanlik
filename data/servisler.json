@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T04:03:51.651Z",
+ "guncelleme": "2026-11-22T04:31:41.269Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 15,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T04:03:56.048Z",
+  "guncelleme": "2026-11-22T04:31:45.646Z",
   "liste": [
    {
     "ad": "Asuman Eczanesi",
@@ -707,7 +707,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T04:03:57.350Z",
+  "guncelleme": "2026-11-22T04:31:46.757Z",
   "liste": [
    {
     "tur": "su",
@@ -728,7 +728,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T04:03:59.851Z",
+  "guncelleme": "2026-11-22T04:31:48.769Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -761,9 +761,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3007057,
-    "usd": 59500,
-    "degisim": 5.28
+    "satis": 2989355,
+    "usd": 59150,
+    "degisim": 6.22
    }
   },
   "altinlar": [
@@ -896,10 +896,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 07:03:01"
+  "kaynakSaati": "2026-11-22 07:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T04:04:02.416Z",
+  "guncelleme": "2026-11-22T04:31:51.050Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8573,7 +8573,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T04:04:02.666Z",
+  "guncelleme": "2026-11-22T04:31:51.370Z",
   "liste": [
    {
     "yol": "/",
@@ -8609,6 +8609,10 @@
    },
    {
     "yol": "/hava-durumu/bozyazi/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/mersin-osb-nin-5-ve-6-bolge-projeleri-ankara-da-gorusuldu-i4fy92/",
     "sayi": 1
    },
    {
@@ -8662,10 +8666,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T04:04:04.205Z",
+  "guncelleme": "2026-11-22T04:31:53.072Z",
   "deniz": {
    "sicaklik": 21.5,
-   "dalga": 0.74
+   "dalga": 0.72
   },
   "hava": {
    "aqi": 25,
@@ -8675,20 +8679,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T04:04:06.363Z",
+  "guncelleme": "2026-11-22T04:31:54.945Z",
   "giden": [
-   {
-    "no": [
-     "PC1850"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Ercan",
-    "planlanan": "2026-11-22T04:15:00.000Z",
-    "tahmini": null,
-    "kapi": "103",
-    "durum": "KAPI KAPANDI",
-    "hat": "dis"
-   },
    {
     "no": [
      "PC2081"
@@ -8698,7 +8690,7 @@
     "planlanan": "2026-11-22T05:10:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8722,7 +8714,7 @@
     "planlanan": "2026-11-22T06:05:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8734,7 +8726,7 @@
     "planlanan": "2026-11-22T06:15:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8746,7 +8738,7 @@
     "planlanan": "2026-11-22T06:25:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8782,7 +8774,7 @@
     "planlanan": "2026-11-22T06:50:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -9279,30 +9271,6 @@
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "PC2080"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-22T04:20:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "VF3142"
-    ],
-    "havayolu": "AJet",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-22T04:30:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "XQ9006"
@@ -9890,11 +9858,35 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2080"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-23T04:20:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF3142"
+    ],
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-23T04:30:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "İPTAL",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T04:04:06.362Z",
+  "guncelleme": "2026-11-22T04:31:54.945Z",
   "liste": [
    {
     "id": 6386,
