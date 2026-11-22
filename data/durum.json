@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-22T22:01:21.705Z"
   }
  },
  "gorsel": {
@@ -387,15 +383,19 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T22:01:56.711Z",
+  "guncelleme": "2026-11-22T22:31:45.016Z",
   "liste": [
+   {
+    "baslik": "ömür usta 9 bölüm izle",
+    "trafik": 500
+   },
    {
     "baslik": "içişleri bakanı",
     "trafik": 200
    },
    {
     "baslik": "içişleri bakanlığı",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "masterchef şükran kaç yaşında",
@@ -403,7 +403,7 @@
    },
    {
     "baslik": "23 kasım hangi burç",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "hawks - pistons",
@@ -414,20 +414,16 @@
     "trafik": 200
    },
    {
-    "baslik": "tv8 canlı",
-    "trafik": 5000
-   },
-   {
     "baslik": "daha 17 son bölüm izle",
     "trafik": 10000
    },
    {
-    "baslik": "atletico madrid",
-    "trafik": 1000
+    "baslik": "tv8 canlı",
+    "trafik": 5000
    },
    {
-    "baslik": "eskişehir elektrik kesintisi",
-    "trafik": 200
+    "baslik": "atletico madrid",
+    "trafik": 2000
    }
   ]
  },
