@@ -65,8 +65,8 @@ const bas = gun(9), bit = gun(2), oncekiBas = gun(16), oncekiBit = gun(10);
 const satir = (r) => ({ ad: r.keys[0], tiklama: r.clicks, gosterim: r.impressions, ctr: Math.round(r.ctr * 1000) / 10, sira: Math.round(r.position * 10) / 10 });
 const toplam = async (b, e) => (await sorgu(mulk, [], b, e, 1))[0] || { clicks: 0, impressions: 0 };
 const [sayfalar, sorgular, gunluk, buHafta, gecenHafta] = await Promise.all([
-  sorgu(mulk, ['page'], bas, bit, 25),
-  sorgu(mulk, ['query'], bas, bit, 25),
+  sorgu(mulk, ['page'], bas, bit, 100),
+  sorgu(mulk, ['query'], bas, bit, 100),
   sorgu(mulk, ['date'], gun(30), bit, 30),
   toplam(bas, bit),
   toplam(oncekiBas, oncekiBit),
@@ -76,8 +76,8 @@ const veri = {
   mulk,
   aralik: { bas, bit },
   toplam: { tiklama: buHafta.clicks, gosterim: buHafta.impressions, oncekiTiklama: gecenHafta.clicks, oncekiGosterim: gecenHafta.impressions },
-  sayfalar: sayfalar.map(satir).map((x) => ({ ...x, ad: x.ad.replace(/^https?:\/\/[^/]+/, '') })),
-  sorgular: sorgular.map(satir),
+  sayfalar: sayfalar.map(satir).sort((a, b) => b.tiklama - a.tiklama || b.gosterim - a.gosterim).slice(0, 40).map((x) => ({ ...x, ad: x.ad.replace(/^https?:\/\/[^/]+/, '') })),
+  sorgular: sorgular.map(satir).sort((a, b) => b.tiklama - a.tiklama || b.gosterim - a.gosterim).slice(0, 40),
   gunluk: gunluk.map((r) => ({ tarih: r.keys[0], tiklama: r.clicks, gosterim: r.impressions })),
 };
 fs.writeFileSync(DOSYA, JSON.stringify(veri, null, 1));
