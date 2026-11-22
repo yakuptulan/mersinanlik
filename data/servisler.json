@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T21:06:47.166Z",
+ "guncelleme": "2026-11-22T21:11:21.722Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 15,
@@ -110,15 +110,9 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 14,
+   "sicaklik": 13,
    "durum": "Parçalı bulutlu",
    "gunler": [
-    {
-     "tarih": "2026-11-22",
-     "min": 14,
-     "max": 14,
-     "durum": "Açık"
-    },
     {
      "tarih": "2026-11-23",
      "min": 12,
@@ -142,6 +136,12 @@
      "min": 9,
      "max": 18,
      "durum": "Açık"
+    },
+    {
+     "tarih": "2026-11-27",
+     "min": 12,
+     "max": 19,
+     "durum": "Bulutlu"
     }
    ]
   },
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T21:06:51.469Z",
+  "guncelleme": "2026-11-22T21:11:25.190Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -696,7 +696,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T21:06:52.731Z",
+  "guncelleme": "2026-11-22T21:11:26.300Z",
   "liste": [
    {
     "tur": "su",
@@ -733,7 +733,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T21:06:54.909Z",
+  "guncelleme": "2026-11-22T21:11:28.646Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -766,9 +766,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3082410,
-    "usd": 60926,
-    "degisim": 1
+    "satis": 3078772,
+    "usd": 60867,
+    "degisim": 0.94
    }
   },
   "altinlar": [
@@ -901,10 +901,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-23 00:06:01"
+  "kaynakSaati": "2026-11-23 00:11:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T21:06:57.573Z",
+  "guncelleme": "2026-11-22T21:11:31.542Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8569,7 +8569,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T21:06:57.892Z",
+  "guncelleme": "2026-11-22T21:11:31.750Z",
   "liste": [
    {
     "yol": "/",
@@ -8666,7 +8666,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T21:06:59.485Z",
+  "guncelleme": "2026-11-22T21:11:33.072Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.38
@@ -8679,7 +8679,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T21:07:01.515Z",
+  "guncelleme": "2026-11-22T21:11:35.161Z",
   "giden": [
    {
     "no": [
@@ -9790,7 +9790,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T21:07:01.515Z",
+  "guncelleme": "2026-11-22T21:11:35.160Z",
   "liste": [
    {
     "id": 6386,

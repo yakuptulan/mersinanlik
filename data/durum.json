@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "mersin-buyuksehir": {
-   "hata": "The operation was aborted due to timeout",
-   "zaman": "2026-11-22T21:06:11.460Z"
   }
  },
  "gorsel": {
@@ -387,8 +383,16 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T21:06:46.571Z",
+  "guncelleme": "2026-11-22T21:11:21.256Z",
   "liste": [
+   {
+    "baslik": "tv8 canlı",
+    "trafik": 10000
+   },
+   {
+    "baslik": "daha 17 son bölüm izle",
+    "trafik": 5000
+   },
    {
     "baslik": "francesco pio esposito",
     "trafik": 200
@@ -410,10 +414,6 @@
     "trafik": 500
    },
    {
-    "baslik": "daha 17 26 bölüm",
-    "trafik": 5000
-   },
-   {
     "baslik": "tv8 canlı yayın",
     "trafik": 500
    },
@@ -424,10 +424,6 @@
    {
     "baslik": "أتالانتا ضد الإنتر",
     "trafik": 100
-   },
-   {
-    "baslik": "atalanta inter",
-    "trafik": 200
    }
   ]
  },
