@@ -1,9 +1,9 @@
 {
- "guncelleme": "2026-11-22T05:31:49.579Z",
+ "guncelleme": "2026-11-22T06:01:59.322Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 16,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 18,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -182,8 +182,8 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 18,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 19,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -254,8 +254,8 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 16,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 18,
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -326,8 +326,8 @@
    ]
   },
   "silifke": {
-   "sicaklik": 15,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 17,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -434,8 +434,8 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 16,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 18,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T05:31:54.893Z",
+  "guncelleme": "2026-11-22T06:02:03.503Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -784,8 +784,25 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T05:31:56.268Z",
+  "guncelleme": "2026-11-22T06:02:04.715Z",
   "liste": [
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Erdemli İlçesine bağlı Fatih ve Kargıcak Mahallesi genelinde içme suyu arızası nedeniyle saat 12:00 kadar su kesintisi uygulanacaktır.",
+    "baslangic": "2026-11-22T06:00:00.000Z",
+    "bitis": "2026-11-22T09:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "erdemli",
+      "ad": "Erdemli",
+      "mahalleler": [
+       "Fatih",
+       "Kargıcak"
+      ]
+     }
+    ]
+   },
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
@@ -805,7 +822,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T05:31:58.815Z",
+  "guncelleme": "2026-11-22T06:02:07.737Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -838,9 +855,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2976329,
-    "usd": 58892,
-    "degisim": 5.14
+    "satis": 2976828,
+    "usd": 58902,
+    "degisim": 5.71
    }
   },
   "altinlar": [
@@ -973,7 +990,7 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 08:31:01"
+  "kaynakSaati": "2026-11-22 09:02:01"
  },
  "akaryakit": {
   "guncelleme": "2026-11-22T05:32:02.147Z",
@@ -1801,7 +1818,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-22T05:02:13.426Z",
+  "guncelleme": "2026-11-22T06:02:39.546Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8387,7 +8404,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-22T05:02:56.548Z",
+    "guncelleme": "2026-11-22T06:03:23.171Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8469,7 +8486,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-22T05:02:57.823Z",
+    "guncelleme": "2026-11-22T06:03:24.450Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8479,16 +8496,16 @@
      {
       "ad": "DANİEL MORENO MOSQUERA",
       "kulup": "Metro Holding Kayserispor",
+      "gol": 13
+     },
+     {
+      "ad": "TAULAN SULEJMANOV",
+      "kulup": "Metro Holding Kayserispor",
       "gol": 11
      },
      {
       "ad": "REI MANAJ",
       "kulup": "Ekenler Beton Sivasspor",
-      "gol": 10
-     },
-     {
-      "ad": "TAULAN SULEJMANOV",
-      "kulup": "Metro Holding Kayserispor",
       "gol": 10
      },
      {
@@ -8551,7 +8568,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-22T05:02:59.109Z",
+    "guncelleme": "2026-11-22T06:03:25.742Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8743,33 +8760,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T05:32:04.389Z",
+  "guncelleme": "2026-11-22T06:03:26.942Z",
   "deniz": {
    "sicaklik": 21.6,
-   "dalga": 0.7
+   "dalga": 0.68
   },
   "hava": {
-   "aqi": 24,
-   "pm25": 7.1,
-   "pm10": 11.3,
+   "aqi": 29,
+   "pm25": 8,
+   "pm10": 11.5,
    "uvMax": 2.25
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T05:32:06.820Z",
+  "guncelleme": "2026-11-22T06:03:29.527Z",
   "giden": [
-   {
-    "no": [
-     "XQ9007"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "İzmir",
-    "planlanan": "2026-11-22T05:50:00.000Z",
-    "tahmini": null,
-    "kapi": "107",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC3011"
@@ -8779,7 +8784,7 @@
     "planlanan": "2026-11-22T06:05:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "BOARDING",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -8791,7 +8796,7 @@
     "planlanan": "2026-11-22T06:15:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -8803,7 +8808,7 @@
     "planlanan": "2026-11-22T06:25:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8815,7 +8820,7 @@
     "planlanan": "2026-11-22T06:45:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8827,7 +8832,7 @@
     "planlanan": "2026-11-22T06:50:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8839,7 +8844,7 @@
     "planlanan": "2026-11-22T06:50:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "dis"
    },
    {
@@ -8851,7 +8856,7 @@
     "planlanan": "2026-11-22T07:35:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8899,7 +8904,7 @@
     "planlanan": "2026-11-22T09:00:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -9381,33 +9386,21 @@
     "kapi": "103",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ9007"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "İzmir",
+    "planlanan": "2026-11-23T05:50:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "TK2452"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-22T05:40:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "XQ7630"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "Antalya",
-    "planlanan": "2026-11-22T05:50:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC3707"
@@ -9429,7 +9422,7 @@
     "planlanan": "2026-11-22T06:10:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "ic"
    },
    {
@@ -9995,11 +9988,47 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3010"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-23T05:35:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2452"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-23T05:40:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3600"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Antalya",
+    "planlanan": "2026-11-23T06:00:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T05:32:06.819Z",
+  "guncelleme": "2026-11-22T06:03:29.527Z",
   "liste": [
    {
     "id": 6386,
