@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T02:31:44.776Z",
+ "guncelleme": "2026-11-22T03:01:50.369Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -39,7 +39,7 @@
   },
   "anamur": {
    "sicaklik": 16,
-   "durum": "Açık",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -75,7 +75,7 @@
   },
   "aydincik": {
    "sicaklik": 14,
-   "durum": "Az bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -110,8 +110,8 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 15,
-   "durum": "Açık",
+   "sicaklik": 14,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -146,7 +146,7 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 7,
+   "sicaklik": 9,
    "durum": "Sisli",
    "gunler": [
     {
@@ -183,7 +183,7 @@
   },
   "erdemli": {
    "sicaklik": 17,
-   "durum": "Parçalı bulutlu",
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -218,12 +218,12 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 9,
-   "durum": "Az bulutlu",
+   "sicaklik": 10,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
-     "min": 9,
+     "min": 10,
      "max": 17,
      "durum": "Parçalı bulutlu"
     },
@@ -255,7 +255,7 @@
   },
   "mezitli": {
    "sicaklik": 15,
-   "durum": "Parçalı bulutlu",
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -363,7 +363,7 @@
   },
   "tarsus": {
    "sicaklik": 16,
-   "durum": "Bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -398,8 +398,8 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 16,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 15,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -434,8 +434,8 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 16,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 15,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T02:31:48.465Z",
+  "guncelleme": "2026-11-22T03:01:53.530Z",
   "liste": [
    {
     "ad": "Asuman Eczanesi",
@@ -707,7 +707,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T02:31:49.475Z",
+  "guncelleme": "2026-11-22T03:01:54.474Z",
   "liste": [
    {
     "tur": "su",
@@ -728,7 +728,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T02:31:53.092Z",
+  "guncelleme": "2026-11-22T03:01:58.459Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -761,9 +761,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3019164,
-    "usd": 59740,
-    "degisim": 1.61
+    "satis": 3001055,
+    "usd": 59381,
+    "degisim": 1.57
    }
   },
   "altinlar": [
@@ -896,10 +896,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 05:31:02"
+  "kaynakSaati": "2026-11-22 06:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T02:31:55.644Z",
+  "guncelleme": "2026-11-22T03:02:00.436Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1724,7 +1724,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-22T02:02:00.188Z",
+  "guncelleme": "2026-11-22T03:02:02.138Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8310,7 +8310,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-22T02:02:43.291Z",
+    "guncelleme": "2026-11-22T03:02:44.881Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8392,7 +8392,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-22T02:02:44.576Z",
+    "guncelleme": "2026-11-22T03:02:46.092Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8474,7 +8474,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-22T02:02:45.871Z",
+    "guncelleme": "2026-11-22T03:02:47.309Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8573,7 +8573,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T02:31:55.990Z",
+  "guncelleme": "2026-11-22T03:02:00.768Z",
   "liste": [
    {
     "yol": "/",
@@ -8662,33 +8662,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T02:31:57.442Z",
+  "guncelleme": "2026-11-22T03:02:48.509Z",
   "deniz": {
-   "sicaklik": 21.6,
-   "dalga": 0.78
+   "sicaklik": 21.5,
+   "dalga": 0.76
   },
   "hava": {
-   "aqi": 27,
-   "pm25": 8.5,
-   "pm10": 12.6,
+   "aqi": 26,
+   "pm25": 8,
+   "pm10": 12.2,
    "uvMax": 2.25
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T02:31:59.141Z",
+  "guncelleme": "2026-11-22T03:02:50.035Z",
   "giden": [
-   {
-    "no": [
-     "PC3706"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Trabzon",
-    "planlanan": "2026-11-22T02:50:00.000Z",
-    "tahmini": null,
-    "kapi": "108",
-    "durum": "SON ÇAĞRI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC4565"
@@ -8698,7 +8686,7 @@
     "planlanan": "2026-11-22T03:05:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -8710,7 +8698,7 @@
     "planlanan": "2026-11-22T03:40:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "dis"
    },
    {
@@ -8722,7 +8710,7 @@
     "planlanan": "2026-11-22T03:45:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -9286,6 +9274,18 @@
     "planlanan": "2026-11-23T01:45:00.000Z",
     "tahmini": null,
     "kapi": "108",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3706"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Trabzon",
+    "planlanan": "2026-11-23T02:50:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
     "durum": "",
     "hat": "ic"
    }
@@ -9918,7 +9918,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T02:31:59.140Z",
+  "guncelleme": "2026-11-22T03:02:50.035Z",
   "liste": [
    {
     "id": 6386,

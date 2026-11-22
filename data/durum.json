@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-22T03:01:22.299Z"
   }
  },
  "gorsel": {
@@ -368,7 +372,7 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T02:31:44.419Z",
+  "guncelleme": "2026-11-22T03:01:50.075Z",
   "liste": [
    {
     "baslik": "son dakika",
@@ -387,12 +391,8 @@
     "trafik": 500
    },
    {
-    "baslik": "deprem",
-    "trafik": 5000
-   },
-   {
-    "baslik": "kandilli rasathanesi",
-    "trafik": 5000
+    "baslik": "son depremler",
+    "trafik": 10000
    },
    {
     "baslik": "earthquake near me",
@@ -409,6 +409,10 @@
    {
     "baslik": "2027 gram altın tahmini",
     "trafik": 500
+   },
+   {
+    "baslik": "inter miami - columbus",
+    "trafik": 2000
    }
   ]
  },
