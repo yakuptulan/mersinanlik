@@ -21,7 +21,7 @@ for (const [i, h] of secim.entries()) {
     if (!kurumFoto) await premiumUret(h, '4:5', { pro: true });
   } catch (e) { console.log('Görsel olmadı:', e.message); }
   if (h.gorsel && fs.existsSync(path.join('public/uretilen', h.gorsel))) fs.copyFileSync(path.join('public/uretilen', h.gorsel), `ornekler/${i}-fb.webp`);
-  await kartCiz(h, `ornekler/${i}-ig.jpg`, i % 2 ? 'b' : 'a');
+  await kartCiz(h, `ornekler/${i}-ig.jpg`, 'e');
   liste.push({ i, baslik: h.baslik, kurumFoto, fb: facebookMetni(h), ig: instagramMetni(h) });
   console.log('Tamam:', h.baslik);
 }
