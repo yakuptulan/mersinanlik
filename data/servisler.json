@@ -1,9 +1,9 @@
 {
- "guncelleme": "2026-11-22T03:01:50.369Z",
+ "guncelleme": "2026-11-22T03:31:37.159Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 16,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 15,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T03:01:53.530Z",
+  "guncelleme": "2026-11-22T03:31:40.903Z",
   "liste": [
    {
     "ad": "Asuman Eczanesi",
@@ -707,7 +707,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T03:01:54.474Z",
+  "guncelleme": "2026-11-22T03:31:41.890Z",
   "liste": [
    {
     "tur": "su",
@@ -728,7 +728,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T03:01:58.459Z",
+  "guncelleme": "2026-11-22T03:31:44.224Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -761,9 +761,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3001055,
-    "usd": 59381,
-    "degisim": 1.57
+    "satis": 2996089,
+    "usd": 59283,
+    "degisim": 2.86
    }
   },
   "altinlar": [
@@ -896,10 +896,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 06:01:01"
+  "kaynakSaati": "2026-11-22 06:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T03:02:00.436Z",
+  "guncelleme": "2026-11-22T03:31:46.517Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1620,7 +1620,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-22T00:31:49.502Z",
+  "guncelleme": "2026-11-22T03:31:49.563Z",
   "liste": [
    {
     "id": "gzi1bq",
@@ -8573,7 +8573,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T03:02:00.768Z",
+  "guncelleme": "2026-11-22T03:31:46.854Z",
   "liste": [
    {
     "yol": "/",
@@ -8662,10 +8662,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T03:02:48.509Z",
+  "guncelleme": "2026-11-22T03:31:49.564Z",
   "deniz": {
    "sicaklik": 21.5,
-   "dalga": 0.76
+   "dalga": 0.74
   },
   "hava": {
    "aqi": 26,
@@ -8675,20 +8675,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T03:02:50.035Z",
+  "guncelleme": "2026-11-22T03:31:51.243Z",
   "giden": [
-   {
-    "no": [
-     "PC4565"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-22T03:05:00.000Z",
-    "tahmini": null,
-    "kapi": "105",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
    {
     "no": [
      "XQ1702"
@@ -8698,7 +8686,7 @@
     "planlanan": "2026-11-22T03:40:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPI KAPANDI",
     "hat": "dis"
    },
    {
@@ -8710,7 +8698,7 @@
     "planlanan": "2026-11-22T03:45:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -8722,7 +8710,7 @@
     "planlanan": "2026-11-22T04:15:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "dis"
    },
    {
@@ -8734,7 +8722,7 @@
     "planlanan": "2026-11-22T05:10:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9300,7 +9288,7 @@
     "planlanan": "2026-11-22T03:40:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "dis"
    },
    {
@@ -9918,7 +9906,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T03:02:50.035Z",
+  "guncelleme": "2026-11-22T03:31:51.243Z",
   "liste": [
    {
     "id": 6386,
