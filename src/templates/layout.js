@@ -78,6 +78,7 @@ const KURULUS = {
   correctionsPolicy: SITE.url + '/duzeltme-politikasi/',
   ethicsPolicy: SITE.url + '/yayin-ilkeleri/',
   masthead: SITE.url + '/kunye/',
+  sameAs: Object.values(SITE.sosyal || {}),
   verificationFactCheckingPolicy: SITE.url + '/yapay-zeka-ilkeleri/',
   actionableFeedbackPolicy: SITE.url + '/duzeltme-politikasi/',
   diversityPolicy: SITE.url + '/hakkimizda/',
@@ -156,6 +157,7 @@ ${icerik}
 <div style="max-width:460px">
 <a class="logo" href="/"><img src="/logo.webp" width="84" height="56" alt="${SITE.name}" loading="lazy"></a>
 <p>${h(SITE.slogan)}</p>
+<div class="alt-sosyal"><a href="${SITE.sosyal.instagram}" rel="noopener me" target="_blank" aria-label="Mersin Anlık Instagram"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 4.6a5.2 5.2 0 1 0 0 10.4 5.2 5.2 0 0 0 0-10.4zm0 8.6a3.4 3.4 0 1 1 0-6.8 3.4 3.4 0 0 1 0 6.8zm5.4-9.9a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg><span>Instagram</span></a><a href="${SITE.sosyal.facebook}" rel="noopener me" target="_blank" aria-label="Mersin Anlık Facebook"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg><span>Facebook</span></a></div>
 <p><small>Haberler kaynak gösterilerek derlenir; haberin tamamı her zaman kaynağında okunabilir. Kaynağı yazılmayan görseller temsilidir ve bir kısmı yapay zekâ ile üretilmiştir (<a href="/gorsel-kaynaklari/" style="color:inherit">ayrıntılar</a>).</small></p>
 </div>
 <nav class="alt-menu" aria-label="Alt menü">
