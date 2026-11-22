@@ -12,12 +12,15 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "mersin-buyuksehir": {
+   "hata": "The operation was aborted due to timeout",
+   "zaman": "2026-11-22T21:06:11.460Z"
   }
  },
  "gorsel": {
-  "gun": "2026-11-22",
-  "adet": 37,
-  "premium": 1
+  "gun": "2026-11-23",
+  "adet": 0
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -384,8 +387,12 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T20:59:58.133Z",
+  "guncelleme": "2026-11-22T21:06:46.571Z",
   "liste": [
+   {
+    "baslik": "francesco pio esposito",
+    "trafik": 200
+   },
    {
     "baslik": "atletico madrid",
     "trafik": 1000
@@ -403,16 +410,12 @@
     "trafik": 500
    },
    {
-    "baslik": "tv8 canlı yayın",
-    "trafik": 500
-   },
-   {
-    "baslik": "tv 8 canli",
-    "trafik": 5000
-   },
-   {
     "baslik": "daha 17 26 bölüm",
     "trafik": 5000
+   },
+   {
+    "baslik": "tv8 canlı yayın",
+    "trafik": 500
    },
    {
     "baslik": "erman toroğlu",
@@ -423,10 +426,10 @@
     "trafik": 100
    },
    {
-    "baslik": "sarıyer aslan",
-    "trafik": 2000
+    "baslik": "atalanta inter",
+    "trafik": 200
    }
   ]
  },
- "tamBirlestirme": "2026-11-22"
+ "tamBirlestirme": "2026-11-23"
 }
