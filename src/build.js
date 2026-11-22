@@ -306,6 +306,9 @@ export function insaEt({ simdi = Date.now() } = {}) {
   ekle('/menu/', S.menuSayfasi(), false);
   ekle('/ara/', S.araSayfasi(), false);
   yaz('/404.html', S.bulunamadiSayfasi());
+  // Başlığı düzeltilen haberlerin eski adreslerini yeni adrese yönlendir (Cloudflare Pages _redirects)
+  const yonlendirmeler = hikayeler.flatMap((x) => (x.eskiYollar || []).filter((y) => y !== haberYolu(x)).map((y) => `${y} ${haberYolu(x)} 301`));
+  if (yonlendirmeler.length) fs.writeFileSync(path.join(DIST, '_redirects'), yonlendirmeler.slice(0, 1900).join('\n') + '\n');
 
   // Arama dizini (son 7 gün, sadece yayındaki haberler)
   yaz(

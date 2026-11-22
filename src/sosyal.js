@@ -365,30 +365,63 @@ export function sabahVerisi(simdi = Date.now()) {
   const eczBugun = (servis.eczane?.liste || []).filter((e) => String(e.saat || '').startsWith(`${g}.${a}.${y}`));
   const eczIlce = new Set(eczBugun.map((e) => e.ilce));
   const hv = servis.hava?.yenisehir || servis.hava?.akdeniz;
-  const hg = hv?.gunler?.find((x) => x.tarih === bugun);
+  const gunler = (hv?.gunler || []).filter((x) => x.tarih >= bugun);
+  const hg = gunler.find((x) => x.tarih === bugun);
   const nm = (servis.namaz?.bolgeler?.['9737'] || []).find((x) => x.tarih === bugun);
   const su = aktifSuKesintileri(servis, simdi);
   const suYer = [...new Set(su.flatMap((k) => k.ilceler.map((i) => i.ad)))];
   const pk = servis.piyasa?.kalemler || {};
+  const yakit = servis.akaryakit?.ilceler?.merkez || servis.akaryakit?.ilceler?.yenisehir || null;
+  const lpg = servis.akaryakit?.ilceler?.yenisehir?.lpg || servis.akaryakit?.ilceler?.akdeniz?.lpg;
   const gunAd = new Intl.DateTimeFormat('tr-TR', { timeZone: 'Europe/Istanbul', day: 'numeric', month: 'long', weekday: 'long' }).format(simdi);
-  return { bugun, gunAd, eczane: eczBugun.length, eczIlce: eczIlce.size, hava: hg ? { min: hg.min, max: hg.max, durum: hg.durum } : null, namaz: nm || null, su, suYer, gram: pk.gram, usd: pk.usd };
+  const kisaGunAdi = (t) => new Intl.DateTimeFormat('tr-TR', { timeZone: 'Europe/Istanbul', weekday: 'short' }).format(Date.parse(`${t}T12:00:00+03:00`));
+  // Bugün öne çıkanlar: etkinlik, Mersin takımlarının maçı, depremler, günün en çok kaynakta geçen haberi
+  const one = [];
+  for (const e of (servis.etkinlik?.liste || []).filter((e) => e.tarih === bugun).slice(0, 2)) one.push({ tur: 'Etkinlik', renk: '#D6409F', metin: `${e.saat ? e.saat.replace(':', '.') + ' · ' : ''}${e.baslik.replace(/^Mersin Büyükşehir Belediyesi\s*/i, '').replace(/[!'’]?\s*(de|da)? buluşalım!?$/i, '')}` });
+  for (const m of Object.values(servis.spor?.ligler || {}).flatMap((l) => l.maclar || []).filter((m) => m.mersin && m.tarih === bugun).slice(0, 2)) one.push({ tur: 'Maç', renk: '#2B9A66', metin: `${(m.saat || '').replace(':', '.')} · ${m.ev} – ${m.dep}` });
+  for (const d of (servis.deprem || []).filter((d) => d.il === 'Mersin' && d.buyukluk >= 3 && simdi - Date.parse(d.tarih) < 864e5).slice(0, 1)) one.push({ tur: 'Deprem', renk: '#9333EA', metin: `${d.yer}'da ${String(d.buyukluk).replace('.', ',')} büyüklüğünde deprem` });
+  const mansetler = haberler().filter((h) => !h.genel && h.durum === 'yayinda' && !(h.riskNedenleri || []).length && !AYAR.haricKategori.has(h.kategori) && simdi - Date.parse(h.ilkGorulme) < 18 * 36e5).sort((x, z) => (z.kaynaklar?.length || 1) - (x.kaynaklar?.length || 1)).slice(0, 3);
+  for (const m of mansetler) one.push({ tur: 'Gündem', renk: '#E5484D', metin: m.baslik });
+  return {
+    bugun, gunAd, hicri: nm?.hicri || '', eczane: eczBugun.length, eczIlce: eczIlce.size,
+    hava: hg ? { min: hg.min, max: hg.max, durum: hg.durum } : null,
+    tahmin: gunler.filter((x) => x.tarih > bugun).slice(0, 3).map((x) => ({ gun: kisaGunAdi(x.tarih), min: x.min, max: x.max, durum: x.durum })),
+    namaz: nm || null, su, suYer, gram: pk.gram, ceyrek: pk.ceyrek, usd: pk.usd, eur: pk.eur,
+    yakit: yakit ? { benzin: yakit.benzin, motorin: yakit.motorin, lpg: yakit.lpg || lpg } : null,
+    one: one.slice(0, 5),
+  };
 }
 
 export function sabahMetni(v, platform) {
   const sat = [
     `☀️ Mersin'de bugün · ${v.gunAd}`,
     '',
-    v.hava ? `🌤 Hava: ${v.hava.durum}, ${v.hava.min}° / ${v.hava.max}°` : null,
+    v.hava ? `🌤 Hava: ${v.hava.durum}, ${v.hava.min}° / ${v.hava.max}°${v.tahmin[0] ? ` · Yarın ${v.tahmin[0].min}°/${v.tahmin[0].max}° ${v.tahmin[0].durum.toLocaleLowerCase('tr-TR')}` : ''}` : null,
     v.eczane ? `💊 Nöbetçi eczane: ${v.eczIlce} ilçede ${v.eczane} eczane nöbette` : null,
     v.su.length ? `💧 Su kesintisi: ${v.suYer.join(', ')}` : '💧 Su kesintisi: Duyurulmuş kesinti yok',
-    v.namaz ? `🕌 İmsak ${v.namaz.imsak} · Akşam ${v.namaz.aksam}` : null,
-    v.gram ? `💰 Gram altın ${tl(v.gram.satis)} TL${v.usd ? ` · Dolar ${tl(v.usd.satis, 2)} TL` : ''}` : null,
+    v.yakit ? `⛽ Benzin ${tl(v.yakit.benzin, 2)} TL · Motorin ${tl(v.yakit.motorin, 2)} TL${v.yakit.lpg ? ` · LPG ${tl(v.yakit.lpg, 2)} TL` : ''}` : null,
+    v.gram ? `💰 Gram altın ${tl(v.gram.satis)} TL${v.ceyrek ? ` · Çeyrek ${tl(v.ceyrek.satis)} TL` : ''}` : null,
+    v.usd ? `💵 Dolar ${tl(v.usd.satis, 2)} TL${v.eur ? ` · Euro ${tl(v.eur.satis, 2)} TL` : ''}` : null,
+    v.namaz ? `🕌 İmsak ${v.namaz.imsak} · Öğle ${v.namaz.ogle} · Akşam ${v.namaz.aksam}` : null,
+    ...(v.one.length ? ['', '📌 Bugün öne çıkanlar:', ...v.one.map((o) => `• ${o.metin}`)] : []),
     '',
-    platform === 'facebook' ? `Nöbetçi eczane adresleri ve kesinti ayrıntıları: ${SITE.url}/nobetci-eczane/` : "📲 Nöbetçi eczane adresleri ve kesinti ayrıntıları profildeki bağlantıda: mersinanlik.com",
+    platform === 'facebook' ? `Nöbetçi eczane adresleri, kesinti saatleri ve tüm haberler: ${SITE.url}/` : '📲 Nöbetçi eczane adresleri, kesinti saatleri ve tüm haberler profildeki bağlantıda: mersinanlik.com',
     '',
     '#Mersin #NöbetçiEczane #MersinHavaDurumu #MersinAnlık',
   ];
   return sat.filter((x) => x !== null).join('\n');
+}
+
+// Basit hava ikonları (SVG şekilleri)
+function havaIkonu(durum = '', x, y, r = 1) {
+  const d = durum.toLocaleLowerCase('tr-TR');
+  const gunes = (cx, cy, rr) => `<circle cx="${cx}" cy="${cy}" r="${rr}" fill="#FDB833"/>${[0, 45, 90, 135, 180, 225, 270, 315].map((a) => { const t = (a * Math.PI) / 180; return `<line x1="${cx + Math.cos(t) * rr * 1.35}" y1="${cy + Math.sin(t) * rr * 1.35}" x2="${cx + Math.cos(t) * rr * 1.75}" y2="${cy + Math.sin(t) * rr * 1.75}" stroke="#FDB833" stroke-width="${3 * r}" stroke-linecap="round"/>`; }).join('')}`;
+  const bulut = (cx, cy, s, renk = '#E6EDF8') => `<g fill="${renk}"><ellipse cx="${cx}" cy="${cy}" rx="${26 * s}" ry="${16 * s}"/><circle cx="${cx - 12 * s}" cy="${cy - 10 * s}" r="${13 * s}"/><circle cx="${cx + 8 * s}" cy="${cy - 16 * s}" r="${17 * s}"/></g>`;
+  if (/sağanak|yağmur|yağış|sağnak/.test(d)) return `${bulut(x, y - 6 * r, r, '#C9D4EA')}${[-12, 0, 12].map((o) => `<line x1="${x + o * r}" y1="${y + 14 * r}" x2="${x + (o - 5) * r}" y2="${y + 28 * r}" stroke="#5AB0FF" stroke-width="${3.5 * r}" stroke-linecap="round"/>`).join('')}`;
+  if (/kar/.test(d)) return `${bulut(x, y - 6 * r, r)}${[-12, 0, 12].map((o) => `<circle cx="${x + o * r}" cy="${y + 20 * r}" r="${3.5 * r}" fill="#fff"/>`).join('')}`;
+  if (/açık|güneş/.test(d)) return gunes(x, y, 16 * r);
+  if (/parçalı|az bulutlu/.test(d)) return `${gunes(x + 10 * r, y - 10 * r, 12 * r)}${bulut(x - 4 * r, y + 6 * r, 0.9 * r)}`;
+  return bulut(x, y, r);
 }
 
 export async function sabahKartiCiz(v, cikti) {
@@ -397,43 +430,85 @@ export async function sabahKartiCiz(v, cikti) {
   const logo = fs.readFileSync('assets/logo-seffaf.png').toString('base64');
   let arka = '';
   try {
-    const f = await sharp('assets/kapak-mersin.jpg').resize(W, 560, { fit: 'cover' }).jpeg({ quality: 85 }).toBuffer();
-    arka = `<image href="data:image/jpeg;base64,${f.toString('base64')}" x="0" y="0" width="${W}" height="560"/>`;
+    const f = await sharp('assets/kapak-mersin.jpg').resize(W, 470, { fit: 'cover' }).jpeg({ quality: 85 }).toBuffer();
+    arka = `<image href="data:image/jpeg;base64,${f.toString('base64')}" x="0" y="0" width="${W}" height="470"/>`;
   } catch {}
-  const kutu = (x, y, w, hh, renk, baslik, deger, alt) => `<rect x="${x}" y="${y}" width="${w}" height="${hh}" rx="26" fill="#12244D"/>
-<rect x="${x}" y="${y}" width="10" height="${hh}" rx="5" fill="${renk}"/>
-${yazi(x + 36, y + 56, baslik, 26, renk, 700, 'letter-spacing="1"')}
-${yazi(x + 36, y + 124, deger, deger.length > 14 ? 40 : 52, '#FFFFFF', 700)}
-${alt ? yazi(x + 36, y + 172, alt, 24, '#9FB2D6', 500) : ''}`;
-  const suDeger = v.su.length ? `${v.su.length} kesinti` : 'Yok';
-  const suAlt = v.su.length ? kisalt(v.suYer.join(', '), 34) : 'Duyurulmuş kesinti yok';
+  const KW = 314, KH = 184, KG = 19;
+  const kutu = (i, renk, baslik, satirlar) => {
+    const x = 48 + (i % 3) * (KW + KG);
+    const y = 452 + Math.floor(i / 3) * (KH + KG);
+    return `<rect x="${x}" y="${y}" width="${KW}" height="${KH}" rx="22" fill="#12244D"/>
+<rect x="${x}" y="${y}" width="${KW}" height="6" rx="3" fill="${renk}"/>
+${yazi(x + 24, y + 46, baslik, 20, renk, 700, 'letter-spacing="1.2"')}
+${satirlar.map((s, k) => yazi(x + 24, y + 92 + k * (s.b > 30 ? 46 : 36), s.t, s.b, s.r || '#FFFFFF', s.w || 700)).join('\n')}`;
+  };
+  const sat = (etiket, deger) => ({ t: `${etiket} ${deger}`, b: 27 });
+  const kutular = [
+    ['#12A594', 'NÖBETÇİ ECZANE', v.eczane ? [{ t: `${v.eczane} eczane`, b: 40 }, { t: `${v.eczIlce} ilçede nöbette`, b: 22, r: '#9FB2D6', w: 500 }] : [{ t: 'Liste sitede', b: 30 }]],
+    ['#3E8EDE', 'SU KESİNTİSİ', v.su.length ? [{ t: `${v.su.length} kesinti`, b: 40 }, { t: v.suYer.length > 2 ? `${v.suYer.slice(0, 2).join(', ')} +${v.suYer.length - 2} ilçe` : v.suYer.join(', '), b: 22, r: '#9FB2D6', w: 500 }] : [{ t: 'Yok', b: 40 }, { t: 'Duyurulmuş kesinti yok', b: 22, r: '#9FB2D6', w: 500 }]],
+    ['#EF5F00', 'AKARYAKIT', v.yakit ? [sat('Benzin', tl(v.yakit.benzin, 2)), sat('Motorin', tl(v.yakit.motorin, 2)), ...(v.yakit.lpg ? [{ t: `LPG ${tl(v.yakit.lpg, 2)} TL/lt`, b: 22, r: '#9FB2D6', w: 500 }] : [])] : [{ t: '-', b: 40 }]],
+    ['#C98A00', 'ALTIN', [sat('Gram', `${tl(v.gram?.satis || 0)} TL`), sat('Çeyrek', `${tl(v.ceyrek?.satis || 0)} TL`)]],
+    ['#0797B9', 'DÖVİZ', [sat('Dolar', `${tl(v.usd?.satis || 0, 2)} TL`), sat('Euro', `${tl(v.eur?.satis || 0, 2)} TL`)]],
+    ['#8E4EC6', 'NAMAZ VAKİTLERİ', v.namaz ? [sat('İmsak', v.namaz.imsak), sat('Öğle', v.namaz.ogle), { t: `Akşam ${v.namaz.aksam}`, b: 27 }] : [{ t: '-', b: 40 }]],
+  ];
+  // Namaz ve akaryakıt 3 satır: satır aralığını sıkılaştır
+  const kutuSvg = kutular.map(([renk, bas, satirlar], i) => {
+    if (satirlar.length === 3) {
+      const x = 48 + (i % 3) * (KW + KG);
+      const y = 452 + Math.floor(i / 3) * (KH + KG);
+      return `<rect x="${x}" y="${y}" width="${KW}" height="${KH}" rx="22" fill="#12244D"/>
+<rect x="${x}" y="${y}" width="${KW}" height="6" rx="3" fill="${renk}"/>
+${yazi(x + 24, y + 46, bas, 20, renk, 700, 'letter-spacing="1.2"')}
+${satirlar.map((s, k) => yazi(x + 24, y + 88 + k * 38, s.t, s.b, s.r || '#FFFFFF', s.w || 700)).join('\n')}`;
+    }
+    return kutu(i, renk, bas, satirlar);
+  }).join('\n');
+  const oneY = 452 + 2 * (KH + KG) + 6;
+  const oneH = H - 116 - 26 - oneY;
+  const tahminSvg = v.tahmin.map((t, i) => {
+    const x = 640 + i * 132;
+    return `<rect x="${x}" y="236" width="118" height="176" rx="20" fill="#0A1530" fill-opacity="0.55" stroke="#FFFFFF" stroke-opacity="0.12"/>
+${yazi(x + 59, 272, t.gun.replace('.', ''), 24, '#C9D4EA', 700, 'text-anchor="middle"')}
+${havaIkonu(t.durum, x + 59, 322, 0.95)}
+${yazi(x + 59, 392, `${t.max}° / ${t.min}°`, 22, '#FFFFFF', 700, 'text-anchor="middle"')}`;
+  }).join('\n');
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
-<defs><linearGradient id="k" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A1530" stop-opacity="0.35"/><stop offset="0.7" stop-color="#0A1530" stop-opacity="0.85"/><stop offset="1" stop-color="#0A1530"/></linearGradient></defs>
+<defs><linearGradient id="k" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A1530" stop-opacity="0.45"/><stop offset="0.65" stop-color="#0A1530" stop-opacity="0.8"/><stop offset="1" stop-color="#0A1530"/></linearGradient></defs>
 <rect width="${W}" height="${H}" fill="#0A1530"/>
 ${arka}
-<rect width="${W}" height="561" fill="url(#k)"/>
-<image href="data:image/png;base64,${logo}" x="${W - 56 - 180}" y="40" width="180" height="120"/>
-${yazi(64, 120, "MERSİN'DE BUGÜN", 30, '#22D3EE', 700, 'letter-spacing="3"')}
-${yazi(64, 190, v.gunAd, 56, '#FFFFFF', 700)}
-${v.hava ? `${yazi(64, 360, `${v.hava.max}°`, 150, '#FFFFFF', 700)}
-${yazi(64 + genislik(`${v.hava.max}°`, 150) + 30, 300, v.hava.durum, 40, '#FFFFFF', 700)}
-${yazi(64 + genislik(`${v.hava.max}°`, 150) + 30, 352, `En düşük ${v.hava.min}° · Mersin`, 30, '#C9D4EA', 500)}` : ''}
-${kutu(48, 470, 476, 200, '#12A594', 'NÖBETÇİ ECZANE', v.eczane ? `${v.eczane} eczane` : 'Sitede', v.eczane ? `${v.eczIlce} ilçede, bugün 08.00'den itibaren` : 'İlçe ilçe liste sitede')}
-${kutu(556, 470, 476, 200, '#3E8EDE', 'SU KESİNTİSİ', suDeger, suAlt)}
-${kutu(48, 700, 476, 200, '#8E4EC6', 'NAMAZ', v.namaz ? `${v.namaz.imsak} · ${v.namaz.aksam}` : '-', 'İmsak · Akşam (Mersin)')}
-${kutu(556, 700, 476, 200, '#C98A00', 'GRAM ALTIN', v.gram ? `${tl(v.gram.satis)} TL` : '-', v.usd ? `Dolar ${tl(v.usd.satis, 2)} TL` : '')}
-<rect x="48" y="930" width="${W - 96}" height="250" rx="26" fill="#0E1D40" stroke="#22D3EE" stroke-opacity="0.35" stroke-width="2"/>
-${yazi(84, 1000, 'Eczane adresleri, kesinti saatleri ve', 34, '#FFFFFF', 700)}
-${yazi(84, 1050, "Mersin'in son dakika haberleri sitemizde.", 34, '#FFFFFF', 700)}
-${yazi(84, 1118, 'Ayrıntılar: mersinanlik.com', 28, '#9FB2D6', 500)}
+<rect width="${W}" height="471" fill="url(#k)"/>
+<image href="data:image/png;base64,${logo}" x="${W - 52 - 165}" y="34" width="165" height="110"/>
+${yazi(56, 92, "MERSİN'DE BUGÜN", 26, '#22D3EE', 700, 'letter-spacing="3"')}
+${yazi(56, 156, v.gunAd, 50, '#FFFFFF', 700)}
+${v.hicri ? yazi(56, 196, v.hicri, 22, '#9FB2D6', 500) : ''}
+${v.hava ? `${havaIkonu(v.hava.durum, 110, 318, 1.9)}
+${yazi(186, 352, `${v.hava.max}°`, 112, '#FFFFFF', 700)}
+${yazi(190, 400, `${v.hava.durum} · en düşük ${v.hava.min}°`, 24, '#C9D4EA', 500)}` : ''}
+${tahminSvg}
+${kutuSvg}
+<rect x="48" y="${oneY}" width="${W - 96}" height="${oneH}" rx="22" fill="#0E1D40" stroke="#22D3EE" stroke-opacity="0.3" stroke-width="2"/>
+${yazi(76, oneY + 48, 'BUGÜN ÖNE ÇIKANLAR', 20, '#22D3EE', 700, 'letter-spacing="1.5"')}
+${(v.one.length ? v.one : [{ tur: 'Site', renk: '#22D3EE', metin: "Mersin'in son dakika haberleri mersinanlik.com'da" }]).slice(0, Math.floor((oneH - 70) / 50)).map((o, i) => {
+  const yy = oneY + 98 + i * 50;
+  return `<rect x="76" y="${yy - 25}" width="${Math.round(genislik(o.tur.toLocaleUpperCase('tr-TR'), 17) + 22)}" height="32" rx="8" fill="${o.renk}"/>
+${yazi(87, yy - 3, o.tur.toLocaleUpperCase('tr-TR'), 17, '#FFFFFF', 700, 'letter-spacing="0.8"')}
+${yazi(76 + Math.round(genislik(o.tur.toLocaleUpperCase('tr-TR'), 17) + 22) + 16, yy - 1, kisaltGenislik(o.metin, 25, W - 96 - 60 - Math.round(genislik(o.tur.toLocaleUpperCase('tr-TR'), 17) + 22) - 30), 25, '#FFFFFF', 500)}`;
+}).join('\n')}
 <rect x="0" y="${H - 116}" width="${W}" height="116" fill="#0E1D40"/>
 <rect x="0" y="${H - 116}" width="${W}" height="3" fill="#22D3EE" fill-opacity="0.6"/>
-${yazi(64, H - 46, 'mersinanlik.com', 36, '#22D3EE', 700)}
-${yazi(W - 64, H - 48, 'Her sabah, Mersin için', 25, '#B6C4E0', 500, 'text-anchor="end"')}
+${yazi(56, H - 46, 'mersinanlik.com', 36, '#22D3EE', 700)}
+${yazi(W - 56, H - 48, 'Eczane adresleri ve ayrıntılar sitede', 24, '#B6C4E0', 500, 'text-anchor="end"')}
 </svg>`;
   const png = new Resvg(svg, { font: { fontFiles: ['assets/fonts/Poppins-Bold.ttf', 'assets/fonts/Poppins-Medium.ttf'], loadSystemFonts: true, defaultFontFamily: 'Poppins' }, fitTo: { mode: 'width', value: W } }).render().asPng();
   await sharp(png).jpeg({ quality: 88, mozjpeg: true }).toFile(cikti);
   return cikti;
+}
+
+function kisaltGenislik(metin, boyut, genis) {
+  if (genislik(metin, boyut) <= genis) return metin;
+  let m = metin;
+  while (m.length > 4 && genislik(m + '…', boyut) > genis) m = m.slice(0, -1);
+  return m.replace(/\s+\S*$/, '').replace(/[,;:\-–·]$/, '').trim() + '…';
 }
 
 function sabahSirasi(platform, d, simdi = Date.now()) {
