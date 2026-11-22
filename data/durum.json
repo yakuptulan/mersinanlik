@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-22T09:13:25.875Z"
   }
  },
  "gorsel": {
@@ -370,8 +374,16 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T09:07:49.174Z",
+  "guncelleme": "2026-11-22T09:13:55.289Z",
   "liste": [
+   {
+    "baslik": "ezgi mola",
+    "trafik": 100
+   },
+   {
+    "baslik": "al nassr fc",
+    "trafik": 1000
+   },
    {
     "baslik": "orkun özeller",
     "trafik": 200
@@ -382,7 +394,7 @@
    },
    {
     "baslik": "danıştay",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "ramazan bayramı ne zaman",
@@ -402,14 +414,6 @@
    },
    {
     "baslik": "özcan deniz kaç yaşında",
-    "trafik": 200
-   },
-   {
-    "baslik": "hava durumu diyarbakır",
-    "trafik": 500
-   },
-   {
-    "baslik": "miley cyrus",
     "trafik": 200
    }
   ]
