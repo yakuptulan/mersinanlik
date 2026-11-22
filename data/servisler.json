@@ -1,16 +1,10 @@
 {
- "guncelleme": "2026-11-22T21:25:28.829Z",
+ "guncelleme": "2026-11-22T21:31:51.736Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 15,
    "durum": "Parçalı bulutlu",
    "gunler": [
-    {
-     "tarih": "2026-11-22",
-     "min": 15,
-     "max": 15,
-     "durum": "Az bulutlu"
-    },
     {
      "tarih": "2026-11-23",
      "min": 11,
@@ -34,6 +28,12 @@
      "min": 9,
      "max": 18,
      "durum": "Açık"
+    },
+    {
+     "tarih": "2026-11-27",
+     "min": 13,
+     "max": 21,
+     "durum": "Bulutlu"
     }
    ]
   },
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T21:25:31.960Z",
+  "guncelleme": "2026-11-22T21:31:55.133Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -696,7 +696,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T21:25:33.024Z",
+  "guncelleme": "2026-11-22T21:31:56.234Z",
   "liste": [
    {
     "tur": "su",
@@ -733,7 +733,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T21:25:37.344Z",
+  "guncelleme": "2026-11-22T21:31:58.771Z",
   "kalemler": {
    "gram": {
     "alis": 5737.69,
@@ -766,9 +766,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3080984,
-    "usd": 60898,
-    "degisim": 1.02
+    "satis": 3081864,
+    "usd": 60913,
+    "degisim": 1.1
    }
   },
   "altinlar": [
@@ -901,10 +901,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-23 00:25:01"
+  "kaynakSaati": "2026-11-23 00:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T21:25:39.589Z",
+  "guncelleme": "2026-11-22T21:32:01.423Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8569,7 +8569,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T21:25:39.871Z",
+  "guncelleme": "2026-11-22T21:32:01.849Z",
   "liste": [
    {
     "yol": "/",
@@ -8620,11 +8620,11 @@
     "sayi": 1
    },
    {
-    "yol": "/kar-tatili/",
+    "yol": "/hava-durumu/anamur/",
     "sayi": 1
    },
    {
-    "yol": "/hava-durumu/anamur/",
+    "yol": "/kar-tatili/",
     "sayi": 1
    },
    {
@@ -8666,7 +8666,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T21:25:43.677Z",
+  "guncelleme": "2026-11-22T21:32:03.389Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.38
@@ -8679,7 +8679,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T21:25:45.569Z",
+  "guncelleme": "2026-11-22T21:32:05.576Z",
   "giden": [
    {
     "no": [
@@ -9802,7 +9802,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T21:25:45.569Z",
+  "guncelleme": "2026-11-22T21:32:05.575Z",
   "liste": [
    {
     "id": 6386,
