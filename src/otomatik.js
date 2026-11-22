@@ -479,6 +479,27 @@ for (const y of servis.yollar?.liste || []) {
 }
 durum.yol = durum.yol.slice(-300);
 
+// ---------- 12b) İŞKUR: Mersin'de yeni açılan kurs / işbaşı eğitim programı ----------
+durum.kurs ||= [];
+{
+  let isv = null;
+  try { isv = JSON.parse(fs.readFileSync(new URL('../data/is-ilanlari.json', import.meta.url), 'utf8')); } catch {}
+  for (const k of isv?.kurslar || []) {
+    if (durum.kurs.includes(k.no)) continue;
+    durum.kurs.push(k.no);
+    if (ilkKurulum || (k.sonBasvuru && k.sonBasvuru < bugunISO)) continue;
+    const tur = k.programTur === 3 ? 'işbaşı eğitim programı' : 'mesleki eğitim kursu';
+    const yer = k.ilceAd || 'Mersin';
+    const metin = [
+      `Türkiye İş Kurumu (İŞKUR), ${yer === 'Mersin' ? "Mersin'de" : `Mersin'in ${yer} ilçesinde`} ${k.meslek} alanında yeni bir ${tur} açtı.${k.sonBasvuru ? ` Başvurular ${kisaTarih(k.sonBasvuru)} tarihine kadar yapılabilecek.` : ''}${k.baslangic ? ` Programın ${kisaTarih(k.baslangic)} tarihinde başlaması planlanıyor.` : ''}`,
+      `${k.kursTuru ? `Program türü: ${k.kursTuru}. ` : ''}İŞKUR kurslarına katılanlara, kurs süresince günlük harçlık ödenebiliyor ve genel sağlık ile iş kazası sigortası primleri kurum tarafından karşılanabiliyor; ayrıntılar programa göre değişiyor.`,
+      `Başvurular İŞKUR e-Şube üzerinden ya da İŞKUR Mersin İl Müdürlüğü hizmet noktalarından yapılabiliyor (kurs numarası: ${k.no}). Mersin'deki tüm güncel iş ilanları ve kurslar Mersin Anlık'ın iş ilanları sayfasında (mersinanlik.com/is-ilanlari/) listeleniyor.`,
+    ].join('\n\n');
+    haber({ id: kimlik('q', k.no), baslik: `${ilBulunma(yer)} İŞKUR ${k.meslek} ${k.programTur === 3 ? 'işbaşı eğitimi' : 'kursu'}: başvurular başladı`, ozet: metin.split('\n\n')[0], metin, kategori: 'ekonomi', ilceler: k.ilce ? [k.ilce] : [], kaynak: { ad: 'İŞKUR', link: 'https://esube.iskur.gov.tr/Kurs/KursOnAir.aspx?ProgramTur=' + k.programTur }, kapak: 'is' });
+  }
+  durum.kurs = durum.kurs.slice(-300);
+}
+
 // ---------- 13) Pazartesi: Mersin'de bu hafta İŞKUR'daki iş ilanları ----------
 if (haftaGunu === 1 && trSaat >= 10 && durum.isHaftalik !== bugunISO) {
   let isv = null;

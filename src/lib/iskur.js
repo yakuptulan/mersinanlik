@@ -86,3 +86,27 @@ export async function ilanDetayi(no, tur = 'Özel') {
     ogrenim: arasi('En Az Öğrenim Seviyesi', 'En Fazla').replace(/^:\s*/, '').slice(0, 60),
   };
 }
+
+// ---------- Kurslar ve işbaşı eğitim programları (Mersin) ----------
+// ProgramTur: 1 = mesleki eğitim kursu, 3 = işbaşı eğitim programı
+const KURS = 'https://esube.iskur.gov.tr/Kurs/KursOnAir.aspx';
+export const KURS_TURLERI = { 1: 'Mesleki eğitim kursu', 3: 'İşbaşı eğitim programı' };
+export const kursAramaLinki = (tur = 1) => `${KURS}?ProgramTur=${tur}`;
+
+export function kurslariCoz(html) {
+  const sonuc = [];
+  for (const m of html.matchAll(/PopupKursDetails\('(\d+)'[\s\S]*?<\/td>([\s\S]*?)<\/tr>/g)) {
+    const td = [...m[2].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map((x) => duz(x[1]).replace(/\s+/g, ' ').trim());
+    const tarih = (s) => { const t = s?.match(/(\d{2})\.(\d{2})\.(\d{4})/); return t ? `${t[3]}-${t[2]}-${t[1]}` : null; };
+    sonuc.push({ no: m[1], il: td[0], ilceHam: td[1], meslek: td[2], baslangic: tarih(td[3]), sonBasvuru: tarih(td[4]), statu: td[5], kursTuru: td[6] });
+  }
+  return sonuc;
+}
+
+export async function iskurMersinKurslari(programTur = 1) {
+  const al = oturum();
+  const url = kursAramaLinki(programTur);
+  const html = await al(url);
+  const sonuc = await al(url, { method: 'POST', body: new URLSearchParams({ ...gizliAlanlar(html), 'ctl05$ctlIl': MERSIN, __EVENTTARGET: 'ctl05$PageCommand1$CommandItem_Search', __EVENTARGUMENT: '' }), headers: { 'Content-Type': 'application/x-www-form-urlencoded', Referer: url } });
+  return kurslariCoz(sonuc).filter((k) => /MERS[İI]N/i.test(k.il || ''));
+}

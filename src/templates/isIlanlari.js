@@ -6,7 +6,7 @@
 import { SITE, ILCELER } from '../config.js';
 import { sayfa } from './layout.js';
 import { htmlKacis as h, slugify } from '../lib/text.js';
-import { ilanLinki } from '../lib/iskur.js';
+import { ilanLinki, kursAramaLinki, KURS_TURLERI } from '../lib/iskur.js';
 import { kutuBasligi } from './servisParcalari.js';
 
 export const IS_YOL = '/is-ilanlari/';
@@ -70,6 +70,16 @@ function liste(ilanlar) {
 const kaynakNotu = (veri) => `<p class="guncelleme-notu">Kaynak: <a href="https://esube.iskur.gov.tr/Istihdam/AcikIsIlanAra.aspx" rel="noopener" target="_blank">İŞKUR açık iş ilanları</a>${veri?.guncelleme ? ` · Son kontrol: ${new Date(veri.guncelleme).toLocaleString('tr-TR', { timeZone: SITE.timezone, day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' })}` : ''}. İşveren adları İŞKUR'da üye girişiyle gösterilir. Liste 3 saatte bir güncellenir.</p>`;
 const yan = (yanKutular) => `<aside class="yan">${kamuKutusu}${uyariKutusu}${yanKutular ? yanKutular.replace(/^<aside class="yan">|<\/aside>$/g, '') : ''}</aside>`;
 
+function kursBolumu(veri, ilce = null) {
+  const bugun = bugunISO();
+  const l = (veri?.kurslar || []).filter((k) => (!k.sonBasvuru || k.sonBasvuru >= bugun) && (!ilce || k.ilce === ilce.slug));
+  if (!l.length) return '';
+  return `<div class="bolum-bas" style="margin-top:26px"><h2>İŞKUR kursları ve işbaşı eğitimleri</h2><span>${l.length} program</span></div>
+<div class="is-liste">${l.map((k) => `<article class="is-kart"><div class="is-ust"><h3>${h(k.meslek)}</h3><span class="is-adet">${h(KURS_TURLERI[k.programTur] || 'Kurs')}</span></div>
+<p class="is-bilgi">${h(k.ilceAd || k.ilceHam || 'Mersin')}${k.kursTuru ? ` · ${h(k.kursTuru)}` : ''}${k.baslangic ? ` · başlangıç ${tarihTr(k.baslangic)}` : ''}</p>
+<div class="is-alt"><span class="is-son">${k.sonBasvuru ? `Son başvuru ${tarihTr(k.sonBasvuru)}` : ''}</span><a class="is-btn" href="${kursAramaLinki(k.programTur)}" rel="noopener nofollow" target="_blank">İŞKUR'da ara (no ${h(k.no)})</a></div></article>`).join('')}</div>`;
+}
+
 export function isIlanlariSayfasi({ veri, yanKutular }) {
   const ilanlar = acikIlanlar(veri);
   const kisi = ilanlar.reduce((t, i) => t + (i.acik || 1), 0);
@@ -96,6 +106,7 @@ ${meslekler.length ? `<div class="bolum-bas" style="margin-top:22px"><h2>Meslekl
 <div class="bolum-bas" style="margin-top:26px"><h2>Tüm ilanlar</h2>${yeniler.length && yeniler.length < ilanlar.length ? `<span>${yeniler.length} ilan bu hafta eklendi</span>` : ''}</div>
 ${aramaKutusu(ilanlar.length)}
 ${liste(ilanlar)}
+${kursBolumu(veri)}
 ${kaynakNotu(veri)}
 </div>${yan(yanKutular)}</main>`,
   });

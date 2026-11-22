@@ -4,7 +4,7 @@
 
 import fs from 'node:fs';
 import { ILCELER } from './config.js';
-import { iskurMersinIlanlari, ilanDetayi } from './lib/iskur.js';
+import { iskurMersinIlanlari, ilanDetayi, iskurMersinKurslari, KURS_TURLERI } from './lib/iskur.js';
 
 const DOSYA = new URL('../data/is-ilanlari.json', import.meta.url);
 const ARALIK_SAAT = 3;
@@ -50,8 +50,23 @@ try {
     }
     await new Promise((r) => setTimeout(r, 900));
   }
+  // Mersin'deki İŞKUR kursları ve işbaşı eğitim programları
+  let kurslar = veri.kurslar || [];
+  try {
+    const k = [];
+    for (const tur of Object.keys(KURS_TURLERI)) {
+      for (const x of await iskurMersinKurslari(Number(tur))) {
+        const ilce = ilceBul(x.ilceHam);
+        k.push({ ...x, programTur: Number(tur), ilce: ilce?.slug || null, ilceAd: ilce?.ad || null, ilkGorulme: kurslar.find((e) => e.no === x.no)?.ilkGorulme || new Date().toISOString() });
+      }
+    }
+    kurslar = k.filter((x) => !x.sonBasvuru || x.sonBasvuru >= bugun);
+    console.log(`İŞKUR kursları (Mersin): ${kurslar.length}`);
+  } catch (e) {
+    console.warn(`! Kurslar: ${e.message}`);
+  }
   const yeniSayi = Object.keys(yeni).filter((n) => !veri.ilanlar[n]).length;
-  fs.writeFileSync(DOSYA, JSON.stringify({ guncelleme: new Date().toISOString(), toplam, ilanlar: yeni }, null, 1));
+  fs.writeFileSync(DOSYA, JSON.stringify({ guncelleme: new Date().toISOString(), toplam, ilanlar: yeni, kurslar }, null, 1));
   console.log(`İş ilanları: ${Object.keys(yeni).length} açık ilan (İŞKUR toplam ${toplam}), ${yeniSayi} yeni, ${alinan} ayrıntı alındı.`);
 } catch (e) {
   console.warn(`! İş ilanları alınamadı: ${e.message}`);
