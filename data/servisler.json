@@ -1,13 +1,13 @@
 {
- "guncelleme": "2026-11-22T05:01:57.267Z",
+ "guncelleme": "2026-11-22T05:31:49.579Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 15,
-   "durum": "Bulutlu",
+   "sicaklik": 16,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
-     "min": 15,
+     "min": 16,
      "max": 22,
      "durum": "Parçalı bulutlu"
     },
@@ -74,12 +74,12 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 14,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 15,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
-     "min": 14,
+     "min": 15,
      "max": 23,
      "durum": "Hafif sağanak"
     },
@@ -218,12 +218,12 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 10,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 11,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
-     "min": 10,
+     "min": 11,
      "max": 17,
      "durum": "Parçalı bulutlu"
     },
@@ -326,7 +326,7 @@
    ]
   },
   "silifke": {
-   "sicaklik": 14,
+   "sicaklik": 15,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -363,7 +363,7 @@
   },
   "tarsus": {
    "sicaklik": 16,
-   "durum": "Bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -398,12 +398,12 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 15,
-   "durum": "Bulutlu",
+   "sicaklik": 16,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
-     "min": 15,
+     "min": 16,
      "max": 22,
      "durum": "Parçalı bulutlu"
     },
@@ -434,12 +434,12 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 15,
-   "durum": "Bulutlu",
+   "sicaklik": 16,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
-     "min": 15,
+     "min": 16,
      "max": 22,
      "durum": "Parçalı bulutlu"
     },
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T05:02:02.044Z",
+  "guncelleme": "2026-11-22T05:31:54.893Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T05:02:03.401Z",
+  "guncelleme": "2026-11-22T05:31:56.268Z",
   "liste": [
    {
     "tur": "su",
@@ -805,7 +805,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T05:02:06.036Z",
+  "guncelleme": "2026-11-22T05:31:58.815Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -838,9 +838,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2992701,
-    "usd": 59216,
-    "degisim": 5.03
+    "satis": 2976329,
+    "usd": 58892,
+    "degisim": 5.14
    }
   },
   "altinlar": [
@@ -973,10 +973,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 08:02:02"
+  "kaynakSaati": "2026-11-22 08:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T05:02:09.480Z",
+  "guncelleme": "2026-11-22T05:32:02.147Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8650,7 +8650,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T05:02:10.761Z",
+  "guncelleme": "2026-11-22T05:32:02.502Z",
   "liste": [
    {
     "yol": "/",
@@ -8689,11 +8689,11 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
+    "yol": "/haber/mersin-osb-nin-5-ve-6-bolge-projeleri-ankara-da-gorusuldu-i4fy92/",
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-osb-nin-5-ve-6-bolge-projeleri-ankara-da-gorusuldu-i4fy92/",
+    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
     "sayi": 1
    },
    {
@@ -8743,7 +8743,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T05:03:00.311Z",
+  "guncelleme": "2026-11-22T05:32:04.389Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.7
@@ -8756,20 +8756,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T05:03:02.573Z",
+  "guncelleme": "2026-11-22T05:32:06.820Z",
   "giden": [
-   {
-    "no": [
-     "PC2081"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-22T05:10:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "SON ÇAĞRI",
-    "hat": "ic"
-   },
    {
     "no": [
      "XQ9007"
@@ -8779,7 +8767,7 @@
     "planlanan": "2026-11-22T05:50:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8791,7 +8779,7 @@
     "planlanan": "2026-11-22T06:05:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "KONTUAR AÇIK",
+    "durum": "BOARDING",
     "hat": "ic"
    },
    {
@@ -8803,7 +8791,7 @@
     "planlanan": "2026-11-22T06:15:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8815,7 +8803,7 @@
     "planlanan": "2026-11-22T06:25:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8875,7 +8863,7 @@
     "planlanan": "2026-11-22T07:45:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -8887,7 +8875,7 @@
     "planlanan": "2026-11-22T08:25:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -9357,33 +9345,45 @@
     "kapi": "107",
     "durum": "",
     "hat": "ic"
-   }
-  ],
-  "gelen": [
-   {
-    "no": [
-     "XQ9006"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "İzmir",
-    "planlanan": "2026-11-22T05:10:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "ic"
    },
    {
     "no": [
-     "PC3010"
+     "XQ7631"
     ],
-    "havayolu": "Pegasus",
-    "yer": "İzmir",
-    "planlanan": "2026-11-22T05:30:00.000Z",
+    "havayolu": "SunExpress",
+    "yer": "Antalya",
+    "planlanan": "2026-11-23T05:10:00.000Z",
     "tahmini": null,
-    "kapi": "",
+    "kapi": "106",
     "durum": "",
     "hat": "ic"
    },
+   {
+    "no": [
+     "PC2081"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-23T05:10:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF3143"
+    ],
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-23T05:15:00.000Z",
+    "tahmini": null,
+    "kapi": "103",
+    "durum": "",
+    "hat": "ic"
+   }
+  ],
+  "gelen": [
    {
     "no": [
      "TK2452"
@@ -9983,11 +9983,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ9006"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "İzmir",
+    "planlanan": "2026-11-23T05:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T05:03:02.572Z",
+  "guncelleme": "2026-11-22T05:32:06.819Z",
   "liste": [
    {
     "id": 6386,
