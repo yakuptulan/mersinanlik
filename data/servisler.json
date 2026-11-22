@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T18:31:46.750Z",
+ "guncelleme": "2026-11-22T18:56:46.485Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T18:31:51.600Z",
+  "guncelleme": "2026-11-22T18:56:50.706Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -773,7 +773,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T18:31:52.820Z",
+  "guncelleme": "2026-11-22T18:56:51.779Z",
   "liste": [
    {
     "tur": "su",
@@ -810,7 +810,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T18:31:57.058Z",
+  "guncelleme": "2026-11-22T18:56:56.070Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -843,9 +843,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3062699,
-    "usd": 60601,
-    "degisim": 0.81
+    "satis": 3067615,
+    "usd": 60698,
+    "degisim": 1.1
    }
   },
   "altinlar": [
@@ -978,10 +978,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 21:31:01"
+  "kaynakSaati": "2026-11-22 21:56:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T18:31:59.346Z",
+  "guncelleme": "2026-11-22T18:56:58.964Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8746,15 +8746,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T18:31:59.811Z",
+  "guncelleme": "2026-11-22T18:56:59.461Z",
   "liste": [
    {
     "yol": "/",
     "sayi": 7
-   },
-   {
-    "yol": "/hava-durumu/bozyazi/",
-    "sayi": 3
    },
    {
     "yol": "/haber/msk-da-dagilma-tehlikesi-kadro-dagildi-gelecek-belirsizlesti-fmcfmt/",
@@ -8765,7 +8761,7 @@
     "sayi": 2
    },
    {
-    "yol": "/hava-durumu/anamur/",
+    "yol": "/hava-durumu/bozyazi/",
     "sayi": 2
    },
    {
@@ -8794,6 +8790,14 @@
    },
    {
     "yol": "/menu/",
+    "sayi": 1
+   },
+   {
+    "yol": "/kar-tatili/",
+    "sayi": 1
+   },
+   {
+    "yol": "/hava-durumu/anamur/",
     "sayi": 1
    },
    {
@@ -8831,7 +8835,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T18:32:02.789Z",
+  "guncelleme": "2026-11-22T18:57:00.926Z",
   "deniz": {
    "sicaklik": 21.7,
    "dalga": 0.36
@@ -8844,7 +8848,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T18:32:05.073Z",
+  "guncelleme": "2026-11-22T18:57:02.858Z",
   "giden": [
    {
     "no": [
@@ -8855,7 +8859,7 @@
     "planlanan": "2026-11-22T19:05:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -8867,7 +8871,7 @@
     "planlanan": "2026-11-22T19:15:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "BOARDING",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -8879,7 +8883,7 @@
     "planlanan": "2026-11-22T19:20:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8891,7 +8895,7 @@
     "planlanan": "2026-11-22T19:45:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8913,9 +8917,9 @@
     "havayolu": "THY",
     "yer": "İstanbul",
     "planlanan": "2026-11-22T20:00:00.000Z",
-    "tahmini": null,
+    "tahmini": "2026-11-22T20:30:00.000Z",
     "kapi": "109",
-    "durum": "KONTUAR AÇIK",
+    "durum": "GECİKME",
     "hat": "ic"
    },
    {
@@ -8939,7 +8943,7 @@
     "planlanan": "2026-11-22T20:50:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9433,7 +9437,7 @@
     "planlanan": "2026-11-22T19:10:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "ic"
    },
    {
@@ -9445,7 +9449,7 @@
     "planlanan": "2026-11-22T19:10:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "ic"
    },
    {
@@ -9455,9 +9459,9 @@
     "havayolu": "THY",
     "yer": "İstanbul",
     "planlanan": "2026-11-22T19:15:00.000Z",
-    "tahmini": null,
+    "tahmini": "2026-11-22T19:45:00.000Z",
     "kapi": "",
-    "durum": "",
+    "durum": "GECİKME",
     "hat": "ic"
    },
    {
@@ -10003,7 +10007,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T18:32:05.073Z",
+  "guncelleme": "2026-11-22T18:57:02.857Z",
   "liste": [
    {
     "id": 6386,
