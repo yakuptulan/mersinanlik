@@ -10,6 +10,8 @@ async function dene(m, govde) {
   return r.ok;
 }
 const metin = { contents: [{ role: 'user', parts: [{ text: 'Mersin hangi bölgede? Tek cümle.' }] }] };
-for (const m of ['gemini-3.5-pro', 'gemini-3-pro', 'gemini-3-pro-preview', 'gemini-3.5-flash', 'gemini-3-flash', 'gemini-2.5-pro', 'gemini-2.5-flash']) await dene(m, metin);
+for (const m of ['gemini-3.1-pro', 'gemini-3.1-pro-preview', 'gemini-3.5-pro-preview', 'gemini-pro-latest', 'gemini-3.5-flash']) await dene(m, metin);
+if (process.env.GORSEL_YOKLA) {
 const gorsel = { contents: [{ role: 'user', parts: [{ text: 'A calm photo of palm trees on a Mediterranean promenade, no text.' }] }], generationConfig: { responseModalities: ['IMAGE'], imageConfig: { aspectRatio: '4:5' } } };
 for (const m of ['gemini-3.5-pro-image', 'gemini-3-pro-image', 'gemini-3-pro-image-preview', 'gemini-3.5-flash-image', 'gemini-3-flash-image']) if (await dene(m, gorsel)) break;
+}
