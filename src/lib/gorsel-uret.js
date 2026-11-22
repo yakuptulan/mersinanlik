@@ -36,7 +36,7 @@ const CF_ANAHTAR = process.env.CLOUDFLARE_API_TOKEN;
 const CF_HAZIR = Boolean(CF_HESAP && CF_ANAHTAR) && process.env.GORSEL_SAGLAYICI !== 'gemini';
 
 export function gorselUretimHazirMi() {
-  return CF_HAZIR || ANAHTARLAR.length > 0;
+  return premiumHazirMi() || CF_HAZIR || ANAHTARLAR.length > 0;
 }
 
 // ---- Cloudflare Workers AI ----
@@ -77,6 +77,16 @@ function ilceMetni(hikaye) {
 
 export async function gorselUret(hikaye) {
   hikaye.gorselKaynak = 'yz';
+  // Öncelik: kaliteli model (Vertex AI, Google deneme kredisinden). Hata verirse ücretsiz yola düşer.
+  if (premiumHazirMi()) {
+    try {
+      await premiumUret(hikaye, '16:9');
+      return hikaye.gorsel;
+    } catch (e) {
+      console.warn(`! Kaliteli görsel olmadı, ücretsiz yola geçiliyor: ${String(e.message).slice(0, 120)}`);
+      if (!CF_HAZIR && !ANAHTARLAR.length) throw e;
+    }
+  }
   if (CF_HAZIR) {
     const { veri, prompt } = await cfUret(hikaye);
     return kaydet(hikaye, veri, prompt);
@@ -138,7 +148,8 @@ export function gorselAdaylari(hikayeler, simdi = Date.now()) {
   return hikayeler
     .filter((h) => h.durum === 'yayinda' && !h.gorsel && !h.gorselHatasi && !h.genel && !yerFotosu(h))
     .filter((h) => simdi - new Date(h.ilkGorulme).getTime() < 8 * 36e5)
-    .filter((h) => new Set(h.kaynaklar.map((k) => k.ad)).size >= 2 || h.metin || h.trend)
+    // Kaliteli model açıkken bütün Mersin haberlerine görsel; ücretsiz kotada sadece önemlilere
+    .filter((h) => premiumHazirMi() || new Set(h.kaynaklar.map((k) => k.ad)).size >= 2 || h.metin || h.trend)
     .sort((a, b) => b.kaynaklar.length - a.kaynaklar.length || new Date(b.ilkGorulme) - new Date(a.ilkGorulme));
 }
 

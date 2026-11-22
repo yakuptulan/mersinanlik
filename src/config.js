@@ -83,4 +83,7 @@ export const AYAR = {
   // Yapay zekâ görseli: Cloudflare'in günlük ücretsiz kotası ~150 görsel; güvenli pay bırakıyoruz
   gunlukGorselLimiti: 36, // Cloudflare ücretsiz kota: görsel başına ~250 nöron, günde 10.000
   calismaBasinaGorsel: 2, // gün boyuna yayılsın
+  // Kaliteli model (Vertex AI, 300 $ deneme kredisi, ~0,04 $/görsel): bütün Mersin haberleri
+  premiumGunlukGorsel: 55,
+  premiumCalismaBasina: 3,
 };

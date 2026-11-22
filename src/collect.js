@@ -12,7 +12,7 @@ import { yukle, kaydet, temizle, haberiDegerlendir, hikayeyeEkle, onemliMi } fro
 import { arsiveEkle } from './lib/arsiv.js';
 import { riskBul } from './lib/text.js';
 import { AYAR } from './config.js';
-import { gorselUretimHazirMi, gorselUret, gorselAdaylari, sahipsizleriSil, kurumFotosuIndir } from './lib/gorsel-uret.js';
+import { gorselUretimHazirMi, premiumHazirMi, gorselUret, gorselAdaylari, sahipsizleriSil, kurumFotosuIndir } from './lib/gorsel-uret.js';
 import { kurumOku, kurumMetniGetir } from './lib/kurum.js';
 import { trendGetir, trendEslesir } from './lib/trend.js';
 import { kucuk } from './lib/text.js';
@@ -295,11 +295,14 @@ async function main() {
   if (gorselUretimHazirMi()) {
     const bugun = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Istanbul' });
     if (durum.gorsel?.gun !== bugun) durum.gorsel = { gun: bugun, adet: 0 };
-    const kalan = Math.min(AYAR.calismaBasinaGorsel, AYAR.gunlukGorselLimiti - durum.gorsel.adet);
+    const premium = premiumHazirMi();
+    const limit = premium ? AYAR.premiumGunlukGorsel : AYAR.gunlukGorselLimiti;
+    const kalan = Math.min(premium ? AYAR.premiumCalismaBasina : AYAR.calismaBasinaGorsel, limit - durum.gorsel.adet);
     for (const h of gorselAdaylari(veri.hikayeler).slice(0, Math.max(0, kalan))) {
       try {
         h.gorsel = await gorselUret(h);
         durum.gorsel.adet++;
+        if (h.gorselKalite === 'premium') durum.gorsel.premium = (durum.gorsel.premium || 0) + 1;
         console.log(`🖼  Görsel üretildi: ${h.baslik}`);
       } catch (e) {
         console.warn(`! Görsel: ${e.message}`);
