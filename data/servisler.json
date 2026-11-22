@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T21:18:30.879Z",
+ "guncelleme": "2026-11-22T21:25:28.829Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 15,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T21:18:34.083Z",
+  "guncelleme": "2026-11-22T21:25:31.960Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -696,7 +696,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T21:18:34.998Z",
+  "guncelleme": "2026-11-22T21:25:33.024Z",
   "liste": [
    {
     "tur": "su",
@@ -733,7 +733,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T21:18:36.917Z",
+  "guncelleme": "2026-11-22T21:25:37.344Z",
   "kalemler": {
    "gram": {
     "alis": 5737.69,
@@ -766,9 +766,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3078984,
-    "usd": 60858,
-    "degisim": 0.95
+    "satis": 3080984,
+    "usd": 60898,
+    "degisim": 1.02
    }
   },
   "altinlar": [
@@ -901,10 +901,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-23 00:18:01"
+  "kaynakSaati": "2026-11-23 00:25:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T21:15:17.600Z",
+  "guncelleme": "2026-11-22T21:25:39.589Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1525,7 +1525,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-22T18:32:02.788Z",
+  "guncelleme": "2026-11-22T21:25:43.677Z",
   "liste": [
    {
     "id": "gzi1bq",
@@ -8569,7 +8569,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T21:18:47.663Z",
+  "guncelleme": "2026-11-22T21:25:39.871Z",
   "liste": [
    {
     "yol": "/",
@@ -8620,11 +8620,11 @@
     "sayi": 1
    },
    {
-    "yol": "/hava-durumu/anamur/",
+    "yol": "/kar-tatili/",
     "sayi": 1
    },
    {
-    "yol": "/kar-tatili/",
+    "yol": "/hava-durumu/anamur/",
     "sayi": 1
    },
    {
@@ -8666,7 +8666,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T21:18:49.018Z",
+  "guncelleme": "2026-11-22T21:25:43.677Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.38
@@ -8679,7 +8679,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T21:18:50.667Z",
+  "guncelleme": "2026-11-22T21:25:45.569Z",
   "giden": [
    {
     "no": [
@@ -9786,11 +9786,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3014"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-23T21:20:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T21:18:50.667Z",
+  "guncelleme": "2026-11-22T21:25:45.569Z",
   "liste": [
    {
     "id": 6386,
