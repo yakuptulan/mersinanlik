@@ -157,6 +157,22 @@ ${kaynakNotu(veri)}
 }
 
 // Yan kutu (ana sayfa ve diğer sayfalar): en yeni 5 ilan
+// Ana sayfanın üstündeki dikkat çekici iş ilanları bandı
+export function isIlanlariBandi(veri) {
+  const ilanlar = acikIlanlar(veri);
+  if (!ilanlar.length) return '';
+  const kisi = ilanlar.reduce((t, i) => t + (Number(i.acik) || 1), 0);
+  const gun = Date.now() - 24 * 36e5;
+  const yeni = ilanlar.filter((i) => Date.parse(i.ilkGorulme) > gun).length;
+  const ek = yeni && yeni < ilanlar.length ? ` · <em>${yeni} yeni</em>` : '';
+  const ornek = [...new Set(ilanlar.map((i) => i.pozisyon))].slice(0, 3).map((x) => h(x)).join(', ');
+  return `<a class="is-bandi" href="${IS_YOL}">
+<span class="is-bandi-ikon" aria-hidden="true">💼</span>
+<span class="is-bandi-metin"><b>Mersin'de bugün ${ilanlar.length} açık iş ilanı</b><small>${kisi} kişilik alım${ek} · ${ornek}…</small></span>
+<span class="is-bandi-dugme">İlanlara bak →</span>
+</a>`;
+}
+
 export function isIlanlariKutusu(veri) {
   const ilanlar = acikIlanlar(veri);
   if (ilanlar.length < 5) return '';
