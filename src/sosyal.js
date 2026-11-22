@@ -31,7 +31,7 @@ export const AYAR = {
   tasarim: 'a', // tek tasarım denemesinde kullanılan varsayılan: a | b | c | d
   sabah: { bas: 8 * 60 + 30, bit: 11 * 60 }, // 'Mersin'de bugün' kartı: 08.30–11.00 arası, günde bir kez (eczane nöbeti 08.00'de değişir)
   // Kaliteli (ücretli Gemini) görsel kotası: günde en fazla 17; manşet yükseltmesi bunun en fazla 6'sı
-  premium: { gunluk: 17, manset: 6, mansetIlk: 5 },
+  premium: { gunluk: 20, manset: 6, mansetIlk: 5, proGunluk: 7 },
   denenenTasarimlar: ['a', 'b'], // Instagram'da sırayla denenir; karşılaştırma için her gönderiye yazılır
 };
 
@@ -558,8 +558,8 @@ function kotaOku() {
 function kotaYaz(k) { fs.writeFileSync(PREMIUM_DOSYA, JSON.stringify(k, null, 1)); }
 
 // Gerçek fotoğrafı (kurum fotoğrafı, yer/stok fotoğrafı) olan haber yükseltilmez; zaten kaliteliyse de
-function yukseltilmeli(h) {
-  if (h.gorselKalite === 'premium') return false;
+function yukseltilmeli(h, pro = false) {
+  if (h.gorselKalite === 'pro' || (!pro && h.gorselKalite === 'premium')) return false;
   const k = kapakAdresi(h);
   if (k.kurum) return false;
   if (/^\/foto\//.test(k.src)) return false;
@@ -575,13 +575,15 @@ async function gorselYukselt() {
   const k = kotaOku();
   const ay = trGun().slice(0, 7);
   let degisti = false;
-  const harca = async (h, oran, neden) => {
+  const harca = async (h, oran, neden, pro = false) => {
     if (k.sayi >= AYAR.premium.gunluk) return false;
+    if (pro && (k.pro || 0) >= AYAR.premium.proGunluk) pro = false;
     try {
-      await premiumUret(h, oran);
+      await premiumUret(h, oran, { pro });
+      if (pro) k.pro = (k.pro || 0) + 1;
       k.sayi++; k.toplam = (k.toplam || 0) + 1; k.ay[ay] = (k.ay[ay] || 0) + 1;
       degisti = true;
-      console.log(`Kaliteli görsel (${neden}, ${oran}): ${h.baslik}`);
+      console.log(`Kaliteli görsel (${neden}, ${oran}${pro ? ', en iyi model' : ''}): ${h.baslik}`);
       return true;
     } catch (e) {
       console.log(`Kaliteli görsel üretilemedi (${neden}): ${e.message}`);
@@ -597,11 +599,16 @@ async function gorselYukselt() {
     const a = aday(p, d);
     if (!a) continue;
     const h = bul(a.id);
-    if (yukseltilmeli(h) && !secilen.has(h.id)) await harca(h, '16:9', p);
+    // Facebook: paylaşılacak görsel en iyi modelle (günlük sınır AYAR.premium.proGunluk)
+    const proKaldi = (k.pro || 0) < AYAR.premium.proGunluk;
+    if (p === 'facebook' && proKaldi && yukseltilmeli(h, true) && !secilen.has(h.id)) await harca(h, '16:9', p, true);
+    else if (yukseltilmeli(h) && !secilen.has(h.id)) await harca(h, '16:9', p);
     secilen.add(h.id);
-    if (p === 'instagram' && !h.dikeyGorsel && !fs.existsSync(path.join('public/uretilen/dikey', `${h.id}.webp`))) {
+    // Instagram kartı: dikey görsel en iyi modelle
+    const dikeyVar = h.dikeyGorsel || fs.existsSync(path.join('public/uretilen/dikey', `${h.id}.webp`));
+    if (p === 'instagram' && (!dikeyVar || (h.dikeyKalite !== 'pro' && (k.pro || 0) < AYAR.premium.proGunluk))) {
       const kk = kapakAdresi(h);
-      if (!kk.kurum && !/^\/foto\//.test(kk.src)) await harca(h, '4:5', 'instagram kartı');
+      if (!kk.kurum && !/^\/foto\//.test(kk.src)) await harca(h, '4:5', 'instagram kartı', true);
     }
   }
   // 2) Ana sayfa manşetinin ilk sıraları (günde en fazla 6)
@@ -613,7 +620,7 @@ async function gorselYukselt() {
   }
   if (degisti) fs.writeFileSync('data/haberler.json', JSON.stringify(veri, null, 1));
   kotaYaz(k);
-  console.log(`Kaliteli görsel: bugün ${k.sayi}/${AYAR.premium.gunluk}, bu ay ${k.ay[ay] || 0}`);
+  console.log(`Kaliteli görsel: bugün ${k.sayi}/${AYAR.premium.gunluk} (en iyi model ${k.pro || 0}/${AYAR.premium.proGunluk}), bu ay ${k.ay[ay] || 0}`);
 }
 
 // ---------- Modlar ----------

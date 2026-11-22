@@ -3,10 +3,36 @@
 //
 // Ortam değişkenleri: GEMINI_API_KEY, GEMINI_MODEL (varsayılan: gemini-3.5-flash-lite)
 
+import { FIYAT, butceVar, harcamaYaz } from './harcama.js';
+
 const MODEL = process.env.GEMINI_MODEL || 'gemini-3.5-flash-lite';
 // Model yoğunsa (503) sırayla bunlar denenir
 const YEDEK_MODELLER = [MODEL, 'gemini-flash-lite-latest', 'gemini-flash-latest'];
 const bekle = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// Haber metinleri için güçlü model (Vertex AI, Google deneme kredisinden). Olmazsa ücretsiz yola düşülür.
+const METIN_PRO_MODEL = process.env.GEMINI_METIN_MODEL || 'gemini-3.1-pro-preview';
+async function vertexYaz(sistem, icerik, sicaklik) {
+  const T = process.env.VERTEX_TOKEN;
+  if (!T || !butceVar(0.05)) return null;
+  const res = await fetch(`https://aiplatform.googleapis.com/v1/projects/${process.env.VERTEX_PROJE || 'mersinanlik'}/locations/global/publishers/google/models/${METIN_PRO_MODEL}:generateContent`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${T}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      systemInstruction: { parts: [{ text: sistem }] },
+      contents: [{ role: 'user', parts: [{ text: icerik }] }],
+      generationConfig: { temperature: sicaklik, responseMimeType: 'application/json', thinkingConfig: { thinkingLevel: 'low' } },
+    }),
+    signal: AbortSignal.timeout(150000),
+  });
+  if (!res.ok) throw new Error(`Vertex ${METIN_PRO_MODEL} HTTP ${res.status}: ${(await res.text()).slice(0, 160)}`);
+  const json = await res.json();
+  const u = json.usageMetadata || {};
+  const tutar = (u.promptTokenCount || 0) * FIYAT.metinGirdi + ((u.candidatesTokenCount || 0) + (u.thoughtsTokenCount || 0)) * FIYAT.metinCikti;
+  harcamaYaz('metin', tutar);
+  const parca = (json?.candidates?.[0]?.content?.parts || []).filter((p) => p.text && !p.thought).map((p) => p.text).join('');
+  return parca;
+}
 
 const TALIMAT = `Sen Mersin'de yayın yapan yerel bir haber sitesinin editörüsün.
 Sana numaralı haberler vereceğim. Her birinde başlık ve kaynak metni var; bazılarında aynı olayı anlatan iki kaynağın metni ([Kaynak 1], [Kaynak 2]) birlikte verilir. Her biri için:
@@ -86,6 +112,18 @@ function sonucCoz(metinler, sonuc) {
 export async function topluOzetle(metinler) {
   if (!geminiHazirMi() || metinler.length === 0) return [];
   const icerik = metinler.map((m, i) => `${i + 1}) ${m.slice(0, 6500)}`).join('\n\n');
+  if (process.env.VERTEX_TOKEN) {
+    try {
+      const yazi = await vertexYaz(TALIMAT, icerik, 0.2);
+      if (yazi) {
+        const sonuc = sonucCoz(metinler, jsonDizisi(yazi));
+        console.log(`✍️  ${metinler.length} haber güçlü modelle yazıldı (${METIN_PRO_MODEL})`);
+        return sonuc;
+      }
+    } catch (e) {
+      console.warn(`! Güçlü model olmadı, ücretsiz yola geçiliyor: ${String(e.message).slice(0, 140)}`);
+    }
+  }
   if (!process.env.GEMINI_API_KEY) return cfToplu(metinler);
   let res;
   let sonHata = '';

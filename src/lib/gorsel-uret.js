@@ -12,6 +12,7 @@ import sharp from 'sharp';
 import { ILCELER } from '../config.js';
 import { jsonYaz } from './gemini.js';
 import { yerFotosu } from '../fotolar.js';
+import { FIYAT, butceVar, harcamaYaz } from './harcama.js';
 
 const MODEL = process.env.GEMINI_GORSEL_MODEL || 'gemini-2.5-flash-image';
 export const URETILEN_KLASOR = path.resolve('public/uretilen');
@@ -181,15 +182,17 @@ const PREMIUM_ANAHTAR = process.env.GEMINI_GORSEL_KEY;
 const VERTEX_TOKEN = process.env.VERTEX_TOKEN;
 const VERTEX_PROJE = process.env.VERTEX_PROJE || 'mersinanlik';
 const PREMIUM_MODEL = process.env.GEMINI_PREMIUM_MODEL || 'gemini-2.5-flash-image';
+// Sosyal medya paylaşımları için en iyi görsel model (daha pahalı)
+const PRO_MODEL = process.env.GEMINI_PRO_GORSEL_MODEL || 'gemini-3-pro-image';
 export const DIKEY_KLASOR = path.join(URETILEN_KLASOR, 'dikey');
 export const premiumHazirMi = () => Boolean(VERTEX_TOKEN || PREMIUM_ANAHTAR);
 export const premiumYolu = () => (VERTEX_TOKEN ? 'vertex' : PREMIUM_ANAHTAR ? 'ai-studio' : null);
 
-async function premiumIste(metin, oran) {
+async function premiumIste(metin, oran, model = PREMIUM_MODEL) {
   const vertex = Boolean(VERTEX_TOKEN);
   const url = vertex
-    ? `https://aiplatform.googleapis.com/v1/projects/${VERTEX_PROJE}/locations/global/publishers/google/models/${PREMIUM_MODEL}:generateContent`
-    : `https://generativelanguage.googleapis.com/v1beta/models/${PREMIUM_MODEL}:generateContent`;
+    ? `https://aiplatform.googleapis.com/v1/projects/${VERTEX_PROJE}/locations/global/publishers/google/models/${model}:generateContent`
+    : `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
   const res = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', ...(vertex ? { Authorization: `Bearer ${VERTEX_TOKEN}` } : { 'x-goog-api-key': PREMIUM_ANAHTAR }) },
@@ -204,7 +207,9 @@ async function premiumIste(metin, oran) {
 }
 
 // oran: '16:9' (site ve Facebook) ya da '4:5' (Instagram kartı)
-export async function premiumUret(hikaye, oran = '16:9') {
+export async function premiumUret(hikaye, oran = '16:9', { pro = false } = {}) {
+  const fiyat = pro ? FIYAT.proGorsel : FIYAT.gorsel;
+  if (VERTEX_TOKEN && !butceVar(fiyat)) throw new Error('Günlük/toplam kredi tavanı doldu');
   let sahne = '';
   try {
     const j = await jsonYaz(`${SAHNE_TALIMATI}\nReturn JSON only: {"sahne": "..."}`, `Headline: "${hikaye.baslik}"\nCategory: ${hikaye.kategori}\nPlace: ${ilceMetni(hikaye)}${hikaye.ozet ? `\nSummary (Turkish): ${hikaye.ozet}` : ''}`, { sicaklik: 0.4, sadeceGemini: true });
@@ -212,14 +217,15 @@ export async function premiumUret(hikaye, oran = '16:9') {
   } catch {}
   const kurallar = oran === '16:9' ? KURALLAR : KURALLAR.replace('horizontal 16:9 composition', 'vertical 4:5 composition with the main subject in the upper two thirds');
   const metin = `${kurallar}\n\nHeadline (Turkish): "${hikaye.baslik}"\nTopic category: ${hikaye.kategori}\nLocation: ${ilceMetni(hikaye)}${sahne ? `\nScene to show: ${sahne}` : ''}\nQuality: high-end professional news photography, sharp detail, true-to-life colors, natural composition.`;
-  const veri = await premiumIste(metin, oran);
+  const veri = await premiumIste(metin, oran, pro && VERTEX_TOKEN ? PRO_MODEL : PREMIUM_MODEL);
+  if (VERTEX_TOKEN) harcamaYaz(pro ? 'proGorsel' : 'gorsel', fiyat);
   if (oran === '16:9') {
     fs.mkdirSync(URETILEN_KLASOR, { recursive: true });
     const dosya = `${hikaye.id}.webp`;
     await sharp(veri).resize({ width: 1200, height: 675, fit: 'cover' }).webp({ quality: 82 }).toFile(path.join(URETILEN_KLASOR, dosya));
     hikaye.gorsel = dosya;
     hikaye.gorselKaynak = 'yz';
-    hikaye.gorselKalite = 'premium';
+    hikaye.gorselKalite = pro ? 'pro' : 'premium';
     if (sahne) hikaye.gorselPrompt = sahne.slice(0, 400);
     return path.join(URETILEN_KLASOR, dosya);
   }
@@ -227,5 +233,6 @@ export async function premiumUret(hikaye, oran = '16:9') {
   const yol = path.join(DIKEY_KLASOR, `${hikaye.id}.webp`);
   await sharp(veri).resize({ width: 1080, height: 1350, fit: 'cover' }).webp({ quality: 84 }).toFile(yol);
   hikaye.dikeyGorsel = true;
+  if (pro) hikaye.dikeyKalite = 'pro';
   return yol;
 }
