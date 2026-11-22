@@ -12,15 +12,11 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-22T11:41:33.433Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-22",
-  "adet": 23
+  "adet": 24
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -384,8 +380,20 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T11:42:13.413Z",
+  "guncelleme": "2026-11-22T12:11:33.173Z",
   "liste": [
+   {
+    "baslik": "trabzonspor - anadolu efes",
+    "trafik": 200
+   },
+   {
+    "baslik": "aziz yıldırım",
+    "trafik": 1000
+   },
+   {
+    "baslik": "konyaspor - beşiktaş",
+    "trafik": 500
+   },
    {
     "baslik": "enflasyon",
     "trafik": 5000
@@ -399,32 +407,20 @@
     "trafik": 100
    },
    {
-    "baslik": "batman petrol spor",
+    "baslik": "eylül tumbar",
     "trafik": 1000
    },
    {
-    "baslik": "eylül tumbar",
-    "trafik": 500
-   },
-   {
     "baslik": "jamal musiala",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "juventus - venezia",
+    "trafik": 5000
+   },
+   {
+    "baslik": "petrolspor",
     "trafik": 2000
-   },
-   {
-    "baslik": "üniversite",
-    "trafik": 200
-   },
-   {
-    "baslik": "muşspor",
-    "trafik": 500
-   },
-   {
-    "baslik": "marmarabirlik",
-    "trafik": 200
    }
   ]
  },
