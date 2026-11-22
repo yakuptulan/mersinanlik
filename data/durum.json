@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-22T21:51:41.279Z"
   }
  },
  "gorsel": {
@@ -383,8 +387,12 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T21:31:51.464Z",
+  "guncelleme": "2026-11-22T21:52:11.066Z",
   "liste": [
+   {
+    "baslik": "içişleri bakanlığı",
+    "trafik": 500
+   },
    {
     "baslik": "23 kasım hangi burç",
     "trafik": 100
@@ -399,7 +407,7 @@
    },
    {
     "baslik": "tv8 canlı",
-    "trafik": 10000
+    "trafik": 5000
    },
    {
     "baslik": "francesco pio esposito",
@@ -420,10 +428,6 @@
    {
     "baslik": "torreense - benfica",
     "trafik": 1000
-   },
-   {
-    "baslik": "daha 17 26 bölüm",
-    "trafik": 5000
    }
   ]
  },
