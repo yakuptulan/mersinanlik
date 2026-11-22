@@ -13,7 +13,7 @@ import path from 'node:path';
 import { SITE, GUNDEM, KATEGORILER, ILCELER } from './config.js';
 import { haberYolu, kapakAdresi } from './templates/parcalar.js';
 import { aktifSuKesintileri, mansetleriSec } from './templates/sayfalar.js';
-import { premiumHazirMi, premiumUret } from './lib/gorsel-uret.js';
+import { premiumHazirMi, premiumUret, premiumYolu } from './lib/gorsel-uret.js';
 
 const API = 'https://graph.facebook.com/v23.0';
 const TOKEN = process.env.META_TOKEN;
@@ -22,7 +22,8 @@ const KART_KLASORU = 'dist/sosyal';
 
 export const AYAR = {
   facebook: { baslangic: '2026-11-23T09:00:00+03:00', gunluk: 8, araDakika: 75 },
-  instagram: { baslangic: '2026-11-25T10:00:00+03:00', gunluk: 3, araDakika: 180 },
+  // Yeni hesabı korumak için ilk 3 gün günde 2 gönderi, sonra 3
+  instagram: { baslangic: '2026-11-23T10:00:00+03:00', gunluk: 3, ilkGunlerGunluk: 2, ilkGunlerBitis: '2026-11-26T00:00:00+03:00', araDakika: 180 },
   sessizBas: 23, // 23:00 – 08:00 arası paylaşım yok
   sessizBit: 8,
   enEskiSaat: 6, // bundan eski haber paylaşılmaz
@@ -104,7 +105,8 @@ function siraGeldi(platform, d, simdi = Date.now()) {
   if (saat >= AYAR.sessizBas || saat < AYAR.sessizBit) return 'gece saatleri';
   const gecmis = d[platform] || [];
   const bugun = gecmis.filter((x) => trGun(Date.parse(x.zaman)) === trGun(simdi)).length;
-  if (bugun >= a.gunluk) return `günlük sınır doldu (${bugun})`;
+  const sinir = a.ilkGunlerBitis && simdi < Date.parse(a.ilkGunlerBitis) ? a.ilkGunlerGunluk : a.gunluk;
+  if (bugun >= sinir) return `günlük sınır doldu (${bugun})`;
   const son = gecmis.at(-1);
   if (son && simdi - Date.parse(son.zaman) < a.araDakika * 6e4) return 'iki paylaşım arası bekleme';
   return null;
@@ -565,7 +567,8 @@ function yukseltilmeli(h) {
 }
 
 async function gorselYukselt() {
-  if (!premiumHazirMi()) return console.log('Kaliteli görsel: GEMINI_GORSEL_KEY yok, atlandı.');
+  if (!premiumHazirMi()) return console.log('Kaliteli görsel: Vertex girişi ya da GEMINI_GORSEL_KEY yok, atlandı.');
+  console.log('Kaliteli görsel yolu:', premiumYolu());
   const veri = JSON.parse(fs.readFileSync('data/haberler.json', 'utf8'));
   const tum = veri.hikayeler || [];
   const d = durumOku();
@@ -759,6 +762,17 @@ if (mod === '--sabah-kart') {
   const h = id && id !== 'ilk' ? haberler().find((x) => x.id === id) : haberler().find((x) => !x.genel && kapakAdresi(x)?.src);
   await kartCiz(h, process.argv[4] || 'kart.jpg', process.argv[5] || AYAR.tasarim);
   console.log('Kart çizildi:', h.baslik);
+} else if (mod === '--gorsel-dene') {
+  // Tek görsel üretip kaydetmeden boyutunu yazar (bağlantı testi; 1 görsel ücreti)
+  const h = haberler().find((x) => !x.genel && x.durum === 'yayinda');
+  const kopya = { ...h, id: 'deneme-' + h.id };
+  try {
+    const yol = await premiumUret(kopya, '16:9');
+    console.log('Kaliteli görsel denemesi BAŞARILI:', premiumYolu(), yol, fs.statSync(yol).size, 'bayt');
+    fs.unlinkSync(yol);
+  } catch (e) {
+    console.log('Kaliteli görsel denemesi BAŞARISIZ:', premiumYolu(), e.message.slice(0, 300));
+  }
 } else if (mod === '--gorsel') {
   try { await gorselYukselt(); } catch (e) { console.log('Kaliteli görsel hata:', e.message); }
 } else if (['--kontrol', '--hazirla', '--paylas', '--karsilastir'].includes(mod)) {

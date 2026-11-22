@@ -5,6 +5,7 @@ on:
 
 permissions:
   contents: read
+  id-token: write
 
 jobs:
   kontrol:
@@ -17,6 +18,23 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Google girişi (görsel üretimi, Vertex AI)
+        id: vertex
+        continue-on-error: true
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/1047223083910/locations/global/workloadIdentityPools/github/providers/github
+          service_account: gorsel-uretici@mersinanlik.iam.gserviceaccount.com
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/cloud-platform
+          create_credentials_file: false
+
+      - name: Kaliteli görsel bağlantı denemesi (1 görsel)
+        run: node src/sosyal.js --gorsel-dene
+        env:
+          VERTEX_TOKEN: ${{ steps.vertex.outputs.access_token }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
       - name: Jetonun gördüğü sayfa ve Instagram hesabı
         run: node src/sosyal.js --kontrol && node src/sosyal.js --karsilastir
         env:

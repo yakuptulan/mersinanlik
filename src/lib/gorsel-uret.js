@@ -164,16 +164,24 @@ export function sahipsizleriSil(hikayeler) {
 // ---------- Kaliteli (ücretli) görsel: Gemini ----------
 // Sadece sosyal medyada paylaşılacak ve manşete çıkan haberlerde kullanılır (günlük kota src/sosyal.js'te).
 // Anahtar: GEMINI_GORSEL_KEY (faturalandırması açık ayrı proje). Model: GEMINI_PREMIUM_MODEL.
+// Öncelik Vertex AI (VERTEX_TOKEN: GitHub'ın anahtarsız Google girişi; Google Cloud deneme kredisi buraya harcanabiliyor),
+// yoksa AI Studio anahtarı (GEMINI_GORSEL_KEY).
 const PREMIUM_ANAHTAR = process.env.GEMINI_GORSEL_KEY;
+const VERTEX_TOKEN = process.env.VERTEX_TOKEN;
+const VERTEX_PROJE = process.env.VERTEX_PROJE || 'mersinanlik';
 const PREMIUM_MODEL = process.env.GEMINI_PREMIUM_MODEL || 'gemini-2.5-flash-image';
 export const DIKEY_KLASOR = path.join(URETILEN_KLASOR, 'dikey');
-export const premiumHazirMi = () => Boolean(PREMIUM_ANAHTAR);
+export const premiumHazirMi = () => Boolean(VERTEX_TOKEN || PREMIUM_ANAHTAR);
+export const premiumYolu = () => (VERTEX_TOKEN ? 'vertex' : PREMIUM_ANAHTAR ? 'ai-studio' : null);
 
 async function premiumIste(metin, oran) {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${PREMIUM_MODEL}:generateContent`;
+  const vertex = Boolean(VERTEX_TOKEN);
+  const url = vertex
+    ? `https://aiplatform.googleapis.com/v1/projects/${VERTEX_PROJE}/locations/global/publishers/google/models/${PREMIUM_MODEL}:generateContent`
+    : `https://generativelanguage.googleapis.com/v1beta/models/${PREMIUM_MODEL}:generateContent`;
   const res = await fetch(url, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'x-goog-api-key': PREMIUM_ANAHTAR },
+    headers: { 'Content-Type': 'application/json', ...(vertex ? { Authorization: `Bearer ${VERTEX_TOKEN}` } : { 'x-goog-api-key': PREMIUM_ANAHTAR }) },
     body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: metin }] }], generationConfig: { responseModalities: ['IMAGE'], imageConfig: { aspectRatio: oran } } }),
     signal: AbortSignal.timeout(120000),
   });
