@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T13:32:15.273Z",
+ "guncelleme": "2026-11-22T13:41:53.487Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 21,
@@ -51,7 +51,7 @@
      "tarih": "2026-11-23",
      "min": 13,
      "max": 21,
-     "durum": "Az bulutlu"
+     "durum": "Açık"
     },
     {
      "tarih": "2026-11-24",
@@ -63,7 +63,7 @@
      "tarih": "2026-11-25",
      "min": 10,
      "max": 19,
-     "durum": "Sisli"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-26",
@@ -75,7 +75,7 @@
   },
   "aydincik": {
    "sicaklik": 21,
-   "durum": "Az bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -86,12 +86,12 @@
     {
      "tarih": "2026-11-23",
      "min": 13,
-     "max": 21,
+     "max": 20,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-24",
-     "min": 12,
+     "min": 11,
      "max": 19,
      "durum": "Az bulutlu"
     },
@@ -99,7 +99,7 @@
      "tarih": "2026-11-25",
      "min": 12,
      "max": 19,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-26",
@@ -123,12 +123,12 @@
      "tarih": "2026-11-23",
      "min": 12,
      "max": 21,
-     "durum": "Az bulutlu"
+     "durum": "Açık"
     },
     {
      "tarih": "2026-11-24",
-     "min": 12,
-     "max": 21,
+     "min": 11,
+     "max": 20,
      "durum": "Açık"
     },
     {
@@ -164,12 +164,12 @@
     {
      "tarih": "2026-11-24",
      "min": 6,
-     "max": 11,
-     "durum": "Hafif yağmurlu"
+     "max": 10,
+     "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-25",
-     "min": 4,
+     "min": 2,
      "max": 10,
      "durum": "Sisli"
     },
@@ -199,7 +199,7 @@
     },
     {
      "tarih": "2026-11-24",
-     "min": 14,
+     "min": 13,
      "max": 17,
      "durum": "Hafif sağanak"
     },
@@ -207,7 +207,7 @@
      "tarih": "2026-11-25",
      "min": 11,
      "max": 18,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-26",
@@ -219,7 +219,7 @@
   },
   "gulnar": {
    "sicaklik": 16,
-   "durum": "Açık",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -230,7 +230,7 @@
     {
      "tarih": "2026-11-23",
      "min": 8,
-     "max": 15,
+     "max": 14,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -243,7 +243,7 @@
      "tarih": "2026-11-25",
      "min": 6,
      "max": 11,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-26",
@@ -254,13 +254,13 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 21,
+   "sicaklik": 20,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-22",
-     "min": 14,
-     "max": 21,
+     "min": 15,
+     "max": 20,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -271,15 +271,15 @@
     },
     {
      "tarih": "2026-11-24",
-     "min": 13,
-     "max": 19,
+     "min": 12,
+     "max": 17,
      "durum": "Sağanak"
     },
     {
      "tarih": "2026-11-25",
-     "min": 12,
+     "min": 11,
      "max": 17,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-26",
@@ -308,14 +308,14 @@
     {
      "tarih": "2026-11-24",
      "min": 11,
-     "max": 18,
+     "max": 19,
      "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-25",
      "min": 6,
      "max": 16,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-26",
@@ -326,20 +326,20 @@
    ]
   },
   "silifke": {
-   "sicaklik": 22,
+   "sicaklik": 23,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 13,
-     "max": 22,
+     "max": 23,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-23",
      "min": 10,
      "max": 21,
-     "durum": "Parçalı bulutlu"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-24",
@@ -351,7 +351,7 @@
      "tarih": "2026-11-25",
      "min": 9,
      "max": 18,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-26",
@@ -362,30 +362,30 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 23,
+   "sicaklik": 22,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 15,
-     "max": 23,
-     "durum": "Parçalı bulutlu"
+     "max": 22,
+     "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-23",
-     "min": 10,
+     "min": 9,
      "max": 22,
      "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-24",
      "min": 13,
-     "max": 20,
-     "durum": "Hafif sağanak"
+     "max": 18,
+     "durum": "Sağanak"
     },
     {
      "tarih": "2026-11-25",
-     "min": 11,
+     "min": 10,
      "max": 19,
      "durum": "Az bulutlu"
     },
@@ -416,12 +416,12 @@
     {
      "tarih": "2026-11-24",
      "min": 13,
-     "max": 19,
+     "max": 18,
      "durum": "Sağanak"
     },
     {
      "tarih": "2026-11-25",
-     "min": 12,
+     "min": 11,
      "max": 17,
      "durum": "Az bulutlu"
     },
@@ -452,12 +452,12 @@
     {
      "tarih": "2026-11-24",
      "min": 13,
-     "max": 19,
+     "max": 18,
      "durum": "Sağanak"
     },
     {
      "tarih": "2026-11-25",
-     "min": 12,
+     "min": 11,
      "max": 17,
      "durum": "Az bulutlu"
     },
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T13:32:18.566Z",
+  "guncelleme": "2026-11-22T13:41:57.739Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T13:32:19.500Z",
+  "guncelleme": "2026-11-22T13:41:58.669Z",
   "liste": [
    {
     "tur": "su",
@@ -857,7 +857,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T13:32:23.661Z",
+  "guncelleme": "2026-11-22T13:42:02.584Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -890,9 +890,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3065621,
-    "usd": 60659,
-    "degisim": 1.71
+    "satis": 3072791,
+    "usd": 60801,
+    "degisim": 0.68
    }
   },
   "altinlar": [
@@ -1025,10 +1025,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 16:32:01"
+  "kaynakSaati": "2026-11-22 16:42:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T13:32:26.244Z",
+  "guncelleme": "2026-11-22T13:42:04.784Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1853,7 +1853,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-22T13:32:28.100Z",
+  "guncelleme": "2026-11-22T13:42:06.548Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -2278,13 +2278,13 @@
      "sira": 7,
      "takim": "Ejderoğlu Kırşehir",
      "ham": "EJDEROĞLU KIRŞEHİR FUTBOL SPOR KULÜBÜ",
-     "o": 12,
+     "o": 13,
      "g": 7,
      "b": 3,
-     "m": 2,
-     "a": 32,
-     "y": 15,
-     "av": 17,
+     "m": 3,
+     "a": 34,
+     "y": 18,
+     "av": 16,
      "p": 24,
      "mersin": false
     },
@@ -2306,14 +2306,14 @@
      "sira": 9,
      "takim": "Yeni Mersin İdmanyurdu",
      "ham": "YENİ MERSİN İDMANYURDU FUTBOL A.Ş.",
-     "o": 11,
-     "g": 7,
+     "o": 12,
+     "g": 8,
      "b": 0,
      "m": 4,
-     "a": 16,
-     "y": 10,
-     "av": 6,
-     "p": 21,
+     "a": 19,
+     "y": 12,
+     "av": 7,
+     "p": 24,
      "mersin": true
     },
     {
@@ -2464,7 +2464,7 @@
      "tarih": "2026-11-22",
      "saat": "13:00",
      "ev": "Ejderoğlu Kırşehir",
-     "skor": null,
+     "skor": "2-3",
      "dep": "Yeni Mersin İdmanyurdu",
      "mersin": true
     },
@@ -4358,14 +4358,14 @@
       "sira": 5,
       "takim": "Kızılkaya Tarım Şanlıurfaspor",
       "ham": "KIZILKAYA TARIM ŞANLIURFASPOR",
-      "o": 12,
+      "o": 13,
       "g": 7,
-      "b": 3,
+      "b": 4,
       "m": 2,
-      "a": 28,
-      "y": 14,
+      "a": 29,
+      "y": 15,
       "av": 14,
-      "p": 24,
+      "p": 25,
       "mersin": false
      },
      {
@@ -4440,6 +4440,20 @@
      },
      {
       "sira": 11,
+      "takim": "Menemen",
+      "ham": "MENEMEN FUTBOL KULÜBÜ",
+      "o": 13,
+      "g": 4,
+      "b": 4,
+      "m": 5,
+      "a": 14,
+      "y": 17,
+      "av": -3,
+      "p": 16,
+      "mersin": false
+     },
+     {
+      "sira": 12,
       "takim": "Isbaş Isparta 32 Spor",
       "ham": "ISBAŞ ISPARTA 32 SPOR KULÜBÜ",
       "o": 13,
@@ -4449,20 +4463,6 @@
       "a": 20,
       "y": 22,
       "av": -2,
-      "p": 15,
-      "mersin": false
-     },
-     {
-      "sira": 12,
-      "takim": "Menemen",
-      "ham": "MENEMEN FUTBOL KULÜBÜ",
-      "o": 12,
-      "g": 4,
-      "b": 3,
-      "m": 5,
-      "a": 13,
-      "y": 16,
-      "av": -3,
       "p": 15,
       "mersin": false
      },
@@ -4612,7 +4612,7 @@
       "tarih": "2026-11-22",
       "saat": "14:00",
       "ev": "Menemen",
-      "skor": null,
+      "skor": "1-1",
       "dep": "Kızılkaya Tarım Şanlıurfaspor",
       "mersin": false
      },
@@ -5112,19 +5112,19 @@
       "G",
       "G"
      ],
-     "Isbaş Isparta 32 Spor": [
-      "M",
-      "M",
-      "G",
-      "B",
-      "M"
-     ],
      "Menemen": [
       "G",
       "B",
       "M",
       "B",
       "B"
+     ],
+     "Isbaş Isparta 32 Spor": [
+      "M",
+      "M",
+      "G",
+      "B",
+      "M"
      ],
      "Ankaraspor": [
       "M",
@@ -5193,13 +5193,13 @@
       "sira": 2,
       "takim": "Erzincan Futbol Yatırımları",
       "ham": "ERZİNCAN FUTBOL YATIRIMLARI A.Ş.",
-      "o": 11,
+      "o": 12,
       "g": 7,
       "b": 3,
-      "m": 1,
-      "a": 20,
-      "y": 11,
-      "av": 9,
+      "m": 2,
+      "a": 22,
+      "y": 14,
+      "av": 8,
       "p": 24,
       "mersin": false
      },
@@ -5305,14 +5305,14 @@
       "sira": 10,
       "takim": "Karacabey Belediye Spor",
       "ham": "KARACABEY BELEDİYE SPOR A.Ş.",
-      "o": 11,
-      "g": 4,
+      "o": 12,
+      "g": 5,
       "b": 3,
       "m": 4,
-      "a": 12,
-      "y": 19,
-      "av": -7,
-      "p": 15,
+      "a": 15,
+      "y": 21,
+      "av": -6,
+      "p": 18,
       "mersin": false
      },
      {
@@ -5345,6 +5345,20 @@
      },
      {
       "sira": 13,
+      "takim": "Mke Ankaragücü",
+      "ham": "MKE ANKARAGÜCÜ",
+      "o": 12,
+      "g": 3,
+      "b": 5,
+      "m": 4,
+      "a": 20,
+      "y": 16,
+      "av": 4,
+      "p": 11,
+      "mersin": false
+     },
+     {
+      "sira": 14,
       "takim": "Fethiyespor",
       "ham": "FETHİYESPOR",
       "o": 12,
@@ -5355,20 +5369,6 @@
       "y": 26,
       "av": -14,
       "p": 11,
-      "mersin": false
-     },
-     {
-      "sira": 14,
-      "takim": "Mke Ankaragücü",
-      "ham": "MKE ANKARAGÜCÜ",
-      "o": 11,
-      "g": 2,
-      "b": 5,
-      "m": 4,
-      "a": 17,
-      "y": 16,
-      "av": 1,
-      "p": 8,
       "mersin": false
      },
      {
@@ -5403,13 +5403,13 @@
       "sira": 17,
       "takim": "Ekinciler İskenderunspor",
       "ham": "EKİNCİLER İSKENDERUNSPOR A.Ş.",
-      "o": 11,
+      "o": 12,
       "g": 0,
       "b": 2,
-      "m": 9,
+      "m": 10,
       "a": 6,
-      "y": 29,
-      "av": -23,
+      "y": 32,
+      "av": -26,
       "p": -1,
       "mersin": false
      }
@@ -5443,7 +5443,7 @@
       "tarih": "2026-11-22",
       "saat": "14:00",
       "ev": "Erzincan Futbol Yatırımları",
-      "skor": null,
+      "skor": "2-3",
       "dep": "Karacabey Belediye Spor",
       "mersin": false
      },
@@ -5451,7 +5451,7 @@
       "tarih": "2026-11-22",
       "saat": "14:00",
       "ev": "Ekinciler İskenderunspor",
-      "skor": null,
+      "skor": "0-3",
       "dep": "Mke Ankaragücü",
       "mersin": false
      },
@@ -5752,12 +5752,12 @@
       {
        "ev": "Erzincan Futbol Yatırımları",
        "dep": "Karacabey Belediye Spor",
-       "skor": null
+       "skor": "2-3"
       },
       {
        "ev": "Ekinciler İskenderunspor",
        "dep": "Mke Ankaragücü",
-       "skor": null
+       "skor": "0-3"
       },
       {
        "ev": "Beyoğlu Yeni Çarşı Spor Faaliyetleri",
@@ -5865,11 +5865,11 @@
       "G"
      ],
      "Erzincan Futbol Yatırımları": [
-      "G",
       "M",
       "G",
       "G",
-      "G"
+      "G",
+      "M"
      ],
      "Akedaş Kahramanmaraş İstiklal Spor": [
       "G",
@@ -5921,11 +5921,11 @@
       "M"
      ],
      "Karacabey Belediye Spor": [
-      "G",
       "M",
       "B",
       "G",
-      "M"
+      "M",
+      "G"
      ],
      "Kırklarelispor": [
       "M",
@@ -5941,19 +5941,19 @@
       "M",
       "M"
      ],
+     "Mke Ankaragücü": [
+      "B",
+      "M",
+      "M",
+      "B",
+      "G"
+     ],
      "Fethiyespor": [
       "M",
       "G",
       "M",
       "G",
       "M"
-     ],
-     "Mke Ankaragücü": [
-      "B",
-      "B",
-      "M",
-      "M",
-      "B"
      ],
      "Serik Spor": [
       "M",
@@ -5971,8 +5971,8 @@
      ],
      "Ekinciler İskenderunspor": [
       "M",
-      "M",
       "B",
+      "M",
       "M",
       "M"
      ]
@@ -8258,7 +8258,7 @@
       {
        "ev": "Ejderoğlu Kırşehir",
        "dep": "Yeni Mersin İdmanyurdu",
-       "skor": null
+       "skor": "2-3"
       },
       {
        "ev": "1964 Silifke Spor",
@@ -8283,7 +8283,7 @@
       {
        "ev": "Ağrı 1970 Spor",
        "dep": "Yozgat Belediyesi Bozok Spor",
-       "skor": null
+       "skor": "0-1"
       },
       {
        "ev": "Niğde Belediyesi Spor",
@@ -8440,10 +8440,10 @@
       "M"
      ],
      "Ejderoğlu Kırşehir": [
-      "G",
       "B",
       "B",
       "G",
+      "M",
       "M"
      ],
      "Kırıkkale FK Spor": [
@@ -8454,6 +8454,7 @@
       "B"
      ],
      "Yeni Mersin İdmanyurdu": [
+      "G",
       "G",
       "G",
       "G",
@@ -8481,17 +8482,17 @@
       "M"
      ],
      "Yozgat Belediyesi Bozok Spor": [
-      "M",
       "G",
       "M",
       "B",
-      "M"
+      "M",
+      "G"
      ],
      "Ağrı 1970 Spor": [
       "M",
       "M",
-      "M",
       "G",
+      "M",
       "M"
      ],
      "1964 Silifke Spor": [
@@ -8529,7 +8530,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-22T13:33:11.335Z",
+    "guncelleme": "2026-11-22T13:42:54.077Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8611,7 +8612,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-22T13:33:12.544Z",
+    "guncelleme": "2026-11-22T13:42:55.286Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8693,7 +8694,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-22T13:33:13.760Z",
+    "guncelleme": "2026-11-22T13:42:56.503Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8792,7 +8793,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T13:32:26.450Z",
+  "guncelleme": "2026-11-22T13:42:05.347Z",
   "liste": [
    {
     "yol": "/",
@@ -8881,7 +8882,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T13:33:14.960Z",
+  "guncelleme": "2026-11-22T13:42:57.704Z",
   "deniz": {
    "sicaklik": 21.9,
    "dalga": 0.44
@@ -8894,7 +8895,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T13:33:16.560Z",
+  "guncelleme": "2026-11-22T13:42:59.302Z",
   "giden": [
    {
     "no": [
@@ -8905,7 +8906,7 @@
     "planlanan": "2026-11-22T13:50:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "SON ÇAĞRI",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -10149,7 +10150,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T13:33:16.559Z",
+  "guncelleme": "2026-11-22T13:42:59.301Z",
   "liste": [
    {
     "id": 6386,
