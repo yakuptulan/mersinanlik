@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T09:16:53.924Z",
+ "guncelleme": "2026-11-22T09:31:55.057Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 22,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T09:16:59.072Z",
+  "guncelleme": "2026-11-22T09:31:57.961Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T09:17:00.468Z",
+  "guncelleme": "2026-11-22T09:31:58.943Z",
   "liste": [
    {
     "tur": "su",
@@ -821,11 +821,28 @@
       ]
      }
     ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Erdemli İlçesine bağlı Fatih ve Kargıcak Mahallesi genelinde içme suyu arızası nedeniyle saat 15:00 kadar su kesintisi uygulanacaktır.",
+    "baslangic": "2026-11-22T09:18:00.000Z",
+    "bitis": "2026-11-22T12:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "erdemli",
+      "ad": "Erdemli",
+      "mahalleler": [
+       "Fatih",
+       "Kargıcak"
+      ]
+     }
+    ]
    }
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T09:17:03.222Z",
+  "guncelleme": "2026-11-22T09:32:02.711Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -858,9 +875,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3013129,
-    "usd": 59620,
-    "degisim": 3.07
+    "satis": 3026064,
+    "usd": 59876,
+    "degisim": 3.45
    }
   },
   "altinlar": [
@@ -993,10 +1010,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 12:17:02"
+  "kaynakSaati": "2026-11-22 12:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T09:14:04.964Z",
+  "guncelleme": "2026-11-22T09:32:05.317Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1717,7 +1734,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-22T06:32:22.816Z",
+  "guncelleme": "2026-11-22T09:32:08.528Z",
   "liste": [
    {
     "id": "gzi1bq",
@@ -8670,11 +8687,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T09:17:13.470Z",
+  "guncelleme": "2026-11-22T09:32:05.833Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 15
+    "sayi": 14
    },
    {
     "yol": "/spor/",
@@ -8751,10 +8768,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T09:17:15.756Z",
+  "guncelleme": "2026-11-22T09:32:08.528Z",
   "deniz": {
    "sicaklik": 21.8,
-   "dalga": 0.58
+   "dalga": 0.56
   },
   "hava": {
    "aqi": 28,
@@ -8764,7 +8781,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T09:17:18.435Z",
+  "guncelleme": "2026-11-22T09:32:10.799Z",
   "giden": [
    {
     "no": [
@@ -9365,6 +9382,18 @@
     "kapi": "103",
     "durum": "",
     "hat": "dis"
+   },
+   {
+    "no": [
+     "PC2085"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-23T09:20:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
@@ -9983,7 +10012,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T09:17:18.435Z",
+  "guncelleme": "2026-11-22T09:32:10.798Z",
   "liste": [
    {
     "id": 6386,
