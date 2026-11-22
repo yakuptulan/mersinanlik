@@ -1762,4 +1762,12 @@ img.kr-foto { object-fit: cover; background: #1f2937; padding: 0; }
 .haber-is-tum { display: inline-block; margin-top: 12px; padding: 9px 16px; border-radius: 999px; background: var(--turuncu); color: #fff; font-weight: 800; font-size: 14px; text-decoration: none; }
 .haber-is-tum:hover { color: #fff; filter: brightness(1.05); }
 @media (max-width: 700px) { .haber-is-liste { grid-template-columns: 1fr; } }
-@media (min-width: 1101px) { .widgetlar:has(.widget-is) { grid-template-columns: 1.25fr .95fr .95fr 1.15fr .85fr .85fr 1fr; gap: 10px; } .widgetlar:has(.widget-is) .widget-liste { font-size: 13.5px; } }
+@media (min-width: 1240px) { .widgetlar:has(.widget-is) { grid-template-columns: 1.25fr .95fr .95fr 1.15fr .85fr .85fr 1fr; gap: 10px; } .widgetlar:has(.widget-is) .widget-liste { font-size: 13.5px; } }
+/* Kesintiler kartı: Su / Elektrik sekmeleri kartın genişliğine yayılsın, yazılar ortalı ve simetrik dursun */
+.widget-kesinti .sekmeler { display: flex; width: 100%; align-self: stretch; box-sizing: border-box; }
+.widget-kesinti .sekmeler button { flex: 1 1 0; min-width: 0; justify-content: center; padding-left: 6px; padding-right: 6px; white-space: nowrap; }
+/* Orta genişlikte 7 kart simetrik dursun: hava kartı iki satır kaplar, kalan 6 kart yanında düzgün ızgara olur */
+@media (min-width: 901px) and (max-width: 1239px) { .widgetlar:has(.widget-is) { grid-template-columns: 1.2fr 1fr 1fr 1fr; } }
+@media (min-width: 701px) and (max-width: 1239px) { .widgetlar:has(.widget-is) .widget-hava { grid-row: span 2; } }
+@media (min-width: 701px) and (max-width: 900px) { .widgetlar:has(.widget-is) > .widget:last-child { grid-column: span 2; } }
+@media (max-width: 900px) { .is-dugme { display: none; } }
