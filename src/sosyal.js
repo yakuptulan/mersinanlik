@@ -25,6 +25,7 @@ export const AYAR = {
   sessizBit: 8,
   enEskiSaat: 6, // bundan eski haber paylaşılmaz
   haricKategori: new Set(['siyaset']),
+  tasarim: 'a', // Instagram kart tasarımı: a | b | c | d
 };
 
 const ILCE_AD = Object.fromEntries(ILCELER.map((i) => [i.slug, i.ad]));
@@ -166,7 +167,7 @@ export function satirlara(metin, boyut, enFazla) {
   return satirlar;
 }
 
-export async function kartCiz(h, cikti) {
+export async function kartCiz(h, cikti, tasarim = AYAR.tasarim) {
   const sharp = (await import('sharp')).default;
   const { Resvg } = await import('@resvg/resvg-js');
   const kapak = kapakAdresi(h);
@@ -189,11 +190,12 @@ export async function kartCiz(h, cikti) {
   const yapayZeka = !kapak.kurum && !kapak.kapak && /\/uretilen\//.test(kapak.src) && (!h.gorselKaynak || h.gorselKaynak === 'yz');
   const tarih = new Intl.DateTimeFormat('tr-TR', { timeZone: 'Europe/Istanbul', day: 'numeric', month: 'long' }).format(Date.parse(h.ilkGorulme));
   const katAd = kat.ad.toLocaleUpperCase('tr-TR');
-  const ozetSatir = satirlara(kisalt(h.ozet, 210), 31, W - 150).slice(0, 3);
+  const ozetSatir = ozetSatirlari(h.ozet, 31, W - 150, 3);
   const ozetBas = sonSatir + 150;
   const gorselBit = 820;
 
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+  const ortak = { h, kat, katAd, ilce, tarih, yapayZeka, logo, yerel, sharp };
+  const svg = tasarim !== 'a' ? await alternatifSvg(tasarim, ortak) : `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
 <defs>
 <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
 <stop offset="0" stop-color="#0A1530" stop-opacity="0"/>
@@ -233,6 +235,116 @@ ${ozetSatir.map((s, i) => `<text x="64" y="${ozetBas + i * 46}" font-family="Pop
     .asPng();
   await sharp(png).jpeg({ quality: 88, mozjpeg: true }).toFile(cikti);
   return cikti;
+}
+
+
+// Özeti en fazla n satıra böler; sığmazsa son satırı "…" ile kapatır
+function ozetSatirlari(metin, boyut, genis, n) {
+  const ilkCumle = (metin || '').split(/(?<=[.!?])\s+(?=[A-ZÇĞİÖŞÜ"“])/)[0];
+  const tum = satirlara(ilkCumle, boyut, genis);
+  if (tum.length <= n) return tum;
+  const kes = tum.slice(0, n);
+  let son = kes[n - 1];
+  while (genislik(son + '…', boyut) > genis && son.includes(' ')) son = son.replace(/\s+\S*$/, '');
+  kes[n - 1] = son.replace(/[,;:]$/, '') + '…';
+  return kes;
+}
+
+// ---------- Alternatif kart tasarımları ----------
+function baslikYerlestir(metin, enBuyuk, enKucuk, genis, enFazlaSatir) {
+  let boyut = enBuyuk;
+  let satir = satirlara(metin, boyut, genis);
+  while (satir.length > enFazlaSatir && boyut > enKucuk) {
+    boyut -= 4;
+    satir = satirlara(metin, boyut, genis);
+  }
+  if (satir.length > enFazlaSatir) satir = [...satir.slice(0, enFazlaSatir - 1), satir.slice(enFazlaSatir - 1).join(' ')];
+  return { boyut, satir, yuk: Math.round(boyut * 1.18) };
+}
+const yazi = (x, y, s, boyut, renk, agirlik = 700, ek = '') => `<text x="${x}" y="${y}" font-family="Poppins" font-weight="${agirlik}" font-size="${boyut}" fill="${renk}" ${ek}>${kacis(s)}</text>`;
+
+async function alternatifSvg(tasarim, { h, kat, katAd, ilce, tarih, yapayZeka, logo, yerel, sharp }) {
+  const fotoAl = async (w, hh) => (await sharp(yerel).resize(w, hh, { fit: 'cover', position: 'attention' }).jpeg({ quality: 90 }).toBuffer()).toString('base64');
+  const bas = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">`;
+  const temsili = (x, y, renk = '#FFFFFF', anchor = 'start') => (yapayZeka ? yazi(x, y, 'Temsili görsel', 21, renk, 500, `fill-opacity="0.75" text-anchor="${anchor}"`) : '');
+
+  if (tasarim === 'b') {
+    // Tam ekran fotoğraf, altta güçlü karartma, "son dakika" tarzı bant
+    const foto = await fotoAl(W, H);
+    const ilceU = ilce.toLocaleUpperCase('tr-TR');
+    const { boyut, satir, yuk } = baslikYerlestir(h.baslik, 70, 48, W - 128, 4);
+    const son = H - 190;
+    const ilk = son - (satir.length - 1) * yuk;
+    return `${bas}
+<defs><linearGradient id="k" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#050B1C" stop-opacity="0"/><stop offset="0.5" stop-color="#050B1C" stop-opacity="0.75"/><stop offset="1" stop-color="#050B1C" stop-opacity="0.97"/></linearGradient>
+<linearGradient id="u" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#050B1C" stop-opacity="0.65"/><stop offset="1" stop-color="#050B1C" stop-opacity="0"/></linearGradient>
+<filter id="gl"><feGaussianBlur stdDeviation="5"/></filter></defs>
+<image href="data:image/jpeg;base64,${foto}" x="0" y="0" width="${W}" height="${H}"/>
+<rect width="${W}" height="220" fill="url(#u)"/>
+<rect y="${ilk - 330}" width="${W}" height="${H - ilk + 330}" fill="url(#k)"/>
+<image href="data:image/png;base64,${logo}" x="48" y="40" width="180" height="120"/>
+${temsili(W - 52, 74, '#FFFFFF', 'end')}
+<rect x="64" y="${ilk - boyut - 70}" width="${Math.round(genislik(ilceU, 24) + 36)}" height="46" fill="#E5484D"/>
+${yazi(82, ilk - boyut - 38, ilceU, 24, '#fff', 700, 'letter-spacing="1.5"')}
+<rect x="${Math.round(64 + genislik(ilceU, 24) + 36)}" y="${ilk - boyut - 70}" width="${Math.round(genislik(katAd, 24) + 36)}" height="46" fill="#ffffff"/>
+${yazi(Math.round(64 + genislik(ilceU, 24) + 54), ilk - boyut - 38, katAd, 24, kat.renk, 700, 'letter-spacing="1"')}
+<g filter="url(#gl)" opacity="0.7">${satir.map((s, i) => yazi(64, ilk + i * yuk + 3, s, boyut, '#000')).join('')}</g>
+${satir.map((s, i) => yazi(64, ilk + i * yuk, s, boyut, '#fff')).join('\n')}
+<rect x="64" y="${H - 132}" width="${W - 128}" height="2" fill="#FFFFFF" fill-opacity="0.25"/>
+${yazi(64, H - 74, `${ilce} · ${tarih}`, 28, '#C9D4EA', 500)}
+${yazi(W - 64, H - 74, 'mersinanlik.com', 30, '#22D3EE', 700, 'text-anchor="end"')}
+</svg>`;
+  }
+
+  if (tasarim === 'c') {
+    // Lacivert zemin, yuvarlak köşeli çerçeveli fotoğraf, editoryal düzen
+    const fw = W - 96;
+    const { boyut, satir, yuk } = baslikYerlestir(h.baslik, 60, 44, W - 170, 4);
+    // Başlık ve 2 satır özet her zaman sığsın: fotoğraf yüksekliği başlığa göre ayarlanır
+    const fh = Math.min(640, H - 168 - 56 - boyut - (satir.length - 1) * yuk - 64 - 84 - 140);
+    const foto = await fotoAl(fw, fh);
+    const ilk = 168 + fh + 56 + boyut;
+    const ozet = ozetSatirlari(h.ozet, 29, W - 150, 2);
+    const ozetY = ilk + (satir.length - 1) * yuk + 64;
+    return `${bas}
+<defs><clipPath id="c"><rect x="48" y="168" width="${fw}" height="${fh}" rx="28" ry="28"/></clipPath>
+<radialGradient id="p" cx="0.85" cy="0.05" r="0.9"><stop offset="0" stop-color="#173B7A"/><stop offset="1" stop-color="#0A1530"/></radialGradient></defs>
+<rect width="${W}" height="${H}" fill="url(#p)"/>
+<image href="data:image/png;base64,${logo}" x="44" y="28" width="168" height="112"/>
+<rect x="${W - 48 - Math.round(genislik(katAd, 24) + 40)}" y="62" rx="23" ry="23" width="${Math.round(genislik(katAd, 24) + 40)}" height="46" fill="${kat.renk}"/>
+${yazi(W - 48 - Math.round(genislik(katAd, 24) + 40) / 2, 94, katAd, 24, '#fff', 700, 'text-anchor="middle" letter-spacing="1"')}
+<image href="data:image/jpeg;base64,${foto}" x="48" y="168" width="${fw}" height="${fh}" clip-path="url(#c)"/>
+<rect x="48" y="168" width="${fw}" height="${fh}" rx="28" ry="28" fill="none" stroke="#22D3EE" stroke-opacity="0.35" stroke-width="2"/>
+${temsili(76, 168 + fh - 28)}
+${satir.map((s, i) => yazi(64, ilk + i * yuk, s, boyut, '#fff')).join('\n')}
+${ozet.map((s, i) => yazi(64, ozetY + i * 42, s, 29, '#AFC0E0', 500)).join('\n')}
+<rect x="64" y="${H - 104}" width="56" height="6" rx="3" fill="#22D3EE"/>
+${yazi(136, H - 94, `${ilce} · ${tarih}`, 26, '#8FA3C8', 500)}
+${yazi(W - 64, H - 92, 'mersinanlik.com', 30, '#22D3EE', 700, 'text-anchor="end"')}
+</svg>`;
+  }
+
+  // d: açık renkli gazete manşeti tarzı (akışta koyu kartlar arasında öne çıkar)
+  const fh = 720;
+  const foto = await fotoAl(W, fh);
+  const { boyut, satir, yuk } = baslikYerlestir(h.baslik, 62, 44, W - 190, 4);
+  const ilk = fh + 70 + boyut;
+  const ozet = ozetSatirlari(h.ozet, 29, W - 160, 2);
+  const ozetY = ilk + (satir.length - 1) * yuk + 62;
+  return `${bas}
+<rect width="${W}" height="${H}" fill="#F7F9FC"/>
+<image href="data:image/jpeg;base64,${foto}" x="0" y="0" width="${W}" height="${fh}"/>
+${temsili(W - 40, fh - 26, '#FFFFFF', 'end')}
+<rect x="64" y="${fh - 30}" rx="8" ry="8" width="${Math.round(genislik(katAd, 25) + 44)}" height="60" fill="${kat.renk}"/>
+${yazi(86, fh + 10, katAd, 25, '#fff', 700, 'letter-spacing="1"')}
+<rect x="64" y="${ilk - boyut + 6}" width="8" height="${(satir.length - 1) * yuk + boyut}" rx="4" fill="${kat.renk}"/>
+${satir.map((s, i) => yazi(92, ilk + i * yuk, s, boyut, '#0A1530')).join('\n')}
+${ozet.map((s, i) => yazi(64, ozetY + i * 42, s, 29, '#4A5874', 500)).join('\n')}
+<rect y="${H - 128}" width="${W}" height="128" fill="#0A1530"/>
+<image href="data:image/png;base64,${logo}" x="40" y="${H - 120}" width="168" height="112"/>
+${yazi(W - 64, H - 74, 'mersinanlik.com', 32, '#22D3EE', 700, 'text-anchor="end"')}
+${yazi(W - 64, H - 36, `${ilce} · ${tarih}`, 24, '#8FA3C8', 500, 'text-anchor="end"')}
+</svg>`;
 }
 
 // ---------- Modlar ----------
@@ -313,7 +425,7 @@ if (mod === '--kart') {
   // Deneme: node src/sosyal.js --kart <haber-id|ilk> çıktı.jpg
   const id = process.argv[3];
   const h = id && id !== 'ilk' ? haberler().find((x) => x.id === id) : haberler().find((x) => !x.genel && kapakAdresi(x)?.src);
-  await kartCiz(h, process.argv[4] || 'kart.jpg');
+  await kartCiz(h, process.argv[4] || 'kart.jpg', process.argv[5] || AYAR.tasarim);
   console.log('Kart çizildi:', h.baslik);
 } else if (['--kontrol', '--hazirla', '--paylas'].includes(mod)) {
   if (!TOKEN) {
