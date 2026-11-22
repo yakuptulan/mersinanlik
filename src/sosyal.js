@@ -316,6 +316,49 @@ ${yazi(W - 64, H - 74, 'mersinanlik.com', 30, '#22D3EE', 700, 'text-anchor="end"
 </svg>`;
   }
 
+  if (tasarim === 'e') {
+    // Tam ekran fotoğraf, solda dikey beyaz şerit (marka + ilçe), altta lacivert-mor geçiş,
+    // kalın başlık + okunur özet, sağ altta "haberin tamamı" yönlendirmesi
+    const foto = await fotoAl(W, H);
+    const sol = 128;
+    const genis = W - sol - 60;
+    const { boyut, satir, yuk } = baslikYerlestir(h.baslik, 58, 42, genis, 4);
+    const ozet = ozetSatirlari(h.ozet, 33, genis, 4);
+    const ozetYuk = 46;
+    const altSinir = H - 120;
+    const ozetBas = altSinir - (ozet.length - 1) * ozetYuk;
+    const baslikSon = ozetBas - (ozet.length ? 70 : 0);
+    const baslikIlk = baslikSon - (satir.length - 1) * yuk;
+    const kicker = `${ilce} · ${kat.ad}`.toLocaleUpperCase('tr-TR');
+    const kickerY = baslikIlk - boyut - 22;
+    const serit = (t) => `<text transform="translate(78 ${H - 60}) rotate(-90)" font-family="Poppins" font-weight="700" font-size="21" fill="#0A1530" letter-spacing="2">${kacis(t)}</text>`;
+    const ilceSerit = `<text transform="translate(78 ${H - 60 - genislik('MERSİN ANLIK', 21) - 2 * 13 - 70}) rotate(-90)" font-family="Poppins" font-weight="700" font-size="21" fill="#0EA5C6" letter-spacing="2">${kacis(ilce.toLocaleUpperCase('tr-TR'))}</text>`;
+    return `${bas}
+<defs>
+<linearGradient id="k" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A1530" stop-opacity="0"/><stop offset="0.35" stop-color="#101C4A" stop-opacity="0.72"/><stop offset="1" stop-color="#1A1550" stop-opacity="0.96"/></linearGradient>
+<linearGradient id="u" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A1530" stop-opacity="0.55"/><stop offset="1" stop-color="#0A1530" stop-opacity="0"/></linearGradient>
+<filter id="gl"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<image href="data:image/jpeg;base64,${foto}" x="0" y="0" width="${W}" height="${H}"/>
+<rect width="${W}" height="200" fill="url(#u)"/>
+<rect y="${kickerY - 360}" width="${W}" height="${H - kickerY + 360}" fill="url(#k)"/>
+<rect x="36" y="40" width="60" height="${H - 80}" rx="30" fill="#FFFFFF" fill-opacity="0.96"/>
+<circle cx="66" cy="78" r="18" fill="#22D3EE"/>
+<rect x="64" y="112" width="4" height="70" rx="2" fill="#0A1530" fill-opacity="0.25"/>
+${ilceSerit}
+<circle cx="70" cy="${H - 60 - genislik('MERSİN ANLIK', 21) - 2 * 13 - 40}" r="5" fill="#0A1530" fill-opacity="0.35"/>
+${serit('MERSİN ANLIK')}
+<image href="data:image/png;base64,${logo}" x="${W - 52 - 180}" y="36" width="180" height="120"/>
+${yapayZeka ? yazi(sol, 76, 'Temsili görsel', 21, '#FFFFFF', 500, 'fill-opacity="0.8"') : ''}
+${yazi(sol, kickerY, kicker, 26, '#22D3EE', 700, 'letter-spacing="2"')}
+<g filter="url(#gl)" opacity="0.6">${satir.map((t, i) => yazi(sol, baslikIlk + i * yuk + 3, t, boyut, '#000')).join('')}</g>
+${satir.map((t, i) => yazi(sol, baslikIlk + i * yuk, t, boyut, '#FFFFFF')).join('\n')}
+${ozet.map((t, i) => yazi(sol, ozetBas + i * ozetYuk, t, 33, '#E3E9F6', 500)).join('\n')}
+${yazi(W - 60, H - 56, 'HABERİN TAMAMI  mersinanlik.com  →', 21, '#FFFFFF', 700, 'text-anchor="end" letter-spacing="1.5" fill-opacity="0.85"')}
+${yazi(sol, H - 56, tarih, 21, '#AEBBD9', 500)}
+</svg>`;
+  }
+
   if (tasarim === 'c') {
     // Lacivert zemin, yuvarlak köşeli çerçeveli fotoğraf, editoryal düzen
     const fw = W - 96;
