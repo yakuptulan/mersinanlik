@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-22T15:01:20.391Z"
   }
  },
  "gorsel": {
@@ -385,8 +381,32 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T15:01:54.348Z",
+  "guncelleme": "2026-11-22T15:31:49.648Z",
   "liste": [
+   {
+    "baslik": "fındık",
+    "trafik": 500
+   },
+   {
+    "baslik": "trabzonspor - eyüpspor",
+    "trafik": 10000
+   },
+   {
+    "baslik": "paris fc",
+    "trafik": 200
+   },
+   {
+    "baslik": "gs bjk",
+    "trafik": 200
+   },
+   {
+    "baslik": "az alkmaar",
+    "trafik": 100
+   },
+   {
+    "baslik": "hull city",
+    "trafik": 2000
+   },
    {
     "baslik": "barselona fk",
     "trafik": 500
@@ -396,36 +416,12 @@
     "trafik": 200
    },
    {
-    "baslik": "elektrifikasyon",
-    "trafik": 100
-   },
-   {
-    "baslik": "sassuolo - genoa",
-    "trafik": 100
-   },
-   {
     "baslik": "kriz",
     "trafik": 200
    },
    {
-    "baslik": "bologna - udinese",
+    "baslik": "elektrifikasyon",
     "trafik": 100
-   },
-   {
-    "baslik": "besıktas",
-    "trafik": 2000
-   },
-   {
-    "baslik": "bim",
-    "trafik": 2000
-   },
-   {
-    "baslik": "galatasaray - petkim spor",
-    "trafik": 500
-   },
-   {
-    "baslik": "brighton",
-    "trafik": 200
    }
   ]
  },
