@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T17:31:52.601Z",
+ "guncelleme": "2026-11-22T18:01:47.243Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -74,14 +74,14 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 17,
+   "sicaklik": 16,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 15,
-     "max": 17,
-     "durum": "Parçalı bulutlu"
+     "max": 16,
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-23",
@@ -290,14 +290,14 @@
    ]
   },
   "mut": {
-   "sicaklik": 14,
+   "sicaklik": 12,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 11,
-     "max": 14,
-     "durum": "Parçalı bulutlu"
+     "max": 12,
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-23",
@@ -327,13 +327,13 @@
   },
   "silifke": {
    "sicaklik": 14,
-   "durum": "Az bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 13,
      "max": 14,
-     "durum": "Parçalı bulutlu"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-23",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T17:31:56.346Z",
+  "guncelleme": "2026-11-22T18:01:51.417Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -773,7 +773,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T17:31:57.261Z",
+  "guncelleme": "2026-11-22T18:01:52.401Z",
   "liste": [
    {
     "tur": "su",
@@ -810,7 +810,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T17:32:01.181Z",
+  "guncelleme": "2026-11-22T18:01:56.856Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -843,9 +843,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3072681,
-    "usd": 60798,
-    "degisim": 1.19
+    "satis": 3070517,
+    "usd": 60756,
+    "degisim": 1.28
    }
   },
   "altinlar": [
@@ -978,10 +978,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 20:31:01"
+  "kaynakSaati": "2026-11-22 21:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T17:32:03.787Z",
+  "guncelleme": "2026-11-22T18:01:59.231Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1806,7 +1806,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-22T17:32:05.617Z",
+  "guncelleme": "2026-11-22T18:02:00.994Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -1829,14 +1829,14 @@
      "sira": 2,
      "takim": "Trabzonspor",
      "ham": "TRABZONSPOR A.Ş.",
-     "o": 11,
-     "g": 8,
+     "o": 12,
+     "g": 9,
      "b": 1,
      "m": 2,
-     "a": 26,
+     "a": 27,
      "y": 8,
-     "av": 18,
-     "p": 25,
+     "av": 19,
+     "p": 28,
      "mersin": false
     },
     {
@@ -2053,13 +2053,13 @@
      "sira": 18,
      "takim": "Eyüpspor",
      "ham": "EYÜPSPOR",
-     "o": 11,
+     "o": 12,
      "g": 1,
      "b": 0,
-     "m": 10,
+     "m": 11,
      "a": 3,
-     "y": 30,
-     "av": -27,
+     "y": 31,
+     "av": -28,
      "p": 3,
      "mersin": false
     }
@@ -2125,7 +2125,7 @@
      "tarih": "2026-11-22",
      "saat": "19:00",
      "ev": "Trabzonspor",
-     "skor": null,
+     "skor": "1-0",
      "dep": "Eyüpspor",
      "mersin": false
     },
@@ -2557,14 +2557,14 @@
       "sira": 2,
       "takim": "Trabzonspor",
       "ham": "TRABZONSPOR A.Ş.",
-      "o": 11,
-      "g": 8,
+      "o": 12,
+      "g": 9,
       "b": 1,
       "m": 2,
-      "a": 26,
+      "a": 27,
       "y": 8,
-      "av": 18,
-      "p": 25,
+      "av": 19,
+      "p": 28,
       "mersin": false
      },
      {
@@ -2781,13 +2781,13 @@
       "sira": 18,
       "takim": "Eyüpspor",
       "ham": "EYÜPSPOR",
-      "o": 11,
+      "o": 12,
       "g": 1,
       "b": 0,
-      "m": 10,
+      "m": 11,
       "a": 3,
-      "y": 30,
-      "av": -27,
+      "y": 31,
+      "av": -28,
       "p": 3,
       "mersin": false
      }
@@ -2853,7 +2853,7 @@
       "tarih": "2026-11-22",
       "saat": "19:00",
       "ev": "Trabzonspor",
-      "skor": null,
+      "skor": "1-0",
       "dep": "Eyüpspor",
       "mersin": false
      },
@@ -3141,7 +3141,7 @@
       {
        "ev": "Trabzonspor",
        "dep": "Eyüpspor",
-       "skor": null
+       "skor": "1-0"
       },
       {
        "ev": "İstanbul Başakşehir FK",
@@ -3353,6 +3353,20 @@
     "puan": [
      {
       "sira": 1,
+      "takim": "Bursaspor",
+      "ham": "BURSASPOR",
+      "o": 15,
+      "g": 11,
+      "b": 2,
+      "m": 2,
+      "a": 32,
+      "y": 12,
+      "av": 20,
+      "p": 35,
+      "mersin": false
+     },
+     {
+      "sira": 2,
       "takim": "Metro Holding Kayserispor",
       "ham": "METRO HOLDİNG KAYSERİSPOR",
       "o": 15,
@@ -3363,20 +3377,6 @@
       "y": 12,
       "av": 24,
       "p": 33,
-      "mersin": false
-     },
-     {
-      "sira": 2,
-      "takim": "Bursaspor",
-      "ham": "BURSASPOR",
-      "o": 14,
-      "g": 10,
-      "b": 2,
-      "m": 2,
-      "a": 30,
-      "y": 12,
-      "av": 18,
-      "p": 32,
       "mersin": false
      },
      {
@@ -3593,13 +3593,13 @@
       "sira": 18,
       "takim": "Ekenler Beton Sivasspor",
       "ham": "EKENLER BETON SİVASSPOR",
-      "o": 14,
+      "o": 15,
       "g": 2,
       "b": 7,
-      "m": 5,
+      "m": 6,
       "a": 17,
-      "y": 23,
-      "av": -6,
+      "y": 25,
+      "av": -8,
       "p": 13,
       "mersin": false
      },
@@ -3701,7 +3701,7 @@
       "tarih": "2026-11-22",
       "saat": "19:00",
       "ev": "Bursaspor",
-      "skor": null,
+      "skor": "2-0",
       "dep": "Ekenler Beton Sivasspor",
       "mersin": false
      },
@@ -4104,19 +4104,19 @@
      "Van Spor": "2020"
     },
     "form": {
-     "Metro Holding Kayserispor": [
-      "B",
-      "B",
-      "G",
-      "M",
-      "G"
-     ],
      "Bursaspor": [
       "G",
       "G",
       "G",
       "G",
       "B"
+     ],
+     "Metro Holding Kayserispor": [
+      "B",
+      "B",
+      "G",
+      "M",
+      "G"
      ],
      "Alagöz Holding Iğdır": [
       "G",
@@ -8483,7 +8483,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-22T17:32:51.167Z",
+    "guncelleme": "2026-11-22T18:02:44.868Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8565,7 +8565,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-22T17:32:52.374Z",
+    "guncelleme": "2026-11-22T18:02:46.100Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8647,7 +8647,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-22T17:32:53.588Z",
+    "guncelleme": "2026-11-22T18:02:47.339Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8746,7 +8746,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T17:32:04.204Z",
+  "guncelleme": "2026-11-22T18:01:59.587Z",
   "liste": [
    {
     "yol": "/",
@@ -8835,45 +8835,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T17:32:54.789Z",
+  "guncelleme": "2026-11-22T18:02:48.540Z",
   "deniz": {
    "sicaklik": 21.7,
    "dalga": 0.36
   },
   "hava": {
-   "aqi": 40,
-   "pm25": 15.3,
-   "pm10": 21,
+   "aqi": 39,
+   "pm25": 14.7,
+   "pm10": 20.2,
    "uvMax": 2.15
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T17:32:56.341Z",
+  "guncelleme": "2026-11-22T18:02:50.490Z",
   "giden": [
-   {
-    "no": [
-     "PC2091"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-22T17:35:00.000Z",
-    "tahmini": null,
-    "kapi": "107",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "VF4091"
-    ],
-    "havayolu": "AJet",
-    "yer": "Ankara",
-    "planlanan": "2026-11-22T18:00:00.000Z",
-    "tahmini": null,
-    "kapi": "108",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC3015"
@@ -8883,7 +8859,7 @@
     "planlanan": "2026-11-22T18:25:00.000Z",
     "tahmini": "2026-11-22T18:35:00.000Z",
     "kapi": "104",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8895,7 +8871,7 @@
     "planlanan": "2026-11-22T18:30:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "KONTUAR AÇIK",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -8943,7 +8919,7 @@
     "planlanan": "2026-11-22T19:45:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9122,7 +9098,7 @@
     "yer": "Sabiha Gökçen",
     "planlanan": "2026-11-23T05:15:00.000Z",
     "tahmini": null,
-    "kapi": "103",
+    "kapi": "",
     "durum": "",
     "hat": "ic"
    },
@@ -9411,6 +9387,42 @@
     "planlanan": "2026-11-23T16:55:00.000Z",
     "tahmini": null,
     "kapi": "107",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2091"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-23T17:35:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3015"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-23T17:55:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF3145"
+    ],
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-23T18:00:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
     "durum": "",
     "hat": "ic"
    }
@@ -9979,11 +9991,35 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2466"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-23T17:35:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF4090"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ankara",
+    "planlanan": "2026-11-23T17:45:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T17:32:56.341Z",
+  "guncelleme": "2026-11-22T18:02:50.490Z",
   "liste": [
    {
     "id": 6386,

@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-22T17:31:16.726Z"
   }
  },
  "gorsel": {
@@ -387,8 +383,28 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T17:31:48.754Z",
+  "guncelleme": "2026-11-22T18:01:46.782Z",
   "liste": [
+   {
+    "baslik": "mahmut uslu",
+    "trafik": 2000
+   },
+   {
+    "baslik": "lübnan",
+    "trafik": 500
+   },
+   {
+    "baslik": "microsoft to do",
+    "trafik": 200
+   },
+   {
+    "baslik": "milan",
+    "trafik": 500
+   },
+   {
+    "baslik": "carlos alcaraz",
+    "trafik": 500
+   },
    {
     "baslik": "werder bremen",
     "trafik": 200
@@ -399,34 +415,14 @@
    },
    {
     "baslik": "van hava durumu",
-    "trafik": 1000
-   },
-   {
-    "baslik": "afyon atso seçimleri",
-    "trafik": 200
+    "trafik": 2000
    },
    {
     "baslik": "afganistan",
     "trafik": 200
    },
    {
-    "baslik": "ливерпуль – манчестер юнайтед",
-    "trafik": 100
-   },
-   {
-    "baslik": "beşiktaş - fenerbahçe",
-    "trafik": 2000
-   },
-   {
-    "baslik": "salzburg",
-    "trafik": 200
-   },
-   {
-    "baslik": "iheanacho",
-    "trafik": 200
-   },
-   {
-    "baslik": "lorient - rennes",
+    "baslik": "afyon atso seçimleri",
     "trafik": 200
    }
   ]
