@@ -347,7 +347,7 @@ ${macGunuKarti(servis, hikayeler, simdi)}
 ${derbiKarti(servis, simdi)}
 ${gundemimKarti()}
 ${ozetKarti(servis?.ozet)}
-<nav class="turkiye-serit" aria-label="Türkiye geneli"><b>Türkiye geneli</b><a href="/son-depremler/">🌍 Son depremler</a><a href="/kar-tatili/">🏫 Okullar tatil mi?</a><a href="/piyasalar/gram-altin/">🪙 Gram altın</a><a href="/piyasalar/dolar/">💵 Dolar</a><a href="/akaryakit/">⛽ 81 il akaryakıt</a><a href="/hava-durumu/iller/">🌤️ 81 il hava</a><a href="/namaz-vakti/">🕌 81 il namaz</a><a href="/spor/super-lig/">⚽ Süper Lig</a></nav>
+<nav class="turkiye-serit" aria-label="Türkiye geneli"><b>Türkiye geneli</b><a href="/imsakiye/">🌙 İmsakiye 2027</a><a href="/son-depremler/">🌍 Son depremler</a><a href="/kar-tatili/">🏫 Okullar tatil mi?</a><a href="/piyasalar/gram-altin/">🪙 Gram altın</a><a href="/piyasalar/dolar/">💵 Dolar</a><a href="/akaryakit/">⛽ 81 il akaryakıt</a><a href="/hava-durumu/iller/">🌤️ 81 il hava</a><a href="/namaz-vakti/">🕌 81 il namaz</a><a href="/spor/super-lig/">⚽ Süper Lig</a></nav>
 ${gundem.length >= 5 ? `<section class="kacirma-blok gundem-blok"><div class="bolum-bas"><h2><span class="kat-cizgi" style="--kat:var(--turuncu)"></span>Çok konuşulanlar</h2><span class="kutu-alt">En çok sitenin yazdığı haberler</span></div>${[0, 5].filter((b) => gundem.length >= b + 5).map((b) => `<div class="kare-izgara">${gundem.slice(b, b + 5).map((x, i) => kareKart(x, i === 0, b + i + 1)).join('')}</div>`).join('')}</section>` : ''}
 <div class="bolum-bas" style="margin-top:14px"><h2>Mersin son dakika haberleri</h2><a class="bolum-link" href="/kategori/tum-haberler/">Tüm haberler →</a></div>
 ${haberListesi(liste.slice(0, 4))}
@@ -714,7 +714,7 @@ export function namazSayfasi({ servis, simdi }) {
     baslik: 'Mersin namaz vakitleri – 13 ilçe ezan saatleri',
     aciklama: `Mersin ve 13 ilçesi için bugünkü namaz vakitleri: imsak, öğle, ikindi, akşam ve yatsı (Diyanet).`,
     yol: '/namaz-vakitleri/',
-    ust: `<div class="su-an-bas"><div><h1>Namaz vakitleri</h1><p style="margin-top:8px">${tarihUzun(new Date(simdi).toISOString())}${v0?.hicri ? ` · ${h(v0.hicri)}` : ''}</p></div></div>`,
+    ust: `<div class="su-an-bas"><div><div class="cipler"><a class="cip" href="/imsakiye/">🌙 Mersin imsakiye 2027</a></div><h1>Namaz vakitleri</h1><p style="margin-top:8px">${tarihUzun(new Date(simdi).toISOString())}${v0?.hicri ? ` · ${h(v0.hicri)}` : ''}</p></div></div>`,
     icerik: `<main class="kap govde"><div class="ana">
 <div class="tablo-kap"><table class="tablo tablo-vakit"><thead>${vakitBaslik}</thead><tbody>${satirlar}</tbody></table></div>
 <p style="color:var(--ikincil);font-size:15px">Kaynak: Diyanet İşleri Başkanlığı. Akdeniz, Mezitli, Toroslar ve Yenişehir için Diyanet tek (Mersin merkez) vakit yayınlar. Haftalık vakitler için ilçenin adına dokunun.</p>
@@ -910,7 +910,7 @@ ${govde}</div>${yanKutular(servis)}</main>`,
 export function menuSayfasi() {
   const linkler = [
     ['/', 'Ana sayfa'], ['/gundemim/', '⭐ Benim Gündemim'], ['/ilceler/', 'İlçeler'], ['/nobetci-eczane/', 'Nöbetçi eczane'], ['/kesintiler/', 'Kesintiler'], ['/is-ilanlari/', 'İş ilanları'],
-    ['/hava-durumu/', 'Hava durumu'], ['/deprem/', 'Son depremler'], ['/piyasalar/', 'Altın ve döviz'], ['/spor/', 'Spor'], ['/bilgi/', 'Merak edilenler'], ['/etkinlikler/', 'Etkinlikler'], ['/rehber/', 'Mersin rehberi'], ['/gezi/', 'Gezi rehberi'], ['/burclar/', 'Burçlar'], ['/tatil-takvimi/', 'Tatil takvimi'], ['/rehber/acil-telefonlar/', 'Acil telefonlar'], ['/namaz-vakitleri/', 'Namaz vakitleri'],
+    ['/hava-durumu/', 'Hava durumu'], ['/deprem/', 'Son depremler'], ['/piyasalar/', 'Altın ve döviz'], ['/spor/', 'Spor'], ['/bilgi/', 'Merak edilenler'], ['/etkinlikler/', 'Etkinlikler'], ['/rehber/', 'Mersin rehberi'], ['/gezi/', 'Gezi rehberi'], ['/burclar/', 'Burçlar'], ['/tatil-takvimi/', 'Tatil takvimi'], ['/rehber/acil-telefonlar/', 'Acil telefonlar'], ['/namaz-vakitleri/', 'Namaz vakitleri'], ['/imsakiye/', 'İmsakiye 2027'],
     ['/akaryakit-fiyatlari/', 'Akaryakıt fiyatları'], ['/ulasim/', 'Uçuşlar ve ulaşım'], ['/okullar-tatil-mi/', 'Okullar tatil mi?'], ['/konular/', 'Konular'], ['/arsiv/', 'Haber arşivi'], ['/ara/', 'Haber ara'], ['/kunye/', 'Künye'],
     ['/iletisim/', 'İletişim'], ['/kaynaklarimiz/', 'Kaynaklarımız'], ['/gizlilik/', 'Gizlilik'],
   ];

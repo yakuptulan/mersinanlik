@@ -15,6 +15,7 @@ import { logolariAyarla } from './templates/servisParcalari.js';
 import { akaryakitIlSayfasi, akaryakitTurkiyeSayfasi, namazIlSayfasi, namazTurkiyeSayfasi, havaIlSayfasi, havaTurkiyeSayfasi, sonDepremlerSayfasi, ilDepremSayfasi, okulIlSayfasi, karTatiliSayfasi, depremIli, depremIlYolu, ulusalMevcutAyarla, mersinDepremSayfasi, PIYASA_KALEMLERI, piyasaKalemSayfasi, piyasaKalemYolu } from './templates/ulusal.js';
 import ILLER81 from './iller.json' with { type: 'json' };
 import { reklamSayfasi } from './templates/reklam.js';
+import { imsakiyeSayfalari } from './templates/imsakiye.js';
 import { isIlanlariSayfasi, isIlanlariIlceSayfasi, isIlanlariMeslekSayfasi, acikIlanlar, meslekGruplari, IS_YOL } from './templates/isIlanlari.js';
 import { vakitListesi } from './lib/vakitHesap.js';
 import { takimSayfasi, takimYolu } from './templates/spor.js';
@@ -291,6 +292,9 @@ export function insaEt({ simdi = Date.now() } = {}) {
     ekle(`/akaryakit-fiyatlari/${ilce.slug}/`, IS.akaryakitIlceSayfasi({ ilce, servis, simdi }));
   }
   for (const { yol, html } of S.bilgiSayfalari()) ekle(yol, html);
+  // Ramazan 2027 imsakiyesi (Mersin, ilçeler, 81 il)
+  for (const { yol, html } of imsakiyeSayfalari(simdi)) ekle(yol, html);
+
   // Mersin iş ilanları (İŞKUR)
   if (servis.isIlanlari) {
     const yk = S.yanKutular(servis);
