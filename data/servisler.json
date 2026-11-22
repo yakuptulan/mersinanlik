@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T19:26:26.016Z",
+ "guncelleme": "2026-11-22T19:29:54.329Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -74,31 +74,31 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 16,
+   "sicaklik": 15,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 15,
-     "max": 16,
+     "max": 15,
      "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-23",
      "min": 13,
-     "max": 20,
+     "max": 21,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-24",
-     "min": 11,
-     "max": 19,
-     "durum": "Az bulutlu"
+     "min": 12,
+     "max": 18,
+     "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-25",
-     "min": 12,
-     "max": 19,
+     "min": 11,
+     "max": 18,
      "durum": "Az bulutlu"
     },
     {
@@ -110,32 +110,32 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 16,
+   "sicaklik": 15,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 14,
-     "max": 16,
+     "max": 15,
      "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-23",
      "min": 12,
      "max": 21,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-24",
-     "min": 11,
-     "max": 20,
-     "durum": "Açık"
+     "min": 13,
+     "max": 19,
+     "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-25",
-     "min": 9,
+     "min": 8,
      "max": 19,
-     "durum": "Az bulutlu"
+     "durum": "Açık"
     },
     {
      "tarih": "2026-11-26",
@@ -290,32 +290,32 @@
    ]
   },
   "mut": {
-   "sicaklik": 12,
+   "sicaklik": 11,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 11,
-     "max": 12,
+     "max": 11,
      "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-23",
-     "min": 10,
+     "min": 9,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-24",
-     "min": 11,
+     "min": 12,
      "max": 19,
-     "durum": "Hafif sağanak"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-25",
      "min": 6,
-     "max": 16,
-     "durum": "Az bulutlu"
+     "max": 14,
+     "durum": "Açık"
     },
     {
      "tarih": "2026-11-26",
@@ -337,7 +337,7 @@
     },
     {
      "tarih": "2026-11-23",
-     "min": 10,
+     "min": 9,
      "max": 21,
      "durum": "Az bulutlu"
     },
@@ -345,13 +345,13 @@
      "tarih": "2026-11-24",
      "min": 12,
      "max": 17,
-     "durum": "Hafif sağanak"
+     "durum": "Sağanak"
     },
     {
      "tarih": "2026-11-25",
      "min": 9,
-     "max": 18,
-     "durum": "Az bulutlu"
+     "max": 17,
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-26",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T19:26:29.435Z",
+  "guncelleme": "2026-11-22T19:29:58.872Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -773,7 +773,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T19:26:30.355Z",
+  "guncelleme": "2026-11-22T19:30:00.071Z",
   "liste": [
    {
     "tur": "su",
@@ -810,7 +810,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T19:26:32.345Z",
+  "guncelleme": "2026-11-22T19:30:04.163Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -843,9 +843,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3064240,
-    "usd": 60631,
-    "degisim": 0.75
+    "satis": 3065800,
+    "usd": 60662,
+    "degisim": 0.73
    }
   },
   "altinlar": [
@@ -978,10 +978,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 22:26:01"
+  "kaynakSaati": "2026-11-22 22:30:03"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T19:26:34.640Z",
+  "guncelleme": "2026-11-22T19:30:06.594Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8746,91 +8746,14 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T19:26:35.018Z",
-  "liste": [
-   {
-    "yol": "/",
-    "sayi": 7
-   },
-   {
-    "yol": "/haber/msk-da-dagilma-tehlikesi-kadro-dagildi-gelecek-belirsizlesti-fmcfmt/",
-    "sayi": 3
-   },
-   {
-    "yol": "/haber/10-mersin-uluslararasi-tiyatro-festivali-kapilarini-aciyor-1nebyyr/",
-    "sayi": 2
-   },
-   {
-    "yol": "/hava-durumu/bozyazi/",
-    "sayi": 2
-   },
-   {
-    "yol": "/ilceler/",
-    "sayi": 2
-   },
-   {
-    "yol": "/hakkimizda/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/mersin-osb-nin-5-ve-6-bolge-projeleri-ankara-da-gorusuldu-i4fy92/",
-    "sayi": 1
-   },
-   {
-    "yol": "/kesintiler/",
-    "sayi": 1
-   },
-   {
-    "yol": "/bilgi/sakarya-nerededir-adi-nereden-gelir-sehrin-tarihi-hakkinda-bilgiler/",
-    "sayi": 1
-   },
-   {
-    "yol": "/menu/",
-    "sayi": 1
-   },
-   {
-    "yol": "/kar-tatili/",
-    "sayi": 1
-   },
-   {
-    "yol": "/hava-durumu/anamur/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/mersin-sosyal-hizmetlerde-yeni-siddet-iddiasi-9xbft/",
-    "sayi": 1
-   },
-   {
-    "yol": "/spor/",
-    "sayi": 1
-   },
-   {
-    "yol": "/kategori/belediye/",
-    "sayi": 1
-   },
-   {
-    "yol": "/hava-durumu/gulnar/",
-    "sayi": 1
-   },
-   {
-    "yol": "/kunye/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/secil-kaucuk-mersin-basketball-istanbul-deplasmaninda-155jkur/",
-    "sayi": 1
-   }
-  ]
+  "guncelleme": "2026-11-22T19:30:07.611Z",
+  "liste": []
  },
  "sayac": {
-  "guncelleme": "2026-11-22T19:26:36.586Z",
+  "guncelleme": "2026-11-22T19:30:09.233Z",
   "deniz": {
    "sicaklik": 21.6,
-   "dalga": 0.36
+   "dalga": 0.38
   },
   "hava": {
    "aqi": 35,
@@ -8840,7 +8763,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T19:26:38.248Z",
+  "guncelleme": "2026-11-22T19:30:11.342Z",
   "giden": [
    {
     "no": [
@@ -9975,7 +9898,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T19:26:38.248Z",
+  "guncelleme": "2026-11-22T19:30:11.341Z",
   "liste": [
    {
     "id": 6386,
