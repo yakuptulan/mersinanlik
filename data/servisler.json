@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T12:59:45.729Z",
+ "guncelleme": "2026-11-22T13:04:12.035Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 22,
@@ -38,13 +38,13 @@
    ]
   },
   "anamur": {
-   "sicaklik": 23,
-   "durum": "Az bulutlu",
+   "sicaklik": 22,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 15,
-     "max": 23,
+     "max": 22,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -74,13 +74,13 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 22,
-   "durum": "Hafif sağanak",
+   "sicaklik": 21,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 15,
-     "max": 22,
+     "max": 21,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -111,7 +111,7 @@
   },
   "bozyazi": {
    "sicaklik": 22,
-   "durum": "Az bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -147,13 +147,13 @@
   },
   "camliyayla": {
    "sicaklik": 13,
-   "durum": "Hafif sağanak",
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 5,
      "max": 13,
-     "durum": "Hafif sağanak"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-23",
@@ -219,7 +219,7 @@
   },
   "gulnar": {
    "sicaklik": 16,
-   "durum": "Az bulutlu",
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -290,13 +290,13 @@
    ]
   },
   "mut": {
-   "sicaklik": 22,
+   "sicaklik": 21,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 11,
-     "max": 22,
+     "max": 21,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -326,13 +326,13 @@
    ]
   },
   "silifke": {
-   "sicaklik": 23,
+   "sicaklik": 22,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 13,
-     "max": 23,
+     "max": 22,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -398,13 +398,13 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 22,
+   "sicaklik": 21,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 15,
-     "max": 22,
+     "max": 21,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -434,13 +434,13 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 22,
+   "sicaklik": 21,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 15,
-     "max": 22,
+     "max": 21,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T12:59:49.545Z",
+  "guncelleme": "2026-11-22T13:04:15.211Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T12:59:50.953Z",
+  "guncelleme": "2026-11-22T13:04:16.108Z",
   "liste": [
    {
     "tur": "su",
@@ -800,22 +800,6 @@
        "Bahşiş",
        "Kulak",
        "Yeşiltepe"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Tarsus ilçesi Fahrettinpaşa mahallesi ana isale hattında meydana gelen arızadan kaynaklı saat 16.00'a kadar su kesintisi yaşanacaktır.",
-    "baslangic": "2026-11-22T10:40:00.000Z",
-    "bitis": "2026-11-22T13:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "tarsus",
-      "ad": "Tarsus",
-      "mahalleler": [
-       "Fahrettin Paşa"
       ]
      }
     ]
@@ -872,27 +856,11 @@
       ]
      }
     ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Mut ilçesi meydan mahallesi içmesuyu arızası kaynaklı sular kesilmiş olup arızanın giderilip suların verilmesi 16:00 olarak planlanmaktadır.",
-    "baslangic": "2026-11-22T11:55:00.000Z",
-    "bitis": "2026-11-22T13:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "mut",
-      "ad": "Mut",
-      "mahalleler": [
-       "Barabanlı"
-      ]
-     }
-    ]
    }
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T12:59:53.838Z",
+  "guncelleme": "2026-11-22T13:04:19.963Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -925,9 +893,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3069762,
-    "usd": 60741,
-    "degisim": 3.31
+    "satis": 3069263,
+    "usd": 60731,
+    "degisim": 3.15
    }
   },
   "altinlar": [
@@ -1060,10 +1028,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 15:59:01"
+  "kaynakSaati": "2026-11-22 16:04:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T12:59:56.374Z",
+  "guncelleme": "2026-11-22T13:04:21.781Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1888,7 +1856,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-22T12:59:59.035Z",
+  "guncelleme": "2026-11-22T13:04:23.372Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -2313,13 +2281,13 @@
      "sira": 7,
      "takim": "Ejderoğlu Kırşehir",
      "ham": "EJDEROĞLU KIRŞEHİR FUTBOL SPOR KULÜBÜ",
-     "o": 13,
+     "o": 12,
      "g": 7,
      "b": 3,
-     "m": 3,
-     "a": 34,
-     "y": 18,
-     "av": 16,
+     "m": 2,
+     "a": 32,
+     "y": 15,
+     "av": 17,
      "p": 24,
      "mersin": false
     },
@@ -2341,14 +2309,14 @@
      "sira": 9,
      "takim": "Yeni Mersin İdmanyurdu",
      "ham": "YENİ MERSİN İDMANYURDU FUTBOL A.Ş.",
-     "o": 12,
-     "g": 8,
+     "o": 11,
+     "g": 7,
      "b": 0,
      "m": 4,
-     "a": 19,
-     "y": 12,
-     "av": 7,
-     "p": 24,
+     "a": 16,
+     "y": 10,
+     "av": 6,
+     "p": 21,
      "mersin": true
     },
     {
@@ -2499,7 +2467,7 @@
      "tarih": "2026-11-22",
      "saat": "13:00",
      "ev": "Ejderoğlu Kırşehir",
-     "skor": "2-3",
+     "skor": null,
      "dep": "Yeni Mersin İdmanyurdu",
      "mersin": true
     },
@@ -4947,37 +4915,37 @@
       {
        "ev": "Somaspor",
        "dep": "Seza Çimento Elazığspor",
-       "skor": "1-4"
+       "skor": null
       },
       {
        "ev": "Muş Spor",
        "dep": "Hatayspor",
-       "skor": "5-1"
+       "skor": null
       },
       {
        "ev": "Sebat Spor",
        "dep": "Güzide Gebze Spor",
-       "skor": "3-1"
+       "skor": null
       },
       {
        "ev": "68 Aksaray Belediye Spor",
        "dep": "Isbaş Isparta 32 Spor",
-       "skor": "1-0"
+       "skor": null
       },
       {
        "ev": "Adana Demirspor",
        "dep": "Aliağa",
-       "skor": "1-3"
+       "skor": null
       },
       {
        "ev": "Gmg Kastamonuspor",
        "dep": "Efor Çay Erbaaspor",
-       "skor": "0-3"
+       "skor": null
       },
       {
        "ev": "Ankaraspor",
        "dep": "Çorlu Spor 1947",
-       "skor": "1-2"
+       "skor": null
       },
       {
        "ev": "Menemen",
@@ -5078,32 +5046,32 @@
     },
     "form": {
      "Muş Spor": [
+      "M",
       "G",
       "B",
-      "G",
       "G",
       "G"
      ],
      "Seza Çimento Elazığspor": [
       "G",
       "G",
+      "G",
       "B",
-      "B",
-      "G"
+      "B"
      ],
      "Aliağa": [
+      "G",
       "M",
       "B",
       "B",
-      "G",
       "G"
      ],
      "Güzide Gebze Spor": [
       "G",
       "G",
-      "M",
       "G",
-      "M"
+      "M",
+      "G"
      ],
      "Kızılkaya Tarım Şanlıurfaspor": [
       "G",
@@ -5113,11 +5081,11 @@
       "G"
      ],
      "Çorlu Spor 1947": [
+      "B",
       "G",
       "G",
       "B",
-      "M",
-      "G"
+      "M"
      ],
      "İnegöl Kafkas Spor": [
       "G",
@@ -5129,30 +5097,30 @@
      "Efor Çay Erbaaspor": [
       "G",
       "G",
+      "G",
       "B",
-      "M",
-      "G"
+      "M"
      ],
      "Sebat Spor": [
       "G",
       "G",
       "G",
-      "M",
-      "G"
+      "G",
+      "M"
      ],
      "68 Aksaray Belediye Spor": [
       "M",
       "M",
-      "G",
+      "M",
       "G",
       "G"
      ],
      "Isbaş Isparta 32 Spor": [
       "M",
       "M",
+      "M",
       "G",
-      "B",
-      "M"
+      "B"
      ],
      "Menemen": [
       "B",
@@ -5162,25 +5130,25 @@
       "B"
      ],
      "Ankaraspor": [
+      "G",
       "M",
       "G",
       "B",
-      "M",
       "M"
      ],
      "Somaspor": [
       "M",
+      "M",
       "G",
       "M",
-      "B",
-      "M"
+      "B"
      ],
      "Gmg Kastamonuspor": [
       "M",
       "M",
       "M",
-      "B",
-      "M"
+      "M",
+      "B"
      ],
      "Arkent Arnavutköy Belediyesi Futbol SK": [
       "M",
@@ -5200,8 +5168,8 @@
       "M",
       "M",
       "M",
-      "B",
-      "M"
+      "M",
+      "B"
      ]
     }
    },
@@ -8318,7 +8286,7 @@
       {
        "ev": "Ağrı 1970 Spor",
        "dep": "Yozgat Belediyesi Bozok Spor",
-       "skor": "0-1"
+       "skor": null
       },
       {
        "ev": "Niğde Belediyesi Spor",
@@ -8516,17 +8484,17 @@
       "M"
      ],
      "Yozgat Belediyesi Bozok Spor": [
+      "M",
       "G",
       "M",
       "B",
-      "M",
-      "G"
+      "M"
      ],
      "Ağrı 1970 Spor": [
       "M",
       "M",
-      "G",
       "M",
+      "G",
       "M"
      ],
      "1964 Silifke Spor": [
@@ -8564,7 +8532,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-22T13:00:46.780Z",
+    "guncelleme": "2026-11-22T13:05:08.275Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8602,11 +8570,6 @@
       "gol": 7
      },
      {
-      "ad": "MASON WILL JOHN GREENWOOD",
-      "kulup": "Fenerbahçe",
-      "gol": 7
-     },
-     {
       "ad": "VEDAT MURIÇ",
       "kulup": "Fenerbahçe",
       "gol": 7
@@ -8614,11 +8577,6 @@
      {
       "ad": "ALI SOWE",
       "kulup": "Çaykur Rizespor",
-      "gol": 6
-     },
-     {
-      "ad": "BERKAN İSMAİL KUTLU",
-      "kulup": "Kocaelispor",
       "gol": 6
      },
      {
@@ -8630,6 +8588,16 @@
       "ad": "JESUS ANDRES RAMIREZ DIAZ",
       "kulup": "Arca Çorum FK",
       "gol": 6
+     },
+     {
+      "ad": "MASON WILL JOHN GREENWOOD",
+      "kulup": "Fenerbahçe",
+      "gol": 6
+     },
+     {
+      "ad": "BERKAN İSMAİL KUTLU",
+      "kulup": "Kocaelispor",
+      "gol": 5
      },
      {
       "ad": "İRFAN CAN KAHVECİ",
@@ -8646,7 +8614,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-22T13:00:48.057Z",
+    "guncelleme": "2026-11-22T13:05:09.497Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8728,7 +8696,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-22T13:00:49.346Z",
+    "guncelleme": "2026-11-22T13:05:10.713Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8827,7 +8795,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T12:59:56.821Z",
+  "guncelleme": "2026-11-22T13:04:22.095Z",
   "liste": [
    {
     "yol": "/",
@@ -8858,11 +8826,11 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
+    "yol": "/haber/mersin-osb-nin-5-ve-6-bolge-projeleri-ankara-da-gorusuldu-i4fy92/",
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-osb-nin-5-ve-6-bolge-projeleri-ankara-da-gorusuldu-i4fy92/",
+    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
     "sayi": 1
    },
    {
@@ -8904,7 +8872,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T13:00:50.547Z",
+  "guncelleme": "2026-11-22T13:05:11.913Z",
   "deniz": {
    "sicaklik": 21.9,
    "dalga": 0.46
@@ -8917,7 +8885,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T13:00:52.966Z",
+  "guncelleme": "2026-11-22T13:05:13.445Z",
   "giden": [
    {
     "no": [
@@ -8952,7 +8920,7 @@
     "planlanan": "2026-11-22T14:55:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -10172,7 +10140,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T13:00:52.965Z",
+  "guncelleme": "2026-11-22T13:05:13.445Z",
   "liste": [
    {
     "id": 6386,
