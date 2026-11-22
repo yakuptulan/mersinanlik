@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T08:39:50.325Z",
+ "guncelleme": "2026-11-22T08:50:15.548Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 21,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T08:39:53.958Z",
+  "guncelleme": "2026-11-22T08:50:19.643Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T08:39:55.095Z",
+  "guncelleme": "2026-11-22T08:50:21.048Z",
   "liste": [
    {
     "tur": "su",
@@ -842,7 +842,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T08:39:59.839Z",
+  "guncelleme": "2026-11-22T08:50:23.698Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -875,9 +875,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3040944,
-    "usd": 60170,
-    "degisim": 4.79
+    "satis": 3009800,
+    "usd": 59554,
+    "degisim": 2.78
    }
   },
   "altinlar": [
@@ -1010,10 +1010,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 11:39:01"
+  "kaynakSaati": "2026-11-22 11:50:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T08:40:03.132Z",
+  "guncelleme": "2026-11-22T08:50:27.003Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8687,7 +8687,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T08:40:03.792Z",
+  "guncelleme": "2026-11-22T08:50:27.247Z",
   "liste": [
    {
     "yol": "/",
@@ -8722,11 +8722,11 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
+    "yol": "/haber/mersin-osb-nin-5-ve-6-bolge-projeleri-ankara-da-gorusuldu-i4fy92/",
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-osb-nin-5-ve-6-bolge-projeleri-ankara-da-gorusuldu-i4fy92/",
+    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
     "sayi": 1
    },
    {
@@ -8768,10 +8768,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T08:40:05.266Z",
+  "guncelleme": "2026-11-22T08:50:29.382Z",
   "deniz": {
    "sicaklik": 21.7,
-   "dalga": 0.6
+   "dalga": 0.58
   },
   "hava": {
    "aqi": 34,
@@ -8781,20 +8781,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T08:40:07.357Z",
+  "guncelleme": "2026-11-22T08:50:31.849Z",
   "giden": [
-   {
-    "no": [
-     "TK2455"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-22T08:45:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
    {
     "no": [
      "VF1051"
@@ -8816,7 +8804,7 @@
     "planlanan": "2026-11-22T09:40:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -9382,6 +9370,18 @@
     "kapi": "102",
     "durum": "",
     "hat": "dis"
+   },
+   {
+    "no": [
+     "TK2455"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-23T08:45:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
@@ -10000,7 +10000,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T08:40:07.357Z",
+  "guncelleme": "2026-11-22T08:50:31.848Z",
   "liste": [
    {
     "id": 6386,
