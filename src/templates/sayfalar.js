@@ -1,5 +1,6 @@
 import { piyasaIkon } from './piyasaIkon.js';
 import { gundemimKarti } from './gundemim.js';
+import { isIlanlariKutusu } from './isIlanlari.js';
 import { sporYan, sporAnaIcerik, sporMu, macGunuKarti, derbiKarti, oyuncuFotolari } from './spor.js';
 import { kategoriYan, ekonomiBugunKarti } from './kategoriYan.js';
 import { mahalleListesi, mahalleYolu, sade as mahalleSade } from './mahalle.js';
@@ -223,6 +224,7 @@ export function yanKutular(servis, ilce = null, { anaSayfa = false } = {}) {
 ${okunan.length >= 3 ? `<section class="kutu kutu-okunan">${kutuBasligi({ ikon: ikon.alev(18), baslik: 'En sıcak haberler', alt: '<span class="canli-nokta"></span> canlı' })}
 <ol class="okunan-liste">${okunan.map((o, i) => `<li><a href="${h(o.yol)}"><span class="ok-no">${i + 1}</span>${o.gorsel ? `<img src="${h(o.gorsel)}" alt="" width="64" height="48" loading="lazy">` : `<span class="ok-ikon">${(ikon[o.ikon] || ikon.ok)(20)}</span>`}<span class="ok-ic"><span class="ok-baslik">${h(o.baslik)}</span>${o.zaman ? `<small class="ok-zaman"><time datetime="${o.zaman}">${saat(o.zaman)}</time> · <span data-once="${o.zaman}">${saat(o.zaman)}</span></small>` : ''}</span></a></li>`).join('')}</ol></section>` : ''}
 ${macGunuKutusu(servis)}
+${isIlanlariKutusu(servis?.isIlanlari)}
 ${reklamAlani('yan-ust')}
 ${ilce ? `<section class="kutu kutu-eczane">
 ${kutuBasligi({ ikon: ikon.eczane(18), baslik: `${h(ilce.ad)} nöbetçi eczaneler`, link: `/nobetci-eczane/${ilce.slug}/` })}
@@ -907,7 +909,7 @@ ${govde}</div>${yanKutular(servis)}</main>`,
 
 export function menuSayfasi() {
   const linkler = [
-    ['/', 'Ana sayfa'], ['/gundemim/', '⭐ Benim Gündemim'], ['/ilceler/', 'İlçeler'], ['/nobetci-eczane/', 'Nöbetçi eczane'], ['/kesintiler/', 'Kesintiler'],
+    ['/', 'Ana sayfa'], ['/gundemim/', '⭐ Benim Gündemim'], ['/ilceler/', 'İlçeler'], ['/nobetci-eczane/', 'Nöbetçi eczane'], ['/kesintiler/', 'Kesintiler'], ['/is-ilanlari/', 'İş ilanları'],
     ['/hava-durumu/', 'Hava durumu'], ['/deprem/', 'Son depremler'], ['/piyasalar/', 'Altın ve döviz'], ['/spor/', 'Spor'], ['/bilgi/', 'Merak edilenler'], ['/etkinlikler/', 'Etkinlikler'], ['/rehber/', 'Mersin rehberi'], ['/gezi/', 'Gezi rehberi'], ['/burclar/', 'Burçlar'], ['/tatil-takvimi/', 'Tatil takvimi'], ['/rehber/acil-telefonlar/', 'Acil telefonlar'], ['/namaz-vakitleri/', 'Namaz vakitleri'],
     ['/akaryakit-fiyatlari/', 'Akaryakıt fiyatları'], ['/ulasim/', 'Uçuşlar ve ulaşım'], ['/okullar-tatil-mi/', 'Okullar tatil mi?'], ['/konular/', 'Konular'], ['/arsiv/', 'Haber arşivi'], ['/ara/', 'Haber ara'], ['/kunye/', 'Künye'],
     ['/iletisim/', 'İletişim'], ['/kaynaklarimiz/', 'Kaynaklarımız'], ['/gizlilik/', 'Gizlilik'],
@@ -1172,7 +1174,7 @@ ${g.gunluk.length ? `<div class="gsc-grafik" title="Son 30 günün günlük tık
 }
 
 // ---------- İşleyiş raporu (yönetim için, arama motorlarına kapalı) ----------
-const TUR_ADI = { yakit: 'Akaryakıt', deprem: 'Deprem', su: 'Su kesintisi', hava: 'Hava', eczane: 'Nöbetçi eczane', iftar: 'İftar', piyasa: 'Piyasa', ucus: 'Havalimanı', okul: 'Okul tatili', hafta: 'Haftanın özeti', etkinlik: 'Etkinlik', yol: 'Yol durumu', mac: 'Maç', superlig: 'Süper Lig programı', bulten: 'Spor bülteni', diger: 'Diğer' };
+const TUR_ADI = { yakit: 'Akaryakıt', deprem: 'Deprem', su: 'Su kesintisi', hava: 'Hava', eczane: 'Nöbetçi eczane', iftar: 'İftar', piyasa: 'Piyasa', ucus: 'Havalimanı', okul: 'Okul tatili', hafta: 'Haftanın özeti', etkinlik: 'Etkinlik', yol: 'Yol durumu', mac: 'Maç', superlig: 'Süper Lig programı', bulten: 'Spor bülteni', is: 'İş ilanları', diger: 'Diğer' };
 export function durumSayfasi({ rapor, gsc = null, trafik = null }) {
   const gunler = Object.keys(rapor?.gunler || {}).sort().reverse();
   const bugun = rapor?.gunler?.[gunler[0]];

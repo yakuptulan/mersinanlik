@@ -22,6 +22,14 @@ const bugun = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Istanbu
 
 try {
   const { toplam, ilanlar } = await iskurMersinIlanlari();
+  // Kamu kurumlarının Mersin'deki işçi alımları (genelde az; varsa listeye girer, kamu diye işaretlenir)
+  try {
+    const kamu = await iskurMersinIlanlari({ kamu: true, maxSayfa: 10 });
+    ilanlar.push(...kamu.ilanlar.map((i) => ({ ...i, kamu: true })));
+    if (kamu.ilanlar.length) console.log(`İş ilanları: ${kamu.ilanlar.length} kamu ilanı`);
+  } catch (e) {
+    console.warn(`! Kamu ilanları: ${e.message}`);
+  }
   if (!ilanlar.length) throw new Error('ilan gelmedi');
   const yeni = {};
   for (const i of ilanlar) {

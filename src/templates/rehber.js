@@ -144,6 +144,7 @@ ${kart('/akaryakit-fiyatlari/', 'Akaryakıt fiyatları', 'İlçe ilçe benzin ve
 ${kart('/etkinlikler/', 'Etkinlikler', "Bu hafta Mersin'de ne var?", ikon.gunes(22))}
 ${kart('/tatil-takvimi/', 'Tatil takvimi', 'Ara tatil, sömestr ve resmî tatiller', ikon.gunes(22))}
 ${kart('/kesintiler/', 'Kesintiler', 'Su ve elektrik kesintileri', ikon.damla(22))}
+${kart('/is-ilanlari/', 'İş ilanları', "İŞKUR'daki güncel Mersin ilanları", ikon.ok(22))}
 </div></div>${yanKutular(servis)}</main>`,
   });
 }

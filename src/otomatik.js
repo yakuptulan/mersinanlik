@@ -479,6 +479,29 @@ for (const y of servis.yollar?.liste || []) {
 }
 durum.yol = durum.yol.slice(-300);
 
+// ---------- 13) Pazartesi: Mersin'de bu hafta İŞKUR'daki iş ilanları ----------
+if (haftaGunu === 1 && trSaat >= 10 && durum.isHaftalik !== bugunISO) {
+  let isv = null;
+  try { isv = JSON.parse(fs.readFileSync(new URL('../data/is-ilanlari.json', import.meta.url), 'utf8')); } catch {}
+  const acik = Object.values(isv?.ilanlar || {}).filter((i) => !i.sonBasvuru || i.sonBasvuru >= bugunISO);
+  if (acik.length >= 20) {
+    durum.isHaftalik = bugunISO;
+    const yeni = acik.filter((i) => simdi - new Date(i.ilkGorulme).getTime() < 7 * 864e5).sort((a, b) => b.no.localeCompare(a.no));
+    const say = (l, f) => { const m = new Map(); for (const i of l) { const k = f(i); if (k) m.set(k, (m.get(k) || 0) + 1); } return [...m.entries()].sort((a, b) => b[1] - a[1]); };
+    const kisi = acik.reduce((t, i) => t + (i.acik || 1), 0);
+    const meslek = say(acik, (i) => i.pozisyon).slice(0, 6);
+    const ilce = say(acik, (i) => i.ilceAd).slice(0, 5);
+    const secki = (yeni.length >= 6 ? yeni : acik).slice(0, 8);
+    const metin = [
+      `Türkiye İş Kurumu'nun (İŞKUR) kayıtlarına göre Mersin'de bu hafta ${acik.length} açık iş ilanı bulunuyor; ilanlarda toplam ${kisi} kişilik pozisyon var.${yeni.length ? ` Bunların ${yeni.length} tanesi son bir haftada yayımlandı.` : ''}`,
+      `En çok ilan verilen meslekler: ${meslek.map(([m, n]) => `${m} (${n})`).join(', ')}. İlçelere göre ise ${ilce.map(([m, n]) => `${m} ${n}`).join(', ')} ilanla öne çıkıyor.`,
+      `${yeni.length >= 6 ? 'Bu hafta eklenen' : 'Öne çıkan'} ilanlardan bazıları:\n${secki.map((i) => `• ${i.pozisyon}${i.ilceAd ? ` – ${i.ilceAd}` : ''}${i.sonBasvuru ? ` (son başvuru ${kisaTarih(i.sonBasvuru)})` : ''}`).join('\n')}`,
+      `Tüm ilanların listesine, ilçe ve meslek ayrımıyla Mersin Anlık'ın iş ilanları sayfasından (mersinanlik.com/is-ilanlari/) ulaşılabilir. Başvurular İŞKUR e-Şube üzerinden e-Devlet ile ücretsiz yapılıyor; iş karşılığında para isteyenlere itibar edilmemesi gerekiyor.`,
+    ].join('\n\n');
+    haber({ id: kimlik('j', bugunISO), baslik: `Mersin iş ilanları: İŞKUR'da bu hafta ${acik.length} açık ilan, ${kisi} kişilik pozisyon`, ozet: metin.split('\n\n')[0], metin, kategori: 'ekonomi', kaynak: { ad: 'İŞKUR', link: 'https://esube.iskur.gov.tr/Istihdam/AcikIsIlanAra.aspx' }, kapak: 'is' });
+  }
+}
+
 durum.kuruldu = durum.kuruldu || new Date(simdi).toISOString();
 fs.writeFileSync(DOSYA, JSON.stringify(durum, null, 1));
 if (yeniler.length) {

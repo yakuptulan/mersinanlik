@@ -183,6 +183,19 @@
   }
   depremZaman();
   setInterval(depremZaman, 60000);
+  // ---------- İş ilanları arama ----------
+  document.querySelectorAll('[data-is-ara]').forEach(function (inp) {
+    var kartlar = Array.prototype.slice.call(document.querySelectorAll('[data-is-liste] .is-kart'));
+    var sayac = document.querySelector('[data-is-sayac]');
+    var bos = document.querySelector('[data-is-bos]');
+    inp.addEventListener('input', function () {
+      var q = inp.value.toLocaleLowerCase('tr-TR').trim();
+      var n = 0;
+      kartlar.forEach(function (k) { var g = !q || k.getAttribute('data-ara').indexOf(q) > -1; k.hidden = !g; if (g) n++; });
+      if (sayac) sayac.textContent = n + ' ilan';
+      if (bos) bos.hidden = n > 0;
+    });
+  });
   // ---------- Reklam formu → WhatsApp ----------
   document.querySelectorAll('[data-reklam-form]').forEach(function (f) {
     f.addEventListener('submit', function (e) {

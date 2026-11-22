@@ -15,6 +15,7 @@ import { logolariAyarla } from './templates/servisParcalari.js';
 import { akaryakitIlSayfasi, akaryakitTurkiyeSayfasi, namazIlSayfasi, namazTurkiyeSayfasi, havaIlSayfasi, havaTurkiyeSayfasi, sonDepremlerSayfasi, ilDepremSayfasi, okulIlSayfasi, karTatiliSayfasi, depremIli, depremIlYolu, ulusalMevcutAyarla, mersinDepremSayfasi, PIYASA_KALEMLERI, piyasaKalemSayfasi, piyasaKalemYolu } from './templates/ulusal.js';
 import ILLER81 from './iller.json' with { type: 'json' };
 import { reklamSayfasi } from './templates/reklam.js';
+import { isIlanlariSayfasi, isIlanlariIlceSayfasi, isIlanlariMeslekSayfasi, acikIlanlar, meslekGruplari, IS_YOL } from './templates/isIlanlari.js';
 import { vakitListesi } from './lib/vakitHesap.js';
 import { takimSayfasi, takimYolu } from './templates/spor.js';
 import { sayfa as sayfaYap } from './templates/layout.js';
@@ -63,6 +64,11 @@ export function insaEt({ simdi = Date.now() } = {}) {
     bilgiYazilari = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'bilgi.json'), 'utf8')).yazilar || [];
   } catch {}
   servis.bilgi = bilgiYazilari;
+  try {
+    servis.isIlanlari = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'is-ilanlari.json'), 'utf8'));
+  } catch {
+    servis.isIlanlari = null;
+  }
   logolariAyarla();
   let ozetArsiv = [];
   try {
@@ -285,6 +291,13 @@ export function insaEt({ simdi = Date.now() } = {}) {
     ekle(`/akaryakit-fiyatlari/${ilce.slug}/`, IS.akaryakitIlceSayfasi({ ilce, servis, simdi }));
   }
   for (const { yol, html } of S.bilgiSayfalari()) ekle(yol, html);
+  // Mersin iş ilanları (İŞKUR)
+  if (servis.isIlanlari) {
+    const yk = S.yanKutular(servis);
+    ekle(IS_YOL, isIlanlariSayfasi({ veri: servis.isIlanlari, yanKutular: yk }));
+    for (const ilce of ILCELER) ekle(`${IS_YOL}${ilce.slug}/`, isIlanlariIlceSayfasi({ veri: servis.isIlanlari, ilce, yanKutular: yk }), acikIlanlar(servis.isIlanlari).some((i) => i.ilce === ilce.slug));
+    for (const grup of meslekGruplari(acikIlanlar(servis.isIlanlari)).filter((m) => m.liste.length >= 5)) ekle(grup.yol, isIlanlariMeslekSayfasi({ veri: servis.isIlanlari, grup, yanKutular: yk }));
+  }
   ekle('/reklam/', reklamSayfasi({ istatistik: { gunlukHaber: hikayeler.filter((x) => !x.genel && Date.now() - new Date(x.ilkGorulme) < 864e5).length, sayfa: 650 } }));
   ekle('/menu/', S.menuSayfasi(), false);
   ekle('/ara/', S.araSayfasi(), false);
