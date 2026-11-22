@@ -153,5 +153,60 @@ export function sahipsizleriSil(hikayeler) {
       n++;
     }
   }
+  const dikey = path.join(URETILEN_KLASOR, 'dikey');
+  if (fs.existsSync(dikey)) {
+    const idler = new Set(hikayeler.map((h) => h.id));
+    for (const f of fs.readdirSync(dikey)) if (f.endsWith('.webp') && !idler.has(f.replace('.webp', ''))) { fs.unlinkSync(path.join(dikey, f)); n++; }
+  }
   return n;
+}
+
+// ---------- Kaliteli (ücretli) görsel: Gemini ----------
+// Sadece sosyal medyada paylaşılacak ve manşete çıkan haberlerde kullanılır (günlük kota src/sosyal.js'te).
+// Anahtar: GEMINI_GORSEL_KEY (faturalandırması açık ayrı proje). Model: GEMINI_PREMIUM_MODEL.
+const PREMIUM_ANAHTAR = process.env.GEMINI_GORSEL_KEY;
+const PREMIUM_MODEL = process.env.GEMINI_PREMIUM_MODEL || 'gemini-2.5-flash-image';
+export const DIKEY_KLASOR = path.join(URETILEN_KLASOR, 'dikey');
+export const premiumHazirMi = () => Boolean(PREMIUM_ANAHTAR);
+
+async function premiumIste(metin, oran) {
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${PREMIUM_MODEL}:generateContent`;
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'x-goog-api-key': PREMIUM_ANAHTAR },
+    body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: metin }] }], generationConfig: { responseModalities: ['IMAGE'], imageConfig: { aspectRatio: oran } } }),
+    signal: AbortSignal.timeout(120000),
+  });
+  if (!res.ok) throw new Error(`Gemini görsel HTTP ${res.status}: ${(await res.text()).slice(0, 200)}`);
+  const json = await res.json();
+  const parca = json?.candidates?.[0]?.content?.parts?.find((p) => p.inlineData?.data);
+  if (!parca) throw new Error(`Görsel dönmedi (${json?.candidates?.[0]?.finishReason || json?.promptFeedback?.blockReason || 'bilinmiyor'})`);
+  return Buffer.from(parca.inlineData.data, 'base64');
+}
+
+// oran: '16:9' (site ve Facebook) ya da '4:5' (Instagram kartı)
+export async function premiumUret(hikaye, oran = '16:9') {
+  let sahne = '';
+  try {
+    const j = await jsonYaz(`${SAHNE_TALIMATI}\nReturn JSON only: {"sahne": "..."}`, `Headline: "${hikaye.baslik}"\nCategory: ${hikaye.kategori}\nPlace: ${ilceMetni(hikaye)}${hikaye.ozet ? `\nSummary (Turkish): ${hikaye.ozet}` : ''}`, { sicaklik: 0.4, sadeceGemini: true });
+    if (j?.sahne) sahne = String(j.sahne).trim();
+  } catch {}
+  const kurallar = oran === '16:9' ? KURALLAR : KURALLAR.replace('horizontal 16:9 composition', 'vertical 4:5 composition with the main subject in the upper two thirds');
+  const metin = `${kurallar}\n\nHeadline (Turkish): "${hikaye.baslik}"\nTopic category: ${hikaye.kategori}\nLocation: ${ilceMetni(hikaye)}${sahne ? `\nScene to show: ${sahne}` : ''}\nQuality: high-end professional news photography, sharp detail, true-to-life colors, natural composition.`;
+  const veri = await premiumIste(metin, oran);
+  if (oran === '16:9') {
+    fs.mkdirSync(URETILEN_KLASOR, { recursive: true });
+    const dosya = `${hikaye.id}.webp`;
+    await sharp(veri).resize({ width: 1200, height: 675, fit: 'cover' }).webp({ quality: 82 }).toFile(path.join(URETILEN_KLASOR, dosya));
+    hikaye.gorsel = dosya;
+    hikaye.gorselKaynak = 'yz';
+    hikaye.gorselKalite = 'premium';
+    if (sahne) hikaye.gorselPrompt = sahne.slice(0, 400);
+    return path.join(URETILEN_KLASOR, dosya);
+  }
+  fs.mkdirSync(DIKEY_KLASOR, { recursive: true });
+  const yol = path.join(DIKEY_KLASOR, `${hikaye.id}.webp`);
+  await sharp(veri).resize({ width: 1080, height: 1350, fit: 'cover' }).webp({ quality: 84 }).toFile(yol);
+  hikaye.dikeyGorsel = true;
+  return yol;
 }

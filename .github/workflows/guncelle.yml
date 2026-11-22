@@ -150,6 +150,14 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
+      - name: Kaliteli görseller (Gemini; sosyal medya ve manşet, günde en fazla 17)
+        timeout-minutes: 6
+        continue-on-error: true
+        run: node src/sosyal.js --gorsel
+        env:
+          GEMINI_GORSEL_KEY: ${{ secrets.GEMINI_GORSEL_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
       - name: Siteyi üret
         run: node src/build.js
 

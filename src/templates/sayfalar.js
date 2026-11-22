@@ -168,7 +168,7 @@ function sonDakikaBandi(liste) {
 }
 
 // Manşet kaydırıcısı: son 24 saatin en önemli 20 haberi (kaynak sayısı, kendi yazımız, görsel, çok aranan, yenilik)
-function mansetleriSec(hikayeler, simdi) {
+export function mansetleriSec(hikayeler, simdi) {
   const puan = (x) => {
     const yas = (simdi - new Date(x.ilkGorulme).getTime()) / 36e5;
     return new Set(x.kaynaklar.map((k) => k.ad)).size * 3 + (x.metin ? 2 : 0) + (x.gorsel ? 1.5 : 0) + (x.trend ? 2 : 0) + Math.max(0, 8 - yas) * 0.5;
