@@ -31,7 +31,7 @@ jobs:
 
       - name: Güçlü metin modeli denemesi
         continue-on-error: true
-        run: node scripts/metin-dene.js
+        run: node scripts/model-yokla.js
         env:
           VERTEX_TOKEN: ${{ steps.vertex.outputs.access_token }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
