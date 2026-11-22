@@ -25,12 +25,6 @@ if (process.env.ARA?.startsWith('ISKUR')) {
   await import('./iskur-dene.js');
   process.exit(0);
 }
-if (process.env.ARA?.startsWith('KABUK:')) {
-  // Tanı amaçlı kabuk komutu (ör. TLS zinciri incelemesi)
-  const { execSync } = await import('node:child_process');
-  try { console.log(execSync(process.env.ARA.slice(6), { encoding: 'utf8', timeout: 60000, stdio: ['ignore', 'pipe', 'pipe'] })); } catch (e) { console.log('HATA', e.stdout, e.stderr); }
-  process.exit(0);
-}
 if (process.env.ARA === 'COMMONS') {
   // Adresler: arama terimleri (boşluk yerine _). Ticari kullanıma açık lisanslı fotoğrafları listeler.
   for (const terim of ADAYLAR) {
