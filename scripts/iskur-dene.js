@@ -1,5 +1,8 @@
 // İŞKUR açık iş ilanları (esube) deneme: formu Mersin seçerek gönderir, sonucu özetler.
-const URL_ = 'https://esube.iskur.gov.tr/Istihdam/AcikIsIlanAra.aspx';
+const _g = process.env.GONDER ? JSON.parse(process.env.GONDER) : {};
+const URL_ = _g._url || 'https://esube.iskur.gov.tr/Istihdam/AcikIsIlanAra.aspx';
+delete _g._url;
+if (_g._sadeceGet) process.env.GONDER = '';
 const UA = 'Mozilla/5.0 (compatible; MersinAnlikBot/1.0; +https://mersinanlik.com)';
 let cerez = '';
 async function al(url, opt = {}) {
@@ -12,6 +15,10 @@ const sayfa = await al(URL_);
 const html = sayfa.metin;
 const gizli = Object.fromEntries([...html.matchAll(/<input[^>]+type="hidden"[^>]*>/gi)].map((m) => [m[0].match(/name="([^"]+)"/)?.[1], (m[0].match(/value="([^"]*)"/)?.[1] || '').replace(/&amp;/g, '&')]).filter(([k]) => k));
 const sel = html.match(/<select name="ctl04\$ctlIl"[\s\S]*?<\/select>/)?.[0] || '';
+const tumSelect = [...html.matchAll(/<select name="([^"]+)"[\s\S]*?<\/select>/g)].map((m) => m[1] + ': ' + (m[0].match(/<option[^>]*value="([^"]*)"[^>]*>\s*MERS[İI]N\s*</i)?.[1] || '-')).join(' | ');
+console.log('SELECTLER', tumSelect);
+const duzMetin = html.replace(/<(script|style|head)\b[\s\S]*?<\/\1>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ');
+console.log('GETMETIN', duzMetin.slice(duzMetin.search(/Kurs|TYP|Program/), duzMetin.search(/Kurs|TYP|Program/) + 2500));
 const mersin = sel.match(/<option[^>]*value="([^"]*)"[^>]*>\s*MERS[İI]N\s*</i)?.[1];
 const butonlar = [...html.matchAll(/<input[^>]+type="(submit|button)"[^>]*>/gi)].map((m) => m[0].slice(0, 200));
 const anchors = [...html.matchAll(/<a[^>]+id="([^"]*(Ara|Bul|Search)[^"]*)"[^>]*href="([^"]*)"/gi)].map((m) => `${m[1]} ${m[3].slice(0, 120)}`);
@@ -19,7 +26,7 @@ console.log('durum', sayfa.durum, 'gizli', Object.keys(gizli).join(','), '\nmers
 const selectler = [...html.matchAll(/<select name="([^"]+)"/g)].map((m) => m[1]);
 console.log('selectler', selectler.join(', '));
 if (process.env.GONDER) {
-  const govde = new URLSearchParams({ ...gizli, 'ctl04$IsyeriTuruRadios': process.env.KAMU ? 'kamuRadio' : 'ozelSektorRadio', 'ctl04$ctlIl': mersin || '33', ...(JSON.parse(process.env.GONDER)) });
+  const govde = new URLSearchParams({ ...gizli, ...(URL_.includes('AcikIsIlanAra') ? { 'ctl04$IsyeriTuruRadios': 'ozelSektorRadio', 'ctl04$ctlIl': mersin || '33' } : {}), ..._g });
   const r = await al(URL_, { method: 'POST', body: govde, headers: { 'Content-Type': 'application/x-www-form-urlencoded', Referer: URL_ } });
   console.log('POST', r.durum, r.yer, r.metin.length);
   const t = r.metin.replace(/<(script|style|head)\b[\s\S]*?<\/\1>/gi, ' ');
