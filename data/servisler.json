@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T10:32:08.242Z",
+ "guncelleme": "2026-11-22T11:01:51.787Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 22,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T10:32:12.305Z",
+  "guncelleme": "2026-11-22T11:01:55.477Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -784,28 +784,8 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T10:32:13.205Z",
+  "guncelleme": "2026-11-22T11:01:56.415Z",
   "liste": [
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Tarsus, Özlüce, Kütüklü,Tepeçaylak,Topçu ve Avadan Mahallelerinde enerjisanın bölgedeki kesintisinden kaynaklı saat 14.00'a kadar su kesintisi yaşanacaktır.",
-    "baslangic": "2026-11-22T07:20:00.000Z",
-    "bitis": "2026-11-22T11:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "tarsus",
-      "ad": "Tarsus",
-      "mahalleler": [
-       "Avadan",
-       "Kütüklü",
-       "Özlüce",
-       "Tepeçaylak",
-       "Topçu"
-      ]
-     }
-    ]
-   },
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
@@ -856,11 +836,27 @@
       ]
      }
     ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Tarsus ilçesi Fahrettinpaşa mahallesi ana isale hattında meydana gelen arızadan kaynaklı saat 16.00'a kadar su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-22T10:40:00.000Z",
+    "bitis": "2026-11-22T13:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "tarsus",
+      "ad": "Tarsus",
+      "mahalleler": [
+       "Fahrettin Paşa"
+      ]
+     }
+    ]
    }
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T10:32:17.278Z",
+  "guncelleme": "2026-11-22T11:02:00.249Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -893,9 +889,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3072952,
-    "usd": 60804,
-    "degisim": 4.81
+    "satis": 3071920,
+    "usd": 60783,
+    "degisim": 5.09
    }
   },
   "altinlar": [
@@ -1028,10 +1024,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 13:32:01"
+  "kaynakSaati": "2026-11-22 14:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T10:32:19.549Z",
+  "guncelleme": "2026-11-22T11:02:02.182Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1856,7 +1852,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-22T10:32:21.016Z",
+  "guncelleme": "2026-11-22T11:02:04.018Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8442,7 +8438,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-22T10:33:03.771Z",
+    "guncelleme": "2026-11-22T11:02:46.789Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8480,6 +8476,11 @@
       "gol": 7
      },
      {
+      "ad": "MASON WILL JOHN GREENWOOD",
+      "kulup": "Fenerbahçe",
+      "gol": 7
+     },
+     {
       "ad": "VEDAT MURIÇ",
       "kulup": "Fenerbahçe",
       "gol": 7
@@ -8487,6 +8488,11 @@
      {
       "ad": "ALI SOWE",
       "kulup": "Çaykur Rizespor",
+      "gol": 6
+     },
+     {
+      "ad": "BERKAN İSMAİL KUTLU",
+      "kulup": "Kocaelispor",
       "gol": 6
      },
      {
@@ -8498,16 +8504,6 @@
       "ad": "JESUS ANDRES RAMIREZ DIAZ",
       "kulup": "Arca Çorum FK",
       "gol": 6
-     },
-     {
-      "ad": "MASON WILL JOHN GREENWOOD",
-      "kulup": "Fenerbahçe",
-      "gol": 6
-     },
-     {
-      "ad": "BERKAN İSMAİL KUTLU",
-      "kulup": "Kocaelispor",
-      "gol": 5
      },
      {
       "ad": "İRFAN CAN KAHVECİ",
@@ -8524,7 +8520,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-22T10:33:04.980Z",
+    "guncelleme": "2026-11-22T11:02:48.589Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8606,7 +8602,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-22T10:33:06.196Z",
+    "guncelleme": "2026-11-22T11:02:49.820Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8705,15 +8701,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T10:32:19.792Z",
+  "guncelleme": "2026-11-22T11:02:02.691Z",
   "liste": [
    {
     "yol": "/",
     "sayi": 11
-   },
-   {
-    "yol": "/spor/",
-    "sayi": 4
    },
    {
     "yol": "/haber/msk-da-dagilma-tehlikesi-kadro-dagildi-gelecek-belirsizlesti-fmcfmt/",
@@ -8776,39 +8768,31 @@
     "sayi": 1
    },
    {
+    "yol": "/spor/",
+    "sayi": 1
+   },
+   {
     "yol": "/haber/mersin-devlet-klasik-turk-muzigi-korosu-naz-makami-ile-sahnede-50e6tf/",
     "sayi": 1
    }
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T10:33:07.397Z",
+  "guncelleme": "2026-11-22T11:02:51.020Z",
   "deniz": {
    "sicaklik": 21.9,
    "dalga": 0.52
   },
   "hava": {
-   "aqi": 28,
-   "pm25": 8.1,
-   "pm10": 12.5,
+   "aqi": 30,
+   "pm25": 8.3,
+   "pm10": 12.4,
    "uvMax": 2.15
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T10:33:09.044Z",
+  "guncelleme": "2026-11-22T11:02:52.806Z",
   "giden": [
-   {
-    "no": [
-     "PC2087"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-22T10:35:00.000Z",
-    "tahmini": "2026-11-22T10:45:00.000Z",
-    "kapi": "107",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC1856"
@@ -8842,7 +8826,7 @@
     "planlanan": "2026-11-22T12:30:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9394,6 +9378,30 @@
     "planlanan": "2026-11-23T10:30:00.000Z",
     "tahmini": null,
     "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3601"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Antalya",
+    "planlanan": "2026-11-23T10:40:00.000Z",
+    "tahmini": null,
+    "kapi": "107",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3630"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Dalaman",
+    "planlanan": "2026-11-23T11:00:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
     "durum": "",
     "hat": "ic"
    }
@@ -10026,7 +10034,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T10:33:09.044Z",
+  "guncelleme": "2026-11-22T11:02:52.805Z",
   "liste": [
    {
     "id": 6386,
