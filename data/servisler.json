@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T03:31:37.159Z",
+ "guncelleme": "2026-11-22T03:59:59.305Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 15,
@@ -38,7 +38,7 @@
    ]
   },
   "anamur": {
-   "sicaklik": 16,
+   "sicaklik": 15,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -291,7 +291,7 @@
   },
   "mut": {
    "sicaklik": 12,
-   "durum": "Sisli",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -363,7 +363,7 @@
   },
   "tarsus": {
    "sicaklik": 16,
-   "durum": "Parçalı bulutlu",
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T03:31:40.903Z",
+  "guncelleme": "2026-11-22T04:00:09.498Z",
   "liste": [
    {
     "ad": "Asuman Eczanesi",
@@ -728,7 +728,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T03:31:44.224Z",
+  "guncelleme": "2026-11-22T04:00:20.291Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -761,9 +761,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 2996089,
-    "usd": 59283,
-    "degisim": 2.86
+    "satis": 2996769,
+    "usd": 59296,
+    "degisim": 4.75
    }
   },
   "altinlar": [
@@ -896,10 +896,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 06:31:01"
+  "kaynakSaati": "2026-11-22 07:00:03"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T03:31:46.517Z",
+  "guncelleme": "2026-11-22T04:00:23.096Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1724,7 +1724,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-22T03:02:02.138Z",
+  "guncelleme": "2026-11-22T04:00:25.425Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8310,7 +8310,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-22T03:02:44.881Z",
+    "guncelleme": "2026-11-22T04:01:08.350Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8392,7 +8392,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-22T03:02:46.092Z",
+    "guncelleme": "2026-11-22T04:01:09.635Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8402,16 +8402,16 @@
      {
       "ad": "DANİEL MORENO MOSQUERA",
       "kulup": "Metro Holding Kayserispor",
+      "gol": 13
+     },
+     {
+      "ad": "TAULAN SULEJMANOV",
+      "kulup": "Metro Holding Kayserispor",
       "gol": 11
      },
      {
       "ad": "REI MANAJ",
       "kulup": "Ekenler Beton Sivasspor",
-      "gol": 10
-     },
-     {
-      "ad": "TAULAN SULEJMANOV",
-      "kulup": "Metro Holding Kayserispor",
       "gol": 10
      },
      {
@@ -8474,7 +8474,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-22T03:02:47.309Z",
+    "guncelleme": "2026-11-22T04:01:10.934Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8573,7 +8573,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T03:31:46.854Z",
+  "guncelleme": "2026-11-22T04:00:23.718Z",
   "liste": [
    {
     "yol": "/",
@@ -8662,45 +8662,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T03:31:49.564Z",
+  "guncelleme": "2026-11-22T04:01:12.136Z",
   "deniz": {
    "sicaklik": 21.5,
    "dalga": 0.74
   },
   "hava": {
-   "aqi": 26,
-   "pm25": 8,
-   "pm10": 12.2,
+   "aqi": 25,
+   "pm25": 7.4,
+   "pm10": 11.3,
    "uvMax": 2.25
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T03:31:51.243Z",
+  "guncelleme": "2026-11-22T04:01:14.592Z",
   "giden": [
-   {
-    "no": [
-     "XQ1702"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "Stuttgart",
-    "planlanan": "2026-11-22T03:40:00.000Z",
-    "tahmini": null,
-    "kapi": "102",
-    "durum": "KAPI KAPANDI",
-    "hat": "dis"
-   },
-   {
-    "no": [
-     "PC2095"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-22T03:45:00.000Z",
-    "tahmini": null,
-    "kapi": "107",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC1850"
@@ -8710,7 +8686,7 @@
     "planlanan": "2026-11-22T04:15:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPI KAPANDI",
     "hat": "dis"
    },
    {
@@ -8734,7 +8710,7 @@
     "planlanan": "2026-11-22T05:50:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9276,21 +9252,33 @@
     "kapi": "106",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "VF3149"
+    ],
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-23T03:35:00.000Z",
+    "tahmini": null,
+    "kapi": "109",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2103"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-23T03:40:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "PC1849"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Ercan",
-    "planlanan": "2026-11-22T03:40:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "dis"
-   },
    {
     "no": [
      "PC2080"
@@ -9906,7 +9894,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T03:31:51.243Z",
+  "guncelleme": "2026-11-22T04:01:14.592Z",
   "liste": [
    {
     "id": 6386,
