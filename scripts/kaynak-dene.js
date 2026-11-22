@@ -25,6 +25,11 @@ if (process.env.ARA?.startsWith('ISKUR')) {
   await import('./iskur-dene.js');
   process.exit(0);
 }
+if (process.env.ARA === 'KURSLAR') {
+  const { iskurMersinKurslari, kurslariCoz } = await import('../src/lib/iskur.js');
+  for (const t of [1, 3]) console.log('Mersin tur', t, JSON.stringify(await iskurMersinKurslari(t)));
+  process.exit(0);
+}
 if (process.env.ARA === 'COMMONS') {
   // Adresler: arama terimleri (boşluk yerine _). Ticari kullanıma açık lisanslı fotoğrafları listeler.
   for (const terim of ADAYLAR) {
