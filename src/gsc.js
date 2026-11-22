@@ -1,12 +1,14 @@
 // Google Search Console: son 7 günde Google aramasından gelen tıklamalar (sayfa ve arama sorgusu bazında).
-// GitHub'da GSC_ANAHTAR adında bir servis hesabı anahtarı (JSON) varsa çalışır; yoksa sessizce atlar.
-// Servis hesabının e-postası Search Console'da mersinanlik.com mülküne "Kısıtlı" kullanıcı olarak eklenmelidir.
+// Giriş: GitHub Actions anahtarsız Google girişiyle (Workload Identity) GSC_TOKEN verir.
+// Servis hesabı gsc-okuyucu@mersinanlik.iam.gserviceaccount.com, Search Console'da "Sınırlı" kullanıcıdır.
+// Yedek: GSC_ANAHTAR (servis hesabı JSON anahtarı) varsa onunla da çalışır; ikisi de yoksa sessizce atlar.
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 
 const DOSYA = 'data/gsc.json';
 const ham = process.env.GSC_ANAHTAR;
-if (!ham) {
+const hazirToken = process.env.GSC_TOKEN;
+if (!ham && !hazirToken) {
   console.log('Search Console: anahtar yok, atlandı.');
   process.exit(0);
 }
@@ -18,12 +20,16 @@ if (eski.guncelleme && Date.now() - new Date(eski.guncelleme).getTime() < 6 * 36
   console.log('Search Console: güncel.');
   process.exit(0);
 }
-const anahtar = JSON.parse(ham);
-const b64 = (o) => Buffer.from(typeof o === 'string' ? o : JSON.stringify(o)).toString('base64url');
-const simdi = Math.floor(Date.now() / 1000);
-const govde = `${b64({ alg: 'RS256', typ: 'JWT' })}.${b64({ iss: anahtar.client_email, scope: 'https://www.googleapis.com/auth/webmasters.readonly', aud: 'https://oauth2.googleapis.com/token', iat: simdi, exp: simdi + 3600 })}`;
-const imza = crypto.createSign('RSA-SHA256').update(govde).sign(anahtar.private_key, 'base64url');
-const tok = await (await fetch('https://oauth2.googleapis.com/token', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: `grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=${govde}.${imza}` })).json();
+async function tokenAl() {
+  if (hazirToken) return { access_token: hazirToken };
+  const anahtar = JSON.parse(ham);
+  const b64 = (o) => Buffer.from(typeof o === 'string' ? o : JSON.stringify(o)).toString('base64url');
+  const simdi = Math.floor(Date.now() / 1000);
+  const govde = `${b64({ alg: 'RS256', typ: 'JWT' })}.${b64({ iss: anahtar.client_email, scope: 'https://www.googleapis.com/auth/webmasters.readonly', aud: 'https://oauth2.googleapis.com/token', iat: simdi, exp: simdi + 3600 })}`;
+  const imza = crypto.createSign('RSA-SHA256').update(govde).sign(anahtar.private_key, 'base64url');
+  return (await fetch('https://oauth2.googleapis.com/token', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: `grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=${govde}.${imza}` })).json();
+}
+const tok = await tokenAl();
 if (!tok.access_token) {
   console.log('Search Console: giriş yapılamadı:', tok.error_description || tok.error);
   process.exit(0);
@@ -40,15 +46,18 @@ async function sorgu(mulk, boyut, baslangic, bitis, adet = 25) {
   return j.rows || [];
 }
 let mulk = null;
+let sonHata = '';
 for (const m of ['sc-domain:mersinanlik.com', 'https://mersinanlik.com/', 'https://www.mersinanlik.com/']) {
   try {
     await sorgu(m, ['date'], gun(9), gun(2), 1);
     mulk = m;
     break;
-  } catch {}
+  } catch (e) {
+    sonHata = e.message;
+  }
 }
 if (!mulk) {
-  console.log('Search Console: mülke erişim yok (servis hesabı Search Console\'a eklenmemiş olabilir).');
+  console.log('Search Console: mülke erişim yok:', sonHata);
   process.exit(0);
 }
 // Search Console verisi 2-3 gün gecikmeli gelir

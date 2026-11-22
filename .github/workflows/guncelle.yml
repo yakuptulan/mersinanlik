@@ -23,6 +23,7 @@ concurrency:
 
 permissions:
   contents: write
+  id-token: write # Search Console için anahtarsız Google girişi (Workload Identity)
 
 jobs:
   guncelle:
@@ -122,9 +123,21 @@ jobs:
       - name: Ziyaretçi trafiği (Cloudflare, 3 saatte bir)
         run: node src/trafik.js || true
 
+      - name: Google girişi (anahtarsız, sadece Search Console okuma)
+        id: google
+        continue-on-error: true
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/1047223083910/locations/global/workloadIdentityPools/github/providers/github
+          service_account: gsc-okuyucu@mersinanlik.iam.gserviceaccount.com
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/webmasters.readonly
+          create_credentials_file: false
+
       - name: Search Console verisi (6 saatte bir)
         run: node src/gsc.js || true
         env:
+          GSC_TOKEN: ${{ steps.google.outputs.access_token }}
           GSC_ANAHTAR: ${{ secrets.GSC_ANAHTAR }}
 
       - name: Günlük işleyiş raporu
