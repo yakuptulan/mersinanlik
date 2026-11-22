@@ -1732,3 +1732,4 @@ img.kr-foto { object-fit: cover; background: #1f2937; padding: 0; }
 .alt-sosyal { display: flex; gap: 10px; margin-top: 14px; }
 .alt-sosyal a { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,.08); color: var(--acik-yazi); font-weight: 700; font-size: 14px; text-decoration: none; transition: background .2s; }
 .alt-sosyal a:hover { background: rgba(255,255,255,.16); }
+.takim-giris { margin: 0 0 18px; color: var(--ikincil); font-size: 15.5px; line-height: 1.6; }

@@ -241,16 +241,20 @@ export function takimSayfasi({ takim, lig, hikayeler, servis, simdi = Date.now()
   const sr = (m) => sonuc(m, takim);
   const ad = h(takim);
   const ust3 = lig.puan.slice(0, 3).map((x) => x.takim);
+  const kisa = KISA_TAKIM[takim] && KISA_TAKIM[takim] !== takim ? KISA_TAKIM[takim] : '';
+  const sonMac = sonuclar[0];
+  const giris = `${takim}${kisa ? ` (${kisa})` : ''}, Trendyol Süper Lig'de ${t.o} maçta ${t.g} galibiyet, ${t.b} beraberlik ve ${t.m} mağlubiyetle ${t.p} puan topladı ve ${t.sira}. sırada yer alıyor.${sonMac ? ` Son maçında ${sonMac.n}. haftada ${sonMac.m.ev} ile ${sonMac.m.dep} arasındaki karşılaşma ${sonMac.m.skor} sona erdi.` : ''}${gelecek[0] ? ` Sıradaki maçında ${kisaGun(gelecek[0].tarih)}${gelecek[0].saat ? ` saat ${gelecek[0].saat}` : ''} ${gelecek[0].ev === takim ? `sahasında ${gelecek[0].dep}` : `deplasmanda ${gelecek[0].ev}`} ile karşılaşacak.` : ''} Bu sayfada ${takim} maçlarının sonuçları, fikstürü, form durumu ve güncel puan tablosu yer alıyor.`;
   const sss = [
     { soru: `${takim} kaçıncı sırada?`, cevap: `${takim}, Trendyol Süper Lig'de ${t.o} maçta ${t.p} puanla ${t.sira}. sırada (${t.g} galibiyet, ${t.b} beraberlik, ${t.m} mağlubiyet).` },
     ...(gelecek[0] ? [{ soru: `${takim} sonraki maçı ne zaman?`, cevap: `${takim}, ${kisaGun(gelecek[0].tarih)}${gelecek[0].saat ? ` saat ${gelecek[0].saat}` : ''} ${gelecek[0].ev === takim ? `sahasında ${gelecek[0].dep}` : `deplasmanda ${gelecek[0].ev}`} ile oynayacak.` }] : []),
     ...(sonuclar[0] ? [{ soru: `${takim} son maçı kaç kaç bitti?`, cevap: `${sonuclar[0].n}. haftada ${sonuclar[0].m.ev} ${sonuclar[0].m.skor} ${sonuclar[0].m.dep}.` }] : []),
   ];
   return {
-    baslik: `${takim} puan durumu, fikstür ve son maçlar`,
-    aciklama: `${takim} Süper Lig'de ${t.sira}. sırada, ${t.p} puan. Son maç sonuçları, form durumu, sıradaki maç ve ${takim} haberleri.`,
+    baslik: `${takim} maçları, fikstür ve puan durumu`,
+    aciklama: `${takim}${kisa ? ` (${kisa})` : ''} Süper Lig'de ${t.sira}. sırada, ${t.p} puan. ${gelecek[0] ? `Sıradaki maç: ${gelecek[0].ev} – ${gelecek[0].dep}, ${kisaGun(gelecek[0].tarih)}${gelecek[0].saat ? ' ' + gelecek[0].saat : ''}. ` : ''}Maç sonuçları, fikstür, form ve haberler.`,
     jsonLd: [
-      { '@context': 'https://schema.org', '@type': 'SportsTeam', name: takim, sport: 'Futbol', memberOf: { '@type': 'SportsOrganization', name: 'Trendyol Süper Lig' } },
+      { '@context': 'https://schema.org', '@type': 'SportsTeam', name: takim, ...(kisa ? { alternateName: kisa } : {}), sport: 'Futbol', memberOf: { '@type': 'SportsOrganization', name: 'Trendyol Süper Lig' } },
+      ...gelecek.slice(0, 2).map((m) => ({ '@context': 'https://schema.org', '@type': 'SportsEvent', name: `${m.ev} – ${m.dep}`, sport: 'Futbol', startDate: `${m.tarih}T${m.saat || '00:00'}:00+03:00`, eventStatus: 'https://schema.org/EventScheduled', homeTeam: { '@type': 'SportsTeam', name: m.ev }, awayTeam: { '@type': 'SportsTeam', name: m.dep }, location: { '@type': 'Place', name: `${m.ev} stadyumu` }, superEvent: { '@type': 'SportsEvent', name: 'Trendyol Süper Lig' } })),
       { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: sss.map((s) => ({ '@type': 'Question', name: s.soru, acceptedAnswer: { '@type': 'Answer', text: s.cevap } })) },
     ],
     ust: `<div class="su-an-bas"><div><div class="cipler"><a class="cip" href="/spor/super-lig/">Trendyol Süper Lig</a></div><h1 class="takim-baslik">${takimRozeti(takim)}${ad}</h1><p style="margin-top:8px">${t.sira}. sıra · ${t.p} puan · ${t.o} maç</p></div></div>`,
@@ -258,6 +262,7 @@ export function takimSayfasi({ takim, lig, hikayeler, servis, simdi = Date.now()
 <article class="mt-kart" style="margin-bottom:18px">
 <div class="mt-ust" style="background:linear-gradient(120deg,#0b3d1f,#15803d 60%,#22c55e)"><span class="mt-logo">${takimRozeti(takim)}</span><span class="mt-ad"><b>${ad}</b><small>Trendyol Süper Lig${ust3.includes(takim) ? ' · zirve yarışında' : ''}</small></span><span class="mt-sira"><b>${t.sira}.</b><small>${t.p} puan</small></span></div>
 <div class="mt-istat"><span><b>${t.o}</b>maç</span><span><b>${t.g}</b>galibiyet</span><span><b>${t.b}</b>beraberlik</span><span><b>${t.m}</b>mağlubiyet</span><span><b>${t.a}:${t.y}</b>gol</span></div>
+<p class="takim-giris">${h(giris)}</p>
 ${lig.form?.[takim]?.length ? `<div class="mt-form"><small>Son ${lig.form[takim].length} maç</small>${lig.form[takim].map((f) => `<i class="f-${f}">${f}</i>`).join('')}</div>` : ''}
 </article>
 ${gelecek.length ? `<div class="bolum-bas"><h2>Sıradaki maç</h2></div><div class="sl-maclar">${gelecek.slice(0, 2).map((m) => `<div class="sl-mac"><span class="sl-zaman">${h(goreliZaman(m.tarih, m.saat, simdi))}</span><span class="sl-takim">${takimRozeti(m.ev)}<b>${h(m.ev)}</b></span><span class="sl-skor"><i>v</i></span><span class="sl-takim">${takimRozeti(m.dep)}<b>${h(m.dep)}</b></span></div>`).join('')}</div>` : ''}

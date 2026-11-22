@@ -184,7 +184,8 @@ for (const k of servis.suKesintisi?.liste || []) {
   if (!ilceler.length) continue;
   const yer = ilceler.length === 1 ? yerde(ilceler[0]) : `${ilceler.slice(0, -1).map(ilceAd).join(', ')} ve ${yerde(ilceler.at(-1))}`;
   const mAd = [...new Set(mahalleler.map((m) => String(m).replace(/\s*mahallesi$/i, '').trim()))].filter(Boolean);
-  const baslik = `${yer} su kesintisi${mAd.length >= 3 ? `: ${mAd.slice(0, 2).join(', ')} ve ${mAd.length - 2} mahalle daha` : mAd.length ? `: ${mAd.join(' ve ')}` : ''}${sure >= 5 ? ` (${Math.round(sure)} saat)` : ''}`;
+  const kesintiGunu = k.baslangic ? new Date(k.baslangic).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', timeZone: TZ }) : '';
+  const baslik = `${yer} su kesintisi${kesintiGunu ? ` (${kesintiGunu})` : ''}${mAd.length >= 3 ? `: ${mAd.slice(0, 2).join(', ')} ve ${mAd.length - 2} mahalle daha` : mAd.length ? `: ${mAd.join(' ve ')}` : ''}${sure >= 5 ? `, ${Math.round(sure)} saat sürecek` : ''}`;
   const metin = [
     `Mersin Büyükşehir Belediyesi Su ve Kanalizasyon İdaresi (MESKİ), ${yer} su kesintisi yaşanacağını duyurdu.`,
     `MESKİ'nin duyurusu şöyle: "${String(k.aciklama).trim()}"`,
@@ -345,7 +346,7 @@ if (pa?.altinlar?.length && haftaGunu >= 1 && haftaGunu <= 6 && trDakika >= 9 * 
       [al('USD') ? `Dolar ${tl(al('USD').satis)} TL` : '', al('EUR') ? `euro ${tl(al('EUR').satis)} TL` : ''].filter(Boolean).join(', ') + ' seviyesinde işlem görüyor.',
       'Fiyatlar serbest piyasa verileridir; kuyumculardaki satış fiyatları işçilik ve makas farkı nedeniyle farklılık gösterebilir. Bu haber yatırım tavsiyesi değildir. Gün içindeki anlık fiyatlar ve altın hesaplama aracı Mersin Anlık gram altın sayfasında.',
     ].join('\n\n');
-    haber({ id: kimlik('a', bugunISO), baslik: `Altın fiyatları bugün (${tarihMetni}): Gram altın ve çeyrek altın ne kadar?`, ozet: metin.split('\n\n')[0], metin, kategori: 'ekonomi', kaynak: { ad: 'Truncgil Finans', link: 'https://finans.truncgil.com/' }, kapak: 'piyasa' });
+    haber({ id: kimlik('a', bugunISO), baslik: `${tarihMetni} altın fiyatları: Gram altın, çeyrek altın bugün ne kadar?`, ozet: metin.split('\n\n')[0], metin, kategori: 'ekonomi', kaynak: { ad: 'Truncgil Finans', link: 'https://finans.truncgil.com/' }, kapak: 'piyasa' });
   }
 }
 

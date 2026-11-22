@@ -385,7 +385,7 @@ export function okulIlSayfasi({ il, kararlar, hava, simdi }) {
     { soru: `${il.ad} kar tatili kararını kim verir?`, cevap: `Okulların hava koşulları nedeniyle tatil edilmesine il genelinde ${il.ad} Valiliği, ilçe bazında kaymakamlıklar karar verir. Resmî duyurular valiliğin internet sitesi ve sosyal medya hesaplarından yapılır.` },
   ];
   return sayfa({
-    baslik: `${bul} yarın okullar tatil mi? ${il.ad} kar tatili son dakika`,
+    baslik: `${bul} yarın okullar tatil mi? Yarın okul var mı? (${new Date(`${yarin}T12:00:00+03:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', timeZone: TZ })})`,
     aciklama: `${durum} ${yh ? `Yarın ${il.ad} hava durumu: ${yh.durum.toLocaleLowerCase('tr-TR')}, ${yh.min}°/${yh.max}°.` : ''} Valilik kar tatili kararları anlık takipte.`.replace(/\s+/g, ' ').trim(),
     yol: okulIlYolu(il.slug),
     aktif: '/okullar-tatil-mi/',

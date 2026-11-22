@@ -727,7 +727,7 @@ export function namazIlceSayfasi({ ilce, servis, simdi }) {
   const bugun = new Date(simdi).toLocaleDateString('sv-SE', { timeZone: SITE.timezone });
   const satirlar = bolge.filter((v) => v.tarih >= bugun).slice(0, 7).map((v) => `<tr${v.tarih === bugun ? ' class="bugun"' : ''}><th scope="row">${new Date(`${v.tarih}T12:00:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'short' })}</th>${VAKITLER.map(([k]) => `<td>${h(v[k])}</td>`).join('')}</tr>`).join('');
   return sayfa({
-    baslik: `${ilce.ad} namaz vakitleri – bugün ezan saatleri`,
+    baslik: `${ilce.ad} namaz vakitleri ve ezan saatleri: bugün imsak, öğle, akşam`,
     aciklama: `${ilce.ad} (Mersin) için bugünkü ve haftalık namaz vakitleri: imsak, güneş, öğle, ikindi, akşam, yatsı.`,
     yol: `/namaz-vakitleri/${ilce.slug}/`,
     aktif: '/namaz-vakitleri/',
