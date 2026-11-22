@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T08:32:08.343Z",
+ "guncelleme": "2026-11-22T08:34:40.991Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 21,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T08:32:12.327Z",
+  "guncelleme": "2026-11-22T08:34:46.033Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T08:32:13.329Z",
+  "guncelleme": "2026-11-22T08:34:47.230Z",
   "liste": [
    {
     "tur": "su",
@@ -822,11 +822,27 @@
       ]
      }
     ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Silifke ilçesi Sarıcalar mahallesi arızadan kaynaklı saat 15:00 a kadar su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-22T08:33:00.000Z",
+    "bitis": "2026-11-22T12:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "silifke",
+      "ad": "Silifke",
+      "mahalleler": [
+       "Sarıcalar"
+      ]
+     }
+    ]
    }
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T08:32:15.360Z",
+  "guncelleme": "2026-11-22T08:34:52.285Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -859,9 +875,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3014132,
-    "usd": 59640,
-    "degisim": 3.59
+    "satis": 3018335,
+    "usd": 59723,
+    "degisim": 4.15
    }
   },
   "altinlar": [
@@ -994,10 +1010,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 11:32:01"
+  "kaynakSaati": "2026-11-22 11:34:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T08:32:17.518Z",
+  "guncelleme": "2026-11-22T08:34:55.233Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8671,7 +8687,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T08:32:18.113Z",
+  "guncelleme": "2026-11-22T08:34:55.505Z",
   "liste": [
    {
     "yol": "/",
@@ -8752,7 +8768,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T08:32:19.302Z",
+  "guncelleme": "2026-11-22T08:34:57.488Z",
   "deniz": {
    "sicaklik": 21.7,
    "dalga": 0.6
@@ -8765,7 +8781,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T08:32:21.010Z",
+  "guncelleme": "2026-11-22T08:34:59.507Z",
   "giden": [
    {
     "no": [
@@ -9984,7 +10000,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T08:32:21.010Z",
+  "guncelleme": "2026-11-22T08:34:59.507Z",
   "liste": [
    {
     "id": 6386,
