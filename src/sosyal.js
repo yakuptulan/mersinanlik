@@ -12,6 +12,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { SITE, GUNDEM, KATEGORILER, ILCELER } from './config.js';
 import { haberYolu, kapakAdresi } from './templates/parcalar.js';
+import { aktifSuKesintileri } from './templates/sayfalar.js';
 
 const API = 'https://graph.facebook.com/v23.0';
 const TOKEN = process.env.META_TOKEN;
@@ -26,6 +27,7 @@ export const AYAR = {
   enEskiSaat: 6, // bundan eski haber paylaşılmaz
   haricKategori: new Set(['siyaset']),
   tasarim: 'a', // tek tasarım denemesinde kullanılan varsayılan: a | b | c | d
+  sabah: { bas: 8 * 60 + 30, bit: 11 * 60 }, // 'Mersin'de bugün' kartı: 08.30–11.00 arası, günde bir kez (eczane nöbeti 08.00'de değişir)
   denenenTasarimlar: ['a', 'b'], // Instagram'da sırayla denenir; karşılaştırma için her gönderiye yazılır
 };
 
@@ -348,6 +350,99 @@ ${yazi(W - 64, H - 36, `${ilce} · ${tarih}`, 24, '#8FA3C8', 500, 'text-anchor="
 </svg>`;
 }
 
+
+// ---------- Sabah kartı: "Mersin'de bugün" ----------
+function trDakika(t = Date.now()) {
+  const [s, d] = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Istanbul', hour: '2-digit', minute: '2-digit', hour12: false }).format(t).split(':').map(Number);
+  return s * 60 + d;
+}
+const tl = (n, k = 0) => Number(n).toLocaleString('tr-TR', { minimumFractionDigits: k, maximumFractionDigits: k });
+
+export function sabahVerisi(simdi = Date.now()) {
+  const servis = JSON.parse(fs.readFileSync('data/servisler.json', 'utf8'));
+  const bugun = trGun(simdi);
+  const [y, a, g] = bugun.split('-');
+  const eczBugun = (servis.eczane?.liste || []).filter((e) => String(e.saat || '').startsWith(`${g}.${a}.${y}`));
+  const eczIlce = new Set(eczBugun.map((e) => e.ilce));
+  const hv = servis.hava?.yenisehir || servis.hava?.akdeniz;
+  const hg = hv?.gunler?.find((x) => x.tarih === bugun);
+  const nm = (servis.namaz?.bolgeler?.['9737'] || []).find((x) => x.tarih === bugun);
+  const su = aktifSuKesintileri(servis, simdi);
+  const suYer = [...new Set(su.flatMap((k) => k.ilceler.map((i) => i.ad)))];
+  const pk = servis.piyasa?.kalemler || {};
+  const gunAd = new Intl.DateTimeFormat('tr-TR', { timeZone: 'Europe/Istanbul', day: 'numeric', month: 'long', weekday: 'long' }).format(simdi);
+  return { bugun, gunAd, eczane: eczBugun.length, eczIlce: eczIlce.size, hava: hg ? { min: hg.min, max: hg.max, durum: hg.durum } : null, namaz: nm || null, su, suYer, gram: pk.gram, usd: pk.usd };
+}
+
+export function sabahMetni(v, platform) {
+  const sat = [
+    `☀️ Mersin'de bugün · ${v.gunAd}`,
+    '',
+    v.hava ? `🌤 Hava: ${v.hava.durum}, ${v.hava.min}° / ${v.hava.max}°` : null,
+    v.eczane ? `💊 Nöbetçi eczane: ${v.eczIlce} ilçede ${v.eczane} eczane nöbette` : null,
+    v.su.length ? `💧 Su kesintisi: ${v.suYer.join(', ')}` : '💧 Su kesintisi: Duyurulmuş kesinti yok',
+    v.namaz ? `🕌 İmsak ${v.namaz.imsak} · Akşam ${v.namaz.aksam}` : null,
+    v.gram ? `💰 Gram altın ${tl(v.gram.satis)} TL${v.usd ? ` · Dolar ${tl(v.usd.satis, 2)} TL` : ''}` : null,
+    '',
+    platform === 'facebook' ? `Nöbetçi eczane adresleri ve kesinti ayrıntıları: ${SITE.url}/nobetci-eczane/` : "📲 Nöbetçi eczane adresleri ve kesinti ayrıntıları profildeki bağlantıda: mersinanlik.com",
+    '',
+    '#Mersin #NöbetçiEczane #MersinHavaDurumu #MersinAnlık',
+  ];
+  return sat.filter((x) => x !== null).join('\n');
+}
+
+export async function sabahKartiCiz(v, cikti) {
+  const sharp = (await import('sharp')).default;
+  const { Resvg } = await import('@resvg/resvg-js');
+  const logo = fs.readFileSync('assets/logo-seffaf.png').toString('base64');
+  let arka = '';
+  try {
+    const f = await sharp('assets/kapak-mersin.jpg').resize(W, 560, { fit: 'cover' }).jpeg({ quality: 85 }).toBuffer();
+    arka = `<image href="data:image/jpeg;base64,${f.toString('base64')}" x="0" y="0" width="${W}" height="560"/>`;
+  } catch {}
+  const kutu = (x, y, w, hh, renk, baslik, deger, alt) => `<rect x="${x}" y="${y}" width="${w}" height="${hh}" rx="26" fill="#12244D"/>
+<rect x="${x}" y="${y}" width="10" height="${hh}" rx="5" fill="${renk}"/>
+${yazi(x + 36, y + 56, baslik, 26, renk, 700, 'letter-spacing="1"')}
+${yazi(x + 36, y + 124, deger, deger.length > 14 ? 40 : 52, '#FFFFFF', 700)}
+${alt ? yazi(x + 36, y + 172, alt, 24, '#9FB2D6', 500) : ''}`;
+  const suDeger = v.su.length ? `${v.su.length} kesinti` : 'Yok';
+  const suAlt = v.su.length ? kisalt(v.suYer.join(', '), 34) : 'Duyurulmuş kesinti yok';
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+<defs><linearGradient id="k" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A1530" stop-opacity="0.35"/><stop offset="0.7" stop-color="#0A1530" stop-opacity="0.85"/><stop offset="1" stop-color="#0A1530"/></linearGradient></defs>
+<rect width="${W}" height="${H}" fill="#0A1530"/>
+${arka}
+<rect width="${W}" height="561" fill="url(#k)"/>
+<image href="data:image/png;base64,${logo}" x="${W - 56 - 180}" y="40" width="180" height="120"/>
+${yazi(64, 120, "MERSİN'DE BUGÜN", 30, '#22D3EE', 700, 'letter-spacing="3"')}
+${yazi(64, 190, v.gunAd, 56, '#FFFFFF', 700)}
+${v.hava ? `${yazi(64, 360, `${v.hava.max}°`, 150, '#FFFFFF', 700)}
+${yazi(64 + genislik(`${v.hava.max}°`, 150) + 30, 300, v.hava.durum, 40, '#FFFFFF', 700)}
+${yazi(64 + genislik(`${v.hava.max}°`, 150) + 30, 352, `En düşük ${v.hava.min}° · Mersin`, 30, '#C9D4EA', 500)}` : ''}
+${kutu(48, 470, 476, 200, '#12A594', 'NÖBETÇİ ECZANE', v.eczane ? `${v.eczane} eczane` : 'Sitede', v.eczane ? `${v.eczIlce} ilçede, bugün 08.00'den itibaren` : 'İlçe ilçe liste sitede')}
+${kutu(556, 470, 476, 200, '#3E8EDE', 'SU KESİNTİSİ', suDeger, suAlt)}
+${kutu(48, 700, 476, 200, '#8E4EC6', 'NAMAZ', v.namaz ? `${v.namaz.imsak} · ${v.namaz.aksam}` : '-', 'İmsak · Akşam (Mersin)')}
+${kutu(556, 700, 476, 200, '#C98A00', 'GRAM ALTIN', v.gram ? `${tl(v.gram.satis)} TL` : '-', v.usd ? `Dolar ${tl(v.usd.satis, 2)} TL` : '')}
+<rect x="48" y="930" width="${W - 96}" height="250" rx="26" fill="#0E1D40" stroke="#22D3EE" stroke-opacity="0.35" stroke-width="2"/>
+${yazi(84, 1000, 'Eczane adresleri, kesinti saatleri ve', 34, '#FFFFFF', 700)}
+${yazi(84, 1050, "Mersin'in son dakika haberleri sitemizde.", 34, '#FFFFFF', 700)}
+${yazi(84, 1118, 'Ayrıntılar: mersinanlik.com', 28, '#9FB2D6', 500)}
+<rect x="0" y="${H - 116}" width="${W}" height="116" fill="#0E1D40"/>
+<rect x="0" y="${H - 116}" width="${W}" height="3" fill="#22D3EE" fill-opacity="0.6"/>
+${yazi(64, H - 46, 'mersinanlik.com', 36, '#22D3EE', 700)}
+${yazi(W - 64, H - 48, 'Her sabah, Mersin için', 25, '#B6C4E0', 500, 'text-anchor="end"')}
+</svg>`;
+  const png = new Resvg(svg, { font: { fontFiles: ['assets/fonts/Poppins-Bold.ttf', 'assets/fonts/Poppins-Medium.ttf'], loadSystemFonts: true, defaultFontFamily: 'Poppins' }, fitTo: { mode: 'width', value: W } }).render().asPng();
+  await sharp(png).jpeg({ quality: 88, mozjpeg: true }).toFile(cikti);
+  return cikti;
+}
+
+function sabahSirasi(platform, d, simdi = Date.now()) {
+  if (simdi < Date.parse(AYAR[platform].baslangic)) return false;
+  const dk = trDakika(simdi);
+  if (dk < AYAR.sabah.bas || dk > AYAR.sabah.bit) return false;
+  return (d.sabah || {})[platform] !== trGun(simdi);
+}
+
 // ---------- Modlar ----------
 async function kontrol() {
   const ben = await graph('/me?fields=id,name');
@@ -362,12 +457,23 @@ async function kontrol() {
 async function hazirla() {
   const d = durumOku();
   d.kuyruk = {};
-  const fbNeden = siraGeldi('facebook', d);
+  // Sabah kartı: aynı çalışmada o platformda haber paylaşılmaz
+  const sabahPlatform = ['facebook', 'instagram'].filter((p) => sabahSirasi(p, d));
+  if (sabahPlatform.length) {
+    const v = sabahVerisi();
+    if (v.eczane) {
+      fs.mkdirSync(KART_KLASORU, { recursive: true });
+      await sabahKartiCiz(v, path.join(KART_KLASORU, `sabah-${v.bugun}.jpg`));
+      d.kuyruk.sabah = { gun: v.bugun, platformlar: sabahPlatform };
+    }
+  }
+  const sabahta = (p) => d.kuyruk.sabah?.platformlar.includes(p);
+  const fbNeden = sabahta('facebook') ? 'sabah kartı sırada' : siraGeldi('facebook', d);
   if (!fbNeden) {
     const h = aday('facebook', d);
     if (h) d.kuyruk.facebook = h.id;
   }
-  const igNeden = siraGeldi('instagram', d);
+  const igNeden = sabahta('instagram') ? 'sabah kartı sırada' : siraGeldi('instagram', d);
   if (!igNeden) {
     const h = aday('instagram', d);
     if (h) {
@@ -386,9 +492,39 @@ async function hazirla() {
 async function paylas() {
   const d = durumOku();
   const kuyruk = d.kuyruk || {};
-  if (!kuyruk.facebook && !kuyruk.instagram) return console.log('Sosyal: paylaşılacak bir şey yok.');
+  if (!kuyruk.facebook && !kuyruk.instagram && !kuyruk.sabah) return console.log('Sosyal: paylaşılacak bir şey yok.');
   const tum = Object.fromEntries(haberler().map((h) => [h.id, h]));
   const { sayfa, ig } = await hesaplar();
+
+  if (kuyruk.sabah) {
+    const v = sabahVerisi();
+    const gorsel = `${SITE.url}/sosyal/sabah-${kuyruk.sabah.gun}.jpg`;
+    d.sabah ||= {};
+    if (kuyruk.sabah.platformlar.includes('facebook')) {
+      try {
+        await graph(`/${sayfa.id}/photos`, { method: 'POST', govde: { url: gorsel, caption: sabahMetni(v, 'facebook') }, token: sayfa.access_token });
+        d.sabah.facebook = kuyruk.sabah.gun;
+        console.log('Facebook sabah kartı paylaşıldı');
+      } catch (e) {
+        console.log('Facebook sabah kartı paylaşılamadı:', e.message);
+      }
+    }
+    if (kuyruk.sabah.platformlar.includes('instagram') && ig) {
+      try {
+        const kap = await graph(`/${ig.id}/media`, { method: 'POST', govde: { image_url: gorsel, caption: sabahMetni(v, 'instagram') } });
+        for (let i = 0; i < 10; i++) {
+          const st = await graph(`/${kap.id}?fields=status_code`);
+          if (st.status_code === 'FINISHED') break;
+          await new Promise((r) => setTimeout(r, 3000));
+        }
+        await graph(`/${ig.id}/media_publish`, { method: 'POST', govde: { creation_id: kap.id } });
+        d.sabah.instagram = kuyruk.sabah.gun;
+        console.log('Instagram sabah kartı paylaşıldı');
+      } catch (e) {
+        console.log('Instagram sabah kartı paylaşılamadı:', e.message);
+      }
+    }
+  }
 
   if (kuyruk.facebook && tum[kuyruk.facebook]) {
     const h = tum[kuyruk.facebook];
@@ -443,7 +579,11 @@ async function karsilastir() {
 }
 
 const mod = process.argv[2];
-if (mod === '--kart') {
+if (mod === '--sabah-kart') {
+  const v = sabahVerisi();
+  await sabahKartiCiz(v, process.argv[3] || 'sabah.jpg');
+  console.log(sabahMetni(v, 'facebook'));
+} else if (mod === '--kart') {
   // Deneme: node src/sosyal.js --kart <haber-id|ilk> çıktı.jpg
   const id = process.argv[3];
   const h = id && id !== 'ilk' ? haberler().find((x) => x.id === id) : haberler().find((x) => !x.genel && kapakAdresi(x)?.src);
