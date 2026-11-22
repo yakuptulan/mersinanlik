@@ -1771,3 +1771,11 @@ img.kr-foto { object-fit: cover; background: #1f2937; padding: 0; }
 @media (min-width: 701px) and (max-width: 1239px) { .widgetlar:has(.widget-is) .widget-hava { grid-row: span 2; } }
 @media (min-width: 701px) and (max-width: 900px) { .widgetlar:has(.widget-is) > .widget:last-child { grid-column: span 2; } }
 @media (max-width: 900px) { .is-dugme { display: none; } }
+
+.alt-iletisim { display: inline-flex; align-items: center; gap: 10px; margin-top: 12px; padding: 10px 16px; border-radius: 16px; background: rgba(255,255,255,.08); color: #fff; text-decoration: none; font-weight: 700; font-size: 15px; transition: background .2s; }
+.alt-iletisim:hover { background: rgba(255,255,255,.16); color: #fff; }
+.alt-iletisim svg { color: #22d3ee; flex: 0 0 auto; }
+.alt-iletisim span { display: flex; flex-direction: column; line-height: 1.25; }
+.alt-iletisim small { font-size: 12px; font-weight: 600; color: var(--soluk); }
+/* Mersin'de şu an arka plan deseni: daha sade */
+.kure-sahne { opacity: .35; animation: none; }

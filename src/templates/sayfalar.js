@@ -332,7 +332,7 @@ export function anaSayfa({ hikayeler, servis, simdi }) {
   const ust = `${meteoBandi(servis)}${sonDakikaBandi(sonDakikaSec(hikayeler.filter((x) => x !== manset), simdi))}
 <div class="su-an-bas su-an-kompakt">
 <div><h1>Mersin'de şu an</h1><p>${tarihUzun(new Date(simdi).toISOString())} · <span class="canli-saat" data-canli-saat>${saat(new Date(simdi).toISOString())}</span></p></div>
-<div class="su-an-sag"><a class="trafik-dugme is-dugme" href="/is-ilanlari/">💼 İş ilanları</a><a class="trafik-dugme" href="/trafik/"><span class="trafik-isik"><i></i><i></i><i></i></span>Canlı trafik</a>
+<div class="su-an-sag"><a class="trafik-dugme" href="/trafik/"><span class="trafik-isik"><i></i><i></i><i></i></span>Canlı trafik</a>
 <div class="ilce-secici" data-ilce-secici>
 <button class="ilce-sec" type="button" aria-expanded="false" aria-controls="ilce-liste">${ikon.konum(20)}<span data-ilce-ad>Mersin</span><span class="daire">${ikon.asagi(18)}</span></button>
 <div class="ilce-acilir" id="ilce-liste" hidden>${ILCELER.map((i) => `<button type="button" data-ilce-deger="${i.slug}" aria-pressed="false">${h(i.ad)}</button>`).join('')}</div>
