@@ -25,7 +25,8 @@ export const AYAR = {
   sessizBit: 8,
   enEskiSaat: 6, // bundan eski haber paylaşılmaz
   haricKategori: new Set(['siyaset']),
-  tasarim: 'a', // Instagram kart tasarımı: a | b | c | d
+  tasarim: 'a', // tek tasarım denemesinde kullanılan varsayılan: a | b | c | d
+  denenenTasarimlar: ['a', 'b'], // Instagram'da sırayla denenir; karşılaştırma için her gönderiye yazılır
 };
 
 const ILCE_AD = Object.fromEntries(ILCELER.map((i) => [i.slug, i.ad]));
@@ -371,8 +372,11 @@ async function hazirla() {
     const h = aday('instagram', d);
     if (h) {
       fs.mkdirSync(KART_KLASORU, { recursive: true });
-      await kartCiz(h, path.join(KART_KLASORU, `${h.id}.jpg`));
+      const liste = AYAR.denenenTasarimlar;
+      const tasarim = liste[(d.instagram || []).length % liste.length];
+      await kartCiz(h, path.join(KART_KLASORU, `${h.id}.jpg`), tasarim);
       d.kuyruk.instagram = h.id;
+      d.kuyruk.tasarim = tasarim;
     }
   }
   console.log('Sosyal kuyruk:', JSON.stringify(d.kuyruk), '| FB:', fbNeden || 'hazır', '| IG:', igNeden || 'hazır');
@@ -410,7 +414,7 @@ async function paylas() {
         await new Promise((r) => setTimeout(r, 3000));
       }
       const r = await graph(`/${ig.id}/media_publish`, { method: 'POST', govde: { creation_id: kap.id } });
-      (d.instagram ||= []).push({ id: h.id, zaman: new Date().toISOString(), gonderi: r.id });
+      (d.instagram ||= []).push({ id: h.id, zaman: new Date().toISOString(), gonderi: r.id, tasarim: kuyruk.tasarim || AYAR.tasarim });
       console.log('Instagram paylaşıldı:', h.baslik);
     } catch (e) {
       console.log('Instagram paylaşılamadı:', e.message);
@@ -420,6 +424,24 @@ async function paylas() {
   durumYaz(d);
 }
 
+// A/B karşılaştırması: her tasarımın ortalama beğeni ve yorum sayısı
+async function karsilastir() {
+  const d = durumOku();
+  const sonuc = {};
+  for (const g of d.instagram || []) {
+    if (!g.gonderi) continue;
+    try {
+      const m = await graph(`/${g.gonderi}?fields=like_count,comments_count`);
+      const t = (sonuc[g.tasarim || '?'] ||= { gonderi: 0, begeni: 0, yorum: 0 });
+      t.gonderi++;
+      t.begeni += m.like_count || 0;
+      t.yorum += m.comments_count || 0;
+    } catch {}
+  }
+  for (const [t, v] of Object.entries(sonuc)) console.log(`Tasarım ${t.toUpperCase()}: ${v.gonderi} gönderi, ortalama ${(v.begeni / v.gonderi).toFixed(1)} beğeni, ${(v.yorum / v.gonderi).toFixed(1)} yorum`);
+  return sonuc;
+}
+
 const mod = process.argv[2];
 if (mod === '--kart') {
   // Deneme: node src/sosyal.js --kart <haber-id|ilk> çıktı.jpg
@@ -427,7 +449,7 @@ if (mod === '--kart') {
   const h = id && id !== 'ilk' ? haberler().find((x) => x.id === id) : haberler().find((x) => !x.genel && kapakAdresi(x)?.src);
   await kartCiz(h, process.argv[4] || 'kart.jpg', process.argv[5] || AYAR.tasarim);
   console.log('Kart çizildi:', h.baslik);
-} else if (['--kontrol', '--hazirla', '--paylas'].includes(mod)) {
+} else if (['--kontrol', '--hazirla', '--paylas', '--karsilastir'].includes(mod)) {
   if (!TOKEN) {
     console.log('Sosyal: META_TOKEN yok, atlandı.');
     process.exit(0);
@@ -436,6 +458,7 @@ if (mod === '--kart') {
     if (mod === '--kontrol') await kontrol();
     if (mod === '--hazirla') await hazirla();
     if (mod === '--paylas') await paylas();
+    if (mod === '--karsilastir') await karsilastir();
   } catch (e) {
     console.log('Sosyal hata:', e.message);
   }

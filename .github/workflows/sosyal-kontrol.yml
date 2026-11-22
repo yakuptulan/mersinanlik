@@ -18,6 +18,6 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Jetonun gördüğü sayfa ve Instagram hesabı
-        run: node src/sosyal.js --kontrol
+        run: node src/sosyal.js --kontrol && node src/sosyal.js --karsilastir
         env:
           META_TOKEN: ${{ secrets.META_TOKEN }}
