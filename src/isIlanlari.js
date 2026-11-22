@@ -11,6 +11,10 @@ const ARALIK_SAAT = 3;
 const DETAY_SINIRI = 60;
 
 const veri = (() => { try { return JSON.parse(fs.readFileSync(DOSYA, 'utf8')); } catch { return { ilanlar: {} }; } })();
+const BASLANGIC = Date.now();
+const gecen = () => Date.now() - BASLANGIC;
+// Süre dolarsa en son kaydedilebilir durum yazılır (o ana kadar alınan liste ve ayrıntılar kaybolmasın)
+let sonDurum = null;
 if (!process.env.ZORLA && veri.guncelleme && Date.now() - new Date(veri.guncelleme).getTime() < ARALIK_SAAT * 36e5) {
   console.log('İş ilanları: son güncelleme yakın, atlandı.');
   process.exit(0);
@@ -22,8 +26,8 @@ if (!process.env.ZORLA && veri.basarisizDeneme && Date.now() - new Date(veri.bas
 }
 // Tüm adım için üst süre: 3 dakikada bitmezse yarıda bırak, eldeki veri korunur
 setTimeout(() => {
-  console.warn('! İş ilanları: süre doldu (3 dk), bu tur atlandı.');
-  try { fs.writeFileSync(DOSYA, JSON.stringify({ ...veri, basarisizDeneme: new Date().toISOString() }, null, 1)); } catch {}
+  console.warn(`! İş ilanları: süre doldu (3 dk)${sonDurum ? ', o ana kadar alınanlar kaydedildi' : ', bu tur atlandı'}.`);
+  try { fs.writeFileSync(DOSYA, JSON.stringify(sonDurum || { ...veri, basarisizDeneme: new Date().toISOString() }, null, 1)); } catch {}
   process.exit(0);
 }, 180e3).unref();
 
@@ -49,10 +53,13 @@ try {
     const ilce = ilceBul(i.ilceHam);
     yeni[i.no] = { ...eski, ...i, ilce: ilce?.slug || null, ilceAd: ilce?.ad || null, ilkGorulme: eski?.ilkGorulme || new Date().toISOString() };
   }
-  // Ayrıntısı eksik olanlar (yeniden eskiye), her çalışmada sınırlı sayıda
+  console.log(`İş ilanları: liste alındı (${Math.round(gecen() / 1000)} sn)`);
+  sonDurum = { guncelleme: new Date().toISOString(), toplam, ilanlar: yeni, kurslar: veri.kurslar || [] };
+  // Ayrıntısı eksik olanlar (yeniden eskiye), her çalışmada sınırlı sayıda ve süre bütçesiyle
   const eksik = Object.values(yeni).filter((i) => !i.detay).sort((a, b) => b.no.localeCompare(a.no)).slice(0, DETAY_SINIRI);
   let alinan = 0;
   for (const i of eksik) {
+    if (gecen() > 120e3) break; // kalan süre kurslara ve kayda kalsın
     try {
       i.detay = await ilanDetayi(i.no, i.tur);
       alinan++;
@@ -63,7 +70,7 @@ try {
   }
   // Mersin'deki İŞKUR kursları ve işbaşı eğitim programları
   let kurslar = veri.kurslar || [];
-  try {
+  if (gecen() < 140e3) try {
     const k = [];
     for (const tur of Object.keys(KURS_TURLERI)) {
       for (const x of await iskurMersinKurslari(Number(tur))) {
