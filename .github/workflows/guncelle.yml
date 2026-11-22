@@ -28,7 +28,7 @@ permissions:
 jobs:
   guncelle:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 18
     env:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -68,6 +68,8 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
       - name: 81 il akaryakıt ve namaz vakitleri (döngüsel)
+        timeout-minutes: 5
+        continue-on-error: true
         run: node src/ulusal.js || true
 
       - name: Kulüp logoları
@@ -90,6 +92,8 @@ jobs:
 
 
       - name: Mersin iş ilanları (İŞKUR, 3 saatte bir)
+        timeout-minutes: 5
+        continue-on-error: true
         run: node src/isIlanlari.js || true
       - name: Veriden otomatik haberler (akaryakıt, deprem, su, hava, eczane, okul, yollar…)
         run: node src/otomatik.js

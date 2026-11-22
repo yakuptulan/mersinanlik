@@ -15,6 +15,17 @@ if (!process.env.ZORLA && veri.guncelleme && Date.now() - new Date(veri.guncelle
   console.log('İş ilanları: son güncelleme yakın, atlandı.');
   process.exit(0);
 }
+// İŞKUR erişilemezse her 30 dakikada bir boşuna beklemeyelim: başarısız denemeden sonra 1 saat ara
+if (!process.env.ZORLA && veri.basarisizDeneme && Date.now() - new Date(veri.basarisizDeneme).getTime() < 36e5) {
+  console.log('İş ilanları: son deneme başarısızdı, 1 saat bekleniyor.');
+  process.exit(0);
+}
+// Tüm adım için üst süre: 3 dakikada bitmezse yarıda bırak, eldeki veri korunur
+setTimeout(() => {
+  console.warn('! İş ilanları: süre doldu (3 dk), bu tur atlandı.');
+  try { fs.writeFileSync(DOSYA, JSON.stringify({ ...veri, basarisizDeneme: new Date().toISOString() }, null, 1)); } catch {}
+  process.exit(0);
+}, 180e3).unref();
 
 const sade = (s) => String(s).toLocaleLowerCase('tr-TR').split('/')[0].trim();
 const ilceBul = (ham) => ILCELER.find((i) => sade(i.ad) === sade(ham));
@@ -70,4 +81,5 @@ try {
   console.log(`İş ilanları: ${Object.keys(yeni).length} açık ilan (İŞKUR toplam ${toplam}), ${yeniSayi} yeni, ${alinan} ayrıntı alındı.`);
 } catch (e) {
   console.warn(`! İş ilanları alınamadı: ${e.message}`);
+  fs.writeFileSync(DOSYA, JSON.stringify({ ...veri, basarisizDeneme: new Date().toISOString() }, null, 1));
 }
