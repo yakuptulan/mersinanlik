@@ -10,7 +10,7 @@ permissions:
 jobs:
   kontrol:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -28,6 +28,12 @@ jobs:
           token_format: access_token
           access_token_scopes: https://www.googleapis.com/auth/cloud-platform
           create_credentials_file: false
+
+      - name: Vertex model yoklaması
+        continue-on-error: true
+        run: node scripts/model-yokla.js
+        env:
+          VERTEX_TOKEN: ${{ steps.vertex.outputs.access_token }}
 
       - name: Kaliteli görsel bağlantı denemesi (1 görsel)
         run: node src/sosyal.js --gorsel-dene
