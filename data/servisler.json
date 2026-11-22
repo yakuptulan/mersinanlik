@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T12:18:36.633Z",
+ "guncelleme": "2026-11-22T12:31:37.909Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 22,
@@ -39,7 +39,7 @@
   },
   "anamur": {
    "sicaklik": 23,
-   "durum": "Açık",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -75,13 +75,13 @@
   },
   "aydincik": {
    "sicaklik": 22,
-   "durum": "Az bulutlu",
+   "durum": "Hafif sağanak",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 15,
      "max": 22,
-     "durum": "Az bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-23",
@@ -110,13 +110,13 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 23,
-   "durum": "Açık",
+   "sicaklik": 22,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 14,
-     "max": 23,
+     "max": 22,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -189,7 +189,7 @@
      "tarih": "2026-11-22",
      "min": 15,
      "max": 21,
-     "durum": "Az bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-23",
@@ -218,14 +218,14 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 17,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 16,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 11,
-     "max": 17,
-     "durum": "Az bulutlu"
+     "max": 16,
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-23",
@@ -255,7 +255,7 @@
   },
   "mezitli": {
    "sicaklik": 21,
-   "durum": "Az bulutlu",
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -297,7 +297,7 @@
      "tarih": "2026-11-22",
      "min": 11,
      "max": 22,
-     "durum": "Az bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-23",
@@ -333,7 +333,7 @@
      "tarih": "2026-11-22",
      "min": 13,
      "max": 23,
-     "durum": "Az bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-23",
@@ -369,7 +369,7 @@
      "tarih": "2026-11-22",
      "min": 15,
      "max": 23,
-     "durum": "Az bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-23",
@@ -399,13 +399,13 @@
   },
   "toroslar": {
    "sicaklik": 22,
-   "durum": "Az bulutlu",
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 15,
      "max": 22,
-     "durum": "Az bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-23",
@@ -435,13 +435,13 @@
   },
   "yenisehir": {
    "sicaklik": 22,
-   "durum": "Az bulutlu",
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 15,
      "max": 22,
-     "durum": "Az bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-23",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T12:18:40.179Z",
+  "guncelleme": "2026-11-22T12:31:41.976Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T12:18:41.087Z",
+  "guncelleme": "2026-11-22T12:31:42.992Z",
   "liste": [
    {
     "tur": "su",
@@ -892,7 +892,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T12:18:45.700Z",
+  "guncelleme": "2026-11-22T12:31:47.510Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -925,9 +925,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3103904,
-    "usd": 61416,
-    "degisim": 5.34
+    "satis": 3060107,
+    "usd": 60550,
+    "degisim": 3.71
    }
   },
   "altinlar": [
@@ -1060,10 +1060,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 15:18:02"
+  "kaynakSaati": "2026-11-22 15:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T12:18:47.934Z",
+  "guncelleme": "2026-11-22T12:31:50.473Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1784,7 +1784,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-22T09:32:08.528Z",
+  "guncelleme": "2026-11-22T12:31:53.965Z",
   "liste": [
    {
     "id": "gzi1bq",
@@ -1888,7 +1888,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-22T12:18:50.244Z",
+  "guncelleme": "2026-11-22T12:31:53.966Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -1993,6 +1993,20 @@
     },
     {
      "sira": 8,
+     "takim": "Göztepe",
+     "ham": "GÖZTEPE A.Ş.",
+     "o": 12,
+     "g": 5,
+     "b": 3,
+     "m": 4,
+     "a": 23,
+     "y": 19,
+     "av": 4,
+     "p": 18,
+     "mersin": false
+    },
+    {
+     "sira": 9,
      "takim": "İstanbul Başakşehir FK",
      "ham": "İSTANBUL BAŞAKŞEHİR FK",
      "o": 11,
@@ -2006,7 +2020,7 @@
      "mersin": false
     },
     {
-     "sira": 9,
+     "sira": 10,
      "takim": "Çaykur Rizespor",
      "ham": "ÇAYKUR RİZESPOR A.Ş.",
      "o": 12,
@@ -2020,7 +2034,7 @@
      "mersin": false
     },
     {
-     "sira": 10,
+     "sira": 11,
      "takim": "Arca Çorum FK",
      "ham": "ARCA ÇORUM FK",
      "o": 11,
@@ -2034,35 +2048,7 @@
      "mersin": false
     },
     {
-     "sira": 11,
-     "takim": "Göztepe",
-     "ham": "GÖZTEPE A.Ş.",
-     "o": 11,
-     "g": 4,
-     "b": 3,
-     "m": 4,
-     "a": 22,
-     "y": 19,
-     "av": 3,
-     "p": 15,
-     "mersin": false
-    },
-    {
      "sira": 12,
-     "takim": "Erzurumspor FK",
-     "ham": "ERZURUMSPOR FK",
-     "o": 11,
-     "g": 4,
-     "b": 2,
-     "m": 5,
-     "a": 10,
-     "y": 17,
-     "av": -7,
-     "p": 14,
-     "mersin": false
-    },
-    {
-     "sira": 13,
      "takim": "Gençlerbirliği",
      "ham": "GENÇLERBİRLİĞİ",
      "o": 12,
@@ -2071,6 +2057,20 @@
      "m": 6,
      "a": 13,
      "y": 21,
+     "av": -8,
+     "p": 14,
+     "mersin": false
+    },
+    {
+     "sira": 13,
+     "takim": "Erzurumspor FK",
+     "ham": "ERZURUMSPOR FK",
+     "o": 12,
+     "g": 4,
+     "b": 2,
+     "m": 6,
+     "a": 10,
+     "y": 18,
      "av": -8,
      "p": 14,
      "mersin": false
@@ -2183,7 +2183,7 @@
      "tarih": "2026-11-22",
      "saat": "13:30",
      "ev": "Erzurumspor FK",
-     "skor": null,
+     "skor": "0-1",
      "dep": "Göztepe",
      "mersin": false
     },
@@ -2269,20 +2269,6 @@
     },
     {
      "sira": 4,
-     "takim": "Bitlis 1916",
-     "ham": "BİTLİS 1916 FUTBOL SPOR KULÜBÜ",
-     "o": 13,
-     "g": 8,
-     "b": 2,
-     "m": 3,
-     "a": 27,
-     "y": 10,
-     "av": 17,
-     "p": 26,
-     "mersin": false
-    },
-    {
-     "sira": 5,
      "takim": "Halil Bayram İnşaat Karaköprü Belediyespor",
      "ham": "HALİL BAYRAM İNŞAAT KARAKÖPRÜ BELEDİYESPOR",
      "o": 13,
@@ -2296,7 +2282,7 @@
      "mersin": false
     },
     {
-     "sira": 6,
+     "sira": 5,
      "takim": "Niğde Belediyesi Spor",
      "ham": "NİĞDE BELEDİYESİ SPOR",
      "o": 12,
@@ -2310,7 +2296,7 @@
      "mersin": false
     },
     {
-     "sira": 7,
+     "sira": 6,
      "takim": "Ejderoğlu Kırşehir",
      "ham": "EJDEROĞLU KIRŞEHİR FUTBOL SPOR KULÜBÜ",
      "o": 12,
@@ -2324,17 +2310,31 @@
      "mersin": false
     },
     {
+     "sira": 7,
+     "takim": "Bitlis 1916",
+     "ham": "BİTLİS 1916 FUTBOL SPOR KULÜBÜ",
+     "o": 12,
+     "g": 7,
+     "b": 2,
+     "m": 3,
+     "a": 22,
+     "y": 10,
+     "av": 12,
+     "p": 23,
+     "mersin": false
+    },
+    {
      "sira": 8,
      "takim": "Kırıkkale FK Spor",
      "ham": "KIRIKKALE FK SPOR KULÜBÜ",
-     "o": 13,
+     "o": 12,
      "g": 7,
-     "b": 3,
+     "b": 2,
      "m": 3,
-     "a": 24,
-     "y": 14,
+     "a": 23,
+     "y": 13,
      "av": 10,
-     "p": 24,
+     "p": 23,
      "mersin": false
     },
     {
@@ -2355,32 +2355,18 @@
      "sira": 10,
      "takim": "Ayos Osmaniyespor",
      "ham": "AYOS OSMANİYESPOR FUTBOL KULÜBÜ",
-     "o": 13,
+     "o": 12,
      "g": 6,
      "b": 1,
-     "m": 6,
+     "m": 5,
      "a": 21,
-     "y": 23,
-     "av": -2,
+     "y": 18,
+     "av": 3,
      "p": 19,
      "mersin": false
     },
     {
      "sira": 11,
-     "takim": "Diyarbekir Spor",
-     "ham": "DİYARBEKİR SPOR A.Ş.",
-     "o": 13,
-     "g": 4,
-     "b": 1,
-     "m": 8,
-     "a": 15,
-     "y": 18,
-     "av": -3,
-     "p": 13,
-     "mersin": false
-    },
-    {
-     "sira": 12,
      "takim": "Adana Adaletgücü Spor",
      "ham": "ADANA ADALETGÜCÜ SPOR SPORTİF FAALİYETLER A.Ş.",
      "o": 13,
@@ -2394,7 +2380,7 @@
      "mersin": false
     },
     {
-     "sira": 13,
+     "sira": 12,
      "takim": "Ağrı 1970 Spor",
      "ham": "AĞRI 1970 SPOR KULÜBÜ",
      "o": 12,
@@ -2408,21 +2394,21 @@
      "mersin": false
     },
     {
-     "sira": 14,
-     "takim": "1964 Silifke Spor",
-     "ham": "1964 SİLİFKE SPOR KULÜBÜ",
-     "o": 13,
-     "g": 2,
-     "b": 3,
+     "sira": 13,
+     "takim": "Diyarbekir Spor",
+     "ham": "DİYARBEKİR SPOR A.Ş.",
+     "o": 12,
+     "g": 3,
+     "b": 1,
      "m": 8,
      "a": 13,
-     "y": 26,
-     "av": -13,
-     "p": 9,
-     "mersin": true
+     "y": 17,
+     "av": -4,
+     "p": 10,
+     "mersin": false
     },
     {
-     "sira": 15,
+     "sira": 14,
      "takim": "Yozgat Belediyesi Bozok Spor",
      "ham": "YOZGAT BELEDİYESİ BOZOK SPOR",
      "o": 12,
@@ -2436,16 +2422,30 @@
      "mersin": false
     },
     {
+     "sira": 15,
+     "takim": "1964 Silifke Spor",
+     "ham": "1964 SİLİFKE SPOR KULÜBÜ",
+     "o": 12,
+     "g": 2,
+     "b": 2,
+     "m": 8,
+     "a": 12,
+     "y": 25,
+     "av": -13,
+     "p": 8,
+     "mersin": true
+    },
+    {
      "sira": 16,
      "takim": "Karaman",
      "ham": "KARAMAN FUTBOL KULÜBÜ",
-     "o": 12,
+     "o": 11,
      "g": 2,
      "b": 0,
-     "m": 10,
-     "a": 9,
-     "y": 37,
-     "av": -28,
+     "m": 9,
+     "a": 8,
+     "y": 35,
+     "av": -27,
      "p": 6,
      "mersin": false
     },
@@ -2507,7 +2507,7 @@
      "tarih": "2026-11-22",
      "saat": "13:00",
      "ev": "1964 Silifke Spor",
-     "skor": "1-1",
+     "skor": null,
      "dep": "Kırıkkale FK Spor",
      "mersin": true
     },
@@ -2515,7 +2515,7 @@
      "tarih": "2026-11-22",
      "saat": "13:00",
      "ev": "Bitlis 1916",
-     "skor": "5-0",
+     "skor": null,
      "dep": "Ayos Osmaniyespor",
      "mersin": false
     },
@@ -2523,7 +2523,7 @@
      "tarih": "2026-11-22",
      "saat": "13:00",
      "ev": "Karaman",
-     "skor": "1-2",
+     "skor": null,
      "dep": "Diyarbekir Spor",
      "mersin": false
     },
@@ -2721,6 +2721,20 @@
      },
      {
       "sira": 8,
+      "takim": "Göztepe",
+      "ham": "GÖZTEPE A.Ş.",
+      "o": 12,
+      "g": 5,
+      "b": 3,
+      "m": 4,
+      "a": 23,
+      "y": 19,
+      "av": 4,
+      "p": 18,
+      "mersin": false
+     },
+     {
+      "sira": 9,
       "takim": "İstanbul Başakşehir FK",
       "ham": "İSTANBUL BAŞAKŞEHİR FK",
       "o": 11,
@@ -2734,7 +2748,7 @@
       "mersin": false
      },
      {
-      "sira": 9,
+      "sira": 10,
       "takim": "Çaykur Rizespor",
       "ham": "ÇAYKUR RİZESPOR A.Ş.",
       "o": 12,
@@ -2748,7 +2762,7 @@
       "mersin": false
      },
      {
-      "sira": 10,
+      "sira": 11,
       "takim": "Arca Çorum FK",
       "ham": "ARCA ÇORUM FK",
       "o": 11,
@@ -2762,35 +2776,7 @@
       "mersin": false
      },
      {
-      "sira": 11,
-      "takim": "Göztepe",
-      "ham": "GÖZTEPE A.Ş.",
-      "o": 11,
-      "g": 4,
-      "b": 3,
-      "m": 4,
-      "a": 22,
-      "y": 19,
-      "av": 3,
-      "p": 15,
-      "mersin": false
-     },
-     {
       "sira": 12,
-      "takim": "Erzurumspor FK",
-      "ham": "ERZURUMSPOR FK",
-      "o": 11,
-      "g": 4,
-      "b": 2,
-      "m": 5,
-      "a": 10,
-      "y": 17,
-      "av": -7,
-      "p": 14,
-      "mersin": false
-     },
-     {
-      "sira": 13,
       "takim": "Gençlerbirliği",
       "ham": "GENÇLERBİRLİĞİ",
       "o": 12,
@@ -2799,6 +2785,20 @@
       "m": 6,
       "a": 13,
       "y": 21,
+      "av": -8,
+      "p": 14,
+      "mersin": false
+     },
+     {
+      "sira": 13,
+      "takim": "Erzurumspor FK",
+      "ham": "ERZURUMSPOR FK",
+      "o": 12,
+      "g": 4,
+      "b": 2,
+      "m": 6,
+      "a": 10,
+      "y": 18,
       "av": -8,
       "p": 14,
       "mersin": false
@@ -2911,7 +2911,7 @@
       "tarih": "2026-11-22",
       "saat": "13:30",
       "ev": "Erzurumspor FK",
-      "skor": null,
+      "skor": "0-1",
       "dep": "Göztepe",
       "mersin": false
      },
@@ -3349,6 +3349,13 @@
       "G",
       "B"
      ],
+     "Göztepe": [
+      "G",
+      "G",
+      "G",
+      "G",
+      "M"
+     ],
      "İstanbul Başakşehir FK": [
       "B",
       "G",
@@ -3370,12 +3377,12 @@
       "G",
       "M"
      ],
-     "Göztepe": [
+     "Gençlerbirliği": [
+      "M",
+      "M",
       "G",
-      "G",
-      "G",
-      "G",
-      "M"
+      "M",
+      "G"
      ],
      "Erzurumspor FK": [
       "B",
@@ -3383,13 +3390,6 @@
       "G",
       "M",
       "M"
-     ],
-     "Gençlerbirliği": [
-      "M",
-      "M",
-      "G",
-      "M",
-      "G"
      ],
      "Corendon Alanyaspor": [
       "B",
@@ -3477,6 +3477,20 @@
      },
      {
       "sira": 4,
+      "takim": "Batman Petrol Spor",
+      "ham": "BATMAN PETROL SPOR A.Ş.",
+      "o": 15,
+      "g": 8,
+      "b": 3,
+      "m": 4,
+      "a": 29,
+      "y": 24,
+      "av": 5,
+      "p": 27,
+      "mersin": false
+     },
+     {
+      "sira": 5,
       "takim": "Keçtaş Ankara Keçiörengücü",
       "ham": "KEÇTAŞ ANKARA KEÇİÖRENGÜCÜ",
       "o": 15,
@@ -3490,7 +3504,7 @@
       "mersin": false
      },
      {
-      "sira": 5,
+      "sira": 6,
       "takim": "Mardin 1969 Spor",
       "ham": "MARDİN 1969 SPOR",
       "o": 15,
@@ -3501,20 +3515,6 @@
       "y": 15,
       "av": 5,
       "p": 25,
-      "mersin": false
-     },
-     {
-      "sira": 6,
-      "takim": "Batman Petrol Spor",
-      "ham": "BATMAN PETROL SPOR A.Ş.",
-      "o": 14,
-      "g": 7,
-      "b": 3,
-      "m": 4,
-      "a": 27,
-      "y": 24,
-      "av": 3,
-      "p": 24,
       "mersin": false
      },
      {
@@ -3591,13 +3591,13 @@
       "sira": 12,
       "takim": "Muğlaspor",
       "ham": "MUĞLASPOR KULÜBÜ",
-      "o": 14,
+      "o": 15,
       "g": 4,
       "b": 6,
-      "m": 4,
+      "m": 5,
       "a": 18,
-      "y": 25,
-      "av": -7,
+      "y": 27,
+      "av": -9,
       "p": 18,
       "mersin": false
      },
@@ -3759,7 +3759,7 @@
       "tarih": "2026-11-22",
       "saat": "13:30",
       "ev": "Batman Petrol Spor",
-      "skor": null,
+      "skor": "2-0",
       "dep": "Muğlaspor",
       "mersin": false
      },
@@ -4086,7 +4086,7 @@
       {
        "ev": "Batman Petrol Spor",
        "dep": "Muğlaspor",
-       "skor": null
+       "skor": "2-0"
       },
       {
        "ev": "Turka Esenler Erokspor",
@@ -4207,6 +4207,13 @@
       "B",
       "B"
      ],
+     "Batman Petrol Spor": [
+      "B",
+      "G",
+      "M",
+      "B",
+      "G"
+     ],
      "Keçtaş Ankara Keçiörengücü": [
       "G",
       "M",
@@ -4220,13 +4227,6 @@
       "G",
       "B",
       "M"
-     ],
-     "Batman Petrol Spor": [
-      "G",
-      "B",
-      "G",
-      "M",
-      "B"
      ],
      "Bodrum FK": [
       "G",
@@ -4264,9 +4264,9 @@
       "G"
      ],
      "Muğlaspor": [
+      "G",
+      "G",
       "M",
-      "G",
-      "G",
       "M",
       "M"
      ],
@@ -5352,6 +5352,20 @@
      },
      {
       "sira": 11,
+      "takim": "Kırklarelispor",
+      "ham": "KIRKLARELİSPOR",
+      "o": 12,
+      "g": 3,
+      "b": 4,
+      "m": 5,
+      "a": 14,
+      "y": 16,
+      "av": -2,
+      "p": 13,
+      "mersin": false
+     },
+     {
+      "sira": 12,
       "takim": "12 Bingöl Spor",
       "ham": "12 BİNGÖL SPOR",
       "o": 12,
@@ -5365,31 +5379,17 @@
       "mersin": false
      },
      {
-      "sira": 12,
+      "sira": 13,
       "takim": "Fethiyespor",
       "ham": "FETHİYESPOR",
-      "o": 11,
+      "o": 12,
       "g": 3,
       "b": 2,
-      "m": 6,
+      "m": 7,
       "a": 12,
-      "y": 21,
-      "av": -9,
+      "y": 26,
+      "av": -14,
       "p": 11,
-      "mersin": false
-     },
-     {
-      "sira": 13,
-      "takim": "Kırklarelispor",
-      "ham": "KIRKLARELİSPOR",
-      "o": 11,
-      "g": 2,
-      "b": 4,
-      "m": 5,
-      "a": 9,
-      "y": 16,
-      "av": -7,
-      "p": 10,
       "mersin": false
      },
      {
@@ -5462,7 +5462,7 @@
       "tarih": "2026-11-22",
       "saat": "13:00",
       "ev": "Kırklarelispor",
-      "skor": null,
+      "skor": "5-0",
       "dep": "Fethiyespor",
       "mersin": false
      },
@@ -5777,7 +5777,7 @@
       {
        "ev": "Kırklarelispor",
        "dep": "Fethiyespor",
-       "skor": "5-0"
+       "skor": null
       },
       {
        "ev": "Akedaş Kahramanmaraş İstiklal Spor",
@@ -5962,6 +5962,13 @@
       "G",
       "M"
      ],
+     "Kırklarelispor": [
+      "B",
+      "M",
+      "B",
+      "G",
+      "B"
+     ],
      "12 Bingöl Spor": [
       "B",
       "G",
@@ -5970,17 +5977,10 @@
       "M"
      ],
      "Fethiyespor": [
-      "M",
-      "G",
-      "M",
-      "G",
-      "M"
-     ],
-     "Kırklarelispor": [
-      "M",
       "B",
+      "M",
       "G",
-      "B",
+      "M",
       "G"
      ],
      "Mke Ankaragücü": [
@@ -6076,6 +6076,20 @@
      },
      {
       "sira": 5,
+      "takim": "Silivrispor",
+      "ham": "SİLİVRİSPOR",
+      "o": 13,
+      "g": 5,
+      "b": 3,
+      "m": 5,
+      "a": 16,
+      "y": 15,
+      "av": 1,
+      "p": 18,
+      "mersin": false
+     },
+     {
+      "sira": 6,
       "takim": "İnkılap",
       "ham": "İNKILAP FUTBOL SPOR KULÜBÜ",
       "o": 13,
@@ -6089,7 +6103,7 @@
       "mersin": false
      },
      {
-      "sira": 6,
+      "sira": 7,
       "takim": "Kartal Bulvar Kartalimen Spor",
       "ham": "KARTAL BULVAR KARTALİMEN SPOR A.Ş.",
       "o": 12,
@@ -6103,7 +6117,7 @@
       "mersin": false
      },
      {
-      "sira": 7,
+      "sira": 8,
       "takim": "Orduspor 1967",
       "ham": "ORDUSPOR 1967 A.Ş.",
       "o": 12,
@@ -6117,7 +6131,7 @@
       "mersin": false
      },
      {
-      "sira": 8,
+      "sira": 9,
       "takim": "Düzce Cam Düzcespor",
       "ham": "DÜZCE CAM DÜZCESPOR",
       "o": 12,
@@ -6127,20 +6141,6 @@
       "a": 17,
       "y": 14,
       "av": 3,
-      "p": 17,
-      "mersin": false
-     },
-     {
-      "sira": 9,
-      "takim": "Silivrispor",
-      "ham": "SİLİVRİSPOR",
-      "o": 12,
-      "g": 5,
-      "b": 2,
-      "m": 5,
-      "a": 16,
-      "y": 15,
-      "av": 1,
       "p": 17,
       "mersin": false
      },
@@ -6174,6 +6174,20 @@
      },
      {
       "sira": 12,
+      "takim": "Zonguldak Spor",
+      "ham": "ZONGULDAK SPOR FUTBOL KULÜBÜ A.Ş.",
+      "o": 13,
+      "g": 3,
+      "b": 6,
+      "m": 4,
+      "a": 16,
+      "y": 16,
+      "av": 0,
+      "p": 15,
+      "mersin": false
+     },
+     {
+      "sira": 13,
       "takim": "Gölcükspor",
       "ham": "GÖLCÜKSPOR",
       "o": 13,
@@ -6187,7 +6201,7 @@
       "mersin": false
      },
      {
-      "sira": 13,
+      "sira": 14,
       "takim": "Kdz.ereğli 1980 Spor",
       "ham": "KDZ.EREĞLİ 1980 SPOR KULÜBÜ",
       "o": 13,
@@ -6198,20 +6212,6 @@
       "y": 19,
       "av": -8,
       "p": 15,
-      "mersin": false
-     },
-     {
-      "sira": 14,
-      "takim": "Zonguldak Spor",
-      "ham": "ZONGULDAK SPOR FUTBOL KULÜBÜ A.Ş.",
-      "o": 12,
-      "g": 3,
-      "b": 5,
-      "m": 4,
-      "a": 16,
-      "y": 16,
-      "av": 0,
-      "p": 14,
       "mersin": false
      },
      {
@@ -6308,7 +6308,7 @@
       "tarih": "2026-11-22",
       "saat": "13:00",
       "ev": "Pazarspor",
-      "skor": null,
+      "skor": "1-2",
       "dep": "Amasyaspor FK",
       "mersin": false
      },
@@ -6316,7 +6316,7 @@
       "tarih": "2026-11-22",
       "saat": "13:00",
       "ev": "Zonguldak Spor",
-      "skor": null,
+      "skor": "0-0",
       "dep": "Silivrispor",
       "mersin": false
      },
@@ -6324,7 +6324,7 @@
       "tarih": "2026-11-22",
       "saat": "13:00",
       "ev": "Tokat Belediye Spor",
-      "skor": null,
+      "skor": "0-0",
       "dep": "Fatsa Belediyespor",
       "mersin": false
      },
@@ -6620,7 +6620,7 @@
       {
        "ev": "Düzce Cam Düzcespor",
        "dep": "Kartal Bulvar Kartalimen Spor",
-       "skor": "1-0"
+       "skor": null
       },
       {
        "ev": "Galata Spor",
@@ -6762,6 +6762,13 @@
       "G",
       "G"
      ],
+     "Silivrispor": [
+      "G",
+      "B",
+      "G",
+      "G",
+      "B"
+     ],
      "İnkılap": [
       "G",
       "B",
@@ -6771,10 +6778,10 @@
      ],
      "Kartal Bulvar Kartalimen Spor": [
       "M",
+      "M",
       "G",
       "B",
-      "B",
-      "M"
+      "B"
      ],
      "Orduspor 1967": [
       "G",
@@ -6785,17 +6792,10 @@
      ],
      "Düzce Cam Düzcespor": [
       "G",
-      "B",
       "G",
+      "B",
       "G",
       "G"
-     ],
-     "Silivrispor": [
-      "G",
-      "B",
-      "G",
-      "G",
-      "B"
      ],
      "Amasyaspor FK": [
       "B",
@@ -6811,6 +6811,13 @@
       "G",
       "M"
      ],
+     "Zonguldak Spor": [
+      "B",
+      "M",
+      "G",
+      "B",
+      "B"
+     ],
      "Gölcükspor": [
       "B",
       "B",
@@ -6824,13 +6831,6 @@
       "M",
       "M",
       "M"
-     ],
-     "Zonguldak Spor": [
-      "B",
-      "M",
-      "G",
-      "B",
-      "B"
      ],
      "Galata Spor": [
       "G",
@@ -6899,14 +6899,14 @@
       "sira": 3,
       "takim": "Eskişehirspor",
       "ham": "ESKİŞEHİRSPOR KULÜBÜ",
-      "o": 12,
-      "g": 7,
+      "o": 13,
+      "g": 8,
       "b": 4,
       "m": 1,
-      "a": 33,
-      "y": 12,
-      "av": 21,
-      "p": 25,
+      "a": 36,
+      "y": 13,
+      "av": 23,
+      "p": 28,
       "mersin": false
      },
      {
@@ -6955,13 +6955,13 @@
       "sira": 7,
       "takim": "Eskişehir Anadolu Spor Faaliyetleri",
       "ham": "ESKİŞEHİR ANADOLU SPOR FAALİYETLERİ A.Ş.",
-      "o": 12,
+      "o": 13,
       "g": 6,
       "b": 4,
-      "m": 2,
+      "m": 3,
       "a": 19,
-      "y": 9,
-      "av": 10,
+      "y": 11,
+      "av": 8,
       "p": 22,
       "mersin": false
      },
@@ -7067,13 +7067,13 @@
       "sira": 15,
       "takim": "Söke 1970 Spor",
       "ham": "SÖKE 1970 SPOR KULÜBÜ",
-      "o": 12,
+      "o": 13,
       "g": 1,
       "b": 6,
-      "m": 5,
-      "a": 15,
-      "y": 23,
-      "av": -8,
+      "m": 6,
+      "a": 16,
+      "y": 26,
+      "av": -10,
       "p": 9,
       "mersin": false
      },
@@ -7109,14 +7109,14 @@
       "sira": 18,
       "takim": "1922 Akşehir Spor",
       "ham": "1922 AKŞEHİR SPOR KULÜBÜ",
-      "o": 12,
-      "g": 1,
+      "o": 13,
+      "g": 2,
       "b": 1,
       "m": 10,
-      "a": 8,
+      "a": 10,
       "y": 30,
-      "av": -22,
-      "p": 4,
+      "av": -20,
+      "p": 7,
       "mersin": false
      }
     ],
@@ -7149,7 +7149,7 @@
       "tarih": "2026-11-22",
       "saat": "13:00",
       "ev": "Söke 1970 Spor",
-      "skor": null,
+      "skor": "1-3",
       "dep": "Eskişehirspor",
       "mersin": false
      },
@@ -7157,7 +7157,7 @@
       "tarih": "2026-11-22",
       "saat": "13:00",
       "ev": "Eskişehir Anadolu Spor Faaliyetleri",
-      "skor": null,
+      "skor": "0-2",
       "dep": "1922 Akşehir Spor",
       "mersin": false
      },
@@ -7449,12 +7449,12 @@
       {
        "ev": "Söke 1970 Spor",
        "dep": "Eskişehirspor",
-       "skor": null
+       "skor": "1-3"
       },
       {
        "ev": "Eskişehir Anadolu Spor Faaliyetleri",
        "dep": "1922 Akşehir Spor",
-       "skor": null
+       "skor": "0-2"
       },
       {
        "ev": "Bigaspor",
@@ -7598,11 +7598,11 @@
       "G"
      ],
      "Eskişehirspor": [
+      "G",
+      "G",
+      "G",
       "B",
-      "G",
-      "G",
-      "G",
-      "B"
+      "G"
      ],
      "Balıkesirspor": [
       "G",
@@ -7628,9 +7628,9 @@
      "Eskişehir Anadolu Spor Faaliyetleri": [
       "G",
       "G",
-      "G",
       "M",
-      "B"
+      "B",
+      "M"
      ],
      "Ayvalıkgücü Belediyespor": [
       "B",
@@ -7683,9 +7683,9 @@
      ],
      "Söke 1970 Spor": [
       "M",
+      "B",
+      "B",
       "M",
-      "B",
-      "B",
       "M"
      ],
      "Bucaspor 1928": [
@@ -7703,11 +7703,11 @@
       "M"
      ],
      "1922 Akşehir Spor": [
-      "M",
       "B",
       "M",
       "M",
-      "M"
+      "M",
+      "G"
      ]
     }
    },
@@ -8298,22 +8298,22 @@
       {
        "ev": "1964 Silifke Spor",
        "dep": "Kırıkkale FK Spor",
-       "skor": "1-1"
+       "skor": null
       },
       {
        "ev": "Bitlis 1916",
        "dep": "Ayos Osmaniyespor",
-       "skor": "5-0"
+       "skor": null
       },
       {
        "ev": "Karaman",
        "dep": "Diyarbekir Spor",
-       "skor": "1-2"
+       "skor": null
       },
       {
        "ev": "Halil Bayram İnşaat Karaköprü Belediyespor",
        "dep": "Malatya Yeşilyurt Spor",
-       "skor": "0-3"
+       "skor": null
       },
       {
        "ev": "Ağrı 1970 Spor",
@@ -8434,9 +8434,9 @@
     "form": {
      "Malatya Yeşilyurt Spor": [
       "G",
-      "B",
-      "B",
       "G",
+      "B",
+      "B",
       "G"
      ],
      "Açıkalın Erciyes 38": [
@@ -8454,18 +8454,18 @@
       "G"
      ],
      "Bitlis 1916": [
+      "B",
       "G",
       "M",
-      "G",
-      "M",
-      "G"
-     ],
-     "Halil Bayram İnşaat Karaköprü Belediyespor": [
-      "B",
-      "M",
-      "B",
       "G",
       "M"
+     ],
+     "Halil Bayram İnşaat Karaköprü Belediyespor": [
+      "G",
+      "B",
+      "M",
+      "B",
+      "G"
      ],
      "Niğde Belediyesi Spor": [
       "G",
@@ -8482,11 +8482,11 @@
       "M"
      ],
      "Kırıkkale FK Spor": [
+      "G",
       "B",
       "G",
       "G",
-      "G",
-      "B"
+      "G"
      ],
      "Yeni Mersin İdmanyurdu": [
       "G",
@@ -8495,17 +8495,17 @@
       "G"
      ],
      "Ayos Osmaniyespor": [
+      "M",
       "G",
       "G",
       "B",
-      "G",
-      "M"
+      "G"
      ],
      "Diyarbekir Spor": [
-      "M",
       "G",
       "M",
       "G",
+      "M",
       "G"
      ],
      "Adana Adaletgücü Spor": [
@@ -8523,11 +8523,11 @@
       "M"
      ],
      "1964 Silifke Spor": [
+      "M",
       "B",
       "M",
       "M",
-      "M",
-      "B"
+      "M"
      ],
      "Yozgat Belediyesi Bozok Spor": [
       "M",
@@ -8537,7 +8537,6 @@
       "M"
      ],
      "Karaman": [
-      "M",
       "M",
       "M",
       "M",
@@ -8564,7 +8563,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-22T12:19:30.453Z",
+    "guncelleme": "2026-11-22T12:32:37.166Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8646,7 +8645,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-22T12:19:31.663Z",
+    "guncelleme": "2026-11-22T12:32:38.401Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8728,7 +8727,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-22T12:19:32.879Z",
+    "guncelleme": "2026-11-22T12:32:39.645Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8827,7 +8826,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T12:18:49.032Z",
+  "guncelleme": "2026-11-22T12:31:50.829Z",
   "liste": [
    {
     "yol": "/",
@@ -8838,16 +8837,16 @@
     "sayi": 3
    },
    {
+    "yol": "/haber/10-mersin-uluslararasi-tiyatro-festivali-kapilarini-aciyor-1nebyyr/",
+    "sayi": 2
+   },
+   {
     "yol": "/ilceler/",
     "sayi": 2
    },
    {
     "yol": "/haber/secil-kaucuk-mersin-basketball-istanbul-deplasmaninda-155jkur/",
     "sayi": 2
-   },
-   {
-    "yol": "/haber/10-mersin-uluslararasi-tiyatro-festivali-kapilarini-aciyor-1nebyyr/",
-    "sayi": 1
    },
    {
     "yol": "/nobetci-eczane/",
@@ -8908,10 +8907,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T12:19:34.080Z",
+  "guncelleme": "2026-11-22T12:32:40.846Z",
   "deniz": {
    "sicaklik": 21.9,
-   "dalga": 0.48
+   "dalga": 0.46
   },
   "hava": {
    "aqi": 28,
@@ -8921,20 +8920,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T12:19:35.700Z",
+  "guncelleme": "2026-11-22T12:32:42.824Z",
   "giden": [
-   {
-    "no": [
-     "PC4061"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Antalya",
-    "planlanan": "2026-11-22T12:30:00.000Z",
-    "tahmini": null,
-    "kapi": "105",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC3013"
@@ -9532,6 +9519,18 @@
     "planlanan": "2026-11-23T12:10:00.000Z",
     "tahmini": null,
     "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2087"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-23T12:20:00.000Z",
+    "tahmini": null,
+    "kapi": "107",
     "durum": "",
     "hat": "ic"
    }
@@ -10164,7 +10163,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T12:19:35.699Z",
+  "guncelleme": "2026-11-22T12:32:42.824Z",
   "liste": [
    {
     "id": 6386,
