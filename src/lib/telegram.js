@@ -49,15 +49,15 @@ export async function kararlariOku(offset = 0) {
     const cq = g.callback_query;
     if (!cq || String(cq.message?.chat?.id) !== String(process.env.TELEGRAM_CHAT_ID)) continue;
     const [islem, id] = String(cq.data).split(':');
-    kararlar.push({ islem, id });
+    kararlar.push({ islem, id, metin: cq.message?.text || '' });
     await cagir('answerCallbackQuery', {
       callback_query_id: cq.id,
-      text: islem === 'ok' ? 'Yayınlanacak' : 'Silindi',
+      text: islem === 'ok' || islem === 'iok' ? 'Yayınlanacak' : 'Silindi',
     }).catch(() => {});
     await cagir('editMessageReplyMarkup', {
       chat_id: cq.message.chat.id,
       message_id: cq.message.message_id,
-      reply_markup: { inline_keyboard: [[{ text: islem === 'ok' ? '✅ Yayınlandı' : '🗑 Silindi', callback_data: 'x' }]] },
+      reply_markup: { inline_keyboard: [[{ text: islem === 'ok' || islem === 'iok' ? '✅ Yayınlandı' : '🗑 Silindi', callback_data: 'x' }]] },
     }).catch(() => {});
   }
   return { kararlar, offset: sonOffset };

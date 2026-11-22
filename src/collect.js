@@ -27,6 +27,7 @@ function kurumKaynagi(h) {
 }
 import { geminiHazirMi, topluOzetle, jsonYaz } from './lib/gemini.js';
 import { telegramHazirMi, onayIste, kararlariOku } from './lib/telegram.js';
+import { isverenIlaniEkle } from './lib/isverenIlani.js';
 
 const DURUM_DOSYASI = path.resolve('data/durum.json');
 
@@ -205,7 +206,9 @@ async function main() {
     try {
       const { kararlar, offset } = await kararlariOku(durum.telegramOffset || 0);
       durum.telegramOffset = offset;
-      for (const { islem, id } of kararlar) {
+      for (const { islem, id, metin } of kararlar) {
+        if (islem === 'iok') { console.log(isverenIlaniEkle(id, metin) ? `İşveren ilanı yayına alındı (${id})` : `! İşveren ilanı okunamadı (${id})`); continue; }
+        if (islem === 'isil') { console.log(`İşveren ilanı reddedildi (${id})`); continue; }
         const h = veri.hikayeler.find((x) => x.id === id);
         if (!h) continue;
         h.durum = islem === 'ok' ? 'yayinda' : 'reddedildi';

@@ -207,6 +207,37 @@
       });
     });
   });
+  // ---------- İşveren ilan formu ----------
+  document.querySelectorAll('[data-ilan-form]').forEach(function (f) {
+    var basla = Date.now();
+    var durum = f.querySelector('[data-ilan-durum]');
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var d = new FormData(f);
+      var veri = {};
+      d.forEach(function (v, k) { veri[k] = v; });
+      veri.onay = !!f.querySelector('[name=onay]').checked;
+      veri.sure = Date.now() - basla;
+      var dugme = f.querySelector('button[type=submit]');
+      dugme.disabled = true;
+      durum.className = 'iv-durum';
+      durum.textContent = 'Gönderiliyor…';
+      fetch('/api/ilan-ver', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(veri) })
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+        .then(function (x) {
+          if (x.ok && x.j.tamam) {
+            f.reset();
+            durum.className = 'iv-durum iv-tamam';
+            durum.textContent = 'Teşekkürler! İlanınız bize ulaştı. Kontrol edildikten sonra Mersin iş ilanları sayfasında yayınlanacak.';
+          } else {
+            durum.className = 'iv-durum iv-hata';
+            durum.textContent = (x.j && x.j.hata && x.j.hata.indexOf('hazir degil') < 0 && x.j.hata) || 'İlan formu birkaç gün içinde açılıyor. Şimdilik ilanınızı iletisim@mersinanlik.com adresine gönderebilirsiniz.';
+          }
+        })
+        .catch(function () { durum.className = 'iv-durum iv-hata'; durum.textContent = 'Bağlantı sorunu, lütfen tekrar deneyin.'; })
+        .then(function () { dugme.disabled = false; });
+    });
+  });
   // ---------- Reklam formu → WhatsApp ----------
   document.querySelectorAll('[data-reklam-form]').forEach(function (f) {
     f.addEventListener('submit', function (e) {

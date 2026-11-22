@@ -1808,3 +1808,39 @@ img.kr-foto { object-fit: cover; background: #1f2937; padding: 0; }
 .is-kart .is-ust { align-items: center; }
 .is-kart .is-ust h3 { flex: 1 1 auto; }
 .is-kart .is-sk-ikon { width: 36px; height: 36px; border-radius: 11px; }
+
+/* İşveren ilanları + ilan ver */
+.is-ilan-ver-kutu { display: flex; align-items: center; gap: 14px; margin: 14px 0 6px; padding: 16px 18px; border-radius: 20px; background: linear-gradient(110deg, #fff7ed, #ffedd5); border: 1px solid #fed7aa; text-decoration: none; color: var(--metin); }
+.is-ilan-ver-kutu span:nth-child(2) { flex: 1 1 auto; display: flex; flex-direction: column; gap: 2px; }
+.is-ilan-ver-kutu b { font-size: 16px; }
+.is-ilan-ver-kutu small { color: var(--turuncu-yazi); font-size: 13.5px; font-weight: 600; }
+.is-ilan-ver-ok { flex: 0 0 auto; padding: 9px 16px; border-radius: 999px; background: var(--turuncu); color: #fff; font-weight: 800; font-size: 14px; }
+.is-kart-isveren { background: linear-gradient(180deg, #fffaf3, #fff 40%); }
+.is-isveren-ad { color: var(--metin); }
+.is-nitelik { margin: 0; font-size: 13.5px; color: var(--govde); }
+.is-iletisim { display: inline-flex; gap: 6px; flex-wrap: wrap; }
+.is-btn-wa { background: #16a34a; }
+.is-btn-wa:hover { background: #15803d; }
+.is-btn-acik { background: #e2e8f0; color: var(--metin); }
+.ilan-ver-adimlar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 18px; }
+.ilan-ver-adimlar div { display: grid; grid-template-columns: auto 1fr; column-gap: 10px; padding: 14px; border-radius: 18px; background: #fff; border: 1px solid #e3e8f2; }
+.ilan-ver-adimlar span { grid-row: span 2; width: 34px; height: 34px; border-radius: 99px; display: grid; place-items: center; background: var(--turuncu); color: #fff; font-weight: 800; }
+.ilan-ver-adimlar b { font-size: 15px; }
+.ilan-ver-adimlar small { color: var(--ikincil); font-size: 13px; }
+.ilan-ver-form { display: flex; flex-direction: column; gap: 14px; padding: 22px; border-radius: 22px; background: #fff; border: 1px solid #e3e8f2; }
+.ilan-ver-form label { display: flex; flex-direction: column; gap: 6px; font-weight: 700; font-size: 14px; color: var(--metin); }
+.ilan-ver-form input, .ilan-ver-form select, .ilan-ver-form textarea { font: inherit; font-weight: 500; font-size: 15px; padding: 11px 13px; border-radius: 12px; border: 1px solid #d5ddea; background: #f8fafc; color: var(--metin); }
+.ilan-ver-form input:focus, .ilan-ver-form select:focus, .ilan-ver-form textarea:focus { outline: 2px solid #1e66f5; outline-offset: 0; background: #fff; }
+.ilan-ver-form small { font-weight: 500; color: var(--ikincil); font-size: 12.5px; }
+.iv-satir { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.iv-uclu { grid-template-columns: 1.2fr .8fr 1fr; }
+.iv-kisa { max-width: 260px; }
+.iv-onay { flex-direction: row !important; align-items: flex-start; gap: 10px !important; font-weight: 500 !important; font-size: 13.5px !important; color: var(--govde) !important; }
+.iv-onay input { margin-top: 3px; width: 18px; height: 18px; padding: 0; }
+.iv-gizli { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.iv-gonder { align-self: flex-start; font: inherit; font-weight: 800; font-size: 16px; padding: 13px 26px; border: 0; border-radius: 999px; background: var(--turuncu); color: #fff; cursor: pointer; }
+.iv-gonder:disabled { opacity: .6; cursor: wait; }
+.iv-durum { margin: 0; font-weight: 700; font-size: 14.5px; }
+.iv-durum.iv-tamam { color: #15803d; }
+.iv-durum.iv-hata { color: #dc2626; }
+@media (max-width: 700px) { .iv-satir, .iv-uclu, .ilan-ver-adimlar { grid-template-columns: 1fr; } .is-ilan-ver-kutu { flex-wrap: wrap; } }

@@ -20,11 +20,11 @@ export const SEKTORLER = [
   { key: 'yemek', ad: 'Yemek ve otel', renk: '#f76b15', ikon: '<path d="M4 3v8a3 3 0 006 0V3M7 3v18M17 3c-2 0-3 2-3 5v5h3v8"/>', re: /fast food|kahvaltı|hamburger|aşçı|asci|garson|komi|bulaşık|bulasik|mutfak|resepsiyon|otel|kat görevlisi|kasap|fırın|firin|pasta|tatlı|barista|lokanta|restoran|pizza|döner|catering|kahve|ekmek|unlu/i },
   { key: 'satis', ad: 'Satış ve mağaza', renk: '#d6409f', ikon: '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 01-8 0"/>', re: /satış|satis|kasiyer|reyon|plasiyer|mağaza|magaza|pompacı|pompaci|tezgahtar|pazarlama|müşteri temsil|musteri temsil|çağrı merkezi|cagri merkezi/i },
   { key: 'lojistik', ad: 'Şoför, kurye, lojistik', renk: '#3e63dd', ikon: '<rect x="1" y="6" width="14" height="11" rx="1"/><path d="M15 9h4l3 4v4h-7"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/>', re: /sürücü|surucu|palamar|liman|antrepo|işaretçi|şoför|sofor|kurye|forklift|depo|sevkiyat|lojistik|dağıtım|dagitim|taşıma|tasima|istif|vinç|vinc|operatör.*(iş makin|kepçe)|tır|tir\b/i },
+  { key: 'tarim', ad: 'Tarım ve paketleme', renk: '#30a46c', ikon: '<path d="M12 21V11M12 11c0-4 3-7 8-7 0 5-3 8-8 8zM12 14c0-3-2.5-5-7-5 0 4 2.5 6 7 6z"/>', re: /tarım|tarim|sebze|meyve|paketleme|ambalaj|seracı|seraci|ziraat|hayvan|bahçe|bahce|ayıklama|ayiklama|narenciye|hasat/i },
   { key: 'teknik', ad: 'Teknik ve üretim', renk: '#0d74ce', ikon: '<path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/>', re: /işçisi|ressam|tekstil|konfeksiyon|ortacı|beden işçisi|beden iscisi|teknisyen|tekniker|mühendis|muhendis|kaynakçı|kaynakci|elektrik|makine|operatör|operator|usta|montaj|inşaat|insaat|tesisat|boyacı|boyaci|tornacı|cnc|kalıp|kalip|mekanik|bakım onarım|üretim|uretim|imalat|tamirci|sıvacı|duvarcı|demir/i },
   { key: 'buro', ad: 'Büro ve yönetim', renk: '#8e4ec6', ikon: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h10M7 17h6"/>', re: /satın alma|finans|kimya|muhasebe|sekreter|büro|buro|insan kaynak|idari|ofis|halkla|asistan|yönetici|yonetici|müdür|mudur|planlama|bilgi işlem|yazılım|yazilim|grafik|tasarım|tasarim|veri giriş|danışma/i },
   { key: 'temizlik', ad: 'Temizlik ve güvenlik', renk: '#12a594', ikon: '<path d="M12 2l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V5z"/>', re: /kapı|kantar|kapıcı|çamaşır|temizlik|güvenlik|guvenlik|bekçi|bekci|çay ocağı|cay ocagi|hizmetli|kat hizmet|bahçıvan|bahcivan|peyzaj|vale/i },
   { key: 'egitim', ad: 'Eğitim ve çocuk', renk: '#0b8ea0', ikon: '<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/>', re: /öğretmen|ogretmen|çocuk gelişim|cocuk gelisim|eğitmen|egitmen|okul|kreş|kres|bakıcı.*çocuk/i },
-  { key: 'tarim', ad: 'Tarım ve paketleme', renk: '#30a46c', ikon: '<path d="M12 21V11M12 11c0-4 3-7 8-7 0 5-3 8-8 8zM12 14c0-3-2.5-5-7-5 0 4 2.5 6 7 6z"/>', re: /tarım|tarim|sebze|meyve|paketleme|ambalaj|seracı|seraci|ziraat|hayvan|bahçe|bahce|ayıklama|ayiklama|narenciye|hasat/i },
 ];
 const DIGER = { key: 'diger', ad: 'Diğer işler', renk: '#6b7a99', ikon: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 13h18"/>' };
 export const sektorBul = (pozisyon) => { const p = String(pozisyon || '').toLocaleLowerCase('tr-TR'); return SEKTORLER.find((x) => x.re.test(p)) || DIGER; };
@@ -131,6 +131,71 @@ function ilceCubuklari(ilceler) {
   return `<div class="is-ilce-cubuk">${l.map((i) => `<a href="${IS_YOL}${i.slug}/"><span class="ad">${h(i.ad)}</span><span class="cubuk"><i style="width:${Math.max(4, Math.round((i.n / enCok) * 100))}%"></i></span><b>${i.n}</b></a>`).join('')}</div>`;
 }
 
+// ---------- İşverenlerin sitemizden verdiği ilanlar ----------
+const telLink = (t) => String(t || '').replace(/[^\d+]/g, '').replace(/^0/, '+90');
+const waLink = (t) => { let d = String(t || '').replace(/\D/g, ''); if (d.startsWith('0')) d = '90' + d.slice(1); if (d.length === 10) d = '90' + d; return d; };
+export function isverenAcik(veri, ilce = null) {
+  const bugun = bugunISO();
+  return (veri?.isveren || []).filter((i) => (!i.sonBasvuru || i.sonBasvuru >= bugun) && (!ilce || i.ilceSlug === ilce.slug));
+}
+function isverenKarti(i) {
+  const sk = sektorBul(i.pozisyon);
+  const kalan = i.sonBasvuru ? kalanGun(i.sonBasvuru) : null;
+  const ara = `${i.pozisyon} ${i.ilce || ''} ${i.isyeri} ${i.aciklama || ''}`.toLocaleLowerCase('tr-TR');
+  return `<article class="is-kart is-kart-isveren" data-ara="${h(ara.slice(0, 600))}" data-sektor="${sk.key}" style="--sk:${sk.renk}">
+<div class="is-ust"><span class="is-sk-ikon">${ikonSvg(sk.ikon, 20)}</span><h3>${h(i.pozisyon)}</h3>${i.kisi > 1 ? `<span class="is-adet">${i.kisi} kişi</span>` : ''}</div>
+<p class="is-bilgi"><b class="is-isveren-ad">${h(i.isyeri)}</b> · ${i.ilceSlug ? `<a href="${IS_YOL}${h(i.ilceSlug)}/">${h(i.ilce)}</a> · ` : ''}${h(i.calisma || '')}${i.ucret ? ` · ${h(i.ucret)}` : ''}</p>
+<p class="is-aciklama">${h(i.aciklama || '')}</p>
+${i.nitelik ? `<p class="is-nitelik"><b>Aranan:</b> ${h(i.nitelik)}</p>` : ''}
+<div class="is-alt"><span class="is-son${kalan !== null && kalan <= 3 ? ' acil' : ''}">${i.sonBasvuru ? `Son başvuru ${tarihTr(i.sonBasvuru)}${kalan !== null ? ` · ${kalan <= 0 ? 'bugün son gün' : `${kalan} gün kaldı`}` : ''}` : ''}</span>
+<span class="is-iletisim"><a class="is-btn" href="tel:${h(telLink(i.telefon))}">Ara</a><a class="is-btn is-btn-wa" href="https://wa.me/${h(waLink(i.telefon))}?text=${encodeURIComponent(`Merhaba, Mersin Anlık'taki "${i.pozisyon}" ilanınız için yazıyorum.`)}" rel="noopener nofollow" target="_blank">WhatsApp</a>${i.eposta ? `<a class="is-btn is-btn-acik" href="mailto:${h(i.eposta)}">E-posta</a>` : ''}</span></div>
+</article>`;
+}
+function isverenBolumu(veri, ilce = null) {
+  const l = isverenAcik(veri, ilce);
+  const cagri = `<a class="is-ilan-ver-kutu" href="${IS_YOL}ilan-ver/"><span class="is-sk-ikon" style="--sk:#ff8a1f">${ikonSvg('<path d="M12 5v14M5 12h14"/>', 22)}</span><span><b>İşletmeniz için eleman mı arıyorsunuz?</b><small>Ücretsiz ilan verin; kontrol edildikten sonra bu sayfada yayınlanır.</small></span><span class="is-ilan-ver-ok">İlan ver →</span></a>`;
+  if (!l.length) return cagri;
+  return `<div class="bolum-bas" style="margin-top:22px"><h2>İşverenlerden yeni ilanlar</h2><span>Mersin Anlık'a gönderilen, kontrol edilmiş ilanlar</span></div>
+<div class="is-liste" data-is-liste>${l.map(isverenKarti).join('')}</div>${cagri}`;
+}
+
+// ---------- İlan ver formu ----------
+export function ilanVerSayfasi({ yanKutular }) {
+  const ilceSecenek = ILCELER.map((i) => `<option value="${i.slug}">${h(i.ad)}</option>`).join('');
+  return sayfa({
+    baslik: 'Mersin\'de ücretsiz iş ilanı ver – Mersin Anlık',
+    aciklama: 'Mersin\'deki işletmeniz için ücretsiz iş ilanı verin. İlanınız kontrol edildikten sonra Mersin iş ilanları sayfasında yayınlanır.',
+    yol: `${IS_YOL}ilan-ver/`,
+    aktif: IS_YOL,
+    ust: ustBant('Ücretsiz iş ilanı ver', 'Mersin\'deki işletmeniz için eleman ilanı · kontrol edildikten sonra yayınlanır'),
+    icerik: `<main class="kap govde"><div class="ana">
+<div class="ilan-ver-adimlar">
+<div><span>1</span><b>Formu doldurun</b><small>İşyeri, pozisyon ve iletişim bilgileri</small></div>
+<div><span>2</span><b>Kontrol edilir</b><small>Ekibimiz ilanı inceler</small></div>
+<div><span>3</span><b>Yayınlanır</b><small>Mersin iş ilanları sayfasında, ücretsiz</small></div>
+</div>
+<form class="ilan-ver-form" data-ilan-form novalidate>
+<div class="iv-satir"><label>İşyeri / firma adı *<input name="isyeri" required maxlength="90" placeholder="ör. Deniz Kafe"></label>
+<label>Aranan pozisyon *<input name="pozisyon" required maxlength="90" placeholder="ör. Garson, Kasiyer, Şoför"></label></div>
+<div class="iv-satir iv-uclu"><label>İlçe *<select name="ilce" required><option value="">Seçin</option>${ilceSecenek}</select></label>
+<label>Kaç kişi?<input name="kisi" type="number" min="1" max="99" value="1"></label>
+<label>Çalışma şekli<select name="calisma"><option>Tam zamanlı</option><option>Yarı zamanlı</option><option>Dönemsel / sezonluk</option><option>Stajyer</option><option>Günlük / yevmiyeli</option></select></label></div>
+<label>İş tanımı *<textarea name="aciklama" required minlength="20" maxlength="1200" rows="5" placeholder="Yapılacak iş, çalışma saatleri, servis/yemek gibi imkânlar…"></textarea></label>
+<label>Aranan nitelikler<textarea name="nitelik" maxlength="600" rows="3" placeholder="Deneyim, ehliyet, eğitim durumu…"></textarea></label>
+<div class="iv-satir iv-uclu"><label>Başvuru telefonu *<input name="telefon" type="tel" required maxlength="20" placeholder="05xx xxx xx xx"></label>
+<label>E-posta (isteğe bağlı)<input name="eposta" type="email" maxlength="80"></label>
+<label>Ücret (isteğe bağlı)<input name="ucret" maxlength="60" placeholder="ör. Asgari ücret + prim"></label></div>
+<label class="iv-kisa">Son başvuru tarihi<input name="sonBasvuru" type="date"><small>Boş bırakırsanız 30 gün yayında kalır.</small></label>
+<input name="web" tabindex="-1" autocomplete="off" class="iv-gizli" aria-hidden="true">
+<label class="iv-onay"><input type="checkbox" name="onay" required> Bilgilerin doğru olduğunu, telefon ve e-postanın ilanla birlikte yayınlanmasını kabul ediyorum. Başvuranlardan hiçbir ad altında ücret istenmeyecektir.</label>
+<button type="submit" class="iv-gonder">İlanı gönder</button>
+<p class="iv-durum" data-ilan-durum role="status"></p>
+</form>
+<p class="guncelleme-notu">İlanlar yayından önce kontrol edilir; ayrımcı, yanıltıcı ya da ücret talep eden ilanlar yayınlanmaz. Kişisel veriler yalnızca ilanın yayını için kullanılır. Sorularınız için: <a href="mailto:${SITE.email}">${SITE.email}</a></p>
+</div>${yan(yanKutular)}</main>`,
+  });
+}
+
 export function isIlanlariSayfasi({ veri, yanKutular }) {
   const ilanlar = acikIlanlar(veri);
   const kisi = ilanlar.reduce((t, i) => t + (i.acik || 1), 0);
@@ -151,6 +216,7 @@ export function isIlanlariSayfasi({ veri, yanKutular }) {
     ]),
     icerik: `<main class="kap govde"><div class="ana">
 <p class="giris-metni">${giris}</p>
+${isverenBolumu(veri)}
 ${sektorIzgarasi(ilanlar)}
 <div class="bolum-bas" style="margin-top:24px"><h2>İlçelere göre</h2></div>
 ${ilceCubuklari(ilceler)}
@@ -181,6 +247,7 @@ export function isIlanlariIlceSayfasi({ veri, ilce, yanKutular }) {
     jsonLd: sssLd([[`${ilce.ad}'da kaç açık iş ilanı var?`, `${gun} itibarıyla İŞKUR'da ${ilce.ad} için ${ilanlar.length} açık iş ilanı bulunuyor.`]]),
     icerik: `<main class="kap govde"><div class="ana">
 <p class="giris-metni">${giris}</p>
+${isverenBolumu(veri, ilce)}
 ${aramaKutusu(ilanlar.length)}
 ${liste(ilanlar)}
 ${kaynakNotu(veri)}

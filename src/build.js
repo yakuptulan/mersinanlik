@@ -16,7 +16,7 @@ import { akaryakitIlSayfasi, akaryakitTurkiyeSayfasi, namazIlSayfasi, namazTurki
 import ILLER81 from './iller.json' with { type: 'json' };
 import { reklamSayfasi } from './templates/reklam.js';
 import { imsakiyeSayfalari } from './templates/imsakiye.js';
-import { isIlanlariSayfasi, isIlanlariIlceSayfasi, isIlanlariMeslekSayfasi, acikIlanlar, meslekGruplari, IS_YOL } from './templates/isIlanlari.js';
+import { ilanVerSayfasi, isIlanlariSayfasi, isIlanlariIlceSayfasi, isIlanlariMeslekSayfasi, acikIlanlar, meslekGruplari, IS_YOL } from './templates/isIlanlari.js';
 import { vakitListesi } from './lib/vakitHesap.js';
 import { takimSayfasi, takimYolu } from './templates/spor.js';
 import { sayfa as sayfaYap } from './templates/layout.js';
@@ -70,6 +70,10 @@ export function insaEt({ simdi = Date.now() } = {}) {
   } catch {
     servis.isIlanlari = null;
   }
+  try {
+    const isveren = JSON.parse(fs.readFileSync(path.join(VERI_KLASORU, 'isveren-ilanlari.json'), 'utf8')).ilanlar || [];
+    if (servis.isIlanlari) servis.isIlanlari.isveren = isveren;
+  } catch {}
   logolariAyarla();
   let ozetArsiv = [];
   try {
@@ -299,6 +303,7 @@ export function insaEt({ simdi = Date.now() } = {}) {
   if (servis.isIlanlari) {
     const yk = S.yanKutular(servis);
     ekle(IS_YOL, isIlanlariSayfasi({ veri: servis.isIlanlari, yanKutular: yk }));
+    ekle(`${IS_YOL}ilan-ver/`, ilanVerSayfasi({ yanKutular: yk }));
     for (const ilce of ILCELER) ekle(`${IS_YOL}${ilce.slug}/`, isIlanlariIlceSayfasi({ veri: servis.isIlanlari, ilce, yanKutular: yk }), acikIlanlar(servis.isIlanlari).some((i) => i.ilce === ilce.slug));
     for (const grup of meslekGruplari(acikIlanlar(servis.isIlanlari)).filter((m) => m.liste.length >= 5)) ekle(grup.yol, isIlanlariMeslekSayfasi({ veri: servis.isIlanlari, grup, yanKutular: yk }));
   }
