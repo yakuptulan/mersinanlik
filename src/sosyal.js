@@ -28,11 +28,11 @@ export const AYAR = {
   sessizBit: 8,
   enEskiSaat: 6, // bundan eski haber paylaşılmaz
   haricKategori: new Set(['siyaset']),
-  tasarim: 'a', // tek tasarım denemesinde kullanılan varsayılan: a | b | c | d
+  tasarim: 'e', // tek tasarım denemesinde kullanılan varsayılan: a | b | c | d
   sabah: { bas: 8 * 60 + 30, bit: 11 * 60 }, // 'Mersin'de bugün' kartı: 08.30–11.00 arası, günde bir kez (eczane nöbeti 08.00'de değişir)
   // Kaliteli (ücretli Gemini) görsel kotası: günde en fazla 17; manşet yükseltmesi bunun en fazla 6'sı
   premium: { gunluk: 20, manset: 6, mansetIlk: 5, proGunluk: 7 },
-  denenenTasarimlar: ['a', 'b'], // Instagram'da sırayla denenir; karşılaştırma için her gönderiye yazılır
+  denenenTasarimlar: ['e'], // Instagram'da sırayla denenir; karşılaştırma için her gönderiye yazılır
 };
 
 const ILCE_AD = Object.fromEntries(ILCELER.map((i) => [i.slug, i.ad]));
@@ -329,8 +329,7 @@ ${yazi(W - 64, H - 74, 'mersinanlik.com', 30, '#22D3EE', 700, 'text-anchor="end"
     const ozetBas = altSinir - (ozet.length - 1) * ozetYuk;
     const baslikSon = ozetBas - (ozet.length ? 70 : 0);
     const baslikIlk = baslikSon - (satir.length - 1) * yuk;
-    const kicker = `${ilce} · ${kat.ad}`.toLocaleUpperCase('tr-TR');
-    const kickerY = baslikIlk - boyut - 22;
+    const kickerY = baslikIlk - boyut + 10; // geçişin başladığı yer (ilçe ve kategori zaten soldaki şeritte)
     const serit = (t) => `<text transform="translate(78 ${H - 60}) rotate(-90)" font-family="Poppins" font-weight="700" font-size="21" fill="#0A1530" letter-spacing="2">${kacis(t)}</text>`;
     const ilceSerit = `<text transform="translate(78 ${H - 60 - genislik('MERSİN ANLIK', 21) - 2 * 13 - 70}) rotate(-90)" font-family="Poppins" font-weight="700" font-size="21" fill="#0EA5C6" letter-spacing="2">${kacis(ilce.toLocaleUpperCase('tr-TR'))}</text>`;
     return `${bas}
@@ -350,7 +349,6 @@ ${ilceSerit}
 ${serit('MERSİN ANLIK')}
 <image href="data:image/png;base64,${logo}" x="${W - 52 - 180}" y="36" width="180" height="120"/>
 ${yapayZeka ? yazi(sol, 76, 'Temsili görsel', 21, '#FFFFFF', 500, 'fill-opacity="0.8"') : ''}
-${yazi(sol, kickerY, kicker, 26, '#22D3EE', 700, 'letter-spacing="2"')}
 <g filter="url(#gl)" opacity="0.6">${satir.map((t, i) => yazi(sol, baslikIlk + i * yuk + 3, t, boyut, '#000')).join('')}</g>
 ${satir.map((t, i) => yazi(sol, baslikIlk + i * yuk, t, boyut, '#FFFFFF')).join('\n')}
 ${ozet.map((t, i) => yazi(sol, ozetBas + i * ozetYuk, t, 33, '#E3E9F6', 500)).join('\n')}
