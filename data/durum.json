@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-22T20:19:03.792Z"
   }
  },
  "gorsel": {
@@ -384,11 +388,15 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T20:10:44.029Z",
+  "guncelleme": "2026-11-22T20:19:32.798Z",
   "liste": [
    {
+    "baslik": "uskumruköy aslan",
+    "trafik": 200
+   },
+   {
     "baslik": "atalanta",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "ankara elektrik kesintisi",
@@ -411,20 +419,16 @@
     "trafik": 100
    },
    {
-    "baslik": "murat yıldırım",
+    "baslik": "خيتافي ضد أتلتيكو مدريد",
     "trafik": 500
    },
    {
-    "baslik": "خيتافي ضد أتلتيكو مدريد",
+    "baslik": "murat yıldırım",
     "trafik": 500
    },
    {
     "baslik": "özcan deniz son yemek",
     "trafik": 100
-   },
-   {
-    "baslik": "getafe - atletico madrid",
-    "trafik": 2000
    }
   ]
  },

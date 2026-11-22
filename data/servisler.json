@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T20:10:44.300Z",
+ "guncelleme": "2026-11-22T20:19:33.174Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 17,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T20:10:49.310Z",
+  "guncelleme": "2026-11-22T20:19:37.695Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -773,7 +773,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T20:10:50.569Z",
+  "guncelleme": "2026-11-22T20:19:38.897Z",
   "liste": [
    {
     "tur": "su",
@@ -794,7 +794,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T20:10:53.579Z",
+  "guncelleme": "2026-11-22T20:19:43.557Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -825,6 +825,11 @@
     "alis": null,
     "satis": 11131.32,
     "degisim": -2.36
+   },
+   "btc": {
+    "satis": 3062740,
+    "usd": 60602,
+    "degisim": 0.64
    }
   },
   "altinlar": [
@@ -957,10 +962,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 23:10:01"
+  "kaynakSaati": "2026-11-22 23:19:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T20:01:24.149Z",
+  "guncelleme": "2026-11-22T20:19:46.155Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8725,7 +8730,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T20:11:04.068Z",
+  "guncelleme": "2026-11-22T20:19:46.471Z",
   "liste": [
    {
     "yol": "/",
@@ -8806,7 +8811,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T20:11:06.263Z",
+  "guncelleme": "2026-11-22T20:19:48.083Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.38
@@ -8819,7 +8824,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T20:11:08.992Z",
+  "guncelleme": "2026-11-22T20:19:50.147Z",
   "giden": [
    {
     "no": [
@@ -8830,7 +8835,7 @@
     "planlanan": "2026-11-22T20:20:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "SON ÇAĞRI",
+    "durum": "KAPI KAPANDI",
     "hat": "dis"
    },
    {
@@ -8842,7 +8847,7 @@
     "planlanan": "2026-11-22T20:50:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -9930,7 +9935,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T20:11:08.992Z",
+  "guncelleme": "2026-11-22T20:19:50.147Z",
   "liste": [
    {
     "id": 6386,
