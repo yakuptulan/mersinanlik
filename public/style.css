@@ -1779,3 +1779,32 @@ img.kr-foto { object-fit: cover; background: #1f2937; padding: 0; }
 .alt-iletisim small { font-size: 12px; font-weight: 600; color: var(--soluk); }
 /* Mersin'de şu an arka plan deseni: daha sade */
 .kure-sahne { opacity: .35; animation: none; }
+
+/* ---------- İş ilanları sayfası görsel düzen ---------- */
+.is-hero { align-items: center; }
+.is-ilan-ver-dugme { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px; background: var(--turuncu); color: #fff; font-weight: 800; font-size: 15.5px; text-decoration: none; box-shadow: 0 8px 24px rgba(255,138,31,.35); transition: transform .15s; }
+.is-ilan-ver-dugme:hover { color: #fff; transform: translateY(-1px); }
+.is-istatlar { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 22px; }
+.is-istat { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center; padding: 16px 18px; border-radius: 20px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); }
+.is-istat-ikon { grid-row: span 2; width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; background: color-mix(in srgb, var(--c) 22%, transparent); color: var(--c); }
+.is-istat b { font-size: 28px; font-weight: 800; line-height: 1.05; letter-spacing: -.02em; }
+.is-istat small { color: var(--acik-yazi); font-weight: 600; font-size: 13.5px; }
+@media (max-width: 900px) { .is-istatlar { grid-template-columns: repeat(2, minmax(0, 1fr)); } .is-istat b { font-size: 23px; } .is-istat { padding: 12px 14px; } .is-istat-ikon { width: 38px; height: 38px; } }
+.is-sektorler { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; }
+.is-sektor { font: inherit; text-align: left; cursor: pointer; display: flex; flex-direction: column; gap: 4px; padding: 14px; border-radius: 18px; background: #fff; border: 1px solid #e3e8f2; transition: transform .15s, box-shadow .15s, border-color .15s; }
+.is-sektor:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(15,23,42,.08); border-color: color-mix(in srgb, var(--sk) 45%, #e3e8f2); }
+.is-sektor[aria-pressed="true"] { border-color: var(--sk); box-shadow: 0 0 0 3px color-mix(in srgb, var(--sk) 22%, transparent); }
+.is-sektor b { font-size: 15px; color: var(--metin); margin-top: 6px; }
+.is-sektor small { color: var(--ikincil); font-weight: 700; font-size: 13px; }
+.is-sk-ikon { width: 40px; height: 40px; flex: 0 0 auto; border-radius: 12px; display: grid; place-items: center; color: var(--sk); background: color-mix(in srgb, var(--sk) 13%, #fff); }
+.is-ilce-cubuk { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 18px; }
+.is-ilce-cubuk a { display: grid; grid-template-columns: 92px 1fr 36px; align-items: center; gap: 10px; padding: 7px 0; text-decoration: none; color: var(--metin); font-weight: 700; font-size: 14.5px; }
+.is-ilce-cubuk .cubuk { height: 10px; border-radius: 99px; background: #eef2f8; overflow: hidden; }
+.is-ilce-cubuk .cubuk i { display: block; height: 100%; border-radius: 99px; background: linear-gradient(90deg, #1e66f5, #22d3ee); }
+.is-ilce-cubuk a:hover .ad { color: var(--mavi); }
+.is-ilce-cubuk b { text-align: right; color: var(--ikincil); }
+@media (max-width: 700px) { .is-ilce-cubuk { grid-template-columns: 1fr; } }
+.is-kart { border-left: 4px solid var(--sk, #e3e8f2); }
+.is-kart .is-ust { align-items: center; }
+.is-kart .is-ust h3 { flex: 1 1 auto; }
+.is-kart .is-sk-ikon { width: 36px; height: 36px; border-radius: 11px; }

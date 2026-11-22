@@ -188,12 +188,23 @@
     var kartlar = Array.prototype.slice.call(document.querySelectorAll('[data-is-liste] .is-kart'));
     var sayac = document.querySelector('[data-is-sayac]');
     var bos = document.querySelector('[data-is-bos]');
-    inp.addEventListener('input', function () {
+    var sektor = '';
+    function suz() {
       var q = inp.value.toLocaleLowerCase('tr-TR').trim();
       var n = 0;
-      kartlar.forEach(function (k) { var g = !q || k.getAttribute('data-ara').indexOf(q) > -1; k.hidden = !g; if (g) n++; });
+      kartlar.forEach(function (k) { var g = (!q || k.getAttribute('data-ara').indexOf(q) > -1) && (!sektor || k.getAttribute('data-sektor') === sektor); k.hidden = !g; if (g) n++; });
       if (sayac) sayac.textContent = n + ' ilan';
       if (bos) bos.hidden = n > 0;
+    }
+    inp.addEventListener('input', suz);
+    document.querySelectorAll('[data-is-sektor]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var k = b.getAttribute('data-is-sektor');
+        sektor = sektor === k ? '' : k;
+        document.querySelectorAll('[data-is-sektor]').forEach(function (x) { x.setAttribute('aria-pressed', x.getAttribute('data-is-sektor') === sektor ? 'true' : 'false'); });
+        suz();
+        if (sektor) inp.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
     });
   });
   // ---------- Reklam formu → WhatsApp ----------

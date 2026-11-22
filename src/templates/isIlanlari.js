@@ -13,6 +13,23 @@ export const IS_YOL = '/is-ilanlari/';
 const CANTA = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/><path d="M3 13h18"/></svg>';
 const MESLEK_ESIK = 5;
 
+// ---------- Sektörler: ilan başlığından sektör, renk ve ikon ----------
+const ikonSvg = (yol, b = 22) => `<svg width="${b}" height="${b}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${yol}</svg>`;
+export const SEKTORLER = [
+  { key: 'saglik', ad: 'Sağlık ve bakım', renk: '#e5484d', ikon: '<path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 000-7.8z"/><path d="M12 9v5M9.5 11.5h5"/>', re: /bakım elemanı|diyetisyen|hemşire|hemsire|sağlık|saglik|paramedik|ebe\b|eczac|hasta|bakıcı|bakici|doktor|hekim|diş|fizyoterap|odyomet|laborant|tıbbi|tibbi|röntgen|anestezi|acil/i },
+  { key: 'yemek', ad: 'Yemek ve otel', renk: '#f76b15', ikon: '<path d="M4 3v8a3 3 0 006 0V3M7 3v18M17 3c-2 0-3 2-3 5v5h3v8"/>', re: /fast food|kahvaltı|hamburger|aşçı|asci|garson|komi|bulaşık|bulasik|mutfak|resepsiyon|otel|kat görevlisi|kasap|fırın|firin|pasta|tatlı|barista|lokanta|restoran|pizza|döner|catering|kahve|ekmek|unlu/i },
+  { key: 'satis', ad: 'Satış ve mağaza', renk: '#d6409f', ikon: '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 01-8 0"/>', re: /satış|satis|kasiyer|reyon|plasiyer|mağaza|magaza|pompacı|pompaci|tezgahtar|pazarlama|müşteri temsil|musteri temsil|çağrı merkezi|cagri merkezi/i },
+  { key: 'lojistik', ad: 'Şoför, kurye, lojistik', renk: '#3e63dd', ikon: '<rect x="1" y="6" width="14" height="11" rx="1"/><path d="M15 9h4l3 4v4h-7"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/>', re: /sürücü|surucu|palamar|liman|antrepo|işaretçi|şoför|sofor|kurye|forklift|depo|sevkiyat|lojistik|dağıtım|dagitim|taşıma|tasima|istif|vinç|vinc|operatör.*(iş makin|kepçe)|tır|tir\b/i },
+  { key: 'teknik', ad: 'Teknik ve üretim', renk: '#0d74ce', ikon: '<path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/>', re: /işçisi|ressam|tekstil|konfeksiyon|ortacı|beden işçisi|beden iscisi|teknisyen|tekniker|mühendis|muhendis|kaynakçı|kaynakci|elektrik|makine|operatör|operator|usta|montaj|inşaat|insaat|tesisat|boyacı|boyaci|tornacı|cnc|kalıp|kalip|mekanik|bakım onarım|üretim|uretim|imalat|tamirci|sıvacı|duvarcı|demir/i },
+  { key: 'buro', ad: 'Büro ve yönetim', renk: '#8e4ec6', ikon: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h10M7 17h6"/>', re: /satın alma|finans|kimya|muhasebe|sekreter|büro|buro|insan kaynak|idari|ofis|halkla|asistan|yönetici|yonetici|müdür|mudur|planlama|bilgi işlem|yazılım|yazilim|grafik|tasarım|tasarim|veri giriş|danışma/i },
+  { key: 'temizlik', ad: 'Temizlik ve güvenlik', renk: '#12a594', ikon: '<path d="M12 2l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V5z"/>', re: /kapı|kantar|kapıcı|çamaşır|temizlik|güvenlik|guvenlik|bekçi|bekci|çay ocağı|cay ocagi|hizmetli|kat hizmet|bahçıvan|bahcivan|peyzaj|vale/i },
+  { key: 'egitim', ad: 'Eğitim ve çocuk', renk: '#0b8ea0', ikon: '<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/>', re: /öğretmen|ogretmen|çocuk gelişim|cocuk gelisim|eğitmen|egitmen|okul|kreş|kres|bakıcı.*çocuk/i },
+  { key: 'tarim', ad: 'Tarım ve paketleme', renk: '#30a46c', ikon: '<path d="M12 21V11M12 11c0-4 3-7 8-7 0 5-3 8-8 8zM12 14c0-3-2.5-5-7-5 0 4 2.5 6 7 6z"/>', re: /tarım|tarim|sebze|meyve|paketleme|ambalaj|seracı|seraci|ziraat|hayvan|bahçe|bahce|ayıklama|ayiklama|narenciye|hasat/i },
+];
+const DIGER = { key: 'diger', ad: 'Diğer işler', renk: '#6b7a99', ikon: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 13h18"/>' };
+export const sektorBul = (pozisyon) => { const p = String(pozisyon || '').toLocaleLowerCase('tr-TR'); return SEKTORLER.find((x) => x.re.test(p)) || DIGER; };
+
+
 const gunUzun = (t = Date.now()) => new Date(t).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long', timeZone: SITE.timezone });
 const gunKisa = (t = Date.now()) => new Date(t).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', timeZone: SITE.timezone });
 const bugunISO = () => new Date().toLocaleDateString('sv-SE', { timeZone: SITE.timezone });
@@ -47,8 +64,9 @@ function ilanKarti(i) {
   const kalan = i.sonBasvuru ? kalanGun(i.sonBasvuru) : null;
   const acik = i.detay?.aciklama ? aciklamaTemiz(i.detay.aciklama) : '';
   const ara = `${i.pozisyon} ${i.ilceAd || ''} ${acik}`.toLocaleLowerCase('tr-TR');
-  return `<article class="is-kart" data-ara="${h(ara.slice(0, 600))}">
-<div class="is-ust"><h3>${i.kamu ? '<span class="is-kamu-rozet">Kamu</span> ' : ''}${h(i.pozisyon)}</h3>${i.acik > 1 ? `<span class="is-adet">${i.acik} kişi</span>` : ''}</div>
+  const sk = sektorBul(i.pozisyon);
+  return `<article class="is-kart" data-ara="${h(ara.slice(0, 600))}" data-sektor="${sk.key}" style="--sk:${sk.renk}">
+<div class="is-ust"><span class="is-sk-ikon" title="${h(sk.ad)}">${ikonSvg(sk.ikon, 20)}</span><h3>${i.kamu ? '<span class="is-kamu-rozet">Kamu</span> ' : ''}${h(i.pozisyon)}</h3>${i.acik > 1 ? `<span class="is-adet">${i.acik} kişi</span>` : ''}</div>
 <p class="is-bilgi">${i.ilceAd ? `<a href="${IS_YOL}${i.ilce}/">${h(i.ilceAd)}</a> · ` : ''}${h([i.periyot, i.sekil].filter(Boolean).join(' · '))}${i.detay?.ogrenim ? ` · En az ${h(i.detay.ogrenim.toLocaleLowerCase('tr-TR'))}` : ''}</p>
 ${acik ? `<p class="is-aciklama">${h(acik.slice(0, 260))}${acik.length > 260 ? '…' : ''}</p>` : ''}
 <div class="is-alt"><span class="is-son${kalan !== null && kalan <= 3 ? ' acil' : ''}">${i.sonBasvuru ? `Son başvuru ${tarihTr(i.sonBasvuru)}${kalan !== null ? ` · ${kalan <= 0 ? 'bugün son gün' : `${kalan} gün kaldı`}` : ''}` : ''}</span><a class="is-btn" href="${h(ilanLinki(i.no, i.tur))}" rel="noopener nofollow" target="_blank">İŞKUR'da incele</a></div>
@@ -81,6 +99,38 @@ function kursBolumu(veri, ilce = null) {
 <div class="is-alt"><span class="is-son">${k.sonBasvuru ? `Son başvuru ${tarihTr(k.sonBasvuru)}` : ''}</span><a class="is-btn" href="${kursAramaLinki(k.programTur)}" rel="noopener nofollow" target="_blank">İŞKUR'da ara (no ${h(k.no)})</a></div></article>`).join('')}</div>`;
 }
 
+
+// Sayfa üstü: başlık + 4 istatistik kartı + İlan ver düğmesi
+function isUstBolum({ ilanlar, kisi, yeniler, ilceler, gun }) {
+  const enCok = [...ilceler].sort((a, b) => b.n - a.n)[0];
+  const kart = (renk, ikon, deger, etiket) => `<div class="is-istat" style="--c:${renk}"><span class="is-istat-ikon">${ikonSvg(ikon, 20)}</span><b>${deger}</b><small>${etiket}</small></div>`;
+  return `<div class="su-an-bas is-hero"><div><h1>Mersin iş ilanları</h1><p style="margin-top:8px">${h(gun)} · İŞKUR'daki güncel açık ilanlar</p></div>
+<a class="is-ilan-ver-dugme" href="${IS_YOL}ilan-ver/">${ikonSvg('<path d="M12 5v14M5 12h14"/>', 18)}Ücretsiz ilan ver</a></div>
+<div class="is-istatlar">
+${kart('#ff8a1f', DIGER.ikon, ilanlar.length, 'açık ilan')}
+${kart('#22d3ee', '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.5c2.6.2 4.6 2 5.3 5"/>', kisi, 'kişilik alım')}
+${kart('#7ee2a8', '<path d="M12 3v18M3 12h18"/>', yeniler.length && yeniler.length < ilanlar.length ? yeniler.length : ilanlar.length, 'bu hafta eklendi')}
+${enCok ? kart('#a78bfa', '<path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>', h(enCok.ad), `en çok ilan (${enCok.n})`) : ''}
+</div>`;
+}
+
+// Sektör kutuları: tıklayınca liste o sektöre süzülür
+function sektorIzgarasi(ilanlar) {
+  const say = new Map();
+  for (const i of ilanlar) { const k = sektorBul(i.pozisyon); say.set(k, (say.get(k) || 0) + 1); }
+  const l = [...say.entries()].sort((a, b) => (a[0] === DIGER) - (b[0] === DIGER) || b[1] - a[1]);
+  if (!l.length) return '';
+  return `<div class="bolum-bas" style="margin-top:18px"><h2>Sektörlere göre</h2><span>Bir sektöre dokunun, ilanlar süzülsün</span></div>
+<div class="is-sektorler">${l.map(([sk, n]) => `<button type="button" class="is-sektor" data-is-sektor="${sk.key}" style="--sk:${sk.renk}"><span class="is-sk-ikon">${ikonSvg(sk.ikon, 22)}</span><b>${h(sk.ad)}</b><small>${n} ilan</small></button>`).join('')}</div>`;
+}
+
+// İlçe çubukları
+function ilceCubuklari(ilceler) {
+  const l = [...ilceler].sort((a, b) => b.n - a.n);
+  const enCok = l[0]?.n || 1;
+  return `<div class="is-ilce-cubuk">${l.map((i) => `<a href="${IS_YOL}${i.slug}/"><span class="ad">${h(i.ad)}</span><span class="cubuk"><i style="width:${Math.max(4, Math.round((i.n / enCok) * 100))}%"></i></span><b>${i.n}</b></a>`).join('')}</div>`;
+}
+
 export function isIlanlariSayfasi({ veri, yanKutular }) {
   const ilanlar = acikIlanlar(veri);
   const kisi = ilanlar.reduce((t, i) => t + (i.acik || 1), 0);
@@ -93,7 +143,7 @@ export function isIlanlariSayfasi({ veri, yanKutular }) {
     baslik: `Mersin iş ilanları (${kisa}) – İŞKUR'da ${ilanlar.length} açık ilan`,
     aciklama: `Mersin iş ilanları: bugün İŞKUR'da ${ilanlar.length} açık ilan, ${kisi} kişilik pozisyon. ${meslekler.slice(0, 4).map((m) => m.ad).join(', ')} ve daha fazlası. İlçelere göre güncel liste.`,
     yol: IS_YOL,
-    ust: ustBant('Mersin iş ilanları', `${h(gun)} · İŞKUR'daki güncel açık ilanlar`),
+    ust: isUstBolum({ ilanlar, kisi, yeniler, ilceler, gun }),
     jsonLd: sssLd([
       ["Mersin'de şu an kaç açık iş ilanı var?", `${gun} itibarıyla İŞKUR'da Mersin için ${ilanlar.length} açık iş ilanı ve ${kisi} kişilik açık pozisyon bulunuyor.`],
       ["Mersin'deki İŞKUR iş ilanlarına nasıl başvurulur?", "İlanın üzerindeki bağlantıdan İŞKUR'daki ilan sayfasına gidilir. Başvuru, İŞKUR e-Şube'ye e-Devlet ile giriş yapılarak ücretsiz olarak yapılır."],
@@ -101,8 +151,9 @@ export function isIlanlariSayfasi({ veri, yanKutular }) {
     ]),
     icerik: `<main class="kap govde"><div class="ana">
 <p class="giris-metni">${giris}</p>
-<div class="bolum-bas"><h2>İlçelere göre</h2></div>
-<div class="ilce-cipleri">${ilceler.sort((a, b) => b.n - a.n).map((i) => `<a class="cip" href="${IS_YOL}${i.slug}/">${h(i.ad)} <small>${i.n}</small></a>`).join('')}</div>
+${sektorIzgarasi(ilanlar)}
+<div class="bolum-bas" style="margin-top:24px"><h2>İlçelere göre</h2></div>
+${ilceCubuklari(ilceler)}
 ${meslekler.length ? `<div class="bolum-bas" style="margin-top:22px"><h2>Mesleklere göre</h2></div><div class="ilce-cipleri">${meslekler.slice(0, 18).map((m) => `<a class="cip" href="${m.yol}">${h(m.ad)} <small>${m.liste.length}</small></a>`).join('')}</div>` : ''}
 <div class="bolum-bas" style="margin-top:26px"><h2>Tüm ilanlar</h2>${yeniler.length && yeniler.length < ilanlar.length ? `<span>${yeniler.length} ilan bu hafta eklendi</span>` : ''}</div>
 ${aramaKutusu(ilanlar.length)}
