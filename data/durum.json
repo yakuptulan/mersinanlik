@@ -12,11 +12,15 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-22T14:31:20.150Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-22",
-  "adet": 28
+  "adet": 30
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -381,47 +385,47 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T14:01:49.231Z",
+  "guncelleme": "2026-11-22T14:32:02.593Z",
   "liste": [
    {
-    "baslik": "gol krallığı",
-    "trafik": 500
+    "baslik": "batman hava durumu",
+    "trafik": 1000
    },
    {
-    "baslik": "ajax - ado",
+    "baslik": "fc barcelona",
+    "trafik": 100
+   },
+   {
+    "baslik": "ajax",
+    "trafik": 200
+   },
+   {
+    "baslik": "kim milyoner olmak ister?",
+    "trafik": 200
+   },
+   {
+    "baslik": "barcelona",
+    "trafik": 10000
+   },
+   {
+    "baslik": "murat kurum",
+    "trafik": 2000
+   },
+   {
+    "baslik": "villarreal cf",
+    "trafik": 200
+   },
+   {
+    "baslik": "gol krallığı",
+    "trafik": 1000
+   },
+   {
+    "baslik": "simon stiell",
     "trafik": 100
    },
    {
     "baslik": "gol krallığı süper lig",
     "trafik": 50000
-   },
-   {
-    "baslik": "dušan vlahović",
-    "trafik": 2000
-   },
-   {
-    "baslik": "sakaryaspor",
-    "trafik": 500
-   },
-   {
-    "baslik": "bayraktar akıncı",
-    "trafik": 200
-   },
-   {
-    "baslik": "hull city - brighton",
-    "trafik": 2000
-   },
-   {
-    "baslik": "52 orduspor",
-    "trafik": 200
-   },
-   {
-    "baslik": "todd",
-    "trafik": 100
-   },
-   {
-    "baslik": "deniz gezmiş",
-    "trafik": 1000
    }
   ]
  },
