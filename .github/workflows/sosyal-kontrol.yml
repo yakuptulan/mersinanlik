@@ -29,11 +29,12 @@ jobs:
           access_token_scopes: https://www.googleapis.com/auth/cloud-platform
           create_credentials_file: false
 
-      - name: Vertex model yoklaması
+      - name: Güçlü metin modeli denemesi
         continue-on-error: true
-        run: node scripts/model-yokla.js
+        run: node scripts/metin-dene.js
         env:
           VERTEX_TOKEN: ${{ steps.vertex.outputs.access_token }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Kaliteli görsel bağlantı denemesi (1 görsel)
         run: node src/sosyal.js --gorsel-dene
