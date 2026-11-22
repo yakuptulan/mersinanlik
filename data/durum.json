@@ -12,11 +12,15 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-22T08:31:21.168Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-22",
-  "adet": 9
+  "adet": 11
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -370,47 +374,47 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T08:01:51.527Z",
+  "guncelleme": "2026-11-22T08:31:55.173Z",
   "liste": [
    {
-    "baslik": "fırat aydınus",
-    "trafik": 5000
+    "baslik": "hava durumu diyarbakır",
+    "trafik": 200
+   },
+   {
+    "baslik": "muğla",
+    "trafik": 100
+   },
+   {
+    "baslik": "mahsun kırmızıgül",
+    "trafik": 100
+   },
+   {
+    "baslik": "charlize theron",
+    "trafik": 200
+   },
+   {
+    "baslik": "kaliningrad",
+    "trafik": 100
+   },
+   {
+    "baslik": "ömer bolat",
+    "trafik": 100
    },
    {
     "baslik": "borç yapılandırması",
     "trafik": 100
    },
    {
+    "baslik": "22 kasım ne günü",
+    "trafik": 20000
+   },
+   {
     "baslik": "yunanistan",
-    "trafik": 500
-   },
-   {
-    "baslik": "kadir özkaya",
-    "trafik": 100
-   },
-   {
-    "baslik": "türkiye kupası",
-    "trafik": 100
-   },
-   {
-    "baslik": "ajda pekkan",
     "trafik": 1000
    },
    {
-    "baslik": "seda bakan",
-    "trafik": 500
-   },
-   {
-    "baslik": "gazeteci",
+    "baslik": "fethiyespor",
     "trafik": 100
-   },
-   {
-    "baslik": "hep ucuz reklamı hangi zincir marketin",
-    "trafik": 1000
-   },
-   {
-    "baslik": "21 kasım masterchef potaya kim gitti",
-    "trafik": 2000
    }
   ]
  },
