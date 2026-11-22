@@ -12,11 +12,15 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-22T11:41:33.433Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-22",
-  "adet": 21
+  "adet": 23
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -380,8 +384,12 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T11:32:07.200Z",
+  "guncelleme": "2026-11-22T11:42:13.413Z",
   "liste": [
+   {
+    "baslik": "enflasyon",
+    "trafik": 5000
+   },
    {
     "baslik": "rıdvan dilmen",
     "trafik": 500
@@ -417,10 +425,6 @@
    {
     "baslik": "marmarabirlik",
     "trafik": 200
-   },
-   {
-    "baslik": "gümüş",
-    "trafik": 5000
    }
   ]
  },

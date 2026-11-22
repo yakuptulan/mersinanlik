@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T11:32:35.117Z",
+ "guncelleme": "2026-11-22T11:42:37.920Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 22,
@@ -26,12 +26,12 @@
     {
      "tarih": "2026-11-25",
      "min": 12,
-     "max": 18,
+     "max": 17,
      "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-26",
-     "min": 10,
+     "min": 9,
      "max": 18,
      "durum": "Açık"
     }
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T11:32:40.155Z",
+  "guncelleme": "2026-11-22T11:42:41.357Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T11:32:41.575Z",
+  "guncelleme": "2026-11-22T11:42:42.508Z",
   "liste": [
    {
     "tur": "su",
@@ -876,7 +876,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T11:32:44.711Z",
+  "guncelleme": "2026-11-22T11:42:47.155Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -907,6 +907,11 @@
     "alis": null,
     "satis": 11131.32,
     "degisim": -2.36
+   },
+   "btc": {
+    "satis": 3080658,
+    "usd": 60956,
+    "degisim": 4.78
    }
   },
   "altinlar": [
@@ -1039,10 +1044,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 14:32:01"
+  "kaynakSaati": "2026-11-22 14:42:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T11:14:27.958Z",
+  "guncelleme": "2026-11-22T11:42:49.405Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1867,7 +1872,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-22T11:32:57.337Z",
+  "guncelleme": "2026-11-22T11:42:51.330Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8453,7 +8458,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-22T11:33:41.388Z",
+    "guncelleme": "2026-11-22T11:43:39.176Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8535,7 +8540,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-22T11:33:42.684Z",
+    "guncelleme": "2026-11-22T11:43:40.461Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8617,7 +8622,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-22T11:33:43.992Z",
+    "guncelleme": "2026-11-22T11:43:41.759Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8716,11 +8721,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T11:32:55.220Z",
+  "guncelleme": "2026-11-22T11:42:49.672Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 12
+    "sayi": 11
    },
    {
     "yol": "/haber/msk-da-dagilma-tehlikesi-kadro-dagildi-gelecek-belirsizlesti-fmcfmt/",
@@ -8793,20 +8798,20 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T11:33:45.193Z",
+  "guncelleme": "2026-11-22T11:43:42.959Z",
   "deniz": {
    "sicaklik": 21.9,
    "dalga": 0.5
   },
   "hava": {
-   "aqi": 30,
+   "aqi": 29,
    "pm25": 8.3,
-   "pm10": 12.4,
+   "pm10": 11.8,
    "uvMax": 2.15
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T11:33:47.885Z",
+  "guncelleme": "2026-11-22T11:43:45.145Z",
   "giden": [
    {
     "no": [
@@ -8817,7 +8822,7 @@
     "planlanan": "2026-11-22T12:00:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "KONTUAR KAPALI",
+    "durum": "SON ÇAĞRI",
     "hat": "dis"
    },
    {
@@ -8841,7 +8846,7 @@
     "planlanan": "2026-11-22T12:30:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -9419,6 +9424,18 @@
     "kapi": "105",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1856"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-23T11:40:00.000Z",
+    "tahmini": null,
+    "kapi": "102",
+    "durum": "",
+    "hat": "dis"
    }
   ],
   "gelen": [
@@ -9431,7 +9448,7 @@
     "planlanan": "2026-11-22T11:55:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "ic"
    },
    {
@@ -10061,7 +10078,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T11:33:47.885Z",
+  "guncelleme": "2026-11-22T11:43:45.145Z",
   "liste": [
    {
     "id": 6386,
