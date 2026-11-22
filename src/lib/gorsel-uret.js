@@ -147,11 +147,16 @@ async function kaydet(hikaye, veri, prompt = '') {
 // Ücretsiz kota günde ~40 görsele yetiyor: öncelik birden çok sitenin yazdığı ya da kendi yazımız olan haberler
 export function gorselAdaylari(hikayeler, simdi = Date.now()) {
   return hikayeler
-    .filter((h) => h.durum === 'yayinda' && !h.gorsel && !h.gorselHatasi && !h.genel && !yerFotosu(h))
+    .filter((h) => h.durum === 'yayinda' && !h.gorsel && !h.gorselHatasi && !yerFotosu(h))
     .filter((h) => simdi - new Date(h.ilkGorulme).getTime() < 8 * 36e5)
-    // Kaliteli model açıkken bütün Mersin haberlerine görsel; ücretsiz kotada sadece önemlilere
-    .filter((h) => premiumHazirMi() || new Set(h.kaynaklar.map((k) => k.ad)).size >= 2 || h.metin || h.trend)
-    .sort((a, b) => b.kaynaklar.length - a.kaynaklar.length || new Date(b.ilkGorulme) - new Date(a.ilkGorulme));
+    // Kaliteli model açıkken: bütün Mersin haberleri + birden çok kaynağın yazdığı Türkiye haberleri.
+    // Ücretsiz kotada sadece önemli Mersin haberleri.
+    .filter((h) => {
+      const kaynak = new Set(h.kaynaklar.map((k) => k.ad)).size;
+      if (h.genel) return premiumHazirMi() && kaynak >= 2;
+      return premiumHazirMi() || kaynak >= 2 || h.metin || h.trend;
+    })
+    .sort((a, b) => Number(Boolean(a.genel)) - Number(Boolean(b.genel)) || b.kaynaklar.length - a.kaynaklar.length || new Date(b.ilkGorulme) - new Date(a.ilkGorulme));
 }
 
 // Artık hiçbir habere ait olmayan görselleri siler (7 günü dolan haberler)
@@ -217,8 +222,22 @@ export async function premiumUret(hikaye, oran = '16:9', { pro = false } = {}) {
   } catch {}
   const kurallar = oran === '16:9' ? KURALLAR : KURALLAR.replace('horizontal 16:9 composition', 'vertical 4:5 composition with the main subject in the upper two thirds');
   const metin = `${kurallar}\n\nHeadline (Turkish): "${hikaye.baslik}"\nTopic category: ${hikaye.kategori}\nLocation: ${ilceMetni(hikaye)}${sahne ? `\nScene to show: ${sahne}` : ''}\nQuality: high-end professional news photography, sharp detail, true-to-life colors, natural composition.`;
-  const veri = await premiumIste(metin, oran, pro && VERTEX_TOKEN ? PRO_MODEL : PREMIUM_MODEL);
-  if (VERTEX_TOKEN) harcamaYaz(pro ? 'proGorsel' : 'gorsel', fiyat);
+  let veri;
+  if (pro && VERTEX_TOKEN) {
+    try {
+      veri = await premiumIste(metin, oran, PRO_MODEL);
+      harcamaYaz('proGorsel', fiyat);
+    } catch (e) {
+      // En iyi model deneme hesabına kapalı olabiliyor (403): normal kaliteli modele düş
+      if (!/HTTP 403/.test(e.message)) throw e;
+      console.log('En iyi görsel model kapalı (deneme hesabı), normal kaliteli model kullanılıyor');
+      pro = false;
+    }
+  }
+  if (!veri) {
+    veri = await premiumIste(metin, oran, PREMIUM_MODEL);
+    if (VERTEX_TOKEN) harcamaYaz('gorsel', FIYAT.gorsel);
+  }
   if (oran === '16:9') {
     fs.mkdirSync(URETILEN_KLASOR, { recursive: true });
     const dosya = `${hikaye.id}.webp`;

@@ -39,4 +39,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
           git add -A && git commit -qm "Örnekler $(date -u +%F)"
-          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" karsilastirma
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ornekler
