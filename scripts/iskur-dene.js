@@ -27,6 +27,9 @@ if (process.env.GONDER) {
   const i = d.search(/VENEZUE/);
   console.log(d.slice(i + 200, i + 5200));
   const fn = r.metin.match(/function PopupJobDetails[\s\S]{0,900}/)?.[0] || (await al('https://esube.iskur.gov.tr' + (r.metin.match(/src="([^"]*AcikIs[^"]*\.js[^"]*)"/i)?.[1] || '/x'))).metin.match(/PopupJobDetails[\s\S]{0,900}/)?.[0];
+  console.log('\nPAGER', [...r.metin.matchAll(/<a[^>]*href="javascript:__doPostBack\(&#39;([^&]*)&#39;,&#39;([^&]*)&#39;\)"[^>]*>([^<]{0,40})</g)].filter((m) => /Sonraki|Son Sayfa|Git|^\s*\d+\s*$/i.test(m[3]) || /Page|Sayfa|Pager/i.test(m[1])).map((m) => `${m[1]} | ${m[2]} | ${m[3].trim()}`).slice(0, 12).join('\n'));
+  console.log('\nPAGERHTML', r.metin.match(/[\s\S]{0,1500}Sonraki Sayfa[\s\S]{0,800}/)?.[0]?.replace(/\s+/g, ' '));
+  console.log('\nSATIR1', r.metin.match(/<a onclick="PopupJobDetails[\s\S]{0,2600}/)?.[0]?.replace(/\s+/g, ' '));
   console.log('\nPOPUP', fn);
   console.log('\nJSLER', [...r.metin.matchAll(/<script[^>]+src="([^"]+)"/g)].map((m) => m[1]).join(' '));
   const ilanTarihi = r.metin.match(/<select name="ctl04\$ctlIlanTarihi"[\s\S]*?<\/select>/)?.[0]?.replace(/\s+/g, ' ');
