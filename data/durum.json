@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-22T20:31:19.615Z"
   }
  },
  "gorsel": {
@@ -388,19 +384,19 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T20:31:48.014Z",
+  "guncelleme": "2026-11-22T20:36:33.458Z",
   "liste": [
+   {
+    "baslik": "sarıyer aslan",
+    "trafik": 1000
+   },
    {
     "baslik": "inter",
     "trafik": 1000
    },
    {
-    "baslik": "sarıyer aslan",
-    "trafik": 500
-   },
-   {
     "baslik": "marsilya",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "atalanta",
@@ -428,7 +424,7 @@
    },
    {
     "baslik": "خيتافي ضد أتلتيكو مدريد",
-    "trafik": 500
+    "trafik": 1000
    }
   ]
  },
