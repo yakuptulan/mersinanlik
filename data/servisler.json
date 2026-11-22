@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T01:01:46.495Z",
+ "guncelleme": "2026-11-22T01:14:39.299Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 15,
@@ -147,7 +147,7 @@
   },
   "camliyayla": {
    "sicaklik": 10,
-   "durum": "Parçalı bulutlu",
+   "durum": "Sisli",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -182,7 +182,7 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 17,
+   "sicaklik": 18,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -291,7 +291,7 @@
   },
   "mut": {
    "sicaklik": 12,
-   "durum": "Parçalı bulutlu",
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T01:01:50.670Z",
+  "guncelleme": "2026-11-22T01:14:42.845Z",
   "liste": [
    {
     "ad": "Asuman Eczanesi",
@@ -707,7 +707,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T01:01:51.599Z",
+  "guncelleme": "2026-11-22T01:14:44.081Z",
   "liste": [
    {
     "tur": "su",
@@ -728,7 +728,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T01:01:55.518Z",
+  "guncelleme": "2026-11-22T01:14:46.127Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -761,9 +761,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3036875,
-    "usd": 60090,
-    "degisim": 2
+    "satis": 3038392,
+    "usd": 60120,
+    "degisim": 1.84
    }
   },
   "altinlar": [
@@ -896,10 +896,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 04:01:01"
+  "kaynakSaati": "2026-11-22 04:14:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T01:01:57.834Z",
+  "guncelleme": "2026-11-22T01:14:48.925Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8573,7 +8573,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T01:01:58.179Z",
+  "guncelleme": "2026-11-22T01:14:49.264Z",
   "liste": [
    {
     "yol": "/",
@@ -8682,7 +8682,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T01:02:44.161Z",
+  "guncelleme": "2026-11-22T01:14:51.264Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.82
@@ -8695,7 +8695,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T01:02:45.985Z",
+  "guncelleme": "2026-11-22T01:14:53.208Z",
   "giden": [
    {
     "no": [
@@ -8706,7 +8706,7 @@
     "planlanan": "2026-11-22T01:20:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "SON ÇAĞRI",
+    "durum": "KAPI KAPANDI",
     "hat": "dis"
    },
    {
@@ -8718,7 +8718,7 @@
     "planlanan": "2026-11-22T01:30:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KONTUAR KAPALI",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -8742,7 +8742,7 @@
     "planlanan": "2026-11-22T02:05:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8766,7 +8766,7 @@
     "planlanan": "2026-11-22T03:05:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9950,7 +9950,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T01:02:45.985Z",
+  "guncelleme": "2026-11-22T01:14:53.208Z",
   "liste": [
    {
     "id": 6386,
