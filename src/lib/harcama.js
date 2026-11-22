@@ -7,8 +7,8 @@ const DOSYA = 'data/harcama.json';
 export const FIYAT = {
   gorsel: 0.039, // gemini-2.5-flash-image, 1 görsel
   proGorsel: 0.134, // gemini-3-pro-image, 1 görsel (1K)
-  metinGirdi: 2 / 1e6, // gemini-3.1-pro-preview
-  metinCikti: 12 / 1e6,
+  metinGirdi: 1.5 / 1e6, // gemini-3.5-flash (temkinli tahmin)
+  metinCikti: 9 / 1e6,
 };
 export const TAVAN = { gunluk: 3.2, toplam: 285, bitis: '2027-02-19' };
 

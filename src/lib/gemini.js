@@ -11,7 +11,7 @@ const YEDEK_MODELLER = [MODEL, 'gemini-flash-lite-latest', 'gemini-flash-latest'
 const bekle = (ms) => new Promise((r) => setTimeout(r, ms));
 
 // Haber metinleri için güçlü model (Vertex AI, Google deneme kredisinden). Olmazsa ücretsiz yola düşülür.
-const METIN_PRO_MODEL = process.env.GEMINI_METIN_MODEL || 'gemini-3.1-pro-preview';
+const METIN_PRO_MODEL = process.env.GEMINI_METIN_MODEL || 'gemini-3.5-flash';
 async function vertexYaz(sistem, icerik, sicaklik) {
   const T = process.env.VERTEX_TOKEN;
   if (!T || !butceVar(0.05)) return null;
