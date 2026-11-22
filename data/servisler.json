@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T15:52:58.329Z",
+ "guncelleme": "2026-11-22T16:01:49.664Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 18,
@@ -110,13 +110,13 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 17,
-   "durum": "Açık",
+   "sicaklik": 16,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-22",
      "min": 14,
-     "max": 17,
+     "max": 16,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T15:53:03.804Z",
+  "guncelleme": "2026-11-22T16:01:54.029Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -694,17 +694,6 @@
     "saat": "22.11.2026 08:00 / 23.11.2026 08:00 nöbetçidir."
    },
    {
-    "ad": "Susanoğlu Eczanesi",
-    "bolge": "SİLİFKE",
-    "ilce": "silifke",
-    "adres": "Atakent Mah. Alparslan Türkeş Bul.No:91/AB",
-    "tarif": "ATAKENT MAH. ALPARSLAN TÜRKEŞ BULV. E BLOK 179E/3",
-    "telefon": "03247224686",
-    "lat": 36.405326,
-    "lon": 34.069948,
-    "saat": "22.11.2026 08:00 / 22.11.2026 19:00 nöbetçidir."
-   },
-   {
     "ad": "Çerekçi Eczanesi",
     "bolge": "MUT",
     "ilce": "mut",
@@ -784,43 +773,8 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T15:53:05.038Z",
+  "guncelleme": "2026-11-22T16:01:55.410Z",
   "liste": [
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Yenişehir İlçesi Gökçebelen Mahallesi 3382. Sokak'taki döşeme çalışması nedeniyle Gökçebelen ve Kuzeykent mahallelerinde saat 19:00'da su kesintisi yaşanacaktır.",
-    "baslangic": "2026-11-22T13:06:00.000Z",
-    "bitis": "2026-11-22T16:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "yenisehir",
-      "ad": "Yenişehir",
-      "mahalleler": [
-       "Gökçebelen",
-       "Kuzeykent"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Tarsus Yeşiltepe yeşilkuyu bahşiş kulak elektrik kesintisine bağlı su kesintisi yaşanacaktır tahmini Verilme süresi 19:00'dır",
-    "baslangic": "2026-11-22T10:32:00.000Z",
-    "bitis": "2026-11-22T16:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "tarsus",
-      "ad": "Tarsus",
-      "mahalleler": [
-       "Bahşiş",
-       "Kulak",
-       "Yeşiltepe"
-      ]
-     }
-    ]
-   },
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
@@ -856,7 +810,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T15:53:07.738Z",
+  "guncelleme": "2026-11-22T16:01:57.950Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -889,9 +843,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3075225,
-    "usd": 60849,
-    "degisim": 1.61
+    "satis": 3073794,
+    "usd": 60820,
+    "degisim": 1.64
    }
   },
   "altinlar": [
@@ -1024,10 +978,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 18:53:01"
+  "kaynakSaati": "2026-11-22 19:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T15:53:10.157Z",
+  "guncelleme": "2026-11-22T16:02:00.654Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1852,7 +1806,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-22T15:53:12.184Z",
+  "guncelleme": "2026-11-22T16:02:02.859Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -2401,6 +2355,20 @@
     },
     {
      "sira": 16,
+     "takim": "Adanaspor",
+     "ham": "ADANASPOR A.Ş.",
+     "o": 13,
+     "g": 2,
+     "b": 1,
+     "m": 10,
+     "a": 13,
+     "y": 39,
+     "av": -26,
+     "p": 7,
+     "mersin": false
+    },
+    {
+     "sira": 17,
      "takim": "Karaman",
      "ham": "KARAMAN FUTBOL KULÜBÜ",
      "o": 12,
@@ -2414,30 +2382,16 @@
      "mersin": false
     },
     {
-     "sira": 17,
-     "takim": "Adanaspor",
-     "ham": "ADANASPOR A.Ş.",
-     "o": 12,
-     "g": 1,
-     "b": 1,
-     "m": 10,
-     "a": 10,
-     "y": 39,
-     "av": -29,
-     "p": 4,
-     "mersin": false
-    },
-    {
      "sira": 18,
      "takim": "Yeni Malatyaspor",
      "ham": "YENİ MALATYASPOR",
-     "o": 12,
+     "o": 13,
      "g": 0,
      "b": 0,
-     "m": 12,
+     "m": 13,
      "a": 0,
-     "y": 36,
-     "av": -36,
+     "y": 39,
+     "av": -39,
      "p": -3,
      "mersin": false
     }
@@ -2455,7 +2409,7 @@
      "tarih": "2026-11-22",
      "saat": null,
      "ev": "Yeni Malatyaspor",
-     "skor": null,
+     "skor": "0-3",
      "dep": "Adanaspor",
      "mersin": false
     },
@@ -8252,7 +8206,7 @@
       {
        "ev": "Yeni Malatyaspor",
        "dep": "Adanaspor",
-       "skor": null
+       "skor": "0-3"
       },
       {
        "ev": "Ejderoğlu Kırşehir",
@@ -8502,10 +8456,10 @@
       "B"
      ],
      "Adanaspor": [
-      "M",
       "B",
       "M",
       "M",
+      "G",
       "G"
      ],
      "Karaman": [
@@ -8529,7 +8483,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-22T15:53:59.348Z",
+    "guncelleme": "2026-11-22T16:02:47.079Z",
     "liste": [
      {
       "ad": "GIFT EMMANUEL ORBAN",
@@ -8611,7 +8565,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-22T15:54:00.635Z",
+    "guncelleme": "2026-11-22T16:02:48.354Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8693,7 +8647,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-22T15:54:01.936Z",
+    "guncelleme": "2026-11-22T16:02:49.640Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8792,7 +8746,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T15:53:10.555Z",
+  "guncelleme": "2026-11-22T16:02:00.984Z",
   "liste": [
    {
     "yol": "/",
@@ -8839,6 +8793,10 @@
     "sayi": 1
    },
    {
+    "yol": "/bilgi/sakarya-nerededir-adi-nereden-gelir-sehrin-tarihi-hakkinda-bilgiler/",
+    "sayi": 1
+   },
+   {
     "yol": "/menu/",
     "sayi": 1
    },
@@ -8877,20 +8835,20 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T15:54:03.138Z",
+  "guncelleme": "2026-11-22T16:02:50.841Z",
   "deniz": {
    "sicaklik": 21.8,
-   "dalga": 0.4
+   "dalga": 0.38
   },
   "hava": {
-   "aqi": 39,
-   "pm25": 11.6,
-   "pm10": 18.5,
+   "aqi": 42,
+   "pm25": 13.4,
+   "pm10": 21.7,
    "uvMax": 2.15
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T15:54:05.522Z",
+  "guncelleme": "2026-11-22T16:02:53.645Z",
   "giden": [
    {
     "no": [
@@ -8913,7 +8871,7 @@
     "planlanan": "2026-11-22T16:20:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KONTUAR KAPALI",
+    "durum": "BOARDING",
     "hat": "ic"
    },
    {
@@ -10073,7 +10031,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T15:54:05.522Z",
+  "guncelleme": "2026-11-22T16:02:53.644Z",
   "liste": [
    {
     "id": 6386,
