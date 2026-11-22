@@ -149,6 +149,11 @@ jobs:
       - name: Siteyi üret
         run: node src/build.js
 
+      - name: Sosyal medya kuyruğu (sıradaki haber, Instagram kartı)
+        run: node src/sosyal.js --hazirla || true
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+
       - name: Verileri kaydet
         run: |
           git config user.name "mersinanlik-bot"
@@ -172,14 +177,22 @@ jobs:
           if [ -n "$KV" ]; then printf 'name = "mersinanlik"\npages_build_output_dir = "dist"\ncompatibility_date = "2026-11-01"\n\n[[kv_namespaces]]\nbinding = "ABONE"\nid = "%s"\n' "$KV" > wrangler.toml; fi
           npx --yes wrangler@4 pages deploy dist --project-name=mersinanlik --branch=main --commit-dirty=true
 
+      - name: Facebook ve Instagram'da paylaş
+        if: ${{ env.CLOUDFLARE_API_TOKEN != '' }}
+        run: |
+          sleep 15
+          node src/sosyal.js --paylas || true
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+
       - name: IndexNow (Bing ve diğer arama motorlarına bildir)
         if: ${{ env.CLOUDFLARE_API_TOKEN != '' }}
         run: |
-          sleep 20
+          sleep 10
           node src/indexnow.js || true
-          git add data/indexnow.json 2>/dev/null || true
+          git add data/indexnow.json data/sosyal.json 2>/dev/null || true
           if ! git diff --cached --quiet; then
-            git commit -m "IndexNow durumu"
+            git commit -m "IndexNow ve sosyal medya durumu"
             git pull --rebase -X theirs --autostash || { git rebase --abort; git pull --no-rebase -X ours --no-edit; }
             git push || true
           fi
