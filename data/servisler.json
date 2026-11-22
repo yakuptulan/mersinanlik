@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-22T02:01:44.936Z",
+ "guncelleme": "2026-11-22T02:31:44.776Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-22T02:01:49.889Z",
+  "guncelleme": "2026-11-22T02:31:48.465Z",
   "liste": [
    {
     "ad": "Asuman Eczanesi",
@@ -707,7 +707,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-22T02:01:51.119Z",
+  "guncelleme": "2026-11-22T02:31:49.475Z",
   "liste": [
    {
     "tur": "su",
@@ -728,7 +728,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-22T02:01:55.789Z",
+  "guncelleme": "2026-11-22T02:31:53.092Z",
   "kalemler": {
    "gram": {
     "alis": 5730.97,
@@ -761,9 +761,9 @@
     "degisim": -2.36
    },
    "btc": {
-    "satis": 3033660,
-    "usd": 60026,
-    "degisim": 1.85
+    "satis": 3019164,
+    "usd": 59740,
+    "degisim": 1.61
    }
   },
   "altinlar": [
@@ -896,10 +896,10 @@
     "degisim": 0.53
    }
   ],
-  "kaynakSaati": "2026-11-22 05:01:01"
+  "kaynakSaati": "2026-11-22 05:31:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-22T02:01:58.167Z",
+  "guncelleme": "2026-11-22T02:31:55.644Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8573,7 +8573,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-22T02:01:58.626Z",
+  "guncelleme": "2026-11-22T02:31:55.990Z",
   "liste": [
    {
     "yol": "/",
@@ -8584,15 +8584,27 @@
     "sayi": 5
    },
    {
-    "yol": "/ilceler/",
-    "sayi": 2
-   },
-   {
     "yol": "/haber/msk-da-dagilma-tehlikesi-kadro-dagildi-gelecek-belirsizlesti-fmcfmt/",
     "sayi": 2
    },
    {
+    "yol": "/ilceler/",
+    "sayi": 2
+   },
+   {
     "yol": "/piyasalar/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/yenisehir-belediyesi-artik-cebinizde-1g8kwxn/",
+    "sayi": 1
+   },
+   {
+    "yol": "/nobetci-eczane/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/mersin-1-amator-b-grubu-nda-zirve-kizisti-7sethw/",
     "sayi": 1
    },
    {
@@ -8608,19 +8620,7 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-1-amator-b-grubu-nda-zirve-kizisti-7sethw/",
-    "sayi": 1
-   },
-   {
     "yol": "/menu/",
-    "sayi": 1
-   },
-   {
-    "yol": "/piyasalar/gram-altin/&source=alertsmail&hl=tr&gl=TR&msgid=MTQ5Njk1ODE4MjUyMTAyMDM5NDk&s=AB2Xq4iz2SvM7OLBxaoik_Y5kDI8z6G9143LXnI/",
-    "sayi": 1
-   },
-   {
-    "yol": "/piyasalar/gram-altin/&ss=tw&rt=Gram+alt%C4%B1n+ne+kadar%3F+Bug%C3%BCn+canl%C4%B1+gram+alt%C4%B1n+fiyat%C4%B1+-+Mersin+Anl%C4%B1k&cd=KhQxNDk2OTU4MTgyNTIxMDIwMzk0OTIdZjcwZjUzYWU5MTM2ZWRkYzpjb20udHI6dHI6VFI&ssp=AMJHsmWqlNtj-Lx0EeQMFnU5botX4UoECw/",
     "sayi": 1
    },
    {
@@ -8648,23 +8648,11 @@
     "sayi": 1
    },
    {
-    "yol": "/nobetci-eczane/",
-    "sayi": 1
-   },
-   {
     "yol": "/kategori/belediye/",
     "sayi": 1
    },
    {
-    "yol": "/haber/yenisehir-belediyesi-artik-cebinizde-1g8kwxn/",
-    "sayi": 1
-   },
-   {
     "yol": "/haber/mersin-devlet-klasik-turk-muzigi-korosu-naz-makami-ile-sahnede-50e6tf/",
-    "sayi": 1
-   },
-   {
-    "yol": "/piyasalar/gram-altin/&ct=ga&cd=CAEYASoUMTQ5Njk1ODE4MjUyMTAyMDM5NDkyHWY3MGY1M2FlOTEzNmVkZGM6Y29tLnRyOnRyOlRS&usg=AOvVaw0_ep_8Mlalwp_B363tUYiW/",
     "sayi": 1
    },
    {
@@ -8674,10 +8662,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-22T02:02:47.072Z",
+  "guncelleme": "2026-11-22T02:31:57.442Z",
   "deniz": {
    "sicaklik": 21.6,
-   "dalga": 0.8
+   "dalga": 0.78
   },
   "hava": {
    "aqi": 27,
@@ -8687,20 +8675,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-22T02:02:49.167Z",
+  "guncelleme": "2026-11-22T02:31:59.141Z",
   "giden": [
-   {
-    "no": [
-     "VF3149"
-    ],
-    "havayolu": "AJet",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-22T02:05:00.000Z",
-    "tahmini": null,
-    "kapi": "104",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC3706"
@@ -8710,7 +8686,7 @@
     "planlanan": "2026-11-22T02:50:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -8722,7 +8698,7 @@
     "planlanan": "2026-11-22T03:05:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -9942,7 +9918,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-22T02:02:49.167Z",
+  "guncelleme": "2026-11-22T02:31:59.140Z",
   "liste": [
    {
     "id": 6386,
