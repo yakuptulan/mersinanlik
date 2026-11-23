@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-23T05:24:06.981Z"
   }
  },
  "gorsel": {
@@ -384,7 +388,7 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-23T05:21:39.632Z",
+  "guncelleme": "2026-11-23T05:24:43.201Z",
   "liste": [
    {
     "baslik": "elenen yarışmacı masterchef kim elendi",
@@ -393,10 +397,6 @@
    {
     "baslik": "uefa şampiyonlar ligi",
     "trafik": 2000
-   },
-   {
-    "baslik": "23 kasım okullar tatil mi",
-    "trafik": 100
    },
    {
     "baslik": "hava",
@@ -415,6 +415,10 @@
     "trafik": 200
    },
    {
+    "baslik": "sivas hava durumu",
+    "trafik": 200
+   },
+   {
     "baslik": "inegöl hava durumu",
     "trafik": 200
    },
@@ -423,7 +427,7 @@
     "trafik": 100
    },
    {
-    "baslik": "sivas hava durumu",
+    "baslik": "balıkesir hava durumu",
     "trafik": 200
    }
   ]
