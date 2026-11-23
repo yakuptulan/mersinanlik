@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-23T16:01:50.519Z",
+ "guncelleme": "2026-11-23T16:17:23.481Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-23T16:01:55.277Z",
+  "guncelleme": "2026-11-23T16:17:28.087Z",
   "liste": [
    {
     "ad": "Bizim Eczanesi",
@@ -772,7 +772,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-23T16:01:56.440Z",
+  "guncelleme": "2026-11-23T16:17:29.301Z",
   "liste": [
    {
     "tur": "su",
@@ -964,7 +964,7 @@
   "kaynakSaati": "2026-11-23 19:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-23T16:02:03.325Z",
+  "guncelleme": "2026-11-23T16:17:34.156Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8629,11 +8629,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-23T16:02:05.487Z",
+  "guncelleme": "2026-11-23T16:17:34.677Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 22
+    "sayi": 23
    },
    {
     "yol": "/haber/toroslar-da-moloz-yiginlarinin-yerini-yesil-alan-aliyor-1uxscif/",
@@ -8692,11 +8692,11 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/ali-kiratli-acikladi-limon-ve-mandalina-ihracatina-devlet-destegi-mwdu7r/",
+    "yol": "/kar-tatili/",
     "sayi": 1
    },
    {
-    "yol": "/kar-tatili/",
+    "yol": "/haber/ali-kiratli-acikladi-limon-ve-mandalina-ihracatina-devlet-destegi-mwdu7r/",
     "sayi": 1
    },
    {
@@ -8705,10 +8705,6 @@
    },
    {
     "yol": "/haber/mersin-de-ogretmenler-gunu-nde-ucretsiz-etkinlik-firsatlari-18d3dcj/",
-    "sayi": 1
-   },
-   {
-    "yol": "/spor/",
     "sayi": 1
    },
    {
@@ -8736,6 +8732,10 @@
     "sayi": 1
    },
    {
+    "yol": "/okullar-tatil-mi/bursa/",
+    "sayi": 1
+   },
+   {
     "yol": "/okullar-tatil-mi/gaziantep/",
     "sayi": 1
    },
@@ -8758,7 +8758,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-23T16:02:52.264Z",
+  "guncelleme": "2026-11-23T16:17:36.746Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.3
@@ -8771,20 +8771,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-23T16:02:54.631Z",
+  "guncelleme": "2026-11-23T16:17:39.008Z",
   "giden": [
-   {
-    "no": [
-     "VF1053"
-    ],
-    "havayolu": "AJet",
-    "yer": "Ercan",
-    "planlanan": "2026-11-23T16:05:00.000Z",
-    "tahmini": "2026-11-23T16:25:00.000Z",
-    "kapi": "103",
-    "durum": "KAPI KAPANDI",
-    "hat": "dis"
-   },
    {
     "no": [
      "TK2465"
@@ -9228,21 +9216,21 @@
     "kapi": "105",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "VF1053"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ercan",
+    "planlanan": "2026-11-24T16:05:00.000Z",
+    "tahmini": null,
+    "kapi": "102",
+    "durum": "",
+    "hat": "dis"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "TK2464"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-23T16:10:00.000Z",
-    "tahmini": "2026-11-23T16:30:00.000Z",
-    "kapi": "",
-    "durum": "GECİKME",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC2090"
@@ -9722,11 +9710,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2464"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-24T16:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-23T16:02:54.631Z",
+  "guncelleme": "2026-11-23T16:17:39.007Z",
   "liste": [
    {
     "id": 6386,
