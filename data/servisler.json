@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-23T12:02:36.295Z",
+ "guncelleme": "2026-11-23T12:32:05.315Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 22,
@@ -39,7 +39,7 @@
   },
   "anamur": {
    "sicaklik": 21,
-   "durum": "Parçalı bulutlu",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-23",
@@ -441,7 +441,7 @@
      "tarih": "2026-11-23",
      "min": 15,
      "max": 22,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-24",
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-23T12:02:41.975Z",
+  "guncelleme": "2026-11-23T12:32:09.773Z",
   "liste": [
    {
     "ad": "Bizim Eczanesi",
@@ -772,7 +772,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-23T12:02:43.391Z",
+  "guncelleme": "2026-11-23T12:32:10.803Z",
   "liste": [
    {
     "tur": "su",
@@ -987,7 +987,7 @@
   "kaynakSaati": "2026-11-23 14:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-23T11:32:57.111Z",
+  "guncelleme": "2026-11-23T12:32:18.067Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1608,8 +1608,19 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-23T09:32:31.604Z",
+  "guncelleme": "2026-11-23T12:32:24.548Z",
   "liste": [
+   {
+    "id": "1p97yem",
+    "link": "https://www.mersin.bel.tr/etkinlik/sporbus-aracimizla-mahalle-mahalle-geziyoruz-akdeniz-programi-1795433930",
+    "foto": "1p97yem.webp",
+    "baslik": "Sporbüs aracımızla mahalle mahalle geziyoruz! AKDENİZ PROGRAMI",
+    "yayin": "2026-11-23T11:38:50.000Z",
+    "tarih": "2026-11-25",
+    "saat": "10:00",
+    "yer": null,
+    "ozet": "- Mersin Büyükşehir Belediyesi --> EN --> Etkinlikler Anasayfa Etkinlikler Hızlı Menü Duyurular Haberler Etkinlikler Web TV A- A+ Sporbüs aracımızla mahalle mahalle geziyoruz! AKDENİZ PROGRAMI Sporbüs aracımızla mahalle "
+   },
    {
     "id": "j87r6e",
     "link": "https://www.mersin.bel.tr/etkinlik/8-uluslararasi-mersin-maratonu-1795415075",
@@ -1697,17 +1708,6 @@
     "saat": null,
     "yer": null,
     "ozet": "- Mersin Büyükşehir Belediyesi --> EN --> Etkinlikler Anasayfa Etkinlikler Hızlı Menü Duyurular Haberler Etkinlikler Web TV A- A+ Tarihi Kilikya Yolu Yürüyüşü (Gülek Kalesi - Sarışıh Han) Tarihi Kilikya Yolu Yürüyüşü (Gü"
-   },
-   {
-    "id": "g8mgii",
-    "link": "https://www.mersin.bel.tr/etkinlik/ataturkun-sevdigi-sarkilar-konserinde-bulusalim-1794376727",
-    "foto": "g8mgii.webp",
-    "baslik": "\"Atatürk'ün Sevdiği Şarkılar\" konserinde buluşalım!",
-    "yayin": "2026-11-11T05:58:47.000Z",
-    "tarih": "2026-11-18",
-    "saat": "20:00",
-    "yer": null,
-    "ozet": "- Mersin Büyükşehir Belediyesi --> EN --> Etkinlikler Anasayfa Etkinlikler Hızlı Menü Duyurular Haberler Etkinlikler Web TV A- A+ \"Atatürk'ün Sevdiği Şarkılar\" konserinde buluşalım! \"Atatürk'ün Sevdiği Şarkılar\" konserin"
    }
   ]
  },
@@ -8652,7 +8652,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-23T12:02:57.372Z",
+  "guncelleme": "2026-11-23T12:32:18.872Z",
   "liste": [
    {
     "yol": "/",
@@ -8671,20 +8671,12 @@
     "sayi": 5
    },
    {
-    "yol": "/hava-durumu/bozyazi/",
-    "sayi": 3
-   },
-   {
     "yol": "/haber/baskan-vekili-genc-ten-24-kasim-ogretmenler-gunu-mesaji-1pyrzrc/",
     "sayi": 3
    },
    {
-    "yol": "/haber/msk-da-dagilma-tehlikesi-kadro-dagildi-gelecek-belirsizlesti-fmcfmt/",
-    "sayi": 2
-   },
-   {
-    "yol": "/haber/10-mersin-uluslararasi-tiyatro-festivali-kapilarini-aciyor-1nebyyr/",
-    "sayi": 2
+    "yol": "/hava-durumu/bozyazi/",
+    "sayi": 3
    },
    {
     "yol": "/hava-durumu/gulnar/",
@@ -8704,6 +8696,10 @@
    },
    {
     "yol": "/haber/ali-kiratli-acikladi-limon-ve-mandalina-ihracatina-devlet-destegi-mwdu7r/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/msk-da-dagilma-tehlikesi-kadro-dagildi-gelecek-belirsizlesti-fmcfmt/",
     "sayi": 1
    },
    {
@@ -8777,7 +8773,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-23T12:03:48.110Z",
+  "guncelleme": "2026-11-23T12:32:24.549Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.28
@@ -8790,32 +8786,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-23T12:03:50.890Z",
+  "guncelleme": "2026-11-23T12:32:26.555Z",
   "giden": [
-   {
-    "no": [
-     "TK2459"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-23T12:10:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "SON ÇAĞRI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC2087"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-23T12:20:00.000Z",
-    "tahmini": null,
-    "kapi": "108",
-    "durum": "SON ÇAĞRI",
-    "hat": "ic"
-   },
    {
     "no": [
      "TK2461"
@@ -9245,6 +9217,30 @@
     "planlanan": "2026-11-24T11:00:00.000Z",
     "tahmini": null,
     "kapi": "107",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2459"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-24T12:10:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2087"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-24T12:20:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
     "durum": "",
     "hat": "ic"
    }
@@ -9733,7 +9729,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-23T12:03:50.889Z",
+  "guncelleme": "2026-11-23T12:32:26.555Z",
   "liste": [
    {
     "id": 6386,
