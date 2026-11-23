@@ -13,9 +13,9 @@
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
   },
-  "haberturk-mersin": {
+  "mersingundem": {
    "hata": "fetch failed",
-   "zaman": "2026-11-23T00:01:18.178Z"
+   "zaman": "2026-11-23T00:31:31.292Z"
   }
  },
  "gorsel": {
@@ -387,8 +387,12 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-23T00:01:47.945Z",
+  "guncelleme": "2026-11-23T00:31:50.678Z",
   "liste": [
+   {
+    "baslik": "ömür usta dizisi",
+    "trafik": 500
+   },
    {
     "baslik": "fluminense",
     "trafik": 100
@@ -396,10 +400,6 @@
    {
     "baslik": "sezgin baran korkmaz",
     "trafik": 100
-   },
-   {
-    "baslik": "ömür usta 9 bölüm izle",
-    "trafik": 500
    },
    {
     "baslik": "içişleri bakanı",
@@ -426,7 +426,7 @@
     "trafik": 200
    },
    {
-    "baslik": "tv8 canlı",
+    "baslik": "daha 17 son bölüm izle",
     "trafik": 10000
    }
   ]
