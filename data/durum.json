@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-23T00:01:18.178Z"
   }
  },
  "gorsel": {
@@ -383,8 +387,12 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-22T23:31:44.740Z",
+  "guncelleme": "2026-11-23T00:01:47.945Z",
   "liste": [
+   {
+    "baslik": "fluminense",
+    "trafik": 100
+   },
    {
     "baslik": "sezgin baran korkmaz",
     "trafik": 100
@@ -416,10 +424,6 @@
    {
     "baslik": "tv 8",
     "trafik": 200
-   },
-   {
-    "baslik": "daha 17 son bölüm izle",
-    "trafik": 10000
    },
    {
     "baslik": "tv8 canlı",
