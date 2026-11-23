@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-23T03:31:21.955Z"
   }
  },
  "gorsel": {
@@ -387,8 +383,36 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-23T03:31:55.273Z",
+  "guncelleme": "2026-11-23T04:01:40.272Z",
   "liste": [
+   {
+    "baslik": "weather",
+    "trafik": 1000
+   },
+   {
+    "baslik": "warriors - celtics",
+    "trafik": 100
+   },
+   {
+    "baslik": "öğretmen",
+    "trafik": 500
+   },
+   {
+    "baslik": "bulls - nuggets",
+    "trafik": 100
+   },
+   {
+    "baslik": "yağış",
+    "trafik": 5000
+   },
+   {
+    "baslik": "patates",
+    "trafik": 100
+   },
+   {
+    "baslik": "heat - thunder",
+    "trafik": 100
+   },
    {
     "baslik": "ömür usta dizisi",
     "trafik": 500
@@ -400,34 +424,6 @@
    {
     "baslik": "sezgin baran korkmaz",
     "trafik": 100
-   },
-   {
-    "baslik": "içişleri bakanı",
-    "trafik": 500
-   },
-   {
-    "baslik": "içişleri bakanlığı personel alımı",
-    "trafik": 5000
-   },
-   {
-    "baslik": "jandarma personel temin",
-    "trafik": 5000
-   },
-   {
-    "baslik": "içişleri bakanlığı",
-    "trafik": 2000
-   },
-   {
-    "baslik": "23 kasım hangi burç",
-    "trafik": 200
-   },
-   {
-    "baslik": "hawks - pistons",
-    "trafik": 200
-   },
-   {
-    "baslik": "tv 8",
-    "trafik": 200
    }
   ]
  },
