@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-23",
-  "adet": 12,
-  "premium": 12
+  "adet": 15,
+  "premium": 15
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -255,7 +255,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-2-otomobil-carpisti-1i-bebek-2-kisi-agir-yaralandi-119529468",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-cocuklar-ara-tatilde-tiyatroyla-bulustu-119529777",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kan-portakali-cikolata-ve-kadayifla-bulustu-119529769",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-sanayinin-kasli-ustasi-100-kiloluk-motorlari-tek-basina-kaldiriyor-119529761"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-sanayinin-kasli-ustasi-100-kiloluk-motorlari-tek-basina-kaldiriyor-119529761",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kaybolan-alzheimer-hastasi-74-yasindaki-kadin-araniyor-119529918"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -391,19 +392,32 @@
    "https://www.akdeniz.bel.tr/Default/HaberDetay/63",
    "https://www.akdeniz.bel.tr/Default/HaberDetay/62",
    "https://www.akdeniz.bel.tr/Default/HaberDetay/61",
-   "https://www.akdeniz.bel.tr/Default/HaberDetay/60"
+   "https://www.akdeniz.bel.tr/Default/HaberDetay/60",
+   "https://www.akdeniz.bel.tr/Default/HaberDetay/64"
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-23T08:31:57.045Z",
+  "guncelleme": "2026-11-23T09:01:56.897Z",
   "liste": [
    {
-    "baslik": "vgm burs sonuçları",
-    "trafik": 2000
+    "baslik": "somestr tatili 2027",
+    "trafik": 10000
    },
    {
-    "baslik": "fiyat",
+    "baslik": "aziz yıldırım",
     "trafik": 5000
+   },
+   {
+    "baslik": "bloomberg ht",
+    "trafik": 10000
+   },
+   {
+    "baslik": "borsa",
+    "trafik": 1000
+   },
+   {
+    "baslik": "vgm burs sonuçları",
+    "trafik": 20000
    },
    {
     "baslik": "kenan imirzalıoğlu",
@@ -424,18 +438,6 @@
    {
     "baslik": "sgk",
     "trafik": 10000
-   },
-   {
-    "baslik": "çanakkale",
-    "trafik": 200
-   },
-   {
-    "baslik": "kamudan haber",
-    "trafik": 200
-   },
-   {
-    "baslik": "knicks - pacers",
-    "trafik": 100
    }
   ]
  },
