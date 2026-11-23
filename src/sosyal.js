@@ -23,7 +23,7 @@ const KART_KLASORU = 'dist/sosyal';
 export const AYAR = {
   facebook: { baslangic: '2026-11-23T09:00:00+03:00', gunluk: 8, araDakika: 75 },
   // Yeni hesabı korumak için ilk 3 gün günde 2 gönderi, sonra 3
-  instagram: { baslangic: '2026-11-23T10:00:00+03:00', gunluk: 3, ilkGunlerGunluk: 2, ilkGunlerBitis: '2026-11-26T00:00:00+03:00', araDakika: 180 },
+  instagram: { baslangic: '2026-11-23T09:00:00+03:00', gunluk: 3, ilkGunlerGunluk: 2, ilkGunlerBitis: '2026-11-26T00:00:00+03:00', araDakika: 180 },
   sessizBas: 23, // 23:00 – 08:00 arası paylaşım yok
   sessizBit: 8,
   enEskiSaat: 6, // bundan eski haber paylaşılmaz
