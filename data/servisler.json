@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-23T03:01:48.594Z",
+ "guncelleme": "2026-11-23T03:31:55.794Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 11,
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-23T03:01:53.727Z",
+  "guncelleme": "2026-11-23T03:32:00.609Z",
   "liste": [
    {
     "ad": "Damla Eczanesi",
@@ -706,7 +706,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-23T03:01:54.921Z",
+  "guncelleme": "2026-11-23T03:32:01.931Z",
   "liste": [
    {
     "tur": "su",
@@ -914,7 +914,7 @@
   "kaynakSaati": "2026-11-23 06:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-23T03:02:02.122Z",
+  "guncelleme": "2026-11-23T03:32:08.962Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1535,7 +1535,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-23T00:32:10.472Z",
+  "guncelleme": "2026-11-23T03:32:13.451Z",
   "liste": [
    {
     "id": "gzi1bq",
@@ -8579,7 +8579,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-23T03:02:03.038Z",
+  "guncelleme": "2026-11-23T03:32:09.501Z",
   "liste": [
    {
     "yol": "/",
@@ -8668,10 +8668,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-23T03:02:51.490Z",
+  "guncelleme": "2026-11-23T03:32:13.452Z",
   "deniz": {
    "sicaklik": 21.5,
-   "dalga": 0.32
+   "dalga": 0.3
   },
   "hava": {
    "aqi": 32,
@@ -8681,7 +8681,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-23T03:02:53.629Z",
+  "guncelleme": "2026-11-23T03:32:15.733Z",
   "giden": [
    {
     "no": [
@@ -8692,7 +8692,7 @@
     "planlanan": "2026-11-23T03:35:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "BOARDING",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -8704,7 +8704,7 @@
     "planlanan": "2026-11-23T03:40:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -8728,7 +8728,7 @@
     "planlanan": "2026-11-23T05:10:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8740,7 +8740,7 @@
     "planlanan": "2026-11-23T05:10:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8752,7 +8752,7 @@
     "planlanan": "2026-11-23T05:15:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9740,11 +9740,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "2S5841"
+    ],
+    "havayolu": "Southwind Airlines",
+    "yer": "Medine",
+    "planlanan": "2026-11-24T03:25:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "dis"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-23T03:02:53.628Z",
+  "guncelleme": "2026-11-23T03:32:15.733Z",
   "liste": [
    {
     "id": 6386,
