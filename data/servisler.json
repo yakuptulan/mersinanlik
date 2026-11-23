@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-23T11:32:45.422Z",
+ "guncelleme": "2026-11-23T12:02:36.295Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 22,
@@ -9,7 +9,7 @@
      "tarih": "2026-11-23",
      "min": 15,
      "max": 22,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-24",
@@ -68,19 +68,19 @@
     {
      "tarih": "2026-11-27",
      "min": 13,
-     "max": 20,
+     "max": 19,
      "durum": "Bulutlu"
     }
    ]
   },
   "aydincik": {
-   "sicaklik": 21,
+   "sicaklik": 20,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-23",
      "min": 14,
-     "max": 21,
+     "max": 20,
      "durum": "Az bulutlu"
     },
     {
@@ -98,7 +98,7 @@
     {
      "tarih": "2026-11-26",
      "min": 8,
-     "max": 17,
+     "max": 18,
      "durum": "Açık"
     },
     {
@@ -111,7 +111,7 @@
   },
   "bozyazi": {
    "sicaklik": 21,
-   "durum": "Parçalı bulutlu",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-23",
@@ -139,20 +139,20 @@
     },
     {
      "tarih": "2026-11-27",
-     "min": 12,
+     "min": 11,
      "max": 19,
      "durum": "Bulutlu"
     }
    ]
   },
   "camliyayla": {
-   "sicaklik": 13,
-   "durum": "Açık",
+   "sicaklik": 12,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-23",
      "min": 7,
-     "max": 13,
+     "max": 12,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -175,8 +175,8 @@
     },
     {
      "tarih": "2026-11-27",
-     "min": 7,
-     "max": 14,
+     "min": 6,
+     "max": 13,
      "durum": "Bulutlu"
     }
    ]
@@ -211,7 +211,7 @@
     },
     {
      "tarih": "2026-11-27",
-     "min": 11,
+     "min": 12,
      "max": 20,
      "durum": "Bulutlu"
     }
@@ -278,12 +278,12 @@
     {
      "tarih": "2026-11-26",
      "min": 10,
-     "max": 17,
+     "max": 18,
      "durum": "Açık"
     },
     {
      "tarih": "2026-11-27",
-     "min": 13,
+     "min": 12,
      "max": 20,
      "durum": "Bulutlu"
     }
@@ -291,7 +291,7 @@
   },
   "mut": {
    "sicaklik": 21,
-   "durum": "Açık",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-23",
@@ -314,7 +314,7 @@
     {
      "tarih": "2026-11-26",
      "min": 4,
-     "max": 13,
+     "max": 14,
      "durum": "Açık"
     },
     {
@@ -350,12 +350,12 @@
     {
      "tarih": "2026-11-26",
      "min": 6,
-     "max": 17,
+     "max": 18,
      "durum": "Açık"
     },
     {
      "tarih": "2026-11-27",
-     "min": 9,
+     "min": 8,
      "max": 20,
      "durum": "Bulutlu"
     }
@@ -393,7 +393,7 @@
      "tarih": "2026-11-27",
      "min": 9,
      "max": 21,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     }
    ]
   },
@@ -405,7 +405,7 @@
      "tarih": "2026-11-23",
      "min": 15,
      "max": 22,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-24",
@@ -422,13 +422,13 @@
     {
      "tarih": "2026-11-26",
      "min": 10,
-     "max": 17,
+     "max": 18,
      "durum": "Açık"
     },
     {
      "tarih": "2026-11-27",
      "min": 12,
-     "max": 20,
+     "max": 21,
      "durum": "Bulutlu"
     }
    ]
@@ -458,13 +458,13 @@
     {
      "tarih": "2026-11-26",
      "min": 10,
-     "max": 17,
+     "max": 18,
      "durum": "Açık"
     },
     {
      "tarih": "2026-11-27",
      "min": 12,
-     "max": 20,
+     "max": 21,
      "durum": "Bulutlu"
     }
    ]
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-23T11:32:49.055Z",
+  "guncelleme": "2026-11-23T12:02:41.975Z",
   "liste": [
    {
     "ad": "Bizim Eczanesi",
@@ -772,7 +772,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-23T11:32:50.070Z",
+  "guncelleme": "2026-11-23T12:02:43.391Z",
   "liste": [
    {
     "tur": "su",
@@ -800,22 +800,6 @@
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
-    "aciklama": "Bozyazı İlçesi Ustalar Mahallesinde oluşan arıza nedeniyle saat 15:00’a kadar su kesintisi yaşanacaktır.",
-    "baslangic": "2026-11-23T09:10:00.000Z",
-    "bitis": "2026-11-23T12:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "bozyazi",
-      "ad": "Bozyazı",
-      "mahalleler": [
-       "Ustalar"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
     "aciklama": "Silifke İlçesi Ulugöz Mahallesi arızadan kaynaklı saat 18:00 a kadar su kesintisi yaşanacaktır.",
     "baslangic": "2026-11-23T11:06:00.000Z",
     "bitis": "2026-11-23T15:00:00.000Z",
@@ -825,22 +809,6 @@
       "ad": "Silifke",
       "mahalleler": [
        "Ulugöz"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "ERDEMLİ İLÇESİ,KOCAHASANLI MAHALLESİNE BAĞLI KERİM KİYA CADDESİ,KIRIŞLI CADDESİ ARIZA NEDENİ İLE SAAT 15:00 KADAR SU KESİNTİSİ YAŞANACAKTIR",
-    "baslangic": "2026-11-23T05:45:00.000Z",
-    "bitis": "2026-11-23T12:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "erdemli",
-      "ad": "Erdemli",
-      "mahalleler": [
-       "Kocahasanlı"
       ]
      }
     ]
@@ -1744,7 +1712,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-23T11:02:44.499Z",
+  "guncelleme": "2026-11-23T12:02:59.677Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -7295,7 +7263,7 @@
       {
        "ev": "Gemlik Sümerbey Futbol Spor",
        "dep": "Bucaspor 1928",
-       "skor": "8-0"
+       "skor": null
       },
       {
        "ev": "Gaziemir G.o.g. Spor Yat.",
@@ -7447,10 +7415,10 @@
       "G"
      ],
      "Gemlik Sümerbey Futbol Spor": [
+      "B",
       "G",
       "B",
       "M",
-      "G",
       "G"
      ],
      "Eskişehirspor": [
@@ -7546,9 +7514,9 @@
      ],
      "Bucaspor 1928": [
       "M",
-      "B",
-      "B",
       "M",
+      "B",
+      "B",
       "M"
      ],
      "Denizli İdmanyurdu 1959 Spor": [
@@ -8421,7 +8389,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-23T11:03:27.298Z",
+    "guncelleme": "2026-11-23T12:03:44.310Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -8503,7 +8471,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-23T11:03:28.556Z",
+    "guncelleme": "2026-11-23T12:03:45.604Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8585,7 +8553,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-23T11:03:29.824Z",
+    "guncelleme": "2026-11-23T12:03:46.910Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8684,37 +8652,146 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-23T11:32:57.458Z",
-  "liste": []
+  "guncelleme": "2026-11-23T12:02:57.372Z",
+  "liste": [
+   {
+    "yol": "/",
+    "sayi": 22
+   },
+   {
+    "yol": "/haber/mersin-de-sanayinin-kasli-ustasi-100-kiloluk-motorlari-tek-basina-kald-x22had/",
+    "sayi": 7
+   },
+   {
+    "yol": "/haber/mersin-de-bugun-elektrik-kesintisi-ilce-ilce-saatler-ve-mahalleler-1rud3vp/",
+    "sayi": 5
+   },
+   {
+    "yol": "/haber/buyuksehir-in-hamzabeyli-koyumuz-atolye-de-kan-portakali-cikolatayla-b-t7wfji/",
+    "sayi": 5
+   },
+   {
+    "yol": "/hava-durumu/bozyazi/",
+    "sayi": 3
+   },
+   {
+    "yol": "/haber/baskan-vekili-genc-ten-24-kasim-ogretmenler-gunu-mesaji-1pyrzrc/",
+    "sayi": 3
+   },
+   {
+    "yol": "/haber/msk-da-dagilma-tehlikesi-kadro-dagildi-gelecek-belirsizlesti-fmcfmt/",
+    "sayi": 2
+   },
+   {
+    "yol": "/haber/10-mersin-uluslararasi-tiyatro-festivali-kapilarini-aciyor-1nebyyr/",
+    "sayi": 2
+   },
+   {
+    "yol": "/hava-durumu/gulnar/",
+    "sayi": 2
+   },
+   {
+    "yol": "/is-ilanlari/",
+    "sayi": 2
+   },
+   {
+    "yol": "/hava-durumu/anamur/",
+    "sayi": 2
+   },
+   {
+    "yol": "/mahalle/akdeniz/mufide-ilhan/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/ali-kiratli-acikladi-limon-ve-mandalina-ihracatina-devlet-destegi-mwdu7r/",
+    "sayi": 1
+   },
+   {
+    "yol": "/bilgi/sakarya-nerededir-adi-nereden-gelir-sehrin-tarihi-hakkinda-bilgiler/",
+    "sayi": 1
+   },
+   {
+    "yol": "/kar-tatili/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/mersin-sosyal-hizmetlerde-yeni-siddet-iddiasi-9xbft/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/mersin-yenisehir-de-20-cadde-trafige-kapatiliyor-iste-tarih-ve-saat-1729jhi/",
+    "sayi": 1
+   },
+   {
+    "yol": "/spor/",
+    "sayi": 1
+   },
+   {
+    "yol": "/kategori/belediye/",
+    "sayi": 1
+   },
+   {
+    "yol": "/spor/3-lig-3/",
+    "sayi": 1
+   },
+   {
+    "yol": "/is-ilanlari/meslek/muhasebe-elemani/",
+    "sayi": 1
+   },
+   {
+    "yol": "/kesintiler/akdeniz/",
+    "sayi": 1
+   },
+   {
+    "yol": "/is-ilanlari/akdeniz/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/erdemli-de-su-kesintisi-22-kasim-koyuncu-9-saat-surecek-se9529/",
+    "sayi": 1
+   },
+   {
+    "yol": "/hakkimizda/",
+    "sayi": 1
+   },
+   {
+    "yol": "/kunye/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/sadik-eliyesil-ortaokulu-nda-kantin-sorunu-ogrencilerin-ihtiyaci-kimin-4vmmk3/",
+    "sayi": 1
+   },
+   {
+    "yol": "/is-ilanlari/meslek/temizlik-gorevlisi/",
+    "sayi": 1
+   },
+   {
+    "yol": "/hava-durumu/aydincik/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/secil-kaucuk-mersin-basketball-istanbul-deplasmaninda-155jkur/",
+    "sayi": 1
+   }
+  ]
  },
  "sayac": {
-  "guncelleme": "2026-11-23T11:32:59.157Z",
+  "guncelleme": "2026-11-23T12:03:48.110Z",
   "deniz": {
    "sicaklik": 21.6,
-   "dalga": 0.26
+   "dalga": 0.28
   },
   "hava": {
    "aqi": 27,
    "pm25": 8.3,
-   "pm10": 12.5,
+   "pm10": 14.2,
    "uvMax": 2.25
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-23T11:33:01.006Z",
+  "guncelleme": "2026-11-23T12:03:50.890Z",
   "giden": [
-   {
-    "no": [
-     "PC1856"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Ercan",
-    "planlanan": "2026-11-23T11:40:00.000Z",
-    "tahmini": null,
-    "kapi": "102",
-    "durum": "KAPI KAPANDI",
-    "hat": "dis"
-   },
    {
     "no": [
      "TK2459"
@@ -8724,7 +8801,7 @@
     "planlanan": "2026-11-23T12:10:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KONTUAR KAPALI",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -8736,7 +8813,7 @@
     "planlanan": "2026-11-23T12:20:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -8748,7 +8825,7 @@
     "planlanan": "2026-11-23T13:30:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8760,7 +8837,7 @@
     "planlanan": "2026-11-23T13:50:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8772,7 +8849,7 @@
     "planlanan": "2026-11-23T14:35:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -9640,11 +9717,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2086"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-24T11:45:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-23T11:33:01.006Z",
+  "guncelleme": "2026-11-23T12:03:50.889Z",
   "liste": [
    {
     "id": 6386,
