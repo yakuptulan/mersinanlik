@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-23",
-  "adet": 1,
-  "premium": 1
+  "adet": 3,
+  "premium": 3
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -46,7 +46,9 @@
    "https://www.mersin.bel.tr/haber/mersin-buyuksehir-belediyesi-cop31de-cevre-ve-iklim-odakli-calismalariyla-one-cikti-1795240989",
    "https://www.mersin.bel.tr/haber/baskan-vekili-genc-mersin-sehir-tiyatrosu-tarafindan-sahnelenen-kesanli-ali-destani-promiyerine-katildi-1795296730",
    "https://www.mersin.bel.tr/haber/mersin-buyuksehir-kadin-kooperatiflerinin-e-ticaret-becerilerini-guclendiriyor-1795327272",
-   "https://www.mersin.bel.tr/haber/mersin-buyuksehir-kurs-merkezlerinin-veli-ziyaretleri-suruyor-1795327568"
+   "https://www.mersin.bel.tr/haber/mersin-buyuksehir-kurs-merkezlerinin-veli-ziyaretleri-suruyor-1795327568",
+   "https://www.mersin.bel.tr/haber/cocuklarin-kahkahalari-mersin-buyuksehirin-salonlarindan-tasiyor-1795414303",
+   "https://www.mersin.bel.tr/haber/buyuksehirin-hamzabeyli-koyumuz-atolyede-kan-portakali-cikolatayla-bulustu-1795414043"
   ],
   "yenisehir-belediyesi": [
    "https://yenisehir.bel.tr/haber/yenisehirde-yesil-seferberlik-suru",
@@ -384,8 +386,24 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-23T06:01:49.605Z",
+  "guncelleme": "2026-11-23T06:31:47.183Z",
   "liste": [
+   {
+    "baslik": "ömür usta son bölüm",
+    "trafik": 1000
+   },
+   {
+    "baslik": "çanakkale",
+    "trafik": 200
+   },
+   {
+    "baslik": "kamudan haber",
+    "trafik": 200
+   },
+   {
+    "baslik": "knicks - pacers",
+    "trafik": 100
+   },
    {
     "baslik": "cumhuriyet",
     "trafik": 1000
@@ -395,8 +413,12 @@
     "trafik": 2000
    },
    {
+    "baslik": "24 kasım öğretmenler günü",
+    "trafik": 100
+   },
+   {
     "baslik": "cumhuriyet gazetesi",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "haber 7",
@@ -405,26 +427,6 @@
    {
     "baslik": "elenen yarışmacı masterchef kim elendi",
     "trafik": 10000
-   },
-   {
-    "baslik": "23 kasım okullar tatil mi",
-    "trafik": 2000
-   },
-   {
-    "baslik": "uefa şampiyonlar ligi",
-    "trafik": 2000
-   },
-   {
-    "baslik": "jazz - mavericks",
-    "trafik": 200
-   },
-   {
-    "baslik": "çanakkale hava durumu",
-    "trafik": 200
-   },
-   {
-    "baslik": "sivas hava durumu",
-    "trafik": 200
    }
   ]
  },
