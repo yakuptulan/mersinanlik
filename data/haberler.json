@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-23T11:04:22.678Z",
+ "guncelleme": "2026-11-23T11:32:45.349Z",
  "hikayeler": [
   {
    "id": "2r80dh",
@@ -11323,7 +11323,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-21T06:08:48.000Z",
-   "sonGuncelleme": "2026-11-23T11:01:49.254Z",
+   "sonGuncelleme": "2026-11-23T11:31:47.065Z",
    "kaynaklar": [
     {
      "kaynakId": "mersin-buyuksehir",
@@ -13556,29 +13556,6 @@
    "otomatik": true,
    "kapak": "su",
    "gorselHatasi": "otomatik haber: ilçe çizimi kullanılır"
-  },
-  {
-   "id": "119eers",
-   "baslik": "30 yıl hapis cezası ile aranan firari hükümlü yakalandı",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "asayis",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-22T11:06:00.000Z",
-   "sonGuncelleme": "2026-11-22T11:14:13.059Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "cukurova",
-     "ad": "Çukurova Gazetesi",
-     "link": "https://cukurovagazetesi.com/30-yil-hapis-cezasi-ile-aranan-firari-hukumlu-yakalandi",
-     "baslik": "30 yıl hapis cezası ile aranan firari hükümlü yakalandı",
-     "tarih": "2026-11-22T11:06:00.000Z"
-    }
-   ]
   },
   {
    "id": "s7258d",
@@ -17880,29 +17857,6 @@
    "gorselPrompt": "A modern real estate office interior with a desk showing city housing blueprints and a set of keys, with large windows looking out onto a sunlit street lined with palm trees in Mersin."
   },
   {
-   "id": "vhxuqi",
-   "baslik": "Döner yerken ölümden döndü: O anlar kamerada",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "ekonomi",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-22T11:11:00.000Z",
-   "sonGuncelleme": "2026-11-23T07:31:40.045Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "mersinobjektif",
-     "ad": "Mersin Objektif",
-     "link": "https://www.mersinobjektif.com.tr/doner-yerken-olumden-dondu-o-anlar-kamerada",
-     "baslik": "Döner yerken ölümden döndü: O anlar kamerada",
-     "tarih": "2026-11-22T11:11:00.000Z"
-    }
-   ]
-  },
-  {
    "id": "1kyx7j0",
    "baslik": "Kamyonu çalıp sigaraları başka araçlara yüklediler",
    "ozet": null,
@@ -19238,14 +19192,16 @@
    "id": "hs56dg",
    "baslik": "Mersin'de kaybolan Alzheimer hastası 74 yaşındaki kadın aranıyor",
    "ozet": "Mersin'in Erdemli ilçesinde kaybolan 74 yaşındaki Alzheimer hastası M.K.'yi arama çalışmaları sürüyor. AFAD koordinasyonunda yürütülen çalışmalara jandarma ekipleri ve arama kurtarma köpekleri de destek veriyor.",
-   "ilceler": [],
+   "ilceler": [
+    "erdemli"
+   ],
    "genel": false,
    "kategori": "saglik",
    "riskNedenleri": [],
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-23T11:38:04+03:00",
-   "sonGuncelleme": "2026-11-23T09:01:15.785Z",
+   "sonGuncelleme": "2026-11-23T11:32:10.911Z",
    "kaynaklar": [
     {
      "kaynakId": "haberturk-mersin",
@@ -19253,6 +19209,20 @@
      "link": "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kaybolan-alzheimer-hastasi-74-yasindaki-kadin-araniyor-119529918",
      "baslik": "Mersin'de kaybolan Alzheimer hastası 74 yaşındaki kadın aranıyor",
      "tarih": "2026-11-23T11:38:04+03:00"
+    },
+    {
+     "kaynakId": "mersintime",
+     "ad": "Mersin Time",
+     "link": "https://www.mersintime.com/tum-ekipler-seferber-yasli-kadini-arama-calismalari-6nci-gunde-de-suruyor",
+     "baslik": "Tüm ekipler seferber: Yaşlı kadını arama çalışmaları 6'ncı günde de sürüyor",
+     "tarih": "2026-11-23T10:49:18.000Z"
+    },
+    {
+     "kaynakId": "mersinhabermerkezi",
+     "ad": "Mersin Haber Merkezi",
+     "link": "https://www.mersinhabermerkezi.com/tum-ekipler-seferber-yasli-kadini-arama-calismalari-6nci-gunde-de-suruyor",
+     "baslik": "Tüm ekipler seferber: Yaşlı kadını arama çalışmaları 6'ncı günde de sürüyor",
+     "tarih": "2026-11-23T10:49:00.000Z"
     }
    ],
    "metinDenemesi": 1,
@@ -19435,7 +19405,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-23T08:30:00.000Z",
-   "sonGuncelleme": "2026-11-23T11:01:50.172Z",
+   "sonGuncelleme": "2026-11-23T11:31:47.863Z",
    "kaynaklar": [
     {
      "kaynakId": "cukurova",
@@ -20486,7 +20456,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-23T07:54:07.000Z",
-   "sonGuncelleme": "2026-11-23T10:01:47.223Z",
+   "sonGuncelleme": "2026-11-23T11:31:50.600Z",
    "kaynaklar": [
     {
      "kaynakId": "aa-guncel",
@@ -21195,7 +21165,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-23T10:35:00.000Z",
-   "sonGuncelleme": "2026-11-23T11:01:50.466Z",
+   "sonGuncelleme": "2026-11-23T11:31:47.436Z",
    "kaynaklar": [
     {
      "kaynakId": "cukurova",
@@ -21210,6 +21180,20 @@
      "link": "https://www.mersinhabermerkezi.com/toroslarda-moloz-yiginlari-kalkiyor-yesil-alan-cogaliyor",
      "baslik": "Toroslar’da moloz yığınları kalkıyor, yeşil alan çoğalıyor",
      "tarih": "2026-11-23T10:54:00.000Z"
+    },
+    {
+     "kaynakId": "dha-mersin",
+     "ad": "DHA",
+     "link": "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/toroslarda-moloz-yiginlarinin-yerini-yesil-ala-2987034",
+     "baslik": "Toroslar’da moloz yığınlarının yerini yeşil alan alıyor",
+     "tarih": "2026-11-23T14:11:11+03:00"
+    },
+    {
+     "kaynakId": "mersinobjektif",
+     "ad": "Mersin Objektif",
+     "link": "https://www.mersinobjektif.com.tr/toroslarda-moloz-yiginlarinin-yerini-yesil-alan-aliyor",
+     "baslik": "Toroslar’da moloz yığınlarının yerini yeşil alan alıyor",
+     "tarih": "2026-11-23T11:01:00.000Z"
     }
    ],
    "metinDenemesi": 1,
@@ -21391,7 +21375,7 @@
   },
   {
    "id": "1nfnwpr",
-   "baslik": "Filistin topraklarını gasbeden İsraillilerin Batı Şeria'da zeytin hasadı dönemindeki saldırıları yüzde 74 arttı",
+   "baslik": "Filistin topraklarını gasbeden İsraillilerin",
    "ozet": null,
    "ozetIcinMetin": null,
    "ilceler": [],
@@ -21440,6 +21424,413 @@
    "kapak": "okul",
    "sonDakika": true,
    "gorselHatasi": "otomatik haber: ilçe çizimi kullanılır"
+  },
+  {
+   "id": "42eb9k",
+   "baslik": "Mezitli’de kadına yönelik şiddete karşı farkındalık seminerleri",
+   "ozet": "Mezitli Belediyesi, 25 Kasım Kadına Yönelik Şiddete Karşı Uluslararası Mücadele Günü kapsamında Yeni Mahalle ve Viranşehir Kadın ve Aile Atölyelerinde farkındalık seminerleri düzenledi. Etkinliklerde kadın hakları, KADES uygulaması, şiddet türleri ve toplumsal cinsiyet eşitliği konuları ele alındı.",
+   "ilceler": [
+    "mezitli"
+   ],
+   "genel": false,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-23T14:13:36+03:00",
+   "sonGuncelleme": "2026-11-23T11:31:48.125Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "dha-mersin",
+     "ad": "DHA",
+     "link": "https://www.dha.com.tr/yerel-haberler/mersin/mezitli/mezitlide-kadina-yonelik-siddete-karsi-farkind-2987038",
+     "baslik": "Mezitli’de kadına yönelik şiddete karşı farkındalık seminerleri",
+     "tarih": "2026-11-23T14:13:36+03:00"
+    },
+    {
+     "kaynakId": "mersingundem",
+     "ad": "Mersin Gündem",
+     "link": "https://mersingundem.com/haber/13694/mezitli-belediyesinden-kadina-yonelik-siddete-karsi-farkindalik-seminerleri.html",
+     "baslik": "Mezitli belediyesi’nden kadına yönelik şiddete karşı farkındalık seminerleri",
+     "tarih": "2026-11-23T11:31:23.060Z"
+    },
+    {
+     "kaynakId": "mersintime",
+     "ad": "Mersin Time",
+     "link": "https://www.mersintime.com/mezitlide-kadina-yonelik-siddete-karsi-farkindalik-seminerleri-duzenlendi",
+     "baslik": "Mezitli'de kadına yönelik şiddete karşı farkındalık seminerleri düzenlendi",
+     "tarih": "2026-11-23T11:05:48.000Z"
+    },
+    {
+     "kaynakId": "mersinhabermerkezi",
+     "ad": "Mersin Haber Merkezi",
+     "link": "https://www.mersinhabermerkezi.com/mezitlide-kadina-yonelik-siddete-karsi-farkindalik-seminerleri-duzenlendi",
+     "baslik": "Mezitli'de kadına yönelik şiddete karşı farkındalık seminerleri düzenlendi",
+     "tarih": "2026-11-23T11:05:48.000Z"
+    }
+   ],
+   "metinDenemesi": 1,
+   "yaziKaynak": "DHA",
+   "yazimDenemesi": 1,
+   "metin": "Mezitli Belediyesi Kadın ve Aile Hizmetleri Müdürlüğü, 25 Kasım Kadına Yönelik Şiddete Karşı Uluslararası Mücadele Günü kapsamında ilçedeki kadınlara yönelik bilgilendirme ve farkındalık seminerleri gerçekleştirdi. Yeni Mahalle ve Viranşehir Kadın ve Aile Atölyelerinde düzenlenen etkinliklerde, kadınların hakları konusunda bilinçlendirilmesi ve toplumsal dayanışmanın güçlendirilmesi hedeflendi.\n\nYeni Mahalle Kadın ve Aile Atölyesindeki ilk programda katılımcılara, acil durumlarda güvenlik güçlerine hızlı erişim sağlayan KADES uygulamasının kullanımı ve önemi anlatıldı. Ardından Mezitli Sosyal Hizmet Merkezinde görevli Psikolog Sevgi Bütüner, şiddetin sadece fiziksel değil; psikolojik, ekonomik, cinsel ve dijital boyutlarını ele alan bir söyleşi gerçekleştirdi. Söyleşide, şiddetin erken fark edilmesinin önemi ve mücadele yöntemleri üzerinde duruldu.\n\nEtkinliklerin ikinci ayağı ise Viranşehir Kadın ve Aile Atölyesinde yapıldı. Mimoza Kadın Derneğinden Psikolog Berikan Onuk'un katılımıyla düzenlenen seminerde, toplumsal cinsiyet eşitliği ve zorluklar karşısında dayanışmanın önemi vurgulandı. Katılımcıların soru ve deneyimleriyle katkı sunduğu interaktif söyleşilerde, şiddetle mücadelenin sadece belirli günlerle sınırlı kalmaması gerektiği ifade edildi.",
+   "gorselKaynak": "yz",
+   "gorsel": "42eb9k.webp",
+   "gorselKalite": "premium",
+   "gorselPrompt": "A bright, modern community workshop interior in Mezitli with empty chairs arranged in a circle for a seminar, educational leaflets on a wooden table, large windows with soft daylight and green trees outside in the background."
+  },
+  {
+   "id": "tw73tv",
+   "baslik": "Başkan yıldız sözünü tutuyor: mevlana mahallesi’ne yeni park",
+   "ozet": "Toroslar Belediyesi, Mevlana Mahallesi'nde kaçak moloz ve hafriyat dökülen 5 bin metrekarelik alanı temizleyerek parka dönüştürmek için çalışma başlattı. Toroslar Belediye Başkanı Abdurrahman Yıldız, iki ay önce verdikleri sözü tutarak alanı mahalle sakinleri için yeşil bir yaşam alanına dönüştüreceklerini belirtti.",
+   "ilceler": [
+    "toroslar"
+   ],
+   "genel": false,
+   "kategori": "belediye",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-23T11:31:23.055Z",
+   "sonGuncelleme": "2026-11-23T11:31:23.055Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "mersingundem",
+     "ad": "Mersin Gündem",
+     "link": "https://mersingundem.com/haber/13695/baskan-yildiz-sozunu-tutuyor-mevlana-mahallesine-yeni-park.html",
+     "baslik": "Başkan yıldız sözünü tutuyor: mevlana mahallesi’ne yeni park",
+     "tarih": "2026-11-23T11:31:23.055Z"
+    }
+   ],
+   "metinDenemesi": 1,
+   "yaziKaynak": "Mersin Gündem",
+   "yazimDenemesi": 1,
+   "metin": "Toroslar Belediyesi, Mevlana Mahallesi'nde uzun süredir kaçak moloz ve hafriyat dökümleri nedeniyle çevre kirliliği oluşturan 5 bin metrekarelik atıl alanı modern bir parka dönüştürmek için harekete geçti. Toroslar Belediye Başkanı Abdurrahman Yıldız'ın iki ay önce bölgeye yaptığı ziyarette verdiği temizlik ve park sözünün ardından belediye ekipleri alanda kapsamlı bir çalışma başlattı.\n\nTemizlik İşleri Müdürlüğü ekipleri, iş makineleriyle bölgede biriken moloz, hafriyat ve diğer atıkları tamamen temizledi. Temizlik çalışmalarının tamamlanmasıyla birlikte imar planında yer alan yolların açılmasına başlanırken, belediyeye ait arazinin park olarak düzenlenmesi için planlama ve fizibilite çalışmalarına geçildi.\n\nYeni yapılacak park projesinde çocuk oyun grupları, oturma alanları ve yeşil alanlar yer alacak. Projenin tamamlanmasıyla hem çevre kirliliğinin önüne geçilmesi hem de mahalle sakinleri ve çocuklar için güvenli bir sosyal yaşam alanı oluşturulması hedefleniyor.\n\nÇalışmaları yerinde inceleyen ve mahalle sakinleriyle bir araya gelen Toroslar Belediye Başkanı Abdurrahman Yıldız, daha önce virane halde olan bu alanı temizleyip halkın hizmetine sunacaklarına dair verdikleri sözü tutmanın mutluluğunu yaşadıklarını ifade etti. Yıldız, bölgedeki yolların yenilenmesiyle birlikte kısa sürede nezih bir parkı tamamlayacaklarını belirtti.",
+   "gorselKaynak": "yz",
+   "gorsel": "tw73tv.webp",
+   "gorselKalite": "premium",
+   "gorselPrompt": "An empty urban neighborhood lot in Toroslar district, Mersin, with cleared soil and newly planted young saplings, surrounded by apartment buildings, under bright daytime sunlight."
+  },
+  {
+   "id": "1w8xp0m",
+   "baslik": "Uzmanı uyardı: \"GTA 6 ilerleyen dönemlerde ölüme götürebilir\"",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "saglik",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-23T11:11:00.000Z",
+   "sonGuncelleme": "2026-11-23T11:31:47.431Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "mersinobjektif",
+     "ad": "Mersin Objektif",
+     "link": "https://www.mersinobjektif.com.tr/uzmani-uyardi-gta-6-ilerleyen-donemlerde-olume-goturebilir",
+     "baslik": "Uzmanı uyardı: \"GTA 6 ilerleyen dönemlerde ölüme götürebilir\"",
+     "tarih": "2026-11-23T11:11:00.000Z"
+    }
+   ]
+  },
+  {
+   "id": "7u7hz4",
+   "baslik": "Ankara'da Türk Dünyası Teknoloji İş Birliği Merkezi hamlesi",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "siyaset",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-23T11:31:00.000Z",
+   "sonGuncelleme": "2026-11-23T11:31:47.845Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "cukurova",
+     "ad": "Çukurova Gazetesi",
+     "link": "https://cukurovagazetesi.com/ankarada-turk-dunyasi-teknoloji-is-birligi-merkezi-hamlesi",
+     "baslik": "Ankara'da Türk Dünyası Teknoloji İş Birliği Merkezi hamlesi",
+     "tarih": "2026-11-23T11:31:00.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1lbfipa",
+   "baslik": "\"İletim altyapımıza 36 milyar dolarlık yatırım öngörüyoruz\"",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "ekonomi",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-23T11:25:00.000Z",
+   "sonGuncelleme": "2026-11-23T11:31:47.848Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "cukurova",
+     "ad": "Çukurova Gazetesi",
+     "link": "https://cukurovagazetesi.com/iletim-altyapimiza-36-milyar-dolarlik-yatirim-ongoruyoruz",
+     "baslik": "\"İletim altyapımıza 36 milyar dolarlık yatırım öngörüyoruz\"",
+     "tarih": "2026-11-23T11:25:00.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1t8lxn4",
+   "baslik": "29 gün sonra çöplerin arasında cansız bedeni bulundu",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "belediye",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-23T11:16:00.000Z",
+   "sonGuncelleme": "2026-11-23T11:31:47.852Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "cukurova",
+     "ad": "Çukurova Gazetesi",
+     "link": "https://cukurovagazetesi.com/29-gun-sonra-coplerin-arasinda-cansiz-bedeni-bulundu",
+     "baslik": "29 gün sonra çöplerin arasında cansız bedeni bulundu",
+     "tarih": "2026-11-23T11:16:00.000Z"
+    }
+   ]
+  },
+  {
+   "id": "fidtj7",
+   "baslik": "Mantar kayanın üzerinde Roma mezarı bulundu",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "saglik",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-23T11:04:00.000Z",
+   "sonGuncelleme": "2026-11-23T11:31:47.855Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "cukurova",
+     "ad": "Çukurova Gazetesi",
+     "link": "https://cukurovagazetesi.com/mantar-kayanin-uzerinde-roma-mezari-bulundu",
+     "baslik": "Mantar kayanın üzerinde Roma mezarı bulundu",
+     "tarih": "2026-11-23T11:04:00.000Z"
+    }
+   ]
+  },
+  {
+   "id": "137mb1r",
+   "baslik": "Elazığ'da halk otobüsüyle otomobil çarpıştı: 1 yaralı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "kaza",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-23T11:14:07.000Z",
+   "sonGuncelleme": "2026-11-23T11:31:48.122Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "mersinhabermerkezi",
+     "ad": "Mersin Haber Merkezi",
+     "link": "https://www.mersinhabermerkezi.com/elazigda-halk-otobusuyle-otomobil-carpisti-1-yarali",
+     "baslik": "Elazığ'da halk otobüsüyle otomobil çarpıştı: 1 yaralı",
+     "tarih": "2026-11-23T11:14:07.000Z"
+    }
+   ]
+  },
+  {
+   "id": "17bahrj",
+   "baslik": "Şehit Astsubay Çavuş Yalın Gergün, memleketi Samsun'da toprağa verildi",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "kaza",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-23T11:09:54.000Z",
+   "sonGuncelleme": "2026-11-23T11:31:50.566Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/gundem/sehit-astsubay-cavus-yalin-gergun-memleketi-samsunda-topraga-verildi/4134421",
+     "baslik": "Şehit Astsubay Çavuş Yalın Gergün, memleketi Samsun'da toprağa verildi",
+     "tarih": "2026-11-23T11:09:54.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1xhjd0f",
+   "baslik": "Çin'den Şıncın'daki üçlü zirvenin ardından \"etki alanı arayışında değiliz\" açıklaması",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-23T11:21:32.000Z",
+   "sonGuncelleme": "2026-11-23T11:31:50.571Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/dunya/cinden-sincindaki-uclu-zirvenin-ardindan-etki-alani-arayisinda-degiliz-aciklamasi/4134477",
+     "baslik": "Çin'den Şıncın'daki üçlü zirvenin ardından \"etki alanı arayışında değiliz\" açıklaması",
+     "tarih": "2026-11-23T11:21:32.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1tib37p",
+   "baslik": "AB'den Coca-Cola'nın şişeleme şirketine rekabet soruşturması",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-23T11:12:51.000Z",
+   "sonGuncelleme": "2026-11-23T11:31:50.575Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/ekonomi/abden-coca-colanin-siseleme-sirketine-rekabet-sorusturmasi/4134441",
+     "baslik": "AB'den Coca-Cola'nın şişeleme şirketine rekabet soruşturması",
+     "tarih": "2026-11-23T11:12:51.000Z"
+    }
+   ]
+  },
+  {
+   "id": "jvckw1",
+   "baslik": "Almanya'da yaklaşık 450 okula bomba tehdidi gönderildi",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "egitim",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-23T11:13:40.000Z",
+   "sonGuncelleme": "2026-11-23T11:31:50.580Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/dunya/almanyada-yaklasik-450-okula-bomba-tehdidi-gonderildi/4134447",
+     "baslik": "Almanya'da yaklaşık 450 okula bomba tehdidi gönderildi",
+     "tarih": "2026-11-23T11:13:40.000Z"
+    }
+   ]
+  },
+  {
+   "id": "484u6y",
+   "baslik": "Terör örgütü PKK/KCK, Irak'ın kuzeyindeki Hakurk'ta 14 barınma alanını daha boşalttı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-23T10:58:08.000Z",
+   "sonGuncelleme": "2026-11-23T11:31:50.583Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/gundem/teror-orgutu-pkk-kck-irakin-kuzeyindeki-hakurkta-14-barinma-alanini-daha-bosaltti/4134356",
+     "baslik": "Terör örgütü PKK/KCK, Irak'ın kuzeyindeki Hakurk'ta 14 barınma alanını daha boşalttı",
+     "tarih": "2026-11-23T10:58:08.000Z"
+    }
+   ]
+  },
+  {
+   "id": "m1szi6",
+   "baslik": "İsrail'in ateşkese rağmen Gazze'ye düzenlediği saldırılarda son 24 saatte 4 kişi hayatını kaybetti",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-23T11:08:10.000Z",
+   "sonGuncelleme": "2026-11-23T11:31:50.586Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/dunya/israilin-ateskese-ragmen-gazzeye-duzenledigi-saldirilarda-son-24-saatte-4-kisi-hayatini-kaybetti/4134411",
+     "baslik": "İsrail'in ateşkese rağmen Gazze'ye düzenlediği saldırılarda son 24 saatte 4 kişi hayatını kaybetti",
+     "tarih": "2026-11-23T11:08:10.000Z"
+    }
+   ]
+  },
+  {
+   "id": "ki4i42",
+   "baslik": "Meteorolojiden bazı iller için sağanak uyarısı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "hava",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-23T11:06:10.000Z",
+   "sonGuncelleme": "2026-11-23T11:31:50.589Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/gundem/meteorolojiden-bazi-iller-icin-saganak-uyarisi/4134398",
+     "baslik": "Meteorolojiden bazı iller için sağanak uyarısı",
+     "tarih": "2026-11-23T11:06:10.000Z"
+    }
+   ]
+  },
+  {
+   "id": "9az7nl",
+   "baslik": "⁠İsrailli hak örgütü, Filistin sağlık altyapısının sistematik saldırılara maruz kaldığını belirtti",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "saglik",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-23T11:01:18.000Z",
+   "sonGuncelleme": "2026-11-23T11:31:50.592Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/dunya/-israilli-hak-orgutu-filistin-saglik-altyapisinin-sistematik-saldirilara-maruz-kaldigini-belirtti/4134374",
+     "baslik": "⁠İsrailli hak örgütü, Filistin sağlık altyapısının sistematik saldırılara maruz kaldığını belirtti",
+     "tarih": "2026-11-23T11:01:18.000Z"
+    }
+   ]
   }
  ]
 }

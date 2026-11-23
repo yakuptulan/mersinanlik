@@ -15,13 +15,13 @@
   },
   "haberturk-mersin": {
    "hata": "fetch failed",
-   "zaman": "2026-11-23T11:01:21.874Z"
+   "zaman": "2026-11-23T11:31:20.400Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-23",
-  "adet": 22,
-  "premium": 22
+  "adet": 24,
+  "premium": 24
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -135,7 +135,9 @@
    "https://www.dha.com.tr/yerel-haberler/mersin/mut/mersinde-2-otomobil-carpisti-1i-bebek-2-kis-2986617",
    "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/mersin-sehir-tiyatrosu-minik-sanatseverlerle-b-2986765",
    "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/mersinin-tescilli-kan-portakali-cikolatayla-bu-2986824",
-   "https://www.dha.com.tr/yerel-haberler/mersin/tarsus/mersinde-zeytinyagi-isletmelerinde-yogunluk-ya-2986976"
+   "https://www.dha.com.tr/yerel-haberler/mersin/tarsus/mersinde-zeytinyagi-isletmelerinde-yogunluk-ya-2986976",
+   "https://www.dha.com.tr/yerel-haberler/mersin/mezitli/mezitlide-kadina-yonelik-siddete-karsi-farkind-2987038",
+   "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/toroslarda-moloz-yiginlarinin-yerini-yesil-ala-2987034"
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
@@ -346,7 +348,9 @@
    "https://mersingundem.com/haber/13690/baskan-vekili-gencten-24-kasim-ogretmenler-gunu-mesaji.html",
    "https://mersingundem.com/haber/13692/mersinde-sanayinin-kasli-ustasi-100-kiloluk-motorlari-tek-basina-kaldiriyor.html",
    "https://mersingundem.com/haber/13691/mersine-uyusturucu-tasiyan-aracta-92-milyon-liralik-sentetik-ecza-ele-gecirildi.html",
-   "https://mersingundem.com/haber/13693/turkiyenin-en-soguk-yeri-erzurum-en-sicak-noktasi-mersin-oldu.html"
+   "https://mersingundem.com/haber/13693/turkiyenin-en-soguk-yeri-erzurum-en-sicak-noktasi-mersin-oldu.html",
+   "https://mersingundem.com/haber/13695/baskan-yildiz-sozunu-tutuyor-mevlana-mahallesine-yeni-park.html",
+   "https://mersingundem.com/haber/13694/mezitli-belediyesinden-kadina-yonelik-siddete-karsi-farkindalik-seminerleri.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -409,11 +413,27 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-23T11:01:59.861Z",
+  "guncelleme": "2026-11-23T11:32:10.911Z",
   "liste": [
    {
-    "baslik": "pavel durov",
+    "baslik": "fatih karahan",
     "trafik": 200
+   },
+   {
+    "baslik": "tünel",
+    "trafik": 200
+   },
+   {
+    "baslik": "borsa istanbul",
+    "trafik": 2000
+   },
+   {
+    "baslik": "efeler belediyesi",
+    "trafik": 100
+   },
+   {
+    "baslik": "pavel durov",
+    "trafik": 500
    },
    {
     "baslik": "denizbank",
@@ -421,11 +441,11 @@
    },
    {
     "baslik": "jankat yılmaz",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "archie brown",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "vadeli mevduat",
@@ -434,22 +454,6 @@
    {
     "baslik": "aston villa fc",
     "trafik": 200
-   },
-   {
-    "baslik": "zorbay küçük",
-    "trafik": 200
-   },
-   {
-    "baslik": "sıcaklık",
-    "trafik": 2000
-   },
-   {
-    "baslik": "abd doları",
-    "trafik": 200
-   },
-   {
-    "baslik": "derya uluğ",
-    "trafik": 500
    }
   ]
  },
