@@ -86,3 +86,8 @@ export async function onRequestPost({ request, env }) {
   if (!r.ok) return yanit({ hata: 'İlan şu an iletilemedi, biraz sonra tekrar deneyin.' }, 502);
   return yanit({ tamam: true });
 }
+
+// Tanı: hangi ortam değişkenlerinin tanımlı olduğunu (yalnızca adlarını) gösterir
+export async function onRequestGet({ env }) {
+  return yanit({ hazir: Boolean(env.TELEGRAM_BOT_TOKEN && env.TELEGRAM_CHAT_ID), anahtarlar: Object.keys(env || {}).filter((k) => !/^__/.test(k)) });
+}
