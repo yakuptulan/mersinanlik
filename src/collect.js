@@ -26,7 +26,7 @@ function kurumKaynagi(h) {
   return null;
 }
 import { geminiHazirMi, topluOzetle, jsonYaz } from './lib/gemini.js';
-import { telegramHazirMi, onayIste, kararlariOku } from './lib/telegram.js';
+import { telegramHazirMi, onayIste, kararlariOku, sohbetBul } from './lib/telegram.js';
 import { isverenIlaniEkle } from './lib/isverenIlani.js';
 
 const DURUM_DOSYASI = path.resolve('data/durum.json');
@@ -202,6 +202,7 @@ async function main() {
   }
 
   // 2) Telegram: önce basılan düğmeleri oku, sonra yeni riskli haberleri gönder
+  await sohbetBul();
   if (telegramHazirMi()) {
     try {
       const { kararlar, offset } = await kararlariOku(durum.telegramOffset || 0);

@@ -3,10 +3,33 @@
 //
 // Ortam değişkenleri: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
 
+import fs from 'node:fs';
+
 const API = () => `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}`;
+const DOSYA = 'data/telegram.json';
+
+// Sohbet kimliği: önce ortam değişkeni, yoksa bota ilk "Start" diyen kişiden bulunup data/telegram.json'a yazılır
+function kayitliSohbet() {
+  try { return JSON.parse(fs.readFileSync(DOSYA, 'utf8')).sohbet || null; } catch { return null; }
+}
+const sohbet = () => process.env.TELEGRAM_CHAT_ID || kayitliSohbet();
+
+export async function sohbetBul() {
+  if (!process.env.TELEGRAM_BOT_TOKEN || sohbet()) return sohbet();
+  try {
+    const r = await (await fetch(`${API()}/getUpdates?allowed_updates=${encodeURIComponent('["message"]')}`)).json();
+    const m = (r.result || []).map((u) => u.message).find((x) => x?.chat?.type === 'private');
+    if (!m) return null;
+    fs.writeFileSync(DOSYA, JSON.stringify({ sohbet: String(m.chat.id) }, null, 1));
+    await fetch(`${API()}/sendMessage`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: m.chat.id, text: '✅ Mersin Anlık onay botu bağlandı. Onay bekleyen haberler ve işveren ilanları buraya gelecek.' }) });
+    return String(m.chat.id);
+  } catch {
+    return null;
+  }
+}
 
 export function telegramHazirMi() {
-  return Boolean(process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID);
+  return Boolean(process.env.TELEGRAM_BOT_TOKEN && sohbet());
 }
 
 async function cagir(metod, govde) {
@@ -26,7 +49,7 @@ export async function onayIste(hikaye) {
     `🟠 Onay bekleyen haber\n\n${hikaye.baslik}\n\n` +
     `Neden: ${hikaye.riskNedenleri.join(', ')}\n${kaynaklar}\n${hikaye.kaynaklar[0].link}`;
   const mesaj = await cagir('sendMessage', {
-    chat_id: process.env.TELEGRAM_CHAT_ID,
+    chat_id: sohbet(),
     text: metin,
     disable_web_page_preview: true,
     reply_markup: {
@@ -47,7 +70,7 @@ export async function kararlariOku(offset = 0) {
   for (const g of guncellemeler) {
     sonOffset = Math.max(sonOffset, g.update_id + 1);
     const cq = g.callback_query;
-    if (!cq || String(cq.message?.chat?.id) !== String(process.env.TELEGRAM_CHAT_ID)) continue;
+    if (!cq || String(cq.message?.chat?.id) !== String(sohbet())) continue;
     const [islem, id] = String(cq.data).split(':');
     kararlar.push({ islem, id, metin: cq.message?.text || '' });
     await cagir('answerCallbackQuery', {
