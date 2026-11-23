@@ -285,17 +285,18 @@
    "kaynakHatalari": []
   },
   "2026-11-23": {
-   "guncelleme": "2026-11-23T10:33:13.429Z",
-   "mersinHaber": 29,
-   "kendiYazimiz": 29,
-   "turkiyeDunya": 154,
-   "otomatik": 7,
+   "guncelleme": "2026-11-23T11:04:31.184Z",
+   "mersinHaber": 32,
+   "kendiYazimiz": 32,
+   "turkiyeDunya": 164,
+   "otomatik": 8,
    "otomatikTurler": {
     "ucus": 1,
     "etkinlik": 1,
     "bulten": 1,
     "is": 1,
-    "su": 3
+    "su": 3,
+    "okul": 1
    },
    "otomatikBasliklar": [
     {
@@ -332,13 +333,18 @@
      "baslik": "Erdemli'de su kesintisi (23 Kasım): Kocahasanlı, 6 saat sürecek",
      "tur": "su",
      "saat": "12:04"
+    },
+    {
+     "baslik": "Van'da yarın okullar tatil mi? Valilik kararı açıklandı",
+     "tur": "okul",
+     "saat": "14:04"
     }
    ],
-   "gorsel": 20,
+   "gorsel": 22,
    "bilgi": 1,
    "gezi": 0,
    "kaynakHatalari": [
-    "tarsus-universitesi (fetch failed)"
+    "haberturk-mersin (fetch failed)"
    ]
   }
  }

@@ -13,15 +13,15 @@
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
   },
-  "tarsus-universitesi": {
+  "haberturk-mersin": {
    "hata": "fetch failed",
-   "zaman": "2026-11-23T10:31:37.839Z"
+   "zaman": "2026-11-23T11:01:21.874Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-23",
-  "adet": 20,
-  "premium": 20
+  "adet": 22,
+  "premium": 22
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -345,7 +345,8 @@
    "https://mersingundem.com/haber/13688/mersin-sehir-tiyatrosu-minik-sanatseverlerle-bulustu.html",
    "https://mersingundem.com/haber/13690/baskan-vekili-gencten-24-kasim-ogretmenler-gunu-mesaji.html",
    "https://mersingundem.com/haber/13692/mersinde-sanayinin-kasli-ustasi-100-kiloluk-motorlari-tek-basina-kaldiriyor.html",
-   "https://mersingundem.com/haber/13691/mersine-uyusturucu-tasiyan-aracta-92-milyon-liralik-sentetik-ecza-ele-gecirildi.html"
+   "https://mersingundem.com/haber/13691/mersine-uyusturucu-tasiyan-aracta-92-milyon-liralik-sentetik-ecza-ele-gecirildi.html",
+   "https://mersingundem.com/haber/13693/turkiyenin-en-soguk-yeri-erzurum-en-sicak-noktasi-mersin-oldu.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -408,11 +409,15 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-23T10:31:50.460Z",
+  "guncelleme": "2026-11-23T11:01:59.861Z",
   "liste": [
    {
-    "baslik": "kredi kartı",
-    "trafik": 1000
+    "baslik": "pavel durov",
+    "trafik": 200
+   },
+   {
+    "baslik": "denizbank",
+    "trafik": 2000
    },
    {
     "baslik": "jankat yılmaz",
@@ -424,7 +429,7 @@
    },
    {
     "baslik": "vadeli mevduat",
-    "trafik": 1000
+    "trafik": 2000
    },
    {
     "baslik": "aston villa fc",
@@ -445,10 +450,6 @@
    {
     "baslik": "derya uluğ",
     "trafik": 500
-   },
-   {
-    "baslik": "fiat grizzly",
-    "trafik": 2000
    }
   ]
  },
