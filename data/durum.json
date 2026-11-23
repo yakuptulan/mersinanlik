@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-23",
-  "adet": 15,
-  "premium": 15
+  "adet": 16,
+  "premium": 16
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -393,12 +393,28 @@
    "https://www.akdeniz.bel.tr/Default/HaberDetay/62",
    "https://www.akdeniz.bel.tr/Default/HaberDetay/61",
    "https://www.akdeniz.bel.tr/Default/HaberDetay/60",
-   "https://www.akdeniz.bel.tr/Default/HaberDetay/64"
+   "https://www.akdeniz.bel.tr/Default/HaberDetay/64",
+   "https://www.akdeniz.bel.tr/Default/HaberDetay/70",
+   "https://www.akdeniz.bel.tr/Default/HaberDetay/69",
+   "https://www.akdeniz.bel.tr/Default/HaberDetay/68",
+   "https://www.akdeniz.bel.tr/Default/HaberDetay/67"
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-23T09:01:56.897Z",
+  "guncelleme": "2026-11-23T09:31:54.136Z",
   "liste": [
+   {
+    "baslik": "sıcaklık",
+    "trafik": 1000
+   },
+   {
+    "baslik": "fiat fastback fiyat",
+    "trafik": 200
+   },
+   {
+    "baslik": "abd doları",
+    "trafik": 100
+   },
    {
     "baslik": "somestr tatili 2027",
     "trafik": 10000
@@ -417,7 +433,7 @@
    },
    {
     "baslik": "vgm burs sonuçları",
-    "trafik": 20000
+    "trafik": 5000
    },
    {
     "baslik": "kenan imirzalıoğlu",
@@ -425,18 +441,6 @@
    },
    {
     "baslik": "galatasaray aston villa maçı",
-    "trafik": 10000
-   },
-   {
-    "baslik": "selim çelenk",
-    "trafik": 5000
-   },
-   {
-    "baslik": "ordu",
-    "trafik": 1000
-   },
-   {
-    "baslik": "sgk",
     "trafik": 10000
    }
   ]
