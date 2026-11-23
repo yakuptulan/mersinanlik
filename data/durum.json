@@ -12,12 +12,16 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "tarsus-universitesi": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-23T10:31:37.839Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-23",
-  "adet": 19,
-  "premium": 19
+  "adet": 20,
+  "premium": 20
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -339,7 +343,9 @@
    "https://mersingundem.com/haber/13687/71-yil-kesinlesmis-hapis-cezasi-bulunan-sahis-yakalandi.html",
    "https://mersingundem.com/haber/13689/buyuksehirin-hamzabeyli-koyumuz-atolyede-kan-portakali-cikolatayla-bulustu.html",
    "https://mersingundem.com/haber/13688/mersin-sehir-tiyatrosu-minik-sanatseverlerle-bulustu.html",
-   "https://mersingundem.com/haber/13690/baskan-vekili-gencten-24-kasim-ogretmenler-gunu-mesaji.html"
+   "https://mersingundem.com/haber/13690/baskan-vekili-gencten-24-kasim-ogretmenler-gunu-mesaji.html",
+   "https://mersingundem.com/haber/13692/mersinde-sanayinin-kasli-ustasi-100-kiloluk-motorlari-tek-basina-kaldiriyor.html",
+   "https://mersingundem.com/haber/13691/mersine-uyusturucu-tasiyan-aracta-92-milyon-liralik-sentetik-ecza-ele-gecirildi.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -402,8 +408,16 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-23T10:21:45.437Z",
+  "guncelleme": "2026-11-23T10:31:50.460Z",
   "liste": [
+   {
+    "baslik": "kredi kartı",
+    "trafik": 1000
+   },
+   {
+    "baslik": "jankat yılmaz",
+    "trafik": 200
+   },
    {
     "baslik": "archie brown",
     "trafik": 500
@@ -435,14 +449,6 @@
    {
     "baslik": "fiat grizzly",
     "trafik": 2000
-   },
-   {
-    "baslik": "aziz yıldırım",
-    "trafik": 2000
-   },
-   {
-    "baslik": "borsa",
-    "trafik": 1000
    }
   ]
  },

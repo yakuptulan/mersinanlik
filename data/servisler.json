@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-23T10:22:04.428Z",
+ "guncelleme": "2026-11-23T10:32:07.456Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 22,
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-23T10:22:09.981Z",
+  "guncelleme": "2026-11-23T10:32:10.796Z",
   "liste": [
    {
     "ad": "Bizim Eczanesi",
@@ -772,7 +772,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-23T10:22:11.349Z",
+  "guncelleme": "2026-11-23T10:32:11.785Z",
   "liste": [
    {
     "tur": "su",
@@ -793,22 +793,6 @@
        "İnköy",
        "Kahraman Gülek",
        "Sandal"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "MEZİTLİ İLÇESİ FINDIKPINARI MAHALLESİ MERKEZ VE BEŞKOZ MEVKİİLERİNİN BİR KISMINDA ANA BORU PATLAĞI NEDENİYLE SAAT 13:30 A KADAR SU KESİNTİSİ YAŞANACAKTIR.",
-    "baslangic": "2026-11-23T07:29:22.000Z",
-    "bitis": "2026-11-23T10:30:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "mezitli",
-      "ad": "Mezitli",
-      "mahalleler": [
-       "Fındıkpınarı"
       ]
      }
     ]
@@ -1054,7 +1038,7 @@
   "kaynakSaati": "2026-11-23 13:22:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-23T10:22:17.919Z",
+  "guncelleme": "2026-11-23T10:32:16.287Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -8719,7 +8703,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-23T10:22:18.243Z",
+  "guncelleme": "2026-11-23T10:32:16.769Z",
   "liste": [
    {
     "yol": "/",
@@ -8770,15 +8754,15 @@
     "sayi": 1
    },
    {
+    "yol": "/haber/ali-kiratli-acikladi-limon-ve-mandalina-ihracatina-devlet-destegi-mwdu7r/",
+    "sayi": 1
+   },
+   {
     "yol": "/bilgi/sakarya-nerededir-adi-nereden-gelir-sehrin-tarihi-hakkinda-bilgiler/",
     "sayi": 1
    },
    {
     "yol": "/kar-tatili/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/ali-kiratli-acikladi-limon-ve-mandalina-ihracatina-devlet-destegi-mwdu7r/",
     "sayi": 1
    },
    {
@@ -8840,7 +8824,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-23T10:22:20.600Z",
+  "guncelleme": "2026-11-23T10:32:18.230Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.26
@@ -8853,20 +8837,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-23T10:22:22.978Z",
+  "guncelleme": "2026-11-23T10:32:20.005Z",
   "giden": [
-   {
-    "no": [
-     "TK2457"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-23T10:30:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC3601"
@@ -8876,7 +8848,7 @@
     "planlanan": "2026-11-23T10:40:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "BOARDING",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -8924,7 +8896,7 @@
     "planlanan": "2026-11-23T12:20:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9332,6 +9304,18 @@
     "planlanan": "2026-11-24T09:40:00.000Z",
     "tahmini": null,
     "kapi": "105",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2457"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-24T10:30:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
     "durum": "",
     "hat": "ic"
    }
@@ -9820,7 +9804,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-23T10:22:22.977Z",
+  "guncelleme": "2026-11-23T10:32:20.005Z",
   "liste": [
    {
     "id": 6386,
