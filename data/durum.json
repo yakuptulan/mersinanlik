@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-23",
-  "adet": 41,
-  "premium": 41
+  "adet": 42,
+  "premium": 42
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -268,7 +268,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/tum-ekipler-seferber-yasli-kadini-arama-calismalari-6nci-gunde-de-suruyor-119530113",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/baskan-vekili-genc-mersinin-gelecegi-icin-yaptigimiz-en-kiymetli-yatirimin-gercek-119530370",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/market-calisani-kadin-silahli-saldirida-yaralandi-119530548",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-market-calisanini-tabancayla-yaralayan-maskeli-supheli-olay-yerinden-kacti-119530536"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-market-calisanini-tabancayla-yaralayan-maskeli-supheli-olay-yerinden-kacti-119530536",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/tir-ile-carpisan-motosikletin-surucusu-oldu-119530560"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -427,23 +428,39 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-23T20:02:38.675Z",
+  "guncelleme": "2026-11-23T20:31:59.037Z",
   "liste": [
+   {
+    "baslik": "jong ajax",
+    "trafik": 100
+   },
+   {
+    "baslik": "levante",
+    "trafik": 200
+   },
+   {
+    "baslik": "al ittihad",
+    "trafik": 200
+   },
+   {
+    "baslik": "monza",
+    "trafik": 200
+   },
+   {
+    "baslik": "fiorentina",
+    "trafik": 500
+   },
    {
     "baslik": "levante - elche",
     "trafik": 200
    },
    {
-    "baslik": "fiorentina",
-    "trafik": 200
-   },
-   {
     "baslik": "brentford - everton",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "kütahya hava durumu",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "özcan deniz son yemek",
@@ -452,22 +469,6 @@
    {
     "baslik": "bütçe",
     "trafik": 1000
-   },
-   {
-    "baslik": "monza - fiorentina",
-    "trafik": 500
-   },
-   {
-    "baslik": "eskişehir hava durumu",
-    "trafik": 1000
-   },
-   {
-    "baslik": "midtjylland",
-    "trafik": 500
-   },
-   {
-    "baslik": "yarın okul var mı",
-    "trafik": 500
    }
   ]
  },
