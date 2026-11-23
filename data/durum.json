@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-23",
-  "adet": 39,
-  "premium": 39
+  "adet": 40,
+  "premium": 40
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -424,8 +424,16 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-23T17:31:48.500Z",
+  "guncelleme": "2026-11-23T18:02:20.378Z",
   "liste": [
+   {
+    "baslik": "kanald canli yayin",
+    "trafik": 10000
+   },
+   {
+    "baslik": "cumhurbaşkanı",
+    "trafik": 200
+   },
    {
     "baslik": "hisse",
     "trafik": 1000
@@ -436,11 +444,11 @@
    },
    {
     "baslik": "çorum",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "halk televizyonu youtube",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "aselsan gökdeniz",
@@ -452,19 +460,11 @@
    },
    {
     "baslik": "volodimir zelenski",
-    "trafik": 100
-   },
-   {
-    "baslik": "tramvay",
     "trafik": 200
    },
    {
-    "baslik": "hatayspor",
-    "trafik": 100
-   },
-   {
-    "baslik": "bodrumspor - vanspor",
-    "trafik": 5000
+    "baslik": "tramvay",
+    "trafik": 500
    }
   ]
  },
