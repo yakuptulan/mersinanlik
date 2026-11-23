@@ -168,13 +168,17 @@ export function bugununMaclari(servis, simdi = Date.now()) {
 // Dar kutuda tek satıra sığmayan uzun resmî adlar
 export const KISA_TAKIM = { 'Amed Sportif Faaliyetler': 'Amedspor', 'Beyoğlu Yeni Çarşı Spor Faaliyetleri': 'Beyoğlu Yeni Çarşı', 'Arkent Arnavutköy Belediyesi Futbol': 'Arnavutköy Belediyespor' };
 
+// Maç kutusunda tek satıra sığsın diye sponsor adları ve uzun ekler kısaltılır
+const MAC_KISA = { 'İstanbul Başakşehir FK': 'Başakşehir', 'Arca Çorum FK': 'Çorum FK', 'Tümosan Konyaspor': 'Konyaspor', 'Corendon Alanyaspor': 'Alanyaspor', 'Çaykur Rizespor': 'Rizespor', 'Ejderoğlu Kırşehir': 'Kırşehir', 'Yeni Mersin İdmanyurdu': 'Yeni Mersin İY', 'Kırıkkale FK Spor': 'Kırıkkale FK', 'Erzurumspor FK': 'Erzurumspor', 'Gaziantep FK': 'Gaziantep', 'Fatih Karagümrük': 'Karagümrük', 'Zecorner Kayserispor': 'Kayserispor', 'Hesap.com Antalyaspor': 'Antalyaspor', 'RAMS Başakşehir': 'Başakşehir', 'Ikas Eyüpspor': 'Eyüpspor', 'Atakaş Hatayspor': 'Hatayspor', 'Net Global Sivasspor': 'Sivasspor', 'Bellona Kayserispor': 'Kayserispor', 'Sipay Bodrum FK': 'Bodrum FK', 'Kasımpaşa SK': 'Kasımpaşa' };
+export const macKisaAd = (ad) => MAC_KISA[ad] || KISA_TAKIM[ad] || ad;
+
 export function macGunuKutusu(servis, simdi = Date.now()) {
   const maclar = bugununMaclari(servis, simdi);
   if (!maclar.length) return '';
   const canli = maclar.some((m) => m.durum === 'oynaniyor');
   const satir = (m) => {
     const [se, sd] = m.durum === 'baslamadi' ? ['', ''] : String(m.skor || '0-0').split('-').map((x) => x.trim());
-    const takim = (ad, sk) => `<span class="mg-takim">${takimLogosu(ad)}<span class="mg-ad">${h(KISA_TAKIM[ad] || ad)}</span>${m.durum === 'baslamadi' ? '' : `<b class="mg-skor">${h(sk ?? '')}</b>`}</span>`;
+    const takim = (ad, sk) => `<span class="mg-takim">${takimLogosu(ad)}<span class="mg-ad" title="${h(ad)}">${h(macKisaAd(ad))}</span>${m.durum === 'baslamadi' ? '' : `<b class="mg-skor">${h(sk ?? '')}</b>`}</span>`;
     return `<a class="macgunu-satir${m.mersin ? ' mersin' : ''}" href="/spor/${m.kod}/">
 <span class="mg-takimlar">${takim(m.ev, se)}${takim(m.dep, sd)}</span>
 <span class="macgunu-orta ${m.durum}">${m.durum === 'baslamadi' ? h(m.saat || '–') : m.durum === 'oynaniyor' ? '<i class="mg-nokta"></i>' : ''}<small>${m.durum === 'oynaniyor' ? 'canlı' : m.durum === 'bitti' ? 'MS' : m.lig}</small></span>
