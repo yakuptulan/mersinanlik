@@ -15,9 +15,8 @@
   }
  },
  "gorsel": {
-  "gun": "2026-11-23",
-  "adet": 42,
-  "premium": 42
+  "gun": "2026-11-24",
+  "adet": 0
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -137,7 +136,8 @@
    "https://www.dha.com.tr/yerel-haberler/mersin/mezitli/mezitlide-kadina-yonelik-siddete-karsi-farkind-2987038",
    "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/toroslarda-moloz-yiginlarinin-yerini-yesil-ala-2987034",
    "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/baskan-vekili-genc-ogretmenler-ile-bir-araya-g-2987214",
-   "https://www.dha.com.tr/yerel-haberler/mersin/silifke/market-calisani-kadin-silahli-saldirida-yaralan-2987345"
+   "https://www.dha.com.tr/yerel-haberler/mersin/silifke/market-calisani-kadin-silahli-saldirida-yaralan-2987345",
+   "https://www.dha.com.tr/yerel-haberler/mersin/tarsus/tir-ile-carpisan-motosikletin-surucusu-oldu-2987350"
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
@@ -428,8 +428,12 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-23T20:31:59.037Z",
+  "guncelleme": "2026-11-23T21:01:44.151Z",
   "liste": [
+   {
+    "baslik": "nantes",
+    "trafik": 200
+   },
    {
     "baslik": "jong ajax",
     "trafik": 100
@@ -456,7 +460,7 @@
    },
    {
     "baslik": "brentford - everton",
-    "trafik": 1000
+    "trafik": 2000
    },
    {
     "baslik": "kütahya hava durumu",
@@ -464,13 +468,9 @@
    },
    {
     "baslik": "özcan deniz son yemek",
-    "trafik": 100
-   },
-   {
-    "baslik": "bütçe",
-    "trafik": 1000
+    "trafik": 200
    }
   ]
  },
- "tamBirlestirme": "2026-11-23"
+ "tamBirlestirme": "2026-11-24"
 }
