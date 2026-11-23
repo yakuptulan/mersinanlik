@@ -358,19 +358,25 @@
    "kaynakHatalari": []
   },
   "2026-11-24": {
-   "guncelleme": "2026-11-23T21:04:04.092Z",
-   "mersinHaber": 1,
-   "kendiYazimiz": 1,
-   "turkiyeDunya": 1,
-   "otomatik": 1,
+   "guncelleme": "2026-11-23T21:33:52.925Z",
+   "mersinHaber": 2,
+   "kendiYazimiz": 2,
+   "turkiyeDunya": 3,
+   "otomatik": 2,
    "otomatikTurler": {
-    "okul": 1
+    "okul": 1,
+    "yakit": 1
    },
    "otomatikBasliklar": [
     {
      "baslik": "Van'da bugün okullar tatil mi? Valilik kararı açıklandı",
      "tur": "okul",
      "saat": "00:04"
+    },
+    {
+     "baslik": "Benzin ve motorine zam geldi: İstanbul, Ankara, İzmir ve Mersin'de güncel akaryakıt fiyatları",
+     "tur": "yakit",
+     "saat": "00:33"
     }
    ],
    "gorsel": 0,
