@@ -1,14 +1,14 @@
 {
- "guncelleme": "2026-11-23T17:02:00.608Z",
+ "guncelleme": "2026-11-23T17:31:55.057Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 16,
-   "durum": "Az bulutlu",
+   "sicaklik": 15,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-23",
      "min": 15,
-     "max": 16,
+     "max": 15,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -219,13 +219,13 @@
   },
   "gulnar": {
    "sicaklik": 9,
-   "durum": "Parçalı bulutlu",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-23",
      "min": 8,
      "max": 9,
-     "durum": "Az bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-24",
@@ -326,8 +326,8 @@
    ]
   },
   "silifke": {
-   "sicaklik": 14,
-   "durum": "Az bulutlu",
+   "sicaklik": 13,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-23",
@@ -362,13 +362,13 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 18,
-   "durum": "Açık",
+   "sicaklik": 16,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-23",
      "min": 15,
-     "max": 18,
+     "max": 16,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -434,13 +434,13 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 16,
-   "durum": "Az bulutlu",
+   "sicaklik": 15,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-23",
      "min": 15,
-     "max": 16,
+     "max": 15,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-23T17:02:05.018Z",
+  "guncelleme": "2026-11-23T17:31:59.221Z",
   "liste": [
    {
     "ad": "Bizim Eczanesi",
@@ -772,7 +772,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-23T17:02:06.119Z",
+  "guncelleme": "2026-11-23T17:32:00.255Z",
   "liste": []
  },
  "piyasa": {
@@ -947,7 +947,7 @@
   "kaynakSaati": "2026-11-23 19:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-23T17:02:11.902Z",
+  "guncelleme": "2026-11-23T17:32:05.026Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1672,7 +1672,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-23T17:02:14.167Z",
+  "guncelleme": "2026-11-23T17:32:07.170Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8349,7 +8349,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-23T17:02:57.169Z",
+    "guncelleme": "2026-11-23T17:32:52.344Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -8431,7 +8431,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-23T17:02:58.415Z",
+    "guncelleme": "2026-11-23T17:32:53.589Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8513,7 +8513,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-23T17:02:59.668Z",
+    "guncelleme": "2026-11-23T17:32:54.844Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8612,7 +8612,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-23T17:02:12.503Z",
+  "guncelleme": "2026-11-23T17:32:05.622Z",
   "liste": [
    {
     "yol": "/",
@@ -8627,6 +8627,10 @@
     "sayi": 7
    },
    {
+    "yol": "/haber/piyasalarda-gunun-kapanisi-gram-altin-4-43-yukseldi-k45e0d/",
+    "sayi": 6
+   },
+   {
     "yol": "/haber/mersin-de-bugun-elektrik-kesintisi-ilce-ilce-saatler-ve-mahalleler-1rud3vp/",
     "sayi": 5
    },
@@ -8635,15 +8639,11 @@
     "sayi": 5
    },
    {
-    "yol": "/haber/baskan-vekili-genc-mersin-buyuksehir-in-ogretmenleri-ile-bir-araya-gel-1ftlup7/",
-    "sayi": 4
-   },
-   {
     "yol": "/okullar-tatil-mi/bursa/",
     "sayi": 4
    },
    {
-    "yol": "/hava-durumu/bozyazi/",
+    "yol": "/haber/baskan-vekili-genc-mersin-buyuksehir-in-ogretmenleri-ile-bir-araya-gel-1ftlup7/",
     "sayi": 4
    },
    {
@@ -8651,15 +8651,11 @@
     "sayi": 3
    },
    {
-    "yol": "/hava-durumu/gulnar/",
-    "sayi": 2
-   },
-   {
     "yol": "/is-ilanlari/",
     "sayi": 2
    },
    {
-    "yol": "/hava-durumu/anamur/",
+    "yol": "/hava-durumu/bozyazi/",
     "sayi": 2
    },
    {
@@ -8671,6 +8667,18 @@
     "sayi": 1
    },
    {
+    "yol": "/haber/ali-kiratli-acikladi-limon-ve-mandalina-ihracatina-devlet-destegi-mwdu7r/",
+    "sayi": 1
+   },
+   {
+    "yol": "/spor/3-lig-3/",
+    "sayi": 1
+   },
+   {
+    "yol": "/okullar-tatil-mi/duzce/",
+    "sayi": 1
+   },
+   {
     "yol": "/haber/mersin-nobetci-eczaneler-22-kasim-pazar-eed9b7/",
     "sayi": 1
    },
@@ -8679,11 +8687,11 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/ali-kiratli-acikladi-limon-ve-mandalina-ihracatina-devlet-destegi-mwdu7r/",
+    "yol": "/kar-tatili/",
     "sayi": 1
    },
    {
-    "yol": "/kar-tatili/",
+    "yol": "/hava-durumu/anamur/",
     "sayi": 1
    },
    {
@@ -8699,7 +8707,7 @@
     "sayi": 1
    },
    {
-    "yol": "/spor/3-lig-3/",
+    "yol": "/okullar-tatil-mi/gaziantep/",
     "sayi": 1
    },
    {
@@ -8715,15 +8723,15 @@
     "sayi": 1
    },
    {
-    "yol": "/okullar-tatil-mi/gaziantep/",
-    "sayi": 1
-   },
-   {
     "yol": "/haber/erdemli-de-su-kesintisi-22-kasim-koyuncu-9-saat-surecek-se9529/",
     "sayi": 1
    },
    {
     "yol": "/is-ilanlari/silifke/",
+    "sayi": 1
+   },
+   {
+    "yol": "/hava-durumu/gulnar/",
     "sayi": 1
    },
    {
@@ -8745,7 +8753,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-23T17:03:00.869Z",
+  "guncelleme": "2026-11-23T17:32:56.045Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.3
@@ -8758,7 +8766,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-23T17:03:02.827Z",
+  "guncelleme": "2026-11-23T17:32:57.940Z",
   "giden": [
    {
     "no": [
@@ -8769,7 +8777,7 @@
     "planlanan": "2026-11-23T17:35:00.000Z",
     "tahmini": "2026-11-23T18:20:00.000Z",
     "kapi": "106",
-    "durum": "GECİKME",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8781,7 +8789,7 @@
     "planlanan": "2026-11-23T17:55:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "KONTUAR AÇIK",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -8793,7 +8801,7 @@
     "planlanan": "2026-11-23T18:00:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -8803,9 +8811,9 @@
     "havayolu": "THY",
     "yer": "İstanbul",
     "planlanan": "2026-11-23T18:20:00.000Z",
-    "tahmini": null,
+    "tahmini": "2026-11-23T18:55:00.000Z",
     "kapi": "108",
-    "durum": "KONTUAR AÇIK",
+    "durum": "GECİKME",
     "hat": "ic"
    },
    {
@@ -8817,7 +8825,7 @@
     "planlanan": "2026-11-23T18:25:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8829,7 +8837,7 @@
     "planlanan": "2026-11-23T19:05:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -8865,7 +8873,7 @@
     "planlanan": "2026-11-23T20:20:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -9220,26 +9228,14 @@
   "gelen": [
    {
     "no": [
-     "VF3144"
-    ],
-    "havayolu": "AJet",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-23T17:15:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
      "TK2466"
     ],
     "havayolu": "THY",
     "yer": "İstanbul",
     "planlanan": "2026-11-23T17:35:00.000Z",
-    "tahmini": null,
+    "tahmini": "2026-11-23T18:10:00.000Z",
     "kapi": "",
-    "durum": "",
+    "durum": "GECİKME",
     "hat": "ic"
    },
    {
@@ -9273,9 +9269,9 @@
     "havayolu": "Pegasus",
     "yer": "Sabiha Gökçen",
     "planlanan": "2026-11-23T18:25:00.000Z",
-    "tahmini": null,
+    "tahmini": "2026-11-23T18:45:00.000Z",
     "kapi": "",
-    "durum": "",
+    "durum": "GECİKME",
     "hat": "ic"
    },
    {
@@ -9713,7 +9709,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-23T17:03:02.827Z",
+  "guncelleme": "2026-11-23T17:32:57.939Z",
   "liste": [
    {
     "id": 6386,
