@@ -112,6 +112,8 @@ function siraGeldi(platform, d, simdi = Date.now()) {
   return null;
 }
 
+const LISTE_ICERIK = /kesinti|nöbetçi eczane|altın fiyat|akaryakıt fiyat|benzin|motorin|hava durumu|namaz vakit|döviz|dolar kuru/i;
+
 // Aynı olayı anlatan iki ayrı haber (farklı siteler, farklı başlık) iki kez paylaşılmasın
 const kelimeler = (h) => new Set(`${h.baslik} ${h.ozet || ''}`.toLocaleLowerCase('tr').replace(/[^a-zçğıöşü0-9 ]/g, ' ').split(/\s+/).filter((w) => w.length > 3));
 export function benzerMi(a, b) {
@@ -125,7 +127,9 @@ function aday(platform, d, haric = new Set()) {
   const paylasilan = new Set((d[platform] || []).map((x) => x.id));
   const tum = haberler();
   const sonPaylasilan = (d[platform] || []).filter((x) => Date.now() - Date.parse(x.zaman) < 24 * 36e5).map((x) => tum.find((h) => h.id === x.id)).filter(Boolean);
-  const liste = tum.filter((h) => uygun(h) && !paylasilan.has(h.id) && !haric.has(h.id) && !sonPaylasilan.some((p) => benzerMi(h, p)));
+  // Instagram'da sadece gerçek haber: kesinti, eczane, fiyat gibi liste içerikleri sabah kartında zaten var
+  const liste = tum.filter((h) => uygun(h) && !paylasilan.has(h.id) && !haric.has(h.id) && !sonPaylasilan.some((p) => benzerMi(h, p))
+    && !(platform === 'instagram' && LISTE_ICERIK.test(h.baslik)));
   if (platform === 'instagram') {
     // Instagram'da görsel şart
     return liste.filter((h) => { const k = kapakAdresi(h); return k?.src && !k.cizim; }).sort((a, b) => puan(b) - puan(a))[0] || null;
