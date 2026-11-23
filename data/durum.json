@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-23T19:01:18.927Z"
   }
  },
  "gorsel": {
@@ -424,15 +428,35 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-23T18:31:38.843Z",
+  "guncelleme": "2026-11-23T19:01:55.232Z",
   "liste": [
+   {
+    "baslik": "yarın okul var mı",
+    "trafik": 200
+   },
+   {
+    "baslik": "corum",
+    "trafik": 100
+   },
+   {
+    "baslik": "hande soral",
+    "trafik": 200
+   },
+   {
+    "baslik": "baraj doluluk oranları",
+    "trafik": 100
+   },
+   {
+    "baslik": "kanal d canlı izle",
+    "trafik": 5000
+   },
    {
     "baslik": "الأهلي ضد الأهرام",
     "trafik": 200
    },
    {
     "baslik": "oktay kaynarca",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "jesús ramírez",
@@ -445,26 +469,6 @@
    {
     "baslik": "jason statham",
     "trafik": 200
-   },
-   {
-    "baslik": "bayi toplantısı",
-    "trafik": 200
-   },
-   {
-    "baslik": "hisse",
-    "trafik": 2000
-   },
-   {
-    "baslik": "öğretmene teşekkür mesajı",
-    "trafik": 100
-   },
-   {
-    "baslik": "çorum",
-    "trafik": 500
-   },
-   {
-    "baslik": "halk televizyonu youtube",
-    "trafik": 1000
    }
   ]
  },
