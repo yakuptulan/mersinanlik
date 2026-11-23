@@ -334,13 +334,15 @@ ${yazi(W - 64, H - 74, 'mersinanlik.com', 30, '#22D3EE', 700, 'text-anchor="end"
     const ilceSerit = `<text transform="translate(78 ${H - 60 - genislik('MERSİN ANLIK', 21) - 2 * 13 - 70}) rotate(-90)" font-family="Poppins" font-weight="700" font-size="21" fill="#0EA5C6" letter-spacing="2">${kacis(ilce.toLocaleUpperCase('tr-TR'))}</text>`;
     return `${bas}
 <defs>
-<linearGradient id="k" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A1530" stop-opacity="0"/><stop offset="0.35" stop-color="#101C4A" stop-opacity="0.72"/><stop offset="1" stop-color="#1A1550" stop-opacity="0.96"/></linearGradient>
+<linearGradient id="k" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#06203A" stop-opacity="0"/><stop offset="0.3" stop-color="#0A2A4A" stop-opacity="0.78"/><stop offset="0.65" stop-color="#0B3354" stop-opacity="0.95"/><stop offset="1" stop-color="#0C3A5C" stop-opacity="0.99"/></linearGradient>
+<radialGradient id="isik" cx="0.92" cy="0.95" r="0.75"><stop offset="0" stop-color="#6FE3F0" stop-opacity="0.55"/><stop offset="0.45" stop-color="#2FA9C8" stop-opacity="0.22"/><stop offset="1" stop-color="#2FA9C8" stop-opacity="0"/></radialGradient>
 <linearGradient id="u" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A1530" stop-opacity="0.55"/><stop offset="1" stop-color="#0A1530" stop-opacity="0"/></linearGradient>
 <filter id="gl"><feGaussianBlur stdDeviation="5"/></filter>
 </defs>
 <image href="data:image/jpeg;base64,${foto}" x="0" y="0" width="${W}" height="${H}"/>
 <rect width="${W}" height="200" fill="url(#u)"/>
 <rect y="${kickerY - 360}" width="${W}" height="${H - kickerY + 360}" fill="url(#k)"/>
+<rect y="${kickerY - 200}" width="${W}" height="${H - kickerY + 200}" fill="url(#isik)"/>
 <rect x="36" y="40" width="60" height="${H - 80}" rx="30" fill="#FFFFFF" fill-opacity="0.96"/>
 <circle cx="66" cy="78" r="18" fill="#22D3EE"/>
 <rect x="64" y="112" width="4" height="70" rx="2" fill="#0A1530" fill-opacity="0.25"/>

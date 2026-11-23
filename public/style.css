@@ -1777,8 +1777,9 @@ img.kr-foto { object-fit: cover; background: #1f2937; padding: 0; }
 .alt-iletisim svg { color: #22d3ee; flex: 0 0 auto; }
 .alt-iletisim span { display: flex; flex-direction: column; line-height: 1.25; }
 .alt-iletisim small { font-size: 12px; font-weight: 600; color: var(--soluk); }
-/* Mersin'de şu an arka plan deseni: daha sade */
-.kure-sahne { opacity: .35; animation: none; }
+/* Üst bölüm arka planı: çapraz ışık şeritleri (aurora), desen yok */
+.kure-sahne { display: none !important; }
+.ust:not(.tema) { background: linear-gradient(115deg, transparent 30%, rgba(34,211,238,.10) 42%, transparent 55%), linear-gradient(115deg, transparent 50%, rgba(30,102,245,.18) 62%, transparent 75%), linear-gradient(180deg, #0a1530, #0c1a40); }
 
 /* ---------- İş ilanları sayfası görsel düzen ---------- */
 .is-hero { align-items: center; }
