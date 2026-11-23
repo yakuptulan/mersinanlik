@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-23",
-  "adet": 6,
-  "premium": 6
+  "adet": 9,
+  "premium": 9
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -127,7 +127,8 @@
    "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/akdeniz-belediyesinden-cocuk-haklari-paneli-2986083",
    "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/mersin-sehir-tiyatrosu-perdelerini-acti-2986448",
    "https://www.dha.com.tr/yerel-haberler/mersin/mezitli/mersinli-uretici-kadinlar-e-ticaret-egitimi-ald-2986460",
-   "https://www.dha.com.tr/yerel-haberler/mersin/mut/mersinde-2-otomobil-carpisti-1i-bebek-2-kis-2986617"
+   "https://www.dha.com.tr/yerel-haberler/mersin/mut/mersinde-2-otomobil-carpisti-1i-bebek-2-kis-2986617",
+   "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/mersin-sehir-tiyatrosu-minik-sanatseverlerle-b-2986765"
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
@@ -249,7 +250,10 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-2-otomobilin-carpistigi-kazada-1-kisi-agir-yaralandi-119529282",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-ogrencilerin-egitim-yolculugu-aile-ziyaretleriyle-destekleniyor-119529277",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-trafik-kazasi-1-agir-yarali-119529351",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-2-otomobil-carpisti-1i-bebek-2-kisi-agir-yaralandi-119529468"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-2-otomobil-carpisti-1i-bebek-2-kisi-agir-yaralandi-119529468",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-cocuklar-ara-tatilde-tiyatroyla-bulustu-119529777",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kan-portakali-cikolata-ve-kadayifla-bulustu-119529769",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-sanayinin-kasli-ustasi-100-kiloluk-motorlari-tek-basina-kaldiriyor-119529761"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -388,15 +392,27 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-23T07:01:54.976Z",
+  "guncelleme": "2026-11-23T07:31:45.138Z",
   "liste": [
    {
+    "baslik": "fiyat",
+    "trafik": 5000
+   },
+   {
     "baslik": "galatasaray aston villa maçı",
-    "trafik": 2000
+    "trafik": 10000
    },
    {
     "baslik": "selim çelenk",
     "trafik": 100
+   },
+   {
+    "baslik": "ordu",
+    "trafik": 100
+   },
+   {
+    "baslik": "ömür usta son bölüm",
+    "trafik": 2000
    },
    {
     "baslik": "çanakkale",
@@ -417,18 +433,6 @@
    {
     "baslik": "24 kasım öğretmenler günü",
     "trafik": 200
-   },
-   {
-    "baslik": "cumhuriyet gazetesi",
-    "trafik": 1000
-   },
-   {
-    "baslik": "haber 7",
-    "trafik": 1000
-   },
-   {
-    "baslik": "elenen yarışmacı masterchef kim elendi",
-    "trafik": 10000
    }
   ]
  },
