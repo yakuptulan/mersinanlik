@@ -285,14 +285,16 @@
    "kaynakHatalari": []
   },
   "2026-11-23": {
-   "guncelleme": "2026-11-23T06:33:18.751Z",
-   "mersinHaber": 5,
-   "kendiYazimiz": 5,
-   "turkiyeDunya": 33,
-   "otomatik": 2,
+   "guncelleme": "2026-11-23T07:06:26.994Z",
+   "mersinHaber": 10,
+   "kendiYazimiz": 10,
+   "turkiyeDunya": 38,
+   "otomatik": 4,
    "otomatikTurler": {
     "ucus": 1,
-    "etkinlik": 1
+    "etkinlik": 1,
+    "bulten": 1,
+    "is": 1
    },
    "otomatikBasliklar": [
     {
@@ -304,9 +306,19 @@
      "baslik": "Bu hafta Mersin'de neler var? 23 Kasım – 29 Kasım etkinlik rehberi",
      "tur": "etkinlik",
      "saat": "09:06"
+    },
+    {
+     "baslik": "Yeni Mersin İdmanyurdu Kırşehir deplasmanından galibiyetle döndü",
+     "tur": "bulten",
+     "saat": "10:04"
+    },
+    {
+     "baslik": "Mersin iş ilanları: İŞKUR'da bu hafta 389 açık ilan, 754 kişilik pozisyon",
+     "tur": "is",
+     "saat": "10:06"
     }
    ],
-   "gorsel": 3,
+   "gorsel": 6,
    "bilgi": 1,
    "gezi": 0,
    "kaynakHatalari": []

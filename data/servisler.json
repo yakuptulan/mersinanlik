@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-23T06:32:09.631Z",
+ "guncelleme": "2026-11-23T07:02:28.527Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -503,14 +503,14 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-23T05:57:53.646Z",
+  "guncelleme": "2026-11-23T07:02:32.312Z",
   "liste": [
    {
     "ad": "Bizim Eczanesi",
     "bolge": "YENİŞEHİR",
     "ilce": "yenisehir",
     "adres": "ÇİFTLİKKÖY MH. MİMAR SİNAN CD. PARADİSE HOME'S C BLOK NO:24 CE",
-    "tarif": "",
+    "tarif": "ÜNİVERSİTE HASTANESİ ACİL KARŞISI",
     "telefon": "03245021250",
     "lat": 36.78593,
     "lon": 34.539912,
@@ -772,7 +772,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-23T06:32:15.423Z",
+  "guncelleme": "2026-11-23T07:02:33.434Z",
   "liste": [
    {
     "tur": "su",
@@ -842,178 +842,178 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-23T06:32:17.812Z",
+  "guncelleme": "2026-11-23T07:02:35.759Z",
   "kalemler": {
    "gram": {
-    "alis": 5885.64,
-    "satis": 5886.47,
-    "degisim": 2.7
+    "alis": 5899.34,
+    "satis": 5900.31,
+    "degisim": 2.94
    },
    "ceyrek": {
-    "alis": 9954,
-    "satis": 10153,
-    "degisim": 1.77
+    "alis": 9976,
+    "satis": 10177,
+    "degisim": 2.01
    },
    "gumus": {
-    "alis": 69.31,
-    "satis": 69.39,
-    "degisim": 4.1
+    "alis": 69.45,
+    "satis": 69.55,
+    "degisim": 4.34
    },
    "usd": {
-    "alis": 50.5982,
-    "satis": 50.6071,
+    "alis": 50.5879,
+    "satis": 50.6161,
     "degisim": 0.07
    },
    "eur": {
-    "alis": 55.6509,
-    "satis": 55.7374,
-    "degisim": 0.32
+    "alis": 55.6038,
+    "satis": 55.8156,
+    "degisim": 0.35
    },
    "bist": {
     "alis": null,
     "satis": 11131.32,
-    "degisim": -2.36
+    "degisim": 0
    },
    "btc": {
-    "satis": 3111316,
-    "usd": 61485,
-    "degisim": 4.45
+    "satis": 3107208,
+    "usd": 61414,
+    "degisim": 4.27
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 5885.64,
-    "satis": 5886.47,
-    "degisim": 2.7
+    "alis": 5899.34,
+    "satis": 5900.31,
+    "degisim": 2.94
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 9954,
-    "satis": 10153,
-    "degisim": 1.77
+    "alis": 9976,
+    "satis": 10177,
+    "degisim": 2.01
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 19908,
-    "satis": 20288,
-    "degisim": 1.87
+    "alis": 19952,
+    "satis": 20336,
+    "degisim": 2.11
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 39755,
-    "satis": 40452,
-    "degisim": 1.79
+    "alis": 39842,
+    "satis": 40548,
+    "degisim": 2.03
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40668,
-    "satis": 41499,
-    "degisim": 1.78
+    "alis": 40757,
+    "satis": 41597,
+    "degisim": 2.02
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40668,
-    "satis": 41499,
-    "degisim": 1.78
+    "alis": 40757,
+    "satis": 41597,
+    "degisim": 2.02
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40668,
-    "satis": 41499,
-    "degisim": 1.78
+    "alis": 40757,
+    "satis": 41597,
+    "degisim": 2.02
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5538.04,
-    "satis": 5764.78,
-    "degisim": 1.1
+    "alis": 5550.26,
+    "satis": 5778.58,
+    "degisim": 1.34
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4172,
-    "satis": 4930,
-    "degisim": 1.13
+    "alis": 4200,
+    "satis": 4940,
+    "degisim": 1.33
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3319.26,
-    "satis": 4500.12,
-    "degisim": 0.97
+    "alis": 3326.78,
+    "satis": 4509.65,
+    "degisim": 1.19
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 5856.21,
-    "satis": 5857.04,
-    "degisim": 2.7
+    "alis": 5869.84,
+    "satis": 5870.81,
+    "degisim": 2.94
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 69.31,
-    "satis": 69.39,
-    "degisim": 4.1
+    "alis": 69.45,
+    "satis": 69.55,
+    "degisim": 4.34
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.5982,
-    "satis": 50.6071,
+    "alis": 50.5879,
+    "satis": 50.6161,
     "degisim": 0.07
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.6509,
-    "satis": 55.7374,
-    "degisim": 0.32
+    "alis": 55.6038,
+    "satis": 55.8156,
+    "degisim": 0.35
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.3447,
-    "satis": 66.6074,
-    "degisim": 0.38
+    "alis": 66.3665,
+    "satis": 66.6279,
+    "degisim": 0.42
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.3048,
-    "satis": 60.3422,
+    "alis": 60.2983,
+    "satis": 60.3479,
     "degisim": 0.16
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.4848,
+    "alis": 13.4835,
     "satis": 13.4881,
     "degisim": 0.07
    },
    {
     "k": "RUB",
     "ad": "Rus rublesi",
-    "alis": 0.6201,
-    "satis": 0.6203,
-    "degisim": 0.46
+    "alis": 0.6206,
+    "satis": 0.6209,
+    "degisim": 0.55
    }
   ],
-  "kaynakSaati": "2026-11-23 09:32:01"
+  "kaynakSaati": "2026-11-23 10:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-23T06:32:20.012Z",
+  "guncelleme": "2026-11-23T07:02:38.616Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.14,
@@ -1738,7 +1738,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-23T05:58:03.408Z",
+  "guncelleme": "2026-11-23T07:02:40.884Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8415,7 +8415,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-23T05:58:45.219Z",
+    "guncelleme": "2026-11-23T07:03:27.011Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -8497,7 +8497,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-23T05:58:46.429Z",
+    "guncelleme": "2026-11-23T07:03:28.256Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8579,7 +8579,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-23T05:58:47.647Z",
+    "guncelleme": "2026-11-23T07:03:29.508Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8678,11 +8678,15 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-23T06:32:20.403Z",
+  "guncelleme": "2026-11-23T07:02:39.049Z",
   "liste": [
    {
     "yol": "/",
     "sayi": 20
+   },
+   {
+    "yol": "/haber/mersin-de-bugun-elektrik-kesintisi-ilce-ilce-saatler-ve-mahalleler-1rud3vp/",
+    "sayi": 5
    },
    {
     "yol": "/haber/msk-da-dagilma-tehlikesi-kadro-dagildi-gelecek-belirsizlesti-fmcfmt/",
@@ -8767,57 +8771,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-23T06:32:27.860Z",
+  "guncelleme": "2026-11-23T07:03:30.709Z",
   "deniz": {
    "sicaklik": 21.5,
    "dalga": 0.26
   },
   "hava": {
-   "aqi": 36,
-   "pm25": 9.8,
-   "pm10": 15.7,
+   "aqi": 35,
+   "pm25": 8,
+   "pm10": 10.1,
    "uvMax": 2.35
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-23T06:32:29.802Z",
+  "guncelleme": "2026-11-23T07:03:32.749Z",
   "giden": [
-   {
-    "no": [
-     "PC3640"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Van",
-    "planlanan": "2026-11-23T06:35:00.000Z",
-    "tahmini": null,
-    "kapi": "109",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC3620"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Milas Bodrum",
-    "planlanan": "2026-11-23T06:45:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "VF4087"
-    ],
-    "havayolu": "AJet",
-    "yer": "Ankara",
-    "planlanan": "2026-11-23T06:50:00.000Z",
-    "tahmini": null,
-    "kapi": "105",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC2083"
@@ -8827,7 +8795,7 @@
     "planlanan": "2026-11-23T07:45:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -8851,7 +8819,7 @@
     "planlanan": "2026-11-23T08:45:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9273,21 +9241,33 @@
     "kapi": "108",
     "durum": "",
     "hat": "ic"
-   }
-  ],
-  "gelen": [
+   },
    {
     "no": [
-     "PC2082"
+     "PC2095"
     ],
     "havayolu": "Pegasus",
     "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-23T06:45:00.000Z",
+    "planlanan": "2026-11-24T06:35:00.000Z",
     "tahmini": null,
-    "kapi": "",
+    "kapi": "106",
     "durum": "",
     "hat": "ic"
    },
+   {
+    "no": [
+     "VF4087"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ankara",
+    "planlanan": "2026-11-24T06:50:00.000Z",
+    "tahmini": null,
+    "kapi": "107",
+    "durum": "",
+    "hat": "ic"
+   }
+  ],
+  "gelen": [
    {
     "no": [
      "PC1851"
@@ -9791,11 +9771,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2082"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-24T06:45:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-23T06:32:29.801Z",
+  "guncelleme": "2026-11-23T07:03:32.748Z",
   "liste": [
    {
     "id": 6386,
