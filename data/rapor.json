@@ -358,16 +358,17 @@
    "kaynakHatalari": []
   },
   "2026-11-24": {
-   "guncelleme": "2026-11-24T13:38:07.288Z",
-   "mersinHaber": 44,
-   "kendiYazimiz": 43,
-   "turkiyeDunya": 204,
-   "otomatik": 7,
+   "guncelleme": "2026-11-24T14:10:47.986Z",
+   "mersinHaber": 47,
+   "kendiYazimiz": 46,
+   "turkiyeDunya": 212,
+   "otomatik": 8,
    "otomatikTurler": {
     "okul": 1,
     "yakit": 1,
     "su": 4,
-    "piyasa": 1
+    "piyasa": 1,
+    "eczane": 1
    },
    "otomatikBasliklar": [
     {
@@ -404,14 +405,17 @@
      "baslik": "Aydıncık'ta su kesintisi (25 Kasım): Atatürk, Büyük Ada ve 6 mahalle daha, 17 saat sürecek",
      "tur": "su",
      "saat": "16:29"
+    },
+    {
+     "baslik": "Mersin nöbetçi eczaneler: 24 Kasım Salı",
+     "tur": "eczane",
+     "saat": "17:10"
     }
    ],
-   "gorsel": 36,
+   "gorsel": 39,
    "bilgi": 3,
    "gezi": 0,
-   "kaynakHatalari": [
-    "haberturk-mersin (fetch failed)"
-   ]
+   "kaynakHatalari": []
   }
  }
 }

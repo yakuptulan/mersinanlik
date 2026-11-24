@@ -1,15 +1,15 @@
 {
- "guncelleme": "2026-11-24T13:33:13.410Z",
+ "guncelleme": "2026-11-24T14:04:38.617Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 19,
-   "durum": "Kuvvetli yağmur",
+   "sicaklik": 18,
+   "durum": "Kuvvetli sağanak",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 14,
-     "max": 19,
-     "durum": "Sağanak"
+     "max": 18,
+     "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-25",
@@ -38,13 +38,13 @@
    ]
   },
   "anamur": {
-   "sicaklik": 19,
-   "durum": "Az bulutlu",
+   "sicaklik": 18,
+   "durum": "Hafif sağanak",
    "gunler": [
     {
      "tarih": "2026-11-24",
-     "min": 14,
-     "max": 19,
+     "min": 13,
+     "max": 18,
      "durum": "Az bulutlu"
     },
     {
@@ -56,7 +56,7 @@
     {
      "tarih": "2026-11-26",
      "min": 10,
-     "max": 18,
+     "max": 19,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -74,8 +74,8 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 17,
-   "durum": "Bulutlu",
+   "sicaklik": 18,
+   "durum": "Sisli",
    "gunler": [
     {
      "tarih": "2026-11-24",
@@ -110,13 +110,13 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 19,
-   "durum": "Az bulutlu",
+   "sicaklik": 17,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 13,
-     "max": 19,
+     "max": 17,
      "durum": "Az bulutlu"
     },
     {
@@ -133,9 +133,9 @@
     },
     {
      "tarih": "2026-11-27",
-     "min": 11,
+     "min": 12,
      "max": 20,
-     "durum": "Az bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -147,18 +147,18 @@
   },
   "camliyayla": {
    "sicaklik": 9,
-   "durum": "Hafif yağmurlu",
+   "durum": "Sisli",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 8,
      "max": 9,
-     "durum": "Hafif sağanak"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-25",
      "min": 2,
-     "max": 11,
+     "max": 12,
      "durum": "Açık"
     },
     {
@@ -183,7 +183,7 @@
   },
   "erdemli": {
    "sicaklik": 17,
-   "durum": "Hafif yağmurlu",
+   "durum": "Hafif sağanak",
    "gunler": [
     {
      "tarih": "2026-11-24",
@@ -205,7 +205,7 @@
     },
     {
      "tarih": "2026-11-27",
-     "min": 11,
+     "min": 12,
      "max": 20,
      "durum": "Parçalı bulutlu"
     },
@@ -219,11 +219,11 @@
   },
   "gulnar": {
    "sicaklik": 11,
-   "durum": "Hafif yağmurlu",
+   "durum": "Sisli",
    "gunler": [
     {
      "tarih": "2026-11-24",
-     "min": 9,
+     "min": 8,
      "max": 11,
      "durum": "Sisli"
     },
@@ -241,7 +241,7 @@
     },
     {
      "tarih": "2026-11-27",
-     "min": 5,
+     "min": 6,
      "max": 15,
      "durum": "Parçalı bulutlu"
     },
@@ -254,13 +254,13 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 18,
-   "durum": "Yağmurlu",
+   "sicaklik": 17,
+   "durum": "Sağanak",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 14,
-     "max": 18,
+     "max": 17,
      "durum": "Hafif sağanak"
     },
     {
@@ -290,13 +290,13 @@
    ]
   },
   "mut": {
-   "sicaklik": 18,
+   "sicaklik": 16,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
-     "min": 11,
-     "max": 18,
+     "min": 12,
+     "max": 16,
      "durum": "Hafif sağanak"
     },
     {
@@ -315,7 +315,7 @@
      "tarih": "2026-11-27",
      "min": 9,
      "max": 18,
-     "durum": "Az bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -327,13 +327,13 @@
   },
   "silifke": {
    "sicaklik": 17,
-   "durum": "Yağmurlu",
+   "durum": "Hafif yağmurlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 13,
      "max": 17,
-     "durum": "Hafif sağanak"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-25",
@@ -344,7 +344,7 @@
     {
      "tarih": "2026-11-26",
      "min": 6,
-     "max": 18,
+     "max": 19,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -362,25 +362,25 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 20,
-   "durum": "Yağmurlu",
+   "sicaklik": 18,
+   "durum": "Kuvvetli sağanak",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 15,
-     "max": 20,
-     "durum": "Hafif sağanak"
+     "max": 18,
+     "durum": "Sağanak"
     },
     {
      "tarih": "2026-11-25",
      "min": 10,
-     "max": 19,
+     "max": 20,
      "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-26",
      "min": 6,
-     "max": 20,
+     "max": 19,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -398,18 +398,18 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 19,
-   "durum": "Yağmurlu",
+   "sicaklik": 18,
+   "durum": "Kuvvetli sağanak",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 14,
-     "max": 19,
+     "max": 18,
      "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-25",
-     "min": 11,
+     "min": 12,
      "max": 18,
      "durum": "Parçalı bulutlu"
     },
@@ -434,18 +434,18 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 19,
-   "durum": "Yağmurlu",
+   "sicaklik": 18,
+   "durum": "Kuvvetli sağanak",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 14,
-     "max": 19,
+     "max": 18,
      "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-25",
-     "min": 11,
+     "min": 12,
      "max": 18,
      "durum": "Parçalı bulutlu"
     },
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-24T13:33:16.719Z",
+  "guncelleme": "2026-11-24T14:04:41.726Z",
   "liste": [
    {
     "ad": "Akgül Eczanesi",
@@ -772,31 +772,8 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-24T13:33:17.812Z",
+  "guncelleme": "2026-11-24T14:04:42.713Z",
   "liste": [
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "ERDEMLİ İLÇESİ,TAPURELİ MAHALLESİNE BAĞLI GÜLLÜ BAĞ MEVKİİ GENELİ ARIZA NEDENİ İLE SAAT 17:00 SU KESİNTİSİ YAŞANACAKTIR",
-    "baslangic": "2026-11-24T09:02:00.000Z",
-    "bitis": "2026-11-24T14:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "silifke",
-      "ad": "Silifke",
-      "mahalleler": [
-       "Şahmurlu"
-      ]
-     },
-     {
-      "ilce": "erdemli",
-      "ad": "Erdemli",
-      "mahalleler": [
-       "Tapureli"
-      ]
-     }
-    ]
-   },
    {
     "tur": "su",
     "baslik": "PLANLI SU KESİNTİSİ",
@@ -839,15 +816,15 @@
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
-    "aciklama": "ERDEMLİ İLÇESİNE BAĞLI ESENPINAR MAHALLESİ GENELİ ARIZA NEDENİ İLE SAAT 17:00 E KADAR SU KESİNTİSİ YAŞANACAKTIR",
-    "baslangic": "2026-11-24T10:44:00.000Z",
-    "bitis": "2026-11-24T14:00:00.000Z",
+    "aciklama": "Silifke ilçesi Gazi mahallesi ana şebeke arızasından kaynaklı saat 21:00 a kadar su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-24T13:55:00.000Z",
+    "bitis": "2026-11-24T18:00:00.000Z",
     "ilceler": [
      {
-      "ilce": "erdemli",
-      "ad": "Erdemli",
+      "ilce": "silifke",
+      "ad": "Silifke",
       "mahalleler": [
-       "Esenpınar"
+       "Gazi"
       ]
      }
     ]
@@ -855,178 +832,178 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-24T13:33:22.986Z",
+  "guncelleme": "2026-11-24T14:04:47.205Z",
   "kalemler": {
    "gram": {
-    "alis": 5909.03,
-    "satis": 5910.06,
-    "degisim": -0.04
+    "alis": 5891.11,
+    "satis": 5892.07,
+    "degisim": -0.34
    },
    "ceyrek": {
-    "alis": 10039,
-    "satis": 10249,
-    "degisim": 0.62
+    "alis": 10024,
+    "satis": 10240,
+    "degisim": 0.53
    },
    "gumus": {
-    "alis": 68.64,
-    "satis": 68.72,
-    "degisim": -2.03
+    "alis": 68.57,
+    "satis": 68.67,
+    "degisim": -2.1
    },
    "usd": {
-    "alis": 50.6261,
-    "satis": 50.6297,
+    "alis": 50.6219,
+    "satis": 50.6331,
     "degisim": 0.08
    },
    "eur": {
-    "alis": 55.5739,
-    "satis": 55.5824,
-    "degisim": 0.7
+    "alis": 55.6049,
+    "satis": 55.6124,
+    "degisim": 0.75
    },
    "bist": {
     "alis": null,
-    "satis": 10960,
-    "degisim": -1.3
+    "satis": 10943.37,
+    "degisim": -1.45
    },
    "btc": {
-    "satis": 3039286,
-    "usd": 60036,
-    "degisim": -1.75
+    "satis": 3052841,
+    "usd": 60300,
+    "degisim": -4.99
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 5909.03,
-    "satis": 5910.06,
-    "degisim": -0.04
+    "alis": 5891.11,
+    "satis": 5892.07,
+    "degisim": -0.34
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 10039,
-    "satis": 10249,
-    "degisim": 0.62
+    "alis": 10024,
+    "satis": 10240,
+    "degisim": 0.53
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 20078,
-    "satis": 20498,
-    "degisim": 0.71
+    "alis": 20048,
+    "satis": 20480,
+    "degisim": 0.62
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 40034,
-    "satis": 40935,
-    "degisim": 0.86
+    "alis": 39975,
+    "satis": 40899,
+    "degisim": 0.77
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40891,
-    "satis": 41458,
-    "degisim": -0.42
+    "alis": 40830,
+    "satis": 41422,
+    "degisim": -0.51
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40891,
-    "satis": 41458,
-    "degisim": -0.42
+    "alis": 40830,
+    "satis": 41422,
+    "degisim": -0.51
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40891,
-    "satis": 41458,
-    "degisim": -0.42
+    "alis": 40830,
+    "satis": 41422,
+    "degisim": -0.51
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5568.62,
-    "satis": 5763.6,
-    "degisim": -0.35
+    "alis": 5560.23,
+    "satis": 5758.44,
+    "degisim": -0.44
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4220,
+    "alis": 4218,
     "satis": 4930,
     "degisim": -0.5
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3338.08,
-    "satis": 4499.3,
-    "degisim": -0.31
+    "alis": 3332.91,
+    "satis": 4495.73,
+    "degisim": -0.39
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 5879.49,
-    "satis": 5880.51,
-    "degisim": -0.04
+    "alis": 5861.66,
+    "satis": 5862.61,
+    "degisim": -0.34
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 68.64,
-    "satis": 68.72,
-    "degisim": -2.03
+    "alis": 68.57,
+    "satis": 68.67,
+    "degisim": -2.1
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.6261,
-    "satis": 50.6297,
+    "alis": 50.6219,
+    "satis": 50.6331,
     "degisim": 0.08
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.5739,
-    "satis": 55.5824,
-    "degisim": 0.7
+    "alis": 55.6049,
+    "satis": 55.6124,
+    "degisim": 0.75
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.4116,
-    "satis": 66.4226,
-    "degisim": 0.64
+    "alis": 66.4369,
+    "satis": 66.4473,
+    "degisim": 0.68
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.4346,
-    "satis": 60.4606,
-    "degisim": 0.55
+    "alis": 60.436,
+    "satis": 60.4725,
+    "degisim": 0.56
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.4893,
-    "satis": 13.4937,
+    "alis": 13.4889,
+    "satis": 13.4941,
     "degisim": 0.07
    },
    {
     "k": "RUB",
     "ad": "Rus rublesi",
-    "alis": 0.6161,
-    "satis": 0.6174,
-    "degisim": -0.13
+    "alis": 0.6136,
+    "satis": 0.6199,
+    "degisim": -0.14
    }
   ],
-  "kaynakSaati": "2026-11-24 16:33:01"
+  "kaynakSaati": "2026-11-24 17:04:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-24T13:33:25.433Z",
+  "guncelleme": "2026-11-24T14:04:49.189Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -2051,12 +2028,338 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-24T13:33:27.714Z",
+  "guncelleme": "2026-11-24T14:04:51.087Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
-   "puan": [],
-   "maclar": []
+   "puan": [
+    {
+     "sira": 1,
+     "takim": "Galatasaray",
+     "ham": "GALATASARAY A.Ş.",
+     "o": 12,
+     "g": 10,
+     "b": 1,
+     "m": 1,
+     "a": 29,
+     "y": 16,
+     "av": 13,
+     "p": 31,
+     "mersin": false
+    },
+    {
+     "sira": 2,
+     "takim": "Trabzonspor",
+     "ham": "TRABZONSPOR A.Ş.",
+     "o": 12,
+     "g": 9,
+     "b": 1,
+     "m": 2,
+     "a": 27,
+     "y": 8,
+     "av": 19,
+     "p": 28,
+     "mersin": false
+    },
+    {
+     "sira": 3,
+     "takim": "Beşiktaş",
+     "ham": "BEŞİKTAŞ A.Ş.",
+     "o": 12,
+     "g": 8,
+     "b": 1,
+     "m": 3,
+     "a": 27,
+     "y": 14,
+     "av": 13,
+     "p": 25,
+     "mersin": false
+    },
+    {
+     "sira": 4,
+     "takim": "Amed Sportif Faaliyetler",
+     "ham": "AMED SPORTİF FAALİYETLER",
+     "o": 12,
+     "g": 7,
+     "b": 2,
+     "m": 3,
+     "a": 28,
+     "y": 17,
+     "av": 11,
+     "p": 23,
+     "mersin": false
+    },
+    {
+     "sira": 5,
+     "takim": "Kasımpaşa",
+     "ham": "KASIMPAŞA A.Ş.",
+     "o": 12,
+     "g": 6,
+     "b": 5,
+     "m": 1,
+     "a": 19,
+     "y": 12,
+     "av": 7,
+     "p": 23,
+     "mersin": false
+    },
+    {
+     "sira": 6,
+     "takim": "Fenerbahçe",
+     "ham": "FENERBAHÇE A.Ş.",
+     "o": 12,
+     "g": 6,
+     "b": 2,
+     "m": 4,
+     "a": 31,
+     "y": 12,
+     "av": 19,
+     "p": 20,
+     "mersin": false
+    },
+    {
+     "sira": 7,
+     "takim": "İstanbul Başakşehir FK",
+     "ham": "İSTANBUL BAŞAKŞEHİR FK",
+     "o": 12,
+     "g": 6,
+     "b": 2,
+     "m": 4,
+     "a": 23,
+     "y": 19,
+     "av": 4,
+     "p": 20,
+     "mersin": false
+    },
+    {
+     "sira": 8,
+     "takim": "Kocaelispor",
+     "ham": "KOCAELİSPOR",
+     "o": 12,
+     "g": 6,
+     "b": 2,
+     "m": 4,
+     "a": 15,
+     "y": 11,
+     "av": 4,
+     "p": 20,
+     "mersin": false
+    },
+    {
+     "sira": 9,
+     "takim": "Göztepe",
+     "ham": "GÖZTEPE A.Ş.",
+     "o": 12,
+     "g": 5,
+     "b": 3,
+     "m": 4,
+     "a": 23,
+     "y": 19,
+     "av": 4,
+     "p": 18,
+     "mersin": false
+    },
+    {
+     "sira": 10,
+     "takim": "Çaykur Rizespor",
+     "ham": "ÇAYKUR RİZESPOR A.Ş.",
+     "o": 12,
+     "g": 5,
+     "b": 2,
+     "m": 5,
+     "a": 15,
+     "y": 16,
+     "av": -1,
+     "p": 17,
+     "mersin": false
+    },
+    {
+     "sira": 11,
+     "takim": "Arca Çorum FK",
+     "ham": "ARCA ÇORUM FK",
+     "o": 12,
+     "g": 5,
+     "b": 1,
+     "m": 6,
+     "a": 23,
+     "y": 25,
+     "av": -2,
+     "p": 16,
+     "mersin": false
+    },
+    {
+     "sira": 12,
+     "takim": "Gençlerbirliği",
+     "ham": "GENÇLERBİRLİĞİ",
+     "o": 12,
+     "g": 4,
+     "b": 2,
+     "m": 6,
+     "a": 13,
+     "y": 21,
+     "av": -8,
+     "p": 14,
+     "mersin": false
+    },
+    {
+     "sira": 13,
+     "takim": "Erzurumspor FK",
+     "ham": "ERZURUMSPOR FK",
+     "o": 12,
+     "g": 4,
+     "b": 2,
+     "m": 6,
+     "a": 10,
+     "y": 18,
+     "av": -8,
+     "p": 14,
+     "mersin": false
+    },
+    {
+     "sira": 14,
+     "takim": "Corendon Alanyaspor",
+     "ham": "CORENDON ALANYASPOR",
+     "o": 12,
+     "g": 3,
+     "b": 3,
+     "m": 6,
+     "a": 10,
+     "y": 20,
+     "av": -10,
+     "p": 12,
+     "mersin": false
+    },
+    {
+     "sira": 15,
+     "takim": "Tümosan Konyaspor",
+     "ham": "TÜMOSAN KONYASPOR",
+     "o": 12,
+     "g": 2,
+     "b": 2,
+     "m": 8,
+     "a": 8,
+     "y": 18,
+     "av": -10,
+     "p": 8,
+     "mersin": false
+    },
+    {
+     "sira": 16,
+     "takim": "Gaziantep",
+     "ham": "GAZİANTEP FUTBOL KULÜBÜ A.Ş.",
+     "o": 12,
+     "g": 2,
+     "b": 2,
+     "m": 8,
+     "a": 9,
+     "y": 20,
+     "av": -11,
+     "p": 8,
+     "mersin": false
+    },
+    {
+     "sira": 17,
+     "takim": "Samsunspor",
+     "ham": "SAMSUNSPOR A.Ş.",
+     "o": 12,
+     "g": 2,
+     "b": 1,
+     "m": 9,
+     "a": 12,
+     "y": 28,
+     "av": -16,
+     "p": 7,
+     "mersin": false
+    },
+    {
+     "sira": 18,
+     "takim": "Eyüpspor",
+     "ham": "EYÜPSPOR",
+     "o": 12,
+     "g": 1,
+     "b": 0,
+     "m": 11,
+     "a": 3,
+     "y": 31,
+     "av": -28,
+     "p": 3,
+     "mersin": false
+    }
+   ],
+   "maclar": [
+    {
+     "tarih": "2026-11-27",
+     "saat": "20:00",
+     "ev": "Corendon Alanyaspor",
+     "skor": null,
+     "dep": "Tümosan Konyaspor",
+     "mersin": false
+    },
+    {
+     "tarih": "2026-11-27",
+     "saat": "20:00",
+     "ev": "Çaykur Rizespor",
+     "skor": null,
+     "dep": "Kasımpaşa",
+     "mersin": false
+    },
+    {
+     "tarih": "2026-11-28",
+     "saat": "16:00",
+     "ev": "Samsunspor",
+     "skor": null,
+     "dep": "Gençlerbirliği",
+     "mersin": false
+    },
+    {
+     "tarih": "2026-11-28",
+     "saat": "19:00",
+     "ev": "Gaziantep",
+     "skor": null,
+     "dep": "Amed Sportif Faaliyetler",
+     "mersin": false
+    },
+    {
+     "tarih": "2026-11-29",
+     "saat": "13:30",
+     "ev": "Arca Çorum FK",
+     "skor": null,
+     "dep": "Kocaelispor",
+     "mersin": false
+    },
+    {
+     "tarih": "2026-11-29",
+     "saat": "16:00",
+     "ev": "Eyüpspor",
+     "skor": null,
+     "dep": "İstanbul Başakşehir FK",
+     "mersin": false
+    },
+    {
+     "tarih": "2026-11-29",
+     "saat": "19:00",
+     "ev": "Fenerbahçe",
+     "skor": null,
+     "dep": "Erzurumspor FK",
+     "mersin": false
+    },
+    {
+     "tarih": "2026-11-30",
+     "saat": "19:00",
+     "ev": "Göztepe",
+     "skor": null,
+     "dep": "Trabzonspor",
+     "mersin": false
+    },
+    {
+     "tarih": "2026-11-30",
+     "saat": "21:00",
+     "ev": "Beşiktaş",
+     "skor": null,
+     "dep": "Galatasaray",
+     "mersin": false
+    }
+   ]
   },
   "ucuncuLig": {
    "ad": "Nesine 3. Lig 3. Grup",
@@ -4894,22 +5197,22 @@
      "Kızılkaya Tarım Şanlıurfaspor": "31",
      "İnegöl Kafkas Spor": "3276",
      "Arkent Arnavutköy Belediyesi Futbol SK": "6039",
+     "Kct 1461 Trabzon FK": "2375",
+     "Sakaryaspor": "3594",
+     "Akedaş Kahramanmaraş İstiklal Spor": "9908",
+     "Beyoğlu Yeni Çarşı Spor Faaliyetleri": "3096",
+     "Fethiyespor": "58",
+     "52 Orduspor FK": "4910",
+     "Adana 01 Futbol Kulübü SK": "9498",
+     "Erzincan Futbol Yatırımları": "2035",
      "Karacabey Belediye Spor": "3292",
      "Serik Spor": "4167",
+     "Kütahyaspor": "133",
+     "İskenderunspor": "4258",
      "Sultan Su İnegölspor": "131",
      "12 Bingöl Spor": "7632",
      "Mke Ankaragücü": "3595",
      "Ankara Demirspor": "11",
-     "Fethiyespor": "58",
-     "52 Orduspor FK": "4910",
-     "Kct 1461 Trabzon FK": "2375",
-     "Sakaryaspor": "3594",
-     "Adana 01 Futbol Kulübü SK": "9498",
-     "Erzincan Futbol Yatırımları": "2035",
-     "Akedaş Kahramanmaraş İstiklal Spor": "9908",
-     "Beyoğlu Yeni Çarşı Spor Faaliyetleri": "3096",
-     "Kütahyaspor": "133",
-     "İskenderunspor": "4258",
      "Ekinciler İskenderunspor": "4258",
      "Kırklarelispor": "50"
     },
@@ -5709,24 +6012,24 @@
      "Serik Spor": "4167",
      "Ankara Demirspor": "11",
      "İskenderunspor": "4258",
+     "Kızılkaya Tarım Şanlıurfaspor": "31",
+     "Ankaraspor": "4355",
+     "Seza Çimento Elazığspor": "37",
+     "Sebat Spor": "10300",
      "Hatayspor": "121",
      "Güzide Gebze Spor": "746",
-     "Arkent Arnavutköy Belediyesi Futbol SK": "6039",
-     "Aliağa": "2720",
+     "Somaspor": "497",
+     "68 Aksaray Belediye Spor": "6496",
      "Menemen": "1120",
      "İnegöl Kafkas Spor": "3276",
      "Isbaş Isparta 32 Spor": "1484",
      "Adana Demirspor": "3603",
-     "Kızılkaya Tarım Şanlıurfaspor": "31",
-     "Ankaraspor": "4355",
-     "Gmg Kastamonuspor": "4342",
-     "Çorlu Spor 1947": "5044",
-     "Somaspor": "497",
-     "68 Aksaray Belediye Spor": "6496",
      "Efor Çay Erbaaspor": "3641",
      "Muş Spor": "8722",
-     "Seza Çimento Elazığspor": "37",
-     "Sebat Spor": "10300"
+     "Gmg Kastamonuspor": "4342",
+     "Çorlu Spor 1947": "5044",
+     "Arkent Arnavutköy Belediyesi Futbol SK": "6039",
+     "Aliağa": "2720"
     },
     "form": {
      "52 Orduspor FK": [
@@ -6535,40 +6838,40 @@
      "Beykoz İshaklı Spor Faaliyetleri": "4485",
      "Bursa Yıldırım Spor": "8550",
      "Söke 1970 Spor": "6176",
-     "Altay": "3591",
-     "Denizli İdmanyurdu 1959 Spor": "384",
-     "Gaziemir G.o.g. Spor Yat.": "3095",
-     "Ayvalıkgücü Belediyespor": "105",
-     "Etimesgut Spor": "4212",
-     "Karşıyaka": "3598",
-     "1922 Akşehir Spor": "6835",
-     "Gemlik Sümerbey Futbol Spor": "8486",
-     "Balıkesirspor": "135",
-     "Bucaspor 1928": "4274",
-     "Eskişehirspor": "3",
-     "Alanya 1221": "3808",
-     "Bigaspor": "136",
-     "Uşak Spor": "5155",
      "Kepez Spor": "1841",
      "Eskişehir Anadolu Spor Faaliyetleri": "4152",
-     "Bitlis 1916": "3840",
-     "1964 Silifke Spor": "3666",
-     "Yozgat Belediyesi Bozok Spor": "7787",
-     "Ejderoğlu Kırşehir": "4499",
-     "Adanaspor": "3605",
-     "Niğde Belediyesi Spor": "9399",
-     "Yeni Malatyaspor": "4879",
-     "Karaman": "165",
-     "Ayos Osmaniyespor": "3051",
-     "Adana Adaletgücü Spor": "8742",
-     "Kırıkkale FK Spor": "186",
-     "Halil Bayram İnşaat Karaköprü Belediyespor": "4517",
+     "Balıkesirspor": "135",
+     "Bucaspor 1928": "4274",
+     "Etimesgut Spor": "4212",
+     "Karşıyaka": "3598",
+     "Bigaspor": "136",
+     "Uşak Spor": "5155",
+     "Eskişehirspor": "3",
+     "Alanya 1221": "3808",
+     "1922 Akşehir Spor": "6835",
+     "Gemlik Sümerbey Futbol Spor": "8486",
+     "Gaziemir G.o.g. Spor Yat.": "3095",
+     "Ayvalıkgücü Belediyespor": "105",
+     "Altay": "3591",
+     "Denizli İdmanyurdu 1959 Spor": "384",
      "Diyarbekir Spor": "3196",
      "Malatya Yeşilyurt Spor": "4844",
+     "Yozgat Belediyesi Bozok Spor": "7787",
+     "Ejderoğlu Kırşehir": "4499",
+     "Kırıkkale FK Spor": "186",
+     "Halil Bayram İnşaat Karaköprü Belediyespor": "4517",
+     "Ağrı 1970 Spor": "7890",
+     "Açıkalın Erciyes 38": "4398",
+     "Bitlis 1916": "3840",
+     "1964 Silifke Spor": "3666",
      "Yeni Mersin İdmanyurdu": "4228",
      "Eti Gübre Mazıdağı Fosfat Spor": "10337",
-     "Ağrı 1970 Spor": "7890",
-     "Açıkalın Erciyes 38": "4398"
+     "Yeni Malatyaspor": "4879",
+     "Karaman": "165",
+     "Adanaspor": "3605",
+     "Niğde Belediyesi Spor": "9399",
+     "Ayos Osmaniyespor": "3051",
+     "Adana Adaletgücü Spor": "8742"
     },
     "form": {
      "Fatsa Belediyespor": [
@@ -7381,43 +7684,43 @@
      "Balıkesirspor": "135",
      "Karşıyaka": "3598",
      "Alanya 1221": "3808",
-     "Orduspor 1967": "4929",
-     "Düzce Cam Düzcespor": "98",
-     "Beykoz Anadolu Spor": "2744",
-     "Küçükçekmece Sinop Spor": "1092",
      "İnkılap": "1465",
      "Zonguldak Spor": "2434",
-     "Amasyaspor FK": "2780",
-     "Gölcükspor": "3640",
+     "Beykoz Anadolu Spor": "2744",
+     "Küçükçekmece Sinop Spor": "1092",
+     "Orduspor 1967": "4929",
+     "Düzce Cam Düzcespor": "98",
      "Galata Spor": "42",
      "Pazarspor": "3662",
-     "Silivrispor": "44",
-     "Beykoz İshaklı Spor Faaliyetleri": "4485",
-     "Karabük İdmanyurdu Spor": "10580",
-     "Kartal Bulvar Kartalimen Spor": "4491",
-     "Kdz.ereğli 1980 Spor": "3690",
-     "Fatsa Belediyespor": "4933",
      "Yalova FK 77 Spor": "3087",
      "Tokat Belediye Spor": "11881",
+     "Silivrispor": "44",
+     "Beykoz İshaklı Spor Faaliyetleri": "4485",
+     "Amasyaspor FK": "2780",
+     "Gölcükspor": "3640",
+     "Kdz.ereğli 1980 Spor": "3690",
+     "Fatsa Belediyespor": "4933",
+     "Karabük İdmanyurdu Spor": "10580",
+     "Kartal Bulvar Kartalimen Spor": "4491",
      "Büyükçekmece Gücü FK Spor": "4485",
-     "Yeni Malatyaspor": "4879",
-     "Karaman": "165",
      "Bitlis 1916": "3840",
      "1964 Silifke Spor": "3666",
-     "Ağrı 1970 Spor": "7890",
-     "Açıkalın Erciyes 38": "4398",
      "Yozgat Belediyesi Bozok Spor": "7787",
      "Ejderoğlu Kırşehir": "4499",
+     "Adanaspor": "3605",
+     "Niğde Belediyesi Spor": "9399",
+     "Yeni Malatyaspor": "4879",
+     "Karaman": "165",
+     "Ayos Osmaniyespor": "3051",
+     "Adana Adaletgücü Spor": "8742",
      "Kırıkkale FK Spor": "186",
      "Halil Bayram İnşaat Karaköprü Belediyespor": "4517",
      "Diyarbekir Spor": "3196",
      "Malatya Yeşilyurt Spor": "4844",
-     "Ayos Osmaniyespor": "3051",
-     "Adana Adaletgücü Spor": "8742",
-     "Adanaspor": "3605",
-     "Niğde Belediyesi Spor": "9399",
      "Yeni Mersin İdmanyurdu": "4228",
-     "Eti Gübre Mazıdağı Fosfat Spor": "10337"
+     "Eti Gübre Mazıdağı Fosfat Spor": "10337",
+     "Ağrı 1970 Spor": "7890",
+     "Açıkalın Erciyes 38": "4398"
     },
     "form": {
      "Etimesgut Spor": [
@@ -8165,6 +8468,11 @@
      ],
      "14": [
       {
+       "ev": "Malatya Yeşilyurt Spor",
+       "dep": "Ağrı 1970 Spor",
+       "skor": null
+      },
+      {
        "ev": "Kırıkkale FK Spor",
        "dep": "Karaman",
        "skor": null
@@ -8187,11 +8495,6 @@
       {
        "ev": "Açıkalın Erciyes 38",
        "dep": "Adana Adaletgücü Spor",
-       "skor": null
-      },
-      {
-       "ev": "Malatya Yeşilyurt Spor",
-       "dep": "Ağrı 1970 Spor",
        "skor": null
       },
       {
@@ -8230,39 +8533,39 @@
      "Yozgat Belediyesi Bozok Spor": "7787",
      "Niğde Belediyesi Spor": "9399",
      "Açıkalın Erciyes 38": "4398",
-     "Kdz.ereğli 1980 Spor": "3690",
-     "Fatsa Belediyespor": "4933",
-     "İnkılap": "1465",
-     "Zonguldak Spor": "2434",
-     "Amasyaspor FK": "2780",
-     "Gölcükspor": "3640",
      "Galata Spor": "42",
      "Pazarspor": "3662",
      "Silivrispor": "44",
      "Beykoz İshaklı Spor Faaliyetleri": "4485",
-     "Karabük İdmanyurdu Spor": "10580",
-     "Kartal Bulvar Kartalimen Spor": "4491",
-     "Orduspor 1967": "4929",
-     "Düzce Cam Düzcespor": "98",
-     "Yalova FK 77 Spor": "3087",
-     "Tokat Belediye Spor": "11881",
+     "İnkılap": "1465",
+     "Zonguldak Spor": "2434",
      "Beykoz Anadolu Spor": "2744",
      "Küçükçekmece Sinop Spor": "1092",
+     "Amasyaspor FK": "2780",
+     "Gölcükspor": "3640",
+     "Yalova FK 77 Spor": "3087",
+     "Tokat Belediye Spor": "11881",
+     "Kdz.ereğli 1980 Spor": "3690",
+     "Fatsa Belediyespor": "4933",
+     "Orduspor 1967": "4929",
+     "Düzce Cam Düzcespor": "98",
+     "Karabük İdmanyurdu Spor": "10580",
+     "Kartal Bulvar Kartalimen Spor": "4491",
      "Büyükçekmece Gücü FK Spor": "4485",
      "Bursa Yıldırım Spor": "8550",
      "Söke 1970 Spor": "6176",
-     "Kepez Spor": "1841",
-     "Eskişehir Anadolu Spor Faaliyetleri": "4152",
-     "Balıkesirspor": "135",
-     "Bucaspor 1928": "4274",
      "Etimesgut Spor": "4212",
      "Karşıyaka": "3598",
-     "Bigaspor": "136",
-     "Uşak Spor": "5155",
-     "Eskişehirspor": "3",
-     "Alanya 1221": "3808",
      "1922 Akşehir Spor": "6835",
      "Gemlik Sümerbey Futbol Spor": "8486",
+     "Eskişehirspor": "3",
+     "Alanya 1221": "3808",
+     "Balıkesirspor": "135",
+     "Bucaspor 1928": "4274",
+     "Bigaspor": "136",
+     "Uşak Spor": "5155",
+     "Kepez Spor": "1841",
+     "Eskişehir Anadolu Spor Faaliyetleri": "4152",
      "Gaziemir G.o.g. Spor Yat.": "3095",
      "Ayvalıkgücü Belediyespor": "105",
      "Altay": "3591",
@@ -8402,7 +8705,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-24T13:36:58.841Z",
+    "guncelleme": "2026-11-24T14:09:36.147Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -8484,7 +8787,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-24T13:37:09.496Z",
+    "guncelleme": "2026-11-24T14:09:46.245Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8566,7 +8869,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-24T13:37:14.026Z",
+    "guncelleme": "2026-11-24T14:09:56.669Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8665,7 +8968,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-24T13:33:26.025Z",
+  "guncelleme": "2026-11-24T14:04:49.666Z",
   "liste": [
    {
     "yol": "/",
@@ -8748,7 +9051,7 @@
     "sayi": 1
    },
    {
-    "yol": "/hava-durumu/anamur/",
+    "yol": "/haber/kurum-aracini-ozel-islerinde-kullandigi-iddia-edilen-muze-mudurunun-ya-189mz5a/",
     "sayi": 1
    },
    {
@@ -8756,7 +9059,7 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/kurum-aracini-ozel-islerinde-kullandigi-iddia-edilen-muze-mudurunun-ya-189mz5a/",
+    "yol": "/hava-durumu/anamur/",
     "sayi": 1
    },
    {
@@ -8764,11 +9067,11 @@
     "sayi": 1
    },
    {
-    "yol": "/okullar-tatil-mi/zonguldak/",
+    "yol": "/is-ilanlari/",
     "sayi": 1
    },
    {
-    "yol": "/is-ilanlari/",
+    "yol": "/okullar-tatil-mi/zonguldak/",
     "sayi": 1
    },
    {
@@ -8790,33 +9093,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-24T13:37:15.227Z",
+  "guncelleme": "2026-11-24T14:09:57.870Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.2
   },
   "hava": {
-   "aqi": 52,
-   "pm25": 14.1,
-   "pm10": 22.1,
+   "aqi": 53,
+   "pm25": 15.2,
+   "pm10": 22.7,
    "uvMax": 1.9
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-24T13:37:17.166Z",
+  "guncelleme": "2026-11-24T14:09:59.703Z",
   "giden": [
-   {
-    "no": [
-     "PC3013"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "İzmir",
-    "planlanan": "2026-11-24T13:50:00.000Z",
-    "tahmini": null,
-    "kapi": "105",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
    {
     "no": [
      "TK2463"
@@ -8850,7 +9141,7 @@
     "planlanan": "2026-11-24T15:55:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9258,6 +9549,18 @@
     "planlanan": "2026-11-25T12:55:00.000Z",
     "tahmini": null,
     "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3013"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-25T13:50:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
     "durum": "",
     "hat": "ic"
    }
@@ -9706,11 +10009,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3631"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Dalaman",
+    "planlanan": "2026-11-25T13:50:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-24T13:37:17.166Z",
+  "guncelleme": "2026-11-24T14:09:59.703Z",
   "liste": [
    {
     "id": 6386,

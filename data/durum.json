@@ -12,16 +12,12 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-24T13:31:29.526Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-24",
-  "adet": 36,
-  "premium": 36
+  "adet": 39,
+  "premium": 39
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -295,7 +291,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-bir-haftadir-kayip-olarak-aranan-kadin-bulundu-119531146",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/nemli-toprak-yiyerek-7-gun-boyunca-hayata-tutunmus-mersinde-kaybolusunun-7-gununde-119531269",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-ogrencilerden-ogretmenlerine-yoresel-urun-hediyesi-119531507",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersin-protokolunden-24-kasim-ogretmenler-gunu-mesaji-119531476"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersin-protokolunden-24-kasim-ogretmenler-gunu-mesaji-119531476",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/adana-mersin-ve-osmaniyenin-ilcelerinde-ogretmenler-gunu-kutlandi-119531533"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -464,11 +461,15 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-24T13:32:09.130Z",
+  "guncelleme": "2026-11-24T14:01:46.368Z",
   "liste": [
    {
+    "baslik": "memur zammı 2027",
+    "trafik": 200
+   },
+   {
     "baslik": "aksaray",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "25 kasım ne günü",
@@ -480,11 +481,15 @@
    },
    {
     "baslik": "24 kasım 2026 altın fiyatları",
-    "trafik": 1000
+    "trafik": 2000
    },
    {
     "baslik": "uefa youth league",
     "trafik": 200
+   },
+   {
+    "baslik": "gol",
+    "trafik": 100
    },
    {
     "baslik": "emekli maaş promosyonu",
@@ -492,18 +497,10 @@
    },
    {
     "baslik": "galatasaray u19",
-    "trafik": 1000
-   },
-   {
-    "baslik": "brahim diaz",
     "trafik": 2000
    },
    {
-    "baslik": "hayvancilik",
-    "trafik": 1000
-   },
-   {
-    "baslik": "cevdet yilmaz emekli",
+    "baslik": "brahim diaz",
     "trafik": 2000
    }
   ]
