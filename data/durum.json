@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-24T03:31:22.448Z"
   }
  },
  "gorsel": {
@@ -432,19 +428,35 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-24T03:31:56.540Z",
+  "guncelleme": "2026-11-24T04:01:37.463Z",
   "liste": [
+   {
+    "baslik": "uzak şehir",
+    "trafik": 5000
+   },
+   {
+    "baslik": "trabzon hava durumu",
+    "trafik": 100
+   },
+   {
+    "baslik": "indirim",
+    "trafik": 200
+   },
+   {
+    "baslik": "aselsan",
+    "trafik": 1000
+   },
    {
     "baslik": "dolar tl",
     "trafik": 100
    },
    {
-    "baslik": "mynet",
-    "trafik": 20000
+    "baslik": "japonya",
+    "trafik": 100
    },
    {
     "baslik": "infaz",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "rockets - clippers",
@@ -457,22 +469,6 @@
    {
     "baslik": "fenerbahçe transfer",
     "trafik": 200
-   },
-   {
-    "baslik": "adil koçari öldü mü",
-    "trafik": 100
-   },
-   {
-    "baslik": "erzurum afad",
-    "trafik": 5000
-   },
-   {
-    "baslik": "asena özçetin",
-    "trafik": 5000
-   },
-   {
-    "baslik": "nantes",
-    "trafik": 500
    }
   ]
  },
