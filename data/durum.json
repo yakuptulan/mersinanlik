@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-24T00:01:26.500Z"
   }
  },
  "gorsel": {
@@ -428,8 +432,12 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-23T23:31:48.476Z",
+  "guncelleme": "2026-11-24T00:01:55.673Z",
   "liste": [
+   {
+    "baslik": "fenerbahçe transfer",
+    "trafik": 100
+   },
    {
     "baslik": "adil koçari öldü mü",
     "trafik": 100
@@ -465,10 +473,6 @@
    {
     "baslik": "brentford - everton",
     "trafik": 1000
-   },
-   {
-    "baslik": "kütahya hava durumu",
-    "trafik": 500
    }
   ]
  },
