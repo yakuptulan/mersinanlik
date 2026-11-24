@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-24T04:31:55.181Z",
+ "guncelleme": "2026-11-24T05:01:51.579Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 14,
@@ -38,7 +38,7 @@
    ]
   },
   "anamur": {
-   "sicaklik": 14,
+   "sicaklik": 15,
    "durum": "Bulutlu",
    "gunler": [
     {
@@ -74,8 +74,8 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 14,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 15,
+   "durum": "Hafif yağmurlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
@@ -182,12 +182,12 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 14,
+   "sicaklik": 15,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
-     "min": 14,
+     "min": 15,
      "max": 19,
      "durum": "Hafif sağanak"
     },
@@ -218,8 +218,8 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 9,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 10,
+   "durum": "Hafif yağmurlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
@@ -362,12 +362,12 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 13,
-   "durum": "Açık",
+   "sicaklik": 14,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
-     "min": 13,
+     "min": 14,
      "max": 21,
      "durum": "Sağanak"
     },
@@ -503,239 +503,305 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-24T04:32:00.639Z",
+  "guncelleme": "2026-11-24T05:01:55.593Z",
   "liste": [
    {
-    "ad": "Bizim Eczanesi",
+    "ad": "Akgül Eczanesi",
     "bolge": "YENİŞEHİR",
     "ilce": "yenisehir",
-    "adres": "ÇİFTLİKKÖY MH. MİMAR SİNAN CD. PARADİSE HOME'S C BLOK NO:24 CE",
-    "tarif": "ÜNİVERSİTE HASTANESİ ACİL KARŞISI",
-    "telefon": "03245021250",
-    "lat": 36.78593,
-    "lon": 34.539912,
-    "saat": "23.11.2026 18:00 / 24.11.2026 08:00 nöbetçidir."
+    "adres": "BATIKENT MAH. YAĞMUR SULTAN KONUTLARI NO:57/AB",
+    "tarif": "2.ÇEVREYOLU YENİ VALİLİK ARKASI (KUZEYİ) NECATİ BOLKAN OKULU YANI",
+    "telefon": "03242904494",
+    "lat": 36.779743,
+    "lon": 34.556757,
+    "saat": "24.11.2026 18:00 / 25.11.2026 08:00 nöbetçidir."
    },
    {
-    "ad": "Bozdağ Eczanesi",
-    "bolge": "AKDENİZ",
-    "ilce": "akdeniz",
-    "adres": "YENİ MH. 5328 SK. NO:1A",
-    "tarif": "TOROS DEVLET HASTANESİ ACİL KAPISI KARŞISI",
-    "telefon": "03242316590",
-    "lat": 36.805038,
-    "lon": 34.633749,
-    "saat": "23.11.2026 18:00 / 24.11.2026 08:00 nöbetçidir."
-   },
-   {
-    "ad": "Doğa Eczanesi",
+    "ad": "Altunbaş Eczanesi",
     "bolge": "YENİŞEHİR",
     "ilce": "yenisehir",
-    "adres": "GÜVENEVLER MAH 1.CAD.CIHAN SAFAK APT.NO:27-2/B",
-    "tarif": "GÜVENEVLER MAH.GÜVEN SİTESİ KARŞISI FORUM DOĞU TRF 1.CD. 4 NOLU SAĞLIK OCAĞI KARŞISI/YENİŞEHİR",
-    "telefon": "03243285493",
-    "lat": 36.78561,
-    "lon": 34.592384,
-    "saat": "23.11.2026 18:00 / 24.11.2026 08:00 nöbetçidir."
+    "adres": "GÜVENEVLER MAH.1.CAD.NO:112/3",
+    "tarif": "GÜVENEVLER MH. 1.CD. POZCU ÇETİNKAYA BİTİŞİĞİ/YENİŞEHİR",
+    "telefon": "03243278020",
+    "lat": 36.786284,
+    "lon": 34.593106,
+    "saat": "24.11.2026 18:00 / 25.11.2026 08:00 nöbetçidir."
    },
    {
-    "ad": "Gündoğdu Eczanesi",
-    "bolge": "MEZİTLİ",
-    "ilce": "mezitli",
-    "adres": "MERKEZ MH. VATAN CD. SİYENA 21 ŞEHRİ YILDIZ SİTESİ",
-    "tarif": "ŞIRDANCI HAMİT SIRASI, DONDURMACIM KARŞISI",
-    "telefon": "05559623333",
-    "lat": 36.745579,
-    "lon": 34.517904,
-    "saat": "23.11.2026 18:00 / 24.11.2026 08:00 nöbetçidir."
-   },
-   {
-    "ad": "Mersin Eczanesi",
+    "ad": "Buket Eczanesi",
     "bolge": "AKDENİZ",
     "ilce": "akdeniz",
-    "adres": "İHSANİYE MH. KUVAİ MİLLİYE CD. NO.109F",
-    "tarif": "HASTANE CD. AKDENİZ BELEDİYESİ ARKASI ZİRAAT BANKASI KURUÇEŞME ŞUBESİ KARŞISI /AKDENİZ",
-    "telefon": "03243371017",
-    "lat": 36.804386,
-    "lon": 34.623624,
-    "saat": "23.11.2026 18:00 / 24.11.2026 08:00 nöbetçidir."
+    "adres": "YENİ MAH. 5314 SOK. NO:4",
+    "tarif": "TOROS DEVLET HASTANESİ (ESKİ SSK) KARŞISI",
+    "telefon": "03243366620",
+    "lat": 36.80653,
+    "lon": 34.635763,
+    "saat": "24.11.2026 18:00 / 25.11.2026 08:00 nöbetçidir."
    },
    {
-    "ad": "Portakal Eczanesi",
-    "bolge": "TOROSLAR",
-    "ilce": "toroslar",
-    "adres": "PORTAKAL MH. 210. CD. NO: 58/A",
-    "tarif": "PORTAKAL MH. 210. CD. PORTAKAL ASM KARŞISI",
-    "telefon": "03244081388",
-    "lat": 36.812168,
-    "lon": 34.600384,
-    "saat": "23.11.2026 18:00 / 24.11.2026 08:00 nöbetçidir."
-   },
-   {
-    "ad": "Solena Eczanesi",
+    "ad": "Can Eczanesi",
     "bolge": "MEZİTLİ",
     "ilce": "mezitli",
-    "adres": "ATATÜRK MH. 31045 SK. NO:18A",
-    "tarif": "ÜNİVERSİTE YOLU ÖZEL ORTADOĞU HASTANESİ CİVARI",
-    "telefon": "03242215186",
-    "lat": 36.765404,
-    "lon": 34.547151,
-    "saat": "23.11.2026 18:00 / 24.11.2026 08:00 nöbetçidir."
+    "adres": "ATATÜRK MH. SK. BURCU APT. ALTI NO:23/A",
+    "tarif": "ÜNİVERSİTE YOLU ÖZEL ORTADOĞU HASTANESİ YUKARISI MEZİTLİ BELEDİYE İLKÖĞRETİM OKULU ÇAPRAZI İBNİ SİNA SAĞLIK OCAĞI YANI MEZİTLİ",
+    "telefon": "03244226180",
+    "lat": 36.765165,
+    "lon": 34.547194,
+    "saat": "24.11.2026 18:00 / 25.11.2026 08:00 nöbetçidir."
    },
    {
-    "ad": "Şifa Eczanesi",
+    "ad": "Cansu Eczanesi",
     "bolge": "TOROSLAR",
     "ilce": "toroslar",
-    "adres": "Halkkent Mah. Fatih Sultan Mehmet Bulv. A Blok No:1",
-    "tarif": "HALKKENT MAH. ESKİ KADIN DOĞUM VE ÇOCUK HAS. KARŞISI/TOROSLAR",
-    "telefon": "03242237061",
-    "lat": 36.842514,
-    "lon": 34.62358,
-    "saat": "23.11.2026 18:00 / 24.11.2026 08:00 nöbetçidir."
+    "adres": "KURDALİ MH. 100041 SK. NO:3/A",
+    "tarif": "SELAHATTİN YANPAR SAĞLIK OCAĞI YANI",
+    "telefon": "03243204849",
+    "lat": 36.82628,
+    "lon": 34.62487,
+    "saat": "24.11.2026 18:00 / 25.11.2026 08:00 nöbetçidir."
    },
    {
-    "ad": "Yamaç Eczanesi",
-    "bolge": "AKDENİZ",
-    "ilce": "akdeniz",
-    "adres": "ÇANKAYA MAH. ZEYTİNLİBAHÇE CD. NO:11/B",
-    "tarif": "ZEYTİNLİBAHÇE CD BİTİMİ İSTİKLAL CD KAVŞAĞI/AKDENİZ",
-    "telefon": "03242333656",
-    "lat": 36.79905,
-    "lon": 34.6267,
-    "saat": "23.11.2026 18:00 / 24.11.2026 08:00 nöbetçidir."
+    "ad": "Çağla Eczanesi",
+    "bolge": "MEZİTLİ",
+    "ilce": "mezitli",
+    "adres": "MERKEZ MAH.GMK BUL.MEZITLI ÇARS. KONUTLARI C BLOK NO:784/B",
+    "tarif": "ESKİ MEZİTLİ BELEDİYESİ ÇAPRAZ KARŞISI MEZİTLİ",
+    "telefon": "03243574585",
+    "lat": 36.748958,
+    "lon": 34.529108,
+    "saat": "24.11.2026 18:00 / 25.11.2026 00:00 nöbetçidir."
    },
    {
-    "ad": "Gülsüm Eczanesi",
-    "bolge": "TARSUS",
-    "ilce": "tarsus",
-    "adres": "ÖĞRETMENLER MAH. 2901 SOK. NO:19/A",
-    "tarif": "ÖĞRETMENLER MAH. ÖMER SAYAR HASTANESİ ACİL YANI",
-    "telefon": "03246246676",
-    "lat": 36.913748,
-    "lon": 34.882177,
-    "saat": "23.11.2026 18:00 / 24.11.2026 08:00 nöbetçidir."
-   },
-   {
-    "ad": "Kemeraltı Eczanesi",
-    "bolge": "TARSUS",
-    "ilce": "tarsus",
-    "adres": "TEKKE MH.3745 SOK. NO:1AD",
-    "tarif": "YENİ DEVLET HAST. POLİKLİNİKLER KARŞISI",
-    "telefon": "03246139383",
-    "lat": 36.914207,
-    "lon": 34.912336,
-    "saat": "23.11.2026 18:00 / 24.11.2026 08:00 nöbetçidir."
-   },
-   {
-    "ad": "Tutku Eczanesi",
-    "bolge": "SİLİFKE",
-    "ilce": "silifke",
-    "adres": "GÖKSU MH. ATATÜRK BULV. NO:53B",
-    "tarif": "ESKİ DEVLET HASTANESİ KARŞISI",
-    "telefon": "03247142756",
-    "lat": 36.380101,
-    "lon": 33.931444,
-    "saat": "23.11.2026 18:00 / 24.11.2026 08:00 nöbetçidir."
-   },
-   {
-    "ad": "Sıhhat Eczanesi",
-    "bolge": "MUT",
-    "ilce": "mut",
-    "adres": "MEYDAN MAH.KARAMAN CAD.NO:8/B",
-    "tarif": "KARAMAN CAD.NO.8",
-    "telefon": "03247742467",
-    "lat": 36.646227,
-    "lon": 33.435786,
-    "saat": "23.11.2026 18:00 / 24.11.2026 08:00 nöbetçidir."
+    "ad": "Derya Eczanesi",
+    "bolge": "YENİŞEHİR",
+    "ilce": "yenisehir",
+    "adres": "HÜRRIYET MAH.1747 SK.I.SINCAR APT.ALTI NO:6/17",
+    "tarif": "HÜRRİYET MH. CARREFOUR YOLU ÜZERİ MİGROSMARKET ARKA SOKAĞI HÜRRİYET ASM YANI/YENİŞEHİR",
+    "telefon": "03243292452",
+    "lat": 36.794477,
+    "lon": 34.600974,
+    "saat": "24.11.2026 18:00 / 25.11.2026 00:00 nöbetçidir."
    },
    {
     "ad": "Gülnar Eczanesi",
+    "bolge": "AKDENİZ",
+    "ilce": "akdeniz",
+    "adres": "IHSANIYE MAH.SAİT ÇIFCI CAD.113.CAD. NO:5/A",
+    "tarif": "ESKİ DEVLET HASTANESİ KARŞISI ARA SOKAK/AKDENİZ",
+    "telefon": "03243366180",
+    "lat": 36.808702,
+    "lon": 34.620334,
+    "saat": "24.11.2026 18:00 / 25.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Koçoğlu Eczanesi",
+    "bolge": "TOROSLAR",
+    "ilce": "toroslar",
+    "adres": "BAĞCILAR MH.ATATÜRK CD.NO:136/A",
+    "tarif": "ARPAÇSAKARLAR KÖY MEYDANI CİVARI",
+    "telefon": "03242293733",
+    "lat": 36.861408,
+    "lon": 34.62905,
+    "saat": "24.11.2026 18:00 / 25.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Mavi Eczanesi",
+    "bolge": "MEZİTLİ",
+    "ilce": "mezitli",
+    "adres": "AKDENİZ MH. GMK BULV. NO:918/A",
+    "tarif": "",
+    "telefon": "03245022156",
+    "lat": 36.733264,
+    "lon": 34.514043,
+    "saat": "24.11.2026 18:00 / 25.11.2026 00:00 nöbetçidir."
+   },
+   {
+    "ad": "Nida Eczanesi",
+    "bolge": "AKDENİZ",
+    "ilce": "akdeniz",
+    "adres": "HAL MH. 6040 SK. NO:3",
+    "tarif": "YENİ SEBZE HALİ CİVARI, TOPTANCILAR SİTESİ KARŞISI",
+    "telefon": "03242343477",
+    "lat": 36.823674,
+    "lon": 34.653538,
+    "saat": "24.11.2026 18:00 / 25.11.2026 00:00 nöbetçidir."
+   },
+   {
+    "ad": "Başak Eczanesi",
+    "bolge": "TARSUS",
+    "ilce": "tarsus",
+    "adres": "YENİ ÖMERLİ MAH.ATATÜRK BULV.GALİP EKENLER APT.NO:78/B",
+    "tarif": "TARSUS PARKI CİVARI ÜST GEÇİT YANI",
+    "telefon": "03246243549",
+    "lat": 36.918074,
+    "lon": 34.885353,
+    "saat": "24.11.2026 18:00 / 25.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Kahyaoglu Eczanesi",
+    "bolge": "TARSUS",
+    "ilce": "tarsus",
+    "adres": "ANIT MAH. 321 SOK.DİDEM APT.NO:20/B",
+    "tarif": "Anıt Mah. Anıt A.S.M karşısı",
+    "telefon": "03246259382",
+    "lat": 36.920726,
+    "lon": 34.877475,
+    "saat": "24.11.2026 18:00 / 25.11.2026 00:00 nöbetçidir."
+   },
+   {
+    "ad": "Tuğçe Bucak Eczanesi",
+    "bolge": "TARSUS",
+    "ilce": "tarsus",
+    "adres": "TEKKE MAH. TÜRKMENİSTAN CAD. NO:58BG",
+    "tarif": "YENİ DEVLET HASTANESİ POLİKLİNİKLER KAPISI KARŞISI",
+    "telefon": "03246244455",
+    "lat": 36.91427,
+    "lon": 34.912638,
+    "saat": "24.11.2026 18:00 / 25.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Yavuz Eczanesi",
+    "bolge": "TARSUS",
+    "ilce": "tarsus",
+    "adres": "BARBAROS MH.0692SK. NO:14A",
+    "tarif": "SAĞLIK OCAĞI KARŞI SOKAĞINDA 50 M SONRA SAĞDA",
+    "telefon": "03245022591",
+    "lat": 36.903744,
+    "lon": 34.886158,
+    "saat": "24.11.2026 18:00 / 25.11.2026 00:00 nöbetçidir."
+   },
+   {
+    "ad": "Sağlık Eczanesi",
+    "bolge": "SİLİFKE",
+    "ilce": "silifke",
+    "adres": "TAŞUCU MAH. İSMET İNÖNÜ CAD.NO:6/D",
+    "tarif": "İSMET İNÖNÜ CD.MUTLULAR İŞHANI NO:6 TAŞUCU",
+    "telefon": "03247414067",
+    "lat": 36.319651,
+    "lon": 33.880229,
+    "saat": "24.11.2026 18:00 / 25.11.2026 00:00 nöbetçidir."
+   },
+   {
+    "ad": "Tol Eczanesi",
+    "bolge": "SİLİFKE",
+    "ilce": "silifke",
+    "adres": "GÖKSU MAH.ÖZCAN SEYHAN CAD. NO:9/B",
+    "tarif": "GÖKSU MAH.ÖZCAN SEYHAN CAD. NO: 9 SİLİFKE",
+    "telefon": "03247141547",
+    "lat": 36.381248,
+    "lon": 33.930049,
+    "saat": "24.11.2026 18:00 / 25.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Ferda Eczanesi",
+    "bolge": "MUT",
+    "ilce": "mut",
+    "adres": "BARABANLI MAH. BARABANLI SOK. NO:353/F",
+    "tarif": "YENİ DEVLET HASTANESİ KARŞISI BARABANLI MH. BARABANLI SK. NO:353/F",
+    "telefon": "03247741206",
+    "lat": 36.662375,
+    "lon": 33.422165,
+    "saat": "24.11.2026 18:00 / 25.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Kır Eczanesi",
     "bolge": "GÜLNAR",
     "ilce": "gulnar",
-    "adres": "AKDENİZ MH. KÖY HİZMETLERİ SK. NO:1C",
-    "tarif": "GÜLNAR DEVLET HASTANESİ KARŞISI",
-    "telefon": "03247517007",
-    "lat": 36.323313,
-    "lon": 33.411885,
-    "saat": "23.11.2026 18:00 / 24.11.2026 08:00 nöbetçidir."
+    "adres": "SARAY MAH. AKKAVAK CAD. NO: 12/E",
+    "tarif": "SARAY MAH. AKKAVAK CAD. NO: 12/E ESKİ DEVLET HASTANESİ KARŞISI",
+    "telefon": "03247512727",
+    "lat": 36.338403,
+    "lon": 33.40324,
+    "saat": "24.11.2026 18:00 / 25.11.2026 08:00 nöbetçidir."
    },
    {
-    "ad": "Kübra Eczanesi",
+    "ad": "Deva Eczanesi",
     "bolge": "ERDEMLİ",
     "ilce": "erdemli",
-    "adres": "MERKEZ MAH. KAZIM KARABEKİR CAD. NO:86/E",
-    "tarif": "MERKEZ MH. KAZIM KARABEKİR CD. 86/E ERDEMLİ",
-    "telefon": "03245160333",
-    "lat": 36.611313,
-    "lon": 34.302266,
-    "saat": "23.11.2026 18:00 / 24.11.2026 08:00 nöbetçidir."
+    "adres": "MERKEZ MH. KAZIM KARABEKİR CD. NO:84/A",
+    "tarif": "DEVLET HASTANESİ KARŞISI",
+    "telefon": "03245150505",
+    "lat": 36.611032,
+    "lon": 34.302422,
+    "saat": "24.11.2026 18:00 / 25.11.2026 08:00 nöbetçidir."
    },
    {
-    "ad": "Akdeniz Eczanesi",
+    "ad": "Sabah Eczanesi",
+    "bolge": "ERDEMLİ",
+    "ilce": "erdemli",
+    "adres": "MERKEZ MAHALLESİ SABAHATTİN ÇAKMAKOĞLU CADDESİ ŞENLER İŞHANI NO:7/A",
+    "tarif": "MERKEZ MAHALLESİ 1. PLAJ YOLU",
+    "telefon": "03245159442",
+    "lat": 36.605095,
+    "lon": 34.311128,
+    "saat": "24.11.2026 18:00 / 25.11.2026 00:00 nöbetçidir."
+   },
+   {
+    "ad": "Atalay Eczanesi",
     "bolge": "BOZYAZI",
     "ilce": "bozyazi",
-    "adres": "ÇOPURLU MAH.ŞEHITLER CAD.NO:93C",
-    "tarif": "ÇOPURLU MAH SEHITLER CAD NO 8/1 BOZYAZI",
-    "telefon": "03248513157",
-    "lat": 36.115081,
-    "lon": 32.971999,
-    "saat": "23.11.2026 17:00 / 24.11.2026 08:00 nöbetçidir."
+    "adres": "MERKEZ MAH. SAĞLIK SK. NO:10/B",
+    "tarif": "MERKEZ MH. SAGLIK OCAGI ÖZCAN ÇETINKAYA AP.NO:10/A",
+    "telefon": "03248513399",
+    "lat": 36.106187,
+    "lon": 32.970492,
+    "saat": "24.11.2026 17:00 / 25.11.2026 08:00 nöbetçidir."
    },
    {
-    "ad": "Evin Eczanesi",
-    "bolge": "ANAMUR",
-    "ilce": "anamur",
-    "adres": "ÖREN MH. TOKİ SK. NO:40/5",
-    "tarif": "TOKI TIÇARET MERKEZI NO.5 ÖREN BELDESI",
-    "telefon": "03248355002",
-    "lat": 36.040138,
-    "lon": 32.799277,
-    "saat": "23.11.2026 18:00 / 24.11.2026 08:00 nöbetçidir."
-   },
-   {
-    "ad": "Ünal Eczanesi",
+    "ad": "Deva Eczanesi",
     "bolge": "AYDINCIK",
     "ilce": "aydincik",
-    "adres": "CUMHURİYET MAH. BARBOROS CD.NO:3/B",
+    "adres": "CUMHURIYET MAH. KENAN EVREN CD. NO:1/C",
     "tarif": "AYDINCIK DEVLET HASTANESİ KARŞISI",
-    "telefon": "05538413084",
-    "lat": 36.152856,
-    "lon": 33.339095,
-    "saat": "23.11.2026 17:00 / 24.11.2026 08:00 nöbetçidir."
+    "telefon": "03248412224",
+    "lat": 36.152833,
+    "lon": 33.338789,
+    "saat": "24.11.2026 17:00 / 25.11.2026 08:00 nöbetçidir."
+   },
+   {
+    "ad": "Efkan Eczanesi",
+    "bolge": "ANAMUR",
+    "ilce": "anamur",
+    "adres": "SULTAN ALAATTİN MH. AHMET TANER KIŞLALI CD. 3/8",
+    "tarif": "SULTAN ALAATTİN MH. AHMET TANER KIŞLALI CD. 71/A",
+    "telefon": "03248165902",
+    "lat": 36.074384,
+    "lon": 32.81824,
+    "saat": "24.11.2026 18:00 / 25.11.2026 08:00 nöbetçidir."
    }
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-24T04:32:02.008Z",
+  "guncelleme": "2026-11-24T05:01:56.572Z",
   "liste": []
  },
  "piyasa": {
-  "guncelleme": "2026-11-24T04:08:02.812Z",
+  "guncelleme": "2026-11-24T05:02:01.097Z",
   "kalemler": {
    "gram": {
-    "alis": 5908.19,
-    "satis": 5908.99,
-    "degisim": -0.06
+    "alis": 5913.16,
+    "satis": 5914,
+    "degisim": 0.03
    },
    "ceyrek": {
-    "alis": 10019,
-    "satis": 10180,
-    "degisim": -0.06
+    "alis": 10028,
+    "satis": 10190,
+    "degisim": 0.04
    },
    "gumus": {
-    "alis": 69.32,
-    "satis": 69.42,
-    "degisim": -1.04
+    "alis": 69.42,
+    "satis": 69.51,
+    "degisim": -0.9
    },
    "usd": {
-    "alis": 50.6161,
-    "satis": 50.6306,
+    "alis": 50.6098,
+    "satis": 50.6374,
     "degisim": 0.07
    },
    "eur": {
-    "alis": 55.3034,
-    "satis": 55.3653,
-    "degisim": 0.26
+    "alis": 55.303,
+    "satis": 55.3595,
+    "degisim": 0.25
    },
    "bist": {
     "alis": null,
@@ -743,67 +809,67 @@
     "degisim": -0.24
    },
    "btc": {
-    "satis": 3050783,
-    "usd": 60254,
-    "degisim": -1.42
+    "satis": 3052253,
+    "usd": 60293,
+    "degisim": -1.46
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 5908.19,
-    "satis": 5908.99,
-    "degisim": -0.06
+    "alis": 5913.16,
+    "satis": 5914,
+    "degisim": 0.03
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 10019,
-    "satis": 10180,
-    "degisim": -0.06
+    "alis": 10028,
+    "satis": 10190,
+    "degisim": 0.04
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 20037,
-    "satis": 20342,
-    "degisim": -0.06
+    "alis": 20055,
+    "satis": 20361,
+    "degisim": 0.03
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 40013,
-    "satis": 40561,
-    "degisim": -0.06
+    "alis": 40049,
+    "satis": 40598,
+    "degisim": 0.03
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40932,
-    "satis": 41610,
-    "degisim": -0.06
+    "alis": 40969,
+    "satis": 41648,
+    "degisim": 0.03
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40932,
-    "satis": 41610,
-    "degisim": -0.06
+    "alis": 40969,
+    "satis": 41648,
+    "degisim": 0.03
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40932,
-    "satis": 41610,
-    "degisim": -0.06
+    "alis": 40969,
+    "satis": 41648,
+    "degisim": 0.03
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5574.04,
-    "satis": 5780.4,
-    "degisim": -0.06
+    "alis": 5579.1,
+    "satis": 5785.69,
+    "degisim": 0.03
    },
    {
     "k": "18AYARALTIN",
@@ -815,73 +881,73 @@
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3341.41,
-    "satis": 4510.91,
-    "degisim": -0.05
+    "alis": 3344.52,
+    "satis": 4514.58,
+    "degisim": 0.03
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 5878.65,
-    "satis": 5879.44,
-    "degisim": -0.06
+    "alis": 5883.59,
+    "satis": 5884.43,
+    "degisim": 0.03
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 69.32,
-    "satis": 69.42,
-    "degisim": -1.04
+    "alis": 69.42,
+    "satis": 69.51,
+    "degisim": -0.9
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.6161,
-    "satis": 50.6306,
+    "alis": 50.6098,
+    "satis": 50.6374,
     "degisim": 0.07
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.3034,
-    "satis": 55.3653,
-    "degisim": 0.26
+    "alis": 55.303,
+    "satis": 55.3595,
+    "degisim": 0.25
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.1193,
-    "satis": 66.1355,
-    "degisim": 0.21
+    "alis": 66.1147,
+    "satis": 66.1324,
+    "degisim": 0.2
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.1431,
-    "satis": 60.195,
-    "degisim": 0.08
+    "alis": 60.1424,
+    "satis": 60.1966,
+    "degisim": 0.09
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.487,
+    "alis": 13.4893,
     "satis": 13.4949,
-    "degisim": 0.06
+    "degisim": 0.07
    },
    {
     "k": "RUB",
     "ad": "Rus rublesi",
-    "alis": 0.6177,
-    "satis": 0.6191,
-    "degisim": 0.13
+    "alis": 0.6192,
+    "satis": 0.6196,
+    "degisim": 0.3
    }
   ],
-  "kaynakSaati": "2026-11-24 07:08:01"
+  "kaynakSaati": "2026-11-24 08:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-24T04:08:05.302Z",
+  "guncelleme": "2026-11-24T05:02:03.801Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -8846,7 +8912,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-24T04:32:14.760Z",
+  "guncelleme": "2026-11-24T05:02:04.457Z",
   "liste": [
    {
     "yol": "/",
@@ -8937,10 +9003,6 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-yenisehir-de-20-cadde-trafige-kapatiliyor-iste-tarih-ve-saat-1729jhi/",
-    "sayi": 1
-   },
-   {
     "yol": "/is-ilanlari/silifke/",
     "sayi": 1
    },
@@ -8975,20 +9037,20 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-24T04:33:07.366Z",
+  "guncelleme": "2026-11-24T05:02:05.796Z",
   "deniz": {
    "sicaklik": 21.5,
    "dalga": 0.14
   },
   "hava": {
-   "aqi": 34,
+   "aqi": 40,
    "pm25": 10.5,
-   "pm10": 15.8,
+   "pm10": 17.2,
    "uvMax": 2.05
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-24T04:33:10.032Z",
+  "guncelleme": "2026-11-24T05:02:07.748Z",
   "giden": [
    {
     "no": [
@@ -8999,7 +9061,7 @@
     "planlanan": "2026-11-24T05:10:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -9011,7 +9073,7 @@
     "planlanan": "2026-11-24T05:10:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -9023,7 +9085,7 @@
     "planlanan": "2026-11-24T05:10:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -9059,7 +9121,7 @@
     "planlanan": "2026-11-24T06:35:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9071,7 +9133,7 @@
     "planlanan": "2026-11-24T06:50:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9094,7 +9156,7 @@
     "yer": "Ercan",
     "planlanan": "2026-11-24T08:25:00.000Z",
     "tahmini": null,
-    "kapi": "104",
+    "kapi": "102",
     "durum": "",
     "hat": "dis"
    },
@@ -9409,33 +9471,21 @@
     "kapi": "107",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2081"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-25T05:00:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "PC3600"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Antalya",
-    "planlanan": "2026-11-24T04:35:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "XQ7630"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "Antalya",
-    "planlanan": "2026-11-24T04:40:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC3010"
@@ -9843,11 +9893,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ7630"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "Antalya",
+    "planlanan": "2026-11-25T04:40:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-24T04:33:10.032Z",
+  "guncelleme": "2026-11-24T05:02:07.747Z",
   "liste": [
    {
     "id": 6386,
