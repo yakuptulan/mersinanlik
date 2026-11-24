@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-24T14:04:38.617Z",
+ "guncelleme": "2026-11-24T14:33:28.310Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 18,
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-24T14:04:41.726Z",
+  "guncelleme": "2026-11-24T14:33:32.605Z",
   "liste": [
    {
     "ad": "Akgül Eczanesi",
@@ -772,7 +772,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-24T14:04:42.713Z",
+  "guncelleme": "2026-11-24T14:33:33.684Z",
   "liste": [
    {
     "tur": "su",
@@ -828,182 +828,198 @@
       ]
      }
     ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Menteş Mahallesi Hüseyin Okan Merzeci Bulvarı üzerindeki arıza nedeniyle bir kısmında su kesintisi yaşanmaktadır. Su, saat 20.00 sularında verilecektir.",
+    "baslangic": "2026-11-24T14:10:00.000Z",
+    "bitis": "2026-11-24T17:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "yenisehir",
+      "ad": "Yenişehir",
+      "mahalleler": [
+       "Menteş"
+      ]
+     }
+    ]
    }
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-24T14:04:47.205Z",
+  "guncelleme": "2026-11-24T14:33:36.182Z",
   "kalemler": {
    "gram": {
-    "alis": 5891.11,
-    "satis": 5892.07,
-    "degisim": -0.34
+    "alis": 5888.98,
+    "satis": 5890.01,
+    "degisim": -0.38
    },
    "ceyrek": {
-    "alis": 10024,
-    "satis": 10240,
-    "degisim": 0.53
+    "alis": 10022,
+    "satis": 10237,
+    "degisim": 0.5
    },
    "gumus": {
-    "alis": 68.57,
-    "satis": 68.67,
-    "degisim": -2.1
+    "alis": 68.67,
+    "satis": 68.77,
+    "degisim": -1.96
    },
    "usd": {
-    "alis": 50.6219,
-    "satis": 50.6331,
+    "alis": 50.6262,
+    "satis": 50.6285,
     "degisim": 0.08
    },
    "eur": {
-    "alis": 55.6049,
-    "satis": 55.6124,
-    "degisim": 0.75
+    "alis": 55.6484,
+    "satis": 55.6625,
+    "degisim": 0.84
    },
    "bist": {
     "alis": null,
-    "satis": 10943.37,
-    "degisim": -1.45
+    "satis": 10974.33,
+    "degisim": -1.17
    },
    "btc": {
-    "satis": 3052841,
-    "usd": 60300,
-    "degisim": -4.99
+    "satis": 3047556,
+    "usd": 60204,
+    "degisim": -5.53
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 5891.11,
-    "satis": 5892.07,
-    "degisim": -0.34
+    "alis": 5888.98,
+    "satis": 5890.01,
+    "degisim": -0.38
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 10024,
-    "satis": 10240,
-    "degisim": 0.53
+    "alis": 10022,
+    "satis": 10237,
+    "degisim": 0.5
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 20048,
-    "satis": 20480,
-    "degisim": 0.62
+    "alis": 20044,
+    "satis": 20475,
+    "degisim": 0.59
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 39975,
-    "satis": 40899,
-    "degisim": 0.77
+    "alis": 39965,
+    "satis": 40888,
+    "degisim": 0.75
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40830,
-    "satis": 41422,
-    "degisim": -0.51
+    "alis": 40821,
+    "satis": 41410,
+    "degisim": -0.54
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40830,
-    "satis": 41422,
-    "degisim": -0.51
+    "alis": 40821,
+    "satis": 41410,
+    "degisim": -0.54
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40830,
-    "satis": 41422,
-    "degisim": -0.51
+    "alis": 40821,
+    "satis": 41410,
+    "degisim": -0.54
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5560.23,
-    "satis": 5758.44,
-    "degisim": -0.44
+    "alis": 5558.94,
+    "satis": 5756.77,
+    "degisim": -0.47
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4218,
+    "alis": 4216,
     "satis": 4930,
     "degisim": -0.5
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3332.91,
-    "satis": 4495.73,
-    "degisim": -0.39
+    "alis": 3332.12,
+    "satis": 4494.58,
+    "degisim": -0.41
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 5861.66,
-    "satis": 5862.61,
-    "degisim": -0.34
+    "alis": 5859.53,
+    "satis": 5860.56,
+    "degisim": -0.38
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 68.57,
-    "satis": 68.67,
-    "degisim": -2.1
+    "alis": 68.67,
+    "satis": 68.77,
+    "degisim": -1.96
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.6219,
-    "satis": 50.6331,
+    "alis": 50.6262,
+    "satis": 50.6285,
     "degisim": 0.08
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.6049,
-    "satis": 55.6124,
-    "degisim": 0.75
+    "alis": 55.6484,
+    "satis": 55.6625,
+    "degisim": 0.84
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.4369,
-    "satis": 66.4473,
-    "degisim": 0.68
+    "alis": 66.4545,
+    "satis": 66.4621,
+    "degisim": 0.71
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.436,
-    "satis": 60.4725,
-    "degisim": 0.56
+    "alis": 60.5142,
+    "satis": 60.5387,
+    "degisim": 0.68
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.4889,
-    "satis": 13.4941,
+    "alis": 13.489,
+    "satis": 13.4939,
     "degisim": 0.07
    },
    {
     "k": "RUB",
     "ad": "Rus rublesi",
-    "alis": 0.6136,
-    "satis": 0.6199,
-    "degisim": -0.14
+    "alis": 0.6149,
+    "satis": 0.6184,
+    "degisim": -0.15
    }
   ],
-  "kaynakSaati": "2026-11-24 17:04:01"
+  "kaynakSaati": "2026-11-24 17:33:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-24T14:04:49.189Z",
+  "guncelleme": "2026-11-24T14:33:38.630Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -8968,7 +8984,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-24T14:04:49.666Z",
+  "guncelleme": "2026-11-24T14:33:39.137Z",
   "liste": [
    {
     "yol": "/",
@@ -8991,10 +9007,6 @@
     "sayi": 10
    },
    {
-    "yol": "/haber/toroslar-da-moloz-yiginlarinin-yerini-yesil-alan-aliyor-1uxscif/",
-    "sayi": 10
-   },
-   {
     "yol": "/haber/kadinlar-mersin-buyuksehir-in-destekleriyle-artik-daha-guclu-bh8fpi/",
     "sayi": 8
    },
@@ -9011,12 +9023,12 @@
     "sayi": 6
    },
    {
-    "yol": "/haber/mersin-de-ogretmenler-gunu-nde-ucretsiz-etkinlik-firsatlari-18d3dcj/",
+    "yol": "/haber/baskan-vekili-genc-mersin-buyuksehir-in-ogretmenleri-ile-bir-araya-gel-1ftlup7/",
     "sayi": 4
    },
    {
-    "yol": "/haber/baskan-vekili-genc-mersin-buyuksehir-in-ogretmenleri-ile-bir-araya-gel-1ftlup7/",
-    "sayi": 4
+    "yol": "/haber/mersin-de-ogretmenler-gunu-nde-ucretsiz-etkinlik-firsatlari-18d3dcj/",
+    "sayi": 3
    },
    {
     "yol": "/haber/mezitli-belediyesi-sorusturmasinda-yeni-iddia-itirafcilarin-sayisi-3-e-6y7hgj/",
@@ -9093,10 +9105,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-24T14:09:57.870Z",
+  "guncelleme": "2026-11-24T14:33:40.660Z",
   "deniz": {
    "sicaklik": 21.6,
-   "dalga": 0.2
+   "dalga": 0.22
   },
   "hava": {
    "aqi": 53,
@@ -9106,7 +9118,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-24T14:09:59.703Z",
+  "guncelleme": "2026-11-24T14:33:42.736Z",
   "giden": [
    {
     "no": [
@@ -9117,7 +9129,7 @@
     "planlanan": "2026-11-24T15:25:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -9129,7 +9141,7 @@
     "planlanan": "2026-11-24T15:25:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "dis"
    },
    {
@@ -9568,18 +9580,6 @@
   "gelen": [
    {
     "no": [
-     "PC2100"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-24T14:20:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
      "TK2462"
     ],
     "havayolu": "THY",
@@ -9587,7 +9587,7 @@
     "planlanan": "2026-11-24T14:40:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "ic"
    },
    {
@@ -10025,7 +10025,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-24T14:09:59.703Z",
+  "guncelleme": "2026-11-24T14:33:42.736Z",
   "liste": [
    {
     "id": 6386,
