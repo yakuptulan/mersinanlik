@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-24T20:01:21.608Z"
   }
  },
  "gorsel": {
@@ -300,7 +296,9 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/adana-mersin-ve-osmaniyenin-ilcelerinde-ogretmenler-gunu-kutlandi-119531533",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/silahli-saldirinin-firari-suphelisi-yakalanip-tutuklandi-119531600",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-tedavileri-tamamlanan-5-kaplumbaga-denizle-bulusturuldu-119531611",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-dolandiricilik-operasyonu-8-supheli-tutuklandi-119531733"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-dolandiricilik-operasyonu-8-supheli-tutuklandi-119531733",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-dolandiricilik-operasyonunda-yakalanan-8-supheli-tutuklandi-119531775",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-nitelikli-dolandiricilik-operasyonu-8-tutuklama-119531761"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -469,47 +467,47 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-24T20:01:59.613Z",
+  "guncelleme": "2026-11-24T20:31:53.912Z",
   "liste": [
    {
-    "baslik": "liverpool fc",
+    "baslik": "real madrid",
+    "trafik": 10000
+   },
+   {
+    "baslik": "real",
+    "trafik": 200
+   },
+   {
+    "baslik": "champions league games",
+    "trafik": 200
+   },
+   {
+    "baslik": "rc lens",
+    "trafik": 200
+   },
+   {
+    "baslik": "fenerbahçe spor kulübü",
+    "trafik": 10000
+   },
+   {
+    "baslik": "psg",
     "trafik": 1000
    },
    {
-    "baslik": "barselona fk",
-    "trafik": 1000
-   },
-   {
-    "baslik": "uefa",
-    "trafik": 500
-   },
-   {
-    "baslik": "šk slovan bratislava",
+    "baslik": "fc porto",
     "trafik": 200
    },
    {
-    "baslik": "sacha boey",
+    "baslik": "leipzig",
     "trafik": 200
    },
    {
-    "baslik": "gaziantep futbol kulübü",
+    "baslik": "sofascore",
+    "trafik": 500
+   },
+   {
+    "baslik": "lille osc",
     "trafik": 200
-   },
-   {
-    "baslik": "trtspor",
-    "trafik": 200
-   },
-   {
-    "baslik": "trt spor yayın akışı",
-    "trafik": 500
-   },
-   {
-    "baslik": "borussia dortmund",
-    "trafik": 500
-   },
-   {
-    "baslik": "vfb stuttgart",
-    "trafik": 500
    }
   ]
  },
