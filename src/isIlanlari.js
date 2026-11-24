@@ -68,9 +68,11 @@ try {
     }
     await new Promise((r) => setTimeout(r, 900));
   }
-  // Mersin'deki İŞKUR kursları ve işbaşı eğitim programları
+  // Mersin'deki İŞKUR kursları ve işbaşı eğitim programları.
+  // Not: İŞKUR'un kurs sayfası sunucumuzdan gelen istekleri reddediyor ("Request Rejected"); zorlamıyoruz.
+  // Sayfada bunun yerine İŞKUR'un kurs aramasına bağlantı veriliyor. KURS_CEK=1 ile yeniden denenebilir.
   let kurslar = veri.kurslar || [];
-  if (gecen() < 140e3) try {
+  if (process.env.KURS_CEK === '1' && gecen() < 140e3) try {
     const k = [];
     for (const tur of Object.keys(KURS_TURLERI)) {
       for (const x of await iskurMersinKurslari(Number(tur))) {

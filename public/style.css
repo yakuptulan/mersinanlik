@@ -1874,3 +1874,9 @@ img.kr-foto { object-fit: cover; background: #1f2937; padding: 0; }
 .is-kart { min-width: 0; }
 .is-alt { flex-wrap: wrap; row-gap: 8px; }
 .is-kart .is-ust h3 { min-width: 0; overflow-wrap: anywhere; }
+
+.is-kurs-bag { display: flex; align-items: center; gap: 14px; margin: 22px 0 6px; padding: 16px 18px; border-radius: 20px; background: linear-gradient(110deg, #ecfeff, #cffafe); border: 1px solid #a5f3fc; text-decoration: none; color: var(--metin); }
+.is-kurs-bag span:nth-child(2) { flex: 1 1 auto; display: flex; flex-direction: column; gap: 2px; }
+.is-kurs-bag b { font-size: 16px; }
+.is-kurs-bag small { color: #0e7490; font-size: 13.5px; font-weight: 600; }
+@media (max-width: 700px) { .is-kurs-bag { flex-wrap: wrap; } }

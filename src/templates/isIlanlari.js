@@ -92,7 +92,7 @@ const yan = (yanKutular) => `<aside class="yan">${kamuKutusu}${uyariKutusu}${yan
 function kursBolumu(veri, ilce = null) {
   const bugun = bugunISO();
   const l = (veri?.kurslar || []).filter((k) => (!k.sonBasvuru || k.sonBasvuru >= bugun) && (!ilce || k.ilce === ilce.slug));
-  if (!l.length) return '';
+  if (!l.length) return `<a class="is-kurs-bag" href="${kursAramaLinki(1)}" rel="noopener nofollow" target="_blank"><span class="is-sk-ikon" style="--sk:#0b8ea0">${ikonSvg('<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/>', 22)}</span><span><b>Ücretsiz meslek kursları ve işbaşı eğitimleri</b><small>İŞKUR'un Mersin'deki güncel kurslarını görmek için İŞKUR'da il olarak Mersin'i seçin.</small></span><span class="is-ilan-ver-ok" style="background:#0b8ea0">İŞKUR'da gör →</span></a>`;
   return `<div class="bolum-bas" style="margin-top:26px"><h2>İŞKUR kursları ve işbaşı eğitimleri</h2><span>${l.length} program</span></div>
 <div class="is-liste">${l.map((k) => `<article class="is-kart"><div class="is-ust"><h3>${h(k.meslek)}</h3><span class="is-adet">${h(KURS_TURLERI[k.programTur] || 'Kurs')}</span></div>
 <p class="is-bilgi">${h(k.ilceAd || k.ilceHam || 'Mersin')}${k.kursTuru ? ` · ${h(k.kursTuru)}` : ''}${k.baslangic ? ` · başlangıç ${tarihTr(k.baslangic)}` : ''}</p>
