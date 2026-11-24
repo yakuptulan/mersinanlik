@@ -12,16 +12,12 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-24T12:01:19.733Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-24",
-  "adet": 26,
-  "premium": 26
+  "adet": 27,
+  "premium": 27
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -148,7 +144,8 @@
    "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/kadinlar-mersinde-daha-guclu-2987450",
    "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/mersinde-yilsonuna-kadar-10-bin-agaclik-yesil-2987549",
    "https://www.dha.com.tr/yerel-haberler/mersin/silifke/silifkede-ogretmenler-gunu-coskusu-2987676",
-   "https://www.dha.com.tr/yerel-haberler/mersin/erdemli/mersinde-bir-haftadir-kayip-olarak-aranan-kadi-2987707"
+   "https://www.dha.com.tr/yerel-haberler/mersin/erdemli/mersinde-bir-haftadir-kayip-olarak-aranan-kadi-2987707",
+   "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/toroslarda-emekli-sohbet-evi-emeklilerin-iki-2987822"
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
@@ -290,7 +287,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-1-haftada-1013-arac-trafikten-menedildi-119531107",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-aranan-alzheimer-hastasi-kadin-ormanlik-alanda-bulundu-119531043",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/gunler-sonra-sag-buldugu-yasli-kadini-sirtinda-tasidi-119531149",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-bir-haftadir-kayip-olarak-aranan-kadin-bulundu-119531146"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-bir-haftadir-kayip-olarak-aranan-kadin-bulundu-119531146",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/nemli-toprak-yiyerek-7-gun-boyunca-hayata-tutunmus-mersinde-kaybolusunun-7-gununde-119531269"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -389,7 +387,8 @@
    "https://mersingundem.com/haber/13705/kayip-kadinda-mutlu-son-7nci-gunde-arazide-sag-bulundu-su-istedi.html",
    "https://mersingundem.com/haber/13704/mersinde-gelecegin-dis-hekimleri-beyaz-onluk-heyecani-yasadi.html",
    "https://mersingundem.com/haber/13707/nemli-toprak-yiyerek-7-gun-boyunca-hayata-tutunmus.html",
-   "https://mersingundem.com/haber/13706/gunler-sonra-sag-buldugu-yasli-kadini-sirtinda-tasidi.html"
+   "https://mersingundem.com/haber/13706/gunler-sonra-sag-buldugu-yasli-kadini-sirtinda-tasidi.html",
+   "https://mersingundem.com/haber/13708/toroslar-belediyesinin-emekli-sohbet-evi-hayata-renk-dostluklara-deger-katiyor.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -456,15 +455,31 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-24T12:01:53.252Z",
+  "guncelleme": "2026-11-24T12:31:58.838Z",
   "liste": [
+   {
+    "baslik": "emekli maaş promosyonu",
+    "trafik": 200
+   },
+   {
+    "baslik": "hayvancilik",
+    "trafik": 1000
+   },
+   {
+    "baslik": "spotify çöktü mü",
+    "trafik": 500
+   },
+   {
+    "baslik": "uzay",
+    "trafik": 200
+   },
    {
     "baslik": "sömestr tatili",
     "trafik": 1000
    },
    {
     "baslik": "kasım ayı enflasyon beklentisi",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "burdur hava durumu",
@@ -476,26 +491,10 @@
    },
    {
     "baslik": "brahim díaz",
-    "trafik": 1000
-   },
-   {
-    "baslik": "türkiye cumhuriyet merkez bankası",
     "trafik": 2000
    },
    {
-    "baslik": "fatma betül sayan kaya",
-    "trafik": 20000
-   },
-   {
-    "baslik": "hayvancılık",
-    "trafik": 500
-   },
-   {
-    "baslik": "a101 katalog",
-    "trafik": 100
-   },
-   {
-    "baslik": "gift orban",
+    "baslik": "türkiye cumhuriyet merkez bankası",
     "trafik": 2000
    }
   ]
