@@ -1,9 +1,9 @@
 {
- "guncelleme": "2026-11-24T01:31:44.954Z",
+ "guncelleme": "2026-11-24T02:01:51.823Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 14,
-   "durum": "Az bulutlu",
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-24",
@@ -44,7 +44,7 @@
     {
      "tarih": "2026-11-24",
      "min": 13,
-     "max": 20,
+     "max": 19,
      "durum": "Hafif sağanak"
     },
     {
@@ -254,8 +254,8 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 14,
-   "durum": "Az bulutlu",
+   "sicaklik": 13,
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-24",
@@ -296,18 +296,18 @@
     {
      "tarih": "2026-11-24",
      "min": 12,
-     "max": 17,
+     "max": 18,
      "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-25",
      "min": 5,
-     "max": 15,
+     "max": 16,
      "durum": "Açık"
     },
     {
      "tarih": "2026-11-26",
-     "min": 4,
+     "min": 5,
      "max": 14,
      "durum": "Parçalı bulutlu"
     },
@@ -326,14 +326,14 @@
    ]
   },
   "silifke": {
-   "sicaklik": 14,
+   "sicaklik": 13,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
-     "min": 12,
-     "max": 18,
-     "durum": "Yağmurlu"
+     "min": 13,
+     "max": 19,
+     "durum": "Sağanak"
     },
     {
      "tarih": "2026-11-25",
@@ -344,7 +344,7 @@
     {
      "tarih": "2026-11-26",
      "min": 6,
-     "max": 18,
+     "max": 19,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -362,25 +362,25 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 13,
+   "sicaklik": 14,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 13,
      "max": 21,
-     "durum": "Hafif sağanak"
+     "durum": "Sağanak"
     },
     {
      "tarih": "2026-11-25",
-     "min": 9,
+     "min": 10,
      "max": 19,
      "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-26",
      "min": 6,
-     "max": 20,
+     "max": 19,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -399,7 +399,7 @@
   },
   "toroslar": {
    "sicaklik": 14,
-   "durum": "Az bulutlu",
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-24",
@@ -435,7 +435,7 @@
   },
   "yenisehir": {
    "sicaklik": 14,
-   "durum": "Az bulutlu",
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-24",
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-24T01:31:48.587Z",
+  "guncelleme": "2026-11-24T02:01:57.574Z",
   "liste": [
    {
     "ad": "Bizim Eczanesi",
@@ -706,7 +706,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-24T01:31:49.692Z",
+  "guncelleme": "2026-11-24T02:01:58.889Z",
   "liste": []
  },
  "piyasa": {
@@ -881,7 +881,7 @@
   "kaynakSaati": "2026-11-24 04:31:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-24T01:31:56.480Z",
+  "guncelleme": "2026-11-24T02:02:05.214Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -8846,7 +8846,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-24T01:31:57.020Z",
+  "guncelleme": "2026-11-24T02:02:05.741Z",
   "liste": [
    {
     "yol": "/",
@@ -8979,33 +8979,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-24T01:32:46.285Z",
+  "guncelleme": "2026-11-24T02:02:07.764Z",
   "deniz": {
    "sicaklik": 21.5,
    "dalga": 0.16
   },
   "hava": {
    "aqi": 33,
-   "pm25": 10.4,
-   "pm10": 14.8,
+   "pm25": 10.1,
+   "pm10": 15,
    "uvMax": 2.05
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-24T01:32:48.463Z",
+  "guncelleme": "2026-11-24T02:02:10.031Z",
   "giden": [
-   {
-    "no": [
-     "PC2097"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-24T01:55:00.000Z",
-    "tahmini": null,
-    "kapi": "109",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
    {
     "no": [
      "VF3149"
@@ -9015,7 +9003,7 @@
     "planlanan": "2026-11-24T02:05:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -9027,7 +9015,7 @@
     "planlanan": "2026-11-24T02:20:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "BOARDING",
     "hat": "ic"
    },
    {
@@ -9039,7 +9027,7 @@
     "planlanan": "2026-11-24T03:40:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9423,6 +9411,18 @@
     "planlanan": "2026-11-25T01:30:00.000Z",
     "tahmini": null,
     "kapi": "108",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2097"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-25T01:55:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
     "durum": "",
     "hat": "ic"
    }
@@ -9875,7 +9875,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-24T01:32:48.462Z",
+  "guncelleme": "2026-11-24T02:02:10.031Z",
   "liste": [
    {
     "id": 6386,
