@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-24",
-  "adet": 1,
-  "premium": 1
+  "adet": 3,
+  "premium": 3
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -51,7 +51,8 @@
    "https://www.mersin.bel.tr/haber/buyuksehirin-hamzabeyli-koyumuz-atolyede-kan-portakali-cikolatayla-bulustu-1795414043",
    "https://www.mersin.bel.tr/haber/baskan-vekili-gencten-24-kasim-ogretmenler-gunu-mesaji-1795422553",
    "https://www.mersin.bel.tr/haber/baskan-vekili-genc-mersin-buyuksehirin-ogretmenleri-ile-bir-araya-geldi-1795435607",
-   "https://www.mersin.bel.tr/haber/buyuksehirden-yil-sonuna-kadar-10-bin-agaclik-yesil-hedef-1795499880"
+   "https://www.mersin.bel.tr/haber/buyuksehirden-yil-sonuna-kadar-10-bin-agaclik-yesil-hedef-1795499880",
+   "https://www.mersin.bel.tr/haber/kadinlar-mersin-buyuksehirin-destekleriyle-artik-daha-guclu-1795500249"
   ],
   "yenisehir-belediyesi": [
    "https://yenisehir.bel.tr/haber/yenisehirde-yesil-seferberlik-suru",
@@ -430,15 +431,23 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-24T06:01:45.004Z",
+  "guncelleme": "2026-11-24T06:31:48.412Z",
   "liste": [
+   {
+    "baslik": "tcmb",
+    "trafik": 500
+   },
+   {
+    "baslik": "mavi takım kaptanı kim oldu",
+    "trafik": 2000
+   },
    {
     "baslik": "jandarma uzman erbaş temini",
     "trafik": 5000
    },
    {
     "baslik": "kartal belediyesi",
-    "trafik": 200
+    "trafik": 2000
    },
    {
     "baslik": "antalya büyükşehir belediyesi",
@@ -458,18 +467,10 @@
    },
    {
     "baslik": "regaip kandili ne zaman",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "kırşehir hava durumu",
-    "trafik": 100
-   },
-   {
-    "baslik": "inegölspor",
-    "trafik": 100
-   },
-   {
-    "baslik": "yozgat hava durumu",
     "trafik": 100
    }
   ]
