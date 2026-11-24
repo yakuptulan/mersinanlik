@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-24T22:06:57.699Z"
   }
  },
  "gorsel": {
@@ -471,8 +467,12 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-24T22:07:30.509Z",
+  "guncelleme": "2026-11-24T22:31:45.429Z",
   "liste": [
+   {
+    "baslik": "fenerbahçe beko",
+    "trafik": 500
+   },
    {
     "baslik": "vinicius júnior",
     "trafik": 200
@@ -486,8 +486,12 @@
     "trafik": 100
    },
    {
-    "baslik": "ömer kalaylı",
-    "trafik": 200
+    "baslik": "hayati yazıcı istifa etti",
+    "trafik": 10000
+   },
+   {
+    "baslik": "city",
+    "trafik": 1000
    },
    {
     "baslik": "dhbt ne zaman açıklanacak",
@@ -499,19 +503,11 @@
    },
    {
     "baslik": "kylian mbappé",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "tuzlu kahve fragman",
     "trafik": 20000
-   },
-   {
-    "baslik": "mehmet ali özkan",
-    "trafik": 200
-   },
-   {
-    "baslik": "son tv",
-    "trafik": 100
    }
   ]
  },

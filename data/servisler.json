@@ -1,8 +1,8 @@
 {
- "guncelleme": "2026-11-24T22:07:38.646Z",
+ "guncelleme": "2026-11-24T22:31:49.027Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 14,
+   "sicaklik": 13,
    "durum": "Açık",
    "gunler": [
     {
@@ -38,7 +38,7 @@
    ]
   },
   "anamur": {
-   "sicaklik": 13,
+   "sicaklik": 12,
    "durum": "Az bulutlu",
    "gunler": [
     {
@@ -110,8 +110,8 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 12,
-   "durum": "Sisli",
+   "sicaklik": 11,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-25",
@@ -182,7 +182,7 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 16,
+   "sicaklik": 15,
    "durum": "Açık",
    "gunler": [
     {
@@ -254,7 +254,7 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 14,
+   "sicaklik": 13,
    "durum": "Açık",
    "gunler": [
     {
@@ -290,8 +290,8 @@
    ]
   },
   "mut": {
-   "sicaklik": 11,
-   "durum": "Açık",
+   "sicaklik": 10,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-25",
@@ -327,7 +327,7 @@
   },
   "silifke": {
    "sicaklik": 13,
-   "durum": "Az bulutlu",
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-25",
@@ -362,7 +362,7 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 15,
+   "sicaklik": 14,
    "durum": "Açık",
    "gunler": [
     {
@@ -398,7 +398,7 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 14,
+   "sicaklik": 13,
    "durum": "Açık",
    "gunler": [
     {
@@ -434,7 +434,7 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 14,
+   "sicaklik": 13,
    "durum": "Açık",
    "gunler": [
     {
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-24T22:07:42.387Z",
+  "guncelleme": "2026-11-24T22:31:53.475Z",
   "liste": [
    {
     "ad": "Akgül Eczanesi",
@@ -883,7 +883,7 @@
   "kaynakSaati": "2026-11-25 01:07:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-24T22:07:50.683Z",
+  "guncelleme": "2026-11-24T22:32:08.177Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -8748,7 +8748,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-24T22:07:51.098Z",
+  "guncelleme": "2026-11-24T22:32:08.734Z",
   "liste": [
    {
     "yol": "/",
@@ -8783,23 +8783,23 @@
     "sayi": 6
    },
    {
-    "yol": "/is-ilanlari/tarsus/",
-    "sayi": 3
+    "yol": "/is-ilanlari/",
+    "sayi": 4
    },
    {
-    "yol": "/is-ilanlari/",
-    "sayi": 2
+    "yol": "/is-ilanlari/tarsus/",
+    "sayi": 3
    },
    {
     "yol": "/haber/mersin-de-bir-haftadir-kayip-olarak-aranan-kadin-bulundu-vejbqi/",
     "sayi": 2
    },
    {
-    "yol": "/haber/mersin-de-ogretmenler-gunu-nde-ucretsiz-etkinlik-firsatlari-18d3dcj/",
+    "yol": "/haber/mezitli-belediyesi-sorusturmasinda-yeni-iddia-itirafcilarin-sayisi-3-e-6y7hgj/",
     "sayi": 2
    },
    {
-    "yol": "/haber/mezitli-belediyesi-sorusturmasinda-yeni-iddia-itirafcilarin-sayisi-3-e-6y7hgj/",
+    "yol": "/haber/mersin-de-ogretmenler-gunu-nde-ucretsiz-etkinlik-firsatlari-18d3dcj/",
     "sayi": 2
    },
    {
@@ -8835,16 +8835,20 @@
     "sayi": 1
    },
    {
+    "yol": "/spor/",
+    "sayi": 1
+   },
+   {
     "yol": "/haber/mersin-de-kimler-yasiyor-iste-sanliurfali-diyarbakirli-adanali-ve-dige-11ff6hs/",
     "sayi": 1
    }
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-24T22:07:52.762Z",
+  "guncelleme": "2026-11-24T22:32:10.431Z",
   "deniz": {
    "sicaklik": 21.5,
-   "dalga": 0.6
+   "dalga": 0.64
   },
   "hava": {
    "aqi": 41,
@@ -8854,7 +8858,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-24T22:07:54.927Z",
+  "guncelleme": "2026-11-24T22:32:12.456Z",
   "giden": [
    {
     "no": [
@@ -9316,18 +9320,6 @@
   "gelen": [
    {
     "no": [
-     "PC2096"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-24T22:20:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
      "VF3148"
     ],
     "havayolu": "AJet",
@@ -9773,7 +9765,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-24T22:07:54.927Z",
+  "guncelleme": "2026-11-24T22:32:12.455Z",
   "liste": [
    {
     "id": 6386,
