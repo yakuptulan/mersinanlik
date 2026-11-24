@@ -358,15 +358,16 @@
    "kaynakHatalari": []
   },
   "2026-11-24": {
-   "guncelleme": "2026-11-24T06:34:20.664Z",
-   "mersinHaber": 7,
-   "kendiYazimiz": 7,
-   "turkiyeDunya": 25,
-   "otomatik": 3,
+   "guncelleme": "2026-11-24T07:05:15.367Z",
+   "mersinHaber": 10,
+   "kendiYazimiz": 10,
+   "turkiyeDunya": 38,
+   "otomatik": 5,
    "otomatikTurler": {
     "okul": 1,
     "yakit": 1,
-    "su": 1
+    "su": 2,
+    "piyasa": 1
    },
    "otomatikBasliklar": [
     {
@@ -383,9 +384,19 @@
      "baslik": "Anamur'da su kesintisi (24 Kasım): Göktaş, Saray ve 1 mahalle daha",
      "tur": "su",
      "saat": "09:06"
+    },
+    {
+     "baslik": "Tarsus'ta su kesintisi (24 Kasım): Çiçekli, Kargılı ve 1 mahalle daha",
+     "tur": "su",
+     "saat": "10:05"
+    },
+    {
+     "baslik": "24 Kasım 2026 altın fiyatları: Gram altın, çeyrek altın bugün ne kadar?",
+     "tur": "piyasa",
+     "saat": "10:05"
     }
    ],
-   "gorsel": 3,
+   "gorsel": 4,
    "bilgi": 1,
    "gezi": 0,
    "kaynakHatalari": []
