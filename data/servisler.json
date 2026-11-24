@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-24T04:07:52.308Z",
+ "guncelleme": "2026-11-24T04:31:55.181Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 14,
@@ -111,7 +111,7 @@
   },
   "bozyazi": {
    "sicaklik": 13,
-   "durum": "Parçalı bulutlu",
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-24T04:07:57.378Z",
+  "guncelleme": "2026-11-24T04:32:00.639Z",
   "liste": [
    {
     "ad": "Bizim Eczanesi",
@@ -706,7 +706,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-24T04:07:58.595Z",
+  "guncelleme": "2026-11-24T04:32:02.008Z",
   "liste": []
  },
  "piyasa": {
@@ -1906,7 +1906,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-24T03:32:08.643Z",
+  "guncelleme": "2026-11-24T04:32:16.881Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8583,7 +8583,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-24T03:32:52.211Z",
+    "guncelleme": "2026-11-24T04:33:03.563Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -8665,7 +8665,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-24T03:32:53.458Z",
+    "guncelleme": "2026-11-24T04:33:04.859Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8747,7 +8747,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-24T03:32:54.714Z",
+    "guncelleme": "2026-11-24T04:33:06.165Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8846,11 +8846,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-24T04:08:06.001Z",
+  "guncelleme": "2026-11-24T04:32:14.760Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 20
+    "sayi": 21
    },
    {
     "yol": "/okullar-tatil-mi/bursa/",
@@ -8937,10 +8937,6 @@
     "sayi": 1
    },
    {
-    "yol": "/hava-durumu/anamur/",
-    "sayi": 1
-   },
-   {
     "yol": "/haber/mersin-yenisehir-de-20-cadde-trafige-kapatiliyor-iste-tarih-ve-saat-1729jhi/",
     "sayi": 1
    },
@@ -8979,7 +8975,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-24T04:08:07.639Z",
+  "guncelleme": "2026-11-24T04:33:07.366Z",
   "deniz": {
    "sicaklik": 21.5,
    "dalga": 0.14
@@ -8992,7 +8988,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-24T04:08:09.910Z",
+  "guncelleme": "2026-11-24T04:33:10.032Z",
   "giden": [
    {
     "no": [
@@ -9003,7 +8999,7 @@
     "planlanan": "2026-11-24T05:10:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -9015,7 +9011,7 @@
     "planlanan": "2026-11-24T05:10:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -9027,7 +9023,7 @@
     "planlanan": "2026-11-24T05:10:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -9051,7 +9047,7 @@
     "planlanan": "2026-11-24T06:25:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9098,7 +9094,7 @@
     "yer": "Ercan",
     "planlanan": "2026-11-24T08:25:00.000Z",
     "tahmini": null,
-    "kapi": "",
+    "kapi": "104",
     "durum": "",
     "hat": "dis"
    },
@@ -9418,18 +9414,6 @@
   "gelen": [
    {
     "no": [
-     "PC2080"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-24T04:20:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
      "PC3600"
     ],
     "havayolu": "Pegasus",
@@ -9437,7 +9421,7 @@
     "planlanan": "2026-11-24T04:35:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "ic"
    },
    {
@@ -9449,7 +9433,7 @@
     "planlanan": "2026-11-24T04:40:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "ic"
    },
    {
@@ -9847,11 +9831,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2080"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-25T04:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-24T04:08:09.909Z",
+  "guncelleme": "2026-11-24T04:33:10.032Z",
   "liste": [
    {
     "id": 6386,
