@@ -1,9 +1,9 @@
 {
- "guncelleme": "2026-11-24T03:01:45.774Z",
+ "guncelleme": "2026-11-24T03:31:57.013Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 14,
-   "durum": "Açık",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-24T03:01:49.171Z",
+  "guncelleme": "2026-11-24T03:32:00.132Z",
   "liste": [
    {
     "ad": "Bizim Eczanesi",
@@ -706,7 +706,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-24T03:01:50.086Z",
+  "guncelleme": "2026-11-24T03:32:01.130Z",
   "liste": []
  },
  "piyasa": {
@@ -881,7 +881,7 @@
   "kaynakSaati": "2026-11-24 06:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-24T03:01:55.418Z",
+  "guncelleme": "2026-11-24T03:32:05.381Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1802,7 +1802,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-24T00:32:14.275Z",
+  "guncelleme": "2026-11-24T03:32:08.643Z",
   "liste": [
    {
     "id": "1phkygx",
@@ -1906,7 +1906,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-24T02:32:06.620Z",
+  "guncelleme": "2026-11-24T03:32:08.643Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8583,7 +8583,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-24T02:32:49.621Z",
+    "guncelleme": "2026-11-24T03:32:52.211Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -8665,7 +8665,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-24T02:32:50.899Z",
+    "guncelleme": "2026-11-24T03:32:53.458Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8747,7 +8747,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-24T02:32:52.189Z",
+    "guncelleme": "2026-11-24T03:32:54.714Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8846,7 +8846,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-24T03:01:56.171Z",
+  "guncelleme": "2026-11-24T03:32:06.050Z",
   "liste": [
    {
     "yol": "/",
@@ -8901,7 +8901,7 @@
     "sayi": 2
    },
    {
-    "yol": "/kategori/ekonomi/",
+    "yol": "/mahalle/akdeniz/mufide-ilhan/",
     "sayi": 1
    },
    {
@@ -8917,11 +8917,11 @@
     "sayi": 1
    },
    {
-    "yol": "/okullar-tatil-mi/zonguldak/",
+    "yol": "/is-ilanlari/",
     "sayi": 1
    },
    {
-    "yol": "/is-ilanlari/",
+    "yol": "/okullar-tatil-mi/zonguldak/",
     "sayi": 1
    },
    {
@@ -8965,7 +8965,7 @@
     "sayi": 1
    },
    {
-    "yol": "/mahalle/akdeniz/mufide-ilhan/",
+    "yol": "/kategori/ekonomi/",
     "sayi": 1
    },
    {
@@ -8979,7 +8979,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-24T03:01:57.672Z",
+  "guncelleme": "2026-11-24T03:32:55.915Z",
   "deniz": {
    "sicaklik": 21.5,
    "dalga": 0.14
@@ -8992,7 +8992,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-24T03:01:59.314Z",
+  "guncelleme": "2026-11-24T03:32:57.889Z",
   "giden": [
    {
     "no": [
@@ -9003,7 +9003,7 @@
     "planlanan": "2026-11-24T03:40:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -9015,7 +9015,7 @@
     "planlanan": "2026-11-24T05:10:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9027,7 +9027,7 @@
     "planlanan": "2026-11-24T05:10:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9039,7 +9039,7 @@
     "planlanan": "2026-11-24T05:10:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9110,7 +9110,7 @@
     "yer": "Ercan",
     "planlanan": "2026-11-24T08:25:00.000Z",
     "tahmini": null,
-    "kapi": "104",
+    "kapi": "",
     "durum": "",
     "hat": "dis"
    },
@@ -9401,21 +9401,21 @@
     "kapi": "105",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "VF3149"
+    ],
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-25T03:10:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "2S5841"
-    ],
-    "havayolu": "Southwind Airlines",
-    "yer": "Medine",
-    "planlanan": "2026-11-24T03:25:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "dis"
-   },
    {
     "no": [
      "PC2080"
@@ -9851,7 +9851,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-24T03:01:59.314Z",
+  "guncelleme": "2026-11-24T03:32:57.888Z",
   "liste": [
    {
     "id": 6386,
