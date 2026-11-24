@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-24T05:01:51.579Z",
+ "guncelleme": "2026-11-24T05:31:55.780Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 14,
@@ -110,7 +110,7 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 13,
+   "sicaklik": 15,
    "durum": "Bulutlu",
    "gunler": [
     {
@@ -290,7 +290,7 @@
    ]
   },
   "mut": {
-   "sicaklik": 12,
+   "sicaklik": 13,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-24T05:01:55.593Z",
+  "guncelleme": "2026-11-24T05:31:59.882Z",
   "liste": [
    {
     "ad": "Akgül Eczanesi",
@@ -772,8 +772,25 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-24T05:01:56.572Z",
-  "liste": []
+  "guncelleme": "2026-11-24T05:32:00.904Z",
+  "liste": [
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "ERDEMLİ İLÇESİ,FATİH MAHALLESİNE BAĞLI BAĞ YOLU CADDESİ GENELİ ARIZA NEDENİ İLE SAAT 12:00 E KADAR SU KESİNTİSİ YAŞANACAKTIR",
+    "baslangic": "2026-11-24T05:22:00.000Z",
+    "bitis": "2026-11-24T09:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "erdemli",
+      "ad": "Erdemli",
+      "mahalleler": [
+       "Fatih"
+      ]
+     }
+    ]
+   }
+  ]
  },
  "piyasa": {
   "guncelleme": "2026-11-24T05:02:01.097Z",
@@ -947,7 +964,7 @@
   "kaynakSaati": "2026-11-24 08:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-24T05:02:03.801Z",
+  "guncelleme": "2026-11-24T05:32:07.849Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1972,7 +1989,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-24T04:32:16.881Z",
+  "guncelleme": "2026-11-24T05:32:09.674Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8649,7 +8666,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-24T04:33:03.563Z",
+    "guncelleme": "2026-11-24T05:32:55.270Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -8731,7 +8748,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-24T04:33:04.859Z",
+    "guncelleme": "2026-11-24T05:32:56.515Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8813,7 +8830,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-24T04:33:06.165Z",
+    "guncelleme": "2026-11-24T05:32:57.772Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8912,11 +8929,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-24T05:02:04.457Z",
+  "guncelleme": "2026-11-24T05:32:08.260Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 21
+    "sayi": 23
    },
    {
     "yol": "/okullar-tatil-mi/bursa/",
@@ -9037,7 +9054,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-24T05:02:05.796Z",
+  "guncelleme": "2026-11-24T05:32:58.972Z",
   "deniz": {
    "sicaklik": 21.5,
    "dalga": 0.14
@@ -9050,44 +9067,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-24T05:02:07.748Z",
+  "guncelleme": "2026-11-24T05:33:00.851Z",
   "giden": [
-   {
-    "no": [
-     "XQ7631"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "Antalya",
-    "planlanan": "2026-11-24T05:10:00.000Z",
-    "tahmini": null,
-    "kapi": "105",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC3601"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Antalya",
-    "planlanan": "2026-11-24T05:10:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC2081"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-24T05:10:00.000Z",
-    "tahmini": null,
-    "kapi": "107",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC3011"
@@ -9097,7 +9078,7 @@
     "planlanan": "2026-11-24T06:00:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -9109,7 +9090,7 @@
     "planlanan": "2026-11-24T06:25:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -9157,7 +9138,7 @@
     "planlanan": "2026-11-24T08:25:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -9483,21 +9464,21 @@
     "kapi": "105",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ7631"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "Antalya",
+    "planlanan": "2026-11-25T05:10:00.000Z",
+    "tahmini": null,
+    "kapi": "107",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "PC3010"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "İzmir",
-    "planlanan": "2026-11-24T05:25:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "TK2452"
@@ -9905,11 +9886,35 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ9006"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "İzmir",
+    "planlanan": "2026-11-25T05:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3010"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-25T05:30:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-24T05:02:07.747Z",
+  "guncelleme": "2026-11-24T05:33:00.851Z",
   "liste": [
    {
     "id": 6386,
