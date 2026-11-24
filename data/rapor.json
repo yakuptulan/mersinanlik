@@ -358,16 +358,16 @@
    "kaynakHatalari": []
   },
   "2026-11-24": {
-   "guncelleme": "2026-11-24T14:34:34.372Z",
-   "mersinHaber": 52,
-   "kendiYazimiz": 50,
-   "turkiyeDunya": 222,
-   "otomatik": 8,
+   "guncelleme": "2026-11-24T15:15:44.046Z",
+   "mersinHaber": 56,
+   "kendiYazimiz": 55,
+   "turkiyeDunya": 230,
+   "otomatik": 10,
    "otomatikTurler": {
     "okul": 1,
     "yakit": 1,
-    "su": 4,
-    "piyasa": 1,
+    "su": 5,
+    "piyasa": 2,
     "eczane": 1
    },
    "otomatikBasliklar": [
@@ -410,9 +410,19 @@
      "baslik": "Mersin nöbetçi eczaneler: 24 Kasım Salı",
      "tur": "eczane",
      "saat": "17:10"
+    },
+    {
+     "baslik": "Mut'ta su kesintisi (24 Kasım): Elbeyli, Güllük ve 2 mahalle daha",
+     "tur": "su",
+     "saat": "18:15"
+    },
+    {
+     "baslik": "Piyasalarda günün kapanışı: BIST 100 endeksi %1,14 geriledi",
+     "tur": "piyasa",
+     "saat": "18:15"
     }
    ],
-   "gorsel": 42,
+   "gorsel": 45,
    "bilgi": 3,
    "gezi": 0,
    "kaynakHatalari": []
