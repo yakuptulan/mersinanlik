@@ -12,12 +12,20 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-24T11:31:20.331Z"
+  },
+  "mersin-universitesi": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-24T11:31:43.692Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-24",
-  "adet": 22,
-  "premium": 22
+  "adet": 24,
+  "premium": 24
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -450,15 +458,23 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-24T11:01:46.379Z",
+  "guncelleme": "2026-11-24T11:31:59.642Z",
   "liste": [
+   {
+    "baslik": "kasım ayı enflasyon beklentisi",
+    "trafik": 100
+   },
+   {
+    "baslik": "burdur hava durumu",
+    "trafik": 200
+   },
    {
     "baslik": "internet",
     "trafik": 5000
    },
    {
     "baslik": "brahim díaz",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "türkiye cumhuriyet merkez bankası",
@@ -478,19 +494,11 @@
    },
    {
     "baslik": "gift orban",
-    "trafik": 1000
+    "trafik": 2000
    },
    {
     "baslik": "kamu personel seçme sınavı",
     "trafik": 5000
-   },
-   {
-    "baslik": "inegöl",
-    "trafik": 200
-   },
-   {
-    "baslik": "emlak vergisi ödeme",
-    "trafik": 200
    }
   ]
  },
