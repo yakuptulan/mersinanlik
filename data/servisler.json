@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-24T16:31:52.498Z",
+ "guncelleme": "2026-11-24T17:02:52.570Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 17,
@@ -38,13 +38,13 @@
    ]
   },
   "anamur": {
-   "sicaklik": 17,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 16,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 13,
-     "max": 17,
+     "max": 16,
      "durum": "Açık"
     },
     {
@@ -74,13 +74,13 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 17,
+   "sicaklik": 16,
    "durum": "Sisli",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 13,
-     "max": 17,
+     "max": 16,
      "durum": "Az bulutlu"
     },
     {
@@ -146,13 +146,13 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 9,
-   "durum": "Hafif sağanak",
+   "sicaklik": 8,
+   "durum": "Sisli",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 8,
-     "max": 9,
+     "max": 8,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -182,13 +182,13 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 16,
+   "sicaklik": 15,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 14,
-     "max": 16,
+     "max": 15,
      "durum": "Az bulutlu"
     },
     {
@@ -218,13 +218,13 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 11,
+   "sicaklik": 10,
    "durum": "Sisli",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 8,
-     "max": 11,
+     "max": 10,
      "durum": "Az bulutlu"
     },
     {
@@ -255,7 +255,7 @@
   },
   "mezitli": {
    "sicaklik": 16,
-   "durum": "Az bulutlu",
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-24",
@@ -290,14 +290,14 @@
    ]
   },
   "mut": {
-   "sicaklik": 13,
-   "durum": "Hafif sağanak",
+   "sicaklik": 14,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 12,
      "max": 14,
-     "durum": "Az bulutlu"
+     "durum": "Açık"
     },
     {
      "tarih": "2026-11-25",
@@ -362,8 +362,8 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 16,
-   "durum": "Az bulutlu",
+   "sicaklik": 15,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
@@ -398,13 +398,13 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 17,
+   "sicaklik": 16,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 14,
-     "max": 17,
+     "max": 16,
      "durum": "Az bulutlu"
     },
     {
@@ -434,13 +434,13 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 17,
+   "sicaklik": 16,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 14,
-     "max": 17,
+     "max": 16,
      "durum": "Az bulutlu"
     },
     {
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-24T16:31:56.648Z",
+  "guncelleme": "2026-11-24T17:02:57.157Z",
   "liste": [
    {
     "ad": "Akgül Eczanesi",
@@ -772,7 +772,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-24T16:31:57.726Z",
+  "guncelleme": "2026-11-24T17:02:58.357Z",
   "liste": [
    {
     "tur": "su",
@@ -809,22 +809,6 @@
       "ad": "Silifke",
       "mahalleler": [
        "Gazi"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Menteş Mahallesi Hüseyin Okan Merzeci Bulvarı üzerindeki arıza nedeniyle bir kısmında su kesintisi yaşanmaktadır. Su, saat 20.00 sularında verilecektir.",
-    "baslangic": "2026-11-24T14:10:00.000Z",
-    "bitis": "2026-11-24T17:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "yenisehir",
-      "ad": "Yenişehir",
-      "mahalleler": [
-       "Menteş"
       ]
      }
     ]
@@ -1038,7 +1022,7 @@
   "kaynakSaati": "2026-11-24 19:21:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-24T16:32:05.599Z",
+  "guncelleme": "2026-11-24T17:03:05.628Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -2063,7 +2047,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-24T16:05:49.567Z",
+  "guncelleme": "2026-11-24T17:03:08.263Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -9003,7 +8987,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-24T16:32:06.785Z",
+  "guncelleme": "2026-11-24T17:03:06.129Z",
   "liste": [
    {
     "yol": "/",
@@ -9026,6 +9010,10 @@
     "sayi": 8
    },
    {
+    "yol": "/haber/piyasalarda-gunun-kapanisi-gram-altin-4-43-yukseldi-k45e0d/",
+    "sayi": 6
+   },
+   {
     "yol": "/okullar-tatil-mi/bursa/",
     "sayi": 6
    },
@@ -9034,16 +9022,16 @@
     "sayi": 6
    },
    {
-    "yol": "/okullar-tatil-mi/duzce/",
-    "sayi": 6
-   },
-   {
-    "yol": "/haber/piyasalarda-gunun-kapanisi-gram-altin-4-43-yukseldi-k45e0d/",
+    "yol": "/haber/bassavci-yasin-emre-den-mtso-ve-mersin-barosu-baskanligina-hayirli-ols-11dq075/",
     "sayi": 6
    },
    {
     "yol": "/haber/mersin-de-ogrencilerden-ogretmenlerine-yoresel-urun-hediyesi-12q08y2/",
     "sayi": 6
+   },
+   {
+    "yol": "/okullar-tatil-mi/duzce/",
+    "sayi": 5
    },
    {
     "yol": "/haber/mersin-de-ogretmenler-gunu-nde-ucretsiz-etkinlik-firsatlari-18d3dcj/",
@@ -9062,15 +9050,11 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
-    "sayi": 1
-   },
-   {
     "yol": "/haber/msk-da-dagilma-tehlikesi-kadro-dagildi-gelecek-belirsizlesti-fmcfmt/",
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-ziraat-odasinda-bilek-guresi-baskani-devirdi-iddiasi-tgb6gp/",
+    "yol": "/haber/akdeniz-de-su-kesintisi-bircok-mahalle-etkilenecek-s1e988/",
     "sayi": 1
    },
    {
@@ -9078,7 +9062,7 @@
     "sayi": 1
    },
    {
-    "yol": "/hava-durumu/bozyazi/",
+    "yol": "/haber/mersin-ziraat-odasinda-bilek-guresi-baskani-devirdi-iddiasi-tgb6gp/",
     "sayi": 1
    },
    {
@@ -9086,7 +9070,15 @@
     "sayi": 1
    },
    {
+    "yol": "/haber/tarsus-belediyesi-nde-gorev-degisikligi-5cg8oa/",
+    "sayi": 1
+   },
+   {
     "yol": "/is-ilanlari/erdemli/",
+    "sayi": 1
+   },
+   {
+    "yol": "/hava-durumu/bozyazi/",
     "sayi": 1
    },
    {
@@ -9102,10 +9094,6 @@
     "sayi": 1
    },
    {
-    "yol": "/is-ilanlari/silifke/",
-    "sayi": 1
-   },
-   {
     "yol": "/piyasalar/",
     "sayi": 1
    },
@@ -9116,33 +9104,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-24T16:32:08.542Z",
+  "guncelleme": "2026-11-24T17:03:26.871Z",
   "deniz": {
    "sicaklik": 21.5,
-   "dalga": 0.28
+   "dalga": 0.3
   },
   "hava": {
-   "aqi": 57,
-   "pm25": 18,
-   "pm10": 26.9,
+   "aqi": 53,
+   "pm25": 19.5,
+   "pm10": 29,
    "uvMax": 1.9
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-24T16:32:10.362Z",
+  "guncelleme": "2026-11-24T17:03:29.175Z",
   "giden": [
-   {
-    "no": [
-     "TK2465"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-24T16:55:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "BOARDING",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC4129"
@@ -9152,7 +9128,7 @@
     "planlanan": "2026-11-24T17:40:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KONTUAR AÇIK",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -9176,7 +9152,7 @@
     "planlanan": "2026-11-24T18:50:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9574,21 +9550,21 @@
     "kapi": "103",
     "durum": "",
     "hat": "dis"
-   }
-  ],
-  "gelen": [
+   },
    {
     "no": [
-     "TK2466"
+     "TK2465"
     ],
     "havayolu": "THY",
     "yer": "İstanbul",
-    "planlanan": "2026-11-24T17:00:00.000Z",
+    "planlanan": "2026-11-25T16:55:00.000Z",
     "tahmini": null,
-    "kapi": "",
+    "kapi": "108",
     "durum": "",
     "hat": "ic"
-   },
+   }
+  ],
+  "gelen": [
    {
     "no": [
      "PC3014"
@@ -9996,11 +9972,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2090"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-25T16:45:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-24T16:32:10.361Z",
+  "guncelleme": "2026-11-24T17:03:29.175Z",
   "liste": [
    {
     "id": 6386,
