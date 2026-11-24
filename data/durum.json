@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-24T07:33:16.460Z"
   }
  },
  "gorsel": {
@@ -434,8 +438,12 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-24T07:28:05.617Z",
+  "guncelleme": "2026-11-24T07:33:51.379Z",
   "liste": [
+   {
+    "baslik": "müge anlı canlı yayın",
+    "trafik": 200
+   },
    {
     "baslik": "aselsan temettü",
     "trafik": 5000
@@ -446,7 +454,7 @@
    },
    {
     "baslik": "özel tüketim vergisi",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "oh hyeon-gyu",
@@ -466,15 +474,11 @@
    },
    {
     "baslik": "emrah altıntoprak",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "pusula gazetesi",
     "trafik": 100
-   },
-   {
-    "baslik": "mavi takım kaptanı kim oldu",
-    "trafik": 2000
    }
   ]
  },

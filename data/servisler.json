@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-24T07:28:15.602Z",
+ "guncelleme": "2026-11-24T07:33:51.979Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 19,
@@ -75,11 +75,11 @@
   },
   "aydincik": {
    "sicaklik": 17,
-   "durum": "Yağmurlu",
+   "durum": "Hafif yağmurlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
-     "min": 12,
+     "min": 13,
      "max": 18,
      "durum": "Hafif sağanak"
     },
@@ -97,9 +97,9 @@
     },
     {
      "tarih": "2026-11-27",
-     "min": 12,
+     "min": 11,
      "max": 20,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -152,12 +152,12 @@
     {
      "tarih": "2026-11-24",
      "min": 8,
-     "max": 12,
+     "max": 11,
      "durum": "Hafif yağmurlu"
     },
     {
      "tarih": "2026-11-25",
-     "min": 3,
+     "min": 2,
      "max": 11,
      "durum": "Açık"
     },
@@ -171,7 +171,7 @@
      "tarih": "2026-11-27",
      "min": 6,
      "max": 13,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -182,12 +182,12 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 18,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 19,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
-     "min": 15,
+     "min": 14,
      "max": 19,
      "durum": "Hafif sağanak"
     },
@@ -205,9 +205,9 @@
     },
     {
      "tarih": "2026-11-27",
-     "min": 12,
+     "min": 11,
      "max": 20,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -255,18 +255,18 @@
   },
   "mezitli": {
    "sicaklik": 19,
-   "durum": "Az bulutlu",
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 14,
      "max": 20,
-     "durum": "Sağanak"
+     "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-25",
      "min": 11,
-     "max": 18,
+     "max": 17,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -277,9 +277,9 @@
     },
     {
      "tarih": "2026-11-27",
-     "min": 13,
+     "min": 12,
      "max": 20,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -362,14 +362,14 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 18,
+   "sicaklik": 19,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 15,
      "max": 21,
-     "durum": "Sağanak"
+     "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-25",
@@ -380,14 +380,14 @@
     {
      "tarih": "2026-11-26",
      "min": 6,
-     "max": 19,
+     "max": 20,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-27",
      "min": 9,
      "max": 21,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -434,14 +434,14 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 18,
+   "sicaklik": 19,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 14,
-     "max": 20,
-     "durum": "Sağanak"
+     "max": 21,
+     "durum": "Hafif sağanak"
     },
     {
      "tarih": "2026-11-25",
@@ -459,7 +459,7 @@
      "tarih": "2026-11-27",
      "min": 12,
      "max": 21,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-24T07:28:19.526Z",
+  "guncelleme": "2026-11-24T07:33:56.976Z",
   "liste": [
    {
     "ad": "Akgül Eczanesi",
@@ -772,7 +772,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-24T07:28:20.468Z",
+  "guncelleme": "2026-11-24T07:33:58.242Z",
   "liste": [
    {
     "tur": "su",
@@ -1016,7 +1016,7 @@
   "kaynakSaati": "2026-11-24 10:28:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-24T07:28:24.559Z",
+  "guncelleme": "2026-11-24T07:34:06.050Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -8981,7 +8981,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-24T07:28:25.400Z",
+  "guncelleme": "2026-11-24T07:34:06.527Z",
   "liste": [
    {
     "yol": "/",
@@ -9052,6 +9052,10 @@
     "sayi": 1
    },
    {
+    "yol": "/haber/kadinlar-mersin-buyuksehir-in-destekleriyle-artik-daha-guclu-bh8fpi/",
+    "sayi": 1
+   },
+   {
     "yol": "/is-ilanlari/",
     "sayi": 1
    },
@@ -9102,7 +9106,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-24T07:30:47.648Z",
+  "guncelleme": "2026-11-24T07:34:08.152Z",
   "deniz": {
    "sicaklik": 21.5,
    "dalga": 0.16
@@ -9115,7 +9119,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-24T07:30:49.625Z",
+  "guncelleme": "2026-11-24T07:34:10.332Z",
   "giden": [
    {
     "no": [
@@ -9572,7 +9576,7 @@
     "planlanan": "2026-11-24T07:50:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "dis"
    },
    {
@@ -9998,7 +10002,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-24T07:30:49.625Z",
+  "guncelleme": "2026-11-24T07:34:10.332Z",
   "liste": [
    {
     "id": 6386,
