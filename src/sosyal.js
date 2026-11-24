@@ -437,6 +437,13 @@ export function sabahVerisi(simdi = Date.now()) {
   const pk = servis.piyasa?.kalemler || {};
   const yakit = servis.akaryakit?.ilceler?.merkez || servis.akaryakit?.ilceler?.yenisehir || null;
   const lpg = servis.akaryakit?.ilceler?.yenisehir?.lpg || servis.akaryakit?.ilceler?.akdeniz?.lpg;
+  // İş ilanları: açık ilan, kişilik alım ve son 24 saatte eklenen
+  let is = null;
+  try {
+    const iv = JSON.parse(fs.readFileSync('data/is-ilanlari.json', 'utf8'));
+    const acik = Object.values(iv.ilanlar || {}).filter((i) => !i.sonBasvuru || i.sonBasvuru >= bugun);
+    if (acik.length) is = { acik: acik.length, kisi: acik.reduce((t, i) => t + (Number(i.acik) || 1), 0), yeni: acik.filter((i) => simdi - Date.parse(i.ilkGorulme) < 864e5).length };
+  } catch {}
   const gunAd = new Intl.DateTimeFormat('tr-TR', { timeZone: 'Europe/Istanbul', day: 'numeric', month: 'long', weekday: 'long' }).format(simdi);
   const kisaGunAdi = (t) => new Intl.DateTimeFormat('tr-TR', { timeZone: 'Europe/Istanbul', weekday: 'short' }).format(Date.parse(`${t}T12:00:00+03:00`));
   // Bugün öne çıkanlar: etkinlik, Mersin takımlarının maçı, depremler, günün en çok kaynakta geçen haberi
@@ -450,7 +457,7 @@ export function sabahVerisi(simdi = Date.now()) {
     bugun, gunAd, hicri: nm?.hicri || '', eczane: eczBugun.length, eczIlce: eczIlce.size,
     hava: hg ? { min: hg.min, max: hg.max, durum: hg.durum } : null,
     tahmin: gunler.filter((x) => x.tarih > bugun).slice(0, 3).map((x) => ({ gun: kisaGunAdi(x.tarih), min: x.min, max: x.max, durum: x.durum })),
-    namaz: nm || null, su, suYer, gram: pk.gram, ceyrek: pk.ceyrek, usd: pk.usd, eur: pk.eur,
+    namaz: nm || null, su, suYer, gram: pk.gram, ceyrek: pk.ceyrek, usd: pk.usd, eur: pk.eur, is,
     yakit: yakit ? { benzin: yakit.benzin, motorin: yakit.motorin, lpg: yakit.lpg || lpg } : null,
     one,
   };
@@ -465,7 +472,7 @@ export function sabahMetni(v, platform) {
     v.su.length ? `💧 Su kesintisi: ${v.suYer.join(', ')}` : '💧 Su kesintisi: Duyurulmuş kesinti yok',
     v.yakit ? `⛽ Benzin ${tl(v.yakit.benzin, 2)} TL · Motorin ${tl(v.yakit.motorin, 2)} TL${v.yakit.lpg ? ` · LPG ${tl(v.yakit.lpg, 2)} TL` : ''}` : null,
     v.gram ? `💰 Gram altın ${tl(v.gram.satis)} TL${v.ceyrek ? ` · Çeyrek ${tl(v.ceyrek.satis)} TL` : ''}` : null,
-    v.usd ? `💵 Dolar ${tl(v.usd.satis, 2)} TL${v.eur ? ` · Euro ${tl(v.eur.satis, 2)} TL` : ''}` : null,
+    v.is ? `💼 İş ilanları: ${v.is.acik} açık ilan, ${v.is.kisi} kişilik alım${v.is.yeni && v.is.yeni < v.is.acik ? ` (${v.is.yeni} yeni)` : ''}${platform === 'facebook' ? ` → ${SITE.url}/is-ilanlari/` : ''}` : null,
     v.namaz ? `🕌 İmsak ${v.namaz.imsak} · Öğle ${v.namaz.ogle} · Akşam ${v.namaz.aksam}` : null,
     ...(v.one.length ? ['', '📌 Bugün öne çıkanlar:', ...v.one.slice(0, 5).map((o) => `• ${o.metin}`)] : []),
     '',
@@ -512,7 +519,9 @@ ${satirlar.map((s, k) => yazi(x + 24, y + 92 + k * (s.b > 30 ? 46 : 36), s.t, s.
     ['#3E8EDE', 'SU KESİNTİSİ', v.su.length ? [{ t: `${v.su.length} kesinti`, b: 40 }, { t: v.suYer.length > 2 ? `${v.suYer.slice(0, 2).join(', ')} +${v.suYer.length - 2} ilçe` : v.suYer.join(', '), b: 22, r: '#9FB2D6', w: 500 }] : [{ t: 'Yok', b: 40 }, { t: 'Duyurulmuş kesinti yok', b: 22, r: '#9FB2D6', w: 500 }]],
     ['#EF5F00', 'AKARYAKIT', v.yakit ? [sat('Benzin', tl(v.yakit.benzin, 2)), sat('Motorin', tl(v.yakit.motorin, 2)), ...(v.yakit.lpg ? [{ t: `LPG ${tl(v.yakit.lpg, 2)} TL/lt`, b: 22, r: '#9FB2D6', w: 500 }] : [])] : [{ t: '-', b: 40 }]],
     ['#C98A00', 'ALTIN', [sat('Gram', `${tl(v.gram?.satis || 0)} TL`), sat('Çeyrek', `${tl(v.ceyrek?.satis || 0)} TL`)]],
-    ['#0797B9', 'DÖVİZ', [sat('Dolar', `${tl(v.usd?.satis || 0, 2)} TL`), sat('Euro', `${tl(v.eur?.satis || 0, 2)} TL`)]],
+    v.is
+      ? ['#30A46C', 'İŞ İLANLARI', [{ t: `${v.is.acik} açık ilan`, b: 36 }, { t: v.is.yeni && v.is.yeni < v.is.acik ? `${v.is.yeni} yeni · ${v.is.kisi} kişilik alım` : `${v.is.kisi} kişilik alım`, b: 22, r: '#9FB2D6', w: 500 }]]
+      : ['#0797B9', 'DÖVİZ', [sat('Dolar', `${tl(v.usd?.satis || 0, 2)} TL`), sat('Euro', `${tl(v.eur?.satis || 0, 2)} TL`)]],
     ['#8E4EC6', 'NAMAZ VAKİTLERİ', v.namaz ? [sat('İmsak', v.namaz.imsak), sat('Öğle', v.namaz.ogle), { t: `Akşam ${v.namaz.aksam}`, b: 27 }] : [{ t: '-', b: 40 }]],
   ];
   // Namaz ve akaryakıt 3 satır: satır aralığını sıkılaştır
