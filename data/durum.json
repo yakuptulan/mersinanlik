@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-24",
-  "adet": 27,
-  "premium": 27
+  "adet": 30,
+  "premium": 30
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -52,7 +52,8 @@
    "https://www.mersin.bel.tr/haber/baskan-vekili-gencten-24-kasim-ogretmenler-gunu-mesaji-1795422553",
    "https://www.mersin.bel.tr/haber/baskan-vekili-genc-mersin-buyuksehirin-ogretmenleri-ile-bir-araya-geldi-1795435607",
    "https://www.mersin.bel.tr/haber/buyuksehirden-yil-sonuna-kadar-10-bin-agaclik-yesil-hedef-1795499880",
-   "https://www.mersin.bel.tr/haber/kadinlar-mersin-buyuksehirin-destekleriyle-artik-daha-guclu-1795500249"
+   "https://www.mersin.bel.tr/haber/kadinlar-mersin-buyuksehirin-destekleriyle-artik-daha-guclu-1795500249",
+   "https://www.mersin.bel.tr/haber/baskan-vekili-gencten-25-kasim-kadina-yonelik-siddete-karsi-uluslararasi-mucadele-gunu-mesaji-1795524043"
   ],
   "yenisehir-belediyesi": [
    "https://yenisehir.bel.tr/haber/yenisehirde-yesil-seferberlik-suru",
@@ -388,7 +389,8 @@
    "https://mersingundem.com/haber/13704/mersinde-gelecegin-dis-hekimleri-beyaz-onluk-heyecani-yasadi.html",
    "https://mersingundem.com/haber/13707/nemli-toprak-yiyerek-7-gun-boyunca-hayata-tutunmus.html",
    "https://mersingundem.com/haber/13706/gunler-sonra-sag-buldugu-yasli-kadini-sirtinda-tasidi.html",
-   "https://mersingundem.com/haber/13708/toroslar-belediyesinin-emekli-sohbet-evi-hayata-renk-dostluklara-deger-katiyor.html"
+   "https://mersingundem.com/haber/13708/toroslar-belediyesinin-emekli-sohbet-evi-hayata-renk-dostluklara-deger-katiyor.html",
+   "https://mersingundem.com/haber/13709/baskan-vekili-gencten-25-kasim-kadina-yonelik-siddete-karsi-uluslararasi-mucadele-gunu-mesaji.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -455,27 +457,39 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-24T12:31:58.838Z",
+  "guncelleme": "2026-11-24T13:02:38.996Z",
   "liste": [
+   {
+    "baslik": "uefa youth league",
+    "trafik": 200
+   },
    {
     "baslik": "emekli maaş promosyonu",
     "trafik": 200
+   },
+   {
+    "baslik": "brahim diaz",
+    "trafik": 2000
    },
    {
     "baslik": "hayvancilik",
     "trafik": 1000
    },
    {
+    "baslik": "kredi kartı faiz oranları",
+    "trafik": 2000
+   },
+   {
+    "baslik": "uzay",
+    "trafik": 500
+   },
+   {
     "baslik": "spotify çöktü mü",
     "trafik": 500
    },
    {
-    "baslik": "uzay",
-    "trafik": 200
-   },
-   {
     "baslik": "sömestr tatili",
-    "trafik": 1000
+    "trafik": 2000
    },
    {
     "baslik": "kasım ayı enflasyon beklentisi",
@@ -484,18 +498,6 @@
    {
     "baslik": "burdur hava durumu",
     "trafik": 200
-   },
-   {
-    "baslik": "internet",
-    "trafik": 5000
-   },
-   {
-    "baslik": "brahim díaz",
-    "trafik": 2000
-   },
-   {
-    "baslik": "türkiye cumhuriyet merkez bankası",
-    "trafik": 2000
    }
   ]
  },
