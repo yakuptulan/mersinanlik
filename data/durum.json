@@ -12,16 +12,12 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-24T07:33:16.460Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-24",
-  "adet": 5,
-  "premium": 5
+  "adet": 7,
+  "premium": 7
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -371,7 +367,10 @@
    "https://mersingundem.com/haber/13696/baskan-vekili-genc-mersin-buyuksehirin-ogretmenleri-ile-bir-araya-geldi.html",
    "https://mersingundem.com/haber/13698/il-baskani-adem-aldemir-ilk-gunku-askla-heyecanla-turkiye-yuzyili-hedeflerimiz-icin-calismaya-devam-edecegiz.html",
    "https://mersingundem.com/haber/13700/talat-dincer-fonun-defteri-acilmadan-bu-milletin-vicdanindaki-hesap-kapanmaz.html",
-   "https://mersingundem.com/haber/13699/akkuyuda-is-kazalari-aciklansin.html"
+   "https://mersingundem.com/haber/13699/akkuyuda-is-kazalari-aciklansin.html",
+   "https://mersingundem.com/haber/13703/akp-2027-yilinda-da-emekliyi-acliga-mahkm-edecek.html",
+   "https://mersingundem.com/haber/13702/buyuksehirden-yil-sonuna-kadar-10-bin-agaclik-yesil-hedef.html",
+   "https://mersingundem.com/haber/13701/mersin-buyuksehir-belediyesi-ureten-kadinlarin-daima-yaninda.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -438,15 +437,27 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-24T07:33:51.379Z",
+  "guncelleme": "2026-11-24T08:01:52.966Z",
   "liste": [
+   {
+    "baslik": "el chadaille bitshiabu",
+    "trafik": 200
+   },
+   {
+    "baslik": "parastoo ahmadi",
+    "trafik": 100
+   },
    {
     "baslik": "müge anlı canlı yayın",
     "trafik": 200
    },
    {
+    "baslik": "adile naşit",
+    "trafik": 500
+   },
+   {
     "baslik": "aselsan temettü",
-    "trafik": 5000
+    "trafik": 500
    },
    {
     "baslik": "leyla dizisi",
@@ -454,7 +465,7 @@
    },
    {
     "baslik": "özel tüketim vergisi",
-    "trafik": 1000
+    "trafik": 2000
    },
    {
     "baslik": "oh hyeon-gyu",
@@ -467,18 +478,6 @@
    {
     "baslik": "24 kasım hangi burç",
     "trafik": 200
-   },
-   {
-    "baslik": "sgk emekli",
-    "trafik": 200
-   },
-   {
-    "baslik": "emrah altıntoprak",
-    "trafik": 500
-   },
-   {
-    "baslik": "pusula gazetesi",
-    "trafik": 100
    }
   ]
  },
