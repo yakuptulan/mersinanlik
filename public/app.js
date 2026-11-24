@@ -184,15 +184,31 @@
   depremZaman();
   setInterval(depremZaman, 60000);
   // ---------- İş ilanları arama ----------
+  // Türkçe harfler ve büyük/küçük harf farkı gözetilmez (sofor = şoför). Önce ilan başlığında arar;
+  // başlıkta hiç eşleşme yoksa açıklamalarda arar. Birden çok kelime yazılırsa hepsi aranır.
+  function sadelestir(t) {
+    return String(t || '').toLocaleLowerCase('tr-TR').replace(/[çğıöşüâîû]/g, function (c) { return { 'ç': 'c', 'ğ': 'g', 'ı': 'i', 'ö': 'o', 'ş': 's', 'ü': 'u', 'â': 'a', 'î': 'i', 'û': 'u' }[c]; }).replace(/\s+/g, ' ').trim();
+  }
   document.querySelectorAll('[data-is-ara]').forEach(function (inp) {
-    var kartlar = Array.prototype.slice.call(document.querySelectorAll('[data-is-liste] .is-kart'));
+    var kartlar = Array.prototype.slice.call(document.querySelectorAll('[data-is-liste] .is-kart')).map(function (k) {
+      return { el: k, baslik: sadelestir(k.getAttribute('data-baslik') || ''), tum: sadelestir(k.getAttribute('data-ara') || ''), sektor: k.getAttribute('data-sektor') };
+    });
     var sayac = document.querySelector('[data-is-sayac]');
     var bos = document.querySelector('[data-is-bos]');
     var sektor = '';
+    function eslesir(metin, kelimeler) { for (var i = 0; i < kelimeler.length; i++) if (metin.indexOf(kelimeler[i]) < 0) return false; return true; }
     function suz() {
-      var q = inp.value.toLocaleLowerCase('tr-TR').trim();
+      var q = sadelestir(inp.value);
+      var kelimeler = q ? q.split(' ') : [];
+      var adaylar = kartlar.filter(function (k) { return !sektor || k.sektor === sektor; });
+      var alan = 'baslik';
+      if (kelimeler.length && !adaylar.some(function (k) { return eslesir(k.baslik, kelimeler); })) alan = 'tum';
       var n = 0;
-      kartlar.forEach(function (k) { var g = (!q || k.getAttribute('data-ara').indexOf(q) > -1) && (!sektor || k.getAttribute('data-sektor') === sektor); k.hidden = !g; if (g) n++; });
+      kartlar.forEach(function (k) {
+        var g = (!sektor || k.sektor === sektor) && (!kelimeler.length || eslesir(k[alan], kelimeler));
+        k.el.hidden = !g;
+        if (g) n++;
+      });
       if (sayac) sayac.textContent = n + ' ilan';
       if (bos) bos.hidden = n > 0;
     }
@@ -206,6 +222,8 @@
         if (sektor) inp.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
     });
+    // Adres çubuğundan arama: /is-ilanlari/?ara=garson
+    try { var ilk = new URLSearchParams(location.search).get('ara'); if (ilk) { inp.value = ilk; suz(); } } catch (e) {}
   });
   // ---------- İşveren ilan formu ----------
   document.querySelectorAll('[data-ilan-form]').forEach(function (f) {
