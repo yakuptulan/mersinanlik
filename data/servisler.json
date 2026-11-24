@@ -1,8 +1,8 @@
 {
- "guncelleme": "2026-11-24T10:02:26.563Z",
+ "guncelleme": "2026-11-24T10:19:34.620Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 20,
+   "sicaklik": 21,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -38,7 +38,7 @@
    ]
   },
   "anamur": {
-   "sicaklik": 17,
+   "sicaklik": 16,
    "durum": "Kuvvetli yağmur",
    "gunler": [
     {
@@ -146,13 +146,13 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 11,
-   "durum": "Bulutlu",
+   "sicaklik": 10,
+   "durum": "Hafif yağmurlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
      "min": 8,
-     "max": 11,
+     "max": 10,
      "durum": "Hafif yağmurlu"
     },
     {
@@ -183,7 +183,7 @@
   },
   "erdemli": {
    "sicaklik": 19,
-   "durum": "Parçalı bulutlu",
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
@@ -363,7 +363,7 @@
   },
   "tarsus": {
    "sicaklik": 21,
-   "durum": "Az bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-24",
@@ -398,7 +398,7 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 20,
+   "sicaklik": 21,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -434,7 +434,7 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 20,
+   "sicaklik": 21,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-24T10:02:29.591Z",
+  "guncelleme": "2026-11-24T10:19:40.271Z",
   "liste": [
    {
     "ad": "Akgül Eczanesi",
@@ -772,7 +772,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-24T10:02:30.678Z",
+  "guncelleme": "2026-11-24T10:19:41.661Z",
   "liste": [
    {
     "tur": "su",
@@ -800,6 +800,38 @@
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
+    "aciklama": "Tarsus ilçesi Kale burcu mahallesi içme suyu şebeke hattında oluşan arızadan dolayı kesinti uygulanmaktadır saat 15:00’te su verilmesi planlanmaktadır",
+    "baslangic": "2026-11-24T10:20:00.000Z",
+    "bitis": "2026-11-24T12:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "tarsus",
+      "ad": "Tarsus",
+      "mahalleler": [
+       "Kaleburcu"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Yenişehir Bahçelievler Mahallesi 1859 sokakta160 pvc arızası nedeniyle saat 15:30 kadar su kesintisi yaşanacaktır",
+    "baslangic": "2026-11-24T10:18:58.000Z",
+    "bitis": "2026-11-24T12:30:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "yenisehir",
+      "ad": "Yenişehir",
+      "mahalleler": [
+       "Bahçelievler"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
     "aciklama": "Mut İlçesi Deveci ve Yatırtaş mahallelerinde 14.00'a kadar içme suyu arızası kaynaklı kesinti yaşanacaktır.",
     "baslangic": "2026-11-24T08:45:00.000Z",
     "bitis": "2026-11-24T11:00:00.000Z",
@@ -810,6 +842,23 @@
       "mahalleler": [
        "Deveci",
        "Yatırtaş"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Toroslar çopurlu mahallesi Kutlubey sokakta 90 pvc arızası nedeniyle çopurlu mahallesi ve kaşlı mahallesinde saat 15:00'a kadar su kesintisi yaşanacaktır",
+    "baslangic": "2026-11-24T10:16:28.000Z",
+    "bitis": "2026-11-24T12:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "toroslar",
+      "ad": "Toroslar",
+      "mahalleler": [
+       "Çopurlu",
+       "Kaşlı"
       ]
      }
     ]
@@ -988,7 +1037,7 @@
   "kaynakSaati": "2026-11-24 13:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-24T10:02:37.010Z",
+  "guncelleme": "2026-11-24T10:19:47.589Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -8953,7 +9002,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-24T10:02:37.438Z",
+  "guncelleme": "2026-11-24T10:19:47.996Z",
   "liste": [
    {
     "yol": "/",
@@ -8964,15 +9013,15 @@
     "sayi": 12
    },
    {
+    "yol": "/haber/toroslar-da-moloz-yiginlarinin-yerini-yesil-alan-aliyor-1uxscif/",
+    "sayi": 10
+   },
+   {
     "yol": "/okullar-tatil-mi/bursa/",
     "sayi": 10
    },
    {
     "yol": "/haber/anamur-da-su-kesintisi-24-kasim-goktas-saray-ve-1-mahalle-daha-sa20e0/",
-    "sayi": 10
-   },
-   {
-    "yol": "/haber/toroslar-da-moloz-yiginlarinin-yerini-yesil-alan-aliyor-1uxscif/",
     "sayi": 10
    },
    {
@@ -9001,7 +9050,7 @@
    },
    {
     "yol": "/hava-durumu/bozyazi/",
-    "sayi": 3
+    "sayi": 2
    },
    {
     "yol": "/haber/mezitli-de-kadina-yonelik-siddete-karsi-farkindalik-seminerleri-42eb9k/",
@@ -9024,19 +9073,19 @@
     "sayi": 1
    },
    {
-    "yol": "/is-ilanlari/",
-    "sayi": 1
-   },
-   {
     "yol": "/haber/mersin-nobetci-eczaneler-22-kasim-pazar-eed9b7/",
     "sayi": 1
    },
    {
-    "yol": "/okullar-tatil-mi/zonguldak/",
+    "yol": "/is-ilanlari/",
     "sayi": 1
    },
    {
     "yol": "/haber/kurum-aracini-ozel-islerinde-kullandigi-iddia-edilen-muze-mudurunun-ya-189mz5a/",
+    "sayi": 1
+   },
+   {
+    "yol": "/okullar-tatil-mi/zonguldak/",
     "sayi": 1
    },
    {
@@ -9048,27 +9097,19 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/sadik-eliyesil-ortaokulu-nda-kantin-sorunu-ogrencilerin-ihtiyaci-kimin-4vmmk3/",
-    "sayi": 1
-   },
-   {
     "yol": "/piyasalar/",
     "sayi": 1
    },
    {
     "yol": "/haber/mersin-de-kimler-yasiyor-iste-sanliurfali-diyarbakirli-adanali-ve-dige-11ff6hs/",
     "sayi": 1
-   },
-   {
-    "yol": "/hava-durumu/aydincik/",
-    "sayi": 1
    }
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-24T10:02:38.741Z",
+  "guncelleme": "2026-11-24T10:19:50.403Z",
   "deniz": {
-   "sicaklik": 21.5,
+   "sicaklik": 21.6,
    "dalga": 0.2
   },
   "hava": {
@@ -9079,7 +9120,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-24T10:02:40.509Z",
+  "guncelleme": "2026-11-24T10:19:52.811Z",
   "giden": [
    {
     "no": [
@@ -9090,7 +9131,7 @@
     "planlanan": "2026-11-24T10:30:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "BOARDING",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -9102,7 +9143,7 @@
     "planlanan": "2026-11-24T11:00:00.000Z",
     "tahmini": "2026-11-24T11:10:00.000Z",
     "kapi": "107",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -9114,7 +9155,7 @@
     "planlanan": "2026-11-24T12:10:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9503,18 +9544,6 @@
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "PC2084"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-24T10:10:00.000Z",
-    "tahmini": "2026-11-24T10:35:00.000Z",
-    "kapi": "",
-    "durum": "GECİKME",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC1855"
@@ -9958,11 +9987,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3641"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Van",
+    "planlanan": "2026-11-25T10:05:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-24T10:02:40.508Z",
+  "guncelleme": "2026-11-24T10:19:52.810Z",
   "liste": [
    {
     "id": 6386,
