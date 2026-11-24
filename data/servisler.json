@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-24T21:02:02.335Z",
+ "guncelleme": "2026-11-24T21:32:02.241Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 14,
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-24T21:02:06.724Z",
+  "guncelleme": "2026-11-24T21:32:07.745Z",
   "liste": [
    {
     "ad": "Akgül Eczanesi",
@@ -684,7 +684,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-24T21:02:08.096Z",
+  "guncelleme": "2026-11-24T21:32:08.954Z",
   "liste": [
    {
     "tur": "su",
@@ -1704,7 +1704,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-24T18:34:08.495Z",
+  "guncelleme": "2026-11-24T21:32:27.190Z",
   "liste": [
    {
     "id": "ni2rw5",
@@ -8748,15 +8748,15 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-24T21:02:15.625Z",
+  "guncelleme": "2026-11-24T21:32:23.205Z",
   "liste": [
    {
-    "yol": "/haber/buyuksehir-den-yil-sonuna-kadar-10-bin-agaclik-yesil-hedef-1mzr7f8/",
+    "yol": "/",
     "sayi": 12
    },
    {
-    "yol": "/",
-    "sayi": 11
+    "yol": "/haber/buyuksehir-den-yil-sonuna-kadar-10-bin-agaclik-yesil-hedef-1mzr7f8/",
+    "sayi": 12
    },
    {
     "yol": "/haber/anamur-da-su-kesintisi-24-kasim-goktas-saray-ve-1-mahalle-daha-sa20e0/",
@@ -8783,23 +8783,23 @@
     "sayi": 6
    },
    {
-    "yol": "/okullar-tatil-mi/duzce/",
+    "yol": "/is-ilanlari/tarsus/",
     "sayi": 3
    },
    {
-    "yol": "/is-ilanlari/tarsus/",
-    "sayi": 3
+    "yol": "/okullar-tatil-mi/duzce/",
+    "sayi": 2
    },
    {
     "yol": "/haber/mersin-de-bir-haftadir-kayip-olarak-aranan-kadin-bulundu-vejbqi/",
     "sayi": 2
    },
    {
-    "yol": "/haber/mersin-de-ogretmenler-gunu-nde-ucretsiz-etkinlik-firsatlari-18d3dcj/",
+    "yol": "/haber/mezitli-belediyesi-sorusturmasinda-yeni-iddia-itirafcilarin-sayisi-3-e-6y7hgj/",
     "sayi": 2
    },
    {
-    "yol": "/haber/mezitli-belediyesi-sorusturmasinda-yeni-iddia-itirafcilarin-sayisi-3-e-6y7hgj/",
+    "yol": "/haber/mersin-de-ogretmenler-gunu-nde-ucretsiz-etkinlik-firsatlari-18d3dcj/",
     "sayi": 2
    },
    {
@@ -8833,14 +8833,18 @@
    {
     "yol": "/is-ilanlari/erdemli/",
     "sayi": 1
+   },
+   {
+    "yol": "/haber/mersin-de-kimler-yasiyor-iste-sanliurfali-diyarbakirli-adanali-ve-dige-11ff6hs/",
+    "sayi": 1
    }
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-24T21:03:01.879Z",
+  "guncelleme": "2026-11-24T21:32:27.191Z",
   "deniz": {
    "sicaklik": 21.5,
-   "dalga": 0.56
+   "dalga": 0.58
   },
   "hava": {
    "aqi": 42,
@@ -8850,20 +8854,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-24T21:03:04.244Z",
+  "guncelleme": "2026-11-24T21:32:29.739Z",
   "giden": [
-   {
-    "no": [
-     "PC2099"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-24T21:20:00.000Z",
-    "tahmini": null,
-    "kapi": "105",
-    "durum": "BOARDING",
-    "hat": "ic"
-   },
    {
     "no": [
      "TK2475"
@@ -9753,11 +9745,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3014"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-25T21:20:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-24T21:03:04.243Z",
+  "guncelleme": "2026-11-24T21:32:29.739Z",
   "liste": [
    {
     "id": 6386,
