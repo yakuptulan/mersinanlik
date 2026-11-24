@@ -12,19 +12,11 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-24T19:07:38.629Z"
-  },
-  "cukurova": {
-   "hata": "This operation was aborted",
-   "zaman": "2026-11-24T19:08:21.132Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-24",
-  "adet": 53,
+  "adet": 54,
   "premium": 46
  },
  "kurumGorulen": {
@@ -302,7 +294,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersin-protokolunden-24-kasim-ogretmenler-gunu-mesaji-119531476",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/adana-mersin-ve-osmaniyenin-ilcelerinde-ogretmenler-gunu-kutlandi-119531533",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/silahli-saldirinin-firari-suphelisi-yakalanip-tutuklandi-119531600",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-tedavileri-tamamlanan-5-kaplumbaga-denizle-bulusturuldu-119531611"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-tedavileri-tamamlanan-5-kaplumbaga-denizle-bulusturuldu-119531611",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-dolandiricilik-operasyonu-8-supheli-tutuklandi-119531733"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -471,46 +464,46 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-24T19:08:25.084Z",
+  "guncelleme": "2026-11-24T19:31:51.167Z",
   "liste": [
    {
-    "baslik": "paris saint-germain fc",
-    "trafik": 200
+    "baslik": "الريال ضد بي اس في",
+    "trafik": 2000
    },
    {
-    "baslik": "valiler kararnamesi",
-    "trafik": 200
+    "baslik": "manchester city - napoli",
+    "trafik": 1000
    },
    {
-    "baslik": "gökmen çiçek",
-    "trafik": 200
-   },
-   {
-    "baslik": "milli savunma bakanlığı",
-    "trafik": 200
-   },
-   {
-    "baslik": "aek",
-    "trafik": 200
-   },
-   {
-    "baslik": "gala",
+    "baslik": "ugochukwu",
     "trafik": 500
    },
    {
-    "baslik": "malezya başbakanı",
-    "trafik": 100
-   },
-   {
-    "baslik": "afc şampiyonlar ligi",
+    "baslik": "como - aek",
     "trafik": 200
    },
    {
-    "baslik": "stamford bridge",
+    "baslik": "barkley",
     "trafik": 200
    },
    {
-    "baslik": "دوري الأبطال",
+    "baslik": "feyenoord - porto",
+    "trafik": 200
+   },
+   {
+    "baslik": "psv",
+    "trafik": 200
+   },
+   {
+    "baslik": "sane",
+    "trafik": 200
+   },
+   {
+    "baslik": "gs bjk",
+    "trafik": 200
+   },
+   {
+    "baslik": "аль-наср – аль-садд",
     "trafik": 100
    }
   ]

@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-24T19:08:34.318Z",
+ "guncelleme": "2026-11-24T19:32:26.948Z",
  "hikayeler": [
   {
    "id": "1r0de8u",
@@ -7130,7 +7130,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-21T06:08:48.000Z",
-   "sonGuncelleme": "2026-11-24T19:08:05.514Z",
+   "sonGuncelleme": "2026-11-24T19:31:45.852Z",
    "kaynaklar": [
     {
      "kaynakId": "mersin-buyuksehir",
@@ -10904,7 +10904,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-23T08:31:28.209Z",
-   "sonGuncelleme": "2026-11-24T19:08:04.927Z",
+   "sonGuncelleme": "2026-11-24T19:31:46.863Z",
    "kaynaklar": [
     {
      "kaynakId": "mersingundem",
@@ -11007,7 +11007,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-23T11:38:04+03:00",
-   "sonGuncelleme": "2026-11-24T19:08:05.503Z",
+   "sonGuncelleme": "2026-11-24T19:31:45.843Z",
    "kaynaklar": [
     {
      "kaynakId": "haberturk-mersin",
@@ -11387,7 +11387,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-23T12:50:09+03:00",
-   "sonGuncelleme": "2026-11-24T19:08:06.131Z",
+   "sonGuncelleme": "2026-11-24T19:31:46.321Z",
    "kaynaklar": [
     {
      "kaynakId": "dha-mersin",
@@ -20808,7 +20808,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-24T17:22:37.000Z",
-   "sonGuncelleme": "2026-11-24T19:08:23.648Z",
+   "sonGuncelleme": "2026-11-24T19:31:49.496Z",
    "kaynaklar": [
     {
      "kaynakId": "aa-guncel",
@@ -21081,7 +21081,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-24T18:30:00.000Z",
-   "sonGuncelleme": "2026-11-24T18:31:54.518Z",
+   "sonGuncelleme": "2026-11-24T19:31:46.296Z",
    "kaynaklar": [
     {
      "kaynakId": "cukurova",
@@ -21089,8 +21089,18 @@
      "link": "https://cukurovagazetesi.com/ak-parti-genel-baskan-yardimcisi-hayati-yazici-gorevlerinden-istifa-etti",
      "baslik": "AK Parti Genel Başkan Yardımcısı Hayati Yazıcı görevlerinden istifa etti",
      "tarih": "2026-11-24T18:30:00.000Z"
+    },
+    {
+     "kaynakId": "mersinobjektif",
+     "ad": "Mersin Objektif",
+     "link": "https://www.mersinobjektif.com.tr/ak-parti-genel-baskan-yardimcisi-hayati-yazici-gorevinden-istifa-etti",
+     "baslik": "AK Parti Genel Başkan Yardımcısı Hayati Yazıcı görevinden istifa etti",
+     "tarih": "2026-11-24T19:06:00.000Z"
     }
-   ]
+   ],
+   "gorselKaynak": "yz",
+   "gorselPrompt": "A modern government office building exterior with tinted glass windows, surrounded by green trees under a clear daytime sky, with no people visible.. Realistic editorial news photograph, natural daylight, wide shot, sharp focus, no text, no letters, no watermark.",
+   "gorsel": "bv1upt.webp"
   },
   {
    "id": "eyfxtc",
@@ -21134,7 +21144,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-24T18:48:41.000Z",
-   "sonGuncelleme": "2026-11-24T19:08:06.097Z",
+   "sonGuncelleme": "2026-11-24T19:31:15.701Z",
    "kaynaklar": [
     {
      "kaynakId": "mersintime",
@@ -21156,6 +21166,13 @@
      "link": "https://www.mersinobjektif.com.tr/mersinde-dolandiricilik-operasyonu-8-supheli-tutuklandi",
      "baslik": "Mersin’de dolandırıcılık operasyonu: 8 şüpheli tutuklandı",
      "tarih": "2026-11-24T18:41:00.000Z"
+    },
+    {
+     "kaynakId": "haberturk-mersin",
+     "ad": "Habertürk",
+     "link": "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-dolandiricilik-operasyonu-8-supheli-tutuklandi-119531733",
+     "baslik": "Mersin'de dolandırıcılık operasyonu: 8 şüpheli tutuklandı",
+     "tarih": "2026-11-24T21:48:00+03:00"
     }
    ],
    "metinDenemesi": 1,
@@ -21370,6 +21387,144 @@
      "link": "https://www.aa.com.tr/tr/spor/basantrenor-selen-erdem-panathinaikos-kadin-basketbol-takimindaki-gorevinden-ayrildi/4136364",
      "baslik": "Başantrenör Selen Erdem, Panathinaikos Kadın Basketbol Takımı'ndaki görevinden ayrıldı",
      "tarih": "2026-11-24T19:03:18.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1xd1mkr",
+   "baslik": "Cumhurbaşkanı Erdoğan’dan 15 bin öğretmen alımı müjdesi",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "egitim",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-24T19:06:00.000Z",
+   "sonGuncelleme": "2026-11-24T19:31:46.853Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "cukurova",
+     "ad": "Çukurova Gazetesi",
+     "link": "https://cukurovagazetesi.com/cumhurbaskani-erdogandan-15-bin-ogretmen-alimi-mujdesi",
+     "baslik": "Cumhurbaşkanı Erdoğan’dan 15 bin öğretmen alımı müjdesi",
+     "tarih": "2026-11-24T19:06:00.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1o3jdqn",
+   "baslik": "Trabzon'da sağanak yaşamı olumsuz etkiledi",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "hava",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-24T15:51:40.000Z",
+   "sonGuncelleme": "2026-11-24T19:31:49.459Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/gundem/trabzonda-saganak-yasami-olumsuz-etkiledi/4136114",
+     "baslik": "Trabzon'da sağanak yaşamı olumsuz etkiledi",
+     "tarih": "2026-11-24T15:51:40.000Z"
+    }
+   ]
+  },
+  {
+   "id": "1qvhop7",
+   "baslik": "Bakan Şimşek: Türkiye ile Umman'ın tarih boyunca üstlendikleri çok önemli bir rol var",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "ekonomi",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-24T19:00:56.000Z",
+   "sonGuncelleme": "2026-11-24T19:31:49.465Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/ekonomi/bakan-simsek-turkiye-ile-ummanin-tarih-boyunca-ustlendikleri-cok-onemli-bir-rol-var/4136361",
+     "baslik": "Bakan Şimşek: Türkiye ile Umman'ın tarih boyunca üstlendikleri çok önemli bir rol var",
+     "tarih": "2026-11-24T19:00:56.000Z"
+    }
+   ]
+  },
+  {
+   "id": "f7guz4",
+   "baslik": "ABD'de Demokratlar, 1990'dan bu yana Temsilciler Meclisindeki en yüksek sandalye sayısına ulaştı",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "siyaset",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-24T19:15:56.000Z",
+   "sonGuncelleme": "2026-11-24T19:31:49.471Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/dunya/abdde-demokratlar-1990dan-bu-yana-temsilciler-meclisindeki-en-yuksek-sandalye-sayisina-ulasti/4136386",
+     "baslik": "ABD'de Demokratlar, 1990'dan bu yana Temsilciler Meclisindeki en yüksek sandalye sayısına ulaştı",
+     "tarih": "2026-11-24T19:15:56.000Z"
+    }
+   ]
+  },
+  {
+   "id": "2vz0hu",
+   "baslik": "Axios: Anthropic ve OpenAI, henüz yayımlamadıkları çok daha gelişmiş yapay zeka sistemlerine sahip",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "gundem",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-24T19:20:21.000Z",
+   "sonGuncelleme": "2026-11-24T19:31:49.478Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/bilim-teknoloji/axios-anthropic-ve-openai-henuz-yayimlamadiklari-cok-daha-gelismis-yapay-zeka-sistemlerine-sahip/4136389",
+     "baslik": "Axios: Anthropic ve OpenAI, henüz yayımlamadıkları çok daha gelişmiş yapay zeka sistemlerine sahip",
+     "tarih": "2026-11-24T19:20:21.000Z"
+    }
+   ]
+  },
+  {
+   "id": "19nf1fu",
+   "baslik": "Shakhtar Donetsk Teknik Direktörü Arda Turan: Çok tecrübeli bir takıma karşı oynayacağız",
+   "ozet": null,
+   "ozetIcinMetin": null,
+   "ilceler": [],
+   "genel": true,
+   "kategori": "spor",
+   "riskNedenleri": [],
+   "durum": "yayinda",
+   "onaylandi": false,
+   "ilkGorulme": "2026-11-24T19:08:21.000Z",
+   "sonGuncelleme": "2026-11-24T19:31:49.484Z",
+   "kaynaklar": [
+    {
+     "kaynakId": "aa-guncel",
+     "ad": "Anadolu Ajansı",
+     "link": "https://www.aa.com.tr/tr/spor/shakhtar-donetsk-teknik-direktoru-arda-turan-cok-tecrubeli-bir-takima-karsi-oynayacagiz/4136375",
+     "baslik": "Shakhtar Donetsk Teknik Direktörü Arda Turan: Çok tecrübeli bir takıma karşı oynayacağız",
+     "tarih": "2026-11-24T19:08:21.000Z"
     }
    ]
   }
