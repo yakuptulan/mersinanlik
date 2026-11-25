@@ -178,7 +178,39 @@ export async function liglerGetir(ua, eski = {}) {
             console.warn(`! ${lig.kisa} ${n}. hafta: ${e.message}`);
           }
         }
-        for (const n of Object.keys(kayit.haftalar)) if (Number(n) < oynanan - 6) delete kayit.haftalar[n];
+        // Sezonun tamamı tutulur (takım sayfalarında "tüm sonuçlar" için); eksik eski haftalar
+        // TFF'yi yormamak için her çalışmada en çok 2 hafta tamamlanır.
+        let ek = 0;
+        for (let n = oynanan - 5; n >= 1 && ek < 2; n--) {
+          if (kayit.haftalar[n]) continue;
+          try {
+            await new Promise((x) => setTimeout(x, 1200));
+            const mac = haftaCoz(await sayfa(`${lig.url}&hafta=${n}`, ua));
+            if (mac.length) kayit.haftalar[n] = mac.map(({ ev, dep, skor, tarih }) => ({ ev, dep, skor, tarih }));
+            ek++;
+          } catch (e) {
+            console.warn(`! ${lig.kisa} ${n}. hafta (geçmiş): ${e.message}`);
+            break;
+          }
+        }
+        // Kalan maçların fikstürü: gelecek haftalar, her çalışmada en çok 2 hafta; her hafta günde bir yenilenir
+        const toplamHafta = Math.max(0, (puan.length - 1) * 2);
+        kayit.fikstur = eski[lig.kod]?.fikstur || {};
+        for (const n of Object.keys(kayit.fikstur)) if (Number(n) <= oynanan) delete kayit.fikstur[n];
+        let ileri = 0;
+        for (let n = oynanan + 1; n <= toplamHafta && ileri < 2; n++) {
+          const var_ = kayit.fikstur[n];
+          if (var_ && Date.now() - Date.parse(var_.alindi) < 24 * 36e5) continue;
+          try {
+            await new Promise((x) => setTimeout(x, 1200));
+            const mac = haftaCoz(await sayfa(`${lig.url}&hafta=${n}`, ua));
+            if (mac.length) kayit.fikstur[n] = { alindi: new Date().toISOString(), maclar: mac.map(({ ev, dep, tarih, saat, skor }) => ({ ev, dep, tarih, saat, skor })) };
+            ileri++;
+          } catch (e) {
+            console.warn(`! ${lig.kisa} ${n}. hafta (fikstür): ${e.message}`);
+            break;
+          }
+        }
         kayit.form = formHesapla(puan, kayit.haftalar);
       }
       sonuc[lig.kod] = kayit;

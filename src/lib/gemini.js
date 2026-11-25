@@ -189,6 +189,15 @@ export async function jsonYaz(talimat, icerik, { sicaklik = 0.7, sadeceGemini = 
       }
     }
   }
+  // Ücretsiz kota dolduysa (429) ve Vertex girişi varsa krediyle çalışan modele düş (ör. kar akşamlarında okul kararları)
+  if (process.env.VERTEX_TOKEN) {
+    try {
+      const yazi = await vertexYaz(talimat, icerik, sicaklik);
+      if (yazi) return cozum(yazi);
+    } catch (e) {
+      hata += ` | Vertex: ${String(e.message).slice(0, 80)}`;
+    }
+  }
   if (cfHazir() && !sadeceGemini) {
     for (const model of CF_MODELLER) {
       const res = await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/ai/run/${model}`, {

@@ -101,6 +101,7 @@ jobs:
         run: node src/okul81.js || true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          VERTEX_TOKEN: ${{ steps.vertex.outputs.access_token }}
 
 
       - name: Mersin iş ilanları (İŞKUR, 3 saatte bir)

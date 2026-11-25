@@ -234,7 +234,10 @@ export function takimSayfasi({ takim, lig, hikayeler, servis, simdi = Date.now()
   const t = lig.puan.find((x) => x.takim === takim);
   const benim = (m) => m.ev === takim || m.dep === takim;
   const sonuclar = Object.keys(lig.haftalar || {}).map(Number).sort((a, b) => b - a).map((n) => ({ n, m: (lig.haftalar[n] || []).find((x) => benim(x) && x.skor) })).filter((x) => x.m);
-  const gelecek = (lig.maclar || []).filter((m) => benim(m) && !m.skor).sort((a, b) => (a.tarih + (a.saat || '')).localeCompare(b.tarih + (b.saat || '')));
+  // Sıradaki maçlar: bu haftanın programı + gelecek haftaların fikstürü (aynı maç iki kez sayılmaz)
+  const fiksturMaclari = Object.entries(lig.fikstur || {}).flatMap(([n, f]) => (f.maclar || []).map((m) => ({ ...m, hafta: Number(n) })));
+  const gelecekHam = [...(lig.maclar || []), ...fiksturMaclari].filter((m) => benim(m) && !m.skor);
+  const gelecek = gelecekHam.filter((m, i) => gelecekHam.findIndex((x) => x.ev === m.ev && x.dep === m.dep) === i).sort((a, b) => ((a.tarih || '9999') + (a.saat || '')).localeCompare((b.tarih || '9999') + (b.saat || '')));
   const anahtar = takimAnahtar(takim);
   const re = new RegExp(`(^|[^a-zçğıöşü])${anahtar.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, 'i');
   const haberler = hikayeler.filter((x) => x.kategori === 'spor' && re.test(x.baslik)).slice(0, 8);
@@ -244,13 +247,41 @@ export function takimSayfasi({ takim, lig, hikayeler, servis, simdi = Date.now()
   const kisa = KISA_TAKIM[takim] && KISA_TAKIM[takim] !== takim ? KISA_TAKIM[takim] : '';
   const sonMac = sonuclar[0];
   const giris = `${takim}${kisa ? ` (${kisa})` : ''}, Trendyol Süper Lig'de ${t.o} maçta ${t.g} galibiyet, ${t.b} beraberlik ve ${t.m} mağlubiyetle ${t.p} puan topladı ve ${t.sira}. sırada yer alıyor.${sonMac ? ` Son maçında ${sonMac.n}. haftada ${sonMac.m.ev} ile ${sonMac.m.dep} arasındaki karşılaşma ${sonMac.m.skor} sona erdi.` : ''}${gelecek[0] ? ` Sıradaki maçında ${kisaGun(gelecek[0].tarih)}${gelecek[0].saat ? ` saat ${gelecek[0].saat}` : ''} ${gelecek[0].ev === takim ? `sahasında ${gelecek[0].dep}` : `deplasmanda ${gelecek[0].ev}`} ile karşılaşacak.` : ''} Bu sayfada ${takim} maçlarının sonuçları, fikstürü, form durumu ve güncel puan tablosu yer alıyor.`;
+  const lider = lig.puan[0];
   const sss = [
     { soru: `${takim} kaçıncı sırada?`, cevap: `${takim}, Trendyol Süper Lig'de ${t.o} maçta ${t.p} puanla ${t.sira}. sırada (${t.g} galibiyet, ${t.b} beraberlik, ${t.m} mağlubiyet).` },
     ...(gelecek[0] ? [{ soru: `${takim} sonraki maçı ne zaman?`, cevap: `${takim}, ${kisaGun(gelecek[0].tarih)}${gelecek[0].saat ? ` saat ${gelecek[0].saat}` : ''} ${gelecek[0].ev === takim ? `sahasında ${gelecek[0].dep}` : `deplasmanda ${gelecek[0].ev}`} ile oynayacak.` }] : []),
     ...(sonuclar[0] ? [{ soru: `${takim} son maçı kaç kaç bitti?`, cevap: `${sonuclar[0].n}. haftada ${sonuclar[0].m.ev} ${sonuclar[0].m.skor} ${sonuclar[0].m.dep}.` }] : []),
+    { soru: `${takim} kaç puanda, averajı kaç?`, cevap: `${takim} ${t.o} maçta ${t.p} puan topladı. ${t.a} gol attı, ${t.y} gol yedi; averajı ${t.av > 0 ? '+' : ''}${t.av}.${lider && lider.takim !== takim ? ` Lider ${lider.takim} ile arasında ${lider.p - t.p} puan var.` : ''}` },
+    ...(gelecek.length > 1 ? [{ soru: `${takim} kalan maçları hangileri?`, cevap: `${takim} takımının önümüzdeki maçları: ${gelecek.slice(0, 5).map((m) => `${m.ev} – ${m.dep}${m.tarih ? ` (${kisaGun(m.tarih)})` : ''}`).join(', ')}.` }] : []),
   ];
+  // Puan tablosunda takımın çevresi (2 üst, 2 alt)
+  const idx = lig.puan.findIndex((x) => x.takim === takim);
+  const cevre = lig.puan.slice(Math.max(0, Math.min(idx - 2, lig.puan.length - 5)), Math.max(5, idx + 3));
+  const cevreTablo = `<div class="tablo-kap"><table class="tablo takim-cevre"><thead><tr><th>#</th><th>Takım</th><th>O</th><th>G</th><th>B</th><th>M</th><th>Av</th><th>P</th></tr></thead><tbody>${cevre.map((x) => `<tr${x.takim === takim ? ' class="ben"' : ''}><td>${x.sira}</td><th scope="row"><a href="${takimYolu(x.takim)}">${h(x.takim)}</a></th><td>${x.o}</td><td>${x.g}</td><td>${x.b}</td><td>${x.m}</td><td>${x.av > 0 ? '+' : ''}${x.av}</td><td><b>${x.p}</b></td></tr>`).join('')}</tbody></table></div>`;
+  // Sıradaki maçın iki takımı yan yana
+  const sm = gelecek[0];
+  const rakipAd = sm ? (sm.ev === takim ? sm.dep : sm.ev) : null;
+  const rk = rakipAd ? lig.puan.find((x) => x.takim === rakipAd) : null;
+  const formStr = (ad) => (lig.form?.[ad] || []).map((f) => `<i class="f-${f}">${f}</i>`).join('') || '–';
+  const karsilastir = sm && rk ? (() => {
+    const [e, d] = sm.ev === takim ? [t, rk] : [rk, t];
+    const sat = (etiket, a, b) => `<tr><td>${a}</td><th scope="row">${etiket}</th><td>${b}</td></tr>`;
+    return `<div class="bolum-bas"><h2>${h(sm.ev)} – ${h(sm.dep)} puan durumu karşılaştırması</h2>${sm.tarih ? `<span>${h(kisaGun(sm.tarih))}${sm.saat ? ` · ${h(sm.saat)}` : ''}</span>` : ''}</div>
+<div class="tablo-kap"><table class="tablo takim-karsi"><thead><tr><th><a href="${takimYolu(e.takim)}">${h(e.takim)}</a></th><th></th><th><a href="${takimYolu(d.takim)}">${h(d.takim)}</a></th></tr></thead><tbody>
+${sat('Sıra', `${e.sira}.`, `${d.sira}.`)}${sat('Puan', `<b>${e.p}</b>`, `<b>${d.p}</b>`)}${sat('Maç', e.o, d.o)}${sat('Galibiyet', e.g, d.g)}${sat('Beraberlik', e.b, d.b)}${sat('Mağlubiyet', e.m, d.m)}${sat('Gol (attı:yedi)', `${e.a}:${e.y}`, `${d.a}:${d.y}`)}${sat('Averaj', `${e.av > 0 ? '+' : ''}${e.av}`, `${d.av > 0 ? '+' : ''}${d.av}`)}${sat('Son maçlar', `<span class="mt-form satir">${formStr(e.takim)}</span>`, `<span class="mt-form satir">${formStr(d.takim)}</span>`)}
+</tbody></table></div>`;
+  })() : '';
+  // Kalan maçlar tablosu
+  const kalanTablo = gelecek.length > 1 ? `<div class="bolum-bas"><h2>${ad} kalan maçları (fikstür)</h2><span>${gelecek.length} maç listeleniyor</span></div>
+<div class="tablo-kap"><table class="tablo"><thead><tr><th>Tarih</th><th>Maç</th><th>Saha</th></tr></thead><tbody>${gelecek.map((m) => { const r = m.ev === takim ? m.dep : m.ev; return `<tr><td>${m.tarih ? h(kisaGun(m.tarih)) : 'Açıklanmadı'}${m.saat ? ` · ${h(m.saat)}` : ''}</td><th scope="row">${takimRozeti(r)} <a href="${takimYolu(r)}">${h(r)}</a></th><td>${m.ev === takim ? 'İç saha' : 'Deplasman'}</td></tr>`; }).join('')}</tbody></table></div>
+<p style="color:var(--ikincil);font-size:14px;margin-top:6px">Maç gün ve saatleri TFF tarafından değiştirilebilir; fikstür her gün güncellenir.</p>` : '';
+  // İç saha / deplasman karnesi (elimizdeki sonuçlardan)
+  const karne = (evde) => sonuclar.filter(({ m }) => (m.ev === takim) === evde).reduce((k, { m }) => { const r = sr(m); k[r]++; return k; }, { G: 0, B: 0, M: 0 });
+  const ic = karne(true), dis = karne(false);
+  const karneMetni = sonuclar.length >= 4 ? `Son ${sonuclar.length} maçında iç sahada ${ic.G} galibiyet, ${ic.B} beraberlik, ${ic.M} mağlubiyet; deplasmanda ${dis.G} galibiyet, ${dis.B} beraberlik, ${dis.M} mağlubiyet aldı.` : '';
   return {
-    baslik: `${takim} maçları, fikstür ve puan durumu`,
+    baslik: `${takim} maçları, puan durumu ve fikstür: Kaçıncı sırada?`,
     aciklama: `${takim}${kisa ? ` (${kisa})` : ''} Süper Lig'de ${t.sira}. sırada, ${t.p} puan. ${gelecek[0] ? `Sıradaki maç: ${gelecek[0].ev} – ${gelecek[0].dep}, ${kisaGun(gelecek[0].tarih)}${gelecek[0].saat ? ' ' + gelecek[0].saat : ''}. ` : ''}Maç sonuçları, fikstür, form ve haberler.`,
     jsonLd: [
       { '@context': 'https://schema.org', '@type': 'SportsTeam', name: takim, ...(kisa ? { alternateName: kisa } : {}), sport: 'Futbol', memberOf: { '@type': 'SportsOrganization', name: 'Trendyol Süper Lig' } },
@@ -265,8 +296,13 @@ export function takimSayfasi({ takim, lig, hikayeler, servis, simdi = Date.now()
 <p class="takim-giris">${h(giris)}</p>
 ${lig.form?.[takim]?.length ? `<div class="mt-form"><small>Son ${lig.form[takim].length} maç</small>${lig.form[takim].map((f) => `<i class="f-${f}">${f}</i>`).join('')}</div>` : ''}
 </article>
+<div class="bolum-bas"><h2>${ad} kaçıncı sırada?</h2><a class="bolum-link" href="/spor/super-lig/">Tüm puan durumu →</a></div>
+<p class="takim-giris" style="margin:0 0 10px">${ad}, ${t.o} maç sonunda <b>${t.p} puanla ${t.sira}. sırada</b>.${lider && lider.takim !== takim ? ` Lider ${h(lider.takim)} ile puan farkı ${lider.p - t.p}.` : ' Ligin lideri.'}${karneMetni ? ` ${h(karneMetni)}` : ''}</p>
+${cevreTablo}
 ${gelecek.length ? `<div class="bolum-bas"><h2>Sıradaki maç</h2></div><div class="sl-maclar">${gelecek.slice(0, 2).map((m) => `<div class="sl-mac"><span class="sl-zaman">${h(goreliZaman(m.tarih, m.saat, simdi))}</span><span class="sl-takim">${takimRozeti(m.ev)}<b>${h(m.ev)}</b></span><span class="sl-skor"><i>v</i></span><span class="sl-takim">${takimRozeti(m.dep)}<b>${h(m.dep)}</b></span></div>`).join('')}</div>` : ''}
-${sonuclar.length ? `<div class="bolum-bas"><h2>Son maçlar</h2></div><div class="sl-maclar">${sonuclar.map(({ n, m }) => `<div class="sl-mac"><span class="sl-zaman">${n}. hafta · ${{ G: 'Galibiyet', B: 'Beraberlik', M: 'Mağlubiyet' }[sr(m)]}</span><span class="sl-takim">${takimRozeti(m.ev)}<b>${h(m.ev)}</b></span><span class="sl-skor"><b>${h(m.skor.split('-')[0])}</b><i>–</i><b>${h(m.skor.split('-')[1])}</b></span><span class="sl-takim">${takimRozeti(m.dep)}<b>${h(m.dep)}</b></span></div>`).join('')}</div>` : ''}
+${karsilastir}
+${kalanTablo}
+${sonuclar.length ? `<div class="bolum-bas"><h2>${ad} maç sonuçları</h2><span>${sonuclar.length} maç</span></div><div class="sl-maclar">${sonuclar.map(({ n, m }) => `<div class="sl-mac"><span class="sl-zaman">${n}. hafta · ${{ G: 'Galibiyet', B: 'Beraberlik', M: 'Mağlubiyet' }[sr(m)]}</span><span class="sl-takim">${takimRozeti(m.ev)}<b>${h(m.ev)}</b></span><span class="sl-skor"><b>${h(m.skor.split('-')[0])}</b><i>–</i><b>${h(m.skor.split('-')[1])}</b></span><span class="sl-takim">${takimRozeti(m.dep)}<b>${h(m.dep)}</b></span></div>`).join('')}</div>` : ''}
 ${haberler.length ? `<div class="bolum-bas"><h2>${ad} haberleri</h2></div>${haberListesi(haberler)}` : ''}
 <div class="bolum-bas"><h2>Puan durumu</h2><a class="bolum-link" href="/spor/super-lig/">Lig sayfası →</a></div>
 ${ligTablosu(lig)}

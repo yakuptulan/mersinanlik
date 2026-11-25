@@ -1,4 +1,4 @@
-// 81 il "okullar tatil mi?" — AA ve TRT Haber akışlarında valilik tatil kararlarını yakalar.
+// 81 il "okullar tatil mi?" — AA, TRT Haber ve NTV akışlarında valilik tatil kararlarını yakalar.
 // Başlık kelimeyle süzülür, karar (il, gün, kapsam) yapay zekâyla çıkarılır; yapay zekâ
 // yanıt vermezse yalnızca kesin ifadeli başlıklar için kurallı çözüm kullanılır.
 // Sonuç: data/okul81.json → /okullar-tatil-mi/<il>/ ve /kar-tatili/ sayfaları, günlük "tatil olan iller" haberi.
@@ -13,7 +13,13 @@ const AKISLAR = [
   { ad: 'Anadolu Ajansı', url: 'https://www.aa.com.tr/tr/rss/default?cat=yasam' },
   { ad: 'TRT Haber', url: 'https://www.trthaber.com/sondakika_articles.rss' },
   { ad: 'TRT Haber', url: 'https://www.trthaber.com/gundem_articles.rss' },
+  { ad: 'TRT Haber', url: 'https://www.trthaber.com/turkiye_articles.rss' },
+  { ad: 'Anadolu Ajansı', url: 'https://www.aa.com.tr/tr/rss/default?cat=egitim' },
+  { ad: 'NTV', url: 'https://www.ntv.com.tr/son-dakika.rss' },
+  { ad: 'NTV', url: 'https://www.ntv.com.tr/turkiye.rss' },
 ];
+// Kar yağışlı akşamlarda onlarca il aynı saatlerde karar açıklar: her çalışmada bu kadar habere bakılır
+const CALISMA_BASINA = 24;
 const ADAY = /(okul|eğitim|ders|öğretim)[^.]{0,60}(tatil|ara veril|yapılmayacak|iptal)|tatil (edildi|ilan)|kar tatili|eğitime[^.]{0,25}ara|eğitime kar engeli/i;
 const OLAGAN = /ara tatil|yarıyıl|sömestr|yaz tatili|bayram tatili|tatil takvimi|okulların açılış|tatil olacak mı|tatil mi\?/i;
 const KESIN = /(tatil edildi|ara verildi|eğitim yapılmayacak|tatil ilan edildi|eğitime kar engeli)/i;
@@ -61,8 +67,22 @@ for (const a of AKISLAR) {
     console.warn(`! Okul (${a.url}): ${e.message}`);
   }
 }
+// En yeni haber önce; başlıkta tek il geçiyorsa ve o ilin aynı gün(ler) için "tüm il" kararı zaten kayıtlıysa
+// yapay zekâya gitmeden geçilir (aynı kararı birçok kaynak yazar)
+adaylar.sort((a, b) => new Date(b.tarih || 0) - new Date(a.tarih || 0));
+const zatenVar = (x) => {
+  const iller = ilAdlari(x.baslik);
+  if (iller.length !== 1) return false;
+  const t = new Date(x.tarih || Date.now());
+  const ertesi = gun(t.getTime() + 864e5);
+  return veri.kararlar.some((k) => k.il === iller[0].slug && k.kapsam === 'tum' && k.gunler.includes(ertesi));
+};
 let yeni = 0;
-for (const x of adaylar.slice(0, 8)) {
+let bakildi = 0;
+for (const x of adaylar) {
+  if (bakildi >= CALISMA_BASINA) break;
+  if (zatenVar(x)) { bakilan.add(x.link); continue; }
+  bakildi++;
   bakilan.add(x.link);
   let kararlar = null;
   try {
@@ -96,6 +116,6 @@ for (const x of adaylar.slice(0, 8)) {
 }
 const sinir = gun(Date.now() - 60 * 864e5);
 veri.kararlar = veri.kararlar.filter((k) => k.gunler.at(-1) >= sinir).slice(0, 400);
-veri.bakilan = [...bakilan].slice(-600);
+veri.bakilan = [...bakilan].slice(-1500);
 fs.writeFileSync(DOSYA, JSON.stringify(veri));
 console.log(`Okul (81 il): ${adaylar.length} aday, ${yeni} yeni karar, toplam ${veri.kararlar.length}`);

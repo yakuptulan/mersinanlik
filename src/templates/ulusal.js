@@ -373,31 +373,58 @@ const kararMetni = (k) => (k.kapsam === 'ilce' ? `${k.ilceler.length ? k.ilceler
 export function okulIlSayfasi({ il, kararlar, hava, simdi }) {
   const bugun = new Date(simdi).toLocaleDateString('sv-SE', { timeZone: TZ });
   const yarin = new Date(simdi + 864e5).toLocaleDateString('sv-SE', { timeZone: TZ });
+  const saat = Number(new Date(simdi).toLocaleString('en-GB', { hour: '2-digit', hour12: false, timeZone: TZ }));
+  const sabah = saat < 13; // öğlene kadar insanlar "bugün", sonrasında "yarın" için arar
   const b = kararlar.filter((k) => k.gunler.includes(bugun));
   const y = kararlar.filter((k) => k.gunler.includes(yarin));
   const gecmis = kararlar.filter((k) => k.gunler.at(-1) < bugun).slice(0, 10);
   const bul = BULUNMA(il.ad);
-  const yh = hava?.gunler?.find((g) => g.tarih === yarin);
-  const karBekleniyor = yh && (KAR.test(yh.durum) || yh.min <= 0);
-  const durum = y.length ? `${bul} yarın (${gunUzun(yarin)}) okullar ${kararMetni(y[0])} tatil. Kararı ${y[0].kurum} açıkladı.` : b.length ? `${bul} bugün okullar ${kararMetni(b[0])} tatil. Yarın için henüz açıklanmış bir tatil kararı yok.` : `${il.ad} için bugün ve yarın açıklanmış bir okul tatili kararı yok; okullar açık.`;
+  const gunKisa = (g) => new Date(`${g}T12:00:00+03:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', timeZone: TZ });
+  const haftaSonu = (g) => [0, 6].includes(new Date(`${g}T12:00:00+03:00`).getDay());
+  const hv = (g) => hava?.gunler?.find((x) => x.tarih === g);
+  const yh = hv(yarin), bh = hv(bugun);
+  // Risk: tahminde kar/karla karışık yağış ya da donla birlikte yağış varsa (yalnızca soğuk hava risk sayılmaz)
+  const riskli = (x) => Boolean(x) && (KAR.test(x.durum) || (x.min <= 0 && /yağ|sağanak|sulu/i.test(x.durum)));
+  const karBekleniyor = riskli(yh);
+  // Günün durumu: karar varsa "tatil", hafta sonuysa "hafta sonu", yoksa "karar yok"
+  const gunDurumu = (g, liste, ad) => {
+    if (liste.length) return { sinif: 'tatil', baslik: `${ad} okullar tatil`, metin: `${bul} ${gunUzun(g)} günü okullar ${kararMetni(liste[0])} tatil. Kararı ${liste[0].kurum} açıkladı.`, karar: liste[0] };
+    if (haftaSonu(g)) return { sinif: 'acik', baslik: `${ad} hafta sonu`, metin: `${gunUzun(g)} hafta sonuna denk geliyor; okullarda zaten eğitim yok.` };
+    return { sinif: 'acik', baslik: `${ad} için tatil kararı yok`, metin: `${il.ad} Valiliği'nin ${gunUzun(g)} günü için açıkladığı bir okul tatili kararı bulunmuyor; okullar açık.` };
+  };
+  const dB = gunDurumu(bugun, b, 'Bugün');
+  const dY = gunDurumu(yarin, y, 'Yarın');
+  const durum = y.length ? dY.metin : b.length ? `${dB.metin} Yarın için henüz açıklanmış bir tatil kararı yok.` : `${il.ad} için bugün (${gunKisa(bugun)}) ve yarın (${gunKisa(yarin)}) açıklanmış bir okul tatili kararı yok; okullar açık.`;
   const sss = [
-    { soru: `${bul} yarın okullar tatil mi?`, cevap: y.length ? `Evet. ${y[0].kurum}, ${gunUzun(yarin)} günü ${kararMetni(y[0])} eğitime ara verildiğini açıkladı.` : `Şu an ${il.ad} için ${gunUzun(yarin)} gününe ait bir tatil kararı yok. Karar genellikle akşam saatlerinde valilik tarafından duyurulur; bu sayfa yarım saatte bir güncellenir.` },
+    { soru: `${bul} yarın okullar tatil mi?`, cevap: y.length ? `Evet. ${y[0].kurum}, ${gunUzun(yarin)} günü ${kararMetni(y[0])} eğitime ara verildiğini açıkladı.` : haftaSonu(yarin) ? `Yarın (${gunUzun(yarin)}) hafta sonu olduğu için okullarda eğitim yok.` : `Şu an ${il.ad} için ${gunUzun(yarin)} gününe ait bir tatil kararı yok. Karar genellikle akşam saatlerinde valilik tarafından duyurulur; bu sayfa yarım saatte bir güncellenir.` },
+    { soru: `${bul} bugün okullar tatil mi?`, cevap: b.length ? `Evet. ${b[0].kurum}, ${gunUzun(bugun)} günü ${kararMetni(b[0])} eğitime ara verildiğini açıkladı.` : haftaSonu(bugun) ? `Bugün (${gunUzun(bugun)}) hafta sonu; okullarda eğitim yok.` : `Hayır. ${il.ad} için ${gunUzun(bugun)} gününe ait bir tatil kararı açıklanmadı; okullar açık.` },
+    { soru: `${il.ad} ${gunKisa(sabah ? bugun : yarin)} okullar tatil mi?`, cevap: (sabah ? dB : dY).metin },
+    ...(yh ? [{ soru: `${bul} yarın kar yağacak mı, hava nasıl olacak?`, cevap: `${gunUzun(yarin)} için ${il.ad} tahmini: ${yh.durum.toLocaleLowerCase('tr-TR')}, en düşük ${yh.min}°, en yüksek ${yh.max}°.${karBekleniyor ? ' Kar ya da buzlanma riski bulunuyor; bu tür günlerde valilikler tatil kararını genellikle akşam saatlerinde duyurur.' : ' Tahminde kar ya da don görünmüyor; hava nedeniyle tatil beklenmiyor.'}` }] : []),
+    { soru: `${il.ad} okul tatili kararı ne zaman açıklanır?`, cevap: `Valilikler hava koşullarına bağlı tatil kararlarını çoğunlukla bir önceki gün 17.00–23.00 arasında, bazen de sabah erken saatte duyurur. Karar açıklandığında bu sayfa en geç yarım saat içinde güncellenir.` },
     { soru: `${il.ad} kar tatili kararını kim verir?`, cevap: `Okulların hava koşulları nedeniyle tatil edilmesine il genelinde ${il.ad} Valiliği, ilçe bazında kaymakamlıklar karar verir. Resmî duyurular valiliğin internet sitesi ve sosyal medya hesaplarından yapılır.` },
   ];
+  // Başlık: aranan güne ve tarihe göre (ör. "24 kasım bursa okullar tatil mi")
+  const hedef = sabah && !y.length ? bugun : yarin;
+  const hedefAd = hedef === bugun ? 'bugün' : 'yarın';
+  const hedefKarar = hedef === bugun ? b : y;
+  const baslik = hedefKarar.length
+    ? `${bul} ${hedefAd} okullar tatil mi? Evet: ${gunKisa(hedef)} için valilik kararı`
+    : `${bul} ${gunKisa(hedef)} okullar tatil mi? ${hedef === bugun ? 'Bugün' : 'Yarın'} okul var mı? Valilik son durum`;
+  const kart = (d, x) => `<section class="okul-durum ${d.sinif}"><span>${d.sinif === 'tatil' ? '🏫❄️' : '🏫'}</span><div><b>${h(d.baslik)}</b><p>${h(d.metin)}</p>${d.karar ? `<small>${h(d.karar.not || '')} Kaynak: <a href="${h(d.karar.link)}" rel="noopener" target="_blank">${h(d.karar.kaynak)}</a></small>` : ''}${x ? `<small>Hava: ${h(x.durum.toLocaleLowerCase('tr-TR'))}, ${x.min}° / ${x.max}°${riskli(x) && !d.karar ? ' · kar ya da buzlanma riski var' : ''}</small>` : ''}</div></section>`;
   return sayfa({
-    baslik: `${bul} yarın okullar tatil mi? Yarın okul var mı? (${new Date(`${yarin}T12:00:00+03:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', timeZone: TZ })})`,
+    baslik,
     aciklama: `${durum} ${yh ? `Yarın ${il.ad} hava durumu: ${yh.durum.toLocaleLowerCase('tr-TR')}, ${yh.min}°/${yh.max}°.` : ''} Valilik kar tatili kararları anlık takipte.`.replace(/\s+/g, ' ').trim(),
     yol: okulIlYolu(il.slug),
     aktif: '/okullar-tatil-mi/',
     jsonLd: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: sss.map((s) => ({ '@type': 'Question', name: s.soru, acceptedAnswer: { '@type': 'Answer', text: s.cevap } })) },
-    ust: `<div class="su-an-bas"><div><div class="cipler"><a class="cip" href="/kar-tatili/">Tatil olan iller</a></div><h1>${h(bul)} okullar tatil mi?</h1><p style="margin-top:8px">Son kontrol: ${h(saatStr(simdi))} · yarım saatte bir güncellenir</p></div></div>`,
+    ust: `<div class="su-an-bas"><div><div class="cipler"><a class="cip" href="/kar-tatili/">Tatil olan iller</a></div><h1>${h(bul)} ${hedefAd} (${h(gunKisa(hedef))}) okullar tatil mi?</h1><p style="margin-top:8px">Son kontrol: ${h(saatStr(simdi))} · yarım saatte bir güncellenir</p></div></div>`,
     icerik: `<main class="kap govde"><div class="ana">
-<section class="okul-durum ${y.length || b.length ? 'tatil' : 'acik'}"><span>${y.length || b.length ? '🏫❄️' : '🏫'}</span><div><b>${y.length ? 'Yarın okullar tatil' : b.length ? 'Bugün okullar tatil' : 'Okullar açık'}</b><p>${h(durum)}</p>${[...y, ...b].slice(0, 1).map((k) => `<small>${h(k.not || '')} Kaynak: <a href="${h(k.link)}" rel="noopener" target="_blank">${h(k.kaynak)}</a></small>`).join('')}</div></section>
-${yh ? `<section class="ekonomi-bugun"><div class="eb-bas"><div><h2>Yarın ${h(il.ad)} hava durumu</h2><p>${h(gunUzun(yarin))}: ${h(yh.durum.toLocaleLowerCase('tr-TR'))}, en düşük ${yh.min}°, en yüksek ${yh.max}°.${karBekleniyor ? ' Kar ya da buzlanma riski var; valilik kararını bu akşam takip edin.' : ''}</p></div></div></section>` : ''}
-${gecmis.length ? `<div class="bolum-bas"><h2>Son tatil kararları</h2></div><div class="tablo-kap"><table class="tablo"><thead><tr><th>Gün</th><th>Kapsam</th><th>Açıklayan</th></tr></thead><tbody>${gecmis.map((k) => `<tr><th scope="row">${h(k.gunler.map(gunUzun).join(', '))}</th><td>${h(kararMetni(k))}</td><td>${h(k.kurum)}</td></tr>`).join('')}</tbody></table></div>` : ''}
+<div class="okul-gunler">${sabah ? kart(dB, bh) + kart(dY, yh) : kart(dY, yh) + kart(dB, bh)}</div>
+${karBekleniyor && !y.length && !haftaSonu(yarin) ? `<section class="ekonomi-bugun"><div class="eb-bas"><div><h2>Yarın için kar ya da buzlanma riski var</h2><p>${h(gunUzun(yarin))} için ${h(il.ad)} tahmini: ${h(yh.durum.toLocaleLowerCase('tr-TR'))}, en düşük ${yh.min}°. Henüz bir tatil kararı açıklanmadı; valilik kararını bu akşam buradan takip edebilirsiniz.</p></div></div></section>` : ''}
+${gecmis.length ? `<div class="bolum-bas"><h2>${h(il.ad)} son tatil kararları</h2></div><div class="tablo-kap"><table class="tablo"><thead><tr><th>Gün</th><th>Kapsam</th><th>Açıklayan</th></tr></thead><tbody>${gecmis.map((k) => `<tr><th scope="row">${h(k.gunler.map(gunUzun).join(', '))}</th><td>${h(kararMetni(k))}</td><td>${h(k.kurum)}</td></tr>`).join('')}</tbody></table></div>` : ''}
 <section class="bilgi-sss"><h2>Sık sorulanlar</h2>${sss.map((s) => `<details><summary>${h(s.soru)}</summary><p>${h(s.cevap)}</p></details>`).join('')}</section>
 ${ilSecici(okulIlYolu, il.slug)}
-<p style="color:var(--ikincil);font-size:14px">Kararlar valilik açıklamalarını aktaran Anadolu Ajansı ve TRT Haber haberlerinden otomatik derlenir. Kesin bilgi için ${h(il.ad)} Valiliği duyurularını esas alın. Hava tahmini: MET Norway (yr.no).</p>
+<p style="color:var(--ikincil);font-size:14px">Kararlar, valilik açıklamalarını aktaran Anadolu Ajansı, TRT Haber ve NTV haberlerinden otomatik derlenir. Kesin bilgi için ${h(il.ad)} Valiliği duyurularını esas alın. Hava tahmini: MET Norway (yr.no).</p>
 </div></main>`,
   });
 }
