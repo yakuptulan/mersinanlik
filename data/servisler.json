@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-25T01:01:54.075Z",
+ "guncelleme": "2026-11-25T01:25:33.850Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 13,
@@ -38,12 +38,12 @@
    ]
   },
   "anamur": {
-   "sicaklik": 11,
+   "sicaklik": 12,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-25",
-     "min": 9,
+     "min": 11,
      "max": 20,
      "durum": "Açık"
     },
@@ -57,7 +57,7 @@
      "tarih": "2026-11-27",
      "min": 12,
      "max": 20,
-     "durum": "Açık"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -74,8 +74,8 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 11,
-   "durum": "Açık",
+   "sicaklik": 12,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-25",
@@ -93,7 +93,7 @@
      "tarih": "2026-11-27",
      "min": 11,
      "max": 21,
-     "durum": "Açık"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -110,7 +110,7 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 10,
+   "sicaklik": 11,
    "durum": "Açık",
    "gunler": [
     {
@@ -129,7 +129,7 @@
      "tarih": "2026-11-27",
      "min": 11,
      "max": 20,
-     "durum": "Açık"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -165,7 +165,7 @@
      "tarih": "2026-11-27",
      "min": 6,
      "max": 15,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -182,7 +182,7 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 14,
+   "sicaklik": 13,
    "durum": "Açık",
    "gunler": [
     {
@@ -199,9 +199,9 @@
     },
     {
      "tarih": "2026-11-27",
-     "min": 12,
+     "min": 11,
      "max": 20,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -219,7 +219,7 @@
   },
   "gulnar": {
    "sicaklik": 8,
-   "durum": "Açık",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-25",
@@ -237,7 +237,7 @@
      "tarih": "2026-11-27",
      "min": 6,
      "max": 16,
-     "durum": "Açık"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -254,7 +254,7 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 13,
+   "sicaklik": 14,
    "durum": "Az bulutlu",
    "gunler": [
     {
@@ -291,7 +291,7 @@
   },
   "mut": {
    "sicaklik": 9,
-   "durum": "Sisli",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-25",
@@ -302,14 +302,14 @@
     {
      "tarih": "2026-11-26",
      "min": 5,
-     "max": 15,
+     "max": 14,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-27",
-     "min": 9,
+     "min": 8,
      "max": 18,
-     "durum": "Açık"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -326,26 +326,26 @@
    ]
   },
   "silifke": {
-   "sicaklik": 12,
+   "sicaklik": 11,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-25",
-     "min": 9,
+     "min": 8,
      "max": 18,
      "durum": "Açık"
     },
     {
      "tarih": "2026-11-26",
      "min": 7,
-     "max": 19,
+     "max": 18,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-27",
-     "min": 9,
+     "min": 8,
      "max": 21,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -362,8 +362,8 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 13,
-   "durum": "Az bulutlu",
+   "sicaklik": 14,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-25",
@@ -373,13 +373,13 @@
     },
     {
      "tarih": "2026-11-26",
-     "min": 6,
+     "min": 7,
      "max": 20,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-27",
-     "min": 9,
+     "min": 8,
      "max": 22,
      "durum": "Açık"
     },
@@ -398,13 +398,13 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 12,
-   "durum": "Az bulutlu",
+   "sicaklik": 14,
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-25",
      "min": 12,
-     "max": 18,
+     "max": 19,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -415,9 +415,9 @@
     },
     {
      "tarih": "2026-11-27",
-     "min": 13,
+     "min": 12,
      "max": 21,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -434,13 +434,13 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 12,
-   "durum": "Az bulutlu",
+   "sicaklik": 14,
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-25",
      "min": 12,
-     "max": 18,
+     "max": 19,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -451,9 +451,9 @@
     },
     {
      "tarih": "2026-11-27",
-     "min": 13,
+     "min": 12,
      "max": 21,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-25T01:01:58.057Z",
+  "guncelleme": "2026-11-25T01:25:39.634Z",
   "liste": [
    {
     "ad": "Akgül Eczanesi",
@@ -684,7 +684,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-25T01:01:59.215Z",
+  "guncelleme": "2026-11-25T01:25:41.016Z",
   "liste": [
    {
     "tur": "su",
@@ -712,32 +712,32 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-25T00:31:51.080Z",
+  "guncelleme": "2026-11-25T01:25:45.707Z",
   "kalemler": {
    "gram": {
-    "alis": 5770.54,
-    "satis": 5771.42,
-    "degisim": -0.2
+    "alis": 5758.49,
+    "satis": 5759.53,
+    "degisim": -0.41
    },
    "ceyrek": {
-    "alis": 9840,
-    "satis": 10081,
-    "degisim": -0.19
+    "alis": 9818,
+    "satis": 10064,
+    "degisim": -0.36
    },
    "gumus": {
-    "alis": 66.41,
-    "satis": 66.49,
-    "degisim": 0.03
+    "alis": 66.13,
+    "satis": 66.24,
+    "degisim": -0.34
    },
    "usd": {
-    "alis": 50.671,
-    "satis": 50.6799,
+    "alis": 50.66,
+    "satis": 50.6879,
     "degisim": 0.1
    },
    "eur": {
-    "alis": 55.5309,
-    "satis": 55.5429,
-    "degisim": -0.14
+    "alis": 55.5136,
+    "satis": 55.541,
+    "degisim": -0.16
    },
    "bist": {
     "alis": null,
@@ -745,132 +745,132 @@
     "degisim": -1.25
    },
    "btc": {
-    "satis": 3016004,
-    "usd": 59516,
-    "degisim": -2.58
+    "satis": 3008079,
+    "usd": 59356,
+    "degisim": -3.39
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 5770.54,
-    "satis": 5771.42,
-    "degisim": -0.2
+    "alis": 5758.49,
+    "satis": 5759.53,
+    "degisim": -0.41
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 9840,
-    "satis": 10081,
-    "degisim": -0.19
+    "alis": 9818,
+    "satis": 10064,
+    "degisim": -0.36
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 19680,
-    "satis": 20161,
-    "degisim": -0.19
+    "alis": 19636,
+    "satis": 20128,
+    "degisim": -0.36
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 39240,
-    "satis": 40262,
-    "degisim": -0.19
+    "alis": 39152,
+    "satis": 40195,
+    "degisim": -0.36
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40080,
-    "satis": 40776,
-    "degisim": -0.19
+    "alis": 39990,
+    "satis": 40709,
+    "degisim": -0.36
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40080,
-    "satis": 40776,
-    "degisim": -0.19
+    "alis": 39990,
+    "satis": 40709,
+    "degisim": -0.36
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40080,
-    "satis": 40776,
-    "degisim": -0.19
+    "alis": 39990,
+    "satis": 40709,
+    "degisim": -0.36
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5457.96,
-    "satis": 5668.35,
-    "degisim": -0.19
+    "alis": 5445.79,
+    "satis": 5658.93,
+    "degisim": -0.36
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4146,
-    "satis": 4855,
-    "degisim": -0.21
+    "alis": 4144,
+    "satis": 4845,
+    "degisim": -0.41
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3269.98,
-    "satis": 4433.43,
-    "degisim": -0.17
+    "alis": 3262.49,
+    "satis": 4426.92,
+    "degisim": -0.32
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 5741.69,
-    "satis": 5742.57,
-    "degisim": -0.2
+    "alis": 5729.7,
+    "satis": 5730.74,
+    "degisim": -0.41
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 66.41,
-    "satis": 66.49,
-    "degisim": 0.03
+    "alis": 66.13,
+    "satis": 66.24,
+    "degisim": -0.34
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.671,
-    "satis": 50.6799,
+    "alis": 50.66,
+    "satis": 50.6879,
     "degisim": 0.1
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.5309,
-    "satis": 55.5429,
-    "degisim": -0.14
+    "alis": 55.5136,
+    "satis": 55.541,
+    "degisim": -0.16
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.4194,
-    "satis": 66.4334,
+    "alis": 66.4173,
+    "satis": 66.4326,
     "degisim": -0.13
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.6185,
-    "satis": 60.6437,
-    "degisim": 0.06
+    "alis": 60.5762,
+    "satis": 60.6242,
+    "degisim": 0.01
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.4931,
-    "satis": 13.512,
-    "degisim": 0.1
+    "alis": 13.4992,
+    "satis": 13.5039,
+    "degisim": 0.09
    },
    {
     "k": "RUB",
@@ -880,10 +880,10 @@
     "degisim": 0.12
    }
   ],
-  "kaynakSaati": "2026-11-25 03:31:02"
+  "kaynakSaati": "2026-11-25 04:25:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-25T01:02:05.745Z",
+  "guncelleme": "2026-11-25T01:25:49.340Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -8748,7 +8748,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-25T01:02:06.229Z",
+  "guncelleme": "2026-11-25T01:25:49.718Z",
   "liste": [
    {
     "yol": "/",
@@ -8795,11 +8795,11 @@
     "sayi": 2
    },
    {
-    "yol": "/haber/mersin-de-ogretmenler-gunu-nde-ucretsiz-etkinlik-firsatlari-18d3dcj/",
+    "yol": "/haber/mezitli-belediyesi-sorusturmasinda-yeni-iddia-itirafcilarin-sayisi-3-e-6y7hgj/",
     "sayi": 2
    },
    {
-    "yol": "/haber/mezitli-belediyesi-sorusturmasinda-yeni-iddia-itirafcilarin-sayisi-3-e-6y7hgj/",
+    "yol": "/haber/mersin-de-ogretmenler-gunu-nde-ucretsiz-etkinlik-firsatlari-18d3dcj/",
     "sayi": 2
    },
    {
@@ -8845,10 +8845,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-25T01:02:26.728Z",
+  "guncelleme": "2026-11-25T01:25:51.828Z",
   "deniz": {
    "sicaklik": 21.5,
-   "dalga": 0.68
+   "dalga": 0.66
   },
   "hava": {
    "aqi": 33,
@@ -8858,7 +8858,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-25T01:02:28.552Z",
+  "guncelleme": "2026-11-25T01:25:54.461Z",
   "giden": [
    {
     "no": [
@@ -8869,7 +8869,7 @@
     "planlanan": "2026-11-25T01:30:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -8881,7 +8881,7 @@
     "planlanan": "2026-11-25T01:55:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "BOARDING",
     "hat": "ic"
    },
    {
@@ -8893,7 +8893,7 @@
     "planlanan": "2026-11-25T03:10:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9777,7 +9777,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-25T01:02:28.551Z",
+  "guncelleme": "2026-11-25T01:25:54.460Z",
   "liste": [
    {
     "id": 6386,
