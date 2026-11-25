@@ -12,12 +12,16 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-25T10:01:28.303Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-25",
-  "adet": 15,
-  "premium": 15
+  "adet": 17,
+  "premium": 17
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -482,8 +486,20 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-25T09:31:47.831Z",
+  "guncelleme": "2026-11-25T10:02:11.529Z",
   "liste": [
+   {
+    "baslik": "tuzlu kahve 12",
+    "trafik": 20000
+   },
+   {
+    "baslik": "aydın",
+    "trafik": 2000
+   },
+   {
+    "baslik": "ford otosan",
+    "trafik": 200
+   },
    {
     "baslik": "jennifer barreto",
     "trafik": 200
@@ -511,18 +527,6 @@
    {
     "baslik": "motorine indirim",
     "trafik": 20000
-   },
-   {
-    "baslik": "altın neden düşüyor",
-    "trafik": 10000
-   },
-   {
-    "baslik": "kadıköy belediyesi",
-    "trafik": 100
-   },
-   {
-    "baslik": "24 kasım masterchef kim kazandı",
-    "trafik": 1000
    }
   ]
  },

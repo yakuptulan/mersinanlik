@@ -428,14 +428,14 @@
    "kaynakHatalari": []
   },
   "2026-11-25": {
-   "guncelleme": "2026-11-25T09:35:18.603Z",
-   "mersinHaber": 21,
-   "kendiYazimiz": 19,
-   "turkiyeDunya": 107,
-   "otomatik": 4,
+   "guncelleme": "2026-11-25T10:04:37.860Z",
+   "mersinHaber": 25,
+   "kendiYazimiz": 23,
+   "turkiyeDunya": 118,
+   "otomatik": 5,
    "otomatikTurler": {
     "yol": 1,
-    "su": 2,
+    "su": 3,
     "piyasa": 1
    },
    "otomatikBasliklar": [
@@ -458,12 +458,19 @@
      "baslik": "25 Kasım 2026 altın fiyatları: Gram altın, çeyrek altın bugün ne kadar?",
      "tur": "piyasa",
      "saat": "10:03"
+    },
+    {
+     "baslik": "Erdemli'de su kesintisi (25 Kasım): Akdeniz ve Merkez, 5 saat sürecek",
+     "tur": "su",
+     "saat": "13:04"
     }
    ],
-   "gorsel": 15,
+   "gorsel": 17,
    "bilgi": 1,
    "gezi": 0,
-   "kaynakHatalari": []
+   "kaynakHatalari": [
+    "haberturk-mersin (fetch failed)"
+   ]
   }
  }
 }
