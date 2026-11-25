@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-25",
-  "adet": 13,
-  "premium": 13
+  "adet": 15,
+  "premium": 15
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -481,11 +481,23 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-25T08:31:56.238Z",
+  "guncelleme": "2026-11-25T09:01:47.266Z",
   "liste": [
    {
-    "baslik": "mevduat sigortası",
+    "baslik": "gediz elektrik",
     "trafik": 200
+   },
+   {
+    "baslik": "konut",
+    "trafik": 200
+   },
+   {
+    "baslik": "basın açıklaması",
+    "trafik": 200
+   },
+   {
+    "baslik": "mevduat sigortası",
+    "trafik": 1000
    },
    {
     "baslik": "motorine indirim",
@@ -501,27 +513,15 @@
    },
    {
     "baslik": "24 kasım masterchef kim kazandı",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "serap belovacıklı",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "nüfus ve vatandaşlık işleri genel müdürlüğü personel alımı",
     "trafik": 100
-   },
-   {
-    "baslik": "ayşe ünlüce",
-    "trafik": 2000
-   },
-   {
-    "baslik": "iban",
-    "trafik": 500
-   },
-   {
-    "baslik": "hltv",
-    "trafik": 200
    }
   ]
  },
