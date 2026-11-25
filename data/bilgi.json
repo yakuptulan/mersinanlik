@@ -1,6 +1,57 @@
 {
  "yazilar": [
   {
+   "slug": "iptv-nedir-internet-uzerinden-televizyon-yayinciliginin-gecmisi",
+   "konu": "IPTV",
+   "trend": "iptv",
+   "tur": "gundem",
+   "baslik": "IPTV nedir? İnternet üzerinden televizyon yayıncılığının geçmişi",
+   "spot": "İnternet protokolü üzerinden görüntü ve ses aktarımı sağlayan IPTV teknolojisinin temelleri, tarihçesi ve teknik detayları hakkında merak edilenler.",
+   "aciklama": "IPTV nedir, nasıl ortaya çıkmıştır ve bant genişliği gereksinimleri nelerdir? İnternet üzerinden televizyon yayıncılığının merak edilen detayları.",
+   "bolumler": [
+    {
+     "baslik": "IPTV Temelleri ve Cihazlar",
+     "metin": "IPTV, İnternet protokolü üzerinden (TCP/IPv4 - IPv6) görüntü ve ses aktarımı yapılmasına imkan tanır. Tüm dünyada birçok televizyon istasyonu, IP Video Server kullanarak İnternet üzerinden kendi yayınlarının izlenebilmesini sağlamıştır. İnternet protokolünü kullanabilen televizyon cihazları bulunduğu gibi, herhangi bir televizyonun da İnternet üzerinden gelen yayınları alabilmesi için IP TV Alıcıları (Set Top Box) geliştirilmiştir."
+    },
+    {
+     "baslik": "IPTV Teriminin Ortaya Çıkışı",
+     "metin": "1994 yılında ABC'nin World News Now programı, CU-SeeMe videoconferencing yazılımı kullanılarak internet üzerinden broadcast yayınlanan ilk IPTV yayını olmuştur. Judith Estrin ve Bill Carrico tarafından Precept Yazılımın kurulmasıyla birlikte IPTV terimi ilk olarak 1995 yılında ortaya çıkmıştır. Precept, IP/TV isimli bir internet video ürünü geliştirmiştir ve bu ürün Windows ile Unix tabanlı uygulamalarla uyumlu, düşük DVD kalitesinden belli aralıklarda kalitede yayın yapan bir sistemdi."
+    },
+    {
+     "baslik": "Dünyadaki İlk Ticari Uygulamalar",
+     "metin": "Kingston Haberleşme, Birleşik Krallık içinde bölgesel bir telekomünikasyon operatörüdür ve KIT (Kingston Interactive Television) DSL bant genişliği üzerinden bir IPTV hizmetini Eylül 1999 yılında sunmuştur. Kingston, dünyaya IPTV ve IP VoD hizmetini ADSL üzerinden ilk tanıtan şirket olmuştur. 1999 yılında NBTel ise Kanada'da DSL üzerinde internet protokol televizyonunu ticari olarak ilk işlevsel hale getiren firmadır."
+    },
+    {
+     "baslik": "Küresel Yaygınlaşma Süreci",
+     "metin": "2002 yılı içinde Sasktel, Kanada'da DSL platformunu kullanarak ticari olarak IPTV hizmeti veren ikinci şirket olmuştur ve 2006 yılında IPTV hizmeti üzerinden HDTV kanal hizmeti veren ilk Güney Amerika şirketi haline gelmiştir. 2003 yılında Total Access Networks Inc firması dünya çapında 100 bedava IPTV istasyonu içeren bir hizmet sunmuştur. 2005 yılında Bredbandsbolaget, IPTV hizmetini İsviçre'de ilk servis sağlayıcı olarak sunmuştur."
+    },
+    {
+     "baslik": "Bant Genişliği Gereksinimleri",
+     "metin": "Dijital video, saniye başına düşen çerçeve oranları ve çözünürlük boyutlarına göre farklı veri oranlarına sahiptir. Örneğin filmler saniye başına 24 çerçeve kullanırken, Kuzey Amerika yaklaşık 30 çerçeve, Avrupa televizyonları ise saniye başına 25 çerçeve kullanır. IPTV hizmeti için kesin bir bant genişliği yoktur çünkü gereksinim ev içerisindeki cihazlar yüzünden artabilir, ancak en az kullanımda üçlü-oynat hizmeti almak için 13 Mbit/s gerekmektedir."
+    },
+    {
+     "baslik": "Mimari Elemanlar",
+     "metin": "IPTV mimarisi çeşitli temel elemanlardan oluşur. TV head-end, canlı TV kanallarının kodlanıp şifrelendiği ve IP multicast akışları biçiminde dağıtıldığı yerdir. VOD platformu, istek-üzerine video değerlerinin depolandığı ve kullanıcı IP unicast akışı içerisinde sorgu yaptığında sunulduğu yerdir. Etkileşim portali kullanıcıların VOD kataloğu gibi farklı IPTV hizmetleri içerisinde gezinmelerini sağlar, dağıtım ağı IP paketlerini taşıyan paket anahtarlamalı ağdır."
+    }
+   ],
+   "sss": [
+    {
+     "soru": "IPTV terimi ilk kez ne zaman ortaya çıkmıştır?",
+     "cevap": "Judith Estrin ve Bill Carrico tarafından Precept Yazılımın kurulmasıyla birlikte IPTV terimi ilk olarak 1995 yılında ortaya çıkmıştır."
+    },
+    {
+     "soru": "Dünyada IPTV ve IP VoD hizmetini ADSL üzerinden ilk tanıtan şirket hangisidir?",
+     "cevap": "Kingston Haberleşme (Kingston Communications), dünyaya IPTV ve IP VoD hizmetini ADSL üzerinden ilk tanıtan şirkettir."
+    }
+   ],
+   "kaynak": {
+    "ad": "Vikipedi: IPTV",
+    "link": "https://tr.wikipedia.org/wiki/IPTV"
+   },
+   "gorsel": null,
+   "tarih": "2026-11-25T06:08:59.270Z"
+  },
+  {
    "slug": "turk-kahvesi-nedir",
    "konu": "Türk kahvesi",
    "tur": "lezzet",
@@ -2321,6 +2372,10 @@
   "spotify çöktü mü",
   "uzay",
   "vergi",
-  "regaip kandili ne zaman"
+  "regaip kandili ne zaman",
+  "kayseri hava durumu",
+  "kastamonu hava durumu",
+  "hava durumu antalya",
+  "iptv"
  ]
 }
