@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-25T15:04:41.505Z",
+ "guncelleme": "2026-11-25T15:32:29.920Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -38,13 +38,13 @@
    ]
   },
   "anamur": {
-   "sicaklik": 17,
+   "sicaklik": 16,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-25",
      "min": 11,
-     "max": 17,
+     "max": 16,
      "durum": "Açık"
     },
     {
@@ -182,13 +182,13 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 16,
+   "sicaklik": 14,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-25",
      "min": 10,
-     "max": 16,
+     "max": 14,
      "durum": "Açık"
     },
     {
@@ -326,13 +326,13 @@
    ]
   },
   "silifke": {
-   "sicaklik": 15,
+   "sicaklik": 12,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-25",
      "min": 9,
-     "max": 15,
+     "max": 12,
      "durum": "Açık"
     },
     {
@@ -398,13 +398,13 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 17,
+   "sicaklik": 16,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-25",
      "min": 12,
-     "max": 17,
+     "max": 16,
      "durum": "Az bulutlu"
     },
     {
@@ -434,13 +434,13 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 17,
+   "sicaklik": 16,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-25",
      "min": 12,
-     "max": 17,
+     "max": 16,
      "durum": "Az bulutlu"
     },
     {
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-25T15:04:45.635Z",
+  "guncelleme": "2026-11-25T15:32:34.153Z",
   "liste": [
    {
     "ad": "Akdeniz Eczanesi",
@@ -772,7 +772,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-25T15:04:46.565Z",
+  "guncelleme": "2026-11-25T15:32:35.350Z",
   "liste": [
    {
     "tur": "su",
@@ -812,182 +812,214 @@
       ]
      }
     ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Erdemli ilçesi Koyuncu Mahallesi Kocaköy mevkisinde içme suyu arızası nedeniyle saat 20.00'ye kadar içme suyu kesintisi uygulanacaktır.",
+    "baslangic": "2026-11-25T15:18:00.000Z",
+    "bitis": "2026-11-25T17:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "erdemli",
+      "ad": "Erdemli",
+      "mahalleler": [
+       "Koyuncu"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Akdeniz ilçesi Toroslar Mahallesi'nde içme suyu arızası nedeniyle saat 20.00'ye kadar içme suyu kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-25T15:26:00.000Z",
+    "bitis": "2026-11-25T17:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "akdeniz",
+      "ad": "Akdeniz",
+      "mahalleler": [
+       "Toroslar"
+      ]
+     }
+    ]
    }
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-25T15:04:48.658Z",
+  "guncelleme": "2026-11-25T15:32:40.332Z",
   "kalemler": {
    "gram": {
-    "alis": 5644.33,
-    "satis": 5645.2,
-    "degisim": -2.38
+    "alis": 5601.79,
+    "satis": 5602.72,
+    "degisim": -3.12
    },
    "ceyrek": {
-    "alis": 9699,
-    "satis": 10001,
-    "degisim": -0.98
+    "alis": 9632,
+    "satis": 9958,
+    "degisim": -1.41
    },
    "gumus": {
-    "alis": 63.41,
-    "satis": 63.51,
-    "degisim": -4.45
+    "alis": 62.48,
+    "satis": 62.58,
+    "degisim": -5.85
    },
    "usd": {
-    "alis": 50.6767,
-    "satis": 50.6782,
+    "alis": 50.6756,
+    "satis": 50.6799,
     "degisim": 0.11
    },
    "eur": {
-    "alis": 55.438,
-    "satis": 55.4407,
+    "alis": 55.4382,
+    "satis": 55.441,
     "degisim": -0.32
    },
    "bist": {
     "alis": null,
-    "satis": 10662.53,
-    "degisim": -2.77
+    "satis": 10655.74,
+    "degisim": -2.83
    },
    "btc": {
-    "satis": 2959379,
-    "usd": 58398,
-    "degisim": -2.99
+    "satis": 2941452,
+    "usd": 58020,
+    "degisim": -3.06
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 5644.33,
-    "satis": 5645.2,
-    "degisim": -2.38
+    "alis": 5601.79,
+    "satis": 5602.72,
+    "degisim": -3.12
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 9699,
-    "satis": 10001,
-    "degisim": -0.98
+    "alis": 9632,
+    "satis": 9958,
+    "degisim": -1.41
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 19398,
-    "satis": 20003,
-    "degisim": -0.98
+    "alis": 19264,
+    "satis": 19917,
+    "degisim": -1.4
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 38618,
-    "satis": 39765,
-    "degisim": -1.42
+    "alis": 38351,
+    "satis": 39594,
+    "degisim": -1.85
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 39644,
-    "satis": 40366,
-    "degisim": -1.2
+    "alis": 39370,
+    "satis": 40192,
+    "degisim": -1.62
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 39644,
-    "satis": 40366,
-    "degisim": -1.2
+    "alis": 39370,
+    "satis": 40192,
+    "degisim": -1.62
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 39644,
-    "satis": 40366,
-    "degisim": -1.2
+    "alis": 39370,
+    "satis": 40192,
+    "degisim": -1.62
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5396.52,
-    "satis": 5623.93,
-    "degisim": -0.97
+    "alis": 5358.75,
+    "satis": 5599.18,
+    "degisim": -1.41
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4095,
-    "satis": 4820,
-    "degisim": -0.92
+    "alis": 4057,
+    "satis": 4770,
+    "degisim": -1.95
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3232.17,
-    "satis": 4402.72,
-    "degisim": -0.86
+    "alis": 3208.92,
+    "satis": 4385.6,
+    "degisim": -1.25
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 5616.11,
-    "satis": 5616.97,
-    "degisim": -2.38
+    "alis": 5573.78,
+    "satis": 5574.71,
+    "degisim": -3.12
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 63.41,
-    "satis": 63.51,
-    "degisim": -4.45
+    "alis": 62.48,
+    "satis": 62.58,
+    "degisim": -5.85
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.6767,
-    "satis": 50.6782,
+    "alis": 50.6756,
+    "satis": 50.6799,
     "degisim": 0.11
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.438,
-    "satis": 55.4407,
+    "alis": 55.4382,
+    "satis": 55.441,
     "degisim": -0.32
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.1817,
-    "satis": 66.1858,
+    "alis": 66.1844,
+    "satis": 66.1883,
     "degisim": -0.49
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.9461,
-    "satis": 60.97,
-    "degisim": 0.6
+    "alis": 60.9167,
+    "satis": 60.9414,
+    "degisim": 0.55
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
     "alis": 13.5072,
-    "satis": 13.509,
+    "satis": 13.5092,
     "degisim": 0.14
    },
    {
     "k": "RUB",
     "ad": "Rus rublesi",
-    "alis": 0.6089,
-    "satis": 0.6138,
-    "degisim": -0.9
+    "alis": 0.6107,
+    "satis": 0.613,
+    "degisim": -0.81
    }
   ],
-  "kaynakSaati": "2026-11-25 18:04:01"
+  "kaynakSaati": "2026-11-25 18:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-25T15:04:57.060Z",
+  "guncelleme": "2026-11-25T15:32:42.895Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1808,8 +1840,19 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-25T12:33:04.841Z",
+  "guncelleme": "2026-11-25T15:32:49.062Z",
   "liste": [
+   {
+    "id": "tmh5o5",
+    "link": "https://www.mersin.bel.tr/etkinlik/tarih-kilikya-yolu-yuruyusu-gokler-deresi-kizilgecit-1795611466",
+    "foto": "tmh5o5.webp",
+    "baslik": "Tarihî Kilikya Yolu Yürüyüşü (Gökler Deresi - Kızılgeçit)",
+    "yayin": "2026-11-25T12:57:46.000Z",
+    "tarih": "2026-11-28",
+    "saat": null,
+    "yer": null,
+    "ozet": "- Mersin Büyükşehir Belediyesi --> EN --> Etkinlikler Anasayfa Etkinlikler Hızlı Menü Duyurular Haberler Etkinlikler Web TV A- A+ Tarihî Kilikya Yolu Yürüyüşü (Gökler Deresi - Kızılgeçit) Tarihî Kilikya Yolu Yürüyüşü (Gö"
+   },
    {
     "id": "17ce5a7",
     "link": "https://www.mersin.bel.tr/etkinlik/sporbusle-spor-her-yerde-toroslar-programi-1795607771",
@@ -1897,17 +1940,6 @@
     "saat": "13:00",
     "yer": null,
     "ozet": "- Mersin Büyükşehir Belediyesi --> EN --> Etkinlikler Anasayfa Etkinlikler Hızlı Menü Duyurular Haberler Etkinlikler Web TV A- A+ Nar Pestili Atölyesi Nar Pestili Atölyesi 25 Kasım 2026 Çarşamba 13.00-13.00 Köyümüz Atöly"
-   },
-   {
-    "id": "gzi1bq",
-    "link": "https://www.mersin.bel.tr/etkinlik/mersin-buyuksehir-belediyesi-kent-orkestrasi-ogretmenler-gunu-ozel-konserinde-bulusalim-1795071872",
-    "foto": "gzi1bq.webp",
-    "baslik": "Mersin Büyükşehir Belediyesi Kent Orkestrası Öğretmenler Günü Özel Konseri'nde buluşalım!",
-    "yayin": "2026-11-19T07:04:32.000Z",
-    "tarih": "2026-11-24",
-    "saat": "20:00",
-    "yer": null,
-    "ozet": "- Mersin Büyükşehir Belediyesi --> EN --> Etkinlikler Anasayfa Etkinlikler Hızlı Menü Duyurular Haberler Etkinlikler Web TV A- A+ Mersin Büyükşehir Belediyesi Kent Orkestrası Öğretmenler Günü Özel Konseri'nde buluşalım! "
    }
   ]
  },
@@ -8852,22 +8884,34 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-25T15:04:57.504Z",
+  "guncelleme": "2026-11-25T15:32:43.538Z",
   "liste": [
    {
     "yol": "/is-ilanlari/",
     "sayi": 12
    },
    {
-    "yol": "/haber/tarsus-ta-kirsal-mahallelerin-yollari-yenileniyor-1l7w1qw/",
-    "sayi": 8
-   },
-   {
     "yol": "/is-ilanlari/tarsus/",
     "sayi": 8
    },
    {
+    "yol": "/haber/tarsus-ta-kirsal-mahallelerin-yollari-yenileniyor-1l7w1qw/",
+    "sayi": 8
+   },
+   {
+    "yol": "/haber/mersin-de-kundaklanan-evde-kari-kocanin-olu-bulunmasina-iliskin-dava-s-qxxv3v/",
+    "sayi": 7
+   },
+   {
+    "yol": "/haber/akdeniz-belediyesi-ve-yesilay-dan-dijital-bagimlilikla-mucadele-semine-x1u9mb/",
+    "sayi": 6
+   },
+   {
     "yol": "/haber/atil-konak-yeniden-yapildi-egitimcilerin-hizmetine-sunuldu-lt31d/",
+    "sayi": 6
+   },
+   {
+    "yol": "/haber/uretici-kadin-stantlari-ile-hayallerini-buyuttu-kendi-isinin-sahibi-ol-110nn6i/",
     "sayi": 6
    },
    {
@@ -8879,18 +8923,6 @@
     "sayi": 6
    },
    {
-    "yol": "/haber/mersin-de-ogrencilerden-ogretmenlerine-yoresel-urun-hediyesi-12q08y2/",
-    "sayi": 6
-   },
-   {
-    "yol": "/haber/akdeniz-belediyesi-ve-yesilay-dan-dijital-bagimlilikla-mucadele-semine-x1u9mb/",
-    "sayi": 6
-   },
-   {
-    "yol": "/haber/uretici-kadin-stantlari-ile-hayallerini-buyuttu-kendi-isinin-sahibi-ol-110nn6i/",
-    "sayi": 6
-   },
-   {
     "yol": "/",
     "sayi": 5
    },
@@ -8899,11 +8931,7 @@
     "sayi": 2
    },
    {
-    "yol": "/ilce/gulnar/",
-    "sayi": 1
-   },
-   {
-    "yol": "/hava-durumu/bozyazi/",
+    "yol": "/hava-durumu/anamur/",
     "sayi": 1
    },
    {
@@ -8911,11 +8939,11 @@
     "sayi": 1
    },
    {
-    "yol": "/hava-durumu/anamur/",
+    "yol": "/haber/tarsus-belediyesi-nde-gorev-degisikligi-5cg8oa/",
     "sayi": 1
    },
    {
-    "yol": "/haber/tarsus-belediyesi-nde-gorev-degisikligi-5cg8oa/",
+    "yol": "/hava-durumu/bozyazi/",
     "sayi": 1
    },
    {
@@ -8927,7 +8955,15 @@
     "sayi": 1
    },
    {
+    "yol": "/ilce/gulnar/",
+    "sayi": 1
+   },
+   {
     "yol": "/spor/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/msk-mersin-de-bugra-gurel-sesleri-lne1jh/",
     "sayi": 1
    },
    {
@@ -8949,7 +8985,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-25T15:05:44.127Z",
+  "guncelleme": "2026-11-25T15:32:49.062Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.28
@@ -8962,32 +8998,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-25T15:05:46.086Z",
+  "guncelleme": "2026-11-25T15:32:51.571Z",
   "giden": [
-   {
-    "no": [
-     "TK2463"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-25T15:25:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC2089"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-25T15:30:00.000Z",
-    "tahmini": "2026-11-25T15:45:00.000Z",
-    "kapi": "105",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
    {
     "no": [
      "VF1053"
@@ -8997,7 +9009,7 @@
     "planlanan": "2026-11-25T16:05:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "KONTUAR AÇIK",
+    "durum": "BOARDING",
     "hat": "dis"
    },
    {
@@ -9395,21 +9407,21 @@
     "kapi": "109",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2463"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-26T15:25:00.000Z",
+    "tahmini": null,
+    "kapi": "108",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "VF1054"
-    ],
-    "havayolu": "AJet",
-    "yer": "Ercan",
-    "planlanan": "2026-11-25T15:10:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "dis"
-   },
    {
     "no": [
      "TK2464"
@@ -9829,11 +9841,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "VF1054"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ercan",
+    "planlanan": "2026-11-26T15:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "dis"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-25T15:05:46.086Z",
+  "guncelleme": "2026-11-25T15:32:51.571Z",
   "liste": [
    {
     "id": 6386,
