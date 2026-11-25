@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-25T07:02:21.346Z",
+ "guncelleme": "2026-11-25T07:31:02.983Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 17,
@@ -74,13 +74,13 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 16,
+   "sicaklik": 17,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-25",
      "min": 11,
-     "max": 20,
+     "max": 19,
      "durum": "Açık"
     },
     {
@@ -93,13 +93,13 @@
      "tarih": "2026-11-27",
      "min": 11,
      "max": 21,
-     "durum": "Parçalı bulutlu"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-28",
      "min": 13,
      "max": 21,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
@@ -182,7 +182,7 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 16,
+   "sicaklik": 17,
    "durum": "Az bulutlu",
    "gunler": [
     {
@@ -193,7 +193,7 @@
     },
     {
      "tarih": "2026-11-26",
-     "min": 7,
+     "min": 8,
      "max": 18,
      "durum": "Parçalı bulutlu"
     },
@@ -207,7 +207,7 @@
      "tarih": "2026-11-28",
      "min": 13,
      "max": 20,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
@@ -254,7 +254,7 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 15,
+   "sicaklik": 18,
    "durum": "Açık",
    "gunler": [
     {
@@ -273,13 +273,13 @@
      "tarih": "2026-11-27",
      "min": 12,
      "max": 21,
-     "durum": "Az bulutlu"
+     "durum": "Açık"
     },
     {
      "tarih": "2026-11-28",
      "min": 14,
      "max": 21,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
@@ -326,7 +326,7 @@
    ]
   },
   "silifke": {
-   "sicaklik": 15,
+   "sicaklik": 16,
    "durum": "Az bulutlu",
    "gunler": [
     {
@@ -434,14 +434,14 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 14,
-   "durum": "Açık",
+   "sicaklik": 17,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-25",
      "min": 12,
      "max": 19,
-     "durum": "Parçalı bulutlu"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-26",
@@ -453,13 +453,13 @@
      "tarih": "2026-11-27",
      "min": 12,
      "max": 21,
-     "durum": "Az bulutlu"
+     "durum": "Açık"
     },
     {
      "tarih": "2026-11-28",
      "min": 13,
      "max": 22,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-25T07:02:24.426Z",
+  "guncelleme": "2026-11-25T07:31:07.019Z",
   "liste": [
    {
     "ad": "Akdeniz Eczanesi",
@@ -772,7 +772,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-25T07:02:25.410Z",
+  "guncelleme": "2026-11-25T07:31:07.960Z",
   "liste": [
    {
     "tur": "su",
@@ -1022,7 +1022,7 @@
   "kaynakSaati": "2026-11-25 10:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-25T07:02:30.280Z",
+  "guncelleme": "2026-11-25T07:31:14.642Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -8887,7 +8887,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-25T07:02:30.801Z",
+  "guncelleme": "2026-11-25T07:31:15.220Z",
   "liste": [
    {
     "yol": "/is-ilanlari/",
@@ -8930,15 +8930,19 @@
     "sayi": 3
    },
    {
+    "yol": "/haber/mersin-ziraat-odasinda-bilek-guresi-baskani-devirdi-iddiasi-tgb6gp/",
+    "sayi": 2
+   },
+   {
     "yol": "/haber/mersin-de-bir-haftadir-kayip-olarak-aranan-kadin-bulundu-vejbqi/",
     "sayi": 2
    },
    {
-    "yol": "/haber/mezitli-belediyesi-sorusturmasinda-yeni-iddia-itirafcilarin-sayisi-3-e-6y7hgj/",
+    "yol": "/haber/mersin-de-ogretmenler-gunu-nde-ucretsiz-etkinlik-firsatlari-18d3dcj/",
     "sayi": 2
    },
    {
-    "yol": "/haber/mersin-de-ogretmenler-gunu-nde-ucretsiz-etkinlik-firsatlari-18d3dcj/",
+    "yol": "/haber/mezitli-belediyesi-sorusturmasinda-yeni-iddia-itirafcilarin-sayisi-3-e-6y7hgj/",
     "sayi": 2
    },
    {
@@ -8947,10 +8951,6 @@
    },
    {
     "yol": "/hava-durumu/bozyazi/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/mersin-ziraat-odasinda-bilek-guresi-baskani-devirdi-iddiasi-tgb6gp/",
     "sayi": 1
    },
    {
@@ -8980,10 +8980,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-25T07:02:50.023Z",
+  "guncelleme": "2026-11-25T07:31:16.456Z",
   "deniz": {
    "sicaklik": 21.5,
-   "dalga": 0.46
+   "dalga": 0.44
   },
   "hava": {
    "aqi": 44,
@@ -8993,20 +8993,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-25T07:02:51.938Z",
+  "guncelleme": "2026-11-25T07:31:18.340Z",
   "giden": [
-   {
-    "no": [
-     "XQ1370"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "Düsseldorf",
-    "planlanan": "2026-11-25T07:15:00.000Z",
-    "tahmini": null,
-    "kapi": "104",
-    "durum": "BOARDING",
-    "hat": "dis"
-   },
    {
     "no": [
      "PC2083"
@@ -9016,7 +9004,7 @@
     "planlanan": "2026-11-25T07:35:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -9040,7 +9028,7 @@
     "planlanan": "2026-11-25T09:05:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -9438,6 +9426,18 @@
     "kapi": "106",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "XC9734"
+    ],
+    "havayolu": "Corendon Airlines",
+    "yer": "Medine",
+    "planlanan": "2026-11-26T07:30:00.000Z",
+    "tahmini": null,
+    "kapi": "104",
+    "durum": "",
+    "hat": "dis"
    }
   ],
   "gelen": [
@@ -9864,7 +9864,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-25T07:02:51.937Z",
+  "guncelleme": "2026-11-25T07:31:18.340Z",
   "liste": [
    {
     "id": 37539,
