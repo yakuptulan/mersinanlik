@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-25T13:36:08.462Z",
+ "guncelleme": "2026-11-25T14:03:58.393Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 19,
@@ -110,13 +110,13 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 19,
+   "sicaklik": 17,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-25",
      "min": 9,
-     "max": 19,
+     "max": 17,
      "durum": "Açık"
     },
     {
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-25T13:36:13.255Z",
+  "guncelleme": "2026-11-25T14:04:00.965Z",
   "liste": [
    {
     "ad": "Akdeniz Eczanesi",
@@ -772,27 +772,8 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-25T13:36:14.417Z",
+  "guncelleme": "2026-11-25T14:04:01.779Z",
   "liste": [
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "ERDEMLİ İLÇESİNE BAĞLI ADNAN MENDERES MAH,FATİH MAH,TÜRBE MAH,KARGICAK MAHALLELERİ GENELİ ARIZA NEDENİ İLE SAAT 17:00 E KADAR SU KESİNTİSİ YAŞANACAKTIR",
-    "baslangic": "2026-11-25T06:05:00.000Z",
-    "bitis": "2026-11-25T14:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "erdemli",
-      "ad": "Erdemli",
-      "mahalleler": [
-       "Adnan Menderes",
-       "Fatih",
-       "Kargıcak",
-       "Türbe"
-      ]
-     }
-    ]
-   },
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
@@ -1949,7 +1930,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-25T13:04:05.508Z",
+  "guncelleme": "2026-11-25T14:04:16.449Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8626,7 +8607,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-25T13:04:48.750Z",
+    "guncelleme": "2026-11-25T14:04:55.601Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -8708,7 +8689,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-25T13:04:49.986Z",
+    "guncelleme": "2026-11-25T14:04:56.810Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8790,7 +8771,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-25T13:04:51.232Z",
+    "guncelleme": "2026-11-25T14:04:58.026Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8889,11 +8870,15 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-25T13:36:23.129Z",
+  "guncelleme": "2026-11-25T14:04:14.943Z",
   "liste": [
    {
     "yol": "/is-ilanlari/",
     "sayi": 12
+   },
+   {
+    "yol": "/haber/tarsus-ta-kirsal-mahallelerin-yollari-yenileniyor-1l7w1qw/",
+    "sayi": 8
    },
    {
     "yol": "/is-ilanlari/tarsus/",
@@ -8926,10 +8911,6 @@
    {
     "yol": "/",
     "sayi": 4
-   },
-   {
-    "yol": "/haber/tarsus-ta-kirsal-mahallelerin-yollari-yenileniyor-1l7w1qw/",
-    "sayi": 2
    },
    {
     "yol": "/haber/mumine-teyze-kahramani-ile-bulustu-mersin-de-kaybolmasinin-ardindan-7-1f1sptb/",
@@ -8978,33 +8959,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-25T13:36:24.787Z",
+  "guncelleme": "2026-11-25T14:04:59.227Z",
   "deniz": {
    "sicaklik": 21.6,
-   "dalga": 0.32
+   "dalga": 0.3
   },
   "hava": {
-   "aqi": 39,
-   "pm25": 9.1,
-   "pm10": 12.8,
+   "aqi": 44,
+   "pm25": 10.8,
+   "pm10": 16.2,
    "uvMax": 2.5
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-25T13:36:26.837Z",
+  "guncelleme": "2026-11-25T14:05:00.861Z",
   "giden": [
-   {
-    "no": [
-     "PC3013"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "İzmir",
-    "planlanan": "2026-11-25T13:50:00.000Z",
-    "tahmini": null,
-    "kapi": "105",
-    "durum": "SON ÇAĞRI",
-    "hat": "ic"
-   },
    {
     "no": [
      "TK2463"
@@ -9424,21 +9393,21 @@
     "kapi": "106",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3013"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-26T13:50:00.000Z",
+    "tahmini": null,
+    "kapi": "109",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "PC3631"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Dalaman",
-    "planlanan": "2026-11-25T13:50:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC2088"
@@ -9846,11 +9815,35 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2100"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-26T13:50:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC4750"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-26T13:50:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "İPTAL",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-25T13:36:26.836Z",
+  "guncelleme": "2026-11-25T14:05:00.861Z",
   "liste": [
    {
     "id": 6386,
