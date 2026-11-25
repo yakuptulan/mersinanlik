@@ -12,16 +12,12 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-25T10:01:28.303Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-25",
-  "adet": 17,
-  "premium": 17
+  "adet": 20,
+  "premium": 20
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -316,7 +312,9 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-dijital-bagimlilikla-mucadele-semineri-duzenlendi-119532053",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-evinde-basladigi-seramik-uretimiyle-kendi-isinin-sahibi-oldu-119532045",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-ogretmenler-gunu-konserle-kutlandi-119532109",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersin-cumhuriyet-bassavcisi-yasin-emreden-mersin-barosu-ve-mtsoya-ziyaret-119532242"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersin-cumhuriyet-bassavcisi-yasin-emreden-mersin-barosu-ve-mtsoya-ziyaret-119532242",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/tarsusta-zehirlenme-suphesi-1-kisi-hayatini-kaybetti-1-kisi-yogun-bakimda-119532358",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-bir-kisinin-aracini-kursunladigi-iddiasiyla-aranan-supheli-tutuklandi-119532330"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -486,15 +484,27 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-25T10:02:11.529Z",
+  "guncelleme": "2026-11-25T10:19:41.349Z",
   "liste": [
+   {
+    "baslik": "selen erdem",
+    "trafik": 100
+   },
+   {
+    "baslik": "mh hapoel be'er şeva",
+    "trafik": 10000
+   },
+   {
+    "baslik": "trent forrest",
+    "trafik": 100
+   },
    {
     "baslik": "tuzlu kahve 12",
     "trafik": 20000
    },
    {
     "baslik": "aydın",
-    "trafik": 2000
+    "trafik": 1000
    },
    {
     "baslik": "ford otosan",
@@ -502,7 +512,7 @@
    },
    {
     "baslik": "jennifer barreto",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "gediz elektrik",
@@ -510,23 +520,11 @@
    },
    {
     "baslik": "konut",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "basın açıklaması",
     "trafik": 500
-   },
-   {
-    "baslik": "hsk",
-    "trafik": 500
-   },
-   {
-    "baslik": "mevduat sigortası",
-    "trafik": 2000
-   },
-   {
-    "baslik": "motorine indirim",
-    "trafik": 20000
    }
   ]
  },
