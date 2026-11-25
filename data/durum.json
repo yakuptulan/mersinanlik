@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "mersingundem": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-25T23:01:38.869Z"
   }
  },
  "gorsel": {
@@ -510,8 +506,20 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-25T23:02:07.820Z",
+  "guncelleme": "2026-11-25T23:31:53.684Z",
   "liste": [
+   {
+    "baslik": "hm",
+    "trafik": 500
+   },
+   {
+    "baslik": "fox",
+    "trafik": 100
+   },
+   {
+    "baslik": "now tv",
+    "trafik": 1000
+   },
    {
     "baslik": "lukaku",
     "trafik": 1000
@@ -521,20 +529,16 @@
     "trafik": 1000
    },
    {
-    "baslik": "sporx",
-    "trafik": 500
-   },
-   {
     "baslik": "kainat güzellik yarışması",
     "trafik": 100
    },
    {
-    "baslik": "trtspor",
-    "trafik": 100
+    "baslik": "sporx",
+    "trafik": 500
    },
    {
-    "baslik": "real madrid cf",
-    "trafik": 1000
+    "baslik": "trtspor",
+    "trafik": 100
    },
    {
     "baslik": "shakhtar donetsk vs fenerbahçe standings",
@@ -542,14 +546,6 @@
    },
    {
     "baslik": "76ers - heat",
-    "trafik": 200
-   },
-   {
-    "baslik": "fc porto",
-    "trafik": 200
-   },
-   {
-    "baslik": "nico paz",
     "trafik": 200
    }
   ]
