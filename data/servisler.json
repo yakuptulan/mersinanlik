@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-25T07:34:22.257Z",
+ "guncelleme": "2026-11-25T08:02:07.878Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 17,
@@ -63,7 +63,7 @@
      "tarih": "2026-11-28",
      "min": 14,
      "max": 20,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
@@ -327,7 +327,7 @@
   },
   "silifke": {
    "sicaklik": 16,
-   "durum": "Az bulutlu",
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-25",
@@ -337,8 +337,8 @@
     },
     {
      "tarih": "2026-11-26",
-     "min": 7,
-     "max": 18,
+     "min": 6,
+     "max": 19,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -351,7 +351,7 @@
      "tarih": "2026-11-28",
      "min": 11,
      "max": 21,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
@@ -405,7 +405,7 @@
      "tarih": "2026-11-25",
      "min": 12,
      "max": 19,
-     "durum": "Parçalı bulutlu"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-26",
@@ -417,13 +417,13 @@
      "tarih": "2026-11-27",
      "min": 12,
      "max": 21,
-     "durum": "Az bulutlu"
+     "durum": "Açık"
     },
     {
      "tarih": "2026-11-28",
      "min": 13,
      "max": 22,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-25T07:34:27.849Z",
+  "guncelleme": "2026-11-25T08:02:13.212Z",
   "liste": [
    {
     "ad": "Akdeniz Eczanesi",
@@ -772,7 +772,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-25T07:34:29.183Z",
+  "guncelleme": "2026-11-25T08:02:14.558Z",
   "liste": [
    {
     "tur": "su",
@@ -789,6 +789,22 @@
        "Fatih",
        "Kargıcak",
        "Türbe"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "ERDEMLİ İLÇESİ,KIZKALESİ MAHALLESİNE BAĞLI ÇAKIR HASAN CADDESİ GENELİ ARIZA NEDENİ İLE SAAT 14:00 E KADAR SU KESİNTİSİ YAŞANACAKTIR",
+    "baslangic": "2026-11-25T07:45:00.000Z",
+    "bitis": "2026-11-25T11:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "erdemli",
+      "ad": "Erdemli",
+      "mahalleler": [
+       "Kızkalesi"
       ]
      }
     ]
@@ -1022,7 +1038,7 @@
   "kaynakSaati": "2026-11-25 10:34:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-25T07:34:36.369Z",
+  "guncelleme": "2026-11-25T08:02:20.229Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1947,7 +1963,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-25T07:02:32.765Z",
+  "guncelleme": "2026-11-25T08:02:23.050Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8887,7 +8903,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-25T07:34:36.645Z",
+  "guncelleme": "2026-11-25T08:02:20.698Z",
   "liste": [
    {
     "yol": "/is-ilanlari/",
@@ -8922,6 +8938,10 @@
     "sayi": 6
    },
    {
+    "yol": "/haber/uretici-kadin-stantlari-ile-hayallerini-buyuttu-kendi-isinin-sahibi-ol-110nn6i/",
+    "sayi": 6
+   },
+   {
     "yol": "/is-ilanlari/tarsus/",
     "sayi": 3
    },
@@ -8934,11 +8954,11 @@
     "sayi": 2
    },
    {
-    "yol": "/haber/mezitli-belediyesi-sorusturmasinda-yeni-iddia-itirafcilarin-sayisi-3-e-6y7hgj/",
+    "yol": "/haber/mersin-de-ogretmenler-gunu-nde-ucretsiz-etkinlik-firsatlari-18d3dcj/",
     "sayi": 2
    },
    {
-    "yol": "/haber/mersin-de-ogretmenler-gunu-nde-ucretsiz-etkinlik-firsatlari-18d3dcj/",
+    "yol": "/haber/mezitli-belediyesi-sorusturmasinda-yeni-iddia-itirafcilarin-sayisi-3-e-6y7hgj/",
     "sayi": 2
    },
    {
@@ -8970,43 +8990,27 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/uretici-kadin-stantlari-ile-hayallerini-buyuttu-kendi-isinin-sahibi-ol-110nn6i/",
-    "sayi": 1
-   },
-   {
     "yol": "/haber/mersin-de-kimler-yasiyor-iste-sanliurfali-diyarbakirli-adanali-ve-dige-11ff6hs/",
     "sayi": 1
    }
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-25T07:34:38.902Z",
+  "guncelleme": "2026-11-25T08:02:41.092Z",
   "deniz": {
    "sicaklik": 21.5,
-   "dalga": 0.44
+   "dalga": 0.42
   },
   "hava": {
-   "aqi": 44,
-   "pm25": 10.9,
-   "pm10": 16.1,
+   "aqi": 42,
+   "pm25": 11.3,
+   "pm10": 14.9,
    "uvMax": 2.25
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-25T07:34:41.546Z",
+  "guncelleme": "2026-11-25T08:02:43.732Z",
   "giden": [
-   {
-    "no": [
-     "PC2083"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-25T07:35:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
    {
     "no": [
      "TK2455"
@@ -9016,7 +9020,7 @@
     "planlanan": "2026-11-25T08:45:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -9438,21 +9442,21 @@
     "kapi": "104",
     "durum": "",
     "hat": "dis"
+   },
+   {
+    "no": [
+     "PC2083"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-26T07:35:00.000Z",
+    "tahmini": null,
+    "kapi": "109",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "TK2454"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-25T08:00:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "VF3142"
@@ -9860,11 +9864,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2454"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-26T08:00:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-25T07:34:41.545Z",
+  "guncelleme": "2026-11-25T08:02:43.731Z",
   "liste": [
    {
     "id": 37539,
