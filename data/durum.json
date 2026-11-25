@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-25",
-  "adet": 20,
-  "premium": 20
+  "adet": 21,
+  "premium": 21
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -484,11 +484,23 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-25T10:19:41.349Z",
+  "guncelleme": "2026-11-25T10:31:51.620Z",
   "liste": [
+   {
+    "baslik": "taksim - kabataş",
+    "trafik": 200
+   },
+   {
+    "baslik": "zara black friday",
+    "trafik": 500
+   },
    {
     "baslik": "selen erdem",
     "trafik": 100
+   },
+   {
+    "baslik": "salih uzun",
+    "trafik": 500
    },
    {
     "baslik": "mh hapoel be'er şeva",
@@ -504,7 +516,7 @@
    },
    {
     "baslik": "aydın",
-    "trafik": 1000
+    "trafik": 2000
    },
    {
     "baslik": "ford otosan",
@@ -512,18 +524,6 @@
    },
    {
     "baslik": "jennifer barreto",
-    "trafik": 500
-   },
-   {
-    "baslik": "gediz elektrik",
-    "trafik": 200
-   },
-   {
-    "baslik": "konut",
-    "trafik": 500
-   },
-   {
-    "baslik": "basın açıklaması",
     "trafik": 500
    }
   ]
