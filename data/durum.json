@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "mersingundem": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-25T23:01:38.869Z"
   }
  },
  "gorsel": {
@@ -506,11 +510,35 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-25T22:31:35.447Z",
+  "guncelleme": "2026-11-25T23:02:07.820Z",
   "liste": [
+   {
+    "baslik": "lukaku",
+    "trafik": 1000
+   },
+   {
+    "baslik": "ersin destanoğlu",
+    "trafik": 1000
+   },
+   {
+    "baslik": "sporx",
+    "trafik": 500
+   },
+   {
+    "baslik": "kainat güzellik yarışması",
+    "trafik": 100
+   },
+   {
+    "baslik": "trtspor",
+    "trafik": 100
+   },
    {
     "baslik": "real madrid cf",
     "trafik": 1000
+   },
+   {
+    "baslik": "shakhtar donetsk vs fenerbahçe standings",
+    "trafik": 2000
    },
    {
     "baslik": "76ers - heat",
@@ -523,30 +551,6 @@
    {
     "baslik": "nico paz",
     "trafik": 200
-   },
-   {
-    "baslik": "ethan mbappé",
-    "trafik": 100
-   },
-   {
-    "baslik": "ofsayt",
-    "trafik": 1000
-   },
-   {
-    "baslik": "rc lens",
-    "trafik": 100
-   },
-   {
-    "baslik": "sacha boey",
-    "trafik": 100
-   },
-   {
-    "baslik": "ülke puanı sıralaması",
-    "trafik": 2000
-   },
-   {
-    "baslik": "lask linz",
-    "trafik": 1000
    }
   ]
  },
