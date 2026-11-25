@@ -502,22 +502,39 @@
    "kaynakHatalari": []
   },
   "2026-11-26": {
-   "guncelleme": "2026-11-25T21:07:23.006Z",
-   "mersinHaber": 1,
-   "kendiYazimiz": 1,
+   "guncelleme": "2026-11-25T21:34:36.392Z",
+   "mersinHaber": 4,
+   "kendiYazimiz": 4,
    "turkiyeDunya": 1,
-   "otomatik": 1,
+   "otomatik": 4,
    "otomatikTurler": {
-    "ucus": 1
+    "ucus": 1,
+    "yakit": 1,
+    "su": 2
    },
    "otomatikBasliklar": [
     {
      "baslik": "Çukurova Havalimanı'nda bugün 1 sefer iptal edildi",
      "tur": "ucus",
      "saat": "00:07"
+    },
+    {
+     "baslik": "Motorine 430 kuruş indirim geldi: İstanbul, Ankara, İzmir ve Mersin'de güncel akaryakıt fiyatları",
+     "tur": "yakit",
+     "saat": "00:34"
+    },
+    {
+     "baslik": "Aydıncık'ta su kesintisi (26 Kasım): Atatürk, Büyük Ada ve 6 mahalle daha",
+     "tur": "su",
+     "saat": "00:34"
+    },
+    {
+     "baslik": "Silifke'de su kesintisi (26 Kasım): Atakent, 12 saat sürecek",
+     "tur": "su",
+     "saat": "00:34"
     }
    ],
-   "gorsel": 0,
+   "gorsel": 1,
    "bilgi": 0,
    "gezi": 0,
    "kaynakHatalari": []

@@ -16,7 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-26",
-  "adet": 0
+  "adet": 1,
+  "premium": 1
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -505,8 +506,36 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-25T21:02:08.562Z",
+  "guncelleme": "2026-11-25T21:31:43.318Z",
   "liste": [
+   {
+    "baslik": "usyk",
+    "trafik": 200
+   },
+   {
+    "baslik": "manu",
+    "trafik": 200
+   },
+   {
+    "baslik": "alisson",
+    "trafik": 100
+   },
+   {
+    "baslik": "manchester united",
+    "trafik": 1000
+   },
+   {
+    "baslik": "kilis valisi",
+    "trafik": 100
+   },
+   {
+    "baslik": "sahadan",
+    "trafik": 500
+   },
+   {
+    "baslik": "gb",
+    "trafik": 100
+   },
    {
     "baslik": "inter",
     "trafik": 1000
@@ -517,34 +546,6 @@
    },
    {
     "baslik": "fred",
-    "trafik": 200
-   },
-   {
-    "baslik": "flashscore",
-    "trafik": 200
-   },
-   {
-    "baslik": "atletico madrid",
-    "trafik": 1000
-   },
-   {
-    "baslik": "bayern münih",
-    "trafik": 1000
-   },
-   {
-    "baslik": "greenwood",
-    "trafik": 500
-   },
-   {
-    "baslik": "paris saint-germain",
-    "trafik": 200
-   },
-   {
-    "baslik": "skriniar",
-    "trafik": 200
-   },
-   {
-    "baslik": "kevin",
     "trafik": 200
    }
   ]
