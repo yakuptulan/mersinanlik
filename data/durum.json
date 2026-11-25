@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-25",
-  "adet": 1,
-  "premium": 1
+  "adet": 4,
+  "premium": 4
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -54,7 +54,8 @@
    "https://www.mersin.bel.tr/haber/buyuksehirden-yil-sonuna-kadar-10-bin-agaclik-yesil-hedef-1795499880",
    "https://www.mersin.bel.tr/haber/kadinlar-mersin-buyuksehirin-destekleriyle-artik-daha-guclu-1795500249",
    "https://www.mersin.bel.tr/haber/baskan-vekili-gencten-25-kasim-kadina-yonelik-siddete-karsi-uluslararasi-mucadele-gunu-mesaji-1795524043",
-   "https://www.mersin.bel.tr/haber/uretici-kadin-stantlari-ile-hayallerini-buyuttu-kendi-isinin-sahibi-oldu-1795587533"
+   "https://www.mersin.bel.tr/haber/uretici-kadin-stantlari-ile-hayallerini-buyuttu-kendi-isinin-sahibi-oldu-1795587533",
+   "https://www.mersin.bel.tr/haber/mersin-buyuksehir-ogretmenlerin-anlamli-gunune-ezgilerle-eslik-etti-1795588465"
   ],
   "yenisehir-belediyesi": [
    "https://yenisehir.bel.tr/haber/yenisehirde-yesil-seferberlik-suru",
@@ -300,7 +301,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-dolandiricilik-operasyonu-8-supheli-tutuklandi-119531733",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-dolandiricilik-operasyonunda-yakalanan-8-supheli-tutuklandi-119531775",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-nitelikli-dolandiricilik-operasyonu-8-tutuklama-119531761",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/tedavisi-tamamlanan-5-deniz-kaplumbagasi-yeniden-denizle-bulustu-119531873"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/tedavisi-tamamlanan-5-deniz-kaplumbagasi-yeniden-denizle-bulustu-119531873",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/atil-konak-yeniden-yapildi-egitimcilerin-hizmetine-sunuldu-119531942"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -465,19 +467,36 @@
    "https://www.akdeniz.bel.tr/Default/HaberDetay/70",
    "https://www.akdeniz.bel.tr/Default/HaberDetay/69",
    "https://www.akdeniz.bel.tr/Default/HaberDetay/68",
-   "https://www.akdeniz.bel.tr/Default/HaberDetay/67"
+   "https://www.akdeniz.bel.tr/Default/HaberDetay/67",
+   "https://www.akdeniz.bel.tr/Default/HaberDetay/71"
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-25T06:31:52.013Z",
+  "guncelleme": "2026-11-25T07:01:40.025Z",
   "liste": [
    {
-    "baslik": "türkiye futbol federasyonu",
+    "baslik": "merkez bankası döviz kurları",
+    "trafik": 500
+   },
+   {
+    "baslik": "hızlı geçiş sistemi",
     "trafik": 100
    },
    {
-    "baslik": "ufuk beydemir",
+    "baslik": "t.c. resmî gazete",
+    "trafik": 200
+   },
+   {
+    "baslik": "heyelan",
     "trafik": 100
+   },
+   {
+    "baslik": "türkiye futbol federasyonu",
+    "trafik": 200
+   },
+   {
+    "baslik": "ufuk beydemir",
+    "trafik": 200
    },
    {
     "baslik": "şampiyonlar ligi maç özetleri",
@@ -493,23 +512,7 @@
    },
    {
     "baslik": "sivas hava durumu",
-    "trafik": 1000
-   },
-   {
-    "baslik": "kayseri hava durumu",
-    "trafik": 1000
-   },
-   {
-    "baslik": "kastamonu hava durumu",
-    "trafik": 200
-   },
-   {
-    "baslik": "hava durumu antalya",
-    "trafik": 200
-   },
-   {
-    "baslik": "iptv",
-    "trafik": 500
+    "trafik": 2000
    }
   ]
  },
