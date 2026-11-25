@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-25T22:05:08.549Z",
+ "guncelleme": "2026-11-25T22:31:40.166Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 10,
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-25T22:05:12.600Z",
+  "guncelleme": "2026-11-25T22:31:43.810Z",
   "liste": [
    {
     "ad": "Alkım Eczanesi",
@@ -684,7 +684,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-25T22:05:13.805Z",
+  "guncelleme": "2026-11-25T22:31:44.790Z",
   "liste": [
    {
     "tur": "su",
@@ -744,17 +744,17 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-25T22:05:16.437Z",
+  "guncelleme": "2026-11-25T22:31:49.880Z",
   "kalemler": {
    "gram": {
-    "alis": 5848.59,
-    "satis": 5849.45,
+    "alis": 5848.2,
+    "satis": 5849.06,
     "degisim": 0.43
    },
    "ceyrek": {
-    "alis": 9988,
-    "satis": 10322,
-    "degisim": 0.26
+    "alis": 9978,
+    "satis": 10331,
+    "degisim": 0.35
    },
    "gumus": {
     "alis": 67.42,
@@ -762,14 +762,14 @@
     "degisim": 0.73
    },
    "usd": {
-    "alis": 50.6696,
-    "satis": 50.6918,
-    "degisim": 0.01
+    "alis": 50.6672,
+    "satis": 50.6833,
+    "degisim": 0
    },
    "eur": {
-    "alis": 55.6749,
-    "satis": 55.7479,
-    "degisim": 0.16
+    "alis": 55.7174,
+    "satis": 55.8925,
+    "degisim": 0.33
    },
    "bist": {
     "alis": null,
@@ -777,87 +777,87 @@
     "degisim": -2.83
    },
    "btc": {
-    "satis": 3046471,
-    "usd": 60114,
-    "degisim": 0.36
+    "satis": 3042445,
+    "usd": 60036,
+    "degisim": 0.19
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 5848.59,
-    "satis": 5849.45,
+    "alis": 5848.2,
+    "satis": 5849.06,
     "degisim": 0.43
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 9988,
-    "satis": 10322,
-    "degisim": 0.26
+    "alis": 9978,
+    "satis": 10331,
+    "degisim": 0.35
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 19975,
-    "satis": 20644,
-    "degisim": 0.27
+    "alis": 19956,
+    "satis": 20662,
+    "degisim": 0.35
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 39767,
-    "satis": 41041,
-    "degisim": 0.27
+    "alis": 39729,
+    "satis": 41075,
+    "degisim": 0.35
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40824,
-    "satis": 41661,
-    "degisim": 0.27
+    "alis": 40785,
+    "satis": 41695,
+    "degisim": 0.35
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40824,
-    "satis": 41661,
-    "degisim": 0.27
+    "alis": 40785,
+    "satis": 41695,
+    "degisim": 0.35
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40824,
-    "satis": 41661,
-    "degisim": 0.27
+    "alis": 40785,
+    "satis": 41695,
+    "degisim": 0.35
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5556.8,
-    "satis": 5804.73,
-    "degisim": 0.27
+    "alis": 5551.53,
+    "satis": 5809.6,
+    "degisim": 0.35
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4230,
-    "satis": 4990,
-    "degisim": 0.5
+    "alis": 4241,
+    "satis": 4985,
+    "degisim": 0.4
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3330.8,
-    "satis": 4527.74,
-    "degisim": 0.24
+    "alis": 3327.56,
+    "satis": 4531.11,
+    "degisim": 0.31
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 5819.34,
-    "satis": 5820.2,
+    "alis": 5818.96,
+    "satis": 5819.82,
     "degisim": 0.43
    },
    {
@@ -872,50 +872,50 @@
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.6696,
-    "satis": 50.6918,
-    "degisim": 0.01
+    "alis": 50.6672,
+    "satis": 50.6833,
+    "degisim": 0
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.6749,
-    "satis": 55.7479,
-    "degisim": 0.16
+    "alis": 55.7174,
+    "satis": 55.8925,
+    "degisim": 0.33
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.4663,
-    "satis": 66.4776,
-    "degisim": -0.02
+    "alis": 66.5797,
+    "satis": 66.831,
+    "degisim": 0.33
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.9522,
-    "satis": 61.0377,
+    "alis": 60.942,
+    "satis": 61.0495,
     "degisim": 0.01
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.504,
-    "satis": 13.5137,
-    "degisim": 0.01
+    "alis": 13.4942,
+    "satis": 13.5191,
+    "degisim": -0.01
    },
    {
     "k": "RUB",
     "ad": "Rus rublesi",
-    "alis": 0.6129,
-    "satis": 0.6138,
-    "degisim": -0.57
+    "alis": 0.6134,
+    "satis": 0.614,
+    "degisim": 0.06
    }
   ],
-  "kaynakSaati": "2026-11-26 01:05:01"
+  "kaynakSaati": "2026-11-26 01:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-25T22:05:18.756Z",
+  "guncelleme": "2026-11-25T22:31:52.739Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1740,7 +1740,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-25T21:32:09.115Z",
+  "guncelleme": "2026-11-25T22:31:55.189Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -2801,6 +2801,118 @@
      }
     ],
     "haftalar": {
+     "3": [
+      {
+       "ev": "Gençlerbirliği",
+       "dep": "Erzurumspor FK",
+       "skor": "1-1",
+       "tarih": "2026-08-28"
+      },
+      {
+       "ev": "Tümosan Konyaspor",
+       "dep": "Kocaelispor",
+       "skor": "1-2",
+       "tarih": "2026-08-29"
+      },
+      {
+       "ev": "Gaziantep",
+       "dep": "Çaykur Rizespor",
+       "skor": "1-2",
+       "tarih": "2026-08-29"
+      },
+      {
+       "ev": "Galatasaray",
+       "dep": "Göztepe",
+       "skor": "3-2",
+       "tarih": "2026-08-29"
+      },
+      {
+       "ev": "Eyüpspor",
+       "dep": "Corendon Alanyaspor",
+       "skor": "2-1",
+       "tarih": "2026-08-30"
+      },
+      {
+       "ev": "İstanbul Başakşehir FK",
+       "dep": "Kasımpaşa",
+       "skor": "1-1",
+       "tarih": "2026-08-30"
+      },
+      {
+       "ev": "Samsunspor",
+       "dep": "Fenerbahçe",
+       "skor": "0-2",
+       "tarih": "2026-08-30"
+      },
+      {
+       "ev": "Amed Sportif Faaliyetler",
+       "dep": "Trabzonspor",
+       "skor": "2-1",
+       "tarih": "2026-08-31"
+      },
+      {
+       "ev": "Beşiktaş",
+       "dep": "Arca Çorum FK",
+       "skor": "6-2",
+       "tarih": "2026-08-31"
+      }
+     ],
+     "4": [
+      {
+       "ev": "İstanbul Başakşehir FK",
+       "dep": "Galatasaray",
+       "skor": "2-3",
+       "tarih": "2026-09-04"
+      },
+      {
+       "ev": "Erzurumspor FK",
+       "dep": "Tümosan Konyaspor",
+       "skor": "1-0",
+       "tarih": "2026-09-05"
+      },
+      {
+       "ev": "Fenerbahçe",
+       "dep": "Beşiktaş",
+       "skor": "1-2",
+       "tarih": "2026-09-05"
+      },
+      {
+       "ev": "Kasımpaşa",
+       "dep": "Amed Sportif Faaliyetler",
+       "skor": "2-2",
+       "tarih": "2026-09-06"
+      },
+      {
+       "ev": "Arca Çorum FK",
+       "dep": "Eyüpspor",
+       "skor": "3-0",
+       "tarih": "2026-09-06"
+      },
+      {
+       "ev": "Trabzonspor",
+       "dep": "Gençlerbirliği",
+       "skor": "5-0",
+       "tarih": "2026-09-06"
+      },
+      {
+       "ev": "Kocaelispor",
+       "dep": "Samsunspor",
+       "skor": "1-0",
+       "tarih": "2026-09-06"
+      },
+      {
+       "ev": "Çaykur Rizespor",
+       "dep": "Corendon Alanyaspor",
+       "skor": "0-1",
+       "tarih": "2026-09-07"
+      },
+      {
+       "ev": "Göztepe",
+       "dep": "Gaziantep",
+       "skor": "2-4",
+       "tarih": "2026-09-07"
+      }
+     ],
      "5": [
       {
        "ev": "Beşiktaş",
@@ -3399,6 +3511,142 @@
         "skor": null
        }
       ]
+     },
+     "15": {
+      "alindi": "2026-11-25T22:32:07.800Z",
+      "maclar": [
+       {
+        "ev": "Arca Çorum FK",
+        "dep": "Amed Sportif Faaliyetler",
+        "tarih": "2026-12-11",
+        "saat": "20:00",
+        "skor": null
+       },
+       {
+        "ev": "Erzurumspor FK",
+        "dep": "Kasımpaşa",
+        "tarih": "2026-12-12",
+        "saat": "13:30",
+        "skor": null
+       },
+       {
+        "ev": "Corendon Alanyaspor",
+        "dep": "Samsunspor",
+        "tarih": "2026-12-12",
+        "saat": "16:00",
+        "skor": null
+       },
+       {
+        "ev": "Eyüpspor",
+        "dep": "Galatasaray",
+        "tarih": "2026-12-12",
+        "saat": "19:00",
+        "skor": null
+       },
+       {
+        "ev": "Kocaelispor",
+        "dep": "Gençlerbirliği",
+        "tarih": "2026-12-13",
+        "saat": "13:30",
+        "skor": null
+       },
+       {
+        "ev": "Çaykur Rizespor",
+        "dep": "İstanbul Başakşehir FK",
+        "tarih": "2026-12-13",
+        "saat": "16:00",
+        "skor": null
+       },
+       {
+        "ev": "Göztepe",
+        "dep": "Tümosan Konyaspor",
+        "tarih": "2026-12-13",
+        "saat": "16:00",
+        "skor": null
+       },
+       {
+        "ev": "Fenerbahçe",
+        "dep": "Trabzonspor",
+        "tarih": "2026-12-13",
+        "saat": "19:00",
+        "skor": null
+       },
+       {
+        "ev": "Gaziantep",
+        "dep": "Beşiktaş",
+        "tarih": "2026-12-14",
+        "saat": "20:00",
+        "skor": null
+       }
+      ]
+     },
+     "16": {
+      "alindi": "2026-11-25T22:32:09.015Z",
+      "maclar": [
+       {
+        "ev": "Kasımpaşa",
+        "dep": "Fenerbahçe",
+        "tarih": "2026-12-18",
+        "saat": "20:00",
+        "skor": null
+       },
+       {
+        "ev": "Amed Sportif Faaliyetler",
+        "dep": "Göztepe",
+        "tarih": "2026-12-18",
+        "saat": "20:00",
+        "skor": null
+       },
+       {
+        "ev": "Tümosan Konyaspor",
+        "dep": "Eyüpspor",
+        "tarih": "2026-12-19",
+        "saat": "13:30",
+        "skor": null
+       },
+       {
+        "ev": "İstanbul Başakşehir FK",
+        "dep": "Erzurumspor FK",
+        "tarih": "2026-12-19",
+        "saat": "16:00",
+        "skor": null
+       },
+       {
+        "ev": "Galatasaray",
+        "dep": "Corendon Alanyaspor",
+        "tarih": "2026-12-19",
+        "saat": "19:00",
+        "skor": null
+       },
+       {
+        "ev": "Gençlerbirliği",
+        "dep": "Arca Çorum FK",
+        "tarih": "2026-12-20",
+        "saat": "13:30",
+        "skor": null
+       },
+       {
+        "ev": "Samsunspor",
+        "dep": "Gaziantep",
+        "tarih": "2026-12-20",
+        "saat": "16:00",
+        "skor": null
+       },
+       {
+        "ev": "Beşiktaş",
+        "dep": "Çaykur Rizespor",
+        "tarih": "2026-12-20",
+        "saat": "19:00",
+        "skor": null
+       },
+       {
+        "ev": "Trabzonspor",
+        "dep": "Kocaelispor",
+        "tarih": "2026-12-21",
+        "saat": "20:00",
+        "skor": null
+       }
+      ]
      }
     },
     "form": {
@@ -3899,6 +4147,130 @@
      }
     ],
     "haftalar": {
+     "6": [
+      {
+       "ev": "Bandırma Spor",
+       "dep": "Boluspor",
+       "skor": "6-0",
+       "tarih": "2026-09-05"
+      },
+      {
+       "ev": "Keçtaş Ankara Keçiörengücü",
+       "dep": "Sms Grup Sarıyer",
+       "skor": "3-0",
+       "tarih": "2026-09-05"
+      },
+      {
+       "ev": "Orfa Yapı Pendikspor",
+       "dep": "Eminevim Ümraniyespor",
+       "skor": "1-0",
+       "tarih": "2026-09-05"
+      },
+      {
+       "ev": "Antalyaspor",
+       "dep": "Ekenler Beton Sivasspor",
+       "skor": "1-2",
+       "tarih": "2026-09-06"
+      },
+      {
+       "ev": "Batman Petrol Spor",
+       "dep": "Mısırlıcomtr Fatih Karagümrük",
+       "skor": "4-3",
+       "tarih": "2026-09-06"
+      },
+      {
+       "ev": "Muğlaspor",
+       "dep": "Van Spor",
+       "skor": "2-2",
+       "tarih": "2026-09-06"
+      },
+      {
+       "ev": "İstanbulspor",
+       "dep": "Alagöz Holding Iğdır",
+       "skor": "1-2",
+       "tarih": "2026-09-07"
+      },
+      {
+       "ev": "Turka Esenler Erokspor",
+       "dep": "Metro Holding Kayserispor",
+       "skor": "0-3",
+       "tarih": "2026-09-07"
+      },
+      {
+       "ev": "Manisa",
+       "dep": "Bursaspor",
+       "skor": "1-2",
+       "tarih": "2026-09-07"
+      },
+      {
+       "ev": "Mardin 1969 Spor",
+       "dep": "Bodrum FK",
+       "skor": "1-0",
+       "tarih": "2026-09-07"
+      }
+     ],
+     "7": [
+      {
+       "ev": "Sms Grup Sarıyer",
+       "dep": "Bandırma Spor",
+       "skor": "1-1",
+       "tarih": "2026-09-11"
+      },
+      {
+       "ev": "Boluspor",
+       "dep": "Orfa Yapı Pendikspor",
+       "skor": "1-1",
+       "tarih": "2026-09-12"
+      },
+      {
+       "ev": "Artı Değer Van Spor",
+       "dep": "Keçtaş Ankara Keçiörengücü",
+       "skor": "1-1",
+       "tarih": "2026-09-12"
+      },
+      {
+       "ev": "Eminevim Ümraniyespor",
+       "dep": "Antalyaspor",
+       "skor": "1-2",
+       "tarih": "2026-09-12"
+      },
+      {
+       "ev": "Bodrum FK",
+       "dep": "Batman Petrol Spor",
+       "skor": "4-0",
+       "tarih": "2026-09-12"
+      },
+      {
+       "ev": "Alagöz Holding Iğdır",
+       "dep": "Mardin 1969 Spor",
+       "skor": "1-0",
+       "tarih": "2026-09-13"
+      },
+      {
+       "ev": "Ekenler Beton Sivasspor",
+       "dep": "Muğlaspor",
+       "skor": "1-1",
+       "tarih": "2026-09-13"
+      },
+      {
+       "ev": "Mısırlıcomtr Fatih Karagümrük",
+       "dep": "Manisa",
+       "skor": "1-1",
+       "tarih": "2026-09-13"
+      },
+      {
+       "ev": "Bursaspor",
+       "dep": "Turka Esenler Erokspor",
+       "skor": "2-2",
+       "tarih": "2026-09-13"
+      },
+      {
+       "ev": "Metro Holding Kayserispor",
+       "dep": "İstanbulspor",
+       "skor": "4-0",
+       "tarih": "2026-09-14"
+      }
+     ],
      "8": [
       {
        "ev": "Bandırma Spor",
@@ -4561,6 +4933,156 @@
         "skor": null
        }
       ]
+     },
+     "18": {
+      "alindi": "2026-11-25T22:32:17.526Z",
+      "maclar": [
+       {
+        "ev": "Antalyaspor",
+        "dep": "Manisa",
+        "tarih": "2026-12-11",
+        "saat": "20:00",
+        "skor": null
+       },
+       {
+        "ev": "Keçtaş Ankara Keçiörengücü",
+        "dep": "Mardin 1969 Spor",
+        "tarih": "2026-12-12",
+        "saat": "13:30",
+        "skor": null
+       },
+       {
+        "ev": "Ekenler Beton Sivasspor",
+        "dep": "Mısırlıcomtr Fatih Karagümrük",
+        "tarih": "2026-12-12",
+        "saat": "13:30",
+        "skor": null
+       },
+       {
+        "ev": "Orfa Yapı Pendikspor",
+        "dep": "Muğlaspor",
+        "tarih": "2026-12-12",
+        "saat": "16:00",
+        "skor": null
+       },
+       {
+        "ev": "Bodrum FK",
+        "dep": "Alagöz Holding Iğdır",
+        "tarih": "2026-12-12",
+        "saat": "19:00",
+        "skor": null
+       },
+       {
+        "ev": "Bandırma Spor",
+        "dep": "Metro Holding Kayserispor",
+        "tarih": "2026-12-13",
+        "saat": "13:30",
+        "skor": null
+       },
+       {
+        "ev": "Boluspor",
+        "dep": "İstanbulspor",
+        "tarih": "2026-12-13",
+        "saat": "13:30",
+        "skor": null
+       },
+       {
+        "ev": "Eminevim Ümraniyespor",
+        "dep": "Batman Petrol Spor",
+        "tarih": "2026-12-13",
+        "saat": "16:00",
+        "skor": null
+       },
+       {
+        "ev": "Sms Grup Sarıyer",
+        "dep": "Bursaspor",
+        "tarih": "2026-12-13",
+        "saat": "19:00",
+        "skor": null
+       },
+       {
+        "ev": "Artı Değer Van Spor",
+        "dep": "Turka Esenler Erokspor",
+        "tarih": "2026-12-14",
+        "saat": "20:00",
+        "skor": null
+       }
+      ]
+     },
+     "19": {
+      "alindi": "2026-11-25T22:32:18.740Z",
+      "maclar": [
+       {
+        "ev": "Alagöz Holding Iğdır",
+        "dep": "Artı Değer Van Spor",
+        "tarih": "2026-12-20",
+        "saat": null,
+        "skor": null
+       },
+       {
+        "ev": "Mısırlıcomtr Fatih Karagümrük",
+        "dep": "Bodrum FK",
+        "tarih": "2026-12-20",
+        "saat": null,
+        "skor": null
+       },
+       {
+        "ev": "Bursaspor",
+        "dep": "Eminevim Ümraniyespor",
+        "tarih": "2026-12-20",
+        "saat": null,
+        "skor": null
+       },
+       {
+        "ev": "Metro Holding Kayserispor",
+        "dep": "Boluspor",
+        "tarih": "2026-12-20",
+        "saat": null,
+        "skor": null
+       },
+       {
+        "ev": "İstanbulspor",
+        "dep": "Ekenler Beton Sivasspor",
+        "tarih": "2026-12-20",
+        "saat": null,
+        "skor": null
+       },
+       {
+        "ev": "Turka Esenler Erokspor",
+        "dep": "Bandırma Spor",
+        "tarih": "2026-12-20",
+        "saat": null,
+        "skor": null
+       },
+       {
+        "ev": "Batman Petrol Spor",
+        "dep": "Antalyaspor",
+        "tarih": "2026-12-20",
+        "saat": null,
+        "skor": null
+       },
+       {
+        "ev": "Mardin 1969 Spor",
+        "dep": "Orfa Yapı Pendikspor",
+        "tarih": "2026-12-20",
+        "saat": null,
+        "skor": null
+       },
+       {
+        "ev": "Muğlaspor",
+        "dep": "Keçtaş Ankara Keçiörengücü",
+        "tarih": "2026-12-20",
+        "saat": null,
+        "skor": null
+       },
+       {
+        "ev": "Manisa",
+        "dep": "Sms Grup Sarıyer",
+        "tarih": "2026-12-20",
+        "saat": null,
+        "skor": null
+       }
+      ]
      }
     },
     "form": {
@@ -5039,6 +5561,118 @@
      }
     ],
     "haftalar": {
+     "3": [
+      {
+       "ev": "Arkent Arnavutköy Belediyesi Futbol SK",
+       "dep": "Çorlu Spor 1947",
+       "skor": "0-2",
+       "tarih": "2026-09-19"
+      },
+      {
+       "ev": "Kızılkaya Tarım Şanlıurfaspor",
+       "dep": "Adana Demirspor",
+       "skor": "1-1",
+       "tarih": "2026-09-19"
+      },
+      {
+       "ev": "Menemen",
+       "dep": "Ankaraspor",
+       "skor": "3-0",
+       "tarih": "2026-09-19"
+      },
+      {
+       "ev": "Seza Çimento Elazığspor",
+       "dep": "Aliağa",
+       "skor": "5-0",
+       "tarih": "2026-09-19"
+      },
+      {
+       "ev": "68 Aksaray Belediye Spor",
+       "dep": "İnegöl Kafkas Spor",
+       "skor": "1-1",
+       "tarih": "2026-09-20"
+      },
+      {
+       "ev": "Gmg Kastamonuspor",
+       "dep": "Hatayspor",
+       "skor": "1-0",
+       "tarih": "2026-09-20"
+      },
+      {
+       "ev": "Efor Çay Erbaaspor",
+       "dep": "Sebat Spor",
+       "skor": "3-2",
+       "tarih": "2026-09-20"
+      },
+      {
+       "ev": "Somaspor",
+       "dep": "Muş Spor",
+       "skor": "1-3",
+       "tarih": "2026-09-20"
+      },
+      {
+       "ev": "Isbaş Isparta 32 Spor",
+       "dep": "Güzide Gebze Spor",
+       "skor": "3-3",
+       "tarih": "2026-09-20"
+      }
+     ],
+     "4": [
+      {
+       "ev": "Ankaraspor",
+       "dep": "Somaspor",
+       "skor": "0-1",
+       "tarih": "2026-09-26"
+      },
+      {
+       "ev": "İnegöl Kafkas Spor",
+       "dep": "Gmg Kastamonuspor",
+       "skor": "4-1",
+       "tarih": "2026-09-26"
+      },
+      {
+       "ev": "Sebat Spor",
+       "dep": "Menemen",
+       "skor": "0-1",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Hatayspor",
+       "dep": "Arkent Arnavutköy Belediyesi Futbol SK",
+       "skor": "2-0",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Çorlu Spor 1947",
+       "dep": "Isbaş Isparta 32 Spor",
+       "skor": "1-3",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Güzide Gebze Spor",
+       "dep": "Seza Çimento Elazığspor",
+       "skor": "0-0",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Aliağa",
+       "dep": "Kızılkaya Tarım Şanlıurfaspor",
+       "skor": "2-1",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Muş Spor",
+       "dep": "68 Aksaray Belediye Spor",
+       "skor": "3-2",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Adana Demirspor",
+       "dep": "Efor Çay Erbaaspor",
+       "skor": "0-3",
+       "tarih": "2026-09-27"
+      }
+     ],
      "5": [
       {
        "ev": "Efor Çay Erbaaspor",
@@ -5702,6 +6336,142 @@
         "skor": null
        }
       ]
+     },
+     "16": {
+      "alindi": "2026-11-25T22:32:27.265Z",
+      "maclar": [
+       {
+        "ev": "Hatayspor",
+        "dep": "Adana Demirspor",
+        "tarih": "2026-12-12",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Gmg Kastamonuspor",
+        "dep": "Güzide Gebze Spor",
+        "tarih": "2026-12-12",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Çorlu Spor 1947",
+        "dep": "Aliağa",
+        "tarih": "2026-12-13",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Kızılkaya Tarım Şanlıurfaspor",
+        "dep": "İnegöl Kafkas Spor",
+        "tarih": "2026-12-13",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Seza Çimento Elazığspor",
+        "dep": "Muş Spor",
+        "tarih": "2026-12-13",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Isbaş Isparta 32 Spor",
+        "dep": "Ankaraspor",
+        "tarih": "2026-12-13",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Efor Çay Erbaaspor",
+        "dep": "68 Aksaray Belediye Spor",
+        "tarih": "2026-12-13",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Arkent Arnavutköy Belediyesi Futbol SK",
+        "dep": "Sebat Spor",
+        "tarih": "2026-12-13",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Menemen",
+        "dep": "Somaspor",
+        "tarih": "2026-12-13",
+        "saat": "15:00",
+        "skor": null
+       }
+      ]
+     },
+     "17": {
+      "alindi": "2026-11-25T22:32:28.513Z",
+      "maclar": [
+       {
+        "ev": "68 Aksaray Belediye Spor",
+        "dep": "Menemen",
+        "tarih": "2026-12-19",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Aliağa",
+        "dep": "Hatayspor",
+        "tarih": "2026-12-19",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Güzide Gebze Spor",
+        "dep": "Çorlu Spor 1947",
+        "tarih": "2026-12-19",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Somaspor",
+        "dep": "Gmg Kastamonuspor",
+        "tarih": "2026-12-19",
+        "saat": "15:30",
+        "skor": null
+       },
+       {
+        "ev": "Adana Demirspor",
+        "dep": "Arkent Arnavutköy Belediyesi Futbol SK",
+        "tarih": "2026-12-20",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Sebat Spor",
+        "dep": "Isbaş Isparta 32 Spor",
+        "tarih": "2026-12-20",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Muş Spor",
+        "dep": "Kızılkaya Tarım Şanlıurfaspor",
+        "tarih": "2026-12-20",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Ankaraspor",
+        "dep": "Seza Çimento Elazığspor",
+        "tarih": "2026-12-20",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "İnegöl Kafkas Spor",
+        "dep": "Efor Çay Erbaaspor",
+        "tarih": "2026-12-20",
+        "saat": "15:00",
+        "skor": null
+       }
+      ]
      }
     },
     "form": {
@@ -6144,6 +6914,106 @@
      }
     ],
     "haftalar": {
+     "3": [
+      {
+       "ev": "Adana 01 Futbol Kulübü SK",
+       "dep": "52 Orduspor FK",
+       "skor": "3-2",
+       "tarih": "2026-09-19"
+      },
+      {
+       "ev": "Mke Ankaragücü",
+       "dep": "Serik Spor",
+       "skor": "1-1",
+       "tarih": "2026-09-19"
+      },
+      {
+       "ev": "Akedaş Kahramanmaraş İstiklal Spor",
+       "dep": "Sakaryaspor",
+       "skor": "1-3",
+       "tarih": "2026-09-20"
+      },
+      {
+       "ev": "Kct 1461 Trabzon FK",
+       "dep": "Ankara Demirspor",
+       "skor": "2-2",
+       "tarih": "2026-09-20"
+      },
+      {
+       "ev": "Kütahyaspor",
+       "dep": "Erzincan Futbol Yatırımları",
+       "skor": "0-1",
+       "tarih": "2026-09-20"
+      },
+      {
+       "ev": "Kırklarelispor",
+       "dep": "Beyoğlu Yeni Çarşı Spor Faaliyetleri",
+       "skor": "1-2",
+       "tarih": "2026-09-20"
+      },
+      {
+       "ev": "Sultan Su İnegölspor",
+       "dep": "Karacabey Belediye Spor",
+       "skor": "0-1",
+       "tarih": "2026-09-20"
+      },
+      {
+       "ev": "Fethiyespor",
+       "dep": "12 Bingöl Spor",
+       "skor": "1-1",
+       "tarih": "2026-09-20"
+      }
+     ],
+     "4": [
+      {
+       "ev": "Beyoğlu Yeni Çarşı Spor Faaliyetleri",
+       "dep": "Ekinciler İskenderunspor",
+       "skor": "5-0",
+       "tarih": "2026-09-26"
+      },
+      {
+       "ev": "52 Orduspor FK",
+       "dep": "Akedaş Kahramanmaraş İstiklal Spor",
+       "skor": "0-1",
+       "tarih": "2026-09-26"
+      },
+      {
+       "ev": "Ankara Demirspor",
+       "dep": "Adana 01 Futbol Kulübü SK",
+       "skor": "3-4",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Serik Spor",
+       "dep": "Fethiyespor",
+       "skor": "0-1",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "12 Bingöl Spor",
+       "dep": "Kct 1461 Trabzon FK",
+       "skor": "1-2",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Karacabey Belediye Spor",
+       "dep": "Mke Ankaragücü",
+       "skor": "1-4",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Erzincan Futbol Yatırımları",
+       "dep": "Kırklarelispor",
+       "skor": "0-0",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Sakaryaspor",
+       "dep": "Kütahyaspor",
+       "skor": "2-0",
+       "tarih": "2026-09-27"
+      }
+     ],
      "5": [
       {
        "ev": "Kct 1461 Trabzon FK",
@@ -6741,6 +7611,128 @@
         "skor": null
        }
       ]
+     },
+     "16": {
+      "alindi": "2026-11-25T22:32:37.230Z",
+      "maclar": [
+       {
+        "ev": "Akedaş Kahramanmaraş İstiklal Spor",
+        "dep": "Kırklarelispor",
+        "tarih": "2026-12-13",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Kct 1461 Trabzon FK",
+        "dep": "Beyoğlu Yeni Çarşı Spor Faaliyetleri",
+        "tarih": "2026-12-13",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Adana 01 Futbol Kulübü SK",
+        "dep": "Ekinciler İskenderunspor",
+        "tarih": "2026-12-13",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Sultan Su İnegölspor",
+        "dep": "52 Orduspor FK",
+        "tarih": "2026-12-13",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Serik Spor",
+        "dep": "12 Bingöl Spor",
+        "tarih": "2026-12-13",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Karacabey Belediye Spor",
+        "dep": "Ankara Demirspor",
+        "tarih": "2026-12-13",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Mke Ankaragücü",
+        "dep": "Sakaryaspor",
+        "tarih": "2026-12-13",
+        "saat": "15:30",
+        "skor": null
+       },
+       {
+        "ev": "Fethiyespor",
+        "dep": "Erzincan Futbol Yatırımları",
+        "tarih": "2026-12-13",
+        "saat": "15:30",
+        "skor": null
+       }
+      ]
+     },
+     "17": {
+      "alindi": "2026-11-25T22:32:38.443Z",
+      "maclar": [
+       {
+        "ev": "Erzincan Futbol Yatırımları",
+        "dep": "Kct 1461 Trabzon FK",
+        "tarih": "2026-12-20",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "12 Bingöl Spor",
+        "dep": "Karacabey Belediye Spor",
+        "tarih": "2026-12-20",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "52 Orduspor FK",
+        "dep": "Mke Ankaragücü",
+        "tarih": "2026-12-20",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Ekinciler İskenderunspor",
+        "dep": "Akedaş Kahramanmaraş İstiklal Spor",
+        "tarih": "2026-12-20",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Ankara Demirspor",
+        "dep": "Sultan Su İnegölspor",
+        "tarih": "2026-12-20",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Kırklarelispor",
+        "dep": "Kütahyaspor",
+        "tarih": "2026-12-20",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Beyoğlu Yeni Çarşı Spor Faaliyetleri",
+        "dep": "Adana 01 Futbol Kulübü SK",
+        "tarih": "2026-12-20",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Sakaryaspor",
+        "dep": "Fethiyespor",
+        "tarih": "2026-12-20",
+        "saat": "15:30",
+        "skor": null
+       }
+      ]
      }
     },
     "form": {
@@ -7198,6 +8190,118 @@
      }
     ],
     "haftalar": {
+     "4": [
+      {
+       "ev": "Küçükçekmece Sinop Spor",
+       "dep": "Zonguldak Spor",
+       "skor": "1-1",
+       "tarih": "2026-09-26"
+      },
+      {
+       "ev": "Gölcükspor",
+       "dep": "Orduspor 1967",
+       "skor": "0-1",
+       "tarih": "2026-09-26"
+      },
+      {
+       "ev": "Pazarspor",
+       "dep": "Karabük İdmanyurdu Spor",
+       "skor": "0-1",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Tokat Belediye Spor",
+       "dep": "Galata Spor",
+       "skor": "1-3",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Fatsa Belediyespor",
+       "dep": "Yalova FK 77 Spor",
+       "skor": "3-0",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Düzce Cam Düzcespor",
+       "dep": "İnkılap",
+       "skor": "1-1",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Kdz.ereğli 1980 Spor",
+       "dep": "Amasyaspor FK",
+       "skor": "1-0",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Kartal Bulvar Kartalimen Spor",
+       "dep": "Silivrispor",
+       "skor": "1-0",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Büyükçekmece Gücü FK Spor",
+       "dep": "Beykoz Anadolu Spor",
+       "skor": "0-0",
+       "tarih": "2026-09-27"
+      }
+     ],
+     "5": [
+      {
+       "ev": "Pazarspor",
+       "dep": "Küçükçekmece Sinop Spor",
+       "skor": "3-1",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Zonguldak Spor",
+       "dep": "Düzce Cam Düzcespor",
+       "skor": "0-0",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "İnkılap",
+       "dep": "Tokat Belediye Spor",
+       "skor": "0-1",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Beykoz Anadolu Spor",
+       "dep": "Gölcükspor",
+       "skor": "2-0",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Silivrispor",
+       "dep": "Kdz.ereğli 1980 Spor",
+       "skor": "0-0",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Galata Spor",
+       "dep": "Büyükçekmece Gücü FK Spor",
+       "skor": "2-0",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Yalova FK 77 Spor",
+       "dep": "Kartal Bulvar Kartalimen Spor",
+       "skor": "2-4",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Orduspor 1967",
+       "dep": "Fatsa Belediyespor",
+       "skor": "0-3",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Karabük İdmanyurdu Spor",
+       "dep": "Amasyaspor FK",
+       "skor": "1-2",
+       "tarih": "2026-10-03"
+      }
+     ],
      "6": [
       {
        "ev": "Tokat Belediye Spor",
@@ -7833,6 +8937,142 @@
         "skor": null
        }
       ]
+     },
+     "16": {
+      "alindi": "2026-11-25T22:32:47.109Z",
+      "maclar": [
+       {
+        "ev": "Kdz.ereğli 1980 Spor",
+        "dep": "Büyükçekmece Gücü FK Spor",
+        "tarih": "2026-12-12",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Yalova FK 77 Spor",
+        "dep": "Küçükçekmece Sinop Spor",
+        "tarih": "2026-12-12",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Galata Spor",
+        "dep": "İnkılap",
+        "tarih": "2026-12-12",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Beykoz Anadolu Spor",
+        "dep": "Zonguldak Spor",
+        "tarih": "2026-12-12",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Orduspor 1967",
+        "dep": "Pazarspor",
+        "tarih": "2026-12-12",
+        "saat": "15:30",
+        "skor": null
+       },
+       {
+        "ev": "Amasyaspor FK",
+        "dep": "Tokat Belediye Spor",
+        "tarih": "2026-12-13",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Silivrispor",
+        "dep": "Düzce Cam Düzcespor",
+        "tarih": "2026-12-13",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Kartal Bulvar Kartalimen Spor",
+        "dep": "Gölcükspor",
+        "tarih": "2026-12-13",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Karabük İdmanyurdu Spor",
+        "dep": "Fatsa Belediyespor",
+        "tarih": "2026-12-13",
+        "saat": "15:30",
+        "skor": null
+       }
+      ]
+     },
+     "17": {
+      "alindi": "2026-11-25T22:32:48.326Z",
+      "maclar": [
+       {
+        "ev": "Zonguldak Spor",
+        "dep": "Galata Spor",
+        "tarih": "2026-12-19",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Pazarspor",
+        "dep": "Beykoz Anadolu Spor",
+        "tarih": "2026-12-19",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Fatsa Belediyespor",
+        "dep": "Kartal Bulvar Kartalimen Spor",
+        "tarih": "2026-12-19",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Küçükçekmece Sinop Spor",
+        "dep": "Orduspor 1967",
+        "tarih": "2026-12-19",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "İnkılap",
+        "dep": "Karabük İdmanyurdu Spor",
+        "tarih": "2026-12-19",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Düzce Cam Düzcespor",
+        "dep": "Yalova FK 77 Spor",
+        "tarih": "2026-12-20",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Tokat Belediye Spor",
+        "dep": "Silivrispor",
+        "tarih": "2026-12-20",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Büyükçekmece Gücü FK Spor",
+        "dep": "Amasyaspor FK",
+        "tarih": "2026-12-20",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Gölcükspor",
+        "dep": "Kdz.ereğli 1980 Spor",
+        "tarih": "2026-12-20",
+        "saat": "15:00",
+        "skor": null
+       }
+      ]
      }
     },
     "form": {
@@ -8297,6 +9537,118 @@
      }
     ],
     "haftalar": {
+     "4": [
+      {
+       "ev": "Alanya 1221",
+       "dep": "Etimesgut Spor",
+       "skor": "0-3",
+       "tarih": "2026-09-26"
+      },
+      {
+       "ev": "Ayvalıkgücü Belediyespor",
+       "dep": "Bigaspor",
+       "skor": "2-1",
+       "tarih": "2026-09-26"
+      },
+      {
+       "ev": "Karşıyaka",
+       "dep": "Gaziemir G.o.g. Spor Yat.",
+       "skor": "0-1",
+       "tarih": "2026-09-26"
+      },
+      {
+       "ev": "Uşak Spor",
+       "dep": "1922 Akşehir Spor",
+       "skor": "3-0",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Gemlik Sümerbey Futbol Spor",
+       "dep": "Bursa Yıldırım Spor",
+       "skor": "0-0",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Söke 1970 Spor",
+       "dep": "Eskişehir Anadolu Spor Faaliyetleri",
+       "skor": "1-1",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Eskişehirspor",
+       "dep": "Balıkesirspor",
+       "skor": "7-1",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Bucaspor 1928",
+       "dep": "Altay",
+       "skor": "1-2",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Denizli İdmanyurdu 1959 Spor",
+       "dep": "Kepez Spor",
+       "skor": "0-0",
+       "tarih": "2026-09-27"
+      }
+     ],
+     "5": [
+      {
+       "ev": "1922 Akşehir Spor",
+       "dep": "Eskişehirspor",
+       "skor": "0-3",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Eskişehir Anadolu Spor Faaliyetleri",
+       "dep": "Denizli İdmanyurdu 1959 Spor",
+       "skor": "2-0",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Kepez Spor",
+       "dep": "Karşıyaka",
+       "skor": "0-1",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Etimesgut Spor",
+       "dep": "Uşak Spor",
+       "skor": "1-0",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Gaziemir G.o.g. Spor Yat.",
+       "dep": "Gemlik Sümerbey Futbol Spor",
+       "skor": "0-2",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Ayvalıkgücü Belediyespor",
+       "dep": "Söke 1970 Spor",
+       "skor": "1-1",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Bursa Yıldırım Spor",
+       "dep": "Bucaspor 1928",
+       "skor": "1-0",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Bigaspor",
+       "dep": "Balıkesirspor",
+       "skor": "3-2",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Altay",
+       "dep": "Alanya 1221",
+       "skor": "0-0",
+       "tarih": "2026-10-03"
+      }
+     ],
      "6": [
       {
        "ev": "Alanya 1221",
@@ -8932,6 +10284,142 @@
         "skor": null
        }
       ]
+     },
+     "16": {
+      "alindi": "2026-11-25T22:32:56.866Z",
+      "maclar": [
+       {
+        "ev": "Bursa Yıldırım Spor",
+        "dep": "Eskişehir Anadolu Spor Faaliyetleri",
+        "tarih": "2026-12-12",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Etimesgut Spor",
+        "dep": "Söke 1970 Spor",
+        "tarih": "2026-12-12",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Altay",
+        "dep": "Ayvalıkgücü Belediyespor",
+        "tarih": "2026-12-12",
+        "saat": "15:30",
+        "skor": null
+       },
+       {
+        "ev": "1922 Akşehir Spor",
+        "dep": "Denizli İdmanyurdu 1959 Spor",
+        "tarih": "2026-12-13",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Gaziemir G.o.g. Spor Yat.",
+        "dep": "Kepez Spor",
+        "tarih": "2026-12-13",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Bigaspor",
+        "dep": "Alanya 1221",
+        "tarih": "2026-12-13",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Uşak Spor",
+        "dep": "Bucaspor 1928",
+        "tarih": "2026-12-13",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Eskişehirspor",
+        "dep": "Gemlik Sümerbey Futbol Spor",
+        "tarih": "2026-12-13",
+        "saat": "15:30",
+        "skor": null
+       },
+       {
+        "ev": "Balıkesirspor",
+        "dep": "Karşıyaka",
+        "tarih": "2026-12-13",
+        "saat": "15:30",
+        "skor": null
+       }
+      ]
+     },
+     "17": {
+      "alindi": "2026-11-25T22:32:58.081Z",
+      "maclar": [
+       {
+        "ev": "Kepez Spor",
+        "dep": "Bigaspor",
+        "tarih": "2026-12-19",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Gemlik Sümerbey Futbol Spor",
+        "dep": "Balıkesirspor",
+        "tarih": "2026-12-19",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Söke 1970 Spor",
+        "dep": "Altay",
+        "tarih": "2026-12-19",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Denizli İdmanyurdu 1959 Spor",
+        "dep": "Etimesgut Spor",
+        "tarih": "2026-12-19",
+        "saat": "15:30",
+        "skor": null
+       },
+       {
+        "ev": "Alanya 1221",
+        "dep": "Uşak Spor",
+        "tarih": "2026-12-20",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Eskişehir Anadolu Spor Faaliyetleri",
+        "dep": "Gaziemir G.o.g. Spor Yat.",
+        "tarih": "2026-12-20",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Ayvalıkgücü Belediyespor",
+        "dep": "Bursa Yıldırım Spor",
+        "tarih": "2026-12-20",
+        "saat": "15:00",
+        "skor": null
+       },
+       {
+        "ev": "Bucaspor 1928",
+        "dep": "Eskişehirspor",
+        "tarih": "2026-12-20",
+        "saat": "15:30",
+        "skor": null
+       },
+       {
+        "ev": "Karşıyaka",
+        "dep": "1922 Akşehir Spor",
+        "tarih": "2026-12-20",
+        "saat": "15:30",
+        "skor": null
+       }
+      ]
      }
     },
     "form": {
@@ -9396,6 +10884,118 @@
      }
     ],
     "haftalar": {
+     "4": [
+      {
+       "ev": "Eti Gübre Mazıdağı Fosfat Spor",
+       "dep": "Ayos Osmaniyespor",
+       "skor": "3-0",
+       "tarih": "2026-09-26"
+      },
+      {
+       "ev": "Halil Bayram İnşaat Karaköprü Belediyespor",
+       "dep": "Yozgat Belediyesi Bozok Spor",
+       "skor": "2-0",
+       "tarih": "2026-09-26"
+      },
+      {
+       "ev": "Adana Adaletgücü Spor",
+       "dep": "Yeni Malatyaspor",
+       "skor": "3-0",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Açıkalın Erciyes 38",
+       "dep": "Kırıkkale FK Spor",
+       "skor": "2-1",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Karaman",
+       "dep": "Ağrı 1970 Spor",
+       "skor": "0-1",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Ejderoğlu Kırşehir",
+       "dep": "1964 Silifke Spor",
+       "skor": "4-0",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Niğde Belediyesi Spor",
+       "dep": "Bitlis 1916",
+       "skor": "2-1",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Yeni Mersin İdmanyurdu",
+       "dep": "Diyarbekir Spor",
+       "skor": "2-1",
+       "tarih": "2026-09-27"
+      },
+      {
+       "ev": "Malatya Yeşilyurt Spor",
+       "dep": "Adanaspor",
+       "skor": "8-0",
+       "tarih": "2026-09-27"
+      }
+     ],
+     "5": [
+      {
+       "ev": "Yeni Malatyaspor",
+       "dep": "Halil Bayram İnşaat Karaköprü Belediyespor",
+       "skor": "0-3",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Bitlis 1916",
+       "dep": "Adana Adaletgücü Spor",
+       "skor": "5-0",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Ağrı 1970 Spor",
+       "dep": "Diyarbekir Spor",
+       "skor": "2-1",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Kırıkkale FK Spor",
+       "dep": "Yeni Mersin İdmanyurdu",
+       "skor": "3-0",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Ayos Osmaniyespor",
+       "dep": "Açıkalın Erciyes 38",
+       "skor": "2-4",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Karaman",
+       "dep": "Ejderoğlu Kırşehir",
+       "skor": "1-7",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "1964 Silifke Spor",
+       "dep": "Niğde Belediyesi Spor",
+       "skor": "0-3",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Adanaspor",
+       "dep": "Eti Gübre Mazıdağı Fosfat Spor",
+       "skor": "1-2",
+       "tarih": "2026-10-03"
+      },
+      {
+       "ev": "Yozgat Belediyesi Bozok Spor",
+       "dep": "Malatya Yeşilyurt Spor",
+       "skor": "1-9",
+       "tarih": "2026-10-03"
+      }
+     ],
      "6": [
       {
        "ev": "Malatya Yeşilyurt Spor",
@@ -10031,6 +11631,142 @@
         "skor": null
        }
       ]
+     },
+     "16": {
+      "alindi": "2026-11-25T22:33:06.628Z",
+      "maclar": [
+       {
+        "ev": "Yeni Malatyaspor",
+        "dep": "Bitlis 1916",
+        "tarih": "2026-12-12",
+        "saat": null,
+        "skor": null
+       },
+       {
+        "ev": "Ağrı 1970 Spor",
+        "dep": "Eti Gübre Mazıdağı Fosfat Spor",
+        "tarih": "2026-12-12",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Adanaspor",
+        "dep": "Karaman",
+        "tarih": "2026-12-12",
+        "saat": "15:30",
+        "skor": null
+       },
+       {
+        "ev": "Yozgat Belediyesi Bozok Spor",
+        "dep": "1964 Silifke Spor",
+        "tarih": "2026-12-13",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Ayos Osmaniyespor",
+        "dep": "Ejderoğlu Kırşehir",
+        "tarih": "2026-12-13",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Yeni Mersin İdmanyurdu",
+        "dep": "Halil Bayram İnşaat Karaköprü Belediyespor",
+        "tarih": "2026-12-13",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Açıkalın Erciyes 38",
+        "dep": "Malatya Yeşilyurt Spor",
+        "tarih": "2026-12-13",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Diyarbekir Spor",
+        "dep": "Adana Adaletgücü Spor",
+        "tarih": "2026-12-13",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Kırıkkale FK Spor",
+        "dep": "Niğde Belediyesi Spor",
+        "tarih": "2026-12-13",
+        "saat": "13:00",
+        "skor": null
+       }
+      ]
+     },
+     "17": {
+      "alindi": "2026-11-25T22:33:07.844Z",
+      "maclar": [
+       {
+        "ev": "Adana Adaletgücü Spor",
+        "dep": "Kırıkkale FK Spor",
+        "tarih": "2026-12-19",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Ejderoğlu Kırşehir",
+        "dep": "Adanaspor",
+        "tarih": "2026-12-19",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Bitlis 1916",
+        "dep": "Ağrı 1970 Spor",
+        "tarih": "2026-12-19",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "1964 Silifke Spor",
+        "dep": "Yeni Malatyaspor",
+        "tarih": "2026-12-20",
+        "saat": null,
+        "skor": null
+       },
+       {
+        "ev": "Karaman",
+        "dep": "Yozgat Belediyesi Bozok Spor",
+        "tarih": "2026-12-20",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Malatya Yeşilyurt Spor",
+        "dep": "Yeni Mersin İdmanyurdu",
+        "tarih": "2026-12-20",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Eti Gübre Mazıdağı Fosfat Spor",
+        "dep": "Açıkalın Erciyes 38",
+        "tarih": "2026-12-20",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Niğde Belediyesi Spor",
+        "dep": "Ayos Osmaniyespor",
+        "tarih": "2026-12-20",
+        "saat": "13:00",
+        "skor": null
+       },
+       {
+        "ev": "Halil Bayram İnşaat Karaköprü Belediyespor",
+        "dep": "Diyarbekir Spor",
+        "tarih": "2026-12-20",
+        "saat": "13:00",
+        "skor": null
+       }
+      ]
      }
     },
     "form": {
@@ -10167,7 +11903,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-25T21:33:23.119Z",
+    "guncelleme": "2026-11-25T22:33:09.066Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -10249,7 +11985,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-25T21:33:24.328Z",
+    "guncelleme": "2026-11-25T22:33:10.277Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -10331,7 +12067,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-25T21:33:25.543Z",
+    "guncelleme": "2026-11-25T22:33:11.491Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -10430,14 +12166,14 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-25T22:05:19.199Z",
+  "guncelleme": "2026-11-25T22:31:53.248Z",
   "liste": [
    {
-    "yol": "/is-ilanlari/",
-    "sayi": 10
+    "yol": "/haber/tarsus-ta-kirsal-mahallelerin-yollari-yenileniyor-1l7w1qw/",
+    "sayi": 8
    },
    {
-    "yol": "/haber/tarsus-ta-kirsal-mahallelerin-yollari-yenileniyor-1l7w1qw/",
+    "yol": "/is-ilanlari/",
     "sayi": 8
    },
    {
@@ -10505,10 +12241,6 @@
     "sayi": 1
    },
    {
-    "yol": "/spor/",
-    "sayi": 1
-   },
-   {
     "yol": "/is-ilanlari/akdeniz/",
     "sayi": 1
    },
@@ -10523,7 +12255,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-25T22:05:20.907Z",
+  "guncelleme": "2026-11-25T22:33:12.692Z",
   "deniz": {
    "sicaklik": 21.5,
    "dalga": 0.2
@@ -11443,7 +13175,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-25T22:05:23.206Z",
+  "guncelleme": "2026-11-25T22:33:14.677Z",
   "liste": [
    {
     "id": 6386,
