@@ -1,9 +1,9 @@
 {
- "guncelleme": "2026-11-25T11:02:19.660Z",
+ "guncelleme": "2026-11-25T11:31:50.665Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 19,
-   "durum": "Az bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-25",
@@ -32,7 +32,7 @@
     {
      "tarih": "2026-11-29",
      "min": 13,
-     "max": 19,
+     "max": 17,
      "durum": "Bulutlu"
     }
    ]
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-25T11:02:23.878Z",
+  "guncelleme": "2026-11-25T11:31:53.468Z",
   "liste": [
    {
     "ad": "Akdeniz Eczanesi",
@@ -772,7 +772,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-25T11:02:24.835Z",
+  "guncelleme": "2026-11-25T11:31:54.400Z",
   "liste": [
    {
     "tur": "su",
@@ -805,6 +805,23 @@
       "ad": "Erdemli",
       "mahalleler": [
        "Akdeniz",
+       "Merkez"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Mezitli merkez mahallesi Kuyuluk vatan katlı kavşak proje kapsamında oluşan şebeke arızası nedeniyle merkez ve kuyuluk mahallelerinin bir kısmında tahmini 3 saat su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-25T11:20:00.000Z",
+    "bitis": "2026-11-25T16:20:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "mezitli",
+      "ad": "Mezitli",
+      "mahalleler": [
+       "Kuyuluk",
        "Merkez"
       ]
      }
@@ -1023,7 +1040,7 @@
   "kaynakSaati": "2026-11-25 14:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-25T11:02:31.546Z",
+  "guncelleme": "2026-11-25T11:32:00.420Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -8888,22 +8905,22 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-25T11:02:32.060Z",
+  "guncelleme": "2026-11-25T11:32:02.432Z",
   "liste": [
    {
     "yol": "/is-ilanlari/",
     "sayi": 12
    },
    {
-    "yol": "/",
-    "sayi": 7
-   },
-   {
     "yol": "/is-ilanlari/tarsus/",
     "sayi": 7
    },
    {
-    "yol": "/haber/atil-konak-yeniden-yapildi-egitimcilerin-hizmetine-sunuldu-lt31d/",
+    "yol": "/",
+    "sayi": 7
+   },
+   {
+    "yol": "/haber/akdeniz-belediyesi-ve-yesilay-dan-dijital-bagimlilikla-mucadele-semine-x1u9mb/",
     "sayi": 6
    },
    {
@@ -8919,15 +8936,15 @@
     "sayi": 6
    },
    {
-    "yol": "/haber/mersin-de-ogrencilerden-ogretmenlerine-yoresel-urun-hediyesi-12q08y2/",
-    "sayi": 6
-   },
-   {
-    "yol": "/haber/akdeniz-belediyesi-ve-yesilay-dan-dijital-bagimlilikla-mucadele-semine-x1u9mb/",
-    "sayi": 6
-   },
-   {
     "yol": "/haber/uretici-kadin-stantlari-ile-hayallerini-buyuttu-kendi-isinin-sahibi-ol-110nn6i/",
+    "sayi": 6
+   },
+   {
+    "yol": "/haber/atil-konak-yeniden-yapildi-egitimcilerin-hizmetine-sunuldu-lt31d/",
+    "sayi": 6
+   },
+   {
+    "yol": "/haber/mersin-de-ogrencilerden-ogretmenlerine-yoresel-urun-hediyesi-12q08y2/",
     "sayi": 6
    },
    {
@@ -8935,23 +8952,11 @@
     "sayi": 2
    },
    {
-    "yol": "/haber/mezitli-belediyesi-sorusturmasinda-yeni-iddia-itirafcilarin-sayisi-3-e-6y7hgj/",
-    "sayi": 2
-   },
-   {
-    "yol": "/ilce/gulnar/",
-    "sayi": 1
-   },
-   {
-    "yol": "/hava-durumu/bozyazi/",
+    "yol": "/hava-durumu/anamur/",
     "sayi": 1
    },
    {
     "yol": "/haber/mersin-ziraat-odasinda-bilek-guresi-baskani-devirdi-iddiasi-tgb6gp/",
-    "sayi": 1
-   },
-   {
-    "yol": "/hava-durumu/anamur/",
     "sayi": 1
    },
    {
@@ -8963,11 +8968,19 @@
     "sayi": 1
    },
    {
+    "yol": "/hava-durumu/bozyazi/",
+    "sayi": 1
+   },
+   {
     "yol": "/is-ilanlari/mut/",
     "sayi": 1
    },
    {
     "yol": "/haber/mersin-de-ogretmenler-gunu-nde-ucretsiz-etkinlik-firsatlari-18d3dcj/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/mezitli-belediyesi-sorusturmasinda-yeni-iddia-itirafcilarin-sayisi-3-e-6y7hgj/",
     "sayi": 1
    },
    {
@@ -8979,13 +8992,21 @@
     "sayi": 1
    },
    {
+    "yol": "/ilce/gulnar/",
+    "sayi": 1
+   },
+   {
+    "yol": "/is-ilanlari/akdeniz/",
+    "sayi": 1
+   },
+   {
     "yol": "/haber/mersin-de-kimler-yasiyor-iste-sanliurfali-diyarbakirli-adanali-ve-dige-11ff6hs/",
     "sayi": 1
    }
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-25T11:03:18.348Z",
+  "guncelleme": "2026-11-25T11:32:03.898Z",
   "deniz": {
    "sicaklik": 21.6,
    "dalga": 0.36
@@ -8998,20 +9019,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-25T11:03:20.136Z",
+  "guncelleme": "2026-11-25T11:32:05.763Z",
   "giden": [
-   {
-    "no": [
-     "XQ1610"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "Frankfurt",
-    "planlanan": "2026-11-25T11:15:00.000Z",
-    "tahmini": null,
-    "kapi": "103",
-    "durum": "SON ÇAĞRI",
-    "hat": "dis"
-   },
    {
     "no": [
      "PC1856"
@@ -9021,7 +9030,7 @@
     "planlanan": "2026-11-25T11:55:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "KONTUAR KAPALI",
+    "durum": "SON ÇAĞRI",
     "hat": "dis"
    },
    {
@@ -9033,7 +9042,7 @@
     "planlanan": "2026-11-25T12:10:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -9043,9 +9052,9 @@
     "havayolu": "Pegasus",
     "yer": "Sabiha Gökçen",
     "planlanan": "2026-11-25T12:55:00.000Z",
-    "tahmini": null,
+    "tahmini": "2026-11-25T13:15:00.000Z",
     "kapi": "106",
-    "durum": "KONTUAR AÇIK",
+    "durum": "GECİKME",
     "hat": "ic"
    },
    {
@@ -9436,38 +9445,14 @@
   "gelen": [
    {
     "no": [
-     "PC1855"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Ercan",
-    "planlanan": "2026-11-25T11:20:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "dis"
-   },
-   {
-    "no": [
-     "TK2458"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-25T11:25:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
      "PC2086"
     ],
     "havayolu": "Pegasus",
     "yer": "Sabiha Gökçen",
     "planlanan": "2026-11-25T12:05:00.000Z",
-    "tahmini": null,
+    "tahmini": "2026-11-25T12:40:00.000Z",
     "kapi": "",
-    "durum": "",
+    "durum": "GECİKME",
     "hat": "ic"
    },
    {
@@ -9841,11 +9826,47 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1855"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-26T11:05:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "PC2086"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-26T11:25:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2458"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-26T11:25:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-25T11:03:20.136Z",
+  "guncelleme": "2026-11-25T11:32:05.762Z",
   "liste": [
    {
     "id": 37539,

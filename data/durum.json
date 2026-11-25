@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-25",
-  "adet": 24,
-  "premium": 24
+  "adet": 25,
+  "premium": 25
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -487,8 +487,16 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-25T11:01:45.124Z",
+  "guncelleme": "2026-11-25T11:31:39.513Z",
   "liste": [
+   {
+    "baslik": "hande erçel",
+    "trafik": 100
+   },
+   {
+    "baslik": "ev kredisi",
+    "trafik": 200
+   },
    {
     "baslik": "hâkim",
     "trafik": 500
@@ -499,19 +507,19 @@
    },
    {
     "baslik": "selen erdem",
-    "trafik": 100
+    "trafik": 200
+   },
+   {
+    "baslik": "mh hapoel be'er şeva",
+    "trafik": 2000
    },
    {
     "baslik": "salih uzun",
     "trafik": 1000
    },
    {
-    "baslik": "mh hapoel be'er şeva",
-    "trafik": 5000
-   },
-   {
     "baslik": "trent forrest",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "tuzlu kahve 12",
@@ -520,14 +528,6 @@
    {
     "baslik": "aydın",
     "trafik": 2000
-   },
-   {
-    "baslik": "ford otosan",
-    "trafik": 200
-   },
-   {
-    "baslik": "jennifer barreto",
-    "trafik": 500
    }
   ]
  },
