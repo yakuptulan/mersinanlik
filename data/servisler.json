@@ -1,14 +1,14 @@
 {
- "guncelleme": "2026-11-25T20:01:43.332Z",
+ "guncelleme": "2026-11-25T20:31:53.790Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 13,
-   "durum": "Açık",
+   "sicaklik": 12,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-25",
      "min": 12,
-     "max": 13,
+     "max": 12,
      "durum": "Açık"
     },
     {
@@ -74,13 +74,13 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 12,
+   "sicaklik": 11,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-25",
      "min": 11,
-     "max": 12,
+     "max": 11,
      "durum": "Açık"
     },
     {
@@ -146,12 +146,12 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 4,
+   "sicaklik": 5,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-25",
-     "min": 4,
+     "min": 5,
      "max": 5,
      "durum": "Açık"
     },
@@ -362,13 +362,13 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 12,
+   "sicaklik": 11,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-25",
      "min": 11,
-     "max": 12,
+     "max": 11,
      "durum": "Açık"
     },
     {
@@ -398,13 +398,13 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 13,
-   "durum": "Açık",
+   "sicaklik": 12,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-25",
      "min": 12,
-     "max": 13,
+     "max": 12,
      "durum": "Açık"
     },
     {
@@ -434,13 +434,13 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 13,
-   "durum": "Açık",
+   "sicaklik": 12,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-25",
      "min": 12,
-     "max": 13,
+     "max": 12,
      "durum": "Açık"
     },
     {
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-25T20:01:47.984Z",
+  "guncelleme": "2026-11-25T20:31:57.853Z",
   "liste": [
    {
     "ad": "Akdeniz Eczanesi",
@@ -772,24 +772,8 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-25T20:01:49.052Z",
+  "guncelleme": "2026-11-25T20:31:58.963Z",
   "liste": [
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Mezitli Menderes Mahallesi'nde meydana gelen şebeke arızası nedeniyle su kesintisi yaşanmaktadır; kesinti saat 23.30'a kadar devam edecektir.",
-    "baslangic": "2026-11-25T17:32:00.000Z",
-    "bitis": "2026-11-25T20:30:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "mezitli",
-      "ad": "Mezitli",
-      "mahalleler": [
-       "Menderes"
-      ]
-     }
-    ]
-   },
    {
     "tur": "su",
     "baslik": "PLANLI SU KESİNTİSİ",
@@ -1036,7 +1020,7 @@
   "kaynakSaati": "2026-11-25 23:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-25T20:02:11.526Z",
+  "guncelleme": "2026-11-25T20:32:06.546Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1961,7 +1945,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-25T19:32:16.110Z",
+  "guncelleme": "2026-11-25T20:32:09.014Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8638,7 +8622,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-25T19:32:55.746Z",
+    "guncelleme": "2026-11-25T20:32:51.720Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -8720,7 +8704,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-25T19:32:56.958Z",
+    "guncelleme": "2026-11-25T20:32:52.956Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -8802,7 +8786,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-25T19:32:58.176Z",
+    "guncelleme": "2026-11-25T20:32:54.199Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -8901,7 +8885,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-25T20:02:12.526Z",
+  "guncelleme": "2026-11-25T20:32:07.396Z",
   "liste": [
    {
     "yol": "/is-ilanlari/",
@@ -8932,16 +8916,16 @@
     "sayi": 6
    },
    {
-    "yol": "/is-ilanlari/tarsus/",
-    "sayi": 6
-   },
-   {
     "yol": "/haber/uretici-kadin-stantlari-ile-hayallerini-buyuttu-kendi-isinin-sahibi-ol-110nn6i/",
     "sayi": 6
    },
    {
     "yol": "/haber/mersin-de-sehitler-anisina-fidan-dikildi-g831tf/",
     "sayi": 6
+   },
+   {
+    "yol": "/is-ilanlari/tarsus/",
+    "sayi": 5
    },
    {
     "yol": "/haber/mumine-teyze-kahramani-ile-bulustu-mersin-de-kaybolmasinin-ardindan-7-1f1sptb/",
@@ -8998,10 +8982,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-25T20:02:14.378Z",
+  "guncelleme": "2026-11-25T20:32:55.399Z",
   "deniz": {
    "sicaklik": 21.5,
-   "dalga": 0.24
+   "dalga": 0.22
   },
   "hava": {
    "aqi": 41,
@@ -9918,7 +9902,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-25T20:02:16.297Z",
+  "guncelleme": "2026-11-25T20:32:57.355Z",
   "liste": [
    {
     "id": 6386,
