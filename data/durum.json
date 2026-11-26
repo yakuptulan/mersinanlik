@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "mersingundem": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-26T00:01:15.501Z"
   }
  },
  "gorsel": {
@@ -506,15 +510,15 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-25T23:31:53.684Z",
+  "guncelleme": "2026-11-26T00:01:54.526Z",
   "liste": [
-   {
-    "baslik": "hm",
-    "trafik": 500
-   },
    {
     "baslik": "fox",
     "trafik": 100
+   },
+   {
+    "baslik": "hm",
+    "trafik": 500
    },
    {
     "baslik": "now tv",
@@ -525,12 +529,12 @@
     "trafik": 1000
    },
    {
-    "baslik": "ersin destanoğlu",
-    "trafik": 1000
+    "baslik": "kainat güzellik yarışması",
+    "trafik": 200
    },
    {
-    "baslik": "kainat güzellik yarışması",
-    "trafik": 100
+    "baslik": "ersin destanoğlu",
+    "trafik": 2000
    },
    {
     "baslik": "sporx",
