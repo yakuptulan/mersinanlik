@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-26T07:35:39.975Z",
+ "guncelleme": "2026-11-26T08:02:37.817Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -182,7 +182,7 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 16,
+   "sicaklik": 17,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -398,7 +398,7 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 16,
+   "sicaklik": 17,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-26T07:35:44.839Z",
+  "guncelleme": "2026-11-26T08:02:41.615Z",
   "liste": [
    {
     "ad": "Anatolia Eczanesi",
@@ -543,7 +543,7 @@
     "bolge": "MEZİTLİ",
     "ilce": "mezitli",
     "adres": "Akdeniz Mah.Yaşar Doğu Cad. Dışkapı No:58B",
-    "tarif": "",
+    "tarif": "YAŞAR DOĞU CADDESİ,ŞEHİT SEDAT GEZER KAVŞAĞI ÜZERİ",
     "telefon": "03249997207",
     "lat": 36.729026,
     "lon": 34.500689,
@@ -772,7 +772,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-26T07:35:45.833Z",
+  "guncelleme": "2026-11-26T08:02:42.553Z",
   "liste": [
    {
     "tur": "su",
@@ -928,178 +928,178 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-26T07:35:50.642Z",
+  "guncelleme": "2026-11-26T08:02:47.025Z",
   "kalemler": {
    "gram": {
-    "alis": 5816.66,
-    "satis": 5817.55,
-    "degisim": -0.11
+    "alis": 5814.05,
+    "satis": 5815.06,
+    "degisim": -0.16
    },
    "ceyrek": {
-    "alis": 9917,
-    "satis": 10217,
-    "degisim": -0.76
+    "alis": 9920,
+    "satis": 10205,
+    "degisim": -0.87
    },
    "gumus": {
-    "alis": 67.48,
-    "satis": 67.57,
-    "degisim": 0.83
+    "alis": 67.45,
+    "satis": 67.53,
+    "degisim": 0.78
    },
    "usd": {
-    "alis": 50.6696,
-    "satis": 50.6843,
+    "alis": 50.6707,
+    "satis": 50.6822,
     "degisim": 0
    },
    "eur": {
-    "alis": 55.7697,
-    "satis": 55.7892,
-    "degisim": 0.28
+    "alis": 55.7464,
+    "satis": 55.7697,
+    "degisim": 0.24
    },
    "bist": {
     "alis": null,
-    "satis": 10802.39,
-    "degisim": 1.38
+    "satis": 10762.64,
+    "degisim": 1
    },
    "btc": {
-    "satis": 3064888,
-    "usd": 60479,
-    "degisim": 2.55
+    "satis": 3066676,
+    "usd": 60507,
+    "degisim": 2.96
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 5816.66,
-    "satis": 5817.55,
-    "degisim": -0.11
+    "alis": 5814.05,
+    "satis": 5815.06,
+    "degisim": -0.16
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 9917,
-    "satis": 10217,
-    "degisim": -0.76
+    "alis": 9920,
+    "satis": 10205,
+    "degisim": -0.87
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 19833,
-    "satis": 20434,
-    "degisim": -0.75
+    "alis": 19839,
+    "satis": 20410,
+    "degisim": -0.87
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 39485,
-    "satis": 40623,
-    "degisim": -0.75
+    "alis": 39496,
+    "satis": 40575,
+    "degisim": -0.87
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40546,
-    "satis": 41237,
-    "degisim": -0.75
+    "alis": 40558,
+    "satis": 41188,
+    "degisim": -0.87
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40546,
-    "satis": 41237,
-    "degisim": -0.75
+    "alis": 40558,
+    "satis": 41188,
+    "degisim": -0.87
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40546,
-    "satis": 41237,
-    "degisim": -0.75
+    "alis": 40558,
+    "satis": 41188,
+    "degisim": -0.87
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5516.25,
-    "satis": 5746.61,
-    "degisim": -0.73
+    "alis": 5519.01,
+    "satis": 5738.59,
+    "degisim": -0.87
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4176,
-    "satis": 4915,
-    "degisim": -1.01
+    "alis": 4169,
+    "satis": 4905,
+    "degisim": -1.21
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3305.85,
-    "satis": 4487.55,
-    "degisim": -0.65
+    "alis": 3307.55,
+    "satis": 4482.01,
+    "degisim": -0.77
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 5787.57,
-    "satis": 5788.46,
-    "degisim": -0.11
+    "alis": 5784.98,
+    "satis": 5785.99,
+    "degisim": -0.16
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 67.48,
-    "satis": 67.57,
-    "degisim": 0.83
+    "alis": 67.45,
+    "satis": 67.53,
+    "degisim": 0.78
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.6696,
-    "satis": 50.6843,
+    "alis": 50.6707,
+    "satis": 50.6822,
     "degisim": 0
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.7697,
-    "satis": 55.7892,
-    "degisim": 0.28
+    "alis": 55.7464,
+    "satis": 55.7697,
+    "degisim": 0.24
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.6447,
-    "satis": 66.6544,
-    "degisim": 0.25
+    "alis": 66.5846,
+    "satis": 66.5943,
+    "degisim": 0.16
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.9229,
-    "satis": 60.9626,
-    "degisim": -0.07
+    "alis": 60.8365,
+    "satis": 60.8722,
+    "degisim": -0.22
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.5079,
-    "satis": 13.5135,
+    "alis": 13.5085,
+    "satis": 13.5123,
     "degisim": 0.02
    },
    {
     "k": "RUB",
     "ad": "Rus rublesi",
-    "alis": 0.6149,
-    "satis": 0.6161,
-    "degisim": 0.36
+    "alis": 0.6138,
+    "satis": 0.6157,
+    "degisim": 0.23
    }
   ],
-  "kaynakSaati": "2026-11-26 10:35:01"
+  "kaynakSaati": "2026-11-26 11:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-26T07:35:52.921Z",
+  "guncelleme": "2026-11-26T08:02:49.508Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -21601,7 +21601,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-26T07:35:53.797Z",
+  "guncelleme": "2026-11-26T08:02:50.076Z",
   "liste": [
    {
     "yol": "/haber/mersin-de-26-yildir-sari-lacivert-renklere-boyanan-ev-dikkat-cekiyor-1q3iy7k/",
@@ -21678,15 +21678,15 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-26T07:35:55.270Z",
+  "guncelleme": "2026-11-26T08:02:51.479Z",
   "deniz": {
    "sicaklik": 21.4,
    "dalga": 0.12
   },
   "hava": {
-   "aqi": 40,
-   "pm25": 7.2,
-   "pm10": 9.9,
+   "aqi": 37,
+   "pm25": 7.3,
+   "pm10": 10.3,
    "uvMax": 2.7
   }
  },
@@ -22598,7 +22598,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-26T07:35:57.175Z",
+  "guncelleme": "2026-11-26T08:02:53.324Z",
   "liste": [
    {
     "id": 6386,
