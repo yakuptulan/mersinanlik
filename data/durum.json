@@ -12,12 +12,16 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-26T13:29:21.666Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-26",
-  "adet": 46,
-  "premium": 44
+  "adet": 49,
+  "premium": 47
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -166,7 +170,10 @@
    "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/yengesi-ve-onun-annesini-olduren-sanik-diyecek-2988999",
    "https://www.dha.com.tr/yerel-haberler/mersin/gulnar/mersinde-ureticiye-sumak-fidani-destegi-2989121",
    "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/akdeniz-belediyesi-vezneleri-hafta-sonu-acik-ol-2989149",
-   "https://www.dha.com.tr/yerel-haberler/mersin/mezitli/hasemali-kadini-havuza-almadiklari-iddia-edilen-2989168"
+   "https://www.dha.com.tr/yerel-haberler/mersin/mezitli/hasemali-kadini-havuza-almadiklari-iddia-edilen-2989168",
+   "https://www.dha.com.tr/yerel-haberler/mersin/silifke/vali-toros-ogrencilerle-fidan-dikti-2989190",
+   "https://www.dha.com.tr/yerel-haberler/mersin/mezitli/mezitlide-kadina-yonelik-siddete-karsi-anlamli-2989188",
+   "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/akdenizin-parklari-rengarenk-resimlerle-suslen-2989176"
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
@@ -537,8 +544,28 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-26T13:01:38.191Z",
+  "guncelleme": "2026-11-26T13:30:00.520Z",
   "liste": [
+   {
+    "baslik": "piyango",
+    "trafik": 1000
+   },
+   {
+    "baslik": "emekli maaşı",
+    "trafik": 2000
+   },
+   {
+    "baslik": "t24",
+    "trafik": 200
+   },
+   {
+    "baslik": "gram altın ne kadar 2026",
+    "trafik": 2000
+   },
+   {
+    "baslik": "devalüasyon",
+    "trafik": 100
+   },
    {
     "baslik": "fedai karagöz",
     "trafik": 100
@@ -558,26 +585,6 @@
    {
     "baslik": "red dead redemption 2",
     "trafik": 100
-   },
-   {
-    "baslik": "mustafa keser",
-    "trafik": 500
-   },
-   {
-    "baslik": "sağlık",
-    "trafik": 10000
-   },
-   {
-    "baslik": "katılımevim",
-    "trafik": 2000
-   },
-   {
-    "baslik": "fındık",
-    "trafik": 2000
-   },
-   {
-    "baslik": "macklemore sivas",
-    "trafik": 200
    }
   ]
  },
