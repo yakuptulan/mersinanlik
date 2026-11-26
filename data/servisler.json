@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-26T18:31:47.565Z",
+ "guncelleme": "2026-11-26T19:01:59.747Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 13,
@@ -326,14 +326,14 @@
    ]
   },
   "silifke": {
-   "sicaklik": 10,
+   "sicaklik": 9,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-26",
      "min": 9,
-     "max": 10,
-     "durum": "Parçalı bulutlu"
+     "max": 9,
+     "durum": "Bulutlu"
     },
     {
      "tarih": "2026-11-27",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-26T18:31:50.754Z",
+  "guncelleme": "2026-11-26T19:02:04.182Z",
   "liste": [
    {
     "ad": "Anatolia Eczanesi",
@@ -762,8 +762,25 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-26T18:31:51.882Z",
+  "guncelleme": "2026-11-26T19:02:05.302Z",
   "liste": [
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Tarsus ilçesi yeşilyurt mahallesi ana isale hattında meydana gelen arızadan kaynaklı yesilyurt mahallesi ve Hürriyet mahallesinde kesinti uygulanacaktır. Tahmini olarak saat 24.00 da su verilmesi planlanmaktadır",
+    "baslangic": "2026-11-26T19:05:00.000Z",
+    "bitis": "2026-11-26T21:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "tarsus",
+      "ad": "Tarsus",
+      "mahalleler": [
+       "Hürriyet",
+       "Yeşilyurt"
+      ]
+     }
+    ]
+   },
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
@@ -783,32 +800,32 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-26T18:31:56.689Z",
+  "guncelleme": "2026-11-26T19:02:07.717Z",
   "kalemler": {
    "gram": {
-    "alis": 5813.99,
-    "satis": 5814.78,
-    "degisim": -0.16
+    "alis": 5813.26,
+    "satis": 5814.01,
+    "degisim": -0.17
    },
    "ceyrek": {
-    "alis": 9786,
-    "satis": 10027,
-    "degisim": -2.6
+    "alis": 9784,
+    "satis": 10026,
+    "degisim": -2.61
    },
    "gumus": {
-    "alis": 67.66,
-    "satis": 67.75,
-    "degisim": 1.09
+    "alis": 67.68,
+    "satis": 67.78,
+    "degisim": 1.14
    },
    "usd": {
-    "alis": 50.6736,
-    "satis": 50.6809,
+    "alis": 50.6699,
+    "satis": 50.6838,
     "degisim": 0
    },
    "eur": {
-    "alis": 55.7332,
-    "satis": 55.7624,
-    "degisim": 0.23
+    "alis": 55.7343,
+    "satis": 55.7549,
+    "degisim": 0.22
    },
    "bist": {
     "alis": null,
@@ -816,131 +833,131 @@
     "degisim": 0.82
    },
    "btc": {
-    "satis": 3072570,
-    "usd": 60633,
-    "degisim": 1.76
+    "satis": 3062104,
+    "usd": 60426,
+    "degisim": 1.25
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 5813.99,
-    "satis": 5814.78,
-    "degisim": -0.16
+    "alis": 5813.26,
+    "satis": 5814.01,
+    "degisim": -0.17
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 9786,
-    "satis": 10027,
-    "degisim": -2.6
+    "alis": 9784,
+    "satis": 10026,
+    "degisim": -2.61
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 19573,
-    "satis": 20053,
-    "degisim": -2.6
+    "alis": 19569,
+    "satis": 20052,
+    "degisim": -2.61
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 39025,
-    "satis": 39805,
-    "degisim": -2.75
+    "alis": 39018,
+    "satis": 39802,
+    "degisim": -2.76
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40106,
-    "satis": 40529,
-    "degisim": -2.45
+    "alis": 40098,
+    "satis": 40527,
+    "degisim": -2.46
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40106,
-    "satis": 40529,
-    "degisim": -2.45
+    "alis": 40098,
+    "satis": 40527,
+    "degisim": -2.46
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40106,
-    "satis": 40529,
-    "degisim": -2.45
+    "alis": 40098,
+    "satis": 40527,
+    "degisim": -2.46
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5461.52,
-    "satis": 5654.91,
-    "degisim": -2.32
+    "alis": 5460.45,
+    "satis": 5654.56,
+    "degisim": -2.33
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4140,
+    "alis": 4139,
     "satis": 4835,
     "degisim": -2.62
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3272.16,
-    "satis": 4424.14,
+    "alis": 3271.51,
+    "satis": 4423.9,
     "degisim": -2.06
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 5784.92,
-    "satis": 5785.71,
-    "degisim": -0.16
+    "alis": 5784.19,
+    "satis": 5784.94,
+    "degisim": -0.17
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 67.66,
-    "satis": 67.75,
-    "degisim": 1.09
+    "alis": 67.68,
+    "satis": 67.78,
+    "degisim": 1.14
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.6736,
-    "satis": 50.6809,
+    "alis": 50.6699,
+    "satis": 50.6838,
     "degisim": 0
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.7332,
-    "satis": 55.7624,
-    "degisim": 0.23
+    "alis": 55.7343,
+    "satis": 55.7549,
+    "degisim": 0.22
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.5965,
-    "satis": 66.6187,
+    "alis": 66.5945,
+    "satis": 66.6168,
     "degisim": 0.18
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.7352,
-    "satis": 60.7695,
-    "degisim": -0.39
+    "alis": 60.7439,
+    "satis": 60.7699,
+    "degisim": -0.38
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.5074,
-    "satis": 13.5133,
+    "alis": 13.5082,
+    "satis": 13.5127,
     "degisim": 0.02
    },
    {
@@ -951,10 +968,10 @@
     "degisim": 0.99
    }
   ],
-  "kaynakSaati": "2026-11-26 21:31:01"
+  "kaynakSaati": "2026-11-26 22:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-26T18:31:59.267Z",
+  "guncelleme": "2026-11-26T19:02:10.243Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -21531,7 +21548,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-26T18:31:59.857Z",
+  "guncelleme": "2026-11-26T19:02:10.971Z",
   "liste": [
    {
     "yol": "/haber/mersin-de-26-yildir-sari-lacivert-renklere-boyanan-ev-dikkat-cekiyor-1q3iy7k/",
@@ -21596,20 +21613,20 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-26T18:32:48.290Z",
+  "guncelleme": "2026-11-26T19:02:12.725Z",
   "deniz": {
    "sicaklik": 21.3,
    "dalga": 0.14
   },
   "hava": {
-   "aqi": 43,
-   "pm25": 13.7,
-   "pm10": 17.8,
+   "aqi": 42,
+   "pm25": 13.2,
+   "pm10": 17.9,
    "uvMax": 2.7
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-26T18:32:50.473Z",
+  "guncelleme": "2026-11-26T19:02:14.815Z",
   "giden": [
    {
     "no": [
@@ -21620,7 +21637,7 @@
     "planlanan": "2026-11-26T19:15:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -21632,7 +21649,7 @@
     "planlanan": "2026-11-26T19:45:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "23 KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -21644,7 +21661,7 @@
     "planlanan": "2026-11-26T19:50:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "dis"
    },
    {
@@ -22174,21 +22191,21 @@
     "kapi": "104",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2091"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-27T18:35:00.000Z",
+    "tahmini": null,
+    "kapi": "108",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "XQ7710"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "Antalya",
-    "planlanan": "2026-11-26T18:40:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "ic"
-   },
    {
     "no": [
      "XQ9306"
@@ -22210,7 +22227,7 @@
     "planlanan": "2026-11-26T19:10:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "ic"
    },
    {
@@ -22812,11 +22829,23 @@
     "kapi": "",
     "durum": "",
     "hat": "dis"
+   },
+   {
+    "no": [
+     "XQ7710"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "Antalya",
+    "planlanan": "2026-11-27T18:40:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-26T18:32:50.472Z",
+  "guncelleme": "2026-11-26T19:02:14.815Z",
   "liste": [
    {
     "id": 6386,
