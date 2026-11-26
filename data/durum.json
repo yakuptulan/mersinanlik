@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "mersin-universitesi": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-26T22:31:44.293Z"
   }
  },
  "gorsel": {
@@ -552,30 +556,26 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-26T22:04:50.982Z",
+  "guncelleme": "2026-11-26T22:31:58.895Z",
   "liste": [
    {
     "baslik": "jablonec",
     "trafik": 500
    },
    {
-    "baslik": "saviolo",
-    "trafik": 100
-   },
-   {
-    "baslik": "sc braga",
-    "trafik": 100
-   },
-   {
     "baslik": "fk crvena zvezda",
-    "trafik": 100
-   },
-   {
-    "baslik": "inter club d'escaldes",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "afc ajax",
+    "trafik": 200
+   },
+   {
+    "baslik": "sc braga",
+    "trafik": 200
+   },
+   {
+    "baslik": "inter club d'escaldes",
     "trafik": 100
    },
    {
@@ -593,6 +593,10 @@
    {
     "baslik": "hoffenheim",
     "trafik": 200
+   },
+   {
+    "baslik": "onana",
+    "trafik": 100
    }
   ]
  },
