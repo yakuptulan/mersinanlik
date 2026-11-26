@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-26T23:01:55.905Z",
+ "guncelleme": "2026-11-26T23:31:56.286Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 13,
@@ -8,32 +8,32 @@
     {
      "tarih": "2026-11-27",
      "min": 13,
-     "max": 21,
+     "max": 20,
      "durum": "Açık"
     },
     {
      "tarih": "2026-11-28",
      "min": 13,
-     "max": 22,
-     "durum": "Bulutlu"
+     "max": 21,
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
      "min": 13,
-     "max": 19,
-     "durum": "Bulutlu"
+     "max": 20,
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-30",
-     "min": 12,
+     "min": 13,
      "max": 20,
      "durum": "Açık"
     },
     {
      "tarih": "2026-12-01",
      "min": 12,
-     "max": 20,
-     "durum": "Açık"
+     "max": 19,
+     "durum": "Az bulutlu"
     }
    ]
   },
@@ -45,23 +45,23 @@
      "tarih": "2026-11-27",
      "min": 13,
      "max": 20,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-28",
      "min": 13,
      "max": 21,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
-     "min": 13,
+     "min": 14,
      "max": 21,
-     "durum": "Hafif sağanak"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-30",
-     "min": 11,
+     "min": 12,
      "max": 20,
      "durum": "Açık"
     },
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-26T23:02:00.499Z",
+  "guncelleme": "2026-11-26T23:32:01.404Z",
   "liste": [
    {
     "ad": "Anatolia Eczanesi",
@@ -696,7 +696,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-26T23:02:01.836Z",
+  "guncelleme": "2026-11-26T23:32:02.644Z",
   "liste": []
  },
  "piyasa": {
@@ -871,7 +871,7 @@
   "kaynakSaati": "2026-11-27 01:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-26T23:02:08.942Z",
+  "guncelleme": "2026-11-26T23:32:08.192Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1596,7 +1596,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-26T22:32:20.331Z",
+  "guncelleme": "2026-11-26T23:32:11.052Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -3481,7 +3481,7 @@
       ]
      },
      "15": {
-      "alindi": "2026-11-25T22:32:07.800Z",
+      "alindi": "2026-11-26T23:32:21.816Z",
       "maclar": [
        {
         "ev": "Arca Çorum FK",
@@ -3549,7 +3549,7 @@
       ]
      },
      "16": {
-      "alindi": "2026-11-25T22:32:09.015Z",
+      "alindi": "2026-11-26T23:32:23.086Z",
       "maclar": [
        {
         "ev": "Kasımpaşa",
@@ -6437,7 +6437,7 @@
       ]
      },
      "18": {
-      "alindi": "2026-11-25T22:32:17.526Z",
+      "alindi": "2026-11-26T23:32:29.462Z",
       "maclar": [
        {
         "ev": "Antalyaspor",
@@ -6512,7 +6512,7 @@
       ]
      },
      "19": {
-      "alindi": "2026-11-25T22:32:18.740Z",
+      "alindi": "2026-11-26T23:32:30.731Z",
       "maclar": [
        {
         "ev": "Alagöz Holding Iğdır",
@@ -9377,7 +9377,7 @@
       ]
      },
      "16": {
-      "alindi": "2026-11-25T22:32:27.265Z",
+      "alindi": "2026-11-26T23:32:37.142Z",
       "maclar": [
        {
         "ev": "Hatayspor",
@@ -9445,7 +9445,7 @@
       ]
      },
      "17": {
-      "alindi": "2026-11-25T22:32:28.513Z",
+      "alindi": "2026-11-26T23:32:38.416Z",
       "maclar": [
        {
         "ev": "68 Aksaray Belediye Spor",
@@ -11908,7 +11908,7 @@
       ]
      },
      "16": {
-      "alindi": "2026-11-25T22:32:37.230Z",
+      "alindi": "2026-11-26T23:32:44.814Z",
       "maclar": [
        {
         "ev": "Akedaş Kahramanmaraş İstiklal Spor",
@@ -11969,18 +11969,18 @@
       ]
      },
      "17": {
-      "alindi": "2026-11-25T22:32:38.443Z",
+      "alindi": "2026-11-26T23:32:46.087Z",
       "maclar": [
        {
-        "ev": "Erzincan Futbol Yatırımları",
-        "dep": "Kct 1461 Trabzon FK",
+        "ev": "Ankara Demirspor",
+        "dep": "Sultan Su İnegölspor",
         "tarih": "2026-12-20",
         "saat": "13:00",
         "skor": null
        },
        {
-        "ev": "12 Bingöl Spor",
-        "dep": "Karacabey Belediye Spor",
+        "ev": "Erzincan Futbol Yatırımları",
+        "dep": "Kct 1461 Trabzon FK",
         "tarih": "2026-12-20",
         "saat": "13:00",
         "skor": null
@@ -12000,10 +12000,10 @@
         "skor": null
        },
        {
-        "ev": "Ankara Demirspor",
-        "dep": "Sultan Su İnegölspor",
+        "ev": "12 Bingöl Spor",
+        "dep": "Karacabey Belediye Spor",
         "tarih": "2026-12-20",
-        "saat": "13:00",
+        "saat": "14:00",
         "skor": null
        },
        {
@@ -14317,7 +14317,7 @@
       ]
      },
      "16": {
-      "alindi": "2026-11-25T22:32:47.109Z",
+      "alindi": "2026-11-26T23:32:53.568Z",
       "maclar": [
        {
         "ev": "Kdz.ereğli 1980 Spor",
@@ -14385,7 +14385,7 @@
       ]
      },
      "17": {
-      "alindi": "2026-11-25T22:32:48.326Z",
+      "alindi": "2026-11-26T23:32:54.941Z",
       "maclar": [
        {
         "ev": "Zonguldak Spor",
@@ -16988,7 +16988,7 @@
       ]
      },
      "16": {
-      "alindi": "2026-11-25T22:32:56.866Z",
+      "alindi": "2026-11-26T23:33:01.382Z",
       "maclar": [
        {
         "ev": "Bursa Yıldırım Spor",
@@ -17056,7 +17056,7 @@
       ]
      },
      "17": {
-      "alindi": "2026-11-25T22:32:58.081Z",
+      "alindi": "2026-11-26T23:33:02.660Z",
       "maclar": [
        {
         "ev": "Kepez Spor",
@@ -19659,7 +19659,7 @@
       ]
      },
      "16": {
-      "alindi": "2026-11-25T22:33:06.628Z",
+      "alindi": "2026-11-26T23:33:09.092Z",
       "maclar": [
        {
         "ev": "Yeni Malatyaspor",
@@ -19727,7 +19727,7 @@
       ]
      },
      "17": {
-      "alindi": "2026-11-25T22:33:07.844Z",
+      "alindi": "2026-11-26T23:33:10.369Z",
       "maclar": [
        {
         "ev": "Adana Adaletgücü Spor",
@@ -21085,7 +21085,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-26T22:33:22.872Z",
+    "guncelleme": "2026-11-26T23:33:11.644Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21167,7 +21167,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-26T22:33:24.167Z",
+    "guncelleme": "2026-11-26T23:33:12.903Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21249,7 +21249,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-26T22:33:25.473Z",
+    "guncelleme": "2026-11-26T23:33:14.172Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21348,7 +21348,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-26T23:02:09.462Z",
+  "guncelleme": "2026-11-26T23:32:09.364Z",
   "liste": [
    {
     "yol": "/haber/mersin-de-26-yildir-sari-lacivert-renklere-boyanan-ev-dikkat-cekiyor-1q3iy7k/",
@@ -21425,7 +21425,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-26T23:02:11.519Z",
+  "guncelleme": "2026-11-26T23:33:15.373Z",
   "deniz": {
    "sicaklik": 21.2,
    "dalga": 0.1
@@ -21438,7 +21438,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-26T23:02:14.062Z",
+  "guncelleme": "2026-11-26T23:33:17.943Z",
   "giden": [
    {
     "no": [
@@ -21449,7 +21449,7 @@
     "planlanan": "2026-11-26T23:55:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "KONTUAR KAPALI",
+    "durum": "BOARDING",
     "hat": "dis"
    },
    {
@@ -21461,7 +21461,7 @@
     "planlanan": "2026-11-27T01:10:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -22039,7 +22039,7 @@
     "planlanan": "2026-11-26T23:35:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "ic"
    },
    {
@@ -22693,7 +22693,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-26T23:02:14.061Z",
+  "guncelleme": "2026-11-26T23:33:17.942Z",
   "liste": [
    {
     "id": 6386,
