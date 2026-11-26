@@ -15,13 +15,13 @@
   },
   "mersingundem": {
    "hata": "fetch failed",
-   "zaman": "2026-11-26T11:31:20.620Z"
+   "zaman": "2026-11-26T12:01:15.643Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-26",
-  "adet": 39,
-  "premium": 37
+  "adet": 42,
+  "premium": 40
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -167,7 +167,8 @@
    "https://www.dha.com.tr/yerel-haberler/mersin/erdemli/mersinde-yanan-evde-cesetleri-bulunan-ciftin-o-2988634",
    "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/toroslarda-kadin-dayanismasini-guclendiren-mer-2988974",
    "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/mersinde-vatandaslar-gune-sporla-basliyor-2988968",
-   "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/yengesi-ve-onun-annesini-olduren-sanik-diyecek-2988999"
+   "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/yengesi-ve-onun-annesini-olduren-sanik-diyecek-2988999",
+   "https://www.dha.com.tr/yerel-haberler/mersin/gulnar/mersinde-ureticiye-sumak-fidani-destegi-2989121"
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
@@ -529,15 +530,21 @@
    "https://www.akdeniz.bel.tr/Default/HaberDetay/69",
    "https://www.akdeniz.bel.tr/Default/HaberDetay/68",
    "https://www.akdeniz.bel.tr/Default/HaberDetay/67",
-   "https://www.akdeniz.bel.tr/Default/HaberDetay/71"
+   "https://www.akdeniz.bel.tr/Default/HaberDetay/71",
+   "https://www.akdeniz.bel.tr/Default/HaberDetay/73",
+   "https://www.akdeniz.bel.tr/Default/HaberDetay/72"
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-26T11:32:00.293Z",
+  "guncelleme": "2026-11-26T12:01:54.090Z",
   "liste": [
    {
+    "baslik": "mustafa keser",
+    "trafik": 200
+   },
+   {
     "baslik": "katılımevim",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "fındık",
@@ -549,11 +556,7 @@
    },
    {
     "baslik": "eren kaşıkçı",
-    "trafik": 200
-   },
-   {
-    "baslik": "h&m",
-    "trafik": 2000
+    "trafik": 500
    },
    {
     "baslik": "thanksgiving",
@@ -561,7 +564,7 @@
    },
    {
     "baslik": "aralık",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "denetim",
@@ -573,7 +576,7 @@
    },
    {
     "baslik": "boşanma",
-    "trafik": 200
+    "trafik": 500
    }
   ]
  },
