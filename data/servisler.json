@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-26T22:31:59.131Z",
+ "guncelleme": "2026-11-26T23:01:55.905Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 13,
@@ -74,12 +74,12 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 11,
+   "sicaklik": 12,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
-     "min": 11,
+     "min": 12,
      "max": 21,
      "durum": "Açık"
     },
@@ -327,7 +327,7 @@
   },
   "silifke": {
    "sicaklik": 9,
-   "durum": "Parçalı bulutlu",
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-26T22:32:03.432Z",
+  "guncelleme": "2026-11-26T23:02:00.499Z",
   "liste": [
    {
     "ad": "Anatolia Eczanesi",
@@ -696,7 +696,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-26T22:32:04.795Z",
+  "guncelleme": "2026-11-26T23:02:01.836Z",
   "liste": []
  },
  "piyasa": {
@@ -871,7 +871,7 @@
   "kaynakSaati": "2026-11-27 01:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-26T22:05:00.048Z",
+  "guncelleme": "2026-11-26T23:02:08.942Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -21348,7 +21348,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-26T22:32:18.149Z",
+  "guncelleme": "2026-11-26T23:02:09.462Z",
   "liste": [
    {
     "yol": "/haber/mersin-de-26-yildir-sari-lacivert-renklere-boyanan-ev-dikkat-cekiyor-1q3iy7k/",
@@ -21425,20 +21425,20 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-26T22:33:26.673Z",
+  "guncelleme": "2026-11-26T23:02:11.519Z",
   "deniz": {
    "sicaklik": 21.2,
-   "dalga": 0.12
+   "dalga": 0.1
   },
   "hava": {
-   "aqi": 37,
-   "pm25": 8.9,
-   "pm10": 12.8,
+   "aqi": 34,
+   "pm25": 8.4,
+   "pm10": 11.3,
    "uvMax": 2.35
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-26T22:05:03.837Z",
+  "guncelleme": "2026-11-26T23:02:14.062Z",
   "giden": [
    {
     "no": [
@@ -21449,7 +21449,7 @@
     "planlanan": "2026-11-26T23:55:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "dis"
    },
    {
@@ -22677,11 +22677,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1592"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Düsseldorf",
+    "planlanan": "2026-11-27T22:55:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "dis"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-26T22:33:29.316Z",
+  "guncelleme": "2026-11-26T23:02:14.061Z",
   "liste": [
    {
     "id": 6386,
