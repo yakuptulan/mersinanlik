@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-26T08:32:27.292Z",
+ "guncelleme": "2026-11-26T09:02:23.734Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 17,
@@ -38,7 +38,7 @@
    ]
   },
   "anamur": {
-   "sicaklik": 17,
+   "sicaklik": 18,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -110,7 +110,7 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 17,
+   "sicaklik": 18,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -146,7 +146,7 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 10,
+   "sicaklik": 11,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -182,7 +182,7 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 17,
+   "sicaklik": 18,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -326,7 +326,7 @@
    ]
   },
   "silifke": {
-   "sicaklik": 17,
+   "sicaklik": 18,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -398,7 +398,7 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 17,
+   "sicaklik": 18,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-26T08:32:31.462Z",
+  "guncelleme": "2026-11-26T09:02:28.384Z",
   "liste": [
    {
     "ad": "Anatolia Eczanesi",
@@ -772,7 +772,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-26T08:32:32.550Z",
+  "guncelleme": "2026-11-26T09:02:29.707Z",
   "liste": [
    {
     "tur": "su",
@@ -800,38 +800,6 @@
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
-    "aciklama": "Silifke ilçesi Sayağzı Mahallesi arızadan kaynaklı saat 12:00 a kadar su kesintisi yaşanacaktır.",
-    "baslangic": "2026-11-26T05:38:00.000Z",
-    "bitis": "2026-11-26T09:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "silifke",
-      "ad": "Silifke",
-      "mahalleler": [
-       "Sayağzı"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "ERDEMLİ İLÇESİ,AKDENİZ MAHALLESİNE BAĞLI ELÇİ BEY SOKAK GENELİ ARIZA NEDENİ SAAT 12:00 E KADAR SU KESİNTİSİ YAŞANACAKTIR",
-    "baslangic": "2026-11-26T06:45:00.000Z",
-    "bitis": "2026-11-26T09:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "erdemli",
-      "ad": "Erdemli",
-      "mahalleler": [
-       "Akdeniz"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
     "aciklama": "Anamur İlçesi Köprübaşı mahallesini besleyen sondaj kuyusunda bulanıklık meydana gelmiş olup içme suyu deposu tahliye edilmektedir.Köprübaşı mahallesinde saat 20:00'a kadar su kesintisi yaşanacaktır.",
     "baslangic": "2026-11-26T06:50:00.000Z",
     "bitis": "2026-11-26T17:00:00.000Z",
@@ -841,38 +809,6 @@
       "ad": "Anamur",
       "mahalleler": [
        "Köprübaşı"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Silifke ilçesi Taşucu Mahallesi'nde (Kum Mahallesi hariç), pompa arızasından kaynaklı olarak tahminen yarın saat 12:00'ye kadar su rezervinde düşüklük veya su kesintisi yaşanacaktır.",
-    "baslangic": "2026-11-25T19:35:00.000Z",
-    "bitis": "2026-11-26T09:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "silifke",
-      "ad": "Silifke",
-      "mahalleler": [
-       "Taşucu"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Akdeniz İlçesi Bağlarbaşı mahallesi içmesuyu arızası nedeni ile saat 12:00’a kadar içmesuyu kesintisi yaşanacaktır.",
-    "baslangic": "2026-11-26T07:17:00.000Z",
-    "bitis": "2026-11-26T09:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "akdeniz",
-      "ad": "Akdeniz",
-      "mahalleler": [
-       "Bağlarbaşı"
       ]
      }
     ]
@@ -905,22 +841,6 @@
       "ad": "Silifke",
       "mahalleler": [
        "Atakent"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "ERDEMLİ İLÇESİ,KOCAHASANLI MAHALLESİNE BAĞLI CUMHURİYET CADDESİ,OĞUZLAR CADDE,NECDET ÜNÜVAR CADDESİ,3.BATI KANAL SOKAK GENELİ ARIZA NEDENİ İLE SAAT 12:00 E KADAR SU KESİNTİSİ YAŞANACAKTIR",
-    "baslangic": "2026-11-26T06:10:00.000Z",
-    "bitis": "2026-11-26T09:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "erdemli",
-      "ad": "Erdemli",
-      "mahalleler": [
-       "Kocahasanlı"
       ]
      }
     ]
@@ -973,182 +893,198 @@
       ]
      }
     ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Silifke ilçesi Atakent Mahallesi Yapraklı Mevki arızadan kaynaklı saat 15:00 a kadar su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-26T08:59:00.000Z",
+    "bitis": "2026-11-26T12:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "silifke",
+      "ad": "Silifke",
+      "mahalleler": [
+       "Atakent"
+      ]
+     }
+    ]
    }
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-26T08:32:35.596Z",
+  "guncelleme": "2026-11-26T09:02:34.418Z",
   "kalemler": {
    "gram": {
-    "alis": 5807.3,
-    "satis": 5808.19,
-    "degisim": -0.27
+    "alis": 5817.76,
+    "satis": 5818.81,
+    "degisim": -0.09
    },
    "ceyrek": {
-    "alis": 9917,
-    "satis": 10181,
-    "degisim": -1.11
+    "alis": 9935,
+    "satis": 10194,
+    "degisim": -0.98
    },
    "gumus": {
-    "alis": 67.34,
-    "satis": 67.43,
-    "degisim": 0.63
+    "alis": 67.79,
+    "satis": 67.89,
+    "degisim": 1.31
    },
    "usd": {
-    "alis": 50.6691,
-    "satis": 50.6833,
+    "alis": 50.672,
+    "satis": 50.6817,
     "degisim": 0
    },
    "eur": {
-    "alis": 55.7319,
-    "satis": 55.7477,
+    "alis": 55.7324,
+    "satis": 55.7475,
     "degisim": 0.21
    },
    "bist": {
     "alis": null,
-    "satis": 10744.62,
-    "degisim": 0.83
+    "satis": 10825.47,
+    "degisim": 1.59
    },
    "btc": {
-    "satis": 3071533,
-    "usd": 60611,
-    "degisim": 2.27
+    "satis": 3081324,
+    "usd": 60803,
+    "degisim": 2.7
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 5807.3,
-    "satis": 5808.19,
-    "degisim": -0.27
+    "alis": 5817.76,
+    "satis": 5818.81,
+    "degisim": -0.09
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 9917,
-    "satis": 10181,
-    "degisim": -1.11
+    "alis": 9935,
+    "satis": 10194,
+    "degisim": -0.98
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 19833,
-    "satis": 20362,
-    "degisim": -1.1
+    "alis": 19869,
+    "satis": 20387,
+    "degisim": -0.98
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 39484,
-    "satis": 40479,
-    "degisim": -1.1
+    "alis": 39556,
+    "satis": 40529,
+    "degisim": -0.98
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40546,
-    "satis": 41090,
-    "degisim": -1.1
+    "alis": 40619,
+    "satis": 41141,
+    "degisim": -0.98
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40546,
-    "satis": 41090,
-    "degisim": -1.1
+    "alis": 40619,
+    "satis": 41141,
+    "degisim": -0.98
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40546,
-    "satis": 41090,
-    "degisim": -1.1
+    "alis": 40619,
+    "satis": 41141,
+    "degisim": -0.98
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5517.24,
-    "satis": 5724.82,
-    "degisim": -1.11
+    "alis": 5527.23,
+    "satis": 5731.97,
+    "degisim": -0.99
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4170,
+    "alis": 4183,
     "satis": 4905,
     "degisim": -1.21
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3306.45,
-    "satis": 4472.48,
-    "degisim": -0.98
+    "alis": 3312.6,
+    "satis": 4477.42,
+    "degisim": -0.88
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 5778.26,
-    "satis": 5779.15,
-    "degisim": -0.27
+    "alis": 5788.67,
+    "satis": 5789.71,
+    "degisim": -0.09
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 67.34,
-    "satis": 67.43,
-    "degisim": 0.63
+    "alis": 67.79,
+    "satis": 67.89,
+    "degisim": 1.31
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.6691,
-    "satis": 50.6833,
+    "alis": 50.672,
+    "satis": 50.6817,
     "degisim": 0
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.7319,
-    "satis": 55.7477,
+    "alis": 55.7324,
+    "satis": 55.7475,
     "degisim": 0.21
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.5923,
-    "satis": 66.602,
-    "degisim": 0.17
+    "alis": 66.5969,
+    "satis": 66.6066,
+    "degisim": 0.18
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.8342,
-    "satis": 60.8738,
-    "degisim": -0.22
+    "alis": 60.8023,
+    "satis": 60.8344,
+    "degisim": -0.28
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.5081,
-    "satis": 13.5126,
+    "alis": 13.5077,
+    "satis": 13.5131,
     "degisim": 0.02
    },
    {
     "k": "RUB",
     "ad": "Rus rublesi",
     "alis": 0.6135,
-    "satis": 0.6172,
-    "degisim": 0.33
+    "satis": 0.6161,
+    "degisim": 0.24
    }
   ],
-  "kaynakSaati": "2026-11-26 11:32:01"
+  "kaynakSaati": "2026-11-26 12:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-26T08:32:38.765Z",
+  "guncelleme": "2026-11-26T09:02:37.267Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -21725,7 +21661,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-26T08:32:39.176Z",
+  "guncelleme": "2026-11-26T09:02:38.241Z",
   "liste": [
    {
     "yol": "/haber/mersin-de-26-yildir-sari-lacivert-renklere-boyanan-ev-dikkat-cekiyor-1q3iy7k/",
@@ -21806,15 +21742,15 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-26T08:33:26.396Z",
+  "guncelleme": "2026-11-26T09:02:40.039Z",
   "deniz": {
-   "sicaklik": 21.4,
+   "sicaklik": 21.5,
    "dalga": 0.12
   },
   "hava": {
-   "aqi": 37,
-   "pm25": 7.3,
-   "pm10": 10.3,
+   "aqi": 35,
+   "pm25": 7.5,
+   "pm10": 10.7,
    "uvMax": 2.7
   }
  },
@@ -22726,7 +22662,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-26T08:33:28.246Z",
+  "guncelleme": "2026-11-26T09:02:42.064Z",
   "liste": [
    {
     "id": 6386,
