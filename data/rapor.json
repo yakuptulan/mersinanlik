@@ -502,15 +502,15 @@
    "kaynakHatalari": []
   },
   "2026-11-26": {
-   "guncelleme": "2026-11-26T12:04:01.485Z",
-   "mersinHaber": 51,
-   "kendiYazimiz": 48,
-   "turkiyeDunya": 166,
-   "otomatik": 11,
+   "guncelleme": "2026-11-26T12:34:45.477Z",
+   "mersinHaber": 53,
+   "kendiYazimiz": 50,
+   "turkiyeDunya": 175,
+   "otomatik": 12,
    "otomatikTurler": {
     "ucus": 1,
     "yakit": 1,
-    "su": 8,
+    "su": 9,
     "piyasa": 1
    },
    "otomatikBasliklar": [
@@ -568,14 +568,17 @@
      "baslik": "Silifke'de su kesintisi (26 Kasım): Atayurt, 6 saat sürecek",
      "tur": "su",
      "saat": "11:34"
+    },
+    {
+     "baslik": "Silifke'de su kesintisi (26 Kasım): Taşucu, 6 saat sürecek",
+     "tur": "su",
+     "saat": "15:34"
     }
    ],
-   "gorsel": 42,
-   "bilgi": 1,
+   "gorsel": 45,
+   "bilgi": 2,
    "gezi": 0,
-   "kaynakHatalari": [
-    "mersingundem (fetch failed)"
-   ]
+   "kaynakHatalari": []
   }
  }
 }

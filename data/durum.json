@@ -12,16 +12,12 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "mersingundem": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-26T12:01:15.643Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-26",
-  "adet": 42,
-  "premium": 40
+  "adet": 45,
+  "premium": 43
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -168,7 +164,8 @@
    "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/toroslarda-kadin-dayanismasini-guclendiren-mer-2988974",
    "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/mersinde-vatandaslar-gune-sporla-basliyor-2988968",
    "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/yengesi-ve-onun-annesini-olduren-sanik-diyecek-2988999",
-   "https://www.dha.com.tr/yerel-haberler/mersin/gulnar/mersinde-ureticiye-sumak-fidani-destegi-2989121"
+   "https://www.dha.com.tr/yerel-haberler/mersin/gulnar/mersinde-ureticiye-sumak-fidani-destegi-2989121",
+   "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/akdeniz-belediyesi-vezneleri-hafta-sonu-acik-ol-2989149"
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
@@ -358,7 +355,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/yengesi-ve-onun-annesini-olduren-sanik-diyecek-bir-seyim-yok-119533287",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/kurtlarin-agila-girmesiyle-kaybolan-90-keci-5-gundur-araniyor-119533389",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/zeytinyagi-uretim-tesisleri-denetlendi-119533387",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/akkuyu-ngsnin-gelecekteki-muhendislerini-yetistirme-programina-basvurular-basladi-119533381"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/akkuyu-ngsnin-gelecekteki-muhendislerini-yetistirme-programina-basvurular-basladi-119533381",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/akdenizde-yesil-alanlara-sanatsal-dokunus-119533543"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -536,27 +534,35 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-26T12:01:54.090Z",
+  "guncelleme": "2026-11-26T12:31:44.767Z",
   "liste": [
+   {
+    "baslik": "murat kurum",
+    "trafik": 200
+   },
+   {
+    "baslik": "red dead redemption 2",
+    "trafik": 100
+   },
    {
     "baslik": "mustafa keser",
     "trafik": 200
    },
    {
     "baslik": "katılımevim",
-    "trafik": 1000
+    "trafik": 2000
    },
    {
     "baslik": "fındık",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "macklemore sivas",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "eren kaşıkçı",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "thanksgiving",
@@ -568,15 +574,7 @@
    },
    {
     "baslik": "denetim",
-    "trafik": 100
-   },
-   {
-    "baslik": "istiklal caddesi",
-    "trafik": 100
-   },
-   {
-    "baslik": "boşanma",
-    "trafik": 500
+    "trafik": 200
    }
   ]
  },

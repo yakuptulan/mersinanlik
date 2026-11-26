@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-26T12:02:28.586Z",
+ "guncelleme": "2026-11-26T12:32:20.526Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 18,
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-26T12:02:33.669Z",
+  "guncelleme": "2026-11-26T12:32:23.732Z",
   "liste": [
    {
     "ad": "Anatolia Eczanesi",
@@ -772,7 +772,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-26T12:02:34.859Z",
+  "guncelleme": "2026-11-26T12:32:24.649Z",
   "liste": [
    {
     "tur": "su",
@@ -870,16 +870,32 @@
       ]
      }
     ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Silifke ilçesi Taşucu Mahallesi'nde (Kum Mahallesi hariç), pompa arızasından kaynaklı olarak tahminen saat 21:00'ye kadar su rezervinde düşüklük veya su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-26T12:23:00.000Z",
+    "bitis": "2026-11-26T18:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "silifke",
+      "ad": "Silifke",
+      "mahalleler": [
+       "Taşucu"
+      ]
+     }
+    ]
    }
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-26T12:02:37.682Z",
+  "guncelleme": "2026-11-26T12:32:27.333Z",
   "kalemler": {
    "gram": {
-    "alis": 5812.43,
-    "satis": 5813.45,
-    "degisim": -0.18
+    "alis": 5813.73,
+    "satis": 5814.61,
+    "degisim": -0.16
    },
    "ceyrek": {
     "alis": 9776,
@@ -887,38 +903,38 @@
     "degisim": -2.92
    },
    "gumus": {
-    "alis": 67.64,
-    "satis": 67.74,
-    "degisim": 1.09
+    "alis": 67.65,
+    "satis": 67.73,
+    "degisim": 1.07
    },
    "usd": {
-    "alis": 50.6665,
-    "satis": 50.6831,
+    "alis": 50.662,
+    "satis": 50.691,
     "degisim": 0
    },
    "eur": {
-    "alis": 55.7427,
-    "satis": 55.7596,
-    "degisim": 0.23
+    "alis": 55.7535,
+    "satis": 55.7819,
+    "degisim": 0.26
    },
    "bist": {
     "alis": null,
-    "satis": 10804.35,
-    "degisim": 1.39
+    "satis": 10835.63,
+    "degisim": 1.69
    },
    "btc": {
-    "satis": 3071923,
-    "usd": 60624,
-    "degisim": 3.5
+    "satis": 3069319,
+    "usd": 60566,
+    "degisim": 3.28
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 5812.43,
-    "satis": 5813.45,
-    "degisim": -0.18
+    "alis": 5813.73,
+    "satis": 5814.61,
+    "degisim": -0.16
    },
    {
     "k": "CEYREKALTIN",
@@ -930,122 +946,122 @@
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 19553,
-    "satis": 19989,
-    "degisim": -2.91
+    "alis": 19552,
+    "satis": 19988,
+    "degisim": -2.92
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 38986,
-    "satis": 39677,
-    "degisim": -3.06
+    "alis": 38985,
+    "satis": 39676,
+    "degisim": -3.07
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40066,
-    "satis": 40399,
+    "alis": 40064,
+    "satis": 40398,
     "degisim": -2.77
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40066,
-    "satis": 40399,
+    "alis": 40064,
+    "satis": 40398,
     "degisim": -2.77
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40066,
-    "satis": 40399,
+    "alis": 40064,
+    "satis": 40398,
     "degisim": -2.77
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5456.03,
-    "satis": 5636.65,
-    "degisim": -2.63
+    "alis": 5455.86,
+    "satis": 5636.5,
+    "degisim": -2.64
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4129,
-    "satis": 4825,
-    "degisim": -2.82
+    "alis": 4127,
+    "satis": 4815,
+    "degisim": -3.02
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3268.79,
-    "satis": 4411.51,
-    "degisim": -2.33
+    "alis": 3268.68,
+    "satis": 4411.41,
+    "degisim": -2.34
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 5783.37,
-    "satis": 5784.39,
-    "degisim": -0.18
+    "alis": 5784.66,
+    "satis": 5785.53,
+    "degisim": -0.16
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 67.64,
-    "satis": 67.74,
-    "degisim": 1.09
+    "alis": 67.65,
+    "satis": 67.73,
+    "degisim": 1.07
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.6665,
-    "satis": 50.6831,
+    "alis": 50.662,
+    "satis": 50.691,
     "degisim": 0
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.7427,
-    "satis": 55.7596,
-    "degisim": 0.23
+    "alis": 55.7535,
+    "satis": 55.7819,
+    "degisim": 0.26
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.5586,
-    "satis": 66.5714,
-    "degisim": 0.12
+    "alis": 66.6053,
+    "satis": 66.6181,
+    "degisim": 0.19
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.693,
-    "satis": 60.7347,
-    "degisim": -0.45
+    "alis": 60.7344,
+    "satis": 60.7705,
+    "degisim": -0.39
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.5086,
-    "satis": 13.5112,
-    "degisim": 0.01
+    "alis": 13.5075,
+    "satis": 13.5131,
+    "degisim": 0.02
    },
    {
     "k": "RUB",
     "ad": "Rus rublesi",
-    "alis": 0.6165,
-    "satis": 0.6167,
-    "degisim": 0.53
+    "alis": 0.6122,
+    "satis": 0.6212,
+    "degisim": 0.55
    }
   ],
-  "kaynakSaati": "2026-11-26 15:02:01"
+  "kaynakSaati": "2026-11-26 15:32:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-26T12:02:40.125Z",
+  "guncelleme": "2026-11-26T12:32:29.597Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1766,7 +1782,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-26T09:32:36.980Z",
+  "guncelleme": "2026-11-26T12:32:32.982Z",
   "liste": [
    {
     "id": "tmh5o5",
@@ -1870,7 +1886,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-26T11:33:01.253Z",
+  "guncelleme": "2026-11-26T12:32:32.983Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -21359,7 +21375,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-26T11:33:43.822Z",
+    "guncelleme": "2026-11-26T12:33:13.394Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21441,7 +21457,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-26T11:33:45.098Z",
+    "guncelleme": "2026-11-26T12:33:14.607Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21523,7 +21539,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-26T11:33:46.383Z",
+    "guncelleme": "2026-11-26T12:33:15.825Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21622,7 +21638,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-26T12:02:40.706Z",
+  "guncelleme": "2026-11-26T12:32:30.259Z",
   "liste": [
    {
     "yol": "/haber/mersin-de-26-yildir-sari-lacivert-renklere-boyanan-ev-dikkat-cekiyor-1q3iy7k/",
@@ -21657,10 +21673,6 @@
     "sayi": 4
    },
    {
-    "yol": "/haber/mumine-teyze-kahramani-ile-bulustu-mersin-de-kaybolmasinin-ardindan-7-1f1sptb/",
-    "sayi": 2
-   },
-   {
     "yol": "/hava-durumu/anamur/",
     "sayi": 2
    },
@@ -21691,9 +21703,9 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-26T12:02:42.347Z",
+  "guncelleme": "2026-11-26T12:33:17.026Z",
   "deniz": {
-   "sicaklik": 21.5,
+   "sicaklik": 21.3,
    "dalga": 0.12
   },
   "hava": {
@@ -22611,7 +22623,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-26T12:02:44.814Z",
+  "guncelleme": "2026-11-26T12:33:18.987Z",
   "liste": [
    {
     "id": 6386,
