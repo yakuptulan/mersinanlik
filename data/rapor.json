@@ -502,15 +502,16 @@
    "kaynakHatalari": []
   },
   "2026-11-26": {
-   "guncelleme": "2026-11-26T06:35:10.640Z",
-   "mersinHaber": 10,
-   "kendiYazimiz": 10,
-   "turkiyeDunya": 29,
-   "otomatik": 6,
+   "guncelleme": "2026-11-26T07:03:51.320Z",
+   "mersinHaber": 20,
+   "kendiYazimiz": 17,
+   "turkiyeDunya": 40,
+   "otomatik": 8,
    "otomatikTurler": {
     "ucus": 1,
     "yakit": 1,
-    "su": 4
+    "su": 5,
+    "piyasa": 1
    },
    "otomatikBasliklar": [
     {
@@ -542,10 +543,20 @@
      "baslik": "Aydıncık'ta su kesintisi (26 Kasım): Atatürk, Büyük Ada ve 6 mahalle daha",
      "tur": "su",
      "saat": "08:34"
+    },
+    {
+     "baslik": "Anamur'da su kesintisi (26 Kasım): Köprübaşı, 10 saat sürecek",
+     "tur": "su",
+     "saat": "10:03"
+    },
+    {
+     "baslik": "26 Kasım 2026 altın fiyatları: Gram altın, çeyrek altın bugün ne kadar?",
+     "tur": "piyasa",
+     "saat": "10:03"
     }
    ],
-   "gorsel": 4,
-   "bilgi": 0,
+   "gorsel": 7,
+   "bilgi": 1,
    "gezi": 0,
    "kaynakHatalari": [
     "mersingundem (fetch failed)"

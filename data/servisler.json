@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-26T06:32:29.007Z",
+ "guncelleme": "2026-11-26T07:02:13.231Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 12,
@@ -74,7 +74,7 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 13,
+   "sicaklik": 17,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -218,7 +218,7 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 7,
+   "sicaklik": 11,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -254,8 +254,8 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 13,
-   "durum": "Açık",
+   "sicaklik": 17,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-26",
@@ -290,12 +290,12 @@
    ]
   },
   "mut": {
-   "sicaklik": 7,
+   "sicaklik": 8,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-26",
-     "min": 7,
+     "min": 8,
      "max": 14,
      "durum": "Parçalı bulutlu"
     },
@@ -362,8 +362,8 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 10,
-   "durum": "Açık",
+   "sicaklik": 14,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-26",
@@ -434,8 +434,8 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 12,
-   "durum": "Açık",
+   "sicaklik": 16,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-26",
@@ -503,7 +503,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-26T06:32:32.608Z",
+  "guncelleme": "2026-11-26T07:02:17.421Z",
   "liste": [
    {
     "ad": "Anatolia Eczanesi",
@@ -772,31 +772,8 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-26T06:32:33.609Z",
+  "guncelleme": "2026-11-26T07:02:18.409Z",
   "liste": [
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Aydıncık İlçesi Ø450 HDPE ana hat yenileme çalışmalarından kaynaklı Atatürk, Merkez, Cumhuriyet, Yeni, Hacıbahattin ve Hürriyet Mahallelerinde 10:00 e kadar su kesintisi yaşanacaktır.",
-    "baslangic": "2026-11-26T05:20:00.000Z",
-    "bitis": "2026-11-26T07:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "aydincik",
-      "ad": "Aydıncık",
-      "mahalleler": [
-       "Atatürk",
-       "Büyük Ada",
-       "Cumhuriyet",
-       "Hacıbahattin",
-       "Hürriyet",
-       "Merkez",
-       "Yelkenli Adası",
-       "Yeni"
-      ]
-     }
-    ]
-   },
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
@@ -809,6 +786,38 @@
       "ad": "Silifke",
       "mahalleler": [
        "Sayağzı"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "ERDEMLİ İLÇESİ,AKDENİZ MAHALLESİNE BAĞLI ELÇİ BEY SOKAK GENELİ ARIZA NEDENİ SAAT 12:00 E KADAR SU KESİNTİSİ YAŞANACAKTIR",
+    "baslangic": "2026-11-26T06:45:00.000Z",
+    "bitis": "2026-11-26T09:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "erdemli",
+      "ad": "Erdemli",
+      "mahalleler": [
+       "Akdeniz"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Anamur İlçesi Köprübaşı mahallesini besleyen sondaj kuyusunda bulanıklık meydana gelmiş olup içme suyu deposu tahliye edilmektedir.Köprübaşı mahallesinde saat 20:00'a kadar su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-26T06:50:00.000Z",
+    "bitis": "2026-11-26T17:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "anamur",
+      "ad": "Anamur",
+      "mahalleler": [
+       "Köprübaşı"
       ]
      }
     ]
@@ -860,182 +869,198 @@
       ]
      }
     ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Mut ilçesi Deveci Mahallesi arıza sebebiyle kesinti yaşanmaktadır. 4 saat içerisinde suların verilmesi planlanmaktadır.",
+    "baslangic": "2026-11-26T06:49:02.000Z",
+    "bitis": "2026-11-26T10:44:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "mut",
+      "ad": "Mut",
+      "mahalleler": [
+       "Deveci"
+      ]
+     }
+    ]
    }
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-26T06:32:35.872Z",
+  "guncelleme": "2026-11-26T07:02:22.464Z",
   "kalemler": {
    "gram": {
-    "alis": 5817.79,
-    "satis": 5818.82,
-    "degisim": -0.09
+    "alis": 5815.27,
+    "satis": 5816.18,
+    "degisim": -0.14
    },
    "ceyrek": {
-    "alis": 9915,
-    "satis": 10235,
-    "degisim": -0.58
+    "alis": 9913,
+    "satis": 10227,
+    "degisim": -0.66
    },
    "gumus": {
-    "alis": 67.45,
-    "satis": 67.57,
-    "degisim": 0.83
+    "alis": 67.44,
+    "satis": 67.53,
+    "degisim": 0.78
    },
    "usd": {
-    "alis": 50.6689,
-    "satis": 50.6856,
+    "alis": 50.663,
+    "satis": 50.6913,
     "degisim": 0
    },
    "eur": {
-    "alis": 55.7032,
-    "satis": 55.79,
-    "degisim": 0.22
+    "alis": 55.7162,
+    "satis": 55.7988,
+    "degisim": 0.24
    },
    "bist": {
     "alis": null,
     "satis": 10655.74,
-    "degisim": -2.83
+    "degisim": 0
    },
    "btc": {
-    "satis": 3068777,
-    "usd": 60562,
-    "degisim": 2.65
+    "satis": 3065676,
+    "usd": 60494,
+    "degisim": 2.31
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 5817.79,
-    "satis": 5818.82,
-    "degisim": -0.09
+    "alis": 5815.27,
+    "satis": 5816.18,
+    "degisim": -0.14
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 9915,
-    "satis": 10235,
-    "degisim": -0.58
+    "alis": 9913,
+    "satis": 10227,
+    "degisim": -0.66
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 19829,
-    "satis": 20470,
-    "degisim": -0.58
+    "alis": 19827,
+    "satis": 20454,
+    "degisim": -0.66
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 39476,
-    "satis": 40693,
-    "degisim": -0.58
+    "alis": 39472,
+    "satis": 40663,
+    "degisim": -0.65
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40537,
-    "satis": 41308,
-    "degisim": -0.58
+    "alis": 40533,
+    "satis": 41277,
+    "degisim": -0.65
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40537,
-    "satis": 41308,
-    "degisim": -0.58
+    "alis": 40533,
+    "satis": 41277,
+    "degisim": -0.65
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40537,
-    "satis": 41308,
-    "degisim": -0.58
+    "alis": 40533,
+    "satis": 41277,
+    "degisim": -0.65
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5516.03,
-    "satis": 5755.21,
-    "degisim": -0.59
+    "alis": 5515.56,
+    "satis": 5751.08,
+    "degisim": -0.66
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4173,
-    "satis": 4920,
-    "degisim": -0.91
+    "alis": 4174,
+    "satis": 4915,
+    "degisim": -1.01
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3305.71,
-    "satis": 4493.5,
-    "degisim": -0.52
+    "alis": 3305.42,
+    "satis": 4490.64,
+    "degisim": -0.58
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 5788.7,
-    "satis": 5789.73,
-    "degisim": -0.09
+    "alis": 5786.2,
+    "satis": 5787.1,
+    "degisim": -0.14
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 67.45,
-    "satis": 67.57,
-    "degisim": 0.83
+    "alis": 67.44,
+    "satis": 67.53,
+    "degisim": 0.78
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.6689,
-    "satis": 50.6856,
+    "alis": 50.663,
+    "satis": 50.6913,
     "degisim": 0
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.7032,
-    "satis": 55.79,
-    "degisim": 0.22
+    "alis": 55.7162,
+    "satis": 55.7988,
+    "degisim": 0.24
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.5891,
-    "satis": 66.6685,
-    "degisim": 0.22
+    "alis": 66.5839,
+    "satis": 66.6637,
+    "degisim": 0.21
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.9074,
-    "satis": 60.9495,
+    "alis": 60.9061,
+    "satis": 60.9509,
     "degisim": -0.1
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.5076,
-    "satis": 13.5102,
-    "degisim": 0.01
+    "alis": 13.5069,
+    "satis": 13.5148,
+    "degisim": 0.02
    },
    {
     "k": "RUB",
     "ad": "Rus rublesi",
-    "alis": 0.6147,
-    "satis": 0.6149,
-    "degisim": 0.24
+    "alis": 0.6157,
+    "satis": 0.6161,
+    "degisim": 0.42
    }
   ],
-  "kaynakSaati": "2026-11-26 09:32:01"
+  "kaynakSaati": "2026-11-26 10:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-26T06:32:38.592Z",
+  "guncelleme": "2026-11-26T07:02:24.825Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -20979,8 +21004,12 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-26T06:32:38.960Z",
+  "guncelleme": "2026-11-26T07:02:25.362Z",
   "liste": [
+   {
+    "yol": "/haber/mersin-de-26-yildir-sari-lacivert-renklere-boyanan-ev-dikkat-cekiyor-1q3iy7k/",
+    "sayi": 10
+   },
    {
     "yol": "/haber/tarsus-ta-kirsal-mahallelerin-yollari-yenileniyor-1l7w1qw/",
     "sayi": 8
@@ -21006,12 +21035,12 @@
     "sayi": 6
    },
    {
-    "yol": "/",
+    "yol": "/is-ilanlari/tarsus/",
     "sayi": 5
    },
    {
-    "yol": "/is-ilanlari/tarsus/",
-    "sayi": 5
+    "yol": "/",
+    "sayi": 4
    },
    {
     "yol": "/haber/mumine-teyze-kahramani-ile-bulustu-mersin-de-kaybolmasinin-ardindan-7-1f1sptb/",
@@ -21056,15 +21085,15 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-26T06:33:46.770Z",
+  "guncelleme": "2026-11-26T07:02:27.343Z",
   "deniz": {
    "sicaklik": 21.4,
    "dalga": 0.12
   },
   "hava": {
    "aqi": 40,
-   "pm25": 7.5,
-   "pm10": 10,
+   "pm25": 7.2,
+   "pm10": 9.9,
    "uvMax": 2.7
   }
  },
@@ -21976,7 +22005,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-26T06:33:48.610Z",
+  "guncelleme": "2026-11-26T07:02:29.344Z",
   "liste": [
    {
     "id": 6386,
