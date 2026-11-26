@@ -15,17 +15,13 @@
   },
   "mersingundem": {
    "hata": "fetch failed",
-   "zaman": "2026-11-26T10:31:22.287Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-26T10:31:20.931Z"
+   "zaman": "2026-11-26T11:01:13.243Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-26",
-  "adet": 34,
-  "premium": 32
+  "adet": 37,
+  "premium": 35
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -358,7 +354,10 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/akdeniz-belediyesi-vezneleri-hafta-sonu-acik-olacak-119533362",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-hasema-davasinda-site-muduru-ve-havuz-gorevlisine-hapis-cezasi-119533330",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kadinlar-siddete-karsi-seslerini-yukseltti-119533323",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/yengesi-ve-onun-annesini-olduren-sanik-diyecek-bir-seyim-yok-119533287"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/yengesi-ve-onun-annesini-olduren-sanik-diyecek-bir-seyim-yok-119533287",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/kurtlarin-agila-girmesiyle-kaybolan-90-keci-5-gundur-araniyor-119533389",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/zeytinyagi-uretim-tesisleri-denetlendi-119533387",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/akkuyu-ngsnin-gelecekteki-muhendislerini-yetistirme-programina-basvurular-basladi-119533381"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -534,10 +533,18 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-26T10:31:59.702Z",
+  "guncelleme": "2026-11-26T11:01:45.498Z",
   "liste": [
    {
-    "baslik": "volotea",
+    "baslik": "denetim",
+    "trafik": 100
+   },
+   {
+    "baslik": "istiklal caddesi",
+    "trafik": 100
+   },
+   {
+    "baslik": "boşanma",
     "trafik": 200
    },
    {
@@ -545,11 +552,15 @@
     "trafik": 200
    },
    {
-    "baslik": "zara black friday",
-    "trafik": 100
+    "baslik": "volotea",
+    "trafik": 200
    },
    {
     "baslik": "namık tan",
+    "trafik": 100
+   },
+   {
+    "baslik": "zara black friday",
     "trafik": 100
    },
    {
@@ -562,19 +573,7 @@
    },
    {
     "baslik": "gram",
-    "trafik": 1000
-   },
-   {
-    "baslik": "dolandırıcılık",
-    "trafik": 200
-   },
-   {
-    "baslik": "25 kasım masterchef potaya kim gitti",
-    "trafik": 500
-   },
-   {
-    "baslik": "firari",
-    "trafik": 100
+    "trafik": 2000
    }
   ]
  },
