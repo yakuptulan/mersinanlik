@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-26",
-  "adet": 45,
-  "premium": 43
+  "adet": 46,
+  "premium": 44
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -165,7 +165,8 @@
    "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/mersinde-vatandaslar-gune-sporla-basliyor-2988968",
    "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/yengesi-ve-onun-annesini-olduren-sanik-diyecek-2988999",
    "https://www.dha.com.tr/yerel-haberler/mersin/gulnar/mersinde-ureticiye-sumak-fidani-destegi-2989121",
-   "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/akdeniz-belediyesi-vezneleri-hafta-sonu-acik-ol-2989149"
+   "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/akdeniz-belediyesi-vezneleri-hafta-sonu-acik-ol-2989149",
+   "https://www.dha.com.tr/yerel-haberler/mersin/mezitli/hasemali-kadini-havuza-almadiklari-iddia-edilen-2989168"
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
@@ -356,7 +357,9 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/kurtlarin-agila-girmesiyle-kaybolan-90-keci-5-gundur-araniyor-119533389",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/zeytinyagi-uretim-tesisleri-denetlendi-119533387",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/akkuyu-ngsnin-gelecekteki-muhendislerini-yetistirme-programina-basvurular-basladi-119533381",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/akdenizde-yesil-alanlara-sanatsal-dokunus-119533543"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/akdenizde-yesil-alanlara-sanatsal-dokunus-119533543",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/hasemali-kadini-havuza-almadiklari-iddia-edilen-site-yoneticisi-ve-gorevlisine-hapis-ve-119533582",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kadina-yonelik-siddete-karsi-farkindalik-etkinlikleri-duzenlendi-119533577"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -534,11 +537,23 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-26T12:31:44.767Z",
+  "guncelleme": "2026-11-26T13:01:38.191Z",
   "liste": [
    {
-    "baslik": "murat kurum",
+    "baslik": "fedai karagöz",
+    "trafik": 100
+   },
+   {
+    "baslik": "merkez bankası altın alımını durdurdu",
     "trafik": 200
+   },
+   {
+    "baslik": "adalet bakanlığı",
+    "trafik": 200
+   },
+   {
+    "baslik": "murat kurum",
+    "trafik": 500
    },
    {
     "baslik": "red dead redemption 2",
@@ -546,7 +561,11 @@
    },
    {
     "baslik": "mustafa keser",
-    "trafik": 200
+    "trafik": 500
+   },
+   {
+    "baslik": "sağlık",
+    "trafik": 10000
    },
    {
     "baslik": "katılımevim",
@@ -554,26 +573,10 @@
    },
    {
     "baslik": "fındık",
-    "trafik": 1000
+    "trafik": 2000
    },
    {
     "baslik": "macklemore sivas",
-    "trafik": 200
-   },
-   {
-    "baslik": "eren kaşıkçı",
-    "trafik": 1000
-   },
-   {
-    "baslik": "thanksgiving",
-    "trafik": 100
-   },
-   {
-    "baslik": "aralık",
-    "trafik": 200
-   },
-   {
-    "baslik": "denetim",
     "trafik": 200
    }
   ]
