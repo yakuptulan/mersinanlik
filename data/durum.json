@@ -15,13 +15,13 @@
   },
   "mersingundem": {
    "hata": "fetch failed",
-   "zaman": "2026-11-26T07:01:12.479Z"
+   "zaman": "2026-11-26T07:29:08.178Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-26",
-  "adet": 7,
-  "premium": 7
+  "adet": 10,
+  "premium": 9
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -516,15 +516,27 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-26T07:01:38.242Z",
+  "guncelleme": "2026-11-26T07:29:37.145Z",
   "liste": [
+   {
+    "baslik": "şarkıcı ceylan kaya",
+    "trafik": 2000
+   },
+   {
+    "baslik": "osimhen",
+    "trafik": 1000
+   },
+   {
+    "baslik": "rockstar games",
+    "trafik": 200
+   },
    {
     "baslik": "şahap kavcıoğlu",
     "trafik": 500
    },
    {
     "baslik": "dus sonuçları",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "arzum onan",
@@ -532,7 +544,7 @@
    },
    {
     "baslik": "triple-double",
-    "trafik": 1000
+    "trafik": 500
    },
    {
     "baslik": "boğa",
@@ -544,18 +556,6 @@
    },
    {
     "baslik": "andy taylor",
-    "trafik": 100
-   },
-   {
-    "baslik": "regaip kandili",
-    "trafik": 1000
-   },
-   {
-    "baslik": "tokat",
-    "trafik": 200
-   },
-   {
-    "baslik": "playstation",
     "trafik": 200
    }
   ]
