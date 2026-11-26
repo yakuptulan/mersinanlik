@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-26T19:08:14.141Z",
+ "guncelleme": "2026-11-26T19:31:50.774Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 13,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-26T19:08:17.431Z",
+  "guncelleme": "2026-11-26T19:31:55.900Z",
   "liste": [
    {
     "ad": "Anatolia Eczanesi",
@@ -762,7 +762,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-26T19:08:18.587Z",
+  "guncelleme": "2026-11-26T19:31:57.328Z",
   "liste": [
    {
     "tur": "su",
@@ -800,32 +800,32 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-26T19:08:22.933Z",
+  "guncelleme": "2026-11-26T19:32:00.289Z",
   "kalemler": {
    "gram": {
-    "alis": 5812.43,
-    "satis": 5813.26,
-    "degisim": -0.19
+    "alis": 5810.1,
+    "satis": 5811.03,
+    "degisim": -0.23
    },
    "ceyrek": {
-    "alis": 9784,
-    "satis": 10025,
-    "degisim": -2.62
+    "alis": 9782,
+    "satis": 10023,
+    "degisim": -2.64
    },
    "gumus": {
-    "alis": 67.7,
-    "satis": 67.79,
-    "degisim": 1.17
+    "alis": 67.61,
+    "satis": 67.73,
+    "degisim": 1.07
    },
    "usd": {
-    "alis": 50.6703,
-    "satis": 50.6834,
+    "alis": 50.6723,
+    "satis": 50.6821,
     "degisim": 0
    },
    "eur": {
-    "alis": 55.7391,
-    "satis": 55.7552,
-    "degisim": 0.22
+    "alis": 55.7256,
+    "satis": 55.7517,
+    "degisim": 0.21
    },
    "bist": {
     "alis": null,
@@ -833,132 +833,132 @@
     "degisim": 0.82
    },
    "btc": {
-    "satis": 3063833,
-    "usd": 60458,
-    "degisim": 0.98
+    "satis": 3069247,
+    "usd": 60565,
+    "degisim": 0.82
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 5812.43,
-    "satis": 5813.26,
-    "degisim": -0.19
+    "alis": 5810.1,
+    "satis": 5811.03,
+    "degisim": -0.23
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 9784,
-    "satis": 10025,
-    "degisim": -2.62
+    "alis": 9782,
+    "satis": 10023,
+    "degisim": -2.64
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 19567,
-    "satis": 20049,
-    "degisim": -2.62
+    "alis": 19565,
+    "satis": 20046,
+    "degisim": -2.64
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 39014,
-    "satis": 39797,
-    "degisim": -2.77
+    "alis": 39010,
+    "satis": 39789,
+    "degisim": -2.79
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40095,
-    "satis": 40521,
-    "degisim": -2.47
+    "alis": 40090,
+    "satis": 40514,
+    "degisim": -2.49
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40095,
-    "satis": 40521,
-    "degisim": -2.47
+    "alis": 40090,
+    "satis": 40514,
+    "degisim": -2.49
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40095,
-    "satis": 40521,
-    "degisim": -2.47
+    "alis": 40090,
+    "satis": 40514,
+    "degisim": -2.49
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5460.02,
-    "satis": 5653.77,
-    "degisim": -2.34
+    "alis": 5459.35,
+    "satis": 5652.73,
+    "degisim": -2.36
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4139,
+    "alis": 4137,
     "satis": 4835,
     "degisim": -2.62
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3271.24,
-    "satis": 4423.35,
-    "degisim": -2.07
+    "alis": 3270.83,
+    "satis": 4422.63,
+    "degisim": -2.09
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 5783.36,
-    "satis": 5784.19,
-    "degisim": -0.19
+    "alis": 5781.05,
+    "satis": 5781.98,
+    "degisim": -0.23
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 67.7,
-    "satis": 67.79,
-    "degisim": 1.17
+    "alis": 67.61,
+    "satis": 67.73,
+    "degisim": 1.07
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.6703,
-    "satis": 50.6834,
+    "alis": 50.6723,
+    "satis": 50.6821,
     "degisim": 0
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.7391,
-    "satis": 55.7552,
-    "degisim": 0.22
+    "alis": 55.7256,
+    "satis": 55.7517,
+    "degisim": 0.21
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.5921,
-    "satis": 66.6144,
-    "degisim": 0.18
+    "alis": 66.5799,
+    "satis": 66.6009,
+    "degisim": 0.16
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.7339,
-    "satis": 60.7788,
-    "degisim": -0.38
+    "alis": 60.7271,
+    "satis": 60.7639,
+    "degisim": -0.4
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.5082,
-    "satis": 13.5127,
-    "degisim": 0.02
+    "alis": 13.5059,
+    "satis": 13.5118,
+    "degisim": 0.01
    },
    {
     "k": "RUB",
@@ -968,7 +968,7 @@
     "degisim": 0.99
    }
   ],
-  "kaynakSaati": "2026-11-26 22:08:01"
+  "kaynakSaati": "2026-11-26 22:31:01"
  },
  "akaryakit": {
   "guncelleme": "2026-11-26T19:08:25.369Z",
@@ -1796,7 +1796,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-26T18:32:02.703Z",
+  "guncelleme": "2026-11-26T19:32:05.885Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -21285,7 +21285,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-26T18:32:44.597Z",
+    "guncelleme": "2026-11-26T19:32:49.252Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21367,7 +21367,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-26T18:32:45.840Z",
+    "guncelleme": "2026-11-26T19:32:50.527Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21449,7 +21449,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-26T18:32:47.090Z",
+    "guncelleme": "2026-11-26T19:32:51.811Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21548,7 +21548,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-26T19:08:25.901Z",
+  "guncelleme": "2026-11-26T19:32:03.877Z",
   "liste": [
    {
     "yol": "/haber/mersin-de-26-yildir-sari-lacivert-renklere-boyanan-ev-dikkat-cekiyor-1q3iy7k/",
@@ -21613,7 +21613,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-26T19:08:28.005Z",
+  "guncelleme": "2026-11-26T19:32:53.011Z",
   "deniz": {
    "sicaklik": 21.3,
    "dalga": 0.14
@@ -22857,7 +22857,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-26T19:08:29.970Z",
+  "guncelleme": "2026-11-26T19:32:55.641Z",
   "liste": [
    {
     "id": 6386,
