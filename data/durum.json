@@ -15,17 +15,13 @@
   },
   "mersingundem": {
    "hata": "fetch failed",
-   "zaman": "2026-11-26T10:01:27.738Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-26T10:01:26.318Z"
+   "zaman": "2026-11-26T10:19:39.529Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-26",
-  "adet": 28,
-  "premium": 27
+  "adet": 31,
+  "premium": 29
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -354,7 +350,11 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-iki-akrabasini-tabancayla-olduren-sanik-yargilaniyor-119533183",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-vatandaslar-gune-sporla-basliyor-119533256",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-yengesi-ile-yengesinin-annesini-olduren-sanigin-yargilanmasina-devam-edildi-119533218",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-ureticilere-20-bin-sumak-fidani-destegi-119533205"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-ureticilere-20-bin-sumak-fidani-destegi-119533205",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/akdeniz-belediyesi-vezneleri-hafta-sonu-acik-olacak-119533362",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-hasema-davasinda-site-muduru-ve-havuz-gorevlisine-hapis-cezasi-119533330",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kadinlar-siddete-karsi-seslerini-yukseltti-119533323",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/yengesi-ve-onun-annesini-olduren-sanik-diyecek-bir-seyim-yok-119533287"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -530,15 +530,31 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-26T10:02:04.547Z",
+  "guncelleme": "2026-11-26T10:20:22.132Z",
   "liste": [
+   {
+    "baslik": "volotea",
+    "trafik": 200
+   },
+   {
+    "baslik": "ferdi kadıoğlu",
+    "trafik": 200
+   },
+   {
+    "baslik": "zara black friday",
+    "trafik": 100
+   },
+   {
+    "baslik": "namık tan",
+    "trafik": 100
+   },
    {
     "baslik": "ثلج",
     "trafik": 100
    },
    {
     "baslik": "oğuzhan çakır",
-    "trafik": 2000
+    "trafik": 5000
    },
    {
     "baslik": "gram",
@@ -555,22 +571,6 @@
    {
     "baslik": "firari",
     "trafik": 100
-   },
-   {
-    "baslik": "mustafa çulcu",
-    "trafik": 100
-   },
-   {
-    "baslik": "25 kasım sayısal loto çekiliş sonuçları",
-    "trafik": 100
-   },
-   {
-    "baslik": "çankaya belediyesi",
-    "trafik": 1000
-   },
-   {
-    "baslik": "motorine indirim geldi",
-    "trafik": 500
    }
   ]
  },
