@@ -12,16 +12,12 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-26T13:29:21.666Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-26",
-  "adet": 49,
-  "premium": 47
+  "adet": 51,
+  "premium": 49
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -544,8 +540,12 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-26T13:30:00.520Z",
+  "guncelleme": "2026-11-26T13:34:43.875Z",
   "liste": [
+   {
+    "baslik": "liselere geçiş sistemi",
+    "trafik": 200
+   },
    {
     "baslik": "piyango",
     "trafik": 1000
@@ -556,7 +556,7 @@
    },
    {
     "baslik": "t24",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "gram altın ne kadar 2026",
@@ -572,7 +572,7 @@
    },
    {
     "baslik": "merkez bankası altın alımını durdurdu",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "adalet bakanlığı",
@@ -580,11 +580,7 @@
    },
    {
     "baslik": "murat kurum",
-    "trafik": 500
-   },
-   {
-    "baslik": "red dead redemption 2",
-    "trafik": 100
+    "trafik": 1000
    }
   ]
  },
