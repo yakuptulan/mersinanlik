@@ -15,7 +15,11 @@
   },
   "mersingundem": {
    "hata": "fetch failed",
-   "zaman": "2026-11-26T01:31:12.345Z"
+   "zaman": "2026-11-26T02:01:20.615Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-26T02:01:18.908Z"
   }
  },
  "gorsel": {
@@ -510,8 +514,16 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-26T01:31:37.510Z",
+  "guncelleme": "2026-11-26T02:01:44.329Z",
   "liste": [
+   {
+    "baslik": "rockets - suns",
+    "trafik": 200
+   },
+   {
+    "baslik": "now",
+    "trafik": 200
+   },
    {
     "baslik": "fox",
     "trafik": 200
@@ -522,7 +534,7 @@
    },
    {
     "baslik": "now tv",
-    "trafik": 1000
+    "trafik": 2000
    },
    {
     "baslik": "lukaku",
@@ -538,19 +550,11 @@
    },
    {
     "baslik": "ersin destanoğlu",
-    "trafik": 1000
+    "trafik": 2000
    },
    {
     "baslik": "sporx",
     "trafik": 500
-   },
-   {
-    "baslik": "trtspor",
-    "trafik": 100
-   },
-   {
-    "baslik": "shakhtar donetsk vs fenerbahçe standings",
-    "trafik": 2000
    }
   ]
  },
