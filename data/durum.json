@@ -12,11 +12,15 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "mersin-universitesi": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-26T17:01:36.946Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-26",
-  "adet": 61,
+  "adet": 62,
   "premium": 52
  },
  "kurumGorulen": {
@@ -369,7 +373,9 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mtsodan-rusya-icin-5-bin-ek-gecis-belgesi-talebi-119533713",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-her-mahalle-bir-mersin-projesi-devam-ediyor-119533722",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/otomobille-carpisan-motosikletin-surucusu-hayatini-kaybetti-119533760",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/her-mahalle-bir-mersin-projesinin-5duragi-silifke-oldu-119533783"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/her-mahalle-bir-mersin-projesinin-5duragi-silifke-oldu-119533783",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-tefecilik-operasyonlarinda-yakalanan-3-zanli-tutuklandi-119533830",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-tefecilik-operasyonu-3-tutuklama-119533827"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -547,15 +553,23 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-26T16:31:53.535Z",
+  "guncelleme": "2026-11-26T17:01:51.923Z",
   "liste": [
    {
-    "baslik": "lesley ugochukwu",
+    "baslik": "toki arsa satışı",
     "trafik": 200
    },
    {
-    "baslik": "gta vı pc",
+    "baslik": "zeynep kut korkut kut",
+    "trafik": 200
+   },
+   {
+    "baslik": "lesley ugochukwu",
     "trafik": 500
+   },
+   {
+    "baslik": "gta vı pc",
+    "trafik": 200
    },
    {
     "baslik": "arina fedorovtseva",
@@ -563,7 +577,7 @@
    },
    {
     "baslik": "mbaye diagne",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "eurohoops türkiye",
@@ -580,14 +594,6 @@
    {
     "baslik": "beşiktaş",
     "trafik": 200000
-   },
-   {
-    "baslik": "sosyal konut",
-    "trafik": 1000
-   },
-   {
-    "baslik": "siber saldırı",
-    "trafik": 100
    }
   ]
  },
