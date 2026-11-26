@@ -15,13 +15,13 @@
   },
   "mersingundem": {
    "hata": "fetch failed",
-   "zaman": "2026-11-26T06:01:14.708Z"
+   "zaman": "2026-11-26T06:31:13.193Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-26",
-  "adet": 1,
-  "premium": 1
+  "adet": 4,
+  "premium": 4
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -336,7 +336,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-sehitler-anisina-fidan-dikildi-119532662",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kari-kocanin-hayatini-kaybettigi-yangina-iliskin-yeniden-bilirkisi-raporu-119532644",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-aranan-alzheimer-hastasi-kadini-bulan-belediye-personeli-odullendirildi-119532699",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-erdemli-ogretmenevi-ek-hizmet-binasi-hizmete-acildi-119532690"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-erdemli-ogretmenevi-ek-hizmet-binasi-hizmete-acildi-119532690",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-26-yildir-sari-lacivert-renklere-boyanan-ev-dikkat-cekiyor-119532930"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -510,10 +511,26 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-26T06:01:46.840Z",
+  "guncelleme": "2026-11-26T06:31:47.105Z",
   "liste": [
    {
-    "baslik": "saadet partisi",
+    "baslik": "triple-double",
+    "trafik": 1000
+   },
+   {
+    "baslik": "arzum onan",
+    "trafik": 200
+   },
+   {
+    "baslik": "boğa",
+    "trafik": 100
+   },
+   {
+    "baslik": "saadet partisi imza kampanyası",
+    "trafik": 200
+   },
+   {
+    "baslik": "andy taylor",
     "trafik": 100
    },
    {
@@ -530,26 +547,10 @@
    },
    {
     "baslik": "thunder - timberwolves",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "trail blazers - spurs",
-    "trafik": 500
-   },
-   {
-    "baslik": "t.c. resmî gazete",
-    "trafik": 1000
-   },
-   {
-    "baslik": "warriors - kings",
-    "trafik": 500
-   },
-   {
-    "baslik": "değerli metal",
-    "trafik": 500
-   },
-   {
-    "baslik": "taşacak bu deniz",
     "trafik": 500
    }
   ]
