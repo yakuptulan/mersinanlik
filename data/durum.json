@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-26",
-  "adet": 51,
-  "premium": 49
+  "adet": 53,
+  "premium": 51
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -362,7 +362,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/akkuyu-ngsnin-gelecekteki-muhendislerini-yetistirme-programina-basvurular-basladi-119533381",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/akdenizde-yesil-alanlara-sanatsal-dokunus-119533543",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/hasemali-kadini-havuza-almadiklari-iddia-edilen-site-yoneticisi-ve-gorevlisine-hapis-ve-119533582",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kadina-yonelik-siddete-karsi-farkindalik-etkinlikleri-duzenlendi-119533577"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kadina-yonelik-siddete-karsi-farkindalik-etkinlikleri-duzenlendi-119533577",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-yanginda-3-cocuk-kurtarildi-kedi-telef-oldu-119533670"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -540,8 +541,20 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-26T13:34:43.875Z",
+  "guncelleme": "2026-11-26T14:01:54.483Z",
   "liste": [
+   {
+    "baslik": "arsa",
+    "trafik": 100
+   },
+   {
+    "baslik": "kalehaber",
+    "trafik": 100
+   },
+   {
+    "baslik": "ordu",
+    "trafik": 200
+   },
    {
     "baslik": "liselere geçiş sistemi",
     "trafik": 200
@@ -551,11 +564,11 @@
     "trafik": 1000
    },
    {
-    "baslik": "emekli maaşı",
-    "trafik": 2000
+    "baslik": "t24",
+    "trafik": 500
    },
    {
-    "baslik": "t24",
+    "baslik": "emekli maaşı",
     "trafik": 500
    },
    {
@@ -564,23 +577,11 @@
    },
    {
     "baslik": "devalüasyon",
-    "trafik": 100
-   },
-   {
-    "baslik": "fedai karagöz",
-    "trafik": 100
-   },
-   {
-    "baslik": "merkez bankası altın alımını durdurdu",
-    "trafik": 500
-   },
-   {
-    "baslik": "adalet bakanlığı",
     "trafik": 200
    },
    {
-    "baslik": "murat kurum",
-    "trafik": 1000
+    "baslik": "fedai karagöz",
+    "trafik": 200
    }
   ]
  },

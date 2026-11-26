@@ -502,16 +502,17 @@
    "kaynakHatalari": []
   },
   "2026-11-26": {
-   "guncelleme": "2026-11-26T13:37:06.590Z",
-   "mersinHaber": 59,
-   "kendiYazimiz": 56,
-   "turkiyeDunya": 188,
-   "otomatik": 12,
+   "guncelleme": "2026-11-26T14:03:49.001Z",
+   "mersinHaber": 63,
+   "kendiYazimiz": 60,
+   "turkiyeDunya": 196,
+   "otomatik": 14,
    "otomatikTurler": {
     "ucus": 1,
     "yakit": 1,
-    "su": 9,
-    "piyasa": 1
+    "su": 10,
+    "piyasa": 1,
+    "eczane": 1
    },
    "otomatikBasliklar": [
     {
@@ -573,9 +574,19 @@
      "baslik": "Silifke'de su kesintisi (26 Kasım): Taşucu, 6 saat sürecek",
      "tur": "su",
      "saat": "15:34"
+    },
+    {
+     "baslik": "Akdeniz ve Toroslar'da su kesintisi (26 Kasım): Çay, Çilek ve 1 mahalle daha",
+     "tur": "su",
+     "saat": "17:03"
+    },
+    {
+     "baslik": "Mersin nöbetçi eczaneler: 26 Kasım Perşembe",
+     "tur": "eczane",
+     "saat": "17:03"
     }
    ],
-   "gorsel": 51,
+   "gorsel": 53,
    "bilgi": 2,
    "gezi": 0,
    "kaynakHatalari": []
