@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-26T20:01:54.637Z",
+ "guncelleme": "2026-11-26T20:31:55.041Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 13,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-26T20:02:00.364Z",
+  "guncelleme": "2026-11-26T20:31:58.727Z",
   "liste": [
    {
     "ad": "Anatolia Eczanesi",
@@ -762,7 +762,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-26T20:02:01.718Z",
+  "guncelleme": "2026-11-26T20:31:59.702Z",
   "liste": [
    {
     "tur": "su",
@@ -955,7 +955,7 @@
   "kaynakSaati": "2026-11-26 22:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-26T20:02:06.675Z",
+  "guncelleme": "2026-11-26T20:32:05.909Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1780,7 +1780,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-26T19:32:05.885Z",
+  "guncelleme": "2026-11-26T20:32:08.415Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -21269,7 +21269,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-26T19:32:49.252Z",
+    "guncelleme": "2026-11-26T20:32:51.834Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21351,7 +21351,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-26T19:32:50.527Z",
+    "guncelleme": "2026-11-26T20:32:53.044Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21433,7 +21433,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-26T19:32:51.811Z",
+    "guncelleme": "2026-11-26T20:32:54.258Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21532,7 +21532,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-26T20:02:07.078Z",
+  "guncelleme": "2026-11-26T20:32:06.740Z",
   "liste": [
    {
     "yol": "/haber/mersin-de-26-yildir-sari-lacivert-renklere-boyanan-ev-dikkat-cekiyor-1q3iy7k/",
@@ -21571,6 +21571,10 @@
     "sayi": 2
    },
    {
+    "yol": "/is-ilanlari/meslek/sofor-yuk-tasima/",
+    "sayi": 1
+   },
+   {
     "yol": "/haber/mersin-antik-kilikya-limanlari-deniz-muzesi-nde-konusuldu-brjp1u/",
     "sayi": 1
    },
@@ -21601,7 +21605,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-26T20:02:09.973Z",
+  "guncelleme": "2026-11-26T20:32:55.458Z",
   "deniz": {
    "sicaklik": 21.3,
    "dalga": 0.12
@@ -21614,20 +21618,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-26T20:02:12.553Z",
+  "guncelleme": "2026-11-26T20:32:57.433Z",
   "giden": [
-   {
-    "no": [
-     "PC3603"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Antalya",
-    "planlanan": "2026-11-26T20:25:00.000Z",
-    "tahmini": null,
-    "kapi": "105",
-    "durum": "SON ÇAĞRI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC2095"
@@ -21637,7 +21629,7 @@
     "planlanan": "2026-11-26T21:05:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -22179,21 +22171,45 @@
     "kapi": "106",
     "durum": "",
     "hat": "ic"
-   }
-  ],
-  "gelen": [
+   },
    {
     "no": [
-     "PC2092"
+     "VF3147"
     ],
-    "havayolu": "Pegasus",
+    "havayolu": "AJet",
     "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-26T20:15:00.000Z",
+    "planlanan": "2026-11-27T20:05:00.000Z",
     "tahmini": null,
-    "kapi": "",
+    "kapi": "104",
     "durum": "",
     "hat": "ic"
    },
+   {
+    "no": [
+     "PC1860"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-27T20:20:00.000Z",
+    "tahmini": null,
+    "kapi": "102",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "PC4145"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-27T20:25:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
+   }
+  ],
+  "gelen": [
    {
     "no": [
      "PC4246"
@@ -22568,10 +22584,10 @@
    },
    {
     "no": [
-     "XC9542"
+     "2S5721"
     ],
-    "havayolu": "Corendon Airlines",
-    "yer": "Cidde",
+    "havayolu": "Southwind Airlines",
+    "yer": "Medine",
     "planlanan": "2026-11-27T12:50:00.000Z",
     "tahmini": null,
     "kapi": "",
@@ -22580,10 +22596,10 @@
    },
    {
     "no": [
-     "2S5721"
+     "XC9542"
     ],
-    "havayolu": "Southwind Airlines",
-    "yer": "Medine",
+    "havayolu": "Corendon Airlines",
+    "yer": "Cidde",
     "planlanan": "2026-11-27T12:50:00.000Z",
     "tahmini": null,
     "kapi": "",
@@ -22841,11 +22857,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2094"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-27T20:20:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-26T20:02:12.552Z",
+  "guncelleme": "2026-11-26T20:32:57.433Z",
   "liste": [
    {
     "id": 6386,
