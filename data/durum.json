@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "mersin-universitesi": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-26T22:01:40.510Z"
   }
  },
  "gorsel": {
@@ -552,11 +556,27 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-26T21:31:34.830Z",
+  "guncelleme": "2026-11-26T22:01:56.299Z",
   "liste": [
    {
-    "baslik": "kızılyıldız",
+    "baslik": "ozan tufan",
     "trafik": 200
+   },
+   {
+    "baslik": "panathinaikos",
+    "trafik": 100
+   },
+   {
+    "baslik": "jeff ekhator",
+    "trafik": 100
+   },
+   {
+    "baslik": "hoffenheim",
+    "trafik": 200
+   },
+   {
+    "baslik": "onana",
+    "trafik": 100
    },
    {
     "baslik": "tsg 1899 hoffenheim",
@@ -567,7 +587,7 @@
     "trafik": 100
    },
    {
-    "baslik": "atalanta bc",
+    "baslik": "kızılyıldız",
     "trafik": 200
    },
    {
@@ -575,23 +595,7 @@
     "trafik": 200
    },
    {
-    "baslik": "as monaco fc",
-    "trafik": 1000
-   },
-   {
-    "baslik": "europa conference league",
-    "trafik": 200
-   },
-   {
-    "baslik": "sc freiburg",
-    "trafik": 200
-   },
-   {
-    "baslik": "ofi",
-    "trafik": 200
-   },
-   {
-    "baslik": "avrupa konferans ligi puan durumu",
+    "baslik": "atalanta bc",
     "trafik": 200
    }
   ]

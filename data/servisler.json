@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-26T21:31:35.191Z",
+ "guncelleme": "2026-11-26T22:01:56.654Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 13,
@@ -74,8 +74,8 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 12,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 11,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
@@ -219,7 +219,7 @@
   },
   "gulnar": {
    "sicaklik": 6,
-   "durum": "Parçalı bulutlu",
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-26T21:31:38.279Z",
+  "guncelleme": "2026-11-26T22:02:00.941Z",
   "liste": [
    {
     "ad": "Anatolia Eczanesi",
@@ -696,7 +696,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-26T21:02:19.179Z",
+  "guncelleme": "2026-11-26T22:02:02.073Z",
   "liste": []
  },
  "piyasa": {
@@ -871,7 +871,7 @@
   "kaynakSaati": "2026-11-27 00:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-26T21:31:43.943Z",
+  "guncelleme": "2026-11-26T22:02:07.380Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -21348,7 +21348,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-26T21:31:44.738Z",
+  "guncelleme": "2026-11-26T22:02:07.862Z",
   "liste": [
    {
     "yol": "/haber/mersin-de-26-yildir-sari-lacivert-renklere-boyanan-ev-dikkat-cekiyor-1q3iy7k/",
@@ -21425,20 +21425,20 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-26T21:32:34.494Z",
+  "guncelleme": "2026-11-26T22:02:09.395Z",
   "deniz": {
    "sicaklik": 21.2,
    "dalga": 0.12
   },
   "hava": {
-   "aqi": 40,
-   "pm25": 10.6,
-   "pm10": 14.9,
+   "aqi": 37,
+   "pm25": 8.9,
+   "pm10": 12.8,
    "uvMax": 2.35
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-26T21:32:36.476Z",
+  "guncelleme": "2026-11-26T22:02:11.525Z",
   "giden": [
    {
     "no": [
@@ -22032,18 +22032,6 @@
   "gelen": [
    {
     "no": [
-     "PC2096"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-26T21:45:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
      "VF3148"
     ],
     "havayolu": "AJet",
@@ -22380,10 +22368,10 @@
    },
    {
     "no": [
-     "XC9542"
+     "2S5721"
     ],
-    "havayolu": "Corendon Airlines",
-    "yer": "Cidde",
+    "havayolu": "Southwind Airlines",
+    "yer": "Medine",
     "planlanan": "2026-11-27T12:50:00.000Z",
     "tahmini": null,
     "kapi": "",
@@ -22392,10 +22380,10 @@
    },
    {
     "no": [
-     "2S5721"
+     "XC9542"
     ],
-    "havayolu": "Southwind Airlines",
-    "yer": "Medine",
+    "havayolu": "Corendon Airlines",
+    "yer": "Cidde",
     "planlanan": "2026-11-27T12:50:00.000Z",
     "tahmini": null,
     "kapi": "",
@@ -22665,11 +22653,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3014"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-27T21:45:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-26T21:32:36.476Z",
+  "guncelleme": "2026-11-26T22:02:11.524Z",
   "liste": [
    {
     "id": 6386,
