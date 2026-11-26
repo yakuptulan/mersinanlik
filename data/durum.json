@@ -15,13 +15,13 @@
   },
   "mersingundem": {
    "hata": "fetch failed",
-   "zaman": "2026-11-26T07:29:08.178Z"
+   "zaman": "2026-11-26T07:34:31.993Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-26",
-  "adet": 10,
-  "premium": 9
+  "adet": 13,
+  "premium": 12
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -516,8 +516,12 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-26T07:29:37.145Z",
+  "guncelleme": "2026-11-26T07:35:05.854Z",
   "liste": [
+   {
+    "baslik": "adana",
+    "trafik": 500
+   },
    {
     "baslik": "şarkıcı ceylan kaya",
     "trafik": 2000
@@ -540,7 +544,7 @@
    },
    {
     "baslik": "arzum onan",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "triple-double",
@@ -553,10 +557,6 @@
    {
     "baslik": "saadet partisi imza kampanyası",
     "trafik": 500
-   },
-   {
-    "baslik": "andy taylor",
-    "trafik": 200
    }
   ]
  },
