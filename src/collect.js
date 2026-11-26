@@ -28,6 +28,7 @@ function kurumKaynagi(h) {
 import { geminiHazirMi, topluOzetle, jsonYaz } from './lib/gemini.js';
 import { telegramHazirMi, onayIste, kararlariOku, sohbetBul } from './lib/telegram.js';
 import { isverenIlaniEkle } from './lib/isverenIlani.js';
+import { haberYolu } from './templates/parcalar.js';
 
 const DURUM_DOSYASI = path.resolve('data/durum.json');
 
@@ -62,6 +63,8 @@ Yalnızca JSON döndür: {"gruplar": [[1, 4], [2, 7, 9]]}. Aynı olay yoksa {"gr
       ana.ilceler = [...new Set([...ana.ilceler, ...d.ilceler])];
       if (!ana.gorsel && d.gorsel) Object.assign(ana, { gorsel: d.gorsel, gorselKaynak: d.gorselKaynak });
       ana.riskNedenleri = [...new Set([...ana.riskNedenleri, ...d.riskNedenleri])];
+      // Birleşen haberin adresi ana habere 301 ile yönlenir (Google'da 404 kalmasın)
+      ana.eskiYollar = [...new Set([...(ana.eskiYollar || []), ...(d.eskiYollar || []), d.yol || haberYolu(d)])];
       veri.hikayeler.splice(veri.hikayeler.indexOf(d), 1);
       birlesen++;
     }
