@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "mersin-universitesi": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-26T17:01:36.946Z"
   }
  },
  "gorsel": {
@@ -553,19 +549,35 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-26T17:01:51.923Z",
+  "guncelleme": "2026-11-26T17:31:51.308Z",
   "liste": [
+   {
+    "baslik": "uel",
+    "trafik": 100
+   },
+   {
+    "baslik": "viktoria plzeň - benfica",
+    "trafik": 1000
+   },
+   {
+    "baslik": "europa league",
+    "trafik": 100
+   },
    {
     "baslik": "toki arsa satışı",
     "trafik": 200
    },
    {
+    "baslik": "merkez bankası altın alımı",
+    "trafik": 2000
+   },
+   {
     "baslik": "zeynep kut korkut kut",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "lesley ugochukwu",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "gta vı pc",
@@ -573,27 +585,11 @@
    },
    {
     "baslik": "arina fedorovtseva",
-    "trafik": 1000
+    "trafik": 2000
    },
    {
     "baslik": "mbaye diagne",
-    "trafik": 1000
-   },
-   {
-    "baslik": "eurohoops türkiye",
-    "trafik": 200
-   },
-   {
-    "baslik": "ataşehir",
-    "trafik": 100
-   },
-   {
-    "baslik": "italya millî basketbol takımı",
-    "trafik": 200
-   },
-   {
-    "baslik": "beşiktaş",
-    "trafik": 200000
+    "trafik": 2000
    }
   ]
  },
