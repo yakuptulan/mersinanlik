@@ -15,13 +15,13 @@
   },
   "mersin-universitesi": {
    "hata": "fetch failed",
-   "zaman": "2026-11-27T10:16:40.401Z"
+   "zaman": "2026-11-27T10:31:32.008Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-27",
-  "adet": 27,
-  "premium": 27
+  "adet": 30,
+  "premium": 30
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -83,7 +83,8 @@
    "https://www.yenisehir.bel.tr/haber/yenisehir-belediyesi-artik-cebinizde",
    "https://www.yenisehir.bel.tr/haber/yenisehirde-firinlar-mercek-altinda",
    "https://yenisehir.bel.tr/haber/yenisehirde-firinlar-mercek-altinda",
-   "https://www.yenisehir.bel.tr/haber/baskanvekili-dutlu-hicbir-mahallemizi-goz-ardi-etmiyoruz"
+   "https://www.yenisehir.bel.tr/haber/baskanvekili-dutlu-hicbir-mahallemizi-goz-ardi-etmiyoruz",
+   "https://yenisehir.bel.tr/haber/baskanvekili-dutlu-hicbir-mahallemizi-goz-ardi-etmiyoruz"
   ],
   "tarsus-belediyesi": [],
   "erdemli-belediyesi": [
@@ -181,7 +182,8 @@
    "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/cimsa-cbk-mersin-baxi-ferrol-93-57-2989376",
    "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/meskiden-tarsusun-3-mahallesine-kesintisiz-ic-2989532",
    "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/minik-serhatin-muzik-yolculugu-buyuksehir-ile-2989523",
-   "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/toroslarda-firinlara-hijyen-gramaj-ve-fiyat-d-2989603"
+   "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/toroslarda-firinlara-hijyen-gramaj-ve-fiyat-d-2989603",
+   "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/akdenizde-konteynerler-yikanip-dezenfekte-edil-2989740"
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
@@ -580,11 +582,15 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T10:16:56.353Z",
+  "guncelleme": "2026-11-27T10:31:48.098Z",
   "liste": [
    {
-    "baslik": "özgür erdursun - sosyal güv uzm",
+    "baslik": "kadınlar basketbol süper ligi",
     "trafik": 200
+   },
+   {
+    "baslik": "nazilli",
+    "trafik": 100
    },
    {
     "baslik": "hipersonik",
@@ -595,8 +601,12 @@
     "trafik": 500
    },
    {
+    "baslik": "cuma saati",
+    "trafik": 50000
+   },
+   {
     "baslik": "motorin zam",
-    "trafik": 500
+    "trafik": 2000
    },
    {
     "baslik": "akrep",
@@ -607,19 +617,11 @@
     "trafik": 200
    },
    {
-    "baslik": "öğle namazı",
-    "trafik": 50000
-   },
-   {
     "baslik": "heyelan",
     "trafik": 200
    },
    {
     "baslik": "ilham ahmed",
-    "trafik": 100
-   },
-   {
-    "baslik": "soğuksu milli parkı",
     "trafik": 200
    }
   ]
