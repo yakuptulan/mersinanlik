@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-27",
-  "adet": 39,
-  "premium": 39
+  "adet": 42,
+  "premium": 42
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -579,15 +579,27 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T12:01:34.582Z",
+  "guncelleme": "2026-11-27T12:31:47.785Z",
   "liste": [
    {
-    "baslik": "pape gueye",
+    "baslik": "tv dizisi",
+    "trafik": 200
+   },
+   {
+    "baslik": "iflas",
+    "trafik": 500
+   },
+   {
+    "baslik": "ege üniversitesi",
     "trafik": 100
    },
    {
+    "baslik": "pape gueye",
+    "trafik": 200
+   },
+   {
     "baslik": "miras",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "devalüasyon",
@@ -595,15 +607,11 @@
    },
    {
     "baslik": "doğum",
-    "trafik": 200
-   },
-   {
-    "baslik": "ali kemal hut kimdir",
-    "trafik": 2000
+    "trafik": 500
    },
    {
     "baslik": "bursa yüksek hızlı tren garı",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "çankaya belediyesi",
@@ -612,14 +620,6 @@
    {
     "baslik": "osmangazi belediyesi",
     "trafik": 100
-   },
-   {
-    "baslik": "burj khalifa",
-    "trafik": 100
-   },
-   {
-    "baslik": "somer sivrioğlu",
-    "trafik": 2000
    }
   ]
  },
