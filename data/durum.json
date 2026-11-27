@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-27T18:01:19.351Z"
   }
  },
  "gorsel": {
@@ -588,8 +592,20 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T17:31:52.396Z",
+  "guncelleme": "2026-11-27T18:01:57.229Z",
   "liste": [
+   {
+    "baslik": "carlos tevez",
+    "trafik": 100
+   },
+   {
+    "baslik": "ألانيا سبور ضد كونياسبور",
+    "trafik": 100
+   },
+   {
+    "baslik": "beşiktaş-galatasaray derbisi",
+    "trafik": 5000
+   },
    {
     "baslik": "recep ivedik 8",
     "trafik": 200
@@ -607,27 +623,15 @@
     "trafik": 200
    },
    {
+    "baslik": "vatandaş",
+    "trafik": 200
+   },
+   {
     "baslik": "ademola lookman",
     "trafik": 200
    },
    {
     "baslik": "rizespor - kasımpaşa",
-    "trafik": 10000
-   },
-   {
-    "baslik": "hikmet çetin kimdir",
-    "trafik": 200
-   },
-   {
-    "baslik": "bist 30",
-    "trafik": 200
-   },
-   {
-    "baslik": "pa",
-    "trafik": 100
-   },
-   {
-    "baslik": "alanyaspor - konyaspor",
     "trafik": 20000
    }
   ]

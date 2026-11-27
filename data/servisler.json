@@ -1,9 +1,9 @@
 {
- "guncelleme": "2026-11-27T17:32:05.763Z",
+ "guncelleme": "2026-11-27T18:01:57.704Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 14,
-   "durum": "Az bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
@@ -38,7 +38,7 @@
    ]
   },
   "anamur": {
-   "sicaklik": 14,
+   "sicaklik": 13,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -74,12 +74,12 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 13,
+   "sicaklik": 14,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
-     "min": 13,
+     "min": 14,
      "max": 14,
      "durum": "Parçalı bulutlu"
     },
@@ -146,13 +146,13 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 8,
+   "sicaklik": 7,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
      "min": 7,
-     "max": 8,
+     "max": 7,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -255,7 +255,7 @@
   },
   "mezitli": {
    "sicaklik": 14,
-   "durum": "Az bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
@@ -399,7 +399,7 @@
   },
   "toroslar": {
    "sicaklik": 14,
-   "durum": "Az bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
@@ -435,7 +435,7 @@
   },
   "yenisehir": {
    "sicaklik": 14,
-   "durum": "Az bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-27T17:32:11.349Z",
+  "guncelleme": "2026-11-27T18:02:00.999Z",
   "liste": [
    {
     "ad": "Adalet Eczanesi",
@@ -762,7 +762,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-27T17:32:12.739Z",
+  "guncelleme": "2026-11-27T18:02:01.966Z",
   "liste": [
    {
     "tur": "su",
@@ -954,7 +954,7 @@
   "kaynakSaati": "2026-11-27 18:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-27T17:02:13.375Z",
+  "guncelleme": "2026-11-27T18:02:06.101Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1679,7 +1679,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-27T17:32:28.173Z",
+  "guncelleme": "2026-11-27T18:02:09.395Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -21147,7 +21147,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-27T17:33:11.031Z",
+    "guncelleme": "2026-11-27T18:02:49.015Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21229,7 +21229,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-27T17:33:12.328Z",
+    "guncelleme": "2026-11-27T18:02:50.223Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21311,7 +21311,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-27T17:33:13.634Z",
+    "guncelleme": "2026-11-27T18:02:51.440Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21410,11 +21410,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-27T17:32:25.900Z",
+  "guncelleme": "2026-11-27T18:02:07.468Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 14
+    "sayi": 13
    },
    {
     "yol": "/haber/mersinli-serhat-in-muzik-basarisi-cocuk-korosu-sinavinda-birinci-oldu-1qnrend/",
@@ -21434,6 +21434,10 @@
    },
    {
     "yol": "/haber/mut-ta-kaybolan-90-kecinin-40-i-sag-bulundu-15a40vn/",
+    "sayi": 4
+   },
+   {
+    "yol": "/is-ilanlari/mezitli/",
     "sayi": 4
    },
    {
@@ -21465,7 +21469,7 @@
     "sayi": 2
    },
    {
-    "yol": "/is-ilanlari/mezitli/",
+    "yol": "/haber/tarsus-belediyesi-nde-gorev-degisikligi-5cg8oa/",
     "sayi": 1
    },
    {
@@ -21481,15 +21485,11 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/yoruk-turkmenler-festivalde-bulusuyor-1ybcz5x/",
-    "sayi": 1
-   },
-   {
     "yol": "/haber/mersin-de-bir-haftadir-kayip-olarak-aranan-kadin-bulundu-vejbqi/",
     "sayi": 1
    },
    {
-    "yol": "/haber/tarsus-belediyesi-nde-gorev-degisikligi-5cg8oa/",
+    "yol": "/haber/yoruk-turkmenler-festivalde-bulusuyor-1ybcz5x/",
     "sayi": 1
    },
    {
@@ -21525,11 +21525,11 @@
     "sayi": 1
    },
    {
-    "yol": "/mahalle/bozyazi/gozsuzce/",
+    "yol": "/haber/mersin-de-tefecilik-sorusturmalarinda-yeni-gelisme-3-tutuklama-cyhwiy/",
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-de-tefecilik-sorusturmalarinda-yeni-gelisme-3-tutuklama-cyhwiy/",
+    "yol": "/mahalle/bozyazi/gozsuzce/",
     "sayi": 1
    },
    {
@@ -21547,15 +21547,15 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-27T17:33:14.835Z",
+  "guncelleme": "2026-11-27T18:02:52.640Z",
   "deniz": {
    "sicaklik": 21.2,
    "dalga": 0.22
   },
   "hava": {
    "aqi": 46,
-   "pm25": 11.9,
-   "pm10": 21.2,
+   "pm25": 12.2,
+   "pm10": 20.2,
    "uvMax": 2.2
   }
  },
@@ -22623,7 +22623,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-27T17:33:17.429Z",
+  "guncelleme": "2026-11-27T18:02:54.561Z",
   "liste": [
    {
     "id": 6386,
