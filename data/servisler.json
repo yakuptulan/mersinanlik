@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-27T07:02:13.426Z",
+ "guncelleme": "2026-11-27T07:30:15.511Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 17,
@@ -38,7 +38,7 @@
    ]
   },
   "anamur": {
-   "sicaklik": 15,
+   "sicaklik": 18,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -57,7 +57,7 @@
      "tarih": "2026-11-29",
      "min": 13,
      "max": 20,
-     "durum": "Az bulutlu"
+     "durum": "Açık"
     },
     {
      "tarih": "2026-11-30",
@@ -110,7 +110,7 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 15,
+   "sicaklik": 17,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -129,11 +129,11 @@
      "tarih": "2026-11-29",
      "min": 12,
      "max": 20,
-     "durum": "Az bulutlu"
+     "durum": "Açık"
     },
     {
      "tarih": "2026-11-30",
-     "min": 11,
+     "min": 10,
      "max": 20,
      "durum": "Açık"
     },
@@ -290,24 +290,24 @@
    ]
   },
   "mut": {
-   "sicaklik": 11,
+   "sicaklik": 13,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
      "min": 11,
      "max": 18,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-28",
      "min": 10,
-     "max": 19,
+     "max": 18,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
-     "min": 12,
+     "min": 11,
      "max": 19,
      "durum": "Az bulutlu"
     },
@@ -326,30 +326,30 @@
    ]
   },
   "silifke": {
-   "sicaklik": 13,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 16,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
      "min": 11,
-     "max": 21,
+     "max": 20,
      "durum": "Açık"
     },
     {
      "tarih": "2026-11-28",
-     "min": 10,
+     "min": 9,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
-     "min": 12,
-     "max": 19,
+     "min": 11,
+     "max": 20,
      "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-30",
-     "min": 10,
+     "min": 9,
      "max": 19,
      "durum": "Açık"
     },
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-27T07:02:17.563Z",
+  "guncelleme": "2026-11-27T07:30:19.202Z",
   "liste": [
    {
     "ad": "Adalet Eczanesi",
@@ -762,7 +762,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-27T07:02:18.625Z",
+  "guncelleme": "2026-11-27T07:30:20.233Z",
   "liste": [
    {
     "tur": "su",
@@ -809,6 +809,22 @@
       "ad": "Toroslar",
       "mahalleler": [
        "Osmaniye"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "ERDEMLİ İLÇESİ,KÖSBUCAĞI MAHALLESİNE BAĞLI HACI HOCALI MEVKİİ GENELİ ELEKTİRİK KESİNTİSİ NEDENİ İLE SAAT 18:00 EKADAR SU KESİNTİSİ YAŞANACAKTIR",
+    "baslangic": "2026-11-27T07:30:00.000Z",
+    "bitis": "2026-11-27T15:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "erdemli",
+      "ad": "Erdemli",
+      "mahalleler": [
+       "Kösbucağı"
       ]
      }
     ]
@@ -987,7 +1003,7 @@
   "kaynakSaati": "2026-11-27 10:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-27T07:02:25.266Z",
+  "guncelleme": "2026-11-27T07:30:24.996Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1712,7 +1728,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-27T06:32:23.030Z",
+  "guncelleme": "2026-11-27T07:30:27.688Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -4685,7 +4701,7 @@
       ]
      },
      "31": {
-      "alindi": "2026-11-26T06:32:52.276Z",
+      "alindi": "2026-11-27T07:30:37.839Z",
       "maclar": [
        {
         "ev": "Arca Çorum FK",
@@ -4753,7 +4769,7 @@
       ]
      },
      "32": {
-      "alindi": "2026-11-26T06:32:53.509Z",
+      "alindi": "2026-11-27T07:30:39.069Z",
       "maclar": [
        {
         "ev": "Beşiktaş",
@@ -7753,7 +7769,7 @@
       ]
      },
      "34": {
-      "alindi": "2026-11-26T06:33:00.619Z",
+      "alindi": "2026-11-27T07:30:45.241Z",
       "maclar": [
        {
         "ev": "Ekenler Beton Sivasspor",
@@ -7828,7 +7844,7 @@
       ]
      },
      "35": {
-      "alindi": "2026-11-26T06:33:01.851Z",
+      "alindi": "2026-11-27T07:30:46.470Z",
       "maclar": [
        {
         "ev": "Metro Holding Kayserispor",
@@ -10581,7 +10597,7 @@
       ]
      },
      "32": {
-      "alindi": "2026-11-26T06:33:10.684Z",
+      "alindi": "2026-11-27T07:30:52.662Z",
       "maclar": [
        {
         "ev": "Efor Çay Erbaaspor",
@@ -10649,8 +10665,15 @@
       ]
      },
      "33": {
-      "alindi": "2026-11-26T06:33:11.918Z",
+      "alindi": "2026-11-27T07:30:53.895Z",
       "maclar": [
+       {
+        "ev": "Muş Spor",
+        "dep": "Seza Çimento Elazığspor",
+        "tarih": "2027-04-18",
+        "saat": null,
+        "skor": null
+       },
        {
         "ev": "Somaspor",
         "dep": "Menemen",
@@ -10705,13 +10728,6 @@
         "dep": "Kızılkaya Tarım Şanlıurfaspor",
         "tarih": "2027-04-18",
         "saat": null,
-        "skor": null
-       },
-       {
-        "ev": "Muş Spor",
-        "dep": "Seza Çimento Elazığspor",
-        "tarih": "2027-04-18",
-        "saat": "13:00",
         "skor": null
        }
       ]
@@ -13000,8 +13016,15 @@
       ]
      },
      "32": {
-      "alindi": "2026-11-26T06:33:18.123Z",
+      "alindi": "2026-11-27T07:31:00.079Z",
       "maclar": [
+       {
+        "ev": "Akedaş Kahramanmaraş İstiklal Spor",
+        "dep": "Kütahyaspor",
+        "tarih": "2027-04-11",
+        "saat": null,
+        "skor": null
+       },
        {
         "ev": "Mke Ankaragücü",
         "dep": "Erzincan Futbol Yatırımları",
@@ -13047,13 +13070,6 @@
        {
         "ev": "Adana 01 Futbol Kulübü SK",
         "dep": "Kırklarelispor",
-        "tarih": "2027-04-11",
-        "saat": null,
-        "skor": null
-       },
-       {
-        "ev": "Akedaş Kahramanmaraş İstiklal Spor",
-        "dep": "Kütahyaspor",
         "tarih": "2027-04-11",
         "saat": null,
         "skor": null
@@ -15521,7 +15537,7 @@
       ]
      },
      "32": {
-      "alindi": "2026-11-26T06:33:25.661Z",
+      "alindi": "2026-11-27T07:31:07.221Z",
       "maclar": [
        {
         "ev": "Kartal Bulvar Kartalimen Spor",
@@ -15589,7 +15605,7 @@
       ]
      },
      "33": {
-      "alindi": "2026-11-26T06:33:26.899Z",
+      "alindi": "2026-11-27T07:31:08.455Z",
       "maclar": [
        {
         "ev": "Düzce Cam Düzcespor",
@@ -18192,7 +18208,7 @@
       ]
      },
      "32": {
-      "alindi": "2026-11-26T06:33:33.160Z",
+      "alindi": "2026-11-27T07:31:14.674Z",
       "maclar": [
        {
         "ev": "Eskişehirspor",
@@ -18260,7 +18276,7 @@
       ]
      },
      "33": {
-      "alindi": "2026-11-26T06:33:34.398Z",
+      "alindi": "2026-11-27T07:31:15.908Z",
       "maclar": [
        {
         "ev": "Alanya 1221",
@@ -20863,7 +20879,7 @@
       ]
      },
      "32": {
-      "alindi": "2026-11-26T06:33:40.630Z",
+      "alindi": "2026-11-27T07:31:22.234Z",
       "maclar": [
        {
         "ev": "Ağrı 1970 Spor",
@@ -20931,7 +20947,7 @@
       ]
      },
      "33": {
-      "alindi": "2026-11-26T06:33:41.867Z",
+      "alindi": "2026-11-27T07:31:23.469Z",
       "maclar": [
        {
         "ev": "Bitlis 1916",
@@ -21201,7 +21217,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-27T06:33:21.711Z",
+    "guncelleme": "2026-11-27T07:31:24.710Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21283,7 +21299,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-27T06:33:22.920Z",
+    "guncelleme": "2026-11-27T07:31:26.047Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21365,7 +21381,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-27T06:33:24.134Z",
+    "guncelleme": "2026-11-27T07:31:27.276Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21464,11 +21480,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-27T07:02:26.036Z",
+  "guncelleme": "2026-11-27T07:30:26.058Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 14
+    "sayi": 13
    },
    {
     "yol": "/haber/kurtlarin-agila-girmesiyle-kaybolan-90-keci-5-gundur-araniyor-zhuazh/",
@@ -21555,11 +21571,11 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/talat-dincer-esnafa-yeni-yukler-degil-kalici-cozumler-sunulmali-ofvzla/",
+    "yol": "/is-ilanlari/anamur/",
     "sayi": 1
    },
    {
-    "yol": "/is-ilanlari/anamur/",
+    "yol": "/mahalle/toroslar/osmaniye/",
     "sayi": 1
    },
    {
@@ -21569,7 +21585,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-27T07:02:27.377Z",
+  "guncelleme": "2026-11-27T07:31:28.477Z",
   "deniz": {
    "sicaklik": 21.2,
    "dalga": 0.14
@@ -22825,7 +22841,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-27T07:02:29.319Z",
+  "guncelleme": "2026-11-27T07:31:30.413Z",
   "liste": [
    {
     "id": 6386,

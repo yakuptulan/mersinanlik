@@ -12,12 +12,16 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-27T07:29:22.609Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-27",
-  "adet": 9,
-  "premium": 9
+  "adet": 10,
+  "premium": 10
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -173,7 +177,9 @@
    "https://www.dha.com.tr/yerel-haberler/mersin/silifke/vali-toros-ogrencilerle-fidan-dikti-2989190",
    "https://www.dha.com.tr/yerel-haberler/mersin/mezitli/mezitlide-kadina-yonelik-siddete-karsi-anlamli-2989188",
    "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/akdenizin-parklari-rengarenk-resimlerle-suslen-2989176",
-   "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/cimsa-cbk-mersin-baxi-ferrol-93-57-2989376"
+   "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/cimsa-cbk-mersin-baxi-ferrol-93-57-2989376",
+   "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/meskiden-tarsusun-3-mahallesine-kesintisiz-ic-2989532",
+   "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/minik-serhatin-muzik-yolculugu-buyuksehir-ile-2989523"
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
@@ -484,7 +490,8 @@
    "https://mersingundem.com/haber/13715/tefecilik-operasyonu-3-tutuklama.html",
    "https://mersingundem.com/haber/13714/otomobille-carpisan-motosikletin-surucusu-hayatini-kaybetti.html",
    "https://mersingundem.com/haber/13713/her-mahalle-bir-mersin-projesinin-5duragi-silifke-oldu.html",
-   "https://mersingundem.com/haber/13712/mtsodan-rusya-icin-5-bin-ek-gecis-belgesi-talebi.html"
+   "https://mersingundem.com/haber/13712/mtsodan-rusya-icin-5-bin-ek-gecis-belgesi-talebi.html",
+   "https://mersingundem.com/haber/13717/meski-3-mahalleyi-daha-berdan-suyuna-kavusturdu.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -523,7 +530,8 @@
    "https://www.tarsus.edu.tr/Website/Haberler/30525/1/tarsus-universitesi-iklim-vizyonunu-11-projeyle-cop31",
    "https://www.tarsus.edu.tr/Website/Haberler/30526/1/tarsus-universitesi-urap-siralamasinda-8-ve-4-basamak-yukseldi",
    "https://www.tarsus.edu.tr/Website/Haberler/30526/1/tarsus-universitesi-urap-siralamalarinda-yukselisini-surdurdu",
-   "https://www.tarsus.edu.tr/Website/Haberler/30534/1/kadina-yonelik-siddetle-mucadelede-sosyal-politikalar-ve-destek-hizmetleri-duzenlenen-panelde-ele-alindi"
+   "https://www.tarsus.edu.tr/Website/Haberler/30534/1/kadina-yonelik-siddetle-mucadelede-sosyal-politikalar-ve-destek-hizmetleri-duzenlenen-panelde-ele-alindi",
+   "https://www.tarsus.edu.tr/Website/Haberler/30536/1/tarsus-universitesi-gida-teknolojileri-arastirmalarinda-turkiye%E2%80%99de-birinci-gida-guvenligi-arastirmalarinda-ikinci-sirada"
   ],
   "toros-universitesi": [
    "https://www.toros.edu.tr/guncel-haberler/akademik-ve-idari-personelimize-yonelik-oltalama-phishing-farkindalik-egitimi",
@@ -560,47 +568,47 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T07:01:43.911Z",
+  "guncelleme": "2026-11-27T07:29:59.591Z",
   "liste": [
    {
-    "baslik": "son yemek filmi özcan deniz",
+    "baslik": "meb",
     "trafik": 2000
    },
    {
-    "baslik": "gecikme faizi",
-    "trafik": 200
+    "baslik": "yağmur atacan",
+    "trafik": 100
    },
    {
-    "baslik": "muammer kapucuoğlu",
+    "baslik": "ece üner",
     "trafik": 5000
    },
    {
-    "baslik": "orhan çelik",
+    "baslik": "pep guardiola",
+    "trafik": 200
+   },
+   {
+    "baslik": "roketsan",
+    "trafik": 200
+   },
+   {
+    "baslik": "miguel vitor",
+    "trafik": 2000
+   },
+   {
+    "baslik": "kadıköy belediyesi",
+    "trafik": 200
+   },
+   {
+    "baslik": "politika faizi",
+    "trafik": 200
+   },
+   {
+    "baslik": "meb personel",
     "trafik": 100
    },
    {
-    "baslik": "sömestr tatili",
-    "trafik": 200
-   },
-   {
-    "baslik": "ege denizi",
-    "trafik": 10000
-   },
-   {
-    "baslik": "taksim meydanı",
-    "trafik": 200
-   },
-   {
-    "baslik": "mahfi eğilmez",
-    "trafik": 100
-   },
-   {
-    "baslik": "13. yargı paketi",
-    "trafik": 1000
-   },
-   {
-    "baslik": "27 kasım",
-    "trafik": 200
+    "baslik": "son yemek filmi özcan deniz",
+    "trafik": 2000
    }
   ]
  },

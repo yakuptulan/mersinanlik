@@ -604,14 +604,15 @@
    ]
   },
   "2026-11-27": {
-   "guncelleme": "2026-11-27T07:03:21.182Z",
-   "mersinHaber": 9,
-   "kendiYazimiz": 9,
-   "turkiyeDunya": 41,
-   "otomatik": 2,
+   "guncelleme": "2026-11-27T07:32:19.509Z",
+   "mersinHaber": 11,
+   "kendiYazimiz": 11,
+   "turkiyeDunya": 57,
+   "otomatik": 3,
    "otomatikTurler": {
     "superlig": 1,
-    "piyasa": 1
+    "piyasa": 1,
+    "su": 1
    },
    "otomatikBasliklar": [
     {
@@ -623,12 +624,19 @@
      "baslik": "27 Kasım 2026 altın fiyatları: Gram altın, çeyrek altın bugün ne kadar?",
      "tur": "piyasa",
      "saat": "10:03"
+    },
+    {
+     "baslik": "Erdemli'de su kesintisi (27 Kasım): Kösbucağı, 8 saat sürecek",
+     "tur": "su",
+     "saat": "10:32"
     }
    ],
-   "gorsel": 9,
+   "gorsel": 10,
    "bilgi": 1,
    "gezi": 0,
-   "kaynakHatalari": []
+   "kaynakHatalari": [
+    "haberturk-mersin (fetch failed)"
+   ]
   }
  }
 }
