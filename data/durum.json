@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-27",
-  "adet": 15,
-  "premium": 15
+  "adet": 18,
+  "premium": 18
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -78,7 +78,8 @@
    "https://yenisehir.bel.tr/haber/yenisehir-belediyesi-artik-cebinizde",
    "https://www.yenisehir.bel.tr/haber/yenisehir-belediyesi-artik-cebinizde",
    "https://www.yenisehir.bel.tr/haber/yenisehirde-firinlar-mercek-altinda",
-   "https://yenisehir.bel.tr/haber/yenisehirde-firinlar-mercek-altinda"
+   "https://yenisehir.bel.tr/haber/yenisehirde-firinlar-mercek-altinda",
+   "https://www.yenisehir.bel.tr/haber/baskanvekili-dutlu-hicbir-mahallemizi-goz-ardi-etmiyoruz"
   ],
   "tarsus-belediyesi": [],
   "erdemli-belediyesi": [
@@ -180,7 +181,6 @@
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinin-milyonlarca-yillik-gecmisi-fosillerle-anlatildi-119523482",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mesk-13-sampiyonlugunu-sporculariyla-kutladi-119523426",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-ogrenciler-matematigi-deneyimleyerek-ogreniyor-119523359",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-uretici-kadinlar-kirsal-mahalle-bulusmalarinda-vatandaslarla-bulustu-119523297",
@@ -379,7 +379,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/vali-verdigi-sozu-tuttu-gittigi-sinifta-duygu-dolu-anlar-yasandi-119534106",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/tarsus-belediyesi-ilce-genelini-kapsayan-sifir-atik-belgesi-aldi-119534101",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/meski-3-mahalleyi-daha-berdan-suyuna-kavusturdu-119534080",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersin-valisi-atilla-toros-kendisine-mektup-gonderen-ogrencilerle-bulustu-119534180"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersin-valisi-atilla-toros-kendisine-mektup-gonderen-ogrencilerle-bulustu-119534180",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinin-tarimsal-ticari-kulturel-ve-ekonomik-degerleri-tanitilacak-119534298"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -542,7 +543,12 @@
    "https://www.toros.edu.tr/guncel-haberler/toros-universitesi-ve-mersin-universitesi-is-birligiyle-dunya-radyoloji-gunu-kariyer-sempozyumu-gerceklesti",
    "https://www.toros.edu.tr/guncel-haberler/toros-universitesinde-profesyonel-bicak-egitimi-gerceklestirildi",
    "https://www.toros.edu.tr/guncel-haberler/toros-universitesinde-yeni-nesil-mentorluk-programi-sektorden-kampuse-etkinligi-gerceklestirildi",
-   "https://www.toros.edu.tr/guncel-haberler/isletme-ve-girisimcilik-toplulugundan-yildiz-entegreye-teknik-gezi"
+   "https://www.toros.edu.tr/guncel-haberler/isletme-ve-girisimcilik-toplulugundan-yildiz-entegreye-teknik-gezi",
+   "https://www.toros.edu.tr/guncel-haberler/ataturk-universitesi-sempozyum-cagrisi",
+   "https://www.toros.edu.tr/guncel-haberler/artvin-coruh-universitesi-2-dil-edebiyat-ve-kultur-lisans-ogrenci-konferansi",
+   "https://www.toros.edu.tr/guncel-haberler/kastamonu-universitesi-terorsuz-turkiye-cevrimici-ogrenci-afis-sergisi-hakkinda",
+   "https://www.toros.edu.tr/guncel-haberler/kastamonu-universitesi-dr-ogr-uyesi-sofya-c-canbolatin-elif-olmak-7-uluslararasi-posta-sanati-sergisinin-duyurulmasi-hakkinda",
+   "https://www.toros.edu.tr/guncel-haberler/ankara-muzik-ve-guzel-sanatlar-universitesi-surekli-egitim-uygulama-ve-arastirma-merkezi-egitim-programlari"
   ],
   "il-saglik": [
    "https://mersinism.saglik.gov.tr/TR-397898/mudurlugumuzden-diyabeti-erken-fark-et-cagrisi.html",
@@ -569,15 +575,23 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T08:32:07.146Z",
+  "guncelleme": "2026-11-27T09:01:50.609Z",
   "liste": [
    {
+    "baslik": "yağış",
+    "trafik": 5000
+   },
+   {
+    "baslik": "mark henry",
+    "trafik": 100
+   },
+   {
     "baslik": "mevduat",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "nilüfer belediyesi",
-    "trafik": 500
+    "trafik": 200
    },
    {
     "baslik": "hayvancilik",
@@ -593,23 +607,15 @@
    },
    {
     "baslik": "haysiyet",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "branş bazında sıralama 2026",
     "trafik": 1000
    },
    {
-    "baslik": "müge anlı canlı yayın",
-    "trafik": 200
-   },
-   {
     "baslik": "27 kasım hangi burç",
-    "trafik": 100
-   },
-   {
-    "baslik": "15 bin öğretmen ataması branş dağılımı",
-    "trafik": 5000
+    "trafik": 200
    }
   ]
  },
