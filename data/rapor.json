@@ -604,14 +604,28 @@
    ]
   },
   "2026-11-27": {
-   "guncelleme": "2026-11-27T06:37:38.274Z",
-   "mersinHaber": 4,
-   "kendiYazimiz": 4,
-   "turkiyeDunya": 28,
-   "otomatik": 0,
-   "otomatikTurler": {},
-   "otomatikBasliklar": [],
-   "gorsel": 6,
+   "guncelleme": "2026-11-27T07:03:21.182Z",
+   "mersinHaber": 9,
+   "kendiYazimiz": 9,
+   "turkiyeDunya": 41,
+   "otomatik": 2,
+   "otomatikTurler": {
+    "superlig": 1,
+    "piyasa": 1
+   },
+   "otomatikBasliklar": [
+    {
+     "baslik": "Süper Lig'de haftanın programı: Beşiktaş ile Galatasaray derbide karşılaşıyor",
+     "tur": "superlig",
+     "saat": "10:03"
+    },
+    {
+     "baslik": "27 Kasım 2026 altın fiyatları: Gram altın, çeyrek altın bugün ne kadar?",
+     "tur": "piyasa",
+     "saat": "10:03"
+    }
+   ],
+   "gorsel": 9,
    "bilgi": 1,
    "gezi": 0,
    "kaynakHatalari": []
