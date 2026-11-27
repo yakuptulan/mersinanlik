@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-27T02:01:18.632Z"
   }
  },
  "gorsel": {
@@ -556,10 +552,14 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T02:01:51.519Z",
+  "guncelleme": "2026-11-27T02:31:48.743Z",
   "liste": [
    {
-    "baslik": "sevdiğim sensin son bölüm",
+    "baslik": "haberler",
+    "trafik": 500
+   },
+   {
+    "baslik": "sevdiğim sensin fragman",
     "trafik": 10000
    },
    {
@@ -592,10 +592,6 @@
    },
    {
     "baslik": "sc braga",
-    "trafik": 200
-   },
-   {
-    "baslik": "ozan tufan",
     "trafik": 200
    }
   ]
