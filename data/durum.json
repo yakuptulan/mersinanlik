@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-27T04:14:27.606Z"
   }
  },
  "gorsel": {
@@ -556,11 +552,15 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T04:14:52.408Z",
+  "guncelleme": "2026-11-27T04:31:49.211Z",
   "liste": [
    {
-    "baslik": "sermaye artırımı",
+    "baslik": "diyarbakır haberleri",
     "trafik": 100
+   },
+   {
+    "baslik": "sermaye artırımı",
+    "trafik": 200
    },
    {
     "baslik": "karadağ",
@@ -568,11 +568,15 @@
    },
    {
     "baslik": "sporx",
-    "trafik": 5000
+    "trafik": 2000
    },
    {
     "baslik": "hayvancılık",
     "trafik": 100
+   },
+   {
+    "baslik": "kemal memişoğlu",
+    "trafik": 1000
    },
    {
     "baslik": "bağ-kur",
@@ -589,14 +593,6 @@
    {
     "baslik": "son depremler",
     "trafik": 2000
-   },
-   {
-    "baslik": "izmirde deprem",
-    "trafik": 500
-   },
-   {
-    "baslik": "dursun özbek",
-    "trafik": 500
    }
   ]
  },
