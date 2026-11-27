@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-27T03:01:41.046Z",
+ "guncelleme": "2026-11-27T03:31:58.113Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 13,
@@ -75,7 +75,7 @@
   },
   "aydincik": {
    "sicaklik": 12,
-   "durum": "Bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
@@ -326,12 +326,12 @@
    ]
   },
   "silifke": {
-   "sicaklik": 9,
+   "sicaklik": 10,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
-     "min": 9,
+     "min": 10,
      "max": 21,
      "durum": "Açık"
     },
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-27T03:01:44.362Z",
+  "guncelleme": "2026-11-27T03:32:03.730Z",
   "liste": [
    {
     "ad": "Anatolia Eczanesi",
@@ -696,36 +696,36 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-27T03:01:45.305Z",
+  "guncelleme": "2026-11-27T03:32:04.925Z",
   "liste": []
  },
  "piyasa": {
-  "guncelleme": "2026-11-27T03:01:47.341Z",
+  "guncelleme": "2026-11-27T03:32:08.506Z",
   "kalemler": {
    "gram": {
-    "alis": 5913.59,
-    "satis": 5914.58,
-    "degisim": 1.72
+    "alis": 5919.35,
+    "satis": 5920.41,
+    "degisim": 1.82
    },
    "ceyrek": {
-    "alis": 9951,
-    "satis": 10195,
-    "degisim": 1.73
+    "alis": 9959,
+    "satis": 10203,
+    "degisim": 1.81
    },
    "gumus": {
-    "alis": 70.83,
-    "satis": 70.92,
-    "degisim": 4.76
+    "alis": 71.09,
+    "satis": 71.18,
+    "degisim": 5.15
    },
    "usd": {
-    "alis": 50.7674,
-    "satis": 50.7981,
+    "alis": 50.7673,
+    "satis": 50.7987,
     "degisim": 0.23
    },
    "eur": {
-    "alis": 55.8034,
-    "satis": 55.8204,
-    "degisim": 0.15
+    "alis": 55.8074,
+    "satis": 55.8237,
+    "degisim": 0.16
    },
    "bist": {
     "alis": null,
@@ -733,132 +733,132 @@
     "degisim": 0.82
    },
    "btc": {
-    "satis": 3111629,
-    "usd": 61280,
-    "degisim": 1.21
+    "satis": 3125856,
+    "usd": 61553,
+    "degisim": 1.72
    }
   },
   "altinlar": [
    {
     "k": "GRA",
     "ad": "Gram altın",
-    "alis": 5913.59,
-    "satis": 5914.58,
-    "degisim": 1.72
+    "alis": 5919.35,
+    "satis": 5920.41,
+    "degisim": 1.82
    },
    {
     "k": "CEYREKALTIN",
     "ad": "Çeyrek altın",
-    "alis": 9951,
-    "satis": 10195,
-    "degisim": 1.73
+    "alis": 9959,
+    "satis": 10203,
+    "degisim": 1.81
    },
    {
     "k": "YARIMALTIN",
     "ad": "Yarım altın",
-    "alis": 19902,
-    "satis": 20390,
-    "degisim": 1.73
+    "alis": 19918,
+    "satis": 20407,
+    "degisim": 1.82
    },
    {
     "k": "TAMALTIN",
     "ad": "Tam altın",
-    "alis": 39681,
-    "satis": 40473,
-    "degisim": 1.73
+    "alis": 39714,
+    "satis": 40506,
+    "degisim": 1.81
    },
    {
     "k": "CUMHURIYETALTINI",
     "ad": "Cumhuriyet altını",
-    "alis": 40780,
-    "satis": 41210,
-    "degisim": 1.73
+    "alis": 40814,
+    "satis": 41243,
+    "degisim": 1.81
    },
    {
     "k": "ATAALTIN",
     "ad": "Ata altın",
-    "alis": 40780,
-    "satis": 41210,
-    "degisim": 1.73
+    "alis": 40814,
+    "satis": 41243,
+    "degisim": 1.81
    },
    {
     "k": "RESATALTIN",
     "ad": "Reşat altın",
-    "alis": 40780,
-    "satis": 41210,
-    "degisim": 1.73
+    "alis": 40814,
+    "satis": 41243,
+    "degisim": 1.81
    },
    {
     "k": "YIA",
     "ad": "22 ayar bilezik (gr)",
-    "alis": 5552.65,
-    "satis": 5749.53,
-    "degisim": 1.72
+    "alis": 5557.97,
+    "satis": 5754.94,
+    "degisim": 1.82
    },
    {
     "k": "18AYARALTIN",
     "ad": "18 ayar altın (gr)",
-    "alis": 4211,
-    "satis": 4920,
-    "degisim": 1.76
+    "alis": 4215,
+    "satis": 4925,
+    "degisim": 1.86
    },
    {
     "k": "14AYARALTIN",
     "ad": "14 ayar altın (gr)",
-    "alis": 3328.25,
-    "satis": 4489.57,
-    "degisim": 1.52
+    "alis": 3331.52,
+    "satis": 4493.31,
+    "degisim": 1.61
    },
    {
     "k": "HAS",
     "ad": "Has altın (gr)",
-    "alis": 5884.02,
-    "satis": 5885.01,
-    "degisim": 1.72
+    "alis": 5889.75,
+    "satis": 5890.81,
+    "degisim": 1.82
    },
    {
     "k": "GUMUS",
     "ad": "Gümüş (gr)",
-    "alis": 70.83,
-    "satis": 70.92,
-    "degisim": 4.76
+    "alis": 71.09,
+    "satis": 71.18,
+    "degisim": 5.15
    }
   ],
   "dovizler": [
    {
     "k": "USD",
     "ad": "ABD doları",
-    "alis": 50.7674,
-    "satis": 50.7981,
+    "alis": 50.7673,
+    "satis": 50.7987,
     "degisim": 0.23
    },
    {
     "k": "EUR",
     "ad": "Euro",
-    "alis": 55.8034,
-    "satis": 55.8204,
-    "degisim": 0.15
+    "alis": 55.8074,
+    "satis": 55.8237,
+    "degisim": 0.16
    },
    {
     "k": "GBP",
     "ad": "İngiliz sterlini",
-    "alis": 66.7005,
+    "alis": 66.7009,
     "satis": 66.7113,
     "degisim": 0.18
    },
    {
     "k": "CHF",
     "ad": "İsviçre frangı",
-    "alis": 60.8798,
-    "satis": 60.9381,
-    "degisim": 0.3
+    "alis": 60.8938,
+    "satis": 60.9538,
+    "degisim": 0.33
    },
    {
     "k": "SAR",
     "ad": "Suudi riyali",
-    "alis": 13.5248,
-    "satis": 13.5509,
-    "degisim": 0.23
+    "alis": 13.5338,
+    "satis": 13.5381,
+    "degisim": 0.21
    },
    {
     "k": "RUB",
@@ -868,7 +868,7 @@
     "degisim": 0.14
    }
   ],
-  "kaynakSaati": "2026-11-27 06:01:01"
+  "kaynakSaati": "2026-11-27 06:32:01"
  },
  "akaryakit": {
   "guncelleme": "2026-11-27T02:32:00.395Z",
@@ -1492,7 +1492,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-27T00:32:02.279Z",
+  "guncelleme": "2026-11-27T03:32:23.057Z",
   "liste": [
    {
     "id": "tmh5o5",
@@ -1596,7 +1596,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-27T02:32:03.163Z",
+  "guncelleme": "2026-11-27T03:32:23.058Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -4025,7 +4025,7 @@
       ]
      },
      "23": {
-      "alindi": "2026-11-26T02:32:11.259Z",
+      "alindi": "2026-11-27T03:32:35.013Z",
       "maclar": [
        {
         "ev": "Galatasaray",
@@ -4093,7 +4093,7 @@
       ]
      },
      "24": {
-      "alindi": "2026-11-26T02:32:12.499Z",
+      "alindi": "2026-11-27T03:32:36.319Z",
       "maclar": [
        {
         "ev": "Arca Çorum FK",
@@ -7037,7 +7037,7 @@
       ]
      },
      "26": {
-      "alindi": "2026-11-26T02:32:18.716Z",
+      "alindi": "2026-11-27T03:32:42.885Z",
       "maclar": [
        {
         "ev": "Mardin 1969 Spor",
@@ -7112,7 +7112,7 @@
       ]
      },
      "27": {
-      "alindi": "2026-11-26T02:32:19.956Z",
+      "alindi": "2026-11-27T03:32:44.194Z",
       "maclar": [
        {
         "ev": "Ekenler Beton Sivasspor",
@@ -9921,7 +9921,7 @@
       ]
      },
      "24": {
-      "alindi": "2026-11-26T02:32:26.193Z",
+      "alindi": "2026-11-27T03:32:50.804Z",
       "maclar": [
        {
         "ev": "Hatayspor",
@@ -9989,7 +9989,7 @@
       ]
      },
      "25": {
-      "alindi": "2026-11-26T02:32:27.436Z",
+      "alindi": "2026-11-27T03:32:52.120Z",
       "maclar": [
        {
         "ev": "Efor Çay Erbaaspor",
@@ -12396,7 +12396,7 @@
       ]
      },
      "24": {
-      "alindi": "2026-11-26T02:32:33.674Z",
+      "alindi": "2026-11-27T03:32:58.715Z",
       "maclar": [
        {
         "ev": "Mke Ankaragücü",
@@ -12457,22 +12457,8 @@
       ]
      },
      "25": {
-      "alindi": "2026-11-26T02:32:34.917Z",
+      "alindi": "2026-11-27T03:33:00.029Z",
       "maclar": [
-       {
-        "ev": "Ekinciler İskenderunspor",
-        "dep": "Ankara Demirspor",
-        "tarih": "2027-02-28",
-        "saat": null,
-        "skor": null
-       },
-       {
-        "ev": "Adana 01 Futbol Kulübü SK",
-        "dep": "Sultan Su İnegölspor",
-        "tarih": "2027-02-28",
-        "saat": null,
-        "skor": null
-       },
        {
         "ev": "Akedaş Kahramanmaraş İstiklal Spor",
         "dep": "Karacabey Belediye Spor",
@@ -12511,6 +12497,20 @@
        {
         "ev": "Kırklarelispor",
         "dep": "12 Bingöl Spor",
+        "tarih": "2027-02-28",
+        "saat": null,
+        "skor": null
+       },
+       {
+        "ev": "Ekinciler İskenderunspor",
+        "dep": "Ankara Demirspor",
+        "tarih": "2027-02-28",
+        "saat": null,
+        "skor": null
+       },
+       {
+        "ev": "Adana 01 Futbol Kulübü SK",
+        "dep": "Sultan Su İnegölspor",
         "tarih": "2027-02-28",
         "saat": null,
         "skor": null
@@ -14861,7 +14861,7 @@
       ]
      },
      "24": {
-      "alindi": "2026-11-26T02:32:41.485Z",
+      "alindi": "2026-11-27T03:33:06.667Z",
       "maclar": [
        {
         "ev": "Kartal Bulvar Kartalimen Spor",
@@ -14929,7 +14929,7 @@
       ]
      },
      "25": {
-      "alindi": "2026-11-26T02:32:42.732Z",
+      "alindi": "2026-11-27T03:33:07.989Z",
       "maclar": [
        {
         "ev": "Yalova FK 77 Spor",
@@ -17532,7 +17532,7 @@
       ]
      },
      "24": {
-      "alindi": "2026-11-26T02:32:48.997Z",
+      "alindi": "2026-11-27T03:33:14.625Z",
       "maclar": [
        {
         "ev": "Alanya 1221",
@@ -17600,7 +17600,7 @@
       ]
      },
      "25": {
-      "alindi": "2026-11-26T02:32:50.262Z",
+      "alindi": "2026-11-27T03:33:15.944Z",
       "maclar": [
        {
         "ev": "Bursa Yıldırım Spor",
@@ -20203,7 +20203,7 @@
       ]
      },
      "24": {
-      "alindi": "2026-11-26T02:32:58.819Z",
+      "alindi": "2026-11-27T03:33:22.575Z",
       "maclar": [
        {
         "ev": "Diyarbekir Spor",
@@ -20271,7 +20271,7 @@
       ]
      },
      "25": {
-      "alindi": "2026-11-26T02:33:00.065Z",
+      "alindi": "2026-11-27T03:33:23.895Z",
       "maclar": [
        {
         "ev": "Yeni Malatyaspor",
@@ -21085,7 +21085,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-27T02:33:04.160Z",
+    "guncelleme": "2026-11-27T03:33:25.199Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21167,7 +21167,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-27T02:33:05.437Z",
+    "guncelleme": "2026-11-27T03:33:26.494Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21249,7 +21249,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-27T02:33:06.727Z",
+    "guncelleme": "2026-11-27T03:33:27.800Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21348,7 +21348,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-27T03:01:58.139Z",
+  "guncelleme": "2026-11-27T03:32:19.080Z",
   "liste": [
    {
     "yol": "/haber/mersin-de-26-yildir-sari-lacivert-renklere-boyanan-ev-dikkat-cekiyor-1q3iy7k/",
@@ -21441,7 +21441,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-27T03:01:59.511Z",
+  "guncelleme": "2026-11-27T03:33:29.000Z",
   "deniz": {
    "sicaklik": 21.2,
    "dalga": 0.12
@@ -22733,7 +22733,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-27T03:02:01.108Z",
+  "guncelleme": "2026-11-27T03:33:31.701Z",
   "liste": [
    {
     "id": 6386,
