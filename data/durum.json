@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-27",
-  "adet": 3,
-  "premium": 3
+  "adet": 5,
+  "premium": 5
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -60,7 +60,8 @@
    "https://www.mersin.bel.tr/haber/baskan-vekili-genc-toroslar-belediyesi-kadin-dayanisma-ve-guclendirme-merkezinin-acilisina-katildi-1795625366",
    "https://www.mersin.bel.tr/haber/mersin-buyuksehirin-sabah-sporlari-kentin-dort-bir-yaninda-devam-ediyor-1795675822",
    "https://www.mersin.bel.tr/haber/mersin-buyuksehirden-tarima-bir-destek-daha-20-bin-sumak-fidani-ureticiyle-bulusuyor-1795675123",
-   "https://www.mersin.bel.tr/haber/baskan-vekili-genc-tarsus-spor-parki-acilis-torenine-katildi-1795709894"
+   "https://www.mersin.bel.tr/haber/baskan-vekili-genc-tarsus-spor-parki-acilis-torenine-katildi-1795709894",
+   "https://www.mersin.bel.tr/haber/buyuksehirin-ucretsiz-atolyeleri-cocuklarin-yeteneklerini-ortaya-cikariyor-1795758543"
   ],
   "yenisehir-belediyesi": [
    "https://yenisehir.bel.tr/haber/yenisehirde-yesil-seferberlik-suru",
@@ -552,10 +553,30 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T05:31:48.993Z",
+  "guncelleme": "2026-11-27T06:01:38.988Z",
   "liste": [
    {
+    "baslik": "ege denizi",
+    "trafik": 5000
+   },
+   {
+    "baslik": "taksim meydanı",
+    "trafik": 100
+   },
+   {
+    "baslik": "mahfi eğilmez",
+    "trafik": 100
+   },
+   {
     "baslik": "13. yargı paketi",
+    "trafik": 500
+   },
+   {
+    "baslik": "27 kasım",
+    "trafik": 100
+   },
+   {
+    "baslik": "süt",
     "trafik": 200
    },
    {
@@ -563,36 +584,16 @@
     "trafik": 200
    },
    {
-    "baslik": "süt",
-    "trafik": 100
-   },
-   {
-    "baslik": "masterchef potaya kim gitti",
-    "trafik": 2000
-   },
-   {
     "baslik": "hurda teşviki",
-    "trafik": 1000
+    "trafik": 2000
    },
    {
     "baslik": "savcı",
-    "trafik": 500
-   },
-   {
-    "baslik": "diyarbakır haberleri",
-    "trafik": 200
-   },
-   {
-    "baslik": "sermaye artırımı",
-    "trafik": 200
-   },
-   {
-    "baslik": "karadağ",
     "trafik": 1000
    },
    {
-    "baslik": "sporx",
-    "trafik": 2000
+    "baslik": "diyarbakır haberleri",
+    "trafik": 500
    }
   ]
  },
