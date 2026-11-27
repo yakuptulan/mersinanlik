@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-27",
-  "adet": 42,
-  "premium": 42
+  "adet": 45,
+  "premium": 45
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -183,7 +183,6 @@
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/15-yil-9-ay-hapisle-aranan-firarinin-taninmamak-icin-estetik-yaptirdigi-ortaya-cikti-119524162",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/huda-par-genel-baskani-yapicioglu-mersinde-partisinin-5-olagan-il-kongresinde-konustu-119523190",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-yasa-disi-bahis-ve-dolandiricilik-operasyonunda-yakalanan-10-zanli-tutuklandi-119523014",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/saman-balyalarinin-istiflendigi-alamda-yangin-119523006",
@@ -382,7 +381,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinin-tarimsal-ticari-kulturel-ve-ekonomik-degerleri-tanitilacak-119534298",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/bridgestone-emniyetli-kis-surusu-icin-uyari-ilk-kari-beklemeyin-119534325",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/akdenizde-cop-konteynerleri-yikanip-dezenfekte-ediliyor-119534439",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-bati-akdeniz-bolgesel-kariyer-fuari-basladi-119534553"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-bati-akdeniz-bolgesel-kariyer-fuari-basladi-119534553",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mutta-kaybolan-90-kecinin-40i-sag-bulundu-119534614"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -579,8 +579,20 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T12:31:47.785Z",
+  "guncelleme": "2026-11-27T13:01:37.797Z",
   "liste": [
+   {
+    "baslik": "gümüş",
+    "trafik": 2000
+   },
+   {
+    "baslik": "savaş",
+    "trafik": 200
+   },
+   {
+    "baslik": "hüsnü üstün",
+    "trafik": 200
+   },
    {
     "baslik": "tv dizisi",
     "trafik": 200
@@ -595,7 +607,7 @@
    },
    {
     "baslik": "pape gueye",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "miras",
@@ -603,23 +615,11 @@
    },
    {
     "baslik": "devalüasyon",
-    "trafik": 1000
+    "trafik": 200
    },
    {
     "baslik": "doğum",
     "trafik": 500
-   },
-   {
-    "baslik": "bursa yüksek hızlı tren garı",
-    "trafik": 500
-   },
-   {
-    "baslik": "çankaya belediyesi",
-    "trafik": 1000
-   },
-   {
-    "baslik": "osmangazi belediyesi",
-    "trafik": 100
    }
   ]
  },
