@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-27T14:31:19.159Z"
   }
  },
  "gorsel": {
@@ -528,7 +532,8 @@
    "https://mersin.tarimorman.gov.tr/Haber/2352/%f0%9f%8c%bb-Topraga-Deger-Katan-Kadinlar-Tarsusta-Bir-Araya-Geldi",
    "https://mersin.tarimorman.gov.tr/Haber/2351/%f0%9f%9a%9c-Tarimsal-Uretim-Planlamasi-Icin-81-Il-Mersinde-Bir-Araya-Geldi",
    "https://mersin.tarimorman.gov.tr/Haber/2350/%f0%9f%a4%9d-Mersinde-Sifir-Atik-Sonuc-Konferansi-Gerceklestirildi",
-   "https://mersin.tarimorman.gov.tr/Haber/2349/%e2%80%8bil-Mudurlugumuze-Ziyaret-%f0%9f%a4%9d"
+   "https://mersin.tarimorman.gov.tr/Haber/2349/%e2%80%8bil-Mudurlugumuze-Ziyaret-%f0%9f%a4%9d",
+   "https://mersin.tarimorman.gov.tr/Haber/2355/%f0%9f%8d%8a-Akdeniz-Meyve-Sinegiyle-Mucadelede-Dijital-Donem-Basladi"
   ],
   "tarsus-universitesi": [
    "https://www.tarsus.edu.tr/Website/Haberler/30524/1/tarsus-universitesi%E2%80%99nin-disiplinlerarasi-arastirma-performansi-the-2027-siralamasinda",
@@ -582,47 +587,47 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T14:01:46.901Z",
+  "guncelleme": "2026-11-27T14:31:52.557Z",
   "liste": [
+   {
+    "baslik": "diagne",
+    "trafik": 5000
+   },
+   {
+    "baslik": "deniz yılanı",
+    "trafik": 200
+   },
+   {
+    "baslik": "adliye",
+    "trafik": 200
+   },
+   {
+    "baslik": "türk hava kuvvetleri",
+    "trafik": 100
+   },
+   {
+    "baslik": "tuğçelik",
+    "trafik": 200
+   },
    {
     "baslik": "adalet bakanlığı",
     "trafik": 200
    },
    {
-    "baslik": "nersan holding",
-    "trafik": 100
-   },
-   {
     "baslik": "asgari ücret",
-    "trafik": 10000
+    "trafik": 20000
    },
    {
     "baslik": "the fall",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "arda turan",
     "trafik": 50000
    },
    {
-    "baslik": "öğretmen ataması kontenjan dağılımı",
-    "trafik": 5000
-   },
-   {
     "baslik": "gümüş",
     "trafik": 5000
-   },
-   {
-    "baslik": "savaş",
-    "trafik": 200
-   },
-   {
-    "baslik": "hüsnü üstün",
-    "trafik": 500
-   },
-   {
-    "baslik": "ediz hun",
-    "trafik": 500
    }
   ]
  },

@@ -604,16 +604,15 @@
    ]
   },
   "2026-11-27": {
-   "guncelleme": "2026-11-27T14:06:34.056Z",
+   "guncelleme": "2026-11-27T14:33:57.879Z",
    "mersinHaber": 49,
-   "kendiYazimiz": 48,
-   "turkiyeDunya": 216,
-   "otomatik": 7,
+   "kendiYazimiz": 47,
+   "turkiyeDunya": 225,
+   "otomatik": 6,
    "otomatikTurler": {
     "superlig": 1,
     "piyasa": 1,
     "su": 3,
-    "mac": 1,
     "eczane": 1
    },
    "otomatikBasliklar": [
@@ -631,11 +630,6 @@
      "baslik": "Erdemli'de su kesintisi (27 Kasım): Kösbucağı, 8 saat sürecek",
      "tur": "su",
      "saat": "10:32"
-    },
-    {
-     "baslik": "Yeni Mersin İdmanyurdu, yarın Niğde Belediyesi Spor'u konuk ediyor",
-     "tur": "mac",
-     "saat": "15:34"
     },
     {
      "baslik": "Tarsus'ta su kesintisi (27 Kasım): Takbaş, 6 saat sürecek",
@@ -656,7 +650,9 @@
    "gorsel": 47,
    "bilgi": 3,
    "gezi": 0,
-   "kaynakHatalari": []
+   "kaynakHatalari": [
+    "haberturk-mersin (fetch failed)"
+   ]
   }
  }
 }
