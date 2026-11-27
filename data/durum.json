@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-27T04:14:27.606Z"
   }
  },
  "gorsel": {
@@ -552,46 +556,46 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T04:01:52.300Z",
+  "guncelleme": "2026-11-27T04:14:52.408Z",
   "liste": [
+   {
+    "baslik": "sermaye artırımı",
+    "trafik": 100
+   },
+   {
+    "baslik": "karadağ",
+    "trafik": 100
+   },
    {
     "baslik": "sporx",
     "trafik": 5000
    },
    {
-    "baslik": "bağ-kur",
-    "trafik": 500
-   },
-   {
-    "baslik": "toki",
-    "trafik": 200
-   },
-   {
-    "baslik": "savaş uçağı",
+    "baslik": "hayvancılık",
     "trafik": 100
    },
    {
-    "baslik": "afad deprem",
-    "trafik": 200
+    "baslik": "bağ-kur",
+    "trafik": 1000
+   },
+   {
+    "baslik": "toki",
+    "trafik": 2000
+   },
+   {
+    "baslik": "deprem",
+    "trafik": 5000
    },
    {
     "baslik": "son depremler",
     "trafik": 2000
    },
    {
-    "baslik": "izmir deprem son dakika",
-    "trafik": 5000
-   },
-   {
     "baslik": "izmirde deprem",
-    "trafik": 1000
+    "trafik": 500
    },
    {
     "baslik": "dursun özbek",
-    "trafik": 200
-   },
-   {
-    "baslik": "haberler",
     "trafik": 500
    }
   ]
