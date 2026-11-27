@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-27T19:01:46.183Z",
+ "guncelleme": "2026-11-27T19:06:25.851Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 14,
@@ -290,13 +290,13 @@
    ]
   },
   "mut": {
-   "sicaklik": 12,
+   "sicaklik": 11,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
      "min": 11,
-     "max": 12,
+     "max": 11,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-27T19:01:50.349Z",
+  "guncelleme": "2026-11-27T19:06:28.958Z",
   "liste": [
    {
     "ad": "Adalet Eczanesi",
@@ -762,7 +762,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-27T19:01:51.500Z",
+  "guncelleme": "2026-11-27T19:06:30.131Z",
   "liste": []
  },
  "piyasa": {
@@ -937,7 +937,7 @@
   "kaynakSaati": "2026-11-27 21:31:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-27T19:01:57.845Z",
+  "guncelleme": "2026-11-27T19:06:36.849Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1662,7 +1662,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-27T19:02:00.187Z",
+  "guncelleme": "2026-11-27T19:06:39.078Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -5162,20 +5162,34 @@
      },
      {
       "sira": 11,
-      "takim": "Eminevim Ümraniyespor",
-      "ham": "EMİNEVİM ÜMRANİYESPOR",
-      "o": 14,
-      "g": 4,
-      "b": 6,
-      "m": 4,
-      "a": 18,
-      "y": 14,
-      "av": 4,
-      "p": 18,
+      "takim": "Sms Grup Sarıyer",
+      "ham": "SMS GRUP SARIYER",
+      "o": 16,
+      "g": 5,
+      "b": 5,
+      "m": 6,
+      "a": 17,
+      "y": 22,
+      "av": -5,
+      "p": 20,
       "mersin": false
      },
      {
       "sira": 12,
+      "takim": "Eminevim Ümraniyespor",
+      "ham": "EMİNEVİM ÜMRANİYESPOR",
+      "o": 15,
+      "g": 4,
+      "b": 7,
+      "m": 4,
+      "a": 20,
+      "y": 16,
+      "av": 4,
+      "p": 19,
+      "mersin": false
+     },
+     {
+      "sira": 13,
       "takim": "Muğlaspor",
       "ham": "MUĞLASPOR KULÜBÜ",
       "o": 15,
@@ -5189,7 +5203,7 @@
       "mersin": false
      },
      {
-      "sira": 13,
+      "sira": 14,
       "takim": "Bandırma Spor",
       "ham": "BANDIRMA SPOR",
       "o": 15,
@@ -5203,31 +5217,17 @@
       "mersin": false
      },
      {
-      "sira": 14,
-      "takim": "Sms Grup Sarıyer",
-      "ham": "SMS GRUP SARIYER",
-      "o": 15,
-      "g": 4,
-      "b": 5,
-      "m": 6,
-      "a": 16,
-      "y": 22,
-      "av": -6,
-      "p": 17,
-      "mersin": false
-     },
-     {
       "sira": 15,
       "takim": "Manisa",
       "ham": "MANİSA FUTBOL KULÜBÜ",
-      "o": 15,
+      "o": 16,
       "g": 4,
-      "b": 4,
+      "b": 5,
       "m": 7,
-      "a": 23,
-      "y": 24,
+      "a": 25,
+      "y": 26,
       "av": -1,
-      "p": 16,
+      "p": 17,
       "mersin": false
      },
      {
@@ -5276,13 +5276,13 @@
       "sira": 19,
       "takim": "İstanbulspor",
       "ham": "İSTANBULSPOR A.Ş.",
-      "o": 15,
+      "o": 16,
       "g": 2,
       "b": 2,
-      "m": 11,
+      "m": 12,
       "a": 12,
-      "y": 34,
-      "av": -22,
+      "y": 35,
+      "av": -23,
       "p": 8,
       "mersin": false
      },
@@ -5306,7 +5306,7 @@
       "tarih": "2026-11-27",
       "saat": "20:00",
       "ev": "Sms Grup Sarıyer",
-      "skor": null,
+      "skor": "1-0",
       "dep": "İstanbulspor",
       "mersin": false
      },
@@ -5314,7 +5314,7 @@
       "tarih": "2026-11-27",
       "saat": "20:00",
       "ev": "Eminevim Ümraniyespor",
-      "skor": null,
+      "skor": "2-2",
       "dep": "Manisa",
       "mersin": false
      },
@@ -6305,6 +6305,58 @@
        "dep": "Metro Holding Kayserispor",
        "skor": null
       }
+     ],
+     "17": [
+      {
+       "ev": "Manisa",
+       "dep": "Bandırma Spor",
+       "skor": null
+      },
+      {
+       "ev": "İstanbulspor",
+       "dep": "Eminevim Ümraniyespor",
+       "skor": null
+      },
+      {
+       "ev": "Metro Holding Kayserispor",
+       "dep": "Bodrum FK",
+       "skor": null
+      },
+      {
+       "ev": "Batman Petrol Spor",
+       "dep": "Keçtaş Ankara Keçiörengücü",
+       "skor": null
+      },
+      {
+       "ev": "Muğlaspor",
+       "dep": "Antalyaspor",
+       "skor": null
+      },
+      {
+       "ev": "Bursaspor",
+       "dep": "Boluspor",
+       "skor": null
+      },
+      {
+       "ev": "Alagöz Holding Iğdır",
+       "dep": "Ekenler Beton Sivasspor",
+       "skor": null
+      },
+      {
+       "ev": "Mardin 1969 Spor",
+       "dep": "Sms Grup Sarıyer",
+       "skor": null
+      },
+      {
+       "ev": "Mısırlıcomtr Fatih Karagümrük",
+       "dep": "Artı Değer Van Spor",
+       "skor": null
+      },
+      {
+       "ev": "Turka Esenler Erokspor",
+       "dep": "Orfa Yapı Pendikspor",
+       "skor": null
+      }
      ]
     },
     "kulup": {
@@ -6331,81 +6383,6 @@
      "Van Spor": "2020"
     },
     "fikstur": {
-     "16": {
-      "alindi": "2026-11-26T22:32:39.530Z",
-      "maclar": [
-       {
-        "ev": "Sms Grup Sarıyer",
-        "dep": "İstanbulspor",
-        "tarih": "2026-11-27",
-        "saat": "20:00",
-        "skor": null
-       },
-       {
-        "ev": "Eminevim Ümraniyespor",
-        "dep": "Manisa",
-        "tarih": "2026-11-27",
-        "saat": "20:00",
-        "skor": null
-       },
-       {
-        "ev": "Bandırma Spor",
-        "dep": "Batman Petrol Spor",
-        "tarih": "2026-11-28",
-        "saat": "13:30",
-        "skor": null
-       },
-       {
-        "ev": "Ekenler Beton Sivasspor",
-        "dep": "Bodrum FK",
-        "tarih": "2026-11-28",
-        "saat": "13:30",
-        "skor": null
-       },
-       {
-        "ev": "Artı Değer Van Spor",
-        "dep": "Bursaspor",
-        "tarih": "2026-11-28",
-        "saat": "16:00",
-        "skor": null
-       },
-       {
-        "ev": "Muğlaspor",
-        "dep": "Mardin 1969 Spor",
-        "tarih": "2026-11-28",
-        "saat": "19:00",
-        "skor": null
-       },
-       {
-        "ev": "Orfa Yapı Pendikspor",
-        "dep": "Alagöz Holding Iğdır",
-        "tarih": "2026-11-29",
-        "saat": "13:30",
-        "skor": null
-       },
-       {
-        "ev": "Antalyaspor",
-        "dep": "Mısırlıcomtr Fatih Karagümrük",
-        "tarih": "2026-11-29",
-        "saat": "16:00",
-        "skor": null
-       },
-       {
-        "ev": "Boluspor",
-        "dep": "Turka Esenler Erokspor",
-        "tarih": "2026-11-29",
-        "saat": "16:00",
-        "skor": null
-       },
-       {
-        "ev": "Keçtaş Ankara Keçiörengücü",
-        "dep": "Metro Holding Kayserispor",
-        "tarih": "2026-11-29",
-        "saat": "19:00",
-        "skor": null
-       }
-      ]
-     },
      "17": {
       "alindi": "2026-11-26T22:32:40.838Z",
       "maclar": [
@@ -8128,6 +8105,13 @@
       "B",
       "M"
      ],
+     "Sms Grup Sarıyer": [
+      "B",
+      "M",
+      "M",
+      "B",
+      "M"
+     ],
      "Eminevim Ümraniyespor": [
       "G",
       "G",
@@ -8148,13 +8132,6 @@
       "M",
       "M",
       "G"
-     ],
-     "Sms Grup Sarıyer": [
-      "B",
-      "M",
-      "M",
-      "B",
-      "M"
      ],
      "Manisa": [
       "M",
@@ -21109,7 +21086,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-27T19:02:41.404Z",
+    "guncelleme": "2026-11-27T19:07:20.893Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21191,7 +21168,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-27T19:02:42.650Z",
+    "guncelleme": "2026-11-27T19:07:22.143Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21273,7 +21250,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-27T19:02:43.904Z",
+    "guncelleme": "2026-11-27T19:07:23.404Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21372,7 +21349,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-27T19:01:58.482Z",
+  "guncelleme": "2026-11-27T19:06:37.219Z",
   "liste": [
    {
     "yol": "/",
@@ -21505,7 +21482,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-27T19:02:45.106Z",
+  "guncelleme": "2026-11-27T19:07:24.604Z",
   "deniz": {
    "sicaklik": 21.2,
    "dalga": 0.2
@@ -22569,7 +22546,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-27T19:02:47.305Z",
+  "guncelleme": "2026-11-27T19:07:26.973Z",
   "liste": [
    {
     "id": 6386,
