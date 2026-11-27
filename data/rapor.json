@@ -604,16 +604,17 @@
    ]
   },
   "2026-11-27": {
-   "guncelleme": "2026-11-27T13:33:59.819Z",
-   "mersinHaber": 47,
-   "kendiYazimiz": 46,
-   "turkiyeDunya": 207,
-   "otomatik": 5,
+   "guncelleme": "2026-11-27T14:06:34.056Z",
+   "mersinHaber": 49,
+   "kendiYazimiz": 48,
+   "turkiyeDunya": 216,
+   "otomatik": 7,
    "otomatikTurler": {
     "superlig": 1,
     "piyasa": 1,
-    "su": 2,
-    "mac": 1
+    "su": 3,
+    "mac": 1,
+    "eczane": 1
    },
    "otomatikBasliklar": [
     {
@@ -640,6 +641,16 @@
      "baslik": "Tarsus'ta su kesintisi (27 Kasım): Takbaş, 6 saat sürecek",
      "tur": "su",
      "saat": "16:26"
+    },
+    {
+     "baslik": "Mezitli'de su kesintisi (27 Kasım): Çevlik, 5 saat sürecek",
+     "tur": "su",
+     "saat": "17:06"
+    },
+    {
+     "baslik": "Mersin nöbetçi eczaneler: 27 Kasım Cuma",
+     "tur": "eczane",
+     "saat": "17:06"
     }
    ],
    "gorsel": 47,
