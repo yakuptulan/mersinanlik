@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-27",
-  "adet": 5,
-  "premium": 5
+  "adet": 6,
+  "premium": 6
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -61,7 +61,8 @@
    "https://www.mersin.bel.tr/haber/mersin-buyuksehirin-sabah-sporlari-kentin-dort-bir-yaninda-devam-ediyor-1795675822",
    "https://www.mersin.bel.tr/haber/mersin-buyuksehirden-tarima-bir-destek-daha-20-bin-sumak-fidani-ureticiyle-bulusuyor-1795675123",
    "https://www.mersin.bel.tr/haber/baskan-vekili-genc-tarsus-spor-parki-acilis-torenine-katildi-1795709894",
-   "https://www.mersin.bel.tr/haber/buyuksehirin-ucretsiz-atolyeleri-cocuklarin-yeteneklerini-ortaya-cikariyor-1795758543"
+   "https://www.mersin.bel.tr/haber/buyuksehirin-ucretsiz-atolyeleri-cocuklarin-yeteneklerini-ortaya-cikariyor-1795758543",
+   "https://www.mersin.bel.tr/haber/meskiden-tarsusun-3-mahallesine-kesintisiz-icme-suyu-1795759630"
   ],
   "yenisehir-belediyesi": [
    "https://yenisehir.bel.tr/haber/yenisehirde-yesil-seferberlik-suru",
@@ -477,7 +478,8 @@
    "https://mersingundem.com/haber/13706/gunler-sonra-sag-buldugu-yasli-kadini-sirtinda-tasidi.html",
    "https://mersingundem.com/haber/13708/toroslar-belediyesinin-emekli-sohbet-evi-hayata-renk-dostluklara-deger-katiyor.html",
    "https://mersingundem.com/haber/13709/baskan-vekili-gencten-25-kasim-kadina-yonelik-siddete-karsi-uluslararasi-mucadele-gunu-mesaji.html",
-   "https://mersingundem.com/haber/13710/mersinde-ogrencilerden-ogretmenlerine-yoresel-urun-hediyesi.html"
+   "https://mersingundem.com/haber/13710/mersinde-ogrencilerden-ogretmenlerine-yoresel-urun-hediyesi.html",
+   "https://mersingundem.com/haber/13711/fiba-kadinlar-avrupa-kupasi-cimsa-cbk-mersin-93-baxi-ferrol-57.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -553,11 +555,19 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T06:01:38.988Z",
+  "guncelleme": "2026-11-27T06:31:47.824Z",
   "liste": [
    {
+    "baslik": "sömestr tatili",
+    "trafik": 200
+   },
+   {
+    "baslik": "orhan çelik",
+    "trafik": 100
+   },
+   {
     "baslik": "ege denizi",
-    "trafik": 5000
+    "trafik": 10000
    },
    {
     "baslik": "taksim meydanı",
@@ -569,11 +579,11 @@
    },
    {
     "baslik": "13. yargı paketi",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "27 kasım",
-    "trafik": 100
+    "trafik": 500
    },
    {
     "baslik": "süt",
@@ -581,19 +591,11 @@
    },
    {
     "baslik": "iptv",
-    "trafik": 200
-   },
-   {
-    "baslik": "hurda teşviki",
-    "trafik": 2000
-   },
-   {
-    "baslik": "savcı",
-    "trafik": 1000
-   },
-   {
-    "baslik": "diyarbakır haberleri",
     "trafik": 500
+   },
+   {
+    "baslik": "masterchef potaya kim gitti",
+    "trafik": 5000
    }
   ]
  },
