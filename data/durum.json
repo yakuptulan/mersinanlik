@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-27T18:01:19.351Z"
   }
  },
  "gorsel": {
@@ -188,7 +184,6 @@
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-uyusturucu-operasyonlarinda-yakalanan-10-zanli-tutuklandi-119522463",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-uyusturucu-operasyonlari-10-tutuklama-119522408",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/akdenizli-kadinlar-belediyenin-kurslariyla-kendi-islerinin-patronu-oluyor-119522040",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mezitlide-yagmur-suyunun-yeniden-kullanilacagi-park-hizmete-acildi-119521956",
@@ -387,7 +382,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kirmizi-bultenle-aranan-hukumlu-havalimaninda-yakalandi-119534771",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-uyusturucu-operasyonlarinda-yakalanan-23-supheli-tutuklandi-119534792",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kursunlamaya-karisan-casperlar-suc-orgutune-operasyon-4-tutuklama-119534833",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/chp-genel-baskan-yardimcisi-necdet-sarac-mersinde-basin-mensuplariyla-bulustu-119534803"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/chp-genel-baskan-yardimcisi-necdet-sarac-mersinde-basin-mensuplariyla-bulustu-119534803",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-is-yeri-kursunlayan-4-supheli-tutuklandi-119534854"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -592,8 +588,24 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T18:01:57.229Z",
+  "guncelleme": "2026-11-27T18:31:40.282Z",
   "liste": [
+   {
+    "baslik": "trt 1 canli yayın izle kesintisiz hd",
+    "trafik": 200
+   },
+   {
+    "baslik": "yunus akgün",
+    "trafik": 1000
+   },
+   {
+    "baslik": "amazon prime",
+    "trafik": 500
+   },
+   {
+    "baslik": "muğlaspor",
+    "trafik": 200
+   },
    {
     "baslik": "carlos tevez",
     "trafik": 100
@@ -603,16 +615,12 @@
     "trafik": 100
    },
    {
-    "baslik": "beşiktaş-galatasaray derbisi",
-    "trafik": 5000
-   },
-   {
     "baslik": "recep ivedik 8",
     "trafik": 200
    },
    {
     "baslik": "son yemek izle",
-    "trafik": 5000
+    "trafik": 10000
    },
    {
     "baslik": "deniz sözen",
@@ -620,19 +628,7 @@
    },
    {
     "baslik": "şişli",
-    "trafik": 200
-   },
-   {
-    "baslik": "vatandaş",
-    "trafik": 200
-   },
-   {
-    "baslik": "ademola lookman",
-    "trafik": 200
-   },
-   {
-    "baslik": "rizespor - kasımpaşa",
-    "trafik": 20000
+    "trafik": 500
    }
   ]
  },
