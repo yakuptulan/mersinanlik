@@ -12,12 +12,16 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-27T08:01:22.632Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-27",
-  "adet": 12,
-  "premium": 12
+  "adet": 13,
+  "premium": 13
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -489,7 +493,9 @@
    "https://mersingundem.com/haber/13712/mtsodan-rusya-icin-5-bin-ek-gecis-belgesi-talebi.html",
    "https://mersingundem.com/haber/13717/meski-3-mahalleyi-daha-berdan-suyuna-kavusturdu.html",
    "https://mersingundem.com/haber/13719/vali-verdigi-sozu-tuttu-gittigi-sinifta-duygu-dolu-anlar-yasandi.html",
-   "https://mersingundem.com/haber/13718/tarsus-belediyesi-ilce-genelini-kapsayan-sifir-atik-belgesi-aldi.html"
+   "https://mersingundem.com/haber/13718/tarsus-belediyesi-ilce-genelini-kapsayan-sifir-atik-belgesi-aldi.html",
+   "https://mersingundem.com/haber/13721/firinlarda-hijyen-gramaj-ve-fiyat-denetimi.html",
+   "https://mersingundem.com/haber/13720/buyuksehirin-ucretsiz-atolyeleri-cocuklarin-yeteneklerini-ortaya-cikariyor.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -566,15 +572,35 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T07:34:20.927Z",
+  "guncelleme": "2026-11-27T08:01:59.257Z",
   "liste": [
+   {
+    "baslik": "haysiyet",
+    "trafik": 100
+   },
+   {
+    "baslik": "branş bazında sıralama 2026",
+    "trafik": 500
+   },
+   {
+    "baslik": "müge anlı canlı yayın",
+    "trafik": 200
+   },
+   {
+    "baslik": "27 kasım hangi burç",
+    "trafik": 100
+   },
+   {
+    "baslik": "melike şahin",
+    "trafik": 500
+   },
    {
     "baslik": "meb",
     "trafik": 2000
    },
    {
     "baslik": "yağmur atacan",
-    "trafik": 100
+    "trafik": 200
    },
    {
     "baslik": "ece üner",
@@ -582,31 +608,11 @@
    },
    {
     "baslik": "pep guardiola",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "roketsan",
-    "trafik": 200
-   },
-   {
-    "baslik": "miguel vitor",
-    "trafik": 2000
-   },
-   {
-    "baslik": "kadıköy belediyesi",
-    "trafik": 200
-   },
-   {
-    "baslik": "politika faizi",
-    "trafik": 200
-   },
-   {
-    "baslik": "meb personel",
-    "trafik": 100
-   },
-   {
-    "baslik": "son yemek filmi özcan deniz",
-    "trafik": 2000
+    "trafik": 500
    }
   ]
  },
