@@ -1,14 +1,14 @@
 {
- "guncelleme": "2026-11-27T17:02:03.606Z",
+ "guncelleme": "2026-11-27T17:32:05.763Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 15,
-   "durum": "Açık",
+   "sicaklik": 14,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
      "min": 13,
-     "max": 15,
+     "max": 14,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-27T17:02:07.519Z",
+  "guncelleme": "2026-11-27T17:32:11.349Z",
   "liste": [
    {
     "ad": "Adalet Eczanesi",
@@ -762,7 +762,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-27T17:02:08.566Z",
+  "guncelleme": "2026-11-27T17:32:12.739Z",
   "liste": [
    {
     "tur": "su",
@@ -1679,7 +1679,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-27T17:02:15.304Z",
+  "guncelleme": "2026-11-27T17:32:28.173Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -21147,7 +21147,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-27T17:02:55.406Z",
+    "guncelleme": "2026-11-27T17:33:11.031Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21229,7 +21229,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-27T17:02:56.629Z",
+    "guncelleme": "2026-11-27T17:33:12.328Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21311,7 +21311,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-27T17:02:57.859Z",
+    "guncelleme": "2026-11-27T17:33:13.634Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21410,7 +21410,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-27T17:02:14.225Z",
+  "guncelleme": "2026-11-27T17:32:25.900Z",
   "liste": [
    {
     "yol": "/",
@@ -21421,20 +21421,16 @@
     "sayi": 10
    },
    {
-    "yol": "/haber/meski-den-tarsus-un-3-mahallesine-kesintisiz-icme-suyu-1fwm2cp/",
+    "yol": "/haber/akdeniz-de-konteynerler-yikanip-dezenfekte-ediliyor-jphj7z/",
     "sayi": 6
    },
    {
-    "yol": "/haber/akdeniz-de-konteynerler-yikanip-dezenfekte-ediliyor-jphj7z/",
+    "yol": "/haber/meski-den-tarsus-un-3-mahallesine-kesintisiz-icme-suyu-1fwm2cp/",
     "sayi": 6
    },
    {
     "yol": "/haber/interpol-un-kirmizi-bultenle-aradigi-sahis-havalimaninda-gozaltina-ali-1u002f4/",
     "sayi": 5
-   },
-   {
-    "yol": "/haber/mersin-de-tefecilik-operasyonlarinda-yakalanan-3-zanli-tutuklandi-vbs2u5/",
-    "sayi": 4
    },
    {
     "yol": "/haber/mut-ta-kaybolan-90-kecinin-40-i-sag-bulundu-15a40vn/",
@@ -21445,15 +21441,15 @@
     "sayi": 4
    },
    {
-    "yol": "/hava-durumu/anamur/",
-    "sayi": 2
-   },
-   {
     "yol": "/haber/tarsus-belediyesine-ilce-geneli-sifir-atik-belgesi-doyqdd/",
     "sayi": 2
    },
    {
     "yol": "/haber/mersin-de-yilbasi-pazari-bu-yil-da-kurulacak-mi-1nuv8z7/",
+    "sayi": 2
+   },
+   {
+    "yol": "/hava-durumu/bozyazi/",
     "sayi": 2
    },
    {
@@ -21465,7 +21461,11 @@
     "sayi": 2
    },
    {
-    "yol": "/haber/mersin-antik-kilikya-limanlari-deniz-muzesi-nde-konusuldu-brjp1u/",
+    "yol": "/hava-durumu/anamur/",
+    "sayi": 2
+   },
+   {
+    "yol": "/is-ilanlari/mezitli/",
     "sayi": 1
    },
    {
@@ -21477,11 +21477,11 @@
     "sayi": 1
    },
    {
-    "yol": "/is-ilanlari/mezitli/",
+    "yol": "/kategori/siyaset/",
     "sayi": 1
    },
    {
-    "yol": "/mahalleler/bozyazi/",
+    "yol": "/haber/yoruk-turkmenler-festivalde-bulusuyor-1ybcz5x/",
     "sayi": 1
    },
    {
@@ -21493,15 +21493,11 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/yoruk-turkmenler-festivalde-bulusuyor-1ybcz5x/",
+    "yol": "/mahalleler/bozyazi/",
     "sayi": 1
    },
    {
-    "yol": "/kategori/siyaset/",
-    "sayi": 1
-   },
-   {
-    "yol": "/kategori/yasam/",
+    "yol": "/haber/mersin-antik-kilikya-limanlari-deniz-muzesi-nde-konusuldu-brjp1u/",
     "sayi": 1
    },
    {
@@ -21517,7 +21513,7 @@
     "sayi": 1
    },
    {
-    "yol": "/hava-durumu/bozyazi/",
+    "yol": "/kategori/yasam/",
     "sayi": 1
    },
    {
@@ -21551,7 +21547,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-27T17:02:59.061Z",
+  "guncelleme": "2026-11-27T17:33:14.835Z",
   "deniz": {
    "sicaklik": 21.2,
    "dalga": 0.22
@@ -22627,7 +22623,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-27T17:03:00.724Z",
+  "guncelleme": "2026-11-27T17:33:17.429Z",
   "liste": [
    {
     "id": 6386,

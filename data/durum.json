@@ -12,15 +12,11 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-27T17:01:20.232Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-27",
-  "adet": 55,
+  "adet": 57,
   "premium": 46
  },
  "kurumGorulen": {
@@ -188,8 +184,6 @@
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-diyabete-karsi-vatandaslara-ucretsiz-olcum-ve-bilgilendirme-119522704",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-torbaci-operasyonu-10-tutuklama-119522505",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-uyusturucu-operasyonlarinda-yakalanan-10-zanli-tutuklandi-119522463",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-uyusturucu-operasyonlari-10-tutuklama-119522408",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/akdenizli-kadinlar-belediyenin-kurslariyla-kendi-islerinin-patronu-oluyor-119522040",
@@ -387,7 +381,9 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mtso-baskan-yildizgorerden-genclere-hata-yapmaktan-da-girisimci-olmaktan-da-korkmayin-119534753",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/isirgan-otlu-yumurta-yedikten-sonra-hayatini-kaybeden-kadin-topraga-verildi-119534740",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kirmizi-bultenle-aranan-hukumlu-havalimaninda-yakalandi-119534771",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-uyusturucu-operasyonlarinda-yakalanan-23-supheli-tutuklandi-119534792"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-uyusturucu-operasyonlarinda-yakalanan-23-supheli-tutuklandi-119534792",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kursunlamaya-karisan-casperlar-suc-orgutune-operasyon-4-tutuklama-119534833",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/chp-genel-baskan-yardimcisi-necdet-sarac-mersinde-basin-mensuplariyla-bulustu-119534803"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -592,19 +588,31 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T17:01:57.715Z",
+  "guncelleme": "2026-11-27T17:31:52.396Z",
   "liste": [
+   {
+    "baslik": "recep ivedik 8",
+    "trafik": 200
+   },
+   {
+    "baslik": "son yemek izle",
+    "trafik": 5000
+   },
+   {
+    "baslik": "deniz sözen",
+    "trafik": 5000
+   },
+   {
+    "baslik": "şişli",
+    "trafik": 200
+   },
    {
     "baslik": "ademola lookman",
     "trafik": 200
    },
    {
-    "baslik": "son yemek hangi platformda",
-    "trafik": 1000
-   },
-   {
     "baslik": "rizespor - kasımpaşa",
-    "trafik": 5000
+    "trafik": 10000
    },
    {
     "baslik": "hikmet çetin kimdir",
@@ -621,18 +629,6 @@
    {
     "baslik": "alanyaspor - konyaspor",
     "trafik": 20000
-   },
-   {
-    "baslik": "ümraniyespor - manisa fk",
-    "trafik": 1000
-   },
-   {
-    "baslik": "sarıyer - istanbulspor",
-    "trafik": 1000
-   },
-   {
-    "baslik": "izmir adliyesi",
-    "trafik": 500
    }
   ]
  },
