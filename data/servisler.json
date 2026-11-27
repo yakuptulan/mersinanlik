@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-27T16:13:00.833Z",
+ "guncelleme": "2026-11-27T16:31:54.784Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 15,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-27T16:13:04.991Z",
+  "guncelleme": "2026-11-27T16:31:59.991Z",
   "liste": [
    {
     "ad": "Adalet Eczanesi",
@@ -762,7 +762,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-27T16:13:06.156Z",
+  "guncelleme": "2026-11-27T16:32:01.181Z",
   "liste": [
    {
     "tur": "su",
@@ -971,7 +971,7 @@
   "kaynakSaati": "2026-11-27 18:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-27T16:13:10.721Z",
+  "guncelleme": "2026-11-27T16:32:07.322Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1696,7 +1696,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-27T15:32:12.480Z",
+  "guncelleme": "2026-11-27T16:32:09.933Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -21164,7 +21164,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-27T15:32:53.088Z",
+    "guncelleme": "2026-11-27T16:32:51.082Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21246,7 +21246,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-27T15:32:54.301Z",
+    "guncelleme": "2026-11-27T16:32:52.326Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21328,7 +21328,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-27T15:32:55.522Z",
+    "guncelleme": "2026-11-27T16:32:53.576Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21427,7 +21427,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-27T16:13:11.355Z",
+  "guncelleme": "2026-11-27T16:32:08.503Z",
   "liste": [
    {
     "yol": "/",
@@ -21538,11 +21538,11 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-de-tefecilik-sorusturmalarinda-yeni-gelisme-3-tutuklama-cyhwiy/",
+    "yol": "/mahalle/bozyazi/gozsuzce/",
     "sayi": 1
    },
    {
-    "yol": "/mahalle/bozyazi/gozsuzce/",
+    "yol": "/haber/mersin-de-tefecilik-sorusturmalarinda-yeni-gelisme-3-tutuklama-cyhwiy/",
     "sayi": 1
    },
    {
@@ -21560,10 +21560,10 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-27T16:13:12.904Z",
+  "guncelleme": "2026-11-27T16:32:54.776Z",
   "deniz": {
    "sicaklik": 21.2,
-   "dalga": 0.24
+   "dalga": 0.22
   },
   "hava": {
    "aqi": 47,
@@ -21573,20 +21573,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-27T16:02:13.109Z",
+  "guncelleme": "2026-11-27T16:32:56.757Z",
   "giden": [
-   {
-    "no": [
-     "VF1053"
-    ],
-    "havayolu": "AJet",
-    "yer": "Ercan",
-    "planlanan": "2026-11-27T16:05:00.000Z",
-    "tahmini": null,
-    "kapi": "103",
-    "durum": "KAPI KAPANDI",
-    "hat": "dis"
-   },
    {
     "no": [
      "TK2465"
@@ -21596,7 +21584,7 @@
     "planlanan": "2026-11-27T16:55:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -21608,7 +21596,7 @@
     "planlanan": "2026-11-27T17:15:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -21620,7 +21608,7 @@
     "planlanan": "2026-11-27T18:00:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -21632,7 +21620,7 @@
     "planlanan": "2026-11-27T18:20:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -21644,7 +21632,7 @@
     "planlanan": "2026-11-27T18:20:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -22102,33 +22090,33 @@
     "kapi": "106",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2089"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-28T16:05:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF1053"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ercan",
+    "planlanan": "2026-11-28T16:05:00.000Z",
+    "tahmini": null,
+    "kapi": "103",
+    "durum": "",
+    "hat": "dis"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "TK2464"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-27T16:10:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "VF3144"
-    ],
-    "havayolu": "AJet",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-27T16:30:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "VF4090"
@@ -22632,11 +22620,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2464"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-28T16:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-27T16:13:14.757Z",
+  "guncelleme": "2026-11-27T16:32:56.757Z",
   "liste": [
    {
     "id": 6386,
