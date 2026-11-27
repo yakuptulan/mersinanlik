@@ -12,12 +12,15 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "mersin-universitesi": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-27T21:01:39.457Z"
   }
  },
  "gorsel": {
-  "gun": "2026-11-27",
-  "adet": 58,
-  "premium": 46
+  "gun": "2026-11-28",
+  "adet": 0
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -591,18 +594,26 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T20:31:44.998Z",
+  "guncelleme": "2026-11-27T21:01:57.033Z",
   "liste": [
    {
+    "baslik": "levante",
+    "trafik": 200
+   },
+   {
+    "baslik": "lululemon",
+    "trafik": 100
+   },
+   {
     "baslik": "bolu",
+    "trafik": 2000
+   },
+   {
+    "baslik": "brest",
     "trafik": 200
    },
    {
     "baslik": "birand tunca",
-    "trafik": 200
-   },
-   {
-    "baslik": "brest - paris fc",
     "trafik": 200
    },
    {
@@ -611,29 +622,21 @@
    },
    {
     "baslik": "paris fc",
-    "trafik": 200
-   },
-   {
-    "baslik": "guinness rekorlar kitabı",
-    "trafik": 2000
-   },
-   {
-    "baslik": "bologna",
     "trafik": 500
    },
    {
-    "baslik": "groningen fc",
-    "trafik": 200
-   },
-   {
-    "baslik": "emlak konut kampanya",
-    "trafik": 200
-   },
-   {
-    "baslik": "gelir idaresi başkanlığı personel alımı",
+    "baslik": "brondby",
     "trafik": 100
+   },
+   {
+    "baslik": "bologna",
+    "trafik": 1000
+   },
+   {
+    "baslik": "groningen fc",
+    "trafik": 500
    }
   ]
  },
- "tamBirlestirme": "2026-11-27"
+ "tamBirlestirme": "2026-11-28"
 }
