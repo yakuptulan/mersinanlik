@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-27T13:25:36.962Z",
+ "guncelleme": "2026-11-27T13:31:56.941Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-27T13:25:41.037Z",
+  "guncelleme": "2026-11-27T13:32:01.220Z",
   "liste": [
    {
     "ad": "Adalet Eczanesi",
@@ -762,7 +762,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-27T13:25:42.104Z",
+  "guncelleme": "2026-11-27T13:32:02.587Z",
   "liste": [
    {
     "tur": "su",
@@ -986,7 +986,7 @@
   "kaynakSaati": "2026-11-27 16:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-27T13:25:48.081Z",
+  "guncelleme": "2026-11-27T13:32:08.273Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1711,7 +1711,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-27T12:32:40.091Z",
+  "guncelleme": "2026-11-27T13:32:10.820Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -19535,7 +19535,7 @@
       {
        "ev": "Malatya Yeşilyurt Spor",
        "dep": "Ağrı 1970 Spor",
-       "skor": null
+       "skor": "4-3"
       },
       {
        "ev": "Kırıkkale FK Spor",
@@ -21047,9 +21047,9 @@
     },
     "form": {
      "Malatya Yeşilyurt Spor": [
+      "B",
+      "B",
       "G",
-      "B",
-      "B",
       "G",
       "G"
      ],
@@ -21139,8 +21139,8 @@
      ],
      "Ağrı 1970 Spor": [
       "M",
-      "M",
       "G",
+      "M",
       "M",
       "M"
      ],
@@ -21179,7 +21179,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-27T12:33:19.933Z",
+    "guncelleme": "2026-11-27T13:32:56.334Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21261,7 +21261,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-27T12:33:21.144Z",
+    "guncelleme": "2026-11-27T13:32:57.610Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21343,7 +21343,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-27T12:33:22.362Z",
+    "guncelleme": "2026-11-27T13:32:58.899Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21442,7 +21442,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-27T13:25:48.687Z",
+  "guncelleme": "2026-11-27T13:32:08.794Z",
   "liste": [
    {
     "yol": "/haber/mersinli-serhat-in-muzik-basarisi-cocuk-korosu-sinavinda-birinci-oldu-1qnrend/",
@@ -21473,6 +21473,10 @@
     "sayi": 4
    },
    {
+    "yol": "/haber/mut-ta-kaybolan-90-kecinin-40-i-sag-bulundu-15a40vn/",
+    "sayi": 4
+   },
+   {
     "yol": "/hava-durumu/anamur/",
     "sayi": 3
    },
@@ -21489,7 +21493,7 @@
     "sayi": 2
    },
    {
-    "yol": "/is-ilanlari/meslek/sofor-yuk-tasima/",
+    "yol": "/haber/mersin-de-bir-haftadir-kayip-olarak-aranan-kadin-bulundu-vejbqi/",
     "sayi": 1
    },
    {
@@ -21502,10 +21506,6 @@
    },
    {
     "yol": "/kategori/siyaset/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/mersin-de-bir-haftadir-kayip-olarak-aranan-kadin-bulundu-vejbqi/",
     "sayi": 1
    },
    {
@@ -21549,11 +21549,11 @@
     "sayi": 1
    },
    {
-    "yol": "/mahalle/bozyazi/gozsuzce/",
+    "yol": "/haber/mersin-de-tefecilik-sorusturmalarinda-yeni-gelisme-3-tutuklama-cyhwiy/",
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-de-tefecilik-sorusturmalarinda-yeni-gelisme-3-tutuklama-cyhwiy/",
+    "yol": "/mahalle/bozyazi/gozsuzce/",
     "sayi": 1
    },
    {
@@ -21563,11 +21563,15 @@
    {
     "yol": "/haber/kurtlarin-agila-girmesiyle-kaybolan-90-keci-5-gundur-araniyor-zhuazh/",
     "sayi": 1
+   },
+   {
+    "yol": "/is-ilanlari/meslek/sofor-yuk-tasima/",
+    "sayi": 1
    }
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-27T13:25:50.286Z",
+  "guncelleme": "2026-11-27T13:33:00.100Z",
   "deniz": {
    "sicaklik": 21.2,
    "dalga": 0.24
@@ -21580,7 +21584,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-27T13:25:52.092Z",
+  "guncelleme": "2026-11-27T13:33:02.836Z",
   "giden": [
    {
     "no": [
@@ -21591,7 +21595,7 @@
     "planlanan": "2026-11-27T13:50:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KONTUAR KAPALI",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -21603,7 +21607,7 @@
     "planlanan": "2026-11-27T14:05:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "dis"
    },
    {
@@ -21614,7 +21618,7 @@
     "yer": "Ercan",
     "planlanan": "2026-11-27T15:00:00.000Z",
     "tahmini": null,
-    "kapi": "",
+    "kapi": "104",
     "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
@@ -21627,7 +21631,7 @@
     "planlanan": "2026-11-27T15:25:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -22143,6 +22147,18 @@
     "planlanan": "2026-11-28T12:15:00.000Z",
     "tahmini": null,
     "kapi": "107",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2461"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-28T13:30:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
     "durum": "",
     "hat": "ic"
    }
@@ -22691,7 +22707,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-27T13:25:52.091Z",
+  "guncelleme": "2026-11-27T13:33:02.836Z",
   "liste": [
    {
     "id": 6386,
