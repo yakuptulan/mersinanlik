@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "mersin-universitesi": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-27T21:01:39.457Z"
   }
  },
  "gorsel": {
@@ -594,7 +590,7 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T21:01:57.033Z",
+  "guncelleme": "2026-11-27T21:31:36.422Z",
   "liste": [
    {
     "baslik": "levante",
@@ -606,14 +602,18 @@
    },
    {
     "baslik": "bolu",
-    "trafik": 2000
+    "trafik": 5000
    },
    {
     "baslik": "brest",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "birand tunca",
+    "trafik": 200
+   },
+   {
+    "baslik": "havacılık",
     "trafik": 200
    },
    {
@@ -631,10 +631,6 @@
    {
     "baslik": "bologna",
     "trafik": 1000
-   },
-   {
-    "baslik": "groningen fc",
-    "trafik": 500
    }
   ]
  },
