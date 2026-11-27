@@ -12,11 +12,15 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "mersin-universitesi": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-27T16:01:32.699Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-27",
-  "adet": 52,
+  "adet": 54,
   "premium": 46
  },
  "kurumGorulen": {
@@ -583,15 +587,35 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T15:31:38.040Z",
+  "guncelleme": "2026-11-27T16:01:47.413Z",
   "liste": [
    {
-    "baslik": "test",
+    "baslik": "çevre yolu",
     "trafik": 100
    },
    {
-    "baslik": "doğum yardımı",
+    "baslik": "ingvar jónsson",
+    "trafik": 100
+   },
+   {
+    "baslik": "şüpheli",
+    "trafik": 100
+   },
+   {
+    "baslik": "polis akademisi",
     "trafik": 200
+   },
+   {
+    "baslik": "supercell",
+    "trafik": 100
+   },
+   {
+    "baslik": "alanyaspor",
+    "trafik": 200
+   },
+   {
+    "baslik": "test",
+    "trafik": 100
    },
    {
     "baslik": "eskişehir elektrik kesintisi",
@@ -599,31 +623,11 @@
    },
    {
     "baslik": "bakırköy adliyesi",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "fenerbahçe transfer",
     "trafik": 500
-   },
-   {
-    "baslik": "zuhal topal",
-    "trafik": 200
-   },
-   {
-    "baslik": "vatandaşlık",
-    "trafik": 200
-   },
-   {
-    "baslik": "yusuf tekin",
-    "trafik": 100
-   },
-   {
-    "baslik": "derya şensoy",
-    "trafik": 100
-   },
-   {
-    "baslik": "türk hava yolları",
-    "trafik": 1000
    }
   ]
  },
