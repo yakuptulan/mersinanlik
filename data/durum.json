@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "mersin-universitesi": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-27T16:01:32.699Z"
   }
  },
  "gorsel": {
@@ -188,7 +184,6 @@
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-1-ekmek-1-corba-hizmeti-yeniden-basladi-119522754",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-diyabete-karsi-vatandaslara-ucretsiz-olcum-ve-bilgilendirme-119522704",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-torbaci-operasyonu-10-tutuklama-119522505",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-uyusturucu-operasyonlarinda-yakalanan-10-zanli-tutuklandi-119522463",
@@ -387,7 +382,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/interpol-tarafindan-aranan-hukumlu-mersinde-yakalandi-119534761",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mtso-baskan-yildizgorerden-genclere-hata-yapmaktan-da-girisimci-olmaktan-da-korkmayin-119534753",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/isirgan-otlu-yumurta-yedikten-sonra-hayatini-kaybeden-kadin-topraga-verildi-119534740",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kirmizi-bultenle-aranan-hukumlu-havalimaninda-yakalandi-119534771"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kirmizi-bultenle-aranan-hukumlu-havalimaninda-yakalandi-119534771",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-uyusturucu-operasyonlarinda-yakalanan-23-supheli-tutuklandi-119534792"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -533,7 +529,8 @@
    "https://mersin.tarimorman.gov.tr/Haber/2351/%f0%9f%9a%9c-Tarimsal-Uretim-Planlamasi-Icin-81-Il-Mersinde-Bir-Araya-Geldi",
    "https://mersin.tarimorman.gov.tr/Haber/2350/%f0%9f%a4%9d-Mersinde-Sifir-Atik-Sonuc-Konferansi-Gerceklestirildi",
    "https://mersin.tarimorman.gov.tr/Haber/2349/%e2%80%8bil-Mudurlugumuze-Ziyaret-%f0%9f%a4%9d",
-   "https://mersin.tarimorman.gov.tr/Haber/2355/%f0%9f%8d%8a-Akdeniz-Meyve-Sinegiyle-Mucadelede-Dijital-Donem-Basladi"
+   "https://mersin.tarimorman.gov.tr/Haber/2355/%f0%9f%8d%8a-Akdeniz-Meyve-Sinegiyle-Mucadelede-Dijital-Donem-Basladi",
+   "https://mersin.tarimorman.gov.tr/Haber/2356/Sayin-Valimiz-Atilla-Toros-Saganaktan-Etkilenen-Akdam-Mahallesinde-Incelemelerde-Bulundu"
   ],
   "tarsus-universitesi": [
    "https://www.tarsus.edu.tr/Website/Haberler/30524/1/tarsus-universitesi%E2%80%99nin-disiplinlerarasi-arastirma-performansi-the-2027-siralamasinda",
@@ -587,18 +584,34 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T16:01:47.413Z",
+  "guncelleme": "2026-11-27T16:13:00.060Z",
   "liste": [
    {
+    "baslik": "sarıyer poligon mahallesi",
+    "trafik": 100
+   },
+   {
+    "baslik": "denizaltı",
+    "trafik": 100
+   },
+   {
+    "baslik": "ayça bingöl",
+    "trafik": 100
+   },
+   {
+    "baslik": "irem sak",
+    "trafik": 100
+   },
+   {
     "baslik": "çevre yolu",
+    "trafik": 200
+   },
+   {
+    "baslik": "şüpheli",
     "trafik": 100
    },
    {
     "baslik": "ingvar jónsson",
-    "trafik": 100
-   },
-   {
-    "baslik": "şüpheli",
     "trafik": 100
    },
    {
@@ -612,22 +625,6 @@
    {
     "baslik": "alanyaspor",
     "trafik": 200
-   },
-   {
-    "baslik": "test",
-    "trafik": 100
-   },
-   {
-    "baslik": "eskişehir elektrik kesintisi",
-    "trafik": 200
-   },
-   {
-    "baslik": "bakırköy adliyesi",
-    "trafik": 500
-   },
-   {
-    "baslik": "fenerbahçe transfer",
-    "trafik": 500
    }
   ]
  },

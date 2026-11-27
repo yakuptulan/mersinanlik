@@ -1,14 +1,14 @@
 {
- "guncelleme": "2026-11-27T16:01:55.935Z",
+ "guncelleme": "2026-11-27T16:13:00.833Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 16,
+   "sicaklik": 15,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-27",
      "min": 13,
-     "max": 16,
+     "max": 15,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-27T16:01:59.375Z",
+  "guncelleme": "2026-11-27T16:13:04.991Z",
   "liste": [
    {
     "ad": "Adalet Eczanesi",
@@ -762,7 +762,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-27T16:02:00.605Z",
+  "guncelleme": "2026-11-27T16:13:06.156Z",
   "liste": [
    {
     "tur": "su",
@@ -971,7 +971,7 @@
   "kaynakSaati": "2026-11-27 18:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-27T16:02:09.234Z",
+  "guncelleme": "2026-11-27T16:13:10.721Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -21427,7 +21427,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-27T16:02:10.148Z",
+  "guncelleme": "2026-11-27T16:13:11.355Z",
   "liste": [
    {
     "yol": "/",
@@ -21459,10 +21459,14 @@
    },
    {
     "yol": "/hava-durumu/anamur/",
-    "sayi": 3
+    "sayi": 2
    },
    {
     "yol": "/haber/tarsus-belediyesine-ilce-geneli-sifir-atik-belgesi-doyqdd/",
+    "sayi": 2
+   },
+   {
+    "yol": "/haber/mersin-de-yilbasi-pazari-bu-yil-da-kurulacak-mi-1nuv8z7/",
     "sayi": 2
    },
    {
@@ -21478,15 +21482,11 @@
     "sayi": 1
    },
    {
-    "yol": "/akaryakit/",
-    "sayi": 1
-   },
-   {
     "yol": "/haber/mardin-in-tas-sokaklarinda-reyhani-oynadilar-16ipb07/",
     "sayi": 1
    },
    {
-    "yol": "/kategori/siyaset/",
+    "yol": "/akaryakit/",
     "sayi": 1
    },
    {
@@ -21510,11 +21510,11 @@
     "sayi": 1
    },
    {
-    "yol": "/kategori/yasam/",
+    "yol": "/kategori/siyaset/",
     "sayi": 1
    },
    {
-    "yol": "/hava-durumu/bozyazi/",
+    "yol": "/kategori/yasam/",
     "sayi": 1
    },
    {
@@ -21526,7 +21526,7 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-de-yilbasi-pazari-bu-yil-da-kurulacak-mi-1nuv8z7/",
+    "yol": "/hava-durumu/bozyazi/",
     "sayi": 1
    },
    {
@@ -21538,11 +21538,11 @@
     "sayi": 1
    },
    {
-    "yol": "/mahalle/bozyazi/gozsuzce/",
+    "yol": "/haber/mersin-de-tefecilik-sorusturmalarinda-yeni-gelisme-3-tutuklama-cyhwiy/",
     "sayi": 1
    },
    {
-    "yol": "/haber/mersin-de-tefecilik-sorusturmalarinda-yeni-gelisme-3-tutuklama-cyhwiy/",
+    "yol": "/mahalle/bozyazi/gozsuzce/",
     "sayi": 1
    },
    {
@@ -21560,7 +21560,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-27T16:02:11.383Z",
+  "guncelleme": "2026-11-27T16:13:12.904Z",
   "deniz": {
    "sicaklik": 21.2,
    "dalga": 0.24
@@ -22636,7 +22636,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-27T16:02:13.108Z",
+  "guncelleme": "2026-11-27T16:13:14.757Z",
   "liste": [
    {
     "id": 6386,
