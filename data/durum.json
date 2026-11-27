@@ -16,7 +16,7 @@
  },
  "gorsel": {
   "gun": "2026-11-27",
-  "adet": 49,
+  "adet": 52,
   "premium": 46
  },
  "kurumGorulen": {
@@ -184,7 +184,6 @@
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kktcnin-43-kurulus-yil-donumu-kutlandi-119522757",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-1-ekmek-1-corba-hizmeti-yeniden-basladi-119522754",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-diyabete-karsi-vatandaslara-ucretsiz-olcum-ve-bilgilendirme-119522704",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-torbaci-operasyonu-10-tutuklama-119522505",
@@ -383,7 +382,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinin-akdeniz-ilcesinde-cop-konteynerlerinin-bakimi-yapiliyor-119534646",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/interpol-tarafindan-aranan-hukumlu-mersinde-yakalandi-119534761",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mtso-baskan-yildizgorerden-genclere-hata-yapmaktan-da-girisimci-olmaktan-da-korkmayin-119534753",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/isirgan-otlu-yumurta-yedikten-sonra-hayatini-kaybeden-kadin-topraga-verildi-119534740"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/isirgan-otlu-yumurta-yedikten-sonra-hayatini-kaybeden-kadin-topraga-verildi-119534740",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kirmizi-bultenle-aranan-hukumlu-havalimaninda-yakalandi-119534771"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -583,11 +583,39 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T15:01:41.956Z",
+  "guncelleme": "2026-11-27T15:31:38.040Z",
   "liste": [
+   {
+    "baslik": "test",
+    "trafik": 100
+   },
+   {
+    "baslik": "doğum yardımı",
+    "trafik": 200
+   },
+   {
+    "baslik": "eskişehir elektrik kesintisi",
+    "trafik": 200
+   },
+   {
+    "baslik": "bakırköy adliyesi",
+    "trafik": 200
+   },
+   {
+    "baslik": "fenerbahçe transfer",
+    "trafik": 500
+   },
+   {
+    "baslik": "zuhal topal",
+    "trafik": 200
+   },
    {
     "baslik": "vatandaşlık",
     "trafik": 200
+   },
+   {
+    "baslik": "yusuf tekin",
+    "trafik": 100
    },
    {
     "baslik": "derya şensoy",
@@ -595,35 +623,7 @@
    },
    {
     "baslik": "türk hava yolları",
-    "trafik": 500
-   },
-   {
-    "baslik": "seferberlik",
-    "trafik": 200
-   },
-   {
-    "baslik": "avrupa",
-    "trafik": 5000
-   },
-   {
-    "baslik": "halkbank erkek voleybol takımı",
-    "trafik": 100
-   },
-   {
-    "baslik": "gürcistan başbakanı",
-    "trafik": 100
-   },
-   {
-    "baslik": "ciğer",
-    "trafik": 100
-   },
-   {
-    "baslik": "diagne",
-    "trafik": 5000
-   },
-   {
-    "baslik": "deniz yılanı",
-    "trafik": 200
+    "trafik": 1000
    }
   ]
  },
