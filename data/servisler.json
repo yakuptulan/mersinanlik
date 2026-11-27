@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-27T16:31:54.784Z",
+ "guncelleme": "2026-11-27T17:02:03.606Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 15,
@@ -74,7 +74,7 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 14,
+   "sicaklik": 13,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -110,13 +110,13 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 14,
+   "sicaklik": 12,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
      "min": 12,
-     "max": 14,
+     "max": 12,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -147,7 +147,7 @@
   },
   "camliyayla": {
    "sicaklik": 8,
-   "durum": "Açık",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
@@ -183,7 +183,7 @@
   },
   "erdemli": {
    "sicaklik": 14,
-   "durum": "Açık",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
@@ -254,13 +254,13 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 15,
-   "durum": "Açık",
+   "sicaklik": 14,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
      "min": 14,
-     "max": 15,
+     "max": 14,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -290,13 +290,13 @@
    ]
   },
   "mut": {
-   "sicaklik": 13,
-   "durum": "Az bulutlu",
+   "sicaklik": 12,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
      "min": 11,
-     "max": 13,
+     "max": 12,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -327,7 +327,7 @@
   },
   "silifke": {
    "sicaklik": 12,
-   "durum": "Açık",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
@@ -362,13 +362,13 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 13,
-   "durum": "Açık",
+   "sicaklik": 12,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
      "min": 11,
-     "max": 13,
+     "max": 12,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -398,13 +398,13 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 15,
-   "durum": "Açık",
+   "sicaklik": 14,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
      "min": 13,
-     "max": 15,
+     "max": 14,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -434,13 +434,13 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 15,
-   "durum": "Açık",
+   "sicaklik": 14,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
      "min": 13,
-     "max": 15,
+     "max": 14,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-27T16:31:59.991Z",
+  "guncelleme": "2026-11-27T17:02:07.519Z",
   "liste": [
    {
     "ad": "Adalet Eczanesi",
@@ -762,7 +762,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-27T16:32:01.181Z",
+  "guncelleme": "2026-11-27T17:02:08.566Z",
   "liste": [
    {
     "tur": "su",
@@ -776,23 +776,6 @@
       "ad": "Mezitli",
       "mahalleler": [
        "Çevlik"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Tarsus ilçesi Yeşilyurt Mahallesi ana isale hattında meydana gelen arızadan kaynaklı Yesilyurt Mahallesi ve Hürriyet Mahallesi'nde su kesintisi yaşanmaktadır. Tahmini olarak saat 20.00'da suların verilmesi ön görülmektedir.",
-    "baslangic": "2026-11-27T15:16:00.000Z",
-    "bitis": "2026-11-27T17:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "tarsus",
-      "ad": "Tarsus",
-      "mahalleler": [
-       "Hürriyet",
-       "Yeşilyurt"
       ]
      }
     ]
@@ -971,7 +954,7 @@
   "kaynakSaati": "2026-11-27 18:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-27T16:32:07.322Z",
+  "guncelleme": "2026-11-27T17:02:13.375Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1696,7 +1679,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-27T16:32:09.933Z",
+  "guncelleme": "2026-11-27T17:02:15.304Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -21164,7 +21147,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-27T16:32:51.082Z",
+    "guncelleme": "2026-11-27T17:02:55.406Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21246,7 +21229,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-27T16:32:52.326Z",
+    "guncelleme": "2026-11-27T17:02:56.629Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21328,7 +21311,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-27T16:32:53.576Z",
+    "guncelleme": "2026-11-27T17:02:57.859Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21427,11 +21410,11 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-27T16:32:08.503Z",
+  "guncelleme": "2026-11-27T17:02:14.225Z",
   "liste": [
    {
     "yol": "/",
-    "sayi": 12
+    "sayi": 14
    },
    {
     "yol": "/haber/mersinli-serhat-in-muzik-basarisi-cocuk-korosu-sinavinda-birinci-oldu-1qnrend/",
@@ -21444,6 +21427,10 @@
    {
     "yol": "/haber/akdeniz-de-konteynerler-yikanip-dezenfekte-ediliyor-jphj7z/",
     "sayi": 6
+   },
+   {
+    "yol": "/haber/interpol-un-kirmizi-bultenle-aradigi-sahis-havalimaninda-gozaltina-ali-1u002f4/",
+    "sayi": 5
    },
    {
     "yol": "/haber/mersin-de-tefecilik-operasyonlarinda-yakalanan-3-zanli-tutuklandi-vbs2u5/",
@@ -21490,11 +21477,11 @@
     "sayi": 1
    },
    {
-    "yol": "/mahalleler/bozyazi/",
+    "yol": "/is-ilanlari/mezitli/",
     "sayi": 1
    },
    {
-    "yol": "/haber/yoruk-turkmenler-festivalde-bulusuyor-1ybcz5x/",
+    "yol": "/mahalleler/bozyazi/",
     "sayi": 1
    },
    {
@@ -21506,7 +21493,7 @@
     "sayi": 1
    },
    {
-    "yol": "/is-ilanlari/silifke/",
+    "yol": "/haber/yoruk-turkmenler-festivalde-bulusuyor-1ybcz5x/",
     "sayi": 1
    },
    {
@@ -21515,6 +21502,10 @@
    },
    {
     "yol": "/kategori/yasam/",
+    "sayi": 1
+   },
+   {
+    "yol": "/is-ilanlari/silifke/",
     "sayi": 1
    },
    {
@@ -21560,15 +21551,15 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-27T16:32:54.776Z",
+  "guncelleme": "2026-11-27T17:02:59.061Z",
   "deniz": {
    "sicaklik": 21.2,
    "dalga": 0.22
   },
   "hava": {
-   "aqi": 47,
+   "aqi": 46,
    "pm25": 11.9,
-   "pm10": 20.3,
+   "pm10": 21.2,
    "uvMax": 2.2
   }
  },
@@ -22636,7 +22627,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-27T16:32:56.757Z",
+  "guncelleme": "2026-11-27T17:03:00.724Z",
   "liste": [
    {
     "id": 6386,
