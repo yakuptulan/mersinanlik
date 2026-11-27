@@ -12,16 +12,12 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "mersin-universitesi": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-27T11:31:46.549Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-27",
-  "adet": 36,
-  "premium": 36
+  "adet": 39,
+  "premium": 39
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -187,7 +183,6 @@
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-uretici-kadinlar-kirsal-mahalle-bulusmalarinda-vatandaslarla-bulustu-119523297",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/15-yil-9-ay-hapisle-aranan-firarinin-taninmamak-icin-estetik-yaptirdigi-ortaya-cikti-119524162",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/huda-par-genel-baskani-yapicioglu-mersinde-partisinin-5-olagan-il-kongresinde-konustu-119523190",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-yasa-disi-bahis-ve-dolandiricilik-operasyonunda-yakalanan-10-zanli-tutuklandi-119523014",
@@ -386,7 +381,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersin-valisi-atilla-toros-kendisine-mektup-gonderen-ogrencilerle-bulustu-119534180",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinin-tarimsal-ticari-kulturel-ve-ekonomik-degerleri-tanitilacak-119534298",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/bridgestone-emniyetli-kis-surusu-icin-uyari-ilk-kari-beklemeyin-119534325",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/akdenizde-cop-konteynerleri-yikanip-dezenfekte-ediliyor-119534439"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/akdenizde-cop-konteynerleri-yikanip-dezenfekte-ediliyor-119534439",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-bati-akdeniz-bolgesel-kariyer-fuari-basladi-119534553"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -583,8 +579,20 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T11:32:06.504Z",
+  "guncelleme": "2026-11-27T12:01:34.582Z",
   "liste": [
+   {
+    "baslik": "pape gueye",
+    "trafik": 100
+   },
+   {
+    "baslik": "miras",
+    "trafik": 100
+   },
+   {
+    "baslik": "devalüasyon",
+    "trafik": 1000
+   },
    {
     "baslik": "doğum",
     "trafik": 200
@@ -599,7 +607,7 @@
    },
    {
     "baslik": "çankaya belediyesi",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "osmangazi belediyesi",
@@ -611,19 +619,7 @@
    },
    {
     "baslik": "somer sivrioğlu",
-    "trafik": 1000
-   },
-   {
-    "baslik": "emlak vergisi",
-    "trafik": 500
-   },
-   {
-    "baslik": "emekli zammı son dakika",
-    "trafik": 1000
-   },
-   {
-    "baslik": "marc marquez",
-    "trafik": 200
+    "trafik": 2000
    }
   ]
  },
