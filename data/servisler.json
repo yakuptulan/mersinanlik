@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-27T13:02:11.120Z",
+ "guncelleme": "2026-11-27T13:25:36.962Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -110,14 +110,14 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 20,
+   "sicaklik": 19,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-27",
-     "min": 11,
-     "max": 20,
-     "durum": "Az bulutlu"
+     "min": 12,
+     "max": 19,
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -127,7 +127,7 @@
     },
     {
      "tarih": "2026-11-29",
-     "min": 12,
+     "min": 11,
      "max": 20,
      "durum": "Açık"
     },
@@ -135,7 +135,7 @@
      "tarih": "2026-11-30",
      "min": 10,
      "max": 20,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-12-01",
@@ -182,13 +182,13 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 20,
-   "durum": "Bulutlu",
+   "sicaklik": 19,
+   "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-27",
      "min": 13,
-     "max": 20,
+     "max": 19,
      "durum": "Az bulutlu"
     },
     {
@@ -205,7 +205,7 @@
     },
     {
      "tarih": "2026-11-30",
-     "min": 11,
+     "min": 10,
      "max": 18,
      "durum": "Açık"
     },
@@ -218,14 +218,14 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 16,
+   "sicaklik": 14,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-27",
      "min": 8,
-     "max": 16,
-     "durum": "Az bulutlu"
+     "max": 14,
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-28",
@@ -243,7 +243,7 @@
      "tarih": "2026-11-30",
      "min": 7,
      "max": 11,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-12-01",
@@ -290,18 +290,18 @@
    ]
   },
   "mut": {
-   "sicaklik": 18,
+   "sicaklik": 17,
    "durum": "Açık",
    "gunler": [
     {
      "tarih": "2026-11-27",
      "min": 11,
-     "max": 18,
+     "max": 17,
      "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-28",
-     "min": 10,
+     "min": 9,
      "max": 18,
      "durum": "Parçalı bulutlu"
     },
@@ -313,7 +313,7 @@
     },
     {
      "tarih": "2026-11-30",
-     "min": 10,
+     "min": 8,
      "max": 16,
      "durum": "Açık"
     },
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-27T13:02:14.451Z",
+  "guncelleme": "2026-11-27T13:25:41.037Z",
   "liste": [
    {
     "ad": "Adalet Eczanesi",
@@ -762,8 +762,24 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-27T13:02:15.434Z",
+  "guncelleme": "2026-11-27T13:25:42.104Z",
   "liste": [
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Tarsus ilçesi. Kartaltepesi sokak , ana isale hattında meydana gelen arızadan kaynakli su kesintisi yaşanacaktır. Tahmini saat, 18:00,da su verilmesi planlanmaktadır.",
+    "baslangic": "2026-11-27T08:37:00.000Z",
+    "bitis": "2026-11-27T15:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "tarsus",
+      "ad": "Tarsus",
+      "mahalleler": [
+       "Takbaş"
+      ]
+     }
+    ]
+   },
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
@@ -970,7 +986,7 @@
   "kaynakSaati": "2026-11-27 16:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-27T13:02:21.623Z",
+  "guncelleme": "2026-11-27T13:25:48.081Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -21426,7 +21442,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-27T13:02:22.370Z",
+  "guncelleme": "2026-11-27T13:25:48.687Z",
   "liste": [
    {
     "yol": "/haber/mersinli-serhat-in-muzik-basarisi-cocuk-korosu-sinavinda-birinci-oldu-1qnrend/",
@@ -21477,19 +21493,15 @@
     "sayi": 1
    },
    {
-    "yol": "/akaryakit/",
-    "sayi": 1
-   },
-   {
     "yol": "/haber/mardin-in-tas-sokaklarinda-reyhani-oynadilar-16ipb07/",
     "sayi": 1
    },
    {
-    "yol": "/kategori/siyaset/",
+    "yol": "/akaryakit/",
     "sayi": 1
    },
    {
-    "yol": "/is-ilanlari/yenisehir/",
+    "yol": "/kategori/siyaset/",
     "sayi": 1
    },
    {
@@ -21555,7 +21567,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-27T13:02:24.264Z",
+  "guncelleme": "2026-11-27T13:25:50.286Z",
   "deniz": {
    "sicaklik": 21.2,
    "dalga": 0.24
@@ -21568,20 +21580,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-27T13:02:26.155Z",
+  "guncelleme": "2026-11-27T13:25:52.092Z",
   "giden": [
-   {
-    "no": [
-     "PC2087"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-27T13:25:00.000Z",
-    "tahmini": "2026-11-27T13:35:00.000Z",
-    "kapi": "107",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC3013"
@@ -21591,7 +21591,7 @@
     "planlanan": "2026-11-27T13:50:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -21651,7 +21651,7 @@
     "planlanan": "2026-11-27T16:05:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -22148,18 +22148,6 @@
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "PC3012"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "İzmir",
-    "planlanan": "2026-11-27T13:15:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC2100"
@@ -22703,7 +22691,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-27T13:02:26.154Z",
+  "guncelleme": "2026-11-27T13:25:52.091Z",
   "liste": [
    {
     "id": 6386,

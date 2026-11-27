@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-27",
-  "adet": 45,
-  "premium": 45
+  "adet": 47,
+  "premium": 46
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -183,8 +183,6 @@
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/huda-par-genel-baskani-yapicioglu-mersinde-partisinin-5-olagan-il-kongresinde-konustu-119523190",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-yasa-disi-bahis-ve-dolandiricilik-operasyonunda-yakalanan-10-zanli-tutuklandi-119523014",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/saman-balyalarinin-istiflendigi-alamda-yangin-119523006",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-50-kisinin-dolandirildigi-operasyonda-10-supheli-tutuklandi-119523002",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/denetim-esnasinda-motosikletin-carptigi-polis-yaralandi-119522833",
@@ -382,7 +380,9 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/bridgestone-emniyetli-kis-surusu-icin-uyari-ilk-kari-beklemeyin-119534325",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/akdenizde-cop-konteynerleri-yikanip-dezenfekte-ediliyor-119534439",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-bati-akdeniz-bolgesel-kariyer-fuari-basladi-119534553",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mutta-kaybolan-90-kecinin-40i-sag-bulundu-119534614"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mutta-kaybolan-90-kecinin-40i-sag-bulundu-119534614",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersindeki-uyusturucu-operasyonlarinda-23-supheli-tutuklandi-119534673",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinin-akdeniz-ilcesinde-cop-konteynerlerinin-bakimi-yapiliyor-119534646"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -497,7 +497,8 @@
    "https://mersingundem.com/haber/13721/firinlarda-hijyen-gramaj-ve-fiyat-denetimi.html",
    "https://mersingundem.com/haber/13720/buyuksehirin-ucretsiz-atolyeleri-cocuklarin-yeteneklerini-ortaya-cikariyor.html",
    "https://mersingundem.com/haber/13722/mutta-zeytin-para-etmiyor-uretici-de-alici-da-dertli.html",
-   "https://mersingundem.com/haber/13723/akdenizde-cop-konteynerleri-yikanip-dezenfekte-ediliyor.html"
+   "https://mersingundem.com/haber/13723/akdenizde-cop-konteynerleri-yikanip-dezenfekte-ediliyor.html",
+   "https://mersingundem.com/haber/13724/mersin-sanayide-vites-buyutuyor-25-bin-donumluk-yatirim-alani-ve-rekor-ihracat-hamlesi.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -579,8 +580,20 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T13:01:37.797Z",
+  "guncelleme": "2026-11-27T13:25:22.171Z",
   "liste": [
+   {
+    "baslik": "the fall",
+    "trafik": 100
+   },
+   {
+    "baslik": "arda turan",
+    "trafik": 50000
+   },
+   {
+    "baslik": "öğretmen ataması kontenjan dağılımı",
+    "trafik": 5000
+   },
    {
     "baslik": "gümüş",
     "trafik": 2000
@@ -591,11 +604,15 @@
    },
    {
     "baslik": "hüsnü üstün",
+    "trafik": 500
+   },
+   {
+    "baslik": "ediz hun",
     "trafik": 200
    },
    {
     "baslik": "tv dizisi",
-    "trafik": 200
+    "trafik": 500
    },
    {
     "baslik": "iflas",
@@ -604,22 +621,6 @@
    {
     "baslik": "ege üniversitesi",
     "trafik": 100
-   },
-   {
-    "baslik": "pape gueye",
-    "trafik": 500
-   },
-   {
-    "baslik": "miras",
-    "trafik": 200
-   },
-   {
-    "baslik": "devalüasyon",
-    "trafik": 200
-   },
-   {
-    "baslik": "doğum",
-    "trafik": 500
    }
   ]
  },
