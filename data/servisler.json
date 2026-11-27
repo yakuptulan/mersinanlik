@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-27T10:02:22.367Z",
+ "guncelleme": "2026-11-27T10:17:24.289Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 19,
@@ -75,7 +75,7 @@
   },
   "aydincik": {
    "sicaklik": 21,
-   "durum": "Bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
@@ -182,7 +182,7 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 19,
+   "sicaklik": 20,
    "durum": "Bulutlu",
    "gunler": [
     {
@@ -219,7 +219,7 @@
   },
   "gulnar": {
    "sicaklik": 16,
-   "durum": "Bulutlu",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
@@ -254,7 +254,7 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 19,
+   "sicaklik": 20,
    "durum": "Bulutlu",
    "gunler": [
     {
@@ -290,7 +290,7 @@
    ]
   },
   "mut": {
-   "sicaklik": 15,
+   "sicaklik": 16,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-27T10:02:26.230Z",
+  "guncelleme": "2026-11-27T10:17:29.288Z",
   "liste": [
    {
     "ad": "Adalet Eczanesi",
@@ -762,7 +762,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-27T10:02:27.160Z",
+  "guncelleme": "2026-11-27T10:17:30.730Z",
   "liste": [
    {
     "tur": "su",
@@ -808,6 +808,22 @@
       "ad": "Çamlıyayla",
       "mahalleler": [
        "Belçınar"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "ERDEMLİ İLÇESİNE BAĞLI AYAŞ MAHALLESİ GENELİ ARIZA NEDENİ İLE SAAT 16:00 KADAR SU KESİNTİSİ YAŞANACAKTIR",
+    "baslangic": "2026-11-27T10:09:00.000Z",
+    "bitis": "2026-11-27T13:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "erdemli",
+      "ad": "Erdemli",
+      "mahalleler": [
+       "Ayaş"
       ]
      }
     ]
@@ -986,7 +1002,7 @@
   "kaynakSaati": "2026-11-27 13:02:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-27T10:02:33.443Z",
+  "guncelleme": "2026-11-27T10:17:37.904Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -21463,7 +21479,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-27T10:02:33.861Z",
+  "guncelleme": "2026-11-27T10:17:38.423Z",
   "liste": [
    {
     "yol": "/",
@@ -21568,7 +21584,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-27T10:02:35.084Z",
+  "guncelleme": "2026-11-27T10:17:39.732Z",
   "deniz": {
    "sicaklik": 21.2,
    "dalga": 0.16
@@ -21581,20 +21597,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-27T10:02:36.919Z",
+  "guncelleme": "2026-11-27T10:17:41.855Z",
   "giden": [
-   {
-    "no": [
-     "PC2101"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-27T10:15:00.000Z",
-    "tahmini": null,
-    "kapi": "107",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
    {
     "no": [
      "TK2457"
@@ -21604,7 +21608,7 @@
     "planlanan": "2026-11-27T10:30:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -21616,7 +21620,7 @@
     "planlanan": "2026-11-27T10:40:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -21640,7 +21644,7 @@
     "planlanan": "2026-11-27T11:50:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -21652,7 +21656,7 @@
     "planlanan": "2026-11-27T12:10:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -21664,7 +21668,7 @@
     "planlanan": "2026-11-27T12:10:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -22173,18 +22177,6 @@
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "PC3641"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Van",
-    "planlanan": "2026-11-27T10:05:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "XQ1371"
@@ -22772,11 +22764,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2084"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-28T10:05:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-27T10:02:36.918Z",
+  "guncelleme": "2026-11-27T10:17:41.854Z",
   "liste": [
    {
     "id": 6386,
