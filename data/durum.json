@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "mersin-universitesi": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-27T23:31:33.672Z"
   }
  },
  "gorsel": {
@@ -590,8 +594,20 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T23:01:41.681Z",
+  "guncelleme": "2026-11-27T23:31:49.639Z",
   "liste": [
+   {
+    "baslik": "trt haber",
+    "trafik": 100
+   },
+   {
+    "baslik": "çağatay ulusoy",
+    "trafik": 100
+   },
+   {
+    "baslik": "epstein",
+    "trafik": 100
+   },
    {
     "baslik": "cnn türk",
     "trafik": 10000
@@ -610,7 +626,7 @@
    },
    {
     "baslik": "cnn türk canlı",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "kızılcık şerbeti fragman",
@@ -618,18 +634,6 @@
    },
    {
     "baslik": "levante",
-    "trafik": 500
-   },
-   {
-    "baslik": "lululemon",
-    "trafik": 100
-   },
-   {
-    "baslik": "bolu",
-    "trafik": 20000
-   },
-   {
-    "baslik": "brest",
     "trafik": 500
    }
   ]
