@@ -1,6 +1,57 @@
 {
  "yazilar": [
   {
+   "slug": "mevduat-nedir-mersin-de-banka-hesabi-acacaklar-icin-merak-edilenler",
+   "konu": "Mevduat",
+   "trend": "mevduat",
+   "tur": "gundem",
+   "baslik": "Mevduat nedir? Mersin'de banka hesabı açacaklar için merak edilenler",
+   "spot": "Banka hesaplarında biriken paraların türleri, vadeleri ve işleyişi hakkında merak edilen tüm detayları derledik.",
+   "aciklama": "Mevduat nedir, vadeli ve vadesiz hesaplar arasındaki farklar nelerdir? Bankacılık sisteminde mevduat türleri ve kuralları hakkında merak edilenler.",
+   "bolumler": [
+    {
+     "baslik": "Mevduat Nedir ve Nasıl Oluşturulur?",
+     "metin": "Mevduat, bankalara veya benzeri kredi kurumlarına istenildiğinde, belli bir vade ya da ihbar süresi sonunda çekilmek üzere yatırılan paralara verilen isimdir. Bu hesaplar banka açısından borç niteliği taşıdığı için bilançoların pasif kısmında yer alır. Mevduat oluşturmak için mutlaka nakit yatırmak gerekmez; başka bir hesaptan aktarma yapılması, havale kabul edilmesi veya çek alacak kaydı ile de mevduat meydana getirilebilir. Yerine ve türüne göre bu hesaplar mevduat hesapları veya alacaklı câri hesaplar gibi adlar alır."
+    },
+    {
+     "baslik": "Vade Türlerine Göre Mevduat Çeşitleri",
+     "metin": "Mevduat, vade yönünden temel olarak üçe ayrılmaktadır. Vadesiz mevduat, hiçbir kayıt ve şarta bağlı olmadan istenildiği zaman çekilebilen hesap türüdür. Vadeli mevduat ise banka ile parayı yatıran kişi arasında önceden kararlaştırılan vadenin başlamasından itibaren çekilebilir özelliktedir. İhbarlı mevduat türünde ise hesap sahibi, parasını çekeceği tarihi belirli bir süre önceden bankasına bildirmek zorundadır."
+    },
+    {
+     "baslik": "Günlük ve Aylık Faiz Arasındaki Farklar",
+     "metin": "Kimi mevduat hesapları otuz iki günlük zaman diliminden başlayarak vade kapsamına alınır ve faiz imkanından yararlanır. Bazı hesaplar ise günlük olarak faiz almaktadır ve bu fark vadeli hesaba yansıtılır. Günlük faizin işlediği sistemlerdeki hesaplara genellikle birikimli mevduat hesabı denir. Bu sistemde daha az kazanç sağlansa bile vade sorunu olmadığı için para her an işleme alınabilir durumdadır."
+    },
+    {
+     "baslik": "Mevduatın Ekonomideki Rolü ve İşlevi",
+     "metin": "Mevduat, ticaret bankalarının en önemli finansman kaynağını oluşturur. Bankalar halktan topladıkları küçük tutarlı paraları firmalara kredi olarak vererek veya şirketlerin sermayelerine katılarak ekonomiye aktarırlar. Büyük fonların yönetilmesi söz konusu olduğu için devletler, sahiplerinin paralarını zamanında geri alabilmesini güvence altına almak amacıyla mevduat kabul edilmesini izne bağlamıştır. Ayrıca bankaların faaliyetlerine müdahale edilerek belirli kurallara uymaları zorunlu kılınmıştır."
+    },
+    {
+     "baslik": "Mevduat Kabul Etmeye Yetkili Kurumlar",
+     "metin": "Ülkemizde mevduat, Bankalar Kanununa ve özel yasalarına göre yetkili olan bankalar ile diğer kuruluşlar tarafından toplanabilir. Bugüne kadar uygulaması görülmemiş olsa da izin almaları şartıyla tarım kredi kooperatifleri ve birlikleri de mevduat toplayabilme hakkına sahiptir. PTT ise posta çeki hesabı aracılığıyla mevduat hakkına sahibimdir. Resmi ve özel daireler ile ortaklıklarda, çalışanlarca kurulan sandıklar ise izin almaksızın yalnızca kendi üyelerinden mevduat kabul edebilir."
+    },
+    {
+     "baslik": "Mevduat Hesaplarında Zaman Aşımı Kuralı",
+     "metin": "Mevduat hesapları ile ilgili önemli kurallardan biri de zaman aşımı süresidir. Son istem veya işlem tarihinden itibaren üzerinden on yıl geçen ve sahipleri tarafından aranmayan hesaplar, faizleriyle birlikte Tasarruf Mevduatı Sigorta Fonu emrine devredilmek üzere Merkez Bankasına aktarılır."
+    }
+   ],
+   "sss": [
+    {
+     "soru": "Mevduat hangi vade türlerine ayrılır?",
+     "cevap": "Mevduat vadesiz, vadeli ve ihbarlı olmak üzere üçe ayrılır."
+    },
+    {
+     "soru": "Sahibi tarafından aranmayan mevduatlar kime devredilir?",
+     "cevap": "Son işlem tarihinden itibaren 10 yıl aranmayan hesaplar faizleriyle birlikte Tasarruf Mevduatı Sigorta Fonu emrine Merkez Bankasına devredilir."
+    }
+   ],
+   "kaynak": {
+    "ad": "Vikipedi: Mevduat",
+    "link": "https://tr.wikipedia.org/wiki/Mevduat"
+   },
+   "gorsel": null,
+   "tarih": "2026-11-27T08:34:40.312Z"
+  },
+  {
    "slug": "sut-nedir-mersin-in-merak-ettigi-sutun-tarihi-ve-ozellikleri",
    "konu": "Süt",
    "trend": "süt",
@@ -2899,6 +2950,7 @@
   "red dead redemption 2",
   "ataşehir",
   "süt",
-  "haysiyet"
+  "haysiyet",
+  "mevduat"
  ]
 }

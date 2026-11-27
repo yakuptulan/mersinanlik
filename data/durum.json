@@ -12,16 +12,12 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-27T08:01:22.632Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-27",
-  "adet": 13,
-  "premium": 13
+  "adet": 15,
+  "premium": 15
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -179,11 +175,11 @@
    "https://www.dha.com.tr/yerel-haberler/mersin/akdeniz/akdenizin-parklari-rengarenk-resimlerle-suslen-2989176",
    "https://www.dha.com.tr/yerel-haberler/mersin/yenisehir/cimsa-cbk-mersin-baxi-ferrol-93-57-2989376",
    "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/meskiden-tarsusun-3-mahallesine-kesintisiz-ic-2989532",
-   "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/minik-serhatin-muzik-yolculugu-buyuksehir-ile-2989523"
+   "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/minik-serhatin-muzik-yolculugu-buyuksehir-ile-2989523",
+   "https://www.dha.com.tr/yerel-haberler/mersin/toroslar/toroslarda-firinlara-hijyen-gramaj-ve-fiyat-d-2989603"
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-1-haftada-1086-arac-trafikten-menedildi-119523759",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinin-milyonlarca-yillik-gecmisi-fosillerle-anlatildi-119523482",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mesk-13-sampiyonlugunu-sporculariyla-kutladi-119523426",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-ogrenciler-matematigi-deneyimleyerek-ogreniyor-119523359",
@@ -382,7 +378,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-yetenegi-kesfedilen-serhat-cocuk-korosu-sinavini-birincilikle-kazandi-119534073",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/vali-verdigi-sozu-tuttu-gittigi-sinifta-duygu-dolu-anlar-yasandi-119534106",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/tarsus-belediyesi-ilce-genelini-kapsayan-sifir-atik-belgesi-aldi-119534101",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/meski-3-mahalleyi-daha-berdan-suyuna-kavusturdu-119534080"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/meski-3-mahalleyi-daha-berdan-suyuna-kavusturdu-119534080",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersin-valisi-atilla-toros-kendisine-mektup-gonderen-ogrencilerle-bulustu-119534180"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -572,15 +569,35 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-27T08:01:59.257Z",
+  "guncelleme": "2026-11-27T08:32:07.146Z",
   "liste": [
    {
-    "baslik": "haysiyet",
+    "baslik": "mevduat",
+    "trafik": 500
+   },
+   {
+    "baslik": "nilüfer belediyesi",
+    "trafik": 500
+   },
+   {
+    "baslik": "hayvancilik",
+    "trafik": 1000
+   },
+   {
+    "baslik": "garanti hisse",
     "trafik": 100
    },
    {
+    "baslik": "bim aktüel ürünler",
+    "trafik": 200
+   },
+   {
+    "baslik": "haysiyet",
+    "trafik": 200
+   },
+   {
     "baslik": "branş bazında sıralama 2026",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "müge anlı canlı yayın",
@@ -591,28 +608,8 @@
     "trafik": 100
    },
    {
-    "baslik": "melike şahin",
-    "trafik": 500
-   },
-   {
-    "baslik": "meb",
-    "trafik": 2000
-   },
-   {
-    "baslik": "yağmur atacan",
-    "trafik": 200
-   },
-   {
-    "baslik": "ece üner",
+    "baslik": "15 bin öğretmen ataması branş dağılımı",
     "trafik": 5000
-   },
-   {
-    "baslik": "pep guardiola",
-    "trafik": 500
-   },
-   {
-    "baslik": "roketsan",
-    "trafik": 500
    }
   ]
  },
