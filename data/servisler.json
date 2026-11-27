@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-27T18:31:40.711Z",
+ "guncelleme": "2026-11-27T19:01:46.183Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 14,
@@ -38,12 +38,12 @@
    ]
   },
   "anamur": {
-   "sicaklik": 13,
+   "sicaklik": 14,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
-     "min": 13,
+     "min": 14,
      "max": 14,
      "durum": "Parçalı bulutlu"
     },
@@ -183,7 +183,7 @@
   },
   "erdemli": {
    "sicaklik": 14,
-   "durum": "Az bulutlu",
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
@@ -255,7 +255,7 @@
   },
   "mezitli": {
    "sicaklik": 14,
-   "durum": "Parçalı bulutlu",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
@@ -326,13 +326,13 @@
    ]
   },
   "silifke": {
-   "sicaklik": 12,
+   "sicaklik": 11,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
      "min": 11,
-     "max": 12,
+     "max": 11,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -399,7 +399,7 @@
   },
   "toroslar": {
    "sicaklik": 14,
-   "durum": "Parçalı bulutlu",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
@@ -435,7 +435,7 @@
   },
   "yenisehir": {
    "sicaklik": 14,
-   "durum": "Parçalı bulutlu",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-27",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-27T18:31:43.585Z",
+  "guncelleme": "2026-11-27T19:01:50.349Z",
   "liste": [
    {
     "ad": "Adalet Eczanesi",
@@ -762,25 +762,8 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-27T18:31:44.498Z",
-  "liste": [
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "MEZİTLİ İLÇESİ ÇEVLİK MAHALLESİNDE MEYDANA GELEN ŞEBEKE ARIZASI NEDENİYLE ÇEVLİK MAHALLESİNDE SAAT 22:00 A KADAR BİR KISIM SU KESİNTİSİ YAŞANACAKTIR.",
-    "baslangic": "2026-11-27T13:39:56.000Z",
-    "bitis": "2026-11-27T19:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "mezitli",
-      "ad": "Mezitli",
-      "mahalleler": [
-       "Çevlik"
-      ]
-     }
-    ]
-   }
-  ]
+  "guncelleme": "2026-11-27T19:01:51.500Z",
+  "liste": []
  },
  "piyasa": {
   "guncelleme": "2026-11-27T18:31:48.307Z",
@@ -954,7 +937,7 @@
   "kaynakSaati": "2026-11-27 21:31:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-27T18:31:50.749Z",
+  "guncelleme": "2026-11-27T19:01:57.845Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1679,7 +1662,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-27T18:31:53.599Z",
+  "guncelleme": "2026-11-27T19:02:00.187Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -1744,13 +1727,13 @@
      "sira": 5,
      "takim": "Kasımpaşa",
      "ham": "KASIMPAŞA A.Ş.",
-     "o": 12,
+     "o": 13,
      "g": 6,
      "b": 5,
-     "m": 1,
-     "a": 19,
-     "y": 12,
-     "av": 7,
+     "m": 2,
+     "a": 21,
+     "y": 15,
+     "av": 6,
      "p": 23,
      "mersin": false
     },
@@ -1798,6 +1781,20 @@
     },
     {
      "sira": 9,
+     "takim": "Çaykur Rizespor",
+     "ham": "ÇAYKUR RİZESPOR A.Ş.",
+     "o": 13,
+     "g": 6,
+     "b": 2,
+     "m": 5,
+     "a": 18,
+     "y": 18,
+     "av": 0,
+     "p": 20,
+     "mersin": false
+    },
+    {
+     "sira": 10,
      "takim": "Göztepe",
      "ham": "GÖZTEPE A.Ş.",
      "o": 12,
@@ -1808,20 +1805,6 @@
      "y": 19,
      "av": 4,
      "p": 18,
-     "mersin": false
-    },
-    {
-     "sira": 10,
-     "takim": "Çaykur Rizespor",
-     "ham": "ÇAYKUR RİZESPOR A.Ş.",
-     "o": 12,
-     "g": 5,
-     "b": 2,
-     "m": 5,
-     "a": 15,
-     "y": 16,
-     "av": -1,
-     "p": 17,
      "mersin": false
     },
     {
@@ -1870,13 +1853,13 @@
      "sira": 14,
      "takim": "Corendon Alanyaspor",
      "ham": "CORENDON ALANYASPOR",
-     "o": 12,
+     "o": 13,
      "g": 3,
      "b": 3,
-     "m": 6,
-     "a": 10,
-     "y": 20,
-     "av": -10,
+     "m": 7,
+     "a": 11,
+     "y": 22,
+     "av": -11,
      "p": 12,
      "mersin": false
     },
@@ -1884,14 +1867,14 @@
      "sira": 15,
      "takim": "Tümosan Konyaspor",
      "ham": "TÜMOSAN KONYASPOR",
-     "o": 12,
-     "g": 2,
+     "o": 13,
+     "g": 3,
      "b": 2,
      "m": 8,
-     "a": 8,
-     "y": 18,
-     "av": -10,
-     "p": 8,
+     "a": 10,
+     "y": 19,
+     "av": -9,
+     "p": 11,
      "mersin": false
     },
     {
@@ -1942,7 +1925,7 @@
      "tarih": "2026-11-27",
      "saat": "20:00",
      "ev": "Corendon Alanyaspor",
-     "skor": null,
+     "skor": "1-2",
      "dep": "Tümosan Konyaspor",
      "mersin": false
     },
@@ -1950,7 +1933,7 @@
      "tarih": "2026-11-27",
      "saat": "20:00",
      "ev": "Çaykur Rizespor",
-     "skor": null,
+     "skor": "3-2",
      "dep": "Kasımpaşa",
      "mersin": false
     },
@@ -2472,13 +2455,13 @@
       "sira": 5,
       "takim": "Kasımpaşa",
       "ham": "KASIMPAŞA A.Ş.",
-      "o": 12,
+      "o": 13,
       "g": 6,
       "b": 5,
-      "m": 1,
-      "a": 19,
-      "y": 12,
-      "av": 7,
+      "m": 2,
+      "a": 21,
+      "y": 15,
+      "av": 6,
       "p": 23,
       "mersin": false
      },
@@ -2526,6 +2509,20 @@
      },
      {
       "sira": 9,
+      "takim": "Çaykur Rizespor",
+      "ham": "ÇAYKUR RİZESPOR A.Ş.",
+      "o": 13,
+      "g": 6,
+      "b": 2,
+      "m": 5,
+      "a": 18,
+      "y": 18,
+      "av": 0,
+      "p": 20,
+      "mersin": false
+     },
+     {
+      "sira": 10,
       "takim": "Göztepe",
       "ham": "GÖZTEPE A.Ş.",
       "o": 12,
@@ -2536,20 +2533,6 @@
       "y": 19,
       "av": 4,
       "p": 18,
-      "mersin": false
-     },
-     {
-      "sira": 10,
-      "takim": "Çaykur Rizespor",
-      "ham": "ÇAYKUR RİZESPOR A.Ş.",
-      "o": 12,
-      "g": 5,
-      "b": 2,
-      "m": 5,
-      "a": 15,
-      "y": 16,
-      "av": -1,
-      "p": 17,
       "mersin": false
      },
      {
@@ -2598,13 +2581,13 @@
       "sira": 14,
       "takim": "Corendon Alanyaspor",
       "ham": "CORENDON ALANYASPOR",
-      "o": 12,
+      "o": 13,
       "g": 3,
       "b": 3,
-      "m": 6,
-      "a": 10,
-      "y": 20,
-      "av": -10,
+      "m": 7,
+      "a": 11,
+      "y": 22,
+      "av": -11,
       "p": 12,
       "mersin": false
      },
@@ -2612,14 +2595,14 @@
       "sira": 15,
       "takim": "Tümosan Konyaspor",
       "ham": "TÜMOSAN KONYASPOR",
-      "o": 12,
-      "g": 2,
+      "o": 13,
+      "g": 3,
       "b": 2,
       "m": 8,
-      "a": 8,
-      "y": 18,
-      "av": -10,
-      "p": 8,
+      "a": 10,
+      "y": 19,
+      "av": -9,
+      "p": 11,
       "mersin": false
      },
      {
@@ -2670,7 +2653,7 @@
       "tarih": "2026-11-27",
       "saat": "20:00",
       "ev": "Corendon Alanyaspor",
-      "skor": null,
+      "skor": "1-2",
       "dep": "Tümosan Konyaspor",
       "mersin": false
      },
@@ -2678,7 +2661,7 @@
       "tarih": "2026-11-27",
       "saat": "20:00",
       "ev": "Çaykur Rizespor",
-      "skor": null,
+      "skor": "3-2",
       "dep": "Kasımpaşa",
       "mersin": false
      },
@@ -3362,12 +3345,12 @@
       {
        "ev": "Corendon Alanyaspor",
        "dep": "Tümosan Konyaspor",
-       "skor": null
+       "skor": "1-2"
       },
       {
        "ev": "Çaykur Rizespor",
        "dep": "Kasımpaşa",
-       "skor": null
+       "skor": "3-2"
       },
       {
        "ev": "Samsunspor",
@@ -3404,6 +3387,53 @@
        "dep": "Galatasaray",
        "skor": null
       }
+     ],
+     "14": [
+      {
+       "ev": "Galatasaray",
+       "dep": "Çaykur Rizespor",
+       "skor": null
+      },
+      {
+       "ev": "Tümosan Konyaspor",
+       "dep": "Gaziantep",
+       "skor": null
+      },
+      {
+       "ev": "Amed Sportif Faaliyetler",
+       "dep": "Corendon Alanyaspor",
+       "skor": null
+      },
+      {
+       "ev": "İstanbul Başakşehir FK",
+       "dep": "Fenerbahçe",
+       "skor": null
+      },
+      {
+       "ev": "Erzurumspor FK",
+       "dep": "Kocaelispor",
+       "skor": null
+      },
+      {
+       "ev": "Gençlerbirliği",
+       "dep": "Eyüpspor",
+       "skor": null
+      },
+      {
+       "ev": "Beşiktaş",
+       "dep": "Samsunspor",
+       "skor": null
+      },
+      {
+       "ev": "Trabzonspor",
+       "dep": "Arca Çorum FK",
+       "skor": null
+      },
+      {
+       "ev": "Kasımpaşa",
+       "dep": "Göztepe",
+       "skor": null
+      }
      ]
     },
     "kulup": {
@@ -3427,74 +3457,6 @@
      "Galatasaray": "3604"
     },
     "fikstur": {
-     "13": {
-      "alindi": "2026-11-26T22:32:31.653Z",
-      "maclar": [
-       {
-        "ev": "Corendon Alanyaspor",
-        "dep": "Tümosan Konyaspor",
-        "tarih": "2026-11-27",
-        "saat": "20:00",
-        "skor": null
-       },
-       {
-        "ev": "Çaykur Rizespor",
-        "dep": "Kasımpaşa",
-        "tarih": "2026-11-27",
-        "saat": "20:00",
-        "skor": null
-       },
-       {
-        "ev": "Samsunspor",
-        "dep": "Gençlerbirliği",
-        "tarih": "2026-11-28",
-        "saat": "16:00",
-        "skor": null
-       },
-       {
-        "ev": "Gaziantep",
-        "dep": "Amed Sportif Faaliyetler",
-        "tarih": "2026-11-28",
-        "saat": "19:00",
-        "skor": null
-       },
-       {
-        "ev": "Arca Çorum FK",
-        "dep": "Kocaelispor",
-        "tarih": "2026-11-29",
-        "saat": "13:30",
-        "skor": null
-       },
-       {
-        "ev": "Eyüpspor",
-        "dep": "İstanbul Başakşehir FK",
-        "tarih": "2026-11-29",
-        "saat": "16:00",
-        "skor": null
-       },
-       {
-        "ev": "Fenerbahçe",
-        "dep": "Erzurumspor FK",
-        "tarih": "2026-11-29",
-        "saat": "19:00",
-        "skor": null
-       },
-       {
-        "ev": "Göztepe",
-        "dep": "Trabzonspor",
-        "tarih": "2026-11-30",
-        "saat": "19:00",
-        "skor": null
-       },
-       {
-        "ev": "Beşiktaş",
-        "dep": "Galatasaray",
-        "tarih": "2026-11-30",
-        "saat": "21:00",
-        "skor": null
-       }
-      ]
-     },
      "14": {
       "alindi": "2026-11-26T22:32:32.962Z",
       "maclar": [
@@ -4955,10 +4917,10 @@
      ],
      "Kasımpaşa": [
       "G",
-      "G",
       "B",
       "G",
-      "G"
+      "G",
+      "M"
      ],
      "Fenerbahçe": [
       "G",
@@ -4981,18 +4943,18 @@
       "G",
       "B"
      ],
+     "Çaykur Rizespor": [
+      "M",
+      "B",
+      "G",
+      "G",
+      "G"
+     ],
      "Göztepe": [
       "G",
       "G",
       "G",
       "M",
-      "G"
-     ],
-     "Çaykur Rizespor": [
-      "M",
-      "M",
-      "B",
-      "G",
       "G"
      ],
      "Arca Çorum FK": [
@@ -5024,11 +4986,11 @@
       "M"
      ],
      "Tümosan Konyaspor": [
-      "M",
       "G",
       "M",
       "M",
-      "M"
+      "M",
+      "G"
      ],
      "Gaziantep": [
       "M",
@@ -21147,7 +21109,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-27T18:32:38.025Z",
+    "guncelleme": "2026-11-27T19:02:41.404Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21229,7 +21191,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-27T18:32:39.255Z",
+    "guncelleme": "2026-11-27T19:02:42.650Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21311,7 +21273,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-27T18:32:40.852Z",
+    "guncelleme": "2026-11-27T19:02:43.904Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21410,7 +21372,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-27T18:31:51.205Z",
+  "guncelleme": "2026-11-27T19:01:58.482Z",
   "liste": [
    {
     "yol": "/",
@@ -21543,15 +21505,15 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-27T18:32:42.053Z",
+  "guncelleme": "2026-11-27T19:02:45.106Z",
   "deniz": {
    "sicaklik": 21.2,
-   "dalga": 0.22
+   "dalga": 0.2
   },
   "hava": {
-   "aqi": 46,
-   "pm25": 12.2,
-   "pm10": 20.2,
+   "aqi": 44,
+   "pm25": 11.7,
+   "pm10": 18.4,
    "uvMax": 2.2
   }
  },
@@ -22607,7 +22569,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-27T18:32:44.185Z",
+  "guncelleme": "2026-11-27T19:02:47.305Z",
   "liste": [
    {
     "id": 6386,
