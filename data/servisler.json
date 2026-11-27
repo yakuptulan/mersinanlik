@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-27T21:31:36.792Z",
+ "guncelleme": "2026-11-27T22:01:38.348Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 14,
@@ -110,7 +110,7 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 13,
+   "sicaklik": 12,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -146,8 +146,8 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 7,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 6,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
@@ -398,7 +398,7 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 14,
+   "sicaklik": 13,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-27T21:31:39.816Z",
+  "guncelleme": "2026-11-27T22:01:42.166Z",
   "liste": [
    {
     "ad": "Bulut Eczanesi",
@@ -674,11 +674,11 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-27T21:02:03.352Z",
+  "guncelleme": "2026-11-27T22:01:43.103Z",
   "liste": []
  },
  "piyasa": {
-  "guncelleme": "2026-11-27T21:31:45.182Z",
+  "guncelleme": "2026-11-27T22:01:47.011Z",
   "kalemler": {
    "gram": {
     "alis": 5963.87,
@@ -711,9 +711,9 @@
     "degisim": 2.18
    },
    "btc": {
-    "satis": 3032449,
-    "usd": 59770,
-    "degisim": -1.68
+    "satis": 3032328,
+    "usd": 59737,
+    "degisim": -1.49
    }
   },
   "altinlar": [
@@ -846,10 +846,10 @@
     "degisim": -0.03
    }
   ],
-  "kaynakSaati": "2026-11-28 00:31:01"
+  "kaynakSaati": "2026-11-28 01:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-27T21:31:47.239Z",
+  "guncelleme": "2026-11-27T22:01:50.845Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1874,7 +1874,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-27T21:03:14.988Z",
+  "guncelleme": "2026-11-27T22:01:52.568Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -21298,7 +21298,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-27T21:03:57.883Z",
+    "guncelleme": "2026-11-27T22:02:32.693Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21380,7 +21380,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-27T21:03:59.169Z",
+    "guncelleme": "2026-11-27T22:02:33.902Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21462,7 +21462,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-27T21:04:00.469Z",
+    "guncelleme": "2026-11-27T22:02:35.119Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21561,7 +21561,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-27T21:31:47.798Z",
+  "guncelleme": "2026-11-27T22:01:51.315Z",
   "liste": [
    {
     "yol": "/",
@@ -21686,20 +21686,20 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-27T21:31:50.139Z",
+  "guncelleme": "2026-11-27T22:02:36.321Z",
   "deniz": {
    "sicaklik": 21.1,
    "dalga": 0.18
   },
   "hava": {
-   "aqi": 36,
-   "pm25": 9.4,
-   "pm10": 13.7,
+   "aqi": 31,
+   "pm25": 8,
+   "pm10": 11.4,
    "uvMax": 1.8
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-27T21:31:51.892Z",
+  "guncelleme": "2026-11-27T22:02:38.065Z",
   "giden": [
    {
     "no": [
@@ -22209,18 +22209,6 @@
   "gelen": [
    {
     "no": [
-     "PC3014"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "İzmir",
-    "planlanan": "2026-11-27T21:45:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
      "PC2096"
     ],
     "havayolu": "Pegasus",
@@ -22228,7 +22216,7 @@
     "planlanan": "2026-11-27T22:05:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "ic"
    },
    {
@@ -22686,11 +22674,23 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC2096"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-28T22:00:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-27T21:31:51.892Z",
+  "guncelleme": "2026-11-27T22:02:38.064Z",
   "liste": [
    {
     "id": 6386,
