@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-28",
-  "adet": 6,
-  "premium": 6
+  "adet": 8,
+  "premium": 7
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -190,10 +190,6 @@
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/baskan-vekili-genc-mersinimizin-kiyilarini-direncli-hale-getirmek-bizlerin-en-asli-119524328",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-ureticilere-20-bin-310-fidan-ve-290-solar-kamera-destegi-119524361",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mezitli-belediyesi-etkinlik-ve-sanat-merkezi-ozel-gunlere-ev-sahipligi-yapiyor-119524483",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersin-devlet-opera-ve-balesinden-italyan-ezgileriyle-bir-aksam-konseri-119524540",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/tarsusta-traktor-ile-otomobil-carpisti-2-yarali-119524771",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-denize-dusen-beton-mikserinin-surucusu-yasamini-yitirdi-119524862",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/2-mersin-ekonomi-zirvesinin-hazirlik-toplantisi-yapildi-119524842",
@@ -389,7 +385,11 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/kirmizi-bultenle-aranan-hukumlu-havalimaninda-yakalandi-119534885",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-uyusturucu-operasyonu-11-tutuklama-119534884",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/babasinin-izinden-giden-elif-dursun-13-yasinda-siyah-kusak-oldu-mersinin-silifke-ilcesinde-119535121",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-cocuklar-ve-yaslilar-ayni-etkinlikte-bulustu-119535078"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-cocuklar-ve-yaslilar-ayni-etkinlikte-bulustu-119535078",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/tarsus-belediyesinden-kis-aylarinda-sicak-corba-ikrami-119535172",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersin-buyuksehir-belediyesinin-2027-butcesi-49-milyar-tl-oldu-119535165",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersin-buyuksehir-belediyesi-ispanyada-surdurulebilir-gida-sistemlerini-inceledi-119535140",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-universite-ogrencilerine-kariyer-destegi-119535127"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -598,11 +598,35 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-28T08:01:57.087Z",
+  "guncelleme": "2026-11-28T08:31:51.683Z",
   "liste": [
    {
-    "baslik": "derya uluğ kaç yaşında",
+    "baslik": "ankara elektrik kesintisi",
+    "trafik": 100
+   },
+   {
+    "baslik": "luka doncic",
+    "trafik": 100
+   },
+   {
+    "baslik": "28 kasım hangi burç",
+    "trafik": 100
+   },
+   {
+    "baslik": "bulgaristan",
+    "trafik": 200
+   },
+   {
+    "baslik": "asil gök kaç yaşında",
     "trafik": 500
+   },
+   {
+    "baslik": "kamu personeli",
+    "trafik": 200
+   },
+   {
+    "baslik": "derya uluğ kaç yaşında",
+    "trafik": 200
    },
    {
     "baslik": "cristhian mosquera",
@@ -615,30 +639,6 @@
    {
     "baslik": "oğuzhan hasipoğlu",
     "trafik": 100
-   },
-   {
-    "baslik": "28 kasım ne günü",
-    "trafik": 100
-   },
-   {
-    "baslik": "kıvanç kılınç",
-    "trafik": 100
-   },
-   {
-    "baslik": "necati özkan",
-    "trafik": 200
-   },
-   {
-    "baslik": "t.c. resmî gazete",
-    "trafik": 200
-   },
-   {
-    "baslik": "toki",
-    "trafik": 500
-   },
-   {
-    "baslik": "üzüm",
-    "trafik": 200
    }
   ]
  },
