@@ -1,9 +1,9 @@
 {
- "guncelleme": "2026-11-28T16:01:53.592Z",
+ "guncelleme": "2026-11-28T16:32:05.914Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 17,
-   "durum": "Parçalı bulutlu",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
@@ -38,13 +38,13 @@
    ]
   },
   "anamur": {
-   "sicaklik": 16,
+   "sicaklik": 15,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 14,
-     "max": 16,
+     "max": 15,
      "durum": "Bulutlu"
     },
     {
@@ -74,13 +74,13 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 16,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 14,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 14,
-     "max": 16,
+     "max": 15,
      "durum": "Bulutlu"
     },
     {
@@ -110,13 +110,13 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 16,
-   "durum": "Az bulutlu",
+   "sicaklik": 14,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 12,
-     "max": 16,
+     "max": 14,
      "durum": "Bulutlu"
     },
     {
@@ -182,14 +182,14 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 17,
+   "sicaklik": 16,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 16,
-     "max": 17,
-     "durum": "Parçalı bulutlu"
+     "max": 16,
+     "durum": "Bulutlu"
     },
     {
      "tarih": "2026-11-29",
@@ -218,7 +218,7 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 10,
+   "sicaklik": 9,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -254,13 +254,13 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 17,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 16,
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 16,
-     "max": 17,
+     "max": 16,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -290,13 +290,13 @@
    ]
   },
   "mut": {
-   "sicaklik": 14,
+   "sicaklik": 13,
    "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 11,
-     "max": 14,
+     "max": 13,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -327,7 +327,7 @@
   },
   "silifke": {
    "sicaklik": 15,
-   "durum": "Parçalı bulutlu",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
@@ -362,13 +362,13 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 17,
+   "sicaklik": 16,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 14,
-     "max": 17,
+     "max": 16,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -399,7 +399,7 @@
   },
   "toroslar": {
    "sicaklik": 17,
-   "durum": "Parçalı bulutlu",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
@@ -435,7 +435,7 @@
   },
   "yenisehir": {
    "sicaklik": 17,
-   "durum": "Parçalı bulutlu",
+   "durum": "Az bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-28T16:01:57.340Z",
+  "guncelleme": "2026-11-28T16:32:10.532Z",
   "liste": [
    {
     "ad": "Atlas Eczanesi",
@@ -763,7 +763,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-28T16:01:58.350Z",
+  "guncelleme": "2026-11-28T16:32:11.738Z",
   "liste": [
    {
     "tur": "su",
@@ -782,6 +782,22 @@
        "Hürriyet",
        "Yelkenli Adası",
        "Yeni"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Silifke ilçesi, Sayağzı Mahallesinde ana şebeke arızasından dolayı saat 22:30 a kadar su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-28T16:05:42.000Z",
+    "bitis": "2026-11-28T19:30:52.000Z",
+    "ilceler": [
+     {
+      "ilce": "silifke",
+      "ad": "Silifke",
+      "mahalleler": [
+       "Sayağzı"
       ]
      }
     ]
@@ -1985,7 +2001,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-28T16:02:05.634Z",
+  "guncelleme": "2026-11-28T16:32:27.957Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -19698,7 +19714,7 @@
       {
        "ev": "Yeni Mersin İdmanyurdu",
        "dep": "Niğde Belediyesi Spor",
-       "skor": null
+       "skor": "0-0"
       },
       {
        "ev": "Yozgat Belediyesi Bozok Spor",
@@ -21217,10 +21233,10 @@
      ],
      "Niğde Belediyesi Spor": [
       "G",
-      "G",
       "B",
       "M",
-      "G"
+      "G",
+      "B"
      ],
      "Eti Gübre Mazıdağı Fosfat Spor": [
       "B",
@@ -21248,7 +21264,7 @@
       "G",
       "G",
       "G",
-      "G"
+      "B"
      ],
      "Ejderoğlu Kırşehir": [
       "B",
@@ -21327,7 +21343,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-28T16:02:46.867Z",
+    "guncelleme": "2026-11-28T16:33:12.816Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21409,7 +21425,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-28T16:02:48.101Z",
+    "guncelleme": "2026-11-28T16:33:14.109Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21491,12 +21507,12 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-28T16:02:49.341Z",
+    "guncelleme": "2026-11-28T16:33:15.415Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
       "kulup": "Kırıkkale FK Spor",
-      "gol": 15
+      "gol": 14
      },
      {
       "ad": "ENES NALBANTOĞLU",
@@ -21549,11 +21565,6 @@
       "gol": 6
      },
      {
-      "ad": "MUHAMMET ARSLANTAŞ",
-      "kulup": "Bitlis 1916",
-      "gol": 6
-     },
-     {
       "ad": "AHMET TEKER",
       "kulup": "Eti Gübre Mazıdağı Fosfat Spor",
       "gol": 5
@@ -21566,6 +21577,11 @@
      {
       "ad": "BEKİRCAN ÇOBAN",
       "kulup": "1964 Silifke Spor",
+      "gol": 5
+     },
+     {
+      "ad": "BERKAY EKİCİ",
+      "kulup": "Açıkalın Erciyes 38",
       "gol": 5
      }
     ]
@@ -21590,7 +21606,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-28T16:02:03.781Z",
+  "guncelleme": "2026-11-28T16:32:25.494Z",
   "liste": [
    {
     "yol": "/haber/1964-silifke-spor-yarin-deplasmanda-ayos-osmaniyespor-ile-karsilasacak-o06530/",
@@ -21621,16 +21637,16 @@
     "sayi": 5
    },
    {
-    "yol": "/haber/mersin-de-yilbasi-pazari-bu-yil-da-kurulacak-mi-1nuv8z7/",
-    "sayi": 4
-   },
-   {
     "yol": "/haber/yoruk-turkmenler-festivalde-bulusuyor-1ybcz5x/",
     "sayi": 4
    },
    {
     "yol": "/is-ilanlari/mezitli/",
     "sayi": 4
+   },
+   {
+    "yol": "/haber/mersin-de-yilbasi-pazari-bu-yil-da-kurulacak-mi-1nuv8z7/",
+    "sayi": 3
    },
    {
     "yol": "/",
@@ -21695,7 +21711,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-28T16:02:50.542Z",
+  "guncelleme": "2026-11-28T16:33:16.617Z",
   "deniz": {
    "sicaklik": 21.1,
    "dalga": 0.3
@@ -22807,7 +22823,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-28T16:02:52.578Z",
+  "guncelleme": "2026-11-28T16:33:19.301Z",
   "liste": [
    {
     "id": 6386,
