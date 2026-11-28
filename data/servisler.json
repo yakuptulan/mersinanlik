@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-28T08:32:09.378Z",
+ "guncelleme": "2026-11-28T09:02:54.475Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -146,7 +146,7 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 13,
+   "sicaklik": 14,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -182,7 +182,7 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 19,
+   "sicaklik": 20,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -218,8 +218,8 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 14,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 15,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
@@ -290,7 +290,7 @@
    ]
   },
   "mut": {
-   "sicaklik": 15,
+   "sicaklik": 16,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-28T08:32:14.485Z",
+  "guncelleme": "2026-11-28T09:02:58.530Z",
   "liste": [
    {
     "ad": "Atlas Eczanesi",
@@ -774,7 +774,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-28T08:32:15.836Z",
+  "guncelleme": "2026-11-28T09:02:59.808Z",
   "liste": [
    {
     "tur": "su",
@@ -789,22 +789,6 @@
       "mahalleler": [
        "Atatürk",
        "Yeni"
-      ]
-     }
-    ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Tarsus ilçesi Kırklarsırtı mahallesi ana isale hattında meydana gelen arızadan kaynaklı su kesintisi yaşanmaktadır.Tahmini olarak saat 12,00'da su verilmesi planlanmaktadır.",
-    "baslangic": "2026-11-28T06:20:00.000Z",
-    "bitis": "2026-11-28T09:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "tarsus",
-      "ad": "Tarsus",
-      "mahalleler": [
-       "Kırklarsırtı"
       ]
      }
     ]
@@ -844,7 +828,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-28T08:32:18.431Z",
+  "guncelleme": "2026-11-28T09:03:04.555Z",
   "kalemler": {
    "gram": {
     "alis": 5963.87,
@@ -877,9 +861,9 @@
     "degisim": 2.18
    },
    "btc": {
-    "satis": 3025975,
-    "usd": 59632,
-    "degisim": -3.53
+    "satis": 3021843,
+    "usd": 59551,
+    "degisim": -3.61
    }
   },
   "altinlar": [
@@ -1012,10 +996,10 @@
     "degisim": -0.03
    }
   ],
-  "kaynakSaati": "2026-11-28 11:32:01"
+  "kaynakSaati": "2026-11-28 12:03:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-28T08:32:21.426Z",
+  "guncelleme": "2026-11-28T09:03:07.031Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -2040,7 +2024,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-28T08:02:50.242Z",
+  "guncelleme": "2026-11-28T09:03:09.398Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -5128,7 +5112,7 @@
       ]
      },
      "33": {
-      "alindi": "2026-11-27T08:32:53.652Z",
+      "alindi": "2026-11-28T09:03:20.645Z",
       "maclar": [
        {
         "ev": "Kocaelispor",
@@ -5196,7 +5180,7 @@
       ]
      },
      "34": {
-      "alindi": "2026-11-27T08:32:54.940Z",
+      "alindi": "2026-11-28T09:03:21.936Z",
       "maclar": [
        {
         "ev": "Galatasaray",
@@ -8187,7 +8171,7 @@
       ]
      },
      "36": {
-      "alindi": "2026-11-27T08:33:01.415Z",
+      "alindi": "2026-11-28T09:03:28.437Z",
       "maclar": [
        {
         "ev": "Ekenler Beton Sivasspor",
@@ -8262,7 +8246,7 @@
       ]
      },
      "37": {
-      "alindi": "2026-11-27T08:33:02.709Z",
+      "alindi": "2026-11-28T09:03:29.732Z",
       "maclar": [
        {
         "ev": "Mardin 1969 Spor",
@@ -11001,7 +10985,7 @@
       ]
      },
      "34": {
-      "alindi": "2026-11-27T08:33:09.957Z",
+      "alindi": "2026-11-28T09:03:36.280Z",
       "maclar": [
        {
         "ev": "Çorlu Spor 1947",
@@ -15941,7 +15925,7 @@
       ]
      },
      "34": {
-      "alindi": "2026-11-27T08:33:21.850Z",
+      "alindi": "2026-11-28T09:03:48.782Z",
       "maclar": [
        {
         "ev": "Galata Spor",
@@ -18612,7 +18596,7 @@
       ]
      },
      "34": {
-      "alindi": "2026-11-27T08:33:28.559Z",
+      "alindi": "2026-11-28T09:03:55.350Z",
       "maclar": [
        {
         "ev": "1922 Akşehir Spor",
@@ -21262,7 +21246,7 @@
       ]
      },
      "34": {
-      "alindi": "2026-11-27T08:33:35.904Z",
+      "alindi": "2026-11-28T09:04:01.951Z",
       "maclar": [
        {
         "ev": "Diyarbekir Spor",
@@ -21464,7 +21448,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-28T08:03:51.784Z",
+    "guncelleme": "2026-11-28T09:04:03.248Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21546,7 +21530,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-28T08:03:53.770Z",
+    "guncelleme": "2026-11-28T09:04:04.527Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21628,7 +21612,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-28T08:03:55.076Z",
+    "guncelleme": "2026-11-28T09:04:05.821Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21727,7 +21711,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-28T08:32:21.738Z",
+  "guncelleme": "2026-11-28T09:03:07.463Z",
   "liste": [
    {
     "yol": "/haber/1964-silifke-spor-yarin-deplasmanda-ayos-osmaniyespor-ile-karsilasacak-o06530/",
@@ -21794,10 +21778,6 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/mardin-in-tas-sokaklarinda-reyhani-oynadilar-16ipb07/",
-    "sayi": 1
-   },
-   {
     "yol": "/haber/mersin-de-bir-haftadir-kayip-olarak-aranan-kadin-bulundu-vejbqi/",
     "sayi": 1
    },
@@ -21811,10 +21791,6 @@
    },
    {
     "yol": "/mahalleler/bozyazi/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/silifke-de-su-kesintisi-25-kasim-tasucu-13-saat-surecek-s0892b/",
     "sayi": 1
    },
    {
@@ -21844,45 +21820,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-28T08:32:23.739Z",
+  "guncelleme": "2026-11-28T09:04:07.022Z",
   "deniz": {
-   "sicaklik": 21.1,
+   "sicaklik": 21.2,
    "dalga": 0.22
   },
   "hava": {
    "aqi": 30,
-   "pm25": 6.7,
-   "pm10": 12.5,
+   "pm25": 7.3,
+   "pm10": 14.2,
    "uvMax": 1.8
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-28T08:32:26.601Z",
+  "guncelleme": "2026-11-28T09:04:18.466Z",
   "giden": [
-   {
-    "no": [
-     "TK2455"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-28T08:45:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "TK5160"
-    ],
-    "havayolu": "THY",
-    "yer": "Cidde",
-    "planlanan": "2026-11-28T08:50:00.000Z",
-    "tahmini": null,
-    "kapi": "102",
-    "durum": "SON ÇAĞRI",
-    "hat": "dis"
-   },
    {
     "no": [
      "PC3601"
@@ -21892,7 +21844,7 @@
     "planlanan": "2026-11-28T10:00:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -21916,7 +21868,7 @@
     "planlanan": "2026-11-28T10:55:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -21928,7 +21880,7 @@
     "planlanan": "2026-11-28T11:00:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -21940,7 +21892,7 @@
     "planlanan": "2026-11-28T11:55:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -22336,6 +22288,30 @@
     "planlanan": "2026-11-29T08:25:00.000Z",
     "tahmini": null,
     "kapi": "102",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "TK2455"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-29T08:45:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF1051"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ercan",
+    "planlanan": "2026-11-29T09:00:00.000Z",
+    "tahmini": null,
+    "kapi": "103",
     "durum": "",
     "hat": "dis"
    }
@@ -22860,7 +22836,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-28T08:32:26.601Z",
+  "guncelleme": "2026-11-28T09:04:18.465Z",
   "liste": [
    {
     "id": 6386,
