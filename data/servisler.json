@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-28T01:24:09.310Z",
+ "guncelleme": "2026-11-28T01:31:44.093Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 14,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-28T01:24:12.571Z",
+  "guncelleme": "2026-11-28T01:31:47.875Z",
   "liste": [
    {
     "ad": "Bulut Eczanesi",
@@ -674,11 +674,11 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-28T01:24:13.734Z",
+  "guncelleme": "2026-11-28T01:31:48.821Z",
   "liste": []
  },
  "piyasa": {
-  "guncelleme": "2026-11-28T01:24:15.737Z",
+  "guncelleme": "2026-11-28T01:31:52.869Z",
   "kalemler": {
    "gram": {
     "alis": 5963.87,
@@ -711,9 +711,9 @@
     "degisim": 2.18
    },
    "btc": {
-    "satis": 3049657,
-    "usd": 60099,
-    "degisim": -1.03
+    "satis": 3048945,
+    "usd": 60085,
+    "degisim": -1.05
    }
   },
   "altinlar": [
@@ -846,10 +846,10 @@
     "degisim": -0.03
    }
   ],
-  "kaynakSaati": "2026-11-28 04:24:01"
+  "kaynakSaati": "2026-11-28 04:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-28T01:24:18.034Z",
+  "guncelleme": "2026-11-28T01:31:55.139Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -21561,7 +21561,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-28T01:24:18.491Z",
+  "guncelleme": "2026-11-28T01:31:55.952Z",
   "liste": [
    {
     "yol": "/haber/mersinli-serhat-in-muzik-basarisi-cocuk-korosu-sinavinda-birinci-oldu-1qnrend/",
@@ -21652,11 +21652,11 @@
     "sayi": 1
    },
    {
-    "yol": "/mahalle/bozyazi/gozsuzce/",
+    "yol": "/is-ilanlari/silifke/",
     "sayi": 1
    },
    {
-    "yol": "/is-ilanlari/silifke/",
+    "yol": "/mahalle/bozyazi/gozsuzce/",
     "sayi": 1
    },
    {
@@ -21674,7 +21674,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-28T01:24:20.001Z",
+  "guncelleme": "2026-11-28T01:31:57.359Z",
   "deniz": {
    "sicaklik": 21.1,
    "dalga": 0.22
@@ -21687,20 +21687,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-28T01:24:22.428Z",
+  "guncelleme": "2026-11-28T01:31:59.093Z",
   "giden": [
-   {
-    "no": [
-     "TK2475"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-28T01:30:00.000Z",
-    "tahmini": "2026-11-28T01:40:00.000Z",
-    "kapi": "109",
-    "durum": "BOARDING",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC4525"
@@ -21710,7 +21698,7 @@
     "planlanan": "2026-11-28T02:05:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KONTUAR KAPALI",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -22168,6 +22156,18 @@
     "kapi": "102",
     "durum": "",
     "hat": "dis"
+   },
+   {
+    "no": [
+     "TK2475"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-29T01:30:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
@@ -22654,7 +22654,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-28T01:24:22.428Z",
+  "guncelleme": "2026-11-28T01:31:59.093Z",
   "liste": [
    {
     "id": 6386,
