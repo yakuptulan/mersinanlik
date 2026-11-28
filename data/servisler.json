@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-28T18:59:40.074Z",
+ "guncelleme": "2026-11-28T19:05:33.141Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -74,12 +74,12 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 14,
+   "sicaklik": 15,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 14,
+     "min": 15,
      "max": 15,
      "durum": "Bulutlu"
     },
@@ -110,12 +110,12 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 12,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 13,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 12,
+     "min": 13,
      "max": 13,
      "durum": "Bulutlu"
     },
@@ -146,13 +146,13 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 7,
-   "durum": "Az bulutlu",
+   "sicaklik": 6,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 6,
-     "max": 7,
+     "max": 6,
      "durum": "Bulutlu"
     },
     {
@@ -218,12 +218,12 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 10,
+   "sicaklik": 11,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 10,
+     "min": 11,
      "max": 11,
      "durum": "Bulutlu"
     },
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-28T18:59:43.420Z",
+  "guncelleme": "2026-11-28T19:05:37.305Z",
   "liste": [
    {
     "ad": "Atlas Eczanesi",
@@ -763,7 +763,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-28T18:59:44.546Z",
+  "guncelleme": "2026-11-28T19:05:38.288Z",
   "liste": [
    {
     "tur": "su",
@@ -784,7 +784,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-28T18:59:48.307Z",
+  "guncelleme": "2026-11-28T19:05:40.334Z",
   "kalemler": {
    "gram": {
     "alis": 5963.87,
@@ -817,9 +817,9 @@
     "degisim": 2.18
    },
    "btc": {
-    "satis": 3016318,
-    "usd": 59442,
-    "degisim": -0.77
+    "satis": 3016659,
+    "usd": 59449,
+    "degisim": -0.82
    }
   },
   "altinlar": [
@@ -952,10 +952,10 @@
     "degisim": -0.03
    }
   ],
-  "kaynakSaati": "2026-11-28 21:59:01"
+  "kaynakSaati": "2026-11-28 22:05:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-28T18:59:51.004Z",
+  "guncelleme": "2026-11-28T19:05:42.754Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -21585,7 +21585,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-28T18:59:51.366Z",
+  "guncelleme": "2026-11-28T19:05:43.013Z",
   "liste": [
    {
     "yol": "/haber/1964-silifke-spor-yarin-deplasmanda-ayos-osmaniyespor-ile-karsilasacak-o06530/",
@@ -21686,7 +21686,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-28T19:00:37.593Z",
+  "guncelleme": "2026-11-28T19:05:44.232Z",
   "deniz": {
    "sicaklik": 21.1,
    "dalga": 0.28
@@ -21699,7 +21699,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-28T19:00:39.517Z",
+  "guncelleme": "2026-11-28T19:05:46.030Z",
   "giden": [
    {
     "no": [
@@ -21722,7 +21722,7 @@
     "planlanan": "2026-11-28T19:15:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "SON ÇAĞRI",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -22250,6 +22250,18 @@
     "planlanan": "2026-11-29T18:30:00.000Z",
     "tahmini": null,
     "kapi": "109",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3603"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Antalya",
+    "planlanan": "2026-11-29T19:05:00.000Z",
+    "tahmini": null,
+    "kapi": "108",
     "durum": "",
     "hat": "ic"
    }
@@ -22822,7 +22834,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-28T19:00:39.516Z",
+  "guncelleme": "2026-11-28T19:05:46.029Z",
   "liste": [
    {
     "id": 6386,
