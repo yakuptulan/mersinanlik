@@ -12,12 +12,16 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "mersin-universitesi": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-28T13:01:29.770Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-28",
-  "adet": 21,
-  "premium": 18
+  "adet": 23,
+  "premium": 20
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -192,7 +196,6 @@
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/2-mersin-ekonomi-zirvesinin-hazirlik-toplantisi-yapildi-119524842",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-otomobil-ile-traktorun-carpistigi-kazada-suruculer-yaralandi-119524866",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/akdenizde-mahallede-senlik-var-coskusu-basladi-119524919",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-denize-dusen-beton-mikserinin-surucusu-hayatini-kaybetti-119525001",
@@ -391,7 +394,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersin-buyuksehir-belediyesi-ispanyada-surdurulebilir-gida-sistemlerini-inceledi-119535140",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-universite-ogrencilerine-kariyer-destegi-119535127",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/tarsusa-iklim-dostu-park-kazandirilacak-119535231",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/tarsus-spor-parki-hizmete-acildi-119535214"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/tarsus-spor-parki-hizmete-acildi-119535214",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/ogretmenler-ve-aileleri-yaristi-dereceye-girenler-odullendirildi-119535465"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -517,7 +521,8 @@
    "https://mersingundem.com/haber/13732/mersin-buyuksehir-belediyesinin-2027-butcesi-49-milyar-tl-oldu.html",
    "https://mersingundem.com/haber/13731/tarsusa-iklim-dostu-park-kazandirilacak.html",
    "https://mersingundem.com/haber/13730/tarsus-belediyesinden-kis-aylarinda-sicak-corba-ikrami.html",
-   "https://mersingundem.com/haber/13734/tarsus-spor-parki-hizmete-acildi.html"
+   "https://mersingundem.com/haber/13734/tarsus-spor-parki-hizmete-acildi.html",
+   "https://mersingundem.com/haber/13735/ogretmenler-ve-aileleri-yaristi-dereceye-girenler-odullendirildi.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -607,15 +612,31 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-28T12:31:53.910Z",
+  "guncelleme": "2026-11-28T13:01:45.398Z",
   "liste": [
    {
-    "baslik": "samsunspor - gençlerbirliği",
+    "baslik": "al-hazem vs al-nassr",
     "trafik": 200
+   },
+   {
+    "baslik": "real betis - rayo vallecano",
+    "trafik": 500
+   },
+   {
+    "baslik": "erzincanspor",
+    "trafik": 200
+   },
+   {
+    "baslik": "samsunspor - gençlerbirliği",
+    "trafik": 10000
    },
    {
     "baslik": "52 orduspor",
     "trafik": 100
+   },
+   {
+    "baslik": "ikindi namazı",
+    "trafik": 2000
    },
    {
     "baslik": "veda yurtsever",
@@ -623,7 +644,7 @@
    },
    {
     "baslik": "الحزم ضد النصر",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "şanlıurfaspor",
@@ -632,22 +653,6 @@
    {
     "baslik": "arabuluculuk",
     "trafik": 200
-   },
-   {
-    "baslik": "temettü",
-    "trafik": 200
-   },
-   {
-    "baslik": "poligon mahallesi",
-    "trafik": 200
-   },
-   {
-    "baslik": "sakaryaspor",
-    "trafik": 500
-   },
-   {
-    "baslik": "kocaeli",
-    "trafik": 500
    }
   ]
  },
