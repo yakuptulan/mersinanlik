@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-28",
-  "adet": 30,
-  "premium": 26
+  "adet": 33,
+  "premium": 29
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -192,7 +192,6 @@
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-otomobil-ile-traktorun-carpistigi-kazada-suruculer-yaralandi-119524866",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/akdenizde-mahallede-senlik-var-coskusu-basladi-119524919",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-denize-dusen-beton-mikserinin-surucusu-hayatini-kaybetti-119525001",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/ucurumdan-denize-yuvarlanan-beton-mikserinin-soforu-oldu-119524998",
@@ -391,7 +390,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-universite-ogrencilerine-kariyer-destegi-119535127",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/tarsusa-iklim-dostu-park-kazandirilacak-119535231",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/tarsus-spor-parki-hizmete-acildi-119535214",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/ogretmenler-ve-aileleri-yaristi-dereceye-girenler-odullendirildi-119535465"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/ogretmenler-ve-aileleri-yaristi-dereceye-girenler-odullendirildi-119535465",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/sarikecili-yorukleri-gocun-ardindan-kisi-gecirecekleri-mersine-ulasti-119535646"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -609,47 +609,47 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-28T17:01:48.191Z",
+  "guncelleme": "2026-11-28T17:31:46.573Z",
   "liste": [
    {
-    "baslik": "ipswich - aston villa",
+    "baslik": "orban",
+    "trafik": 200
+   },
+   {
+    "baslik": "pl",
+    "trafik": 200
+   },
+   {
+    "baslik": "aile arasında",
+    "trafik": 200
+   },
+   {
+    "baslik": "burak elmas",
+    "trafik": 100
+   },
+   {
+    "baslik": "epl",
+    "trafik": 100
+   },
+   {
+    "baslik": "mardin spor",
     "trafik": 2000
    },
    {
+    "baslik": "ipswich - aston villa",
+    "trafik": 10000
+   },
+   {
     "baslik": "elche - atletico madrid",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "stuttgart - eintracht frankfurt",
-    "trafik": 200
+    "trafik": 1000
    },
    {
     "baslik": "amd",
     "trafik": 200
-   },
-   {
-    "baslik": "cengiz ünder",
-    "trafik": 200
-   },
-   {
-    "baslik": "balıkesirspor",
-    "trafik": 200
-   },
-   {
-    "baslik": "gülse birsel",
-    "trafik": 100
-   },
-   {
-    "baslik": "schalke",
-    "trafik": 200
-   },
-   {
-    "baslik": "al nassr fc",
-    "trafik": 500
-   },
-   {
-    "baslik": "bayern",
-    "trafik": 1000
    }
   ]
  },
