@@ -12,16 +12,12 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-28T12:01:20.678Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-28",
-  "adet": 19,
-  "premium": 16
+  "adet": 21,
+  "premium": 18
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -611,8 +607,32 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-28T12:01:50.745Z",
+  "guncelleme": "2026-11-28T12:31:53.910Z",
   "liste": [
+   {
+    "baslik": "samsunspor - gençlerbirliği",
+    "trafik": 200
+   },
+   {
+    "baslik": "52 orduspor",
+    "trafik": 100
+   },
+   {
+    "baslik": "veda yurtsever",
+    "trafik": 200
+   },
+   {
+    "baslik": "الحزم ضد النصر",
+    "trafik": 500
+   },
+   {
+    "baslik": "şanlıurfaspor",
+    "trafik": 500
+   },
+   {
+    "baslik": "arabuluculuk",
+    "trafik": 200
+   },
    {
     "baslik": "temettü",
     "trafik": 200
@@ -627,31 +647,7 @@
    },
    {
     "baslik": "kocaeli",
-    "trafik": 1000
-   },
-   {
-    "baslik": "dolar",
-    "trafik": 2000
-   },
-   {
-    "baslik": "batman petrol spor",
-    "trafik": 1000
-   },
-   {
-    "baslik": "trt spor canlı izle",
-    "trafik": 1000
-   },
-   {
-    "baslik": "iski su kesintisi",
-    "trafik": 100
-   },
-   {
-    "baslik": "memur zammı",
     "trafik": 500
-   },
-   {
-    "baslik": "dolandırıcılık",
-    "trafik": 200
    }
   ]
  },
