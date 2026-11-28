@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-28T18:31:50.042Z",
+ "guncelleme": "2026-11-28T18:59:40.074Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-28T18:31:53.126Z",
+  "guncelleme": "2026-11-28T18:59:43.420Z",
   "liste": [
    {
     "ad": "Atlas Eczanesi",
@@ -763,7 +763,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-28T18:31:54.079Z",
+  "guncelleme": "2026-11-28T18:59:44.546Z",
   "liste": [
    {
     "tur": "su",
@@ -784,7 +784,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-28T18:31:55.978Z",
+  "guncelleme": "2026-11-28T18:59:48.307Z",
   "kalemler": {
    "gram": {
     "alis": 5963.87,
@@ -817,9 +817,9 @@
     "degisim": 2.18
    },
    "btc": {
-    "satis": 3012753,
-    "usd": 59372,
-    "degisim": -0.85
+    "satis": 3016318,
+    "usd": 59442,
+    "degisim": -0.77
    }
   },
   "altinlar": [
@@ -952,10 +952,10 @@
     "degisim": -0.03
    }
   ],
-  "kaynakSaati": "2026-11-28 21:31:01"
+  "kaynakSaati": "2026-11-28 21:59:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-28T17:32:27.634Z",
+  "guncelleme": "2026-11-28T18:59:51.004Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1980,7 +1980,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-28T18:02:09.347Z",
+  "guncelleme": "2026-11-28T18:59:52.887Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -6601,7 +6601,7 @@
       {
        "ev": "Muğlaspor",
        "dep": "Mardin 1969 Spor",
-       "skor": null
+       "skor": "3-0"
       },
       {
        "ev": "Orfa Yapı Pendikspor",
@@ -8396,10 +8396,10 @@
       "G"
      ],
      "Mardin 1969 Spor": [
-      "M",
       "G",
       "G",
       "B",
+      "M",
       "M"
      ],
      "Turka Esenler Erokspor": [
@@ -8411,10 +8411,10 @@
      ],
      "Muğlaspor": [
       "G",
-      "G",
       "M",
       "M",
-      "M"
+      "M",
+      "G"
      ],
      "Mısırlıcomtr Fatih Karagümrük": [
       "M",
@@ -16024,6 +16024,20 @@
     "puan": [
      {
       "sira": 1,
+      "takim": "Balıkesirspor",
+      "ham": "BALIKESİRSPOR",
+      "o": 14,
+      "g": 9,
+      "b": 3,
+      "m": 2,
+      "a": 40,
+      "y": 20,
+      "av": 20,
+      "p": 30,
+      "mersin": false
+     },
+     {
+      "sira": 2,
       "takim": "Etimesgut Spor",
       "ham": "ETİMESGUT SPOR KULÜBÜ",
       "o": 13,
@@ -16037,7 +16051,7 @@
       "mersin": false
      },
      {
-      "sira": 2,
+      "sira": 3,
       "takim": "Eskişehirspor",
       "ham": "ESKİŞEHİRSPOR KULÜBÜ",
       "o": 13,
@@ -16051,7 +16065,7 @@
       "mersin": false
      },
      {
-      "sira": 3,
+      "sira": 4,
       "takim": "Gemlik Sümerbey Futbol Spor",
       "ham": "GEMLİK SÜMERBEY FUTBOL SPOR A.Ş.",
       "o": 14,
@@ -16062,20 +16076,6 @@
       "y": 8,
       "av": 23,
       "p": 28,
-      "mersin": false
-     },
-     {
-      "sira": 4,
-      "takim": "Balıkesirspor",
-      "ham": "BALIKESİRSPOR",
-      "o": 13,
-      "g": 8,
-      "b": 3,
-      "m": 2,
-      "a": 36,
-      "y": 20,
-      "av": 16,
-      "p": 27,
       "mersin": false
      },
      {
@@ -16222,13 +16222,13 @@
       "sira": 15,
       "takim": "Söke 1970 Spor",
       "ham": "SÖKE 1970 SPOR KULÜBÜ",
-      "o": 13,
+      "o": 14,
       "g": 1,
       "b": 6,
-      "m": 6,
+      "m": 7,
       "a": 16,
-      "y": 26,
-      "av": -10,
+      "y": 30,
+      "av": -14,
       "p": 9,
       "mersin": false
      },
@@ -16296,7 +16296,7 @@
       "tarih": "2026-11-28",
       "saat": "19:00",
       "ev": "Balıkesirspor",
-      "skor": null,
+      "skor": "4-0",
       "dep": "Söke 1970 Spor",
       "mersin": false
      },
@@ -18539,6 +18539,13 @@
      }
     },
     "form": {
+     "Balıkesirspor": [
+      "B",
+      "G",
+      "G",
+      "B",
+      "G"
+     ],
      "Etimesgut Spor": [
       "M",
       "G",
@@ -18559,13 +18566,6 @@
       "G",
       "G",
       "M"
-     ],
-     "Balıkesirspor": [
-      "B",
-      "G",
-      "G",
-      "B",
-      "G"
      ],
      "Karşıyaka": [
       "G",
@@ -21322,7 +21322,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-28T18:02:56.163Z",
+    "guncelleme": "2026-11-28T19:00:33.905Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21404,7 +21404,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-28T18:02:57.371Z",
+    "guncelleme": "2026-11-28T19:00:35.143Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21486,7 +21486,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-28T18:02:58.585Z",
+    "guncelleme": "2026-11-28T19:00:36.392Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21585,7 +21585,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-28T18:32:08.153Z",
+  "guncelleme": "2026-11-28T18:59:51.366Z",
   "liste": [
    {
     "yol": "/haber/1964-silifke-spor-yarin-deplasmanda-ayos-osmaniyespor-ile-karsilasacak-o06530/",
@@ -21616,12 +21616,12 @@
     "sayi": 4
    },
    {
-    "yol": "/haber/mersin-de-yilbasi-pazari-bu-yil-da-kurulacak-mi-1nuv8z7/",
+    "yol": "/is-ilanlari/tarsus/",
     "sayi": 3
    },
    {
-    "yol": "/haber/tarsus-a-iklim-dostu-park-kazandirilacak-zagi5n/",
-    "sayi": 2
+    "yol": "/haber/mersin-de-yilbasi-pazari-bu-yil-da-kurulacak-mi-1nuv8z7/",
+    "sayi": 3
    },
    {
     "yol": "/haber/siyer-i-nebi-yarismasi-nda-mersin-birincisine-umre-odulu-11unt0c/",
@@ -21632,24 +21632,12 @@
     "sayi": 2
    },
    {
-    "yol": "/is-ilanlari/tarsus/",
+    "yol": "/haber/tarsus-a-iklim-dostu-park-kazandirilacak-zagi5n/",
     "sayi": 2
    },
    {
     "yol": "/spor/takim/amed-sportif-faaliyetler/",
     "sayi": 2
-   },
-   {
-    "yol": "/is-ilanlari/meslek/sofor-yuk-tasima/",
-    "sayi": 1
-   },
-   {
-    "yol": "/spor/2-lig-beyaz/",
-    "sayi": 1
-   },
-   {
-    "yol": "/hakkimizda/",
-    "sayi": 1
    },
    {
     "yol": "/is-ilanlari/",
@@ -21668,6 +21656,14 @@
     "sayi": 1
    },
    {
+    "yol": "/burclar/",
+    "sayi": 1
+   },
+   {
+    "yol": "/hakkimizda/",
+    "sayi": 1
+   },
+   {
     "yol": "/spor/2-lig-kirmizi/",
     "sayi": 1
    },
@@ -21678,49 +21674,33 @@
    {
     "yol": "/uretilen/11unt0c.webp",
     "sayi": 1
+   },
+   {
+    "yol": "/spor/2-lig-beyaz/",
+    "sayi": 1
+   },
+   {
+    "yol": "/is-ilanlari/meslek/sofor-yuk-tasima/",
+    "sayi": 1
    }
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-28T18:32:10.907Z",
+  "guncelleme": "2026-11-28T19:00:37.593Z",
   "deniz": {
    "sicaklik": 21.1,
    "dalga": 0.28
   },
   "hava": {
-   "aqi": 34,
-   "pm25": 12.1,
-   "pm10": 25.3,
+   "aqi": 33,
+   "pm25": 11.5,
+   "pm10": 24.9,
    "uvMax": 1.85
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-28T18:03:01.393Z",
+  "guncelleme": "2026-11-28T19:00:39.517Z",
   "giden": [
-   {
-    "no": [
-     "VF3145"
-    ],
-    "havayolu": "AJet",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-28T18:15:00.000Z",
-    "tahmini": null,
-    "kapi": "105",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "TK2467"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-28T18:20:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "SON ÇAĞRI",
-    "hat": "ic"
-   },
    {
     "no": [
      "XQ7711"
@@ -21730,7 +21710,7 @@
     "planlanan": "2026-11-28T19:15:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "KONTUAR KAPALI",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -21742,7 +21722,7 @@
     "planlanan": "2026-11-28T19:15:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KONTUAR AÇIK",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -21754,7 +21734,7 @@
     "planlanan": "2026-11-28T19:45:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "23 KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -21766,7 +21746,7 @@
     "planlanan": "2026-11-28T20:00:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -21778,7 +21758,7 @@
     "planlanan": "2026-11-28T20:05:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -22248,33 +22228,33 @@
     "kapi": "108",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3015"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-29T18:25:00.000Z",
+    "tahmini": null,
+    "kapi": "104",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2467"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-29T18:30:00.000Z",
+    "tahmini": null,
+    "kapi": "109",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "PC2092"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-28T18:15:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "XQ7710"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "Antalya",
-    "planlanan": "2026-11-28T18:40:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "XQ9306"
@@ -22284,7 +22264,7 @@
     "planlanan": "2026-11-28T19:10:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "",
+    "durum": "İNDİ",
     "hat": "ic"
    },
    {
@@ -22814,11 +22794,35 @@
     "kapi": "",
     "durum": "",
     "hat": "dis"
+   },
+   {
+    "no": [
+     "PC2092"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-29T18:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3602"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Antalya",
+    "planlanan": "2026-11-29T18:25:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-28T18:32:12.520Z",
+  "guncelleme": "2026-11-28T19:00:39.516Z",
   "liste": [
    {
     "id": 6386,
