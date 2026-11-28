@@ -16,8 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-28",
-  "adet": 33,
-  "premium": 29
+  "adet": 35,
+  "premium": 31
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -192,7 +192,6 @@
   ],
   "iha-mersin": [],
   "haberturk-mersin": [
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/akdenizde-mahallede-senlik-var-coskusu-basladi-119524919",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-denize-dusen-beton-mikserinin-surucusu-hayatini-kaybetti-119525001",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/ucurumdan-denize-yuvarlanan-beton-mikserinin-soforu-oldu-119524998",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-kiyafet-evi-kis-sezonuna-hazir-119525291",
@@ -391,7 +390,8 @@
    "https://yerel-haberler.haberturk.com/mersin-haberleri/tarsusa-iklim-dostu-park-kazandirilacak-119535231",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/tarsus-spor-parki-hizmete-acildi-119535214",
    "https://yerel-haberler.haberturk.com/mersin-haberleri/ogretmenler-ve-aileleri-yaristi-dereceye-girenler-odullendirildi-119535465",
-   "https://yerel-haberler.haberturk.com/mersin-haberleri/sarikecili-yorukleri-gocun-ardindan-kisi-gecirecekleri-mersine-ulasti-119535646"
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/sarikecili-yorukleri-gocun-ardindan-kisi-gecirecekleri-mersine-ulasti-119535646",
+   "https://yerel-haberler.haberturk.com/mersin-haberleri/mersinde-zincirleme-trafik-kazasinda-5-kisi-yaralandi-119535690"
   ],
   "trt-mersin": [
    "https://www.trthaber.com/haber/turkiye/mersinde-selden-etkilenen-vatandaslara-11-milyon-liralik-kaynak-962068.html",
@@ -609,8 +609,36 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-28T19:05:32.741Z",
+  "guncelleme": "2026-11-28T19:31:41.746Z",
   "liste": [
+   {
+    "baslik": "real madrid - alavés",
+    "trafik": 2000
+   },
+   {
+    "baslik": "denizli",
+    "trafik": 1000
+   },
+   {
+    "baslik": "real madrid - alavés maç kadrosu",
+    "trafik": 200
+   },
+   {
+    "baslik": "الريال ضد ألافيس",
+    "trafik": 200
+   },
+   {
+    "baslik": "yerel yönetimler",
+    "trafik": 200
+   },
+   {
+    "baslik": "inter - genoa",
+    "trafik": 1000
+   },
+   {
+    "baslik": "psg - lorient",
+    "trafik": 500
+   },
    {
     "baslik": "salih uzun",
     "trafik": 500
@@ -621,35 +649,7 @@
    },
    {
     "baslik": "irak",
-    "trafik": 500
-   },
-   {
-    "baslik": "juba sudan",
-    "trafik": 500
-   },
-   {
-    "baslik": "merkez bankası faiz kararı",
-    "trafik": 500
-   },
-   {
-    "baslik": "stuttgart",
-    "trafik": 500
-   },
-   {
-    "baslik": "abdallah sima",
-    "trafik": 200
-   },
-   {
-    "baslik": "الأهلي ضد التعاون",
-    "trafik": 200
-   },
-   {
-    "baslik": "atletico madrid",
     "trafik": 1000
-   },
-   {
-    "baslik": "rusya",
-    "trafik": 200
    }
   ]
  },
