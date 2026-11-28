@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-28T04:06:06.574Z",
+ "guncelleme": "2026-11-28T04:31:38.151Z",
  "hikayeler": [
   {
    "id": "zlwx5i",
@@ -4897,7 +4897,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-23T12:50:09+03:00",
-   "sonGuncelleme": "2026-11-28T04:06:00.984Z",
+   "sonGuncelleme": "2026-11-28T04:31:34.283Z",
    "kaynaklar": [
     {
      "kaynakId": "dha-mersin",
@@ -8730,7 +8730,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-24T18:48:41.000Z",
-   "sonGuncelleme": "2026-11-28T04:06:01.434Z",
+   "sonGuncelleme": "2026-11-28T04:31:34.682Z",
    "kaynaklar": [
     {
      "kaynakId": "mersintime",
@@ -14100,29 +14100,6 @@
    "gorsel": "aeqtou.webp",
    "gorselKalite": "premium",
    "gorselPrompt": "A modern glass-fronted bank building entrance on a busy daytime street in Turkey, featuring polished stone pillars and revolving glass doors, with distant palm trees and clear blue sky in the background."
-  },
-  {
-   "id": "kws6m8",
-   "baslik": "İzmir açıklarında 4.1 büyüklüğünde deprem yaşandı",
-   "ozet": null,
-   "ozetIcinMetin": null,
-   "ilceler": [],
-   "genel": true,
-   "kategori": "gundem",
-   "riskNedenleri": [],
-   "durum": "yayinda",
-   "onaylandi": false,
-   "ilkGorulme": "2026-11-27T04:23:00.000Z",
-   "sonGuncelleme": "2026-11-27T04:31:44.188Z",
-   "kaynaklar": [
-    {
-     "kaynakId": "cukurova",
-     "ad": "Çukurova Gazetesi",
-     "link": "https://cukurovagazetesi.com/izmir-aciklarinda-41-buyuklugunde-deprem-yasandi",
-     "baslik": "İzmir açıklarında 4.1 büyüklüğünde deprem yaşandı",
-     "tarih": "2026-11-27T04:23:00.000Z"
-    }
-   ]
   },
   {
    "id": "omk2iw",
@@ -21151,7 +21128,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-27T15:21:00.000Z",
-   "sonGuncelleme": "2026-11-28T04:06:00.217Z",
+   "sonGuncelleme": "2026-11-28T04:31:33.618Z",
    "kaynaklar": [
     {
      "kaynakId": "mersinportal",
@@ -22805,7 +22782,7 @@
    "durum": "yayinda",
    "onaylandi": false,
    "ilkGorulme": "2026-11-27T20:31:32.000Z",
-   "sonGuncelleme": "2026-11-28T04:06:04.162Z",
+   "sonGuncelleme": "2026-11-28T04:31:36.595Z",
    "kaynaklar": [
     {
      "kaynakId": "aa-guncel",
@@ -22959,7 +22936,13 @@
    "metinDenemesi": 2,
    "macHaberi": true,
    "kapak": "mac",
-   "gorselHatasi": "kapak var"
+   "gorselHatasi": "kapak var",
+   "gorsel": "o06530.webp",
+   "gorselKaynak": "yz",
+   "gorselKalite": "pro",
+   "gorselPrompt": "A green football field inside an empty stadium under a clear daytime sky, with white goalposts and neatly mowed grass, ready for a match.",
+   "dikeyGorsel": true,
+   "dikeyKalite": "pro"
   }
  ]
 }
