@@ -16,7 +16,8 @@
  },
  "gorsel": {
   "gun": "2026-11-28",
-  "adet": 0
+  "adet": 1,
+  "premium": 1
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -590,18 +591,30 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-28T05:31:41.478Z",
+  "guncelleme": "2026-11-28T06:01:51.170Z",
   "liste": [
+   {
+    "baslik": "hava tahmini",
+    "trafik": 200
+   },
+   {
+    "baslik": "fethiye hava durumu",
+    "trafik": 100
+   },
+   {
+    "baslik": "cumhurbaşkanı kararı",
+    "trafik": 2000
+   },
    {
     "baslik": "uluslararası para fonu",
     "trafik": 200
    },
    {
-    "baslik": "jazz - nuggets",
+    "baslik": "ölüm",
     "trafik": 100
    },
    {
-    "baslik": "ölüm",
+    "baslik": "jazz - nuggets",
     "trafik": 100
    },
    {
@@ -609,28 +622,16 @@
     "trafik": 100
    },
    {
+    "baslik": "kalp krizi",
+    "trafik": 500
+   },
+   {
     "baslik": "sermaye piyasası kurulu",
     "trafik": 1000
    },
    {
-    "baslik": "trail blazers - warriors",
-    "trafik": 100
-   },
-   {
-    "baslik": "ispanya",
-    "trafik": 200
-   },
-   {
     "baslik": "masterchef potaya kim gitti",
     "trafik": 2000
-   },
-   {
-    "baslik": "aksaray hava durumu",
-    "trafik": 100
-   },
-   {
-    "baslik": "zabıta",
-    "trafik": 200
    }
   ]
  },

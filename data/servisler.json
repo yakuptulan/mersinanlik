@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-28T05:31:41.799Z",
+ "guncelleme": "2026-11-28T06:02:14.830Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 14,
@@ -74,12 +74,12 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 12,
+   "sicaklik": 15,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 12,
+     "min": 14,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
@@ -146,7 +146,7 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 6,
+   "sicaklik": 9,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -182,12 +182,12 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 13,
+   "sicaklik": 15,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 13,
+     "min": 15,
      "max": 20,
      "durum": "Parçalı bulutlu"
     },
@@ -218,12 +218,12 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 7,
+   "sicaklik": 10,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 7,
+     "min": 9,
      "max": 15,
      "durum": "Parçalı bulutlu"
     },
@@ -254,12 +254,12 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 14,
+   "sicaklik": 16,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 14,
+     "min": 16,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
@@ -290,12 +290,12 @@
    ]
   },
   "mut": {
-   "sicaklik": 10,
+   "sicaklik": 12,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 10,
+     "min": 11,
      "max": 18,
      "durum": "Parçalı bulutlu"
     },
@@ -326,12 +326,12 @@
    ]
   },
   "silifke": {
-   "sicaklik": 11,
+   "sicaklik": 14,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 11,
+     "min": 14,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
@@ -398,12 +398,12 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 14,
+   "sicaklik": 16,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 14,
+     "min": 16,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
@@ -434,12 +434,12 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 14,
+   "sicaklik": 16,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 14,
+     "min": 16,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-28T05:31:45.618Z",
+  "guncelleme": "2026-11-28T06:02:20.106Z",
   "liste": [
    {
     "ad": "Atlas Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-28T05:31:46.584Z",
+  "guncelleme": "2026-11-28T06:02:21.441Z",
   "liste": [
    {
     "tur": "su",
@@ -802,11 +802,27 @@
       ]
      }
     ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Çamlıyayla ilçesi fakılar mahallesi dışbudak mevki Sarıkaya dibi şebeke hattında oluşan arıza sebebiyle kesinti yapılmıştır.Tahmini 15.00'da suların verilmesi planlanmaktadır.",
+    "baslangic": "2026-11-28T05:48:00.000Z",
+    "bitis": "2026-11-28T12:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "camliyayla",
+      "ad": "Çamlıyayla",
+      "mahalleler": [
+       "Fakılar"
+      ]
+     }
+    ]
    }
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-28T05:31:50.097Z",
+  "guncelleme": "2026-11-28T06:02:25.254Z",
   "kalemler": {
    "gram": {
     "alis": 5963.87,
@@ -839,9 +855,9 @@
     "degisim": 2.18
    },
    "btc": {
-    "satis": 3032259,
-    "usd": 59756,
-    "degisim": -3.34
+    "satis": 3030148,
+    "usd": 59715,
+    "degisim": -3.33
    }
   },
   "altinlar": [
@@ -974,10 +990,10 @@
     "degisim": -0.03
    }
   ],
-  "kaynakSaati": "2026-11-28 08:31:01"
+  "kaynakSaati": "2026-11-28 09:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-28T05:31:52.647Z",
+  "guncelleme": "2026-11-28T06:02:27.800Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -2002,7 +2018,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-28T05:01:54.091Z",
+  "guncelleme": "2026-11-28T06:02:30.461Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -4682,7 +4698,7 @@
       ]
      },
      "27": {
-      "alindi": "2026-11-27T05:32:16.269Z",
+      "alindi": "2026-11-28T06:02:41.540Z",
       "maclar": [
        {
         "ev": "Gaziantep",
@@ -4750,7 +4766,7 @@
       ]
      },
      "28": {
-      "alindi": "2026-11-27T05:32:18.207Z",
+      "alindi": "2026-11-28T06:02:42.839Z",
       "maclar": [
        {
         "ev": "Kocaelispor",
@@ -7699,7 +7715,7 @@
       ]
      },
      "30": {
-      "alindi": "2026-11-27T05:32:24.676Z",
+      "alindi": "2026-11-28T06:02:49.383Z",
       "maclar": [
        {
         "ev": "Keçtaş Ankara Keçiörengücü",
@@ -7774,7 +7790,7 @@
       ]
      },
      "31": {
-      "alindi": "2026-11-27T05:32:25.964Z",
+      "alindi": "2026-11-28T06:02:50.684Z",
       "maclar": [
        {
         "ev": "Bursaspor",
@@ -10555,7 +10571,7 @@
       ]
      },
      "28": {
-      "alindi": "2026-11-27T05:32:32.468Z",
+      "alindi": "2026-11-28T06:02:57.268Z",
       "maclar": [
        {
         "ev": "Çorlu Spor 1947",
@@ -10623,7 +10639,7 @@
       ]
      },
      "29": {
-      "alindi": "2026-11-27T05:32:33.763Z",
+      "alindi": "2026-11-28T06:02:58.574Z",
       "maclar": [
        {
         "ev": "Efor Çay Erbaaspor",
@@ -13002,7 +13018,7 @@
       ]
      },
      "28": {
-      "alindi": "2026-11-27T05:32:40.257Z",
+      "alindi": "2026-11-28T06:03:05.147Z",
       "maclar": [
        {
         "ev": "Mke Ankaragücü",
@@ -13063,7 +13079,7 @@
       ]
      },
      "29": {
-      "alindi": "2026-11-27T05:32:41.551Z",
+      "alindi": "2026-11-28T06:03:06.453Z",
       "maclar": [
        {
         "ev": "Akedaş Kahramanmaraş İstiklal Spor",
@@ -15495,7 +15511,7 @@
       ]
      },
      "28": {
-      "alindi": "2026-11-27T05:32:48.140Z",
+      "alindi": "2026-11-28T06:03:13.075Z",
       "maclar": [
        {
         "ev": "Kartal Bulvar Kartalimen Spor",
@@ -15563,7 +15579,7 @@
       ]
      },
      "29": {
-      "alindi": "2026-11-27T05:32:49.439Z",
+      "alindi": "2026-11-28T06:03:14.387Z",
       "maclar": [
        {
         "ev": "Düzce Cam Düzcespor",
@@ -18166,7 +18182,7 @@
       ]
      },
      "28": {
-      "alindi": "2026-11-27T05:32:55.968Z",
+      "alindi": "2026-11-28T06:03:20.997Z",
       "maclar": [
        {
         "ev": "1922 Akşehir Spor",
@@ -18234,7 +18250,7 @@
       ]
      },
      "29": {
-      "alindi": "2026-11-27T05:32:57.266Z",
+      "alindi": "2026-11-28T06:03:22.311Z",
       "maclar": [
        {
         "ev": "Söke 1970 Spor",
@@ -20816,7 +20832,7 @@
       ]
      },
      "28": {
-      "alindi": "2026-11-27T05:33:03.790Z",
+      "alindi": "2026-11-28T06:03:28.925Z",
       "maclar": [
        {
         "ev": "Diyarbekir Spor",
@@ -20884,7 +20900,7 @@
       ]
      },
      "29": {
-      "alindi": "2026-11-27T05:33:05.087Z",
+      "alindi": "2026-11-28T06:03:30.236Z",
       "maclar": [
        {
         "ev": "Bitlis 1916",
@@ -21426,7 +21442,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-28T05:02:55.618Z",
+    "guncelleme": "2026-11-28T06:03:31.540Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21508,7 +21524,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-28T05:02:56.863Z",
+    "guncelleme": "2026-11-28T06:03:32.825Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21590,7 +21606,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-28T05:02:58.116Z",
+    "guncelleme": "2026-11-28T06:03:34.125Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21689,7 +21705,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-28T05:31:53.020Z",
+  "guncelleme": "2026-11-28T06:02:28.211Z",
   "liste": [
    {
     "yol": "/haber/1964-silifke-spor-yarin-deplasmanda-ayos-osmaniyespor-ile-karsilasacak-o06530/",
@@ -21802,45 +21818,21 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-28T05:31:54.492Z",
+  "guncelleme": "2026-11-28T06:03:35.326Z",
   "deniz": {
    "sicaklik": 21.1,
    "dalga": 0.22
   },
   "hava": {
-   "aqi": 30,
-   "pm25": 5.5,
-   "pm10": 10.4,
+   "aqi": 34,
+   "pm25": 5.8,
+   "pm10": 11.2,
    "uvMax": 1.8
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-28T05:31:56.115Z",
+  "guncelleme": "2026-11-28T06:03:37.709Z",
   "giden": [
-   {
-    "no": [
-     "XQ9007"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "İzmir",
-    "planlanan": "2026-11-28T05:50:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "SON ÇAĞRI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC3640"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Van",
-    "planlanan": "2026-11-28T05:55:00.000Z",
-    "tahmini": null,
-    "kapi": "109",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
    {
     "no": [
      "PC3011"
@@ -21850,7 +21842,7 @@
     "planlanan": "2026-11-28T06:05:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -21862,7 +21854,7 @@
     "planlanan": "2026-11-28T06:25:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -21874,7 +21866,7 @@
     "planlanan": "2026-11-28T06:35:00.000Z",
     "tahmini": null,
     "kapi": "108",
-    "durum": "KONTUAR AÇIK",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -21886,7 +21878,7 @@
     "planlanan": "2026-11-28T06:50:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -21898,7 +21890,7 @@
     "planlanan": "2026-11-28T07:35:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -21934,7 +21926,7 @@
     "planlanan": "2026-11-28T08:50:00.000Z",
     "tahmini": null,
     "kapi": "102",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -22308,21 +22300,21 @@
     "kapi": "107",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ9007"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "İzmir",
+    "planlanan": "2026-11-29T05:50:00.000Z",
+    "tahmini": null,
+    "kapi": "106",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "TK2452"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-28T05:40:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "VF4086"
@@ -22790,11 +22782,35 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2452"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-29T05:40:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ7630"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "Antalya",
+    "planlanan": "2026-11-29T05:50:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-28T05:31:56.114Z",
+  "guncelleme": "2026-11-28T06:03:37.709Z",
   "liste": [
    {
     "id": 6386,
