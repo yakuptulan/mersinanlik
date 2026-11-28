@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-28T05:01:41.335Z",
+ "guncelleme": "2026-11-28T05:31:41.799Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 14,
@@ -38,12 +38,12 @@
    ]
   },
   "anamur": {
-   "sicaklik": 13,
+   "sicaklik": 14,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 13,
+     "min": 14,
      "max": 20,
      "durum": "Parçalı bulutlu"
     },
@@ -110,12 +110,12 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 11,
+   "sicaklik": 12,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 11,
+     "min": 12,
      "max": 20,
      "durum": "Parçalı bulutlu"
     },
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-28T05:01:44.888Z",
+  "guncelleme": "2026-11-28T05:31:45.618Z",
   "liste": [
    {
     "ad": "Atlas Eczanesi",
@@ -784,11 +784,29 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-28T05:01:46.005Z",
-  "liste": []
+  "guncelleme": "2026-11-28T05:31:46.584Z",
+  "liste": [
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Mezitli Yeni Mahallede 315 isale hattında oluşan şebeke arızası nedeniyle Atatürk mahallesinin bir kısmı ve Yeni Mahallenin bir kısmı suları kesik olup 14: 00'da gelmesi planlanmaktadır.",
+    "baslangic": "2026-11-28T05:12:00.000Z",
+    "bitis": "2026-11-28T11:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "mezitli",
+      "ad": "Mezitli",
+      "mahalleler": [
+       "Atatürk",
+       "Yeni"
+      ]
+     }
+    ]
+   }
+  ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-28T05:01:49.185Z",
+  "guncelleme": "2026-11-28T05:31:50.097Z",
   "kalemler": {
    "gram": {
     "alis": 5963.87,
@@ -821,9 +839,9 @@
     "degisim": 2.18
    },
    "btc": {
-    "satis": 3040985,
-    "usd": 59928,
-    "degisim": -2.47
+    "satis": 3032259,
+    "usd": 59756,
+    "degisim": -3.34
    }
   },
   "altinlar": [
@@ -956,10 +974,10 @@
     "degisim": -0.03
    }
   ],
-  "kaynakSaati": "2026-11-28 08:01:01"
+  "kaynakSaati": "2026-11-28 08:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-28T05:01:52.076Z",
+  "guncelleme": "2026-11-28T05:31:52.647Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -21671,15 +21689,19 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-28T05:01:52.526Z",
+  "guncelleme": "2026-11-28T05:31:53.020Z",
   "liste": [
+   {
+    "yol": "/haber/1964-silifke-spor-yarin-deplasmanda-ayos-osmaniyespor-ile-karsilasacak-o06530/",
+    "sayi": 12
+   },
    {
     "yol": "/haber/mersinli-serhat-in-muzik-basarisi-cocuk-korosu-sinavinda-birinci-oldu-1qnrend/",
     "sayi": 10
    },
    {
     "yol": "/",
-    "sayi": 9
+    "sayi": 7
    },
    {
     "yol": "/haber/meski-den-tarsus-un-3-mahallesine-kesintisiz-icme-suyu-1fwm2cp/",
@@ -21694,15 +21716,15 @@
     "sayi": 5
    },
    {
+    "yol": "/haber/mtso-baskan-yildizgorer-den-genclere-hata-yapmaktan-da-girisimci-olmak-d9p6jz/",
+    "sayi": 4
+   },
+   {
     "yol": "/haber/mersin-de-yilbasi-pazari-bu-yil-da-kurulacak-mi-1nuv8z7/",
     "sayi": 4
    },
    {
     "yol": "/is-ilanlari/mezitli/",
-    "sayi": 4
-   },
-   {
-    "yol": "/haber/mtso-baskan-yildizgorer-den-genclere-hata-yapmaktan-da-girisimci-olmak-d9p6jz/",
     "sayi": 4
    },
    {
@@ -21714,14 +21736,6 @@
     "sayi": 2
    },
    {
-    "yol": "/hava-durumu/bozyazi/",
-    "sayi": 2
-   },
-   {
-    "yol": "/haber/silifke-de-su-kesintisi-25-kasim-tasucu-13-saat-surecek-s0892b/",
-    "sayi": 2
-   },
-   {
     "yol": "/haber/tarsus-belediyesine-ilce-geneli-sifir-atik-belgesi-doyqdd/",
     "sayi": 2
    },
@@ -21730,11 +21744,15 @@
     "sayi": 2
    },
    {
-    "yol": "/haber/mersin-de-bir-haftadir-kayip-olarak-aranan-kadin-bulundu-vejbqi/",
-    "sayi": 1
+    "yol": "/hava-durumu/bozyazi/",
+    "sayi": 2
    },
    {
     "yol": "/hava-durumu/anamur/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/mersin-de-bir-haftadir-kayip-olarak-aranan-kadin-bulundu-vejbqi/",
     "sayi": 1
    },
    {
@@ -21742,7 +21760,7 @@
     "sayi": 1
    },
    {
-    "yol": "/mahalleler/bozyazi/",
+    "yol": "/haber/silifke-de-su-kesintisi-25-kasim-tasucu-13-saat-surecek-s0892b/",
     "sayi": 1
    },
    {
@@ -21754,7 +21772,7 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/yoruk-turkmenler-festivalde-bulusuyor-1ybcz5x/",
+    "yol": "/mahalleler/bozyazi/",
     "sayi": 1
    },
    {
@@ -21762,11 +21780,11 @@
     "sayi": 1
    },
    {
-    "yol": "/is-ilanlari/silifke/",
+    "yol": "/mahalle/bozyazi/gozsuzce/",
     "sayi": 1
    },
    {
-    "yol": "/mahalle/bozyazi/gozsuzce/",
+    "yol": "/haber/yoruk-turkmenler-festivalde-bulusuyor-1ybcz5x/",
     "sayi": 1
    },
    {
@@ -21784,7 +21802,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-28T05:02:59.317Z",
+  "guncelleme": "2026-11-28T05:31:54.492Z",
   "deniz": {
    "sicaklik": 21.1,
    "dalga": 0.22
@@ -21797,7 +21815,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-28T05:03:01.243Z",
+  "guncelleme": "2026-11-28T05:31:56.115Z",
   "giden": [
    {
     "no": [
@@ -21808,7 +21826,7 @@
     "planlanan": "2026-11-28T05:50:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "KAPIYA GİDİNİZ",
+    "durum": "SON ÇAĞRI",
     "hat": "ic"
    },
    {
@@ -21820,7 +21838,7 @@
     "planlanan": "2026-11-28T05:55:00.000Z",
     "tahmini": null,
     "kapi": "109",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -21832,7 +21850,7 @@
     "planlanan": "2026-11-28T06:05:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "ic"
    },
    {
@@ -21844,7 +21862,7 @@
     "planlanan": "2026-11-28T06:25:00.000Z",
     "tahmini": null,
     "kapi": "",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KAPIYA GİDİNİZ",
     "hat": "ic"
    },
    {
@@ -21892,7 +21910,7 @@
     "planlanan": "2026-11-28T08:25:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -22278,45 +22296,21 @@
     "kapi": "102",
     "durum": "",
     "hat": "dis"
+   },
+   {
+    "no": [
+     "PC2081"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-29T05:10:00.000Z",
+    "tahmini": null,
+    "kapi": "107",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "XQ9006"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "İzmir",
-    "planlanan": "2026-11-28T05:10:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "İNDİ",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC3600"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Antalya",
-    "planlanan": "2026-11-28T05:20:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC3010"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "İzmir",
-    "planlanan": "2026-11-28T05:30:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "TK2452"
@@ -22772,11 +22766,35 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "XQ9006"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "İzmir",
+    "planlanan": "2026-11-29T05:10:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3010"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-29T05:30:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-28T05:03:01.243Z",
+  "guncelleme": "2026-11-28T05:31:56.114Z",
   "liste": [
    {
     "id": 6386,
