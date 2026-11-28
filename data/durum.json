@@ -12,10 +12,6 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
-  },
-  "haberturk-mersin": {
-   "hata": "fetch failed",
-   "zaman": "2026-11-28T03:31:19.467Z"
   }
  },
  "gorsel": {
@@ -594,11 +590,19 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-28T03:31:50.444Z",
+  "guncelleme": "2026-11-28T04:01:47.806Z",
   "liste": [
    {
-    "baslik": "kızılcık şerbeti son bölüm",
+    "baslik": "bursa",
     "trafik": 2000
+   },
+   {
+    "baslik": "istanbul ezan",
+    "trafik": 50000
+   },
+   {
+    "baslik": "istanbul",
+    "trafik": 5000
    },
    {
     "baslik": "bronson reed",
@@ -617,24 +621,16 @@
     "trafik": 100
    },
    {
-    "baslik": "cnn türk",
-    "trafik": 10000
-   },
-   {
     "baslik": "john wick",
     "trafik": 100
    },
    {
     "baslik": "cnn türk canlı yayın",
-    "trafik": 1000
+    "trafik": 500
    },
    {
     "baslik": "akaryakıt ötv zammı",
     "trafik": 5000
-   },
-   {
-    "baslik": "uyap",
-    "trafik": 1000
    }
   ]
  },
