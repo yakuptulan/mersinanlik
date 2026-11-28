@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-28T03:31:19.467Z"
   }
  },
  "gorsel": {
@@ -590,15 +594,19 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-28T03:01:44.889Z",
+  "guncelleme": "2026-11-28T03:31:50.444Z",
   "liste": [
+   {
+    "baslik": "kızılcık şerbeti son bölüm",
+    "trafik": 2000
+   },
    {
     "baslik": "bronson reed",
     "trafik": 100
    },
    {
     "baslik": "columbus - inter miami",
-    "trafik": 500
+    "trafik": 1000
    },
    {
     "baslik": "çağatay ulusoy",
@@ -607,10 +615,6 @@
    {
     "baslik": "epstein",
     "trafik": 100
-   },
-   {
-    "baslik": "cnn canlı",
-    "trafik": 200
    },
    {
     "baslik": "cnn türk",
