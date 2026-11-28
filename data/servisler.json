@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-28T20:01:46.446Z",
+ "guncelleme": "2026-11-28T20:31:37.431Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 16,
@@ -39,7 +39,7 @@
   },
   "anamur": {
    "sicaklik": 14,
-   "durum": "Parçalı bulutlu",
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
@@ -327,7 +327,7 @@
   },
   "silifke": {
    "sicaklik": 15,
-   "durum": "Parçalı bulutlu",
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-28T20:01:50.023Z",
+  "guncelleme": "2026-11-28T20:31:40.442Z",
   "liste": [
    {
     "ad": "Atlas Eczanesi",
@@ -763,11 +763,11 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-28T20:01:50.780Z",
+  "guncelleme": "2026-11-28T20:31:41.449Z",
   "liste": []
  },
  "piyasa": {
-  "guncelleme": "2026-11-28T20:01:52.504Z",
+  "guncelleme": "2026-11-28T20:31:43.235Z",
   "kalemler": {
    "gram": {
     "alis": 5963.87,
@@ -800,9 +800,9 @@
     "degisim": 2.18
    },
    "btc": {
-    "satis": 3009773,
-    "usd": 59313,
-    "degisim": -0.9
+    "satis": 3008624,
+    "usd": 59290,
+    "degisim": -0.83
    }
   },
   "altinlar": [
@@ -935,10 +935,10 @@
     "degisim": -0.03
    }
   ],
-  "kaynakSaati": "2026-11-28 23:01:01"
+  "kaynakSaati": "2026-11-28 23:31:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-28T19:32:11.397Z",
+  "guncelleme": "2026-11-28T20:31:45.194Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -21568,7 +21568,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-28T20:02:03.510Z",
+  "guncelleme": "2026-11-28T20:31:45.851Z",
   "liste": [
    {
     "yol": "/haber/1964-silifke-spor-yarin-deplasmanda-ayos-osmaniyespor-ile-karsilasacak-o06530/",
@@ -21603,6 +21603,10 @@
     "sayi": 3
    },
    {
+    "yol": "/spor/takim/amed-sportif-faaliyetler/",
+    "sayi": 3
+   },
+   {
     "yol": "/haber/siyer-i-nebi-yarismasi-nda-mersin-birincisine-umre-odulu-11unt0c/",
     "sayi": 2
    },
@@ -21612,10 +21616,6 @@
    },
    {
     "yol": "/haber/tarsus-a-iklim-dostu-park-kazandirilacak-zagi5n/",
-    "sayi": 2
-   },
-   {
-    "yol": "/spor/takim/amed-sportif-faaliyetler/",
     "sayi": 2
    },
    {
@@ -21659,6 +21659,10 @@
     "sayi": 1
    },
    {
+    "yol": "/haber/mersin-de-sanayinin-kasli-ustasi-100-kiloluk-motorlari-tek-basina-kald-x22had/",
+    "sayi": 1
+   },
+   {
     "yol": "/haber/mersin-de-yilbasi-pazari-bu-yil-da-kurulacak-mi-1nuv8z7/",
     "sayi": 1
    },
@@ -21669,7 +21673,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-28T20:02:48.270Z",
+  "guncelleme": "2026-11-28T20:31:47.798Z",
   "deniz": {
    "sicaklik": 21.1,
    "dalga": 0.26
@@ -21682,56 +21686,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-28T19:32:15.448Z",
+  "guncelleme": "2026-11-28T20:31:49.437Z",
   "giden": [
-   {
-    "no": [
-     "XQ9307"
-    ],
-    "havayolu": "SunExpress",
-    "yer": "İzmir",
-    "planlanan": "2026-11-28T19:45:00.000Z",
-    "tahmini": null,
-    "kapi": "107",
-    "durum": "KAPI KAPANDI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "TK2471"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-28T20:00:00.000Z",
-    "tahmini": null,
-    "kapi": "106",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "VF3147"
-    ],
-    "havayolu": "AJet",
-    "yer": "Sabiha Gökçen",
-    "planlanan": "2026-11-28T20:05:00.000Z",
-    "tahmini": null,
-    "kapi": "105",
-    "durum": "KONTUAR KAPALI",
-    "hat": "ic"
-   },
-   {
-    "no": [
-     "PC1860"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Ercan",
-    "planlanan": "2026-11-28T20:20:00.000Z",
-    "tahmini": null,
-    "kapi": "102",
-    "durum": "KONTUAR KAPALI",
-    "hat": "dis"
-   },
    {
     "no": [
      "XQ1370"
@@ -22235,21 +22191,57 @@
     "kapi": "106",
     "durum": "",
     "hat": "ic"
-   }
-  ],
-  "gelen": [
+   },
    {
     "no": [
-     "PC1859"
+     "XQ9307"
+    ],
+    "havayolu": "SunExpress",
+    "yer": "İzmir",
+    "planlanan": "2026-11-29T19:45:00.000Z",
+    "tahmini": null,
+    "kapi": "107",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF3147"
+    ],
+    "havayolu": "AJet",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-29T19:55:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "TK2471"
+    ],
+    "havayolu": "THY",
+    "yer": "İstanbul",
+    "planlanan": "2026-11-29T20:00:00.000Z",
+    "tahmini": null,
+    "kapi": "109",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1860"
     ],
     "havayolu": "Pegasus",
     "yer": "Ercan",
-    "planlanan": "2026-11-28T19:45:00.000Z",
+    "planlanan": "2026-11-29T20:20:00.000Z",
     "tahmini": null,
-    "kapi": "",
+    "kapi": "102",
     "durum": "",
     "hat": "dis"
-   },
+   }
+  ],
+  "gelen": [
    {
     "no": [
      "PC2094"
@@ -22801,11 +22793,47 @@
     "kapi": "",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1859"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-29T19:45:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "dis"
+   },
+   {
+    "no": [
+     "PC3016"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-29T20:00:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC4112"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Sabiha Gökçen",
+    "planlanan": "2026-11-29T20:05:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-28T20:02:49.922Z",
+  "guncelleme": "2026-11-28T20:31:49.437Z",
   "liste": [
    {
     "id": 6386,
