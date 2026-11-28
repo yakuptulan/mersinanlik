@@ -1,33 +1,33 @@
 {
- "guncelleme": "2026-11-28T13:31:42.584Z",
+ "guncelleme": "2026-11-28T14:01:38.740Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 20,
+   "sicaklik": 18,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 16,
-     "max": 20,
+     "max": 18,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
-     "min": 12,
+     "min": 13,
      "max": 19,
      "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-30",
-     "min": 12,
-     "max": 20,
+     "min": 11,
+     "max": 19,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-12-01",
-     "min": 14,
+     "min": 13,
      "max": 18,
-     "durum": "Hafif yağmurlu"
+     "durum": "Bulutlu"
     },
     {
      "tarih": "2026-12-02",
@@ -38,13 +38,13 @@
    ]
   },
   "anamur": {
-   "sicaklik": 20,
+   "sicaklik": 18,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 14,
-     "max": 20,
+     "max": 18,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -61,9 +61,9 @@
     },
     {
      "tarih": "2026-12-01",
-     "min": 14,
+     "min": 12,
      "max": 18,
-     "durum": "Bulutlu"
+     "durum": "Hafif yağmurlu"
     },
     {
      "tarih": "2026-12-02",
@@ -74,13 +74,13 @@
    ]
   },
   "aydincik": {
-   "sicaklik": 20,
+   "sicaklik": 18,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 14,
-     "max": 20,
+     "max": 18,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -92,14 +92,14 @@
     {
      "tarih": "2026-11-30",
      "min": 12,
-     "max": 20,
-     "durum": "Yağmurlu"
+     "max": 19,
+     "durum": "Hafif yağmurlu"
     },
     {
      "tarih": "2026-12-01",
-     "min": 14,
+     "min": 12,
      "max": 16,
-     "durum": "Bulutlu"
+     "durum": "Hafif yağmurlu"
     },
     {
      "tarih": "2026-12-02",
@@ -110,32 +110,32 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 20,
+   "sicaklik": 18,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 12,
-     "max": 20,
+     "max": 18,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
-     "min": 12,
+     "min": 11,
      "max": 20,
-     "durum": "Açık"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-30",
-     "min": 10,
+     "min": 9,
      "max": 20,
      "durum": "Hafif yağmurlu"
     },
     {
      "tarih": "2026-12-01",
-     "min": 13,
+     "min": 12,
      "max": 18,
-     "durum": "Bulutlu"
+     "durum": "Hafif yağmurlu"
     },
     {
      "tarih": "2026-12-02",
@@ -146,26 +146,26 @@
    ]
   },
   "camliyayla": {
-   "sicaklik": 12,
+   "sicaklik": 10,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 6,
-     "max": 12,
+     "max": 10,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
      "min": 5,
      "max": 11,
-     "durum": "Hafif sağanak"
+     "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-30",
      "min": 4,
      "max": 11,
-     "durum": "Bulutlu"
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-12-01",
@@ -182,19 +182,19 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 19,
+   "sicaklik": 18,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 16,
-     "max": 19,
+     "max": 18,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
      "min": 12,
-     "max": 19,
+     "max": 18,
      "durum": "Açık"
     },
     {
@@ -218,18 +218,18 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 14,
-   "durum": "Bulutlu",
+   "sicaklik": 12,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 10,
-     "max": 14,
+     "min": 9,
+     "max": 12,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
-     "min": 8,
+     "min": 7,
      "max": 14,
      "durum": "Az bulutlu"
     },
@@ -243,7 +243,7 @@
      "tarih": "2026-12-01",
      "min": 5,
      "max": 8,
-     "durum": "Hafif yağmurlu"
+     "durum": "Yağmurlu"
     },
     {
      "tarih": "2026-12-02",
@@ -254,13 +254,13 @@
    ]
   },
   "mezitli": {
-   "sicaklik": 20,
+   "sicaklik": 18,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 16,
-     "max": 20,
+     "max": 18,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -290,25 +290,25 @@
    ]
   },
   "mut": {
-   "sicaklik": 17,
-   "durum": "Bulutlu",
+   "sicaklik": 15,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 12,
-     "max": 17,
+     "min": 11,
+     "max": 15,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
      "min": 11,
-     "max": 19,
+     "max": 18,
      "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-30",
      "min": 8,
-     "max": 17,
+     "max": 16,
      "durum": "Bulutlu"
     },
     {
@@ -326,32 +326,32 @@
    ]
   },
   "silifke": {
-   "sicaklik": 19,
-   "durum": "Bulutlu",
+   "sicaklik": 17,
+   "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 15,
-     "max": 19,
+     "min": 14,
+     "max": 17,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
      "min": 12,
-     "max": 20,
+     "max": 19,
      "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-30",
      "min": 8,
      "max": 19,
-     "durum": "Bulutlu"
+     "durum": "Hafif yağmurlu"
     },
     {
      "tarih": "2026-12-01",
      "min": 10,
      "max": 15,
-     "durum": "Bulutlu"
+     "durum": "Yağmurlu"
     },
     {
      "tarih": "2026-12-02",
@@ -373,21 +373,21 @@
     },
     {
      "tarih": "2026-11-29",
-     "min": 11,
+     "min": 10,
      "max": 20,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-30",
      "min": 8,
-     "max": 21,
+     "max": 20,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-12-01",
-     "min": 13,
+     "min": 12,
      "max": 19,
-     "durum": "Bulutlu"
+     "durum": "Yağmurlu"
     },
     {
      "tarih": "2026-12-02",
@@ -398,32 +398,32 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 20,
+   "sicaklik": 18,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 16,
-     "max": 20,
+     "max": 18,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
-     "min": 12,
+     "min": 13,
      "max": 19,
      "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-30",
-     "min": 12,
-     "max": 20,
+     "min": 11,
+     "max": 19,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-12-01",
-     "min": 14,
+     "min": 13,
      "max": 18,
-     "durum": "Hafif yağmurlu"
+     "durum": "Bulutlu"
     },
     {
      "tarih": "2026-12-02",
@@ -434,32 +434,32 @@
    ]
   },
   "yenisehir": {
-   "sicaklik": 20,
+   "sicaklik": 18,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 16,
-     "max": 20,
+     "max": 18,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
-     "min": 12,
+     "min": 13,
      "max": 19,
      "durum": "Az bulutlu"
     },
     {
      "tarih": "2026-11-30",
-     "min": 12,
-     "max": 20,
+     "min": 11,
+     "max": 19,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-12-01",
-     "min": 14,
+     "min": 13,
      "max": 18,
-     "durum": "Hafif yağmurlu"
+     "durum": "Bulutlu"
     },
     {
      "tarih": "2026-12-02",
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-28T13:31:46.976Z",
+  "guncelleme": "2026-11-28T14:01:42.550Z",
   "liste": [
    {
     "ad": "Atlas Eczanesi",
@@ -774,24 +774,8 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-28T13:31:48.249Z",
+  "guncelleme": "2026-11-28T14:01:43.525Z",
   "liste": [
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Erdemli ilçesi Alata Mahallesi Necip Fazıl Caddesi, Erden Sokak, Osman Bölükbaşı Sokak ve Kardelen Sokak genelinde içme suyu şebekesinde meydana gelen arıza nedeniyle saat 17:00’ye kadar su kesintisi uygulanmaktadır.",
-    "baslangic": "2026-11-28T11:25:00.000Z",
-    "bitis": "2026-11-28T14:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "erdemli",
-      "ad": "Erdemli",
-      "mahalleler": [
-       "Alata"
-      ]
-     }
-    ]
-   },
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
@@ -828,27 +812,11 @@
       ]
      }
     ]
-   },
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Mut ilçesi Narlıdere mahallesi Sertavul yaylası arıza sebebi ile kesinti yaşanmaktadır. 17.00'da suların verilmesi planlanmaktadır.",
-    "baslangic": "2026-11-28T12:00:00.000Z",
-    "bitis": "2026-11-28T14:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "mut",
-      "ad": "Mut",
-      "mahalleler": [
-       "Narlıdere"
-      ]
-     }
-    ]
    }
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-28T13:31:51.035Z",
+  "guncelleme": "2026-11-28T14:01:45.532Z",
   "kalemler": {
    "gram": {
     "alis": 5963.87,
@@ -881,9 +849,9 @@
     "degisim": 2.18
    },
    "btc": {
-    "satis": 3002983,
-    "usd": 59179,
-    "degisim": -3.73
+    "satis": 2997349,
+    "usd": 59068,
+    "degisim": -3.86
    }
   },
   "altinlar": [
@@ -1016,10 +984,10 @@
     "degisim": -0.03
    }
   ],
-  "kaynakSaati": "2026-11-28 16:31:01"
+  "kaynakSaati": "2026-11-28 17:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-28T13:31:53.458Z",
+  "guncelleme": "2026-11-28T14:01:48.147Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -2044,7 +2012,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-28T13:31:56.039Z",
+  "guncelleme": "2026-11-28T14:01:50.008Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -8652,18 +8620,32 @@
       "sira": 7,
       "takim": "Çorlu Spor 1947",
       "ham": "ÇORLU SPOR 1947",
-      "o": 13,
+      "o": 14,
       "g": 7,
       "b": 3,
-      "m": 3,
-      "a": 22,
-      "y": 15,
-      "av": 7,
+      "m": 4,
+      "a": 23,
+      "y": 18,
+      "av": 5,
       "p": 24,
       "mersin": false
      },
      {
       "sira": 8,
+      "takim": "Sebat Spor",
+      "ham": "SEBAT SPOR KULÜBÜ",
+      "o": 14,
+      "g": 6,
+      "b": 3,
+      "m": 5,
+      "a": 31,
+      "y": 20,
+      "av": 11,
+      "p": 21,
+      "mersin": false
+     },
+     {
+      "sira": 9,
       "takim": "Efor Çay Erbaaspor",
       "ham": "EFOR ÇAY ERBAASPOR",
       "o": 13,
@@ -8674,20 +8656,6 @@
       "y": 17,
       "av": 7,
       "p": 20,
-      "mersin": false
-     },
-     {
-      "sira": 9,
-      "takim": "Sebat Spor",
-      "ham": "SEBAT SPOR KULÜBÜ",
-      "o": 13,
-      "g": 5,
-      "b": 3,
-      "m": 5,
-      "a": 28,
-      "y": 19,
-      "av": 9,
-      "p": 18,
       "mersin": false
      },
      {
@@ -8846,7 +8814,7 @@
       "tarih": "2026-11-28",
       "saat": "15:00",
       "ev": "Çorlu Spor 1947",
-      "skor": null,
+      "skor": "1-3",
       "dep": "Sebat Spor",
       "mersin": false
      },
@@ -11102,17 +11070,17 @@
       "M",
       "G"
      ],
-     "Efor Çay Erbaaspor": [
-      "G",
-      "G",
-      "B",
-      "M",
-      "G"
-     ],
      "Sebat Spor": [
       "G",
       "G",
       "G",
+      "M",
+      "G"
+     ],
+     "Efor Çay Erbaaspor": [
+      "G",
+      "G",
+      "B",
       "M",
       "G"
      ],
@@ -14447,7 +14415,7 @@
       {
        "ev": "Orduspor 1967",
        "dep": "İnkılap",
-       "skor": null
+       "skor": "1-0"
       },
       {
        "ev": "Beykoz Anadolu Spor",
@@ -15996,11 +15964,11 @@
       "G"
      ],
      "Orduspor 1967": [
-      "M",
       "B",
       "B",
       "G",
-      "M"
+      "M",
+      "G"
      ],
      "Silivrispor": [
       "G",
@@ -16010,11 +15978,11 @@
       "B"
      ],
      "İnkılap": [
-      "G",
       "B",
       "G",
       "M",
-      "G"
+      "G",
+      "M"
      ],
      "Kartal Bulvar Kartalimen Spor": [
       "M",
@@ -21386,7 +21354,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-28T13:32:38.905Z",
+    "guncelleme": "2026-11-28T14:02:31.432Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21468,7 +21436,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-28T13:32:40.182Z",
+    "guncelleme": "2026-11-28T14:02:32.641Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21550,7 +21518,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-28T13:32:41.468Z",
+    "guncelleme": "2026-11-28T14:02:33.859Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21649,7 +21617,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-28T13:31:53.895Z",
+  "guncelleme": "2026-11-28T14:01:48.588Z",
   "liste": [
    {
     "yol": "/haber/1964-silifke-spor-yarin-deplasmanda-ayos-osmaniyespor-ile-karsilasacak-o06530/",
@@ -21680,16 +21648,16 @@
     "sayi": 4
    },
    {
+    "yol": "/haber/mersin-de-yilbasi-pazari-bu-yil-da-kurulacak-mi-1nuv8z7/",
+    "sayi": 4
+   },
+   {
     "yol": "/haber/yoruk-turkmenler-festivalde-bulusuyor-1ybcz5x/",
     "sayi": 4
    },
    {
     "yol": "/is-ilanlari/mezitli/",
     "sayi": 4
-   },
-   {
-    "yol": "/haber/mersin-de-yilbasi-pazari-bu-yil-da-kurulacak-mi-1nuv8z7/",
-    "sayi": 3
    },
    {
     "yol": "/haber/babasinin-izinden-giden-elif-dursun-13-yasinda-siyah-kusak-oldu-1sy41fw/",
@@ -21750,20 +21718,20 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-28T13:32:42.668Z",
+  "guncelleme": "2026-11-28T14:02:35.059Z",
   "deniz": {
    "sicaklik": 21.2,
    "dalga": 0.3
   },
   "hava": {
-   "aqi": 26,
-   "pm25": 8,
-   "pm10": 16.4,
+   "aqi": 29,
+   "pm25": 8.5,
+   "pm10": 18.1,
    "uvMax": 1.85
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-28T13:32:44.924Z",
+  "guncelleme": "2026-11-28T14:02:36.674Z",
   "giden": [
    {
     "no": [
@@ -21774,7 +21742,7 @@
     "planlanan": "2026-11-28T15:25:00.000Z",
     "tahmini": null,
     "kapi": "106",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -22232,21 +22200,21 @@
     "kapi": "106",
     "durum": "",
     "hat": "ic"
+   },
+   {
+    "no": [
+     "PC3013"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-29T13:50:00.000Z",
+    "tahmini": null,
+    "kapi": "105",
+    "durum": "",
+    "hat": "ic"
    }
   ],
   "gelen": [
-   {
-    "no": [
-     "PC3631"
-    ],
-    "havayolu": "Pegasus",
-    "yer": "Dalaman",
-    "planlanan": "2026-11-28T13:50:00.000Z",
-    "tahmini": null,
-    "kapi": "",
-    "durum": "",
-    "hat": "ic"
-   },
    {
     "no": [
      "TK2462"
@@ -22754,7 +22722,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-28T13:32:44.924Z",
+  "guncelleme": "2026-11-28T14:02:36.674Z",
   "liste": [
    {
     "id": 6386,

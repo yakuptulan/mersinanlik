@@ -658,16 +658,17 @@
    "kaynakHatalari": []
   },
   "2026-11-28": {
-   "guncelleme": "2026-11-28T13:33:37.411Z",
-   "mersinHaber": 30,
-   "kendiYazimiz": 28,
-   "turkiyeDunya": 180,
-   "otomatik": 7,
+   "guncelleme": "2026-11-28T14:03:26.892Z",
+   "mersinHaber": 31,
+   "kendiYazimiz": 29,
+   "turkiyeDunya": 191,
+   "otomatik": 8,
    "otomatikTurler": {
     "mac": 1,
     "su": 4,
     "piyasa": 1,
-    "ucus": 1
+    "ucus": 1,
+    "eczane": 1
    },
    "otomatikBasliklar": [
     {
@@ -704,6 +705,11 @@
      "baslik": "Çukurova Havalimanı'nda bugün 2 sefer iptal edildi",
      "tur": "ucus",
      "saat": "16:03"
+    },
+    {
+     "baslik": "Mersin nöbetçi eczaneler: 28 Kasım Cumartesi",
+     "tur": "eczane",
+     "saat": "17:03"
     }
    ],
    "gorsel": 23,
