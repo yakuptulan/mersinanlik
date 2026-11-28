@@ -1,13 +1,13 @@
 {
- "guncelleme": "2026-11-28T06:02:14.830Z",
+ "guncelleme": "2026-11-28T06:32:04.300Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 14,
+   "sicaklik": 16,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 14,
+     "min": 16,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
@@ -38,7 +38,7 @@
    ]
   },
   "anamur": {
-   "sicaklik": 14,
+   "sicaklik": 15,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -110,7 +110,7 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 12,
+   "sicaklik": 14,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
@@ -362,12 +362,12 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 10,
+   "sicaklik": 13,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 10,
+     "min": 13,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-28T06:02:20.106Z",
+  "guncelleme": "2026-11-28T06:32:08.561Z",
   "liste": [
    {
     "ad": "Atlas Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-28T06:02:21.441Z",
+  "guncelleme": "2026-11-28T06:32:09.968Z",
   "liste": [
    {
     "tur": "su",
@@ -799,6 +799,22 @@
       "mahalleler": [
        "Atatürk",
        "Yeni"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
+    "aciklama": "Tarsus ilçesi Kırklarsırtı mahallesi ana isale hattında meydana gelen arızadan kaynaklı su kesintisi yaşanmaktadır.Tahmini olarak saat 12,00'da su verilmesi planlanmaktadır.",
+    "baslangic": "2026-11-28T06:20:00.000Z",
+    "bitis": "2026-11-28T09:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "tarsus",
+      "ad": "Tarsus",
+      "mahalleler": [
+       "Kırklarsırtı"
       ]
      }
     ]
@@ -822,7 +838,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-28T06:02:25.254Z",
+  "guncelleme": "2026-11-28T06:32:12.609Z",
   "kalemler": {
    "gram": {
     "alis": 5963.87,
@@ -855,9 +871,9 @@
     "degisim": 2.18
    },
    "btc": {
-    "satis": 3030148,
-    "usd": 59715,
-    "degisim": -3.33
+    "satis": 3034868,
+    "usd": 59808,
+    "degisim": -3.14
    }
   },
   "altinlar": [
@@ -990,10 +1006,10 @@
     "degisim": -0.03
    }
   ],
-  "kaynakSaati": "2026-11-28 09:02:01"
+  "kaynakSaati": "2026-11-28 09:32:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-28T06:02:27.800Z",
+  "guncelleme": "2026-11-28T06:32:15.410Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1914,7 +1930,7 @@
   "eksik": 0
  },
  "etkinlik": {
-  "guncelleme": "2026-11-28T03:32:06.462Z",
+  "guncelleme": "2026-11-28T06:32:20.180Z",
   "liste": [
    {
     "id": "1ge5f2x",
@@ -21705,7 +21721,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-28T06:02:28.211Z",
+  "guncelleme": "2026-11-28T06:32:15.817Z",
   "liste": [
    {
     "yol": "/haber/1964-silifke-spor-yarin-deplasmanda-ayos-osmaniyespor-ile-karsilasacak-o06530/",
@@ -21752,10 +21768,6 @@
     "sayi": 2
    },
    {
-    "yol": "/haber/tarsus-belediyesine-ilce-geneli-sifir-atik-belgesi-doyqdd/",
-    "sayi": 2
-   },
-   {
     "yol": "/haber/vali-verdigi-sozu-tuttu-gittigi-sinifta-duygu-dolu-anlar-yasandi-12ztpei/",
     "sayi": 2
    },
@@ -21773,6 +21785,10 @@
    },
    {
     "yol": "/haber/mardin-in-tas-sokaklarinda-reyhani-oynadilar-16ipb07/",
+    "sayi": 1
+   },
+   {
+    "yol": "/is-ilanlari/meslek/forklift-operatoru/",
     "sayi": 1
    },
    {
@@ -21818,7 +21834,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-28T06:03:35.326Z",
+  "guncelleme": "2026-11-28T06:32:20.180Z",
   "deniz": {
    "sicaklik": 21.1,
    "dalga": 0.22
@@ -22810,7 +22826,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-28T06:03:37.709Z",
+  "guncelleme": "2026-11-28T06:32:22.990Z",
   "liste": [
    {
     "id": 6386,
