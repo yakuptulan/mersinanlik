@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-28T16:32:05.914Z",
+ "guncelleme": "2026-11-28T17:02:12.942Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 17,
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-28T16:32:10.532Z",
+  "guncelleme": "2026-11-28T17:02:17.171Z",
   "liste": [
    {
     "ad": "Atlas Eczanesi",
@@ -763,29 +763,8 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-28T16:32:11.738Z",
+  "guncelleme": "2026-11-28T17:02:18.230Z",
   "liste": [
-   {
-    "tur": "su",
-    "baslik": "SU KESİNTİSİ",
-    "aciklama": "Aydıncık, içme suyu ana hat arızası nedeni ile Cumhuriyet, Hürriyet, Yeni, Hacıbahattin mahallelerinde saat 20:00 a kadar içme suyu kesintisi yapılacaktır.",
-    "baslangic": "2026-11-28T15:14:51.000Z",
-    "bitis": "2026-11-28T17:00:00.000Z",
-    "ilceler": [
-     {
-      "ilce": "aydincik",
-      "ad": "Aydıncık",
-      "mahalleler": [
-       "Büyük Ada",
-       "Cumhuriyet",
-       "Hacıbahattin",
-       "Hürriyet",
-       "Yelkenli Adası",
-       "Yeni"
-      ]
-     }
-    ]
-   },
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
@@ -805,7 +784,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-28T16:02:00.712Z",
+  "guncelleme": "2026-11-28T17:02:22.024Z",
   "kalemler": {
    "gram": {
     "alis": 5963.87,
@@ -838,9 +817,9 @@
     "degisim": 2.18
    },
    "btc": {
-    "satis": 3016827,
-    "usd": 59452,
-    "degisim": -1.02
+    "satis": 3021744,
+    "usd": 59549,
+    "degisim": -0.66
    }
   },
   "altinlar": [
@@ -973,10 +952,10 @@
     "degisim": -0.03
    }
   ],
-  "kaynakSaati": "2026-11-28 19:01:01"
+  "kaynakSaati": "2026-11-28 20:02:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-28T16:02:02.979Z",
+  "guncelleme": "2026-11-28T17:02:25.092Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -2001,7 +1980,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-28T16:32:27.957Z",
+  "guncelleme": "2026-11-28T17:02:27.260Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -14409,17 +14388,17 @@
       {
        "ev": "Beykoz Anadolu Spor",
        "dep": "Galata Spor",
-       "skor": null
+       "skor": "2-0"
       },
       {
        "ev": "Kartal Bulvar Kartalimen Spor",
        "dep": "Tokat Belediye Spor",
-       "skor": null
+       "skor": "0-1"
       },
       {
        "ev": "Gölcükspor",
        "dep": "Karabük İdmanyurdu Spor",
-       "skor": null
+       "skor": "0-1"
       },
       {
        "ev": "Kdz.ereğli 1980 Spor",
@@ -15918,9 +15897,9 @@
       "B"
      ],
      "Karabük İdmanyurdu Spor": [
-      "M",
       "B",
       "B",
+      "G",
       "G",
       "G"
      ],
@@ -15974,25 +15953,25 @@
       "M"
      ],
      "Kartal Bulvar Kartalimen Spor": [
-      "M",
       "G",
       "B",
       "B",
+      "M",
       "M"
      ],
      "Beykoz Anadolu Spor": [
-      "B",
-      "B",
-      "M",
-      "M",
-      "M"
-     ],
-     "Galata Spor": [
       "B",
       "M",
       "M",
       "M",
       "G"
+     ],
+     "Galata Spor": [
+      "M",
+      "M",
+      "M",
+      "G",
+      "M"
      ],
      "Yalova FK 77 Spor": [
       "G",
@@ -16002,11 +15981,11 @@
       "M"
      ],
      "Tokat Belediye Spor": [
-      "M",
       "B",
       "G",
       "M",
-      "B"
+      "B",
+      "G"
      ],
      "Zonguldak Spor": [
       "B",
@@ -16017,10 +15996,10 @@
      ],
      "Gölcükspor": [
       "B",
-      "B",
       "M",
       "G",
-      "G"
+      "G",
+      "M"
      ],
      "Kdz.ereğli 1980 Spor": [
       "B",
@@ -21343,7 +21322,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-28T16:33:12.816Z",
+    "guncelleme": "2026-11-28T17:03:11.240Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21425,7 +21404,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-28T16:33:14.109Z",
+    "guncelleme": "2026-11-28T17:03:12.484Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21507,12 +21486,12 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-28T16:33:15.415Z",
+    "guncelleme": "2026-11-28T17:03:13.738Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
       "kulup": "Kırıkkale FK Spor",
-      "gol": 14
+      "gol": 15
      },
      {
       "ad": "ENES NALBANTOĞLU",
@@ -21565,6 +21544,11 @@
       "gol": 6
      },
      {
+      "ad": "MUHAMMET ARSLANTAŞ",
+      "kulup": "Bitlis 1916",
+      "gol": 6
+     },
+     {
       "ad": "AHMET TEKER",
       "kulup": "Eti Gübre Mazıdağı Fosfat Spor",
       "gol": 5
@@ -21577,11 +21561,6 @@
      {
       "ad": "BEKİRCAN ÇOBAN",
       "kulup": "1964 Silifke Spor",
-      "gol": 5
-     },
-     {
-      "ad": "BERKAY EKİCİ",
-      "kulup": "Açıkalın Erciyes 38",
       "gol": 5
      }
     ]
@@ -21606,7 +21585,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-28T16:32:25.494Z",
+  "guncelleme": "2026-11-28T17:02:25.748Z",
   "liste": [
    {
     "yol": "/haber/1964-silifke-spor-yarin-deplasmanda-ayos-osmaniyespor-ile-karsilasacak-o06530/",
@@ -21633,15 +21612,7 @@
     "sayi": 6
    },
    {
-    "yol": "/haber/interpol-un-kirmizi-bultenle-aradigi-sahis-havalimaninda-gozaltina-ali-1u002f4/",
-    "sayi": 5
-   },
-   {
     "yol": "/haber/yoruk-turkmenler-festivalde-bulusuyor-1ybcz5x/",
-    "sayi": 4
-   },
-   {
-    "yol": "/is-ilanlari/mezitli/",
     "sayi": 4
    },
    {
@@ -21649,7 +21620,7 @@
     "sayi": 3
    },
    {
-    "yol": "/",
+    "yol": "/is-ilanlari/mezitli/",
     "sayi": 3
    },
    {
@@ -21669,11 +21640,19 @@
     "sayi": 2
    },
    {
+    "yol": "/",
+    "sayi": 1
+   },
+   {
     "yol": "/is-ilanlari/meslek/forklift-operatoru/",
     "sayi": 1
    },
    {
     "yol": "/hava-durumu/bozyazi/",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/yeni-mersin-idman-yurdu-100-kadin-taraftari-tribunde-misafir-edecek-13qosn3/",
     "sayi": 1
    },
    {
@@ -21689,10 +21668,6 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/yeni-mersin-idman-yurdu-100-kadin-taraftari-tribunde-misafir-edecek-13qosn3/",
-    "sayi": 1
-   },
-   {
     "yol": "/is-ilanlari/",
     "sayi": 1
    },
@@ -21705,21 +21680,25 @@
     "sayi": 1
    },
    {
+    "yol": "/spor/takim/amed-sportif-faaliyetler/",
+    "sayi": 1
+   },
+   {
     "yol": "/is-ilanlari/meslek/sofor-yuk-tasima/",
     "sayi": 1
    }
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-28T16:33:16.617Z",
+  "guncelleme": "2026-11-28T17:03:14.939Z",
   "deniz": {
    "sicaklik": 21.1,
-   "dalga": 0.3
+   "dalga": 0.28
   },
   "hava": {
-   "aqi": 33,
-   "pm25": 11.4,
-   "pm10": 24.7,
+   "aqi": 34,
+   "pm25": 12.1,
+   "pm10": 25.1,
    "uvMax": 1.85
   }
  },
@@ -22823,7 +22802,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-28T16:33:19.301Z",
+  "guncelleme": "2026-11-28T17:03:16.917Z",
   "liste": [
    {
     "id": 6386,
