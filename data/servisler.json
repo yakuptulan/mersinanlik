@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-28T13:08:08.032Z",
+ "guncelleme": "2026-11-28T13:31:42.584Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 20,
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-28T13:08:12.295Z",
+  "guncelleme": "2026-11-28T13:31:46.976Z",
   "liste": [
    {
     "ad": "Atlas Eczanesi",
@@ -774,7 +774,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-28T13:08:13.419Z",
+  "guncelleme": "2026-11-28T13:31:48.249Z",
   "liste": [
    {
     "tur": "su",
@@ -816,9 +816,9 @@
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
-    "aciklama": "Silifke ilçesi Taşucu mahallesi(Kum mahallesi hariç) ana şebeke arızasından kaynaklı tahmini 29.11.2026 saat 18:00 a kadar su kesintisi yaşanacaktır.",
+    "aciklama": "Silifke ilçesi Taşucu mahallesi(Kum mahallesi hariç) ana şebeke arızasından kaynaklı tahmini saat 18:00 a kadar su kesintisi yaşanacaktır.",
     "baslangic": "2026-11-28T11:41:00.000Z",
-    "bitis": "2026-11-29T15:00:00.000Z",
+    "bitis": "2026-11-28T15:00:00.000Z",
     "ilceler": [
      {
       "ilce": "silifke",
@@ -848,7 +848,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-28T13:08:15.851Z",
+  "guncelleme": "2026-11-28T13:31:51.035Z",
   "kalemler": {
    "gram": {
     "alis": 5963.87,
@@ -881,9 +881,9 @@
     "degisim": 2.18
    },
    "btc": {
-    "satis": 3003547,
-    "usd": 59190,
-    "degisim": -3.7
+    "satis": 3002983,
+    "usd": 59179,
+    "degisim": -3.73
    }
   },
   "altinlar": [
@@ -1016,10 +1016,10 @@
     "degisim": -0.03
    }
   ],
-  "kaynakSaati": "2026-11-28 16:08:01"
+  "kaynakSaati": "2026-11-28 16:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-28T13:08:18.492Z",
+  "guncelleme": "2026-11-28T13:31:53.458Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -2044,7 +2044,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-28T13:08:20.284Z",
+  "guncelleme": "2026-11-28T13:31:56.039Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -14447,7 +14447,7 @@
       {
        "ev": "Orduspor 1967",
        "dep": "İnkılap",
-       "skor": "1-0"
+       "skor": null
       },
       {
        "ev": "Beykoz Anadolu Spor",
@@ -15996,11 +15996,11 @@
       "G"
      ],
      "Orduspor 1967": [
+      "M",
       "B",
       "B",
       "G",
-      "M",
-      "G"
+      "M"
      ],
      "Silivrispor": [
       "G",
@@ -16010,11 +16010,11 @@
       "B"
      ],
      "İnkılap": [
+      "G",
       "B",
       "G",
       "M",
-      "G",
-      "M"
+      "G"
      ],
      "Kartal Bulvar Kartalimen Spor": [
       "M",
@@ -21386,7 +21386,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-28T13:09:07.224Z",
+    "guncelleme": "2026-11-28T13:32:38.905Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21468,7 +21468,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-28T13:09:08.460Z",
+    "guncelleme": "2026-11-28T13:32:40.182Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21550,7 +21550,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-28T13:09:09.703Z",
+    "guncelleme": "2026-11-28T13:32:41.468Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21649,7 +21649,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-28T13:08:18.820Z",
+  "guncelleme": "2026-11-28T13:31:53.895Z",
   "liste": [
    {
     "yol": "/haber/1964-silifke-spor-yarin-deplasmanda-ayos-osmaniyespor-ile-karsilasacak-o06530/",
@@ -21668,23 +21668,15 @@
     "sayi": 6
    },
    {
-    "yol": "/",
-    "sayi": 5
-   },
-   {
     "yol": "/haber/interpol-un-kirmizi-bultenle-aradigi-sahis-havalimaninda-gozaltina-ali-1u002f4/",
     "sayi": 5
    },
    {
-    "yol": "/haber/mut-ta-kaybolan-90-kecinin-40-i-sag-bulundu-15a40vn/",
-    "sayi": 4
+    "yol": "/",
+    "sayi": 5
    },
    {
     "yol": "/haber/mtso-baskan-yildizgorer-den-genclere-hata-yapmaktan-da-girisimci-olmak-d9p6jz/",
-    "sayi": 4
-   },
-   {
-    "yol": "/is-ilanlari/mezitli/",
     "sayi": 4
    },
    {
@@ -21692,15 +21684,19 @@
     "sayi": 4
    },
    {
+    "yol": "/is-ilanlari/mezitli/",
+    "sayi": 4
+   },
+   {
     "yol": "/haber/mersin-de-yilbasi-pazari-bu-yil-da-kurulacak-mi-1nuv8z7/",
     "sayi": 3
    },
    {
-    "yol": "/hava-durumu/bozyazi/",
+    "yol": "/haber/babasinin-izinden-giden-elif-dursun-13-yasinda-siyah-kusak-oldu-1sy41fw/",
     "sayi": 2
    },
    {
-    "yol": "/haber/babasinin-izinden-giden-elif-dursun-13-yasinda-siyah-kusak-oldu-1sy41fw/",
+    "yol": "/hava-durumu/bozyazi/",
     "sayi": 2
    },
    {
@@ -21712,15 +21708,11 @@
     "sayi": 2
    },
    {
-    "yol": "/is-ilanlari/meslek/forklift-operatoru/",
-    "sayi": 1
-   },
-   {
     "yol": "/haber/siyer-i-nebi-yarismasi-nda-mersin-birincisine-umre-odulu-11unt0c/",
     "sayi": 1
    },
    {
-    "yol": "/is-ilanlari/",
+    "yol": "/is-ilanlari/meslek/forklift-operatoru/",
     "sayi": 1
    },
    {
@@ -21733,6 +21725,14 @@
    },
    {
     "yol": "/uretilen/11unt0c.webp",
+    "sayi": 1
+   },
+   {
+    "yol": "/haber/yeni-mersin-idman-yurdu-100-kadin-taraftari-tribunde-misafir-edecek-13qosn3/",
+    "sayi": 1
+   },
+   {
+    "yol": "/is-ilanlari/",
     "sayi": 1
    },
    {
@@ -21750,7 +21750,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-28T13:09:10.904Z",
+  "guncelleme": "2026-11-28T13:32:42.668Z",
   "deniz": {
    "sicaklik": 21.2,
    "dalga": 0.3
@@ -21763,20 +21763,8 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-28T13:03:09.181Z",
+  "guncelleme": "2026-11-28T13:32:44.924Z",
   "giden": [
-   {
-    "no": [
-     "TK2461"
-    ],
-    "havayolu": "THY",
-    "yer": "İstanbul",
-    "planlanan": "2026-11-28T13:30:00.000Z",
-    "tahmini": null,
-    "kapi": "105",
-    "durum": "BOARDING",
-    "hat": "ic"
-   },
    {
     "no": [
      "TK2463"
@@ -21810,7 +21798,7 @@
     "planlanan": "2026-11-28T16:05:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "dis"
    },
    {
@@ -22738,11 +22726,35 @@
     "kapi": "",
     "durum": "",
     "hat": "dis"
+   },
+   {
+    "no": [
+     "PC3012"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "İzmir",
+    "planlanan": "2026-11-29T13:15:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "PC1889"
+    ],
+    "havayolu": "Pegasus",
+    "yer": "Ercan",
+    "planlanan": "2026-11-29T13:30:00.000Z",
+    "tahmini": null,
+    "kapi": "",
+    "durum": "",
+    "hat": "dis"
    }
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-28T13:09:12.868Z",
+  "guncelleme": "2026-11-28T13:32:44.924Z",
   "liste": [
    {
     "id": 6386,
