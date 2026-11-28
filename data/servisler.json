@@ -1,14 +1,14 @@
 {
- "guncelleme": "2026-11-28T13:02:06.642Z",
+ "guncelleme": "2026-11-28T13:08:08.032Z",
  "hava": {
   "akdeniz": {
-   "sicaklik": 21,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 20,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 16,
-     "max": 21,
+     "max": 20,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -182,13 +182,13 @@
    ]
   },
   "erdemli": {
-   "sicaklik": 20,
+   "sicaklik": 19,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 16,
-     "max": 20,
+     "max": 19,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -218,13 +218,13 @@
    ]
   },
   "gulnar": {
-   "sicaklik": 15,
+   "sicaklik": 14,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 10,
-     "max": 15,
+     "max": 14,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -326,13 +326,13 @@
    ]
   },
   "silifke": {
-   "sicaklik": 21,
+   "sicaklik": 19,
    "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 15,
-     "max": 21,
+     "max": 19,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -398,13 +398,13 @@
    ]
   },
   "toroslar": {
-   "sicaklik": 21,
-   "durum": "Parçalı bulutlu",
+   "sicaklik": 20,
+   "durum": "Bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 16,
-     "max": 21,
+     "max": 20,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-28T13:02:09.608Z",
+  "guncelleme": "2026-11-28T13:08:12.295Z",
   "liste": [
    {
     "ad": "Atlas Eczanesi",
@@ -774,7 +774,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-28T13:02:10.721Z",
+  "guncelleme": "2026-11-28T13:08:13.419Z",
   "liste": [
    {
     "tur": "su",
@@ -848,7 +848,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-28T13:02:12.936Z",
+  "guncelleme": "2026-11-28T13:08:15.851Z",
   "kalemler": {
    "gram": {
     "alis": 5963.87,
@@ -881,9 +881,9 @@
     "degisim": 2.18
    },
    "btc": {
-    "satis": 3002454,
-    "usd": 59169,
-    "degisim": -3.96
+    "satis": 3003547,
+    "usd": 59190,
+    "degisim": -3.7
    }
   },
   "altinlar": [
@@ -1016,10 +1016,10 @@
     "degisim": -0.03
    }
   ],
-  "kaynakSaati": "2026-11-28 16:02:01"
+  "kaynakSaati": "2026-11-28 16:08:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-28T13:02:15.554Z",
+  "guncelleme": "2026-11-28T13:08:18.492Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -2044,7 +2044,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-28T13:02:17.662Z",
+  "guncelleme": "2026-11-28T13:08:20.284Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -21386,7 +21386,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-28T13:03:03.944Z",
+    "guncelleme": "2026-11-28T13:09:07.224Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21468,7 +21468,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-28T13:03:05.152Z",
+    "guncelleme": "2026-11-28T13:09:08.460Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21550,7 +21550,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-28T13:03:06.366Z",
+    "guncelleme": "2026-11-28T13:09:09.703Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21649,7 +21649,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-28T13:02:16.264Z",
+  "guncelleme": "2026-11-28T13:08:18.820Z",
   "liste": [
    {
     "yol": "/haber/1964-silifke-spor-yarin-deplasmanda-ayos-osmaniyespor-ile-karsilasacak-o06530/",
@@ -21750,7 +21750,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-28T13:03:07.567Z",
+  "guncelleme": "2026-11-28T13:09:10.904Z",
   "deniz": {
    "sicaklik": 21.2,
    "dalga": 0.3
@@ -22742,7 +22742,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-28T13:03:09.181Z",
+  "guncelleme": "2026-11-28T13:09:12.868Z",
   "liste": [
    {
     "id": 6386,
