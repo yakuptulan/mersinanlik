@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-28T15:55:28.163Z",
+ "guncelleme": "2026-11-28T16:01:53.592Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 17,
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-28T15:55:32.264Z",
+  "guncelleme": "2026-11-28T16:01:57.340Z",
   "liste": [
    {
     "ad": "Atlas Eczanesi",
@@ -662,17 +662,6 @@
     "saat": "28.11.2026 08:00 / 29.11.2026 08:00 nöbetçidir."
    },
    {
-    "ad": "Güven Eczanesi",
-    "bolge": "SİLİFKE",
-    "ilce": "silifke",
-    "adres": "Atakent Mah.Sazbaşı Bulvarı NO:383A/18",
-    "tarif": "ATAKENT SAĞLIK OCAĞI CİVARI KOÇAKLAR APT. MERSİN/SİLİFKE OTOYOLU ÜZERİ",
-    "telefon": "03247225197",
-    "lat": 36.405557,
-    "lon": 34.070173,
-    "saat": "28.11.2026 08:00 / 28.11.2026 19:00 nöbetçidir."
-   },
-   {
     "ad": "Onuk Eczanesi",
     "bolge": "SİLİFKE",
     "ilce": "silifke",
@@ -774,7 +763,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-28T15:55:33.215Z",
+  "guncelleme": "2026-11-28T16:01:58.350Z",
   "liste": [
    {
     "tur": "su",
@@ -800,7 +789,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-28T15:55:37.641Z",
+  "guncelleme": "2026-11-28T16:02:00.712Z",
   "kalemler": {
    "gram": {
     "alis": 5963.87,
@@ -833,9 +822,9 @@
     "degisim": 2.18
    },
    "btc": {
-    "satis": 3017136,
-    "usd": 59458,
-    "degisim": -0.97
+    "satis": 3016827,
+    "usd": 59452,
+    "degisim": -1.02
    }
   },
   "altinlar": [
@@ -968,10 +957,10 @@
     "degisim": -0.03
    }
   ],
-  "kaynakSaati": "2026-11-28 18:55:02"
+  "kaynakSaati": "2026-11-28 19:01:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-28T15:55:40.059Z",
+  "guncelleme": "2026-11-28T16:02:02.979Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1996,7 +1985,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-28T15:55:42.130Z",
+  "guncelleme": "2026-11-28T16:02:05.634Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -9533,7 +9522,7 @@
       {
        "ev": "Aliağa",
        "dep": "Gmg Kastamonuspor",
-       "skor": null
+       "skor": "3-0"
       },
       {
        "ev": "Arkent Arnavutköy Belediyesi Futbol SK",
@@ -11013,9 +11002,9 @@
       "G"
      ],
      "Aliağa": [
-      "M",
       "B",
       "B",
+      "G",
       "G",
       "G"
      ],
@@ -11106,8 +11095,8 @@
      "Gmg Kastamonuspor": [
       "M",
       "M",
-      "M",
       "B",
+      "M",
       "M"
      ],
      "Arkent Arnavutköy Belediyesi Futbol SK": [
@@ -14404,17 +14393,17 @@
       {
        "ev": "Beykoz Anadolu Spor",
        "dep": "Galata Spor",
-       "skor": "2-0"
+       "skor": null
       },
       {
        "ev": "Kartal Bulvar Kartalimen Spor",
        "dep": "Tokat Belediye Spor",
-       "skor": "0-1"
+       "skor": null
       },
       {
        "ev": "Gölcükspor",
        "dep": "Karabük İdmanyurdu Spor",
-       "skor": "0-1"
+       "skor": null
       },
       {
        "ev": "Kdz.ereğli 1980 Spor",
@@ -15913,9 +15902,9 @@
       "B"
      ],
      "Karabük İdmanyurdu Spor": [
+      "M",
       "B",
       "B",
-      "G",
       "G",
       "G"
      ],
@@ -15969,25 +15958,25 @@
       "M"
      ],
      "Kartal Bulvar Kartalimen Spor": [
+      "M",
       "G",
       "B",
       "B",
-      "M",
       "M"
      ],
      "Beykoz Anadolu Spor": [
+      "B",
+      "B",
+      "M",
+      "M",
+      "M"
+     ],
+     "Galata Spor": [
       "B",
       "M",
       "M",
       "M",
       "G"
-     ],
-     "Galata Spor": [
-      "M",
-      "M",
-      "M",
-      "G",
-      "M"
      ],
      "Yalova FK 77 Spor": [
       "G",
@@ -15997,11 +15986,11 @@
       "M"
      ],
      "Tokat Belediye Spor": [
+      "M",
       "B",
       "G",
       "M",
-      "B",
-      "G"
+      "B"
      ],
      "Zonguldak Spor": [
       "B",
@@ -16012,10 +16001,10 @@
      ],
      "Gölcükspor": [
       "B",
+      "B",
       "M",
       "G",
-      "G",
-      "M"
+      "G"
      ],
      "Kdz.ereğli 1980 Spor": [
       "B",
@@ -19709,7 +19698,7 @@
       {
        "ev": "Yeni Mersin İdmanyurdu",
        "dep": "Niğde Belediyesi Spor",
-       "skor": "0-0"
+       "skor": null
       },
       {
        "ev": "Yozgat Belediyesi Bozok Spor",
@@ -21228,10 +21217,10 @@
      ],
      "Niğde Belediyesi Spor": [
       "G",
+      "G",
       "B",
       "M",
-      "G",
-      "B"
+      "G"
      ],
      "Eti Gübre Mazıdağı Fosfat Spor": [
       "B",
@@ -21259,7 +21248,7 @@
       "G",
       "G",
       "G",
-      "B"
+      "G"
      ],
      "Ejderoğlu Kırşehir": [
       "B",
@@ -21338,7 +21327,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-28T15:56:24.385Z",
+    "guncelleme": "2026-11-28T16:02:46.867Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21420,7 +21409,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-28T15:56:25.592Z",
+    "guncelleme": "2026-11-28T16:02:48.101Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21502,7 +21491,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-28T15:56:26.809Z",
+    "guncelleme": "2026-11-28T16:02:49.341Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21601,7 +21590,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-28T15:55:40.848Z",
+  "guncelleme": "2026-11-28T16:02:03.781Z",
   "liste": [
    {
     "yol": "/haber/1964-silifke-spor-yarin-deplasmanda-ayos-osmaniyespor-ile-karsilasacak-o06530/",
@@ -21706,15 +21695,15 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-28T15:56:28.010Z",
+  "guncelleme": "2026-11-28T16:02:50.542Z",
   "deniz": {
-   "sicaklik": 21.2,
+   "sicaklik": 21.1,
    "dalga": 0.3
   },
   "hava": {
    "aqi": 33,
-   "pm25": 10.4,
-   "pm10": 23.3,
+   "pm25": 11.4,
+   "pm10": 24.7,
    "uvMax": 1.85
   }
  },
@@ -22818,7 +22807,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-28T15:56:29.663Z",
+  "guncelleme": "2026-11-28T16:02:52.578Z",
   "liste": [
    {
     "id": 6386,
