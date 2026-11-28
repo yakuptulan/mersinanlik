@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-28T15:32:01.012Z",
+ "guncelleme": "2026-11-28T15:55:28.163Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 17,
@@ -483,7 +483,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-28T15:32:04.148Z",
+  "guncelleme": "2026-11-28T15:55:32.264Z",
   "liste": [
    {
     "ad": "Atlas Eczanesi",
@@ -774,7 +774,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-28T15:32:05.090Z",
+  "guncelleme": "2026-11-28T15:55:33.215Z",
   "liste": [
    {
     "tur": "su",
@@ -800,7 +800,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-28T15:32:07.417Z",
+  "guncelleme": "2026-11-28T15:55:37.641Z",
   "kalemler": {
    "gram": {
     "alis": 5963.87,
@@ -833,9 +833,9 @@
     "degisim": 2.18
    },
    "btc": {
-    "satis": 3007156,
-    "usd": 59262,
-    "degisim": -1.02
+    "satis": 3017136,
+    "usd": 59458,
+    "degisim": -0.97
    }
   },
   "altinlar": [
@@ -968,10 +968,10 @@
     "degisim": -0.03
    }
   ],
-  "kaynakSaati": "2026-11-28 18:32:02"
+  "kaynakSaati": "2026-11-28 18:55:02"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-28T14:31:56.411Z",
+  "guncelleme": "2026-11-28T15:55:40.059Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -1996,7 +1996,7 @@
   ]
  },
  "spor": {
-  "guncelleme": "2026-11-28T15:02:18.449Z",
+  "guncelleme": "2026-11-28T15:55:42.130Z",
   "superLig": {
    "ad": "Trendyol Süper Lig",
    "kaynak": "https://www.tff.org/Default.aspx?pageID=198",
@@ -6612,7 +6612,7 @@
       {
        "ev": "Artı Değer Van Spor",
        "dep": "Bursaspor",
-       "skor": null
+       "skor": "1-1"
       },
       {
        "ev": "Muğlaspor",
@@ -8372,9 +8372,9 @@
      "Bursaspor": [
       "G",
       "G",
-      "G",
       "B",
-      "G"
+      "G",
+      "B"
      ],
      "Metro Holding Kayserispor": [
       "B",
@@ -8475,11 +8475,11 @@
       "M"
      ],
      "Artı Değer Van Spor": [
+      "G",
+      "G",
+      "G",
       "M",
-      "G",
-      "G",
-      "G",
-      "M"
+      "B"
      ],
      "Orfa Yapı Pendikspor": [
       "M",
@@ -17049,7 +17049,7 @@
       {
        "ev": "Bucaspor 1928",
        "dep": "Bigaspor",
-       "skor": null
+       "skor": "0-3"
       },
       {
        "ev": "Balıkesirspor",
@@ -18591,10 +18591,10 @@
       "G"
      ],
      "Bigaspor": [
-      "G",
       "M",
       "G",
       "M",
+      "G",
       "G"
      ],
      "Bursa Yıldırım Spor": [
@@ -18668,9 +18668,9 @@
       "M"
      ],
      "Bucaspor 1928": [
+      "B",
+      "B",
       "M",
-      "B",
-      "B",
       "M",
       "M"
      ],
@@ -21338,7 +21338,7 @@
    "super-lig": {
     "ad": "Süper Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=821",
-    "guncelleme": "2026-11-28T15:03:00.454Z",
+    "guncelleme": "2026-11-28T15:56:24.385Z",
     "liste": [
      {
       "ad": "DUSAN VLAHOVIC",
@@ -21420,7 +21420,7 @@
    "1-lig": {
     "ad": "1. Lig",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=822",
-    "guncelleme": "2026-11-28T15:03:01.661Z",
+    "guncelleme": "2026-11-28T15:56:25.592Z",
     "liste": [
      {
       "ad": "KELECHI PROMISE IHEANACHO",
@@ -21502,7 +21502,7 @@
    "3-lig-3": {
     "ad": "3. Lig 3. Grup",
     "kaynak": "https://www.tff.org/Default.aspx?pageID=824",
-    "guncelleme": "2026-11-28T15:03:02.874Z",
+    "guncelleme": "2026-11-28T15:56:26.809Z",
     "liste": [
      {
       "ad": "CHRİSTOPHER JAKOB AYDEMİR",
@@ -21601,7 +21601,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-28T15:32:18.175Z",
+  "guncelleme": "2026-11-28T15:55:40.848Z",
   "liste": [
    {
     "yol": "/haber/1964-silifke-spor-yarin-deplasmanda-ayos-osmaniyespor-ile-karsilasacak-o06530/",
@@ -21620,12 +21620,20 @@
     "sayi": 8
    },
    {
+    "yol": "/haber/aydincik-ta-su-kesintisi-28-kasim-buyuk-ada-cumhuriyet-ve-4-mahalle-da-sebe31/",
+    "sayi": 6
+   },
+   {
     "yol": "/haber/mersin-buyuksehir-gencleri-is-dunyasinin-deneyimiyle-bulusturdu-1b219wx/",
     "sayi": 6
    },
    {
     "yol": "/haber/interpol-un-kirmizi-bultenle-aradigi-sahis-havalimaninda-gozaltina-ali-1u002f4/",
     "sayi": 5
+   },
+   {
+    "yol": "/haber/mersin-de-yilbasi-pazari-bu-yil-da-kurulacak-mi-1nuv8z7/",
+    "sayi": 4
    },
    {
     "yol": "/haber/yoruk-turkmenler-festivalde-bulusuyor-1ybcz5x/",
@@ -21636,15 +21644,11 @@
     "sayi": 4
    },
    {
-    "yol": "/haber/mersin-de-yilbasi-pazari-bu-yil-da-kurulacak-mi-1nuv8z7/",
-    "sayi": 4
-   },
-   {
     "yol": "/",
     "sayi": 3
    },
    {
-    "yol": "/haber/tarsus-a-iklim-dostu-park-kazandirilacak-zagi5n/",
+    "yol": "/haber/babasinin-izinden-giden-elif-dursun-13-yasinda-siyah-kusak-oldu-1sy41fw/",
     "sayi": 2
    },
    {
@@ -21652,35 +21656,19 @@
     "sayi": 2
    },
    {
-    "yol": "/haber/babasinin-izinden-giden-elif-dursun-13-yasinda-siyah-kusak-oldu-1sy41fw/",
-    "sayi": 2
-   },
-   {
     "yol": "/is-ilanlari/tarsus/",
     "sayi": 2
    },
    {
-    "yol": "/is-ilanlari/meslek/sofor-yuk-tasima/",
-    "sayi": 1
+    "yol": "/haber/tarsus-a-iklim-dostu-park-kazandirilacak-zagi5n/",
+    "sayi": 2
    },
    {
-    "yol": "/hakkimizda/",
-    "sayi": 1
-   },
-   {
-    "yol": "/is-ilanlari/",
-    "sayi": 1
-   },
-   {
-    "yol": "/haber/yeni-mersin-idman-yurdu-100-kadin-taraftari-tribunde-misafir-edecek-13qosn3/",
+    "yol": "/is-ilanlari/meslek/forklift-operatoru/",
     "sayi": 1
    },
    {
     "yol": "/hava-durumu/bozyazi/",
-    "sayi": 1
-   },
-   {
-    "yol": "/is-ilanlari/meslek/forklift-operatoru/",
     "sayi": 1
    },
    {
@@ -21694,11 +21682,31 @@
    {
     "yol": "/uretilen/11unt0c.webp",
     "sayi": 1
+   },
+   {
+    "yol": "/haber/yeni-mersin-idman-yurdu-100-kadin-taraftari-tribunde-misafir-edecek-13qosn3/",
+    "sayi": 1
+   },
+   {
+    "yol": "/is-ilanlari/",
+    "sayi": 1
+   },
+   {
+    "yol": "/hakkimizda/",
+    "sayi": 1
+   },
+   {
+    "yol": "/spor/2-lig-beyaz/",
+    "sayi": 1
+   },
+   {
+    "yol": "/is-ilanlari/meslek/sofor-yuk-tasima/",
+    "sayi": 1
    }
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-28T15:32:21.096Z",
+  "guncelleme": "2026-11-28T15:56:28.010Z",
   "deniz": {
    "sicaklik": 21.2,
    "dalga": 0.3
@@ -21711,7 +21719,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-28T15:32:22.720Z",
+  "guncelleme": "2026-11-28T15:56:29.664Z",
   "giden": [
    {
     "no": [
@@ -21722,7 +21730,7 @@
     "planlanan": "2026-11-28T16:05:00.000Z",
     "tahmini": null,
     "kapi": "105",
-    "durum": "KONTUAR KAPALI",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -21734,7 +21742,7 @@
     "planlanan": "2026-11-28T16:05:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "BOARDING",
+    "durum": "KAPI KAPANDI",
     "hat": "dis"
    },
    {
@@ -21758,7 +21766,7 @@
     "planlanan": "2026-11-28T17:35:00.000Z",
     "tahmini": null,
     "kapi": "104",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -21770,7 +21778,7 @@
     "planlanan": "2026-11-28T17:55:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "",
+    "durum": "KONTUAR AÇIK",
     "hat": "ic"
    },
    {
@@ -22238,6 +22246,18 @@
     "planlanan": "2026-11-29T15:25:00.000Z",
     "tahmini": null,
     "kapi": "106",
+    "durum": "",
+    "hat": "ic"
+   },
+   {
+    "no": [
+     "VF4089"
+    ],
+    "havayolu": "AJet",
+    "yer": "Ankara",
+    "planlanan": "2026-11-29T15:45:00.000Z",
+    "tahmini": null,
+    "kapi": "109",
     "durum": "",
     "hat": "ic"
    }
@@ -22798,7 +22818,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-28T15:32:22.720Z",
+  "guncelleme": "2026-11-28T15:56:29.663Z",
   "liste": [
    {
     "id": 6386,

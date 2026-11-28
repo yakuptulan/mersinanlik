@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-28T15:54:57.004Z"
   }
  },
  "gorsel": {
@@ -609,14 +613,34 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-28T15:31:37.231Z",
+  "guncelleme": "2026-11-28T15:55:27.672Z",
   "liste": [
    {
-    "baslik": "noah codjo-evora",
+    "baslik": "leeds united",
+    "trafik": 200
+   },
+   {
+    "baslik": "lâl denizli",
+    "trafik": 100
+   },
+   {
+    "baslik": "manu",
+    "trafik": 500
+   },
+   {
+    "baslik": "1 aralık",
+    "trafik": 200
+   },
+   {
+    "baslik": "aktüel ürünler",
     "trafik": 100
    },
    {
     "baslik": "otomobil üreticisi",
+    "trafik": 100
+   },
+   {
+    "baslik": "noah codjo-evora",
     "trafik": 100
    },
    {
@@ -625,31 +649,11 @@
    },
    {
     "baslik": "israil",
-    "trafik": 1000
-   },
-   {
-    "baslik": "bodø/glimt - kfum oslo",
-    "trafik": 200
+    "trafik": 2000
    },
    {
     "baslik": "hakaret",
     "trafik": 2000
-   },
-   {
-    "baslik": "مطر",
-    "trafik": 200
-   },
-   {
-    "baslik": "cumhuriyet altını ne kadar",
-    "trafik": 200
-   },
-   {
-    "baslik": "الاتفاق ضد الهلال",
-    "trafik": 200
-   },
-   {
-    "baslik": "transfer",
-    "trafik": 1000
    }
   ]
  },
