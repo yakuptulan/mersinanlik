@@ -12,12 +12,16 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-28T12:01:20.678Z"
   }
  },
  "gorsel": {
   "gun": "2026-11-28",
-  "adet": 18,
-  "premium": 15
+  "adet": 19,
+  "premium": 16
  },
  "kurumGorulen": {
   "mersin-buyuksehir": [
@@ -607,11 +611,31 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-28T11:31:52.016Z",
+  "guncelleme": "2026-11-28T12:01:50.745Z",
   "liste": [
+   {
+    "baslik": "temettü",
+    "trafik": 200
+   },
+   {
+    "baslik": "poligon mahallesi",
+    "trafik": 200
+   },
+   {
+    "baslik": "sakaryaspor",
+    "trafik": 500
+   },
+   {
+    "baslik": "kocaeli",
+    "trafik": 1000
+   },
    {
     "baslik": "dolar",
     "trafik": 2000
+   },
+   {
+    "baslik": "batman petrol spor",
+    "trafik": 1000
    },
    {
     "baslik": "trt spor canlı izle",
@@ -622,31 +646,11 @@
     "trafik": 100
    },
    {
-    "baslik": "petrolspor",
-    "trafik": 500
-   },
-   {
     "baslik": "memur zammı",
     "trafik": 500
    },
    {
-    "baslik": "trt spor",
-    "trafik": 1000
-   },
-   {
     "baslik": "dolandırıcılık",
-    "trafik": 200
-   },
-   {
-    "baslik": "tivibu spor",
-    "trafik": 200
-   },
-   {
-    "baslik": "at yarışı",
-    "trafik": 100
-   },
-   {
-    "baslik": "1 ocak",
     "trafik": 200
    }
   ]
