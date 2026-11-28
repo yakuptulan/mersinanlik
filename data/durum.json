@@ -12,6 +12,10 @@
   "iha-mersin": {
    "hata": "HTTP 403",
    "zaman": "2026-11-16T18:06:43.248Z"
+  },
+  "haberturk-mersin": {
+   "hata": "fetch failed",
+   "zaman": "2026-11-28T07:23:16.693Z"
   }
  },
  "gorsel": {
@@ -84,7 +88,8 @@
    "https://yenisehir.bel.tr/haber/yenisehirde-firinlar-mercek-altinda",
    "https://www.yenisehir.bel.tr/haber/baskanvekili-dutlu-hicbir-mahallemizi-goz-ardi-etmiyoruz",
    "https://yenisehir.bel.tr/haber/baskanvekili-dutlu-hicbir-mahallemizi-goz-ardi-etmiyoruz",
-   "https://www.yenisehir.bel.tr/haber/yenisehirden-kadina-siddete-karsi-ortak-mucadele-cagrisi"
+   "https://www.yenisehir.bel.tr/haber/yenisehirden-kadina-siddete-karsi-ortak-mucadele-cagrisi",
+   "https://yenisehir.bel.tr/haber/yenisehirden-kadina-siddete-karsi-ortak-mucadele-cagrisi"
   ],
   "tarsus-belediyesi": [],
   "erdemli-belediyesi": [
@@ -506,7 +511,8 @@
    "https://mersingundem.com/haber/13723/akdenizde-cop-konteynerleri-yikanip-dezenfekte-ediliyor.html",
    "https://mersingundem.com/haber/13724/mersin-sanayide-vites-buyutuyor-25-bin-donumluk-yatirim-alani-ve-rekor-ihracat-hamlesi.html",
    "https://mersingundem.com/haber/13726/mersin-buyuksehir-ispanyada-surdurulebilir-gida-politikalarini-degerlendirdi.html",
-   "https://mersingundem.com/haber/13725/yenisehirden-kadina-siddete-karsi-ortak-mucadele-cagrisi.html"
+   "https://mersingundem.com/haber/13725/yenisehirden-kadina-siddete-karsi-ortak-mucadele-cagrisi.html",
+   "https://mersingundem.com/haber/13727/buyuksehir-ile-universiteden-is-yasamina-uzanan-kariyer-bulusmasi.html"
   ],
   "mersin-universitesi": [
    "https://www.mersin.edu.tr/tr/haberler/yuksek-impakt-faktorlu-dergilerde-yayin-stratejileri-2-programi-universitemizde-gerceklestirildi-n-10001908",
@@ -596,8 +602,24 @@
   ]
  },
  "trendler": {
-  "guncelleme": "2026-11-28T07:01:37.534Z",
+  "guncelleme": "2026-11-28T07:23:47.868Z",
   "liste": [
+   {
+    "baslik": "necati özkan",
+    "trafik": 100
+   },
+   {
+    "baslik": "t.c. resmî gazete",
+    "trafik": 100
+   },
+   {
+    "baslik": "toki",
+    "trafik": 500
+   },
+   {
+    "baslik": "üzüm",
+    "trafik": 100
+   },
    {
     "baslik": "sermaye artırımı",
     "trafik": 200
@@ -621,22 +643,6 @@
    {
     "baslik": "balıkesir büyükşehir belediyesi",
     "trafik": 500
-   },
-   {
-    "baslik": "çanakkale hava durumu",
-    "trafik": 200
-   },
-   {
-    "baslik": "fethiye hava durumu",
-    "trafik": 200
-   },
-   {
-    "baslik": "suns - mavericks",
-    "trafik": 100
-   },
-   {
-    "baslik": "cumhurbaşkanı kararı",
-    "trafik": 200
    }
   ]
  },

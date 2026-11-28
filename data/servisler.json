@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-28T07:02:02.307Z",
+ "guncelleme": "2026-11-28T07:23:59.540Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 19,
@@ -38,13 +38,13 @@
    ]
   },
   "anamur": {
-   "sicaklik": 15,
+   "sicaklik": 17,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 14,
-     "max": 20,
+     "max": 21,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -55,7 +55,7 @@
     },
     {
      "tarih": "2026-11-30",
-     "min": 12,
+     "min": 11,
      "max": 20,
      "durum": "Hafif yağmurlu"
     },
@@ -110,13 +110,13 @@
    ]
   },
   "bozyazi": {
-   "sicaklik": 14,
+   "sicaklik": 16,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
      "min": 12,
-     "max": 20,
+     "max": 21,
      "durum": "Parçalı bulutlu"
     },
     {
@@ -362,20 +362,20 @@
    ]
   },
   "tarsus": {
-   "sicaklik": 13,
+   "sicaklik": 17,
    "durum": "Parçalı bulutlu",
    "gunler": [
     {
      "tarih": "2026-11-28",
-     "min": 13,
+     "min": 14,
      "max": 21,
      "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-29",
-     "min": 10,
-     "max": 19,
-     "durum": "Az bulutlu"
+     "min": 11,
+     "max": 20,
+     "durum": "Parçalı bulutlu"
     },
     {
      "tarih": "2026-11-30",
@@ -387,7 +387,7 @@
      "tarih": "2026-12-01",
      "min": 13,
      "max": 19,
-     "durum": "Parçalı bulutlu"
+     "durum": "Bulutlu"
     },
     {
      "tarih": "2026-12-02",
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-28T07:02:06.741Z",
+  "guncelleme": "2026-11-28T07:24:02.899Z",
   "liste": [
    {
     "ad": "Atlas Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-28T07:02:07.741Z",
+  "guncelleme": "2026-11-28T07:24:03.956Z",
   "liste": [
    {
     "tur": "su",
@@ -838,7 +838,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-28T07:02:11.763Z",
+  "guncelleme": "2026-11-28T07:24:07.534Z",
   "kalemler": {
    "gram": {
     "alis": 5963.87,
@@ -871,9 +871,9 @@
     "degisim": 2.18
    },
    "btc": {
-    "satis": 3029795,
-    "usd": 59708,
-    "degisim": -3.18
+    "satis": 3023223,
+    "usd": 59578,
+    "degisim": -3.65
    }
   },
   "altinlar": [
@@ -1006,10 +1006,10 @@
     "degisim": -0.03
    }
   ],
-  "kaynakSaati": "2026-11-28 10:02:01"
+  "kaynakSaati": "2026-11-28 10:24:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-28T07:02:14.479Z",
+  "guncelleme": "2026-11-28T07:24:09.605Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -21721,7 +21721,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-28T07:02:14.907Z",
+  "guncelleme": "2026-11-28T07:24:10.054Z",
   "liste": [
    {
     "yol": "/haber/1964-silifke-spor-yarin-deplasmanda-ayos-osmaniyespor-ile-karsilasacak-o06530/",
@@ -21820,11 +21820,11 @@
     "sayi": 1
    },
    {
-    "yol": "/haber/yoruk-turkmenler-festivalde-bulusuyor-1ybcz5x/",
+    "yol": "/mahalle/bozyazi/gozsuzce/",
     "sayi": 1
    },
    {
-    "yol": "/mahalle/bozyazi/gozsuzce/",
+    "yol": "/haber/yoruk-turkmenler-festivalde-bulusuyor-1ybcz5x/",
     "sayi": 1
    },
    {
@@ -21842,7 +21842,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-28T07:03:19.539Z",
+  "guncelleme": "2026-11-28T07:24:11.803Z",
   "deniz": {
    "sicaklik": 21.1,
    "dalga": 0.22
@@ -21855,7 +21855,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-28T07:03:21.194Z",
+  "guncelleme": "2026-11-28T07:24:13.532Z",
   "giden": [
    {
     "no": [
@@ -21866,7 +21866,7 @@
     "planlanan": "2026-11-28T07:35:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "KONTUAR KAPALI",
+    "durum": "BOARDING",
     "hat": "ic"
    },
    {
@@ -22834,7 +22834,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-28T07:03:21.194Z",
+  "guncelleme": "2026-11-28T07:24:13.531Z",
   "liste": [
    {
     "id": 6386,
