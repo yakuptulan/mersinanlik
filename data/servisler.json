@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-28T07:23:59.540Z",
+ "guncelleme": "2026-11-28T07:31:47.563Z",
  "hava": {
   "akdeniz": {
    "sicaklik": 19,
@@ -493,7 +493,7 @@
   }
  ],
  "eczane": {
-  "guncelleme": "2026-11-28T07:24:02.899Z",
+  "guncelleme": "2026-11-28T07:31:51.167Z",
   "liste": [
    {
     "ad": "Atlas Eczanesi",
@@ -784,7 +784,7 @@
   ]
  },
  "suKesintisi": {
-  "guncelleme": "2026-11-28T07:24:03.956Z",
+  "guncelleme": "2026-11-28T07:31:52.288Z",
   "liste": [
    {
     "tur": "su",
@@ -822,6 +822,22 @@
    {
     "tur": "su",
     "baslik": "SU KESİNTİSİ",
+    "aciklama": "Silifke ilçesi Sayağzı Mahallesi arızadan kaynaklı saat 14:00'a kadar su kesintisi yaşanacaktır.",
+    "baslangic": "2026-11-28T07:29:00.000Z",
+    "bitis": "2026-11-28T11:00:00.000Z",
+    "ilceler": [
+     {
+      "ilce": "silifke",
+      "ad": "Silifke",
+      "mahalleler": [
+       "Sayağzı"
+      ]
+     }
+    ]
+   },
+   {
+    "tur": "su",
+    "baslik": "SU KESİNTİSİ",
     "aciklama": "Çamlıyayla ilçesi fakılar mahallesi dışbudak mevki Sarıkaya dibi şebeke hattında oluşan arıza sebebiyle kesinti yapılmıştır.Tahmini 15.00'da suların verilmesi planlanmaktadır.",
     "baslangic": "2026-11-28T05:48:00.000Z",
     "bitis": "2026-11-28T12:00:00.000Z",
@@ -838,7 +854,7 @@
   ]
  },
  "piyasa": {
-  "guncelleme": "2026-11-28T07:24:07.534Z",
+  "guncelleme": "2026-11-28T07:31:57.168Z",
   "kalemler": {
    "gram": {
     "alis": 5963.87,
@@ -871,9 +887,9 @@
     "degisim": 2.18
    },
    "btc": {
-    "satis": 3023223,
-    "usd": 59578,
-    "degisim": -3.65
+    "satis": 3027283,
+    "usd": 59658,
+    "degisim": -3.54
    }
   },
   "altinlar": [
@@ -1006,10 +1022,10 @@
     "degisim": -0.03
    }
   ],
-  "kaynakSaati": "2026-11-28 10:24:01"
+  "kaynakSaati": "2026-11-28 10:31:01"
  },
  "akaryakit": {
-  "guncelleme": "2026-11-28T07:24:09.605Z",
+  "guncelleme": "2026-11-28T07:32:00.182Z",
   "ilceler": {
    "akdeniz": {
     "benzin": 70.26,
@@ -21721,7 +21737,7 @@
   }
  },
  "okunanlar": {
-  "guncelleme": "2026-11-28T07:24:10.054Z",
+  "guncelleme": "2026-11-28T07:32:00.455Z",
   "liste": [
    {
     "yol": "/haber/1964-silifke-spor-yarin-deplasmanda-ayos-osmaniyespor-ile-karsilasacak-o06530/",
@@ -21748,6 +21764,10 @@
     "sayi": 5
    },
    {
+    "yol": "/",
+    "sayi": 5
+   },
+   {
     "yol": "/haber/mut-ta-kaybolan-90-kecinin-40-i-sag-bulundu-15a40vn/",
     "sayi": 4
    },
@@ -21757,10 +21777,6 @@
    },
    {
     "yol": "/is-ilanlari/mezitli/",
-    "sayi": 4
-   },
-   {
-    "yol": "/",
     "sayi": 4
    },
    {
@@ -21796,6 +21812,10 @@
     "sayi": 1
    },
    {
+    "yol": "/uretilen/11unt0c.webp",
+    "sayi": 1
+   },
+   {
     "yol": "/is-ilanlari/meslek/forklift-operatoru/",
     "sayi": 1
    },
@@ -21828,10 +21848,6 @@
     "sayi": 1
    },
    {
-    "yol": "/mahalle/toroslar/osmaniye/",
-    "sayi": 1
-   },
-   {
     "yol": "/haber/kurtlarin-agila-girmesiyle-kaybolan-90-keci-5-gundur-araniyor-zhuazh/",
     "sayi": 1
    },
@@ -21842,7 +21858,7 @@
   ]
  },
  "sayac": {
-  "guncelleme": "2026-11-28T07:24:11.803Z",
+  "guncelleme": "2026-11-28T07:32:02.084Z",
   "deniz": {
    "sicaklik": 21.1,
    "dalga": 0.22
@@ -21855,7 +21871,7 @@
   }
  },
  "ucus": {
-  "guncelleme": "2026-11-28T07:24:13.532Z",
+  "guncelleme": "2026-11-28T07:32:04.061Z",
   "giden": [
    {
     "no": [
@@ -21866,7 +21882,7 @@
     "planlanan": "2026-11-28T07:35:00.000Z",
     "tahmini": null,
     "kapi": "107",
-    "durum": "BOARDING",
+    "durum": "KAPI KAPANDI",
     "hat": "ic"
    },
    {
@@ -21878,7 +21894,7 @@
     "planlanan": "2026-11-28T08:25:00.000Z",
     "tahmini": null,
     "kapi": "103",
-    "durum": "KONTUAR AÇIK",
+    "durum": "KONTUAR KAPALI",
     "hat": "dis"
    },
    {
@@ -22834,7 +22850,7 @@
   ]
  },
  "yollar": {
-  "guncelleme": "2026-11-28T07:24:13.531Z",
+  "guncelleme": "2026-11-28T07:32:04.061Z",
   "liste": [
    {
     "id": 6386,
